@@ -1,0 +1,123 @@
+@CHARSET "UTF-8";
+@IMPORT url("styles_reset.css");
+@IMPORT url("styles_global.css?v=10.1");
+
+/* Payment Method */
+#payment-info {border: 1px solid #CCCCCC;}
+#payment-info td {padding: 7px;}
+.payment-box {padding: 10px;}
+.payment-box #accordion h3 a {font-size: 13px; text-transform: uppercase;}
+.payment-box td {border-top: 1px dotted #b0b0b0;}
+.payment-box td.first {border-top: none;}
+.payment-box td span {margin-right:10px}
+.logobank {float:left;width:100px;height:30px;padding: 10px 0;}
+#methodMobileCard .logobank {margin-right: 15px;}
+#payment-method .logobank {margin-left:1px;}
+
+h3.ui-state-active, .ui-widget-content h3.ui-state-active, .ui-widget-header h3.ui-state-active {border:none;border-top:1px solid #CCC;-moz-border-radius:0;-webkit-border-radius:0;}
+h3.ui-state-default, .ui-widget-content h3.ui-state-default, .ui-widget-header h3.ui-state-default {border:none;border-top:1px solid #CCC;-moz-border-radius:0;-webkit-border-radius:0;background: none;}
+.ui-widget-content2 {border:none;background: url(../images/boxpayment-bg.png) repeat-x bottom;margin:1px;}
+.ui-accordion .ui-accordion-content-active {border:none;}
+.ui-accordion .ui-accordion-header{margin-top:0}
+.ui-accordion .ui-accordion-header .ui-icon {top:15px;}
+
+/* -- NGOCKV ADD STYLE --*/
+select.select_site{
+	float:right; margin-right: 10px; width:150px;  margin-top: 2px; text-transform: none; font-size: 12px; color: #000;
+}
+table.border{
+	border: 0; width:100%; font-family: Arial, Tahoma; font-size: 12px; color: #000;
+}
+table.border tr td{
+	padding-left: 5px; text-align: left; border-right:1px solid #ccc; border-bottom: 1px solid #ccc;
+}
+table.border tr td.end{
+	border-right: 0;
+}
+table.border tr td span{
+	color: red;
+}
+table.border tr td.title_orders{
+	font-weight: bold;
+}
+table.border tr td.title_orders_end{
+	font-weight: bold; border-right: 0;
+}
+table.border tr td a{
+	color: #0066CC; text-decoration: none; font-weight: bold;
+}
+table.border tr td a:hover{
+	text-decoration: underline;
+}
+
+
+
+
+/*added menu style*/
+#menu{
+	width: 920px; font-family: Arial, Tahoma; font-size: 12px; height:auto;
+}
+#menu-top{
+	width: 100%; height:38px; background: url("../images/bg-menu-center.jpg") repeat-x left top;
+}
+#menu-top .bor_left{
+	width:3px; height: 38px; float: left; background: url("../images/bg-menu-left.jpg") no-repeat left top;
+}
+#menu-top .bor_center{
+	float:left; height: 38px; font-size: 12px; font-weight: bold; color: #fff;
+}
+#menu-top .bor_right{
+	width:3px; height: 38px; float: right; background: url("../images/bg-menu-right.jpg") no-repeat right top;
+}
+ul#topnav {
+	margin: 0; padding: 0; float: left; width: 100%; list-style: none; position: relative;	font-size: 12px;
+}
+ul#topnav li {
+	float: left; margin: 0; padding: 0 20px 0 15px;	background: url("../images/bgmenu_li.jpg") no-repeat right center;height:38px;
+}
+ul#topnav li.active {
+	height:15px; padding: 6px 10px 10px 10px; background: #A03489 url("../images/left_a.jpg") no-repeat left top;
+}
+ul#topnav li:last-child {background: none;}
+ul#topnav li a {
+	padding: 6px 0px 10px 10px; display: block; color: #fff; text-decoration: none; margin-top: 7px; float: left;
+}
+ul#topnav li a:hover, ul#topnav li a.active {
+	background: #A03489 url("../images/left_a.jpg") no-repeat left top; padding-top: 0;
+}
+ul#topnav li a span.showBg{
+	background: url("../images/right_a.jpg") no-repeat right top;
+	display: block;
+	position: relative;
+	padding-right: 10px;
+	padding-top: 6px;
+}
+ul#topnav li a span.hideBg{
+	background: none;
+}
+
+ul#topnav li div.sh {
+	width: 920px; height:33px; float: left; padding: 0; position: absolute; left: -3px; top:38px; display: none; background: #A03489 url("../images/bg-submenu-left.jpg") no-repeat left top; color: #fff; line-height: 33px; font-size: 11px; font-weight: normal;
+}
+ul#topnav li div.sh div.right{
+	width:3px; height:33px; float: right; display: none; background:#A03489 url("../images/bg-submenu-right.jpg") no-repeat right top; position: absolute; left: 917px; top:0;
+}
+ul#topnav li:hover div.sh { display: block; }
+ul#topnav li div.sh a { display: inline; font-weight: normal; float: none; background: none;}
+ul#topnav li div.sh a:hover {text-decoration: underline; background: none;}
+div#menuUser.menuChild {
+	width: 920px; height:33px; padding: 0; background: #A03489 url("../images/bg-submenu-left.jpg") no-repeat left top; color: #fff; line-height: 33px; font-size: 11px; font-weight: normal;
+}
+div#menuUser div.right{
+	width:3px; height:33px; float: right; background:#A03489 url("../images/bg-submenu-right.jpg") no-repeat right top; left: 917px;
+}
+.active_submenu{color:#FFFF00 !important;}
+
+/* DUNGDH ERROR */
+.ui-widget{margin-bottom: 1em;}
+.ui-state-error .ui-icon, .ui-state-highlight .ui-icon{
+    float: left; margin-right: 0.3em;
+}
+.ui-state-error p, .ui-state-highlight p{
+    margin: 0.5em;
+}

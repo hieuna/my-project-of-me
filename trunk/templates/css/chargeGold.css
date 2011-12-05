@@ -1,0 +1,94 @@
+b.FF5A00{color: #FF5A00;}
+b.red{color: red;}
+p.red{color: red; font-weight: bold; margin: 0; padding: 0;}
+.popbg{-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+.title_popup{height: 36px; background: url(images/chargeGold/popup-header.png) repeat-x; line-height: 36px; color: #fff;}
+.title_popup .text{height:36px; float: left; padding-left: 15px; font-family: Tahoma; font-size: 18px; text-shadow: 0 1px 0 #666;}
+.title_popup .close{height:36px; float: right; line-height: 36px;}
+.title_popup .close a{height:36px; color: #fff; font-weight: bold; text-decoration: none; padding: 0 10px; float: left; font-family: Arial; font-size: 12px;}
+.title_popup .close a:hover{color: #000;}
+.content_popup{width: auto; padding: 15px 20px 0px; font-family: Arial; font-size: 12px; color:#000; line-height: 18px;background: #f2f2f2;}
+.content_gold{width: 100%;text-align: left;}
+
+/* show content */
+.content_gold .radioBox{float: left; margin-top: 2px;}
+.content_gold .content_gold_right{width: 500px; float: left;  margin-left: 3px;}
+.content_gold .content_gold_right div.small{color: #888888; font-weight: normal; font-size: 11px; float: left; width: 100%; text-align: left; line-height: 20px; padding-bottom: 5px;}
+.content_gold .content_gold_right div.small span{margin-left: 10px; display: block; height: 20px;}
+.content_gold .content_gold_right div.small span#mobiphone{float: left; width:68px; background: url("images/chargeGold/mobiphone.png") no-repeat top center; margin:5px;}
+.content_gold .content_gold_right div.small span#vinaphone{float: left; width:82px; background: url("images/chargeGold/vinaphone.png") no-repeat center left;}
+.content_gold .content_gold_right div.small span#visa{float: left; width:45px; background: url("images/chargeGold/visa.png") no-repeat left center; margin:5px;}
+.content_gold .content_gold_right div.small span#master{float: left; width:32px; background: url("images/chargeGold/master.png") no-repeat left 6px; height: 25px;}
+.content_gold .content_gold_right div.small b.red{color:red; font-weight: normal; font-size: 11px;}
+.content_gold .content_gold_right .gold_title{width: 100%; float: left; font-weight: bold; font-family: Arial; font-size: 14px;}
+.content_gold .content_gold_right .gold_title div{float: left; margin-right: 10px;}
+.content_gold .content_gold_right .gold_title div.f1{margin: -10px 20px 0 15px; float: left; text-align: center;}
+.content_gold .content_gold_right .gold_title a{color:#065cec; font-weight: bold; text-decoration: none;}
+.content_gold .content_gold_right ul{margin: 0; padding: 0;}
+.content_gold .content_gold_right ul li{list-style: none outside; line-height: 22px;}
+.content_gold .content_gold_right .gold_title input.inputtext{border: 1px solid #ccc; color:#8a8a8a; line-height: 14px; padding: 3px; width: 216px; background: #f9f9f9;}
+.content_gold .content_gold_right .gold_title input.inputcard{border: 1px solid #ccc; color:#8a8a8a; line-height: 14px; padding: 5px; width: 230px; background: #f9f9f9;}
+.content_gold .content_gold_right a.f1{padding: 0 5px 5px; margin: 0;}
+.content_gold .content_gold_right span#vcb{background: url("images/chargeGold/bank2.png") no-repeat top center; display: block; height: 24px; overflow: hidden; width: 60px; float: left;}
+.content_gold .content_gold_right span#donga{background: url("images/chargeGold/bank2.png") no-repeat center -24px; display: block; height: 24px; overflow: hidden; width: 60px; float: left;}
+.content_gold .content_gold_right span#techcombank{background: url("images/chargeGold/bank2.png") no-repeat center -48px; display: block; height: 24px; overflow: hidden; width: 60px; float: left;}
+.content_gold .content_gold_right span#vietinbank{background: url("images/chargeGold/bank2.png") no-repeat center -120px; display: block; height: 24px; overflow: hidden; width: 96px; float: left;}
+.content_gold .content_gold_right span#hdbank{background: url("images/chargeGold/bank2.png") no-repeat center -216px; display: block; height: 24px; overflow: hidden; width: 70px; float: left;}
+.content_gold .content_gold_right span#vib{background: url("images/chargeGold/bank2.png") no-repeat center -192px; display: block; height: 24px; overflow: hidden; width: 60px; float: left;}
+.content_gold .content_gold_right span#tienphongbank{background: url("images/chargeGold/bank2.png") no-repeat center -240px; display: block; height: 24px; overflow: hidden; width: 60px; float: left;}
+
+.emailNH{
+	background: #FFFDDE;
+	border: 2px solid #FFCD36;
+	color: #FE8800;
+	width: 520px;
+	float: left;
+	padding: 5px;
+	text-align: left;
+}
+.emailNH img{float: left; margin: 0 8px 3px 0; width: 32px;}
+.emailNH p{text-align: left; padding: 0;}
+
+.buttonDIV{text-align:left;text-align:right;margin:0px -20px;padding:10px; border-top:1px solid #e3e3e3;margin-top:15px;background:#FFF;}
+.buttonDIV div{float: right; margin-left: 15px;}
+
+/* button blue */
+.blueButton, a.blueButton, .blueButton span{background:url(images/chargeGold/bgButton.png) repeat-x 0 -278px; overflow:hidden; text-align:center; display:block; float:left; font-size:14px; font-weight:bold; color:#fff; cursor:pointer; text-decoration: none; font-family: Tahoma;}
+.blueButton span{background-position:left -304px;background-repeat:no-repeat}
+.blueButton span span{background-position:right -252px;height:26px;line-height:26px;padding:0 25px 0 15px;}
+.blueButton span span b{font-size:17px}
+a.blueButton:hover{text-decoration:none}
+
+/* button blue */
+.orangeButton, a.orangeButton, .orangeButton span{background:url(images/chargeGold/bgButton.png) repeat-x 0 -278px; overflow:hidden; text-align:center; display:block; float:left; font-size:14px; font-weight:bold; color:#fff; cursor:pointer; text-decoration: none; font-family: Tahoma;}
+.orangeButton span{background-position:left -304px;background-repeat:no-repeat}
+.orangeButton span span{background-position:right -252px;height:26px;line-height:26px;padding:0 25px 0 15px;}
+.orangeButton.btnLeft span{background-position:left -330px;}
+.orangeButton.btnLeft span span{background-position:right -356px; padding: 0 15px 0 25px;}
+.orangeButton span span b{font-size:17px}
+a.orangeButton:hover{text-decoration:none}
+
+/* --- ADD STYLE --- */
+/* classic popup */
+.classic-popup{background: rgba(255,255,255, 0.24);border-radius: 5px;-moz-border-radius: 5px;}
+.classic-popup-title{width:100%;background:#0093d0}
+.classic-popup-title,.classic-popup-title .fl,a.classic-popup-close{height:36px;line-height:36px;color:#fff}
+.classic-popup-title .fl{padding-left:20px;font-size:16px;text-transform:uppercase;text-shadow:0 1px 0 #666666}
+a.classic-popup-close{float:right;font-size:13px;line-height: 30px;padding:0 10px}
+a.classic-popup-close:hover{text-decoration:none;color:#4f2d00}
+.classic-popup-content{background:#fff;color:#472900}
+/* fix for bold in FF4 win 64bit */
+b{font-weight:bold}
+
+
+.popup-close-button {
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  top: 0px; right: 0px; z-index: 10;
+  margin: 7px;
+  background:url(images/popup/close.png) no-repeat;
+  cursor: pointer;
+}
+.pcb-blue-normal {background-position: 0px 0px}
+.pcb-blue-hover {background-position: 0px -19px}

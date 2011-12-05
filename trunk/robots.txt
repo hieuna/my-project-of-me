@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /demoshop/
+Disallow: /images/
+Disallow: /include/
+Disallow: /log/
+Disallow: /qtshp/
+Disallow: /templates/
