@@ -1,0 +1,42 @@
+[Mon Feb 28 16:40:41 2011] [doLogin] [error] [client 118.71.69.87 ] Constructor error: soap:Client: Message part {http://tempuri.org/}Receive was not recognized.  (Does it exist in service WSDL?) 
+[Mon Feb 28 16:41:46 2011] [doLogin] [error] [client 118.71.69.87 ] Constructor error: soap:Client: Message part {http://tempuri.org/}Receive was not recognized.  (Does it exist in service WSDL?) 
+[Mon Feb 28 16:49:47 2011] [doLogin] [error] [client 118.71.69.83 ] Constructor error: operation log not present. 
+[Mon Feb 28 16:52:18 2011] [doLogin] [error] [client 118.71.69.83 ] Constructor error: operation log not present. 
+[Mon Feb 28 16:52:54 2011] [doLogin] [error] [client 118.71.69.83 ] Constructor error: operation log not present. 
+[Mon Feb 28 16:52:54 2011] [doLogin] [error] [client 118.71.69.83 ] Constructor error: operation log not present. 
+[Mon Feb 28 17:05:27 2011] [doLogin] [error] [client 118.71.69.87 ] Constructor error: operation log not present in WSDL. 
+[Mon Feb 28 17:05:59 2011] [doLogin] [error] [client 118.71.69.87 ] Constructor error: operation log not present in WSDL. 
+[Mon Feb 28 17:06:00 2011] [doLogin] [error] [client 118.71.69.87 ] Constructor error: operation log not present in WSDL. 
+[Mon Feb 28 17:07:05 2011] [doLogin] [soap] [client 118.71.69.87 ]  [ 1761 ] [ 1 ] [ Login thanh cong ] [ MvJuuYOhiuabXqHWhoZu+K5kO6LQUj7+ ] 
+[Mon Feb 28 17:12:51 2011] [doLogin] [soap] [client 118.71.69.87 ]  [ 1762 ] [ 1 ] [ Login thanh cong ] [ MvJuuYOhiuabXqHWhoZu+K5kO6LQUj7+ ] 
+[Mon Feb 28 17:12:52 2011] [doLogin] [soap] [client 118.71.69.87 ]  [ 1763 ] [ 1 ] [ Login thanh cong ] [ MvJuuYOhiuabXqHWhoZu+K5kO6LQUj7+ ] 
+[Mon Feb 28 17:14:08 2011] [doLogin] [soap] [client 118.71.69.87 ]  [ 1764 ] [ 1 ] [ Login thanh cong ] [ MvJuuYOhiuabXqHWhoZu+K5kO6LQUj7+ ] 
+[Mon Feb 28 17:14:11 2011] [doLogin] [soap] [client 118.71.69.87 ]  [ 1765 ] [ 1 ] [ Login thanh cong ] [ MvJuuYOhiuabXqHWhoZu+K5kO6LQUj7+ ] 
+[Mon Feb 28 17:14:12 2011] [doLogin] [soap] [client 118.71.69.87 ]  [ 1766 ] [ 1 ] [ Login thanh cong ] [ MvJuuYOhiuabXqHWhoZu+K5kO6LQUj7+ ] 
+[Mon Feb 28 17:21:03 2011] [doLogin] [soap] [client 222.252.12.130 ]  [ 1767 ] [ 1 ] [ Login thanh cong ] [ MvJuuYOhiuabXqHWhoZu+K5kO6LQUj7+ ] 
+[Mon Feb 28 17:21:05 2011] [doLogin] [soap] [client 222.252.12.130 ]  [ 1768 ] [ 1 ] [ Login thanh cong ] [ MvJuuYOhiuabXqHWhoZu+K5kO6LQUj7+ ] 
+[Mon Feb 28 17:21:06 2011] [doLogin] [soap] [client 222.252.12.130 ]  [ 1769 ] [ 1 ] [ Login thanh cong ] [ MvJuuYOhiuabXqHWhoZu+K5kO6LQUj7+ ] 
+[Mon Feb 28 17:21:07 2011] [doLogin] [soap] [client 222.252.12.130 ]  [ 1770 ] [ 1 ] [ Login thanh cong ] [ MvJuuYOhiuabXqHWhoZu+K5kO6LQUj7+ ] 
+[Mon Feb 28 17:21:07 2011] [doLogin] [soap] [client 222.252.12.130 ]  [ 1771 ] [ 1 ] [ Login thanh cong ] [ MvJuuYOhiuabXqHWhoZu+K5kO6LQUj7+ ] 
+[Mon Feb 28 17:49:03 2011] [doLogin] [soap] [client 118.71.15.161 ]  [ 1772 ] [ 1 ] [ Login thanh cong ] [ yOlK+DtPtvjQwcjZIKKw4Bm1upeihbn4 ] 
+[Mon Feb 28 17:49:03 2011] [doLogin] [soap] [client 118.71.15.161 ]  [ 1773 ] [ 1 ] [ Login thanh cong ] [ yOlK+DtPtvjQwcjZIKKw4Bm1upeihbn4 ] 
+[Mon Feb 28 17:49:04 2011] [doLogin] [soap] [client 118.71.15.161 ]  [ 1774 ] [ 1 ] [ Login thanh cong ] [ yOlK+DtPtvjQwcjZIKKw4Bm1upeihbn4 ] 
+[Tue Mar 01 14:30:51 2011] [doLogin] [soap] [client 118.71.69.87 ]  [ 1901 ] [ 1 ] [ Login thanh cong ] [ Hy/Zra0snThu+20spJ0BkfcBnvsQECYV ] 
+[Tue Mar 01 14:34:13 2011] [doLogin] [soap] [client 118.71.15.161 ]  [ 1902 ] [ 1 ] [ Login thanh cong ] [ Hy/Zra0snThu+20spJ0BkfcBnvsQECYV ] 
+[Tue Mar 01 14:34:14 2011] [doCardCharge] [soap] [client 118.71.15.161 ]  [ 1903 ] [ -99 ] [ DIAMETER_INVALID_MESSAGE_LENGTH ] [ Target: 84983321112 | PINCard: 456456145465456445 | Result_Amount:  ] 
+[Tue Mar 01 14:35:33 2011] [doLogin] [soap] [client 118.71.15.161 ]  [ 1904 ] [ 1 ] [ Login thanh cong ] [ Hy/Zra0snThu+20spJ0BkfcBnvsQECYV ] 
+[Tue Mar 01 14:35:34 2011] [doCardCharge] [soap] [client 118.71.15.161 ]  [ 1905 ] [ -99 ] [ DIAMETER_INVALID_MESSAGE_LENGTH ] [ Target: 84983321112 | PINCard: 456456145465456445 | Result_Amount:  ] 
+[Tue Mar 01 14:35:54 2011] [doLogin] [soap] [client 118.71.15.161 ]  [ 1906 ] [ 1 ] [ Login thanh cong ] [ Hy/Zra0snThu+20spJ0BkfcBnvsQECYV ] 
+[Tue Mar 01 14:35:54 2011] [doCardCharge] [soap] [client 118.71.15.161 ]  [ 1907 ] [ -99 ] [ DIAMETER_INVALID_MESSAGE_LENGTH ] [ Target: 84983321112 | PINCard: 456456145465456445 | Result_Amount:  ] 
+[Tue Mar 01 14:39:43 2011] [doLogin] [soap] [client 118.71.15.161 ]  [ 1908 ] [ 1 ] [ Login thanh cong ] [ Hy/Zra0snThu+20spJ0BkfcBnvsQECYV ] 
+[Tue Mar 01 14:39:44 2011] [doCardCharge] [soap] [client 118.71.15.161 ]  [ 1909 ] [ -99 ] [ DIAMETER_INVALID_MESSAGE_LENGTH ] [ Target: 84983321112 | PINCard: 6103667313119 | Result_Amount:  ] 
+[Tue Mar 01 14:39:51 2011] [doLogin] [soap] [client 118.71.15.161 ]  [ 1910 ] [ 1 ] [ Login thanh cong ] [ Hy/Zra0snThu+20spJ0BkfcBnvsQECYV ] 
+[Tue Mar 01 14:39:51 2011] [doCardCharge] [soap] [client 118.71.15.161 ]  [ 1911 ] [ -99 ] [ DIAMETER_INVALID_MESSAGE_LENGTH ] [ Target: 84983321112 | PINCard: 6103667313119 | Result_Amount:  ] 
+[Tue Mar 01 14:39:53 2011] [doLogin] [soap] [client 118.71.15.161 ]  [ 1912 ] [ 1 ] [ Login thanh cong ] [ Hy/Zra0snThu+20spJ0BkfcBnvsQECYV ] 
+[Tue Mar 01 14:39:54 2011] [doCardCharge] [soap] [client 118.71.15.161 ]  [ 1913 ] [ 5 ] [ Dang nhap da bi khoa ] [ Target: 84983321112 | PINCard: 6103667313119 | Result_Amount:  ] 
+[Tue Mar 01 15:08:13 2011] [doLogin] [soap] [client 118.71.69.87 ]  [ 1921 ] [ 1 ] [ Login thanh cong ] [ jENuYoUsv5iALFEcW+rIayBbMYwHigJd ] 
+[Tue Mar 01 15:08:13 2011] [doCardCharge] [soap] [client 118.71.69.87 ]  [ 1922 ] [ 5 ] [ Dang nhap da bi khoa ] [ Target: 84983321112 | PINCard: 6103667313119 | Result_Amount:  ] 
+[Tue Mar 01 15:31:07 2011] [doLogin] [soap] [client 222.252.12.102 ]  [ 1923 ] [ 1 ] [ Login thanh cong ] [ PcI3zdYHqLXyQyzHzgs3O8GbHCAprvew ] 
+[Tue Mar 01 15:31:07 2011] [doCardCharge] [soap] [client 222.252.12.102 ]  [ 1924 ] [ 8 ] [  ] [ Target: 84983321112 | PINCard: 3496512328201259254 | Result_Amount:  ] 
+[Tue Mar 01 15:31:26 2011] [doLogin] [soap] [client 222.252.12.102 ]  [ 1925 ] [ 1 ] [ Login thanh cong ] [ PcI3zdYHqLXyQyzHzgs3O8GbHCAprvew ] 
+[Tue Mar 01 15:31:26 2011] [doCardCharge] [soap] [client 222.252.12.102 ]  [ 1926 ] [ 8 ] [  ] [ Target: 84983321112 | PINCard: 3496512328201259254 | Result_Amount:  ] 

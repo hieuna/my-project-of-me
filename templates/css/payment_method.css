@@ -1,0 +1,122 @@
+.payment-wrapper{
+  border: 1px solid #e9e9e9;
+  border-radius: 3px;
+  background: #f9f9f9;
+  padding: 15px;
+}
+.payment-wrapper .tit6{margin-top: 0px; font-size: 16px; font-weight: bold; color: #da7f01;}
+.payment-wrapper .payment-content{
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  background: #FFF;
+  padding: 10px;
+}
+
+.payment-wrapper .payment-title{margin-top: 0px;}
+.payment-wrapper .payment-title a{font-size: 11px; color: #0e76bc; font-weight: normal; margin-left: 20px;}
+.payment-wrapper #methodQT{
+  border-bottom: 1px dotted #e0e0e0;
+  margin-bottom: 15px; padding-bottom: 15px;
+}
+.payment-wrapper #methodND-ATMCard{margin: 0px auto;}
+.payment-wrapper .logobank{text-align: center; padding: 0px 0px 15px; height: auto;}
+.payment-wrapper .logobank label{cursor: pointer; display: block;}
+.payment-wrapper .logobank.disabled{
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3;
+  cursor: default;
+}
+
+.payment-info{display: none;}
+.payment-form .cardinfo{width: 350px;}
+.payment-form .card-image{
+  width: 240px; height: 208px;  
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.payment-form .logobank input{border: none !important;}
+.payment-form.visacard .card-image{background-image: url('../images/cards/demo_visacard.jpg');}
+.payment-form.mastercard .card-image{background-image: url('../images/cards/demo_mastercard.jpg');}
+.payment-form .card-image.vpc_CardNum{background-position: center -208px;}
+.payment-form .card-image.expiry_month,
+.payment-form .card-image.expiry_year{background-position: center -416px;}
+.payment-form .card-image.vpc_CardSecurityCode{background-position: center -624px;}
+.payment-form .card-image.vpc_CardName{background-position: center 0px;}
+
+.payment-form.vietcombank .card-image{background-image: url('../images/cards/demo_1.jpg');}
+.payment-form.vietinbank .card-image{background-image: url('../images/cards/demo_4.jpg');}
+.payment-form.vibbank .card-image{background-image: url('../images/cards/demo_5.jpg');}
+.payment-form.hdbank .card-image{background-image: url('../images/cards/demo_7.jpg');}
+.payment-form.mbbank .card-image{background-image: url('../images/cards/demo_8.jpg');}
+.payment-form.vietabank .card-image{background-image: url('../images/cards/demo_9.jpg');}
+.payment-form.maritimebank .card-image{background-image: url('../images/cards/demo_10.jpg');}
+.payment-form.eximbank .card-image{background-image: url('../images/cards/demo_11.jpg');}
+.payment-form.namabank .card-image{background-image: url('../images/cards/demo_17.jpg');}
+
+.payment-form.vietcombank .fr,
+.payment-form.vietinbank .fr,
+.payment-form.vibbank .fr,
+.payment-form.vietabank .fr,
+.payment-form.hdbank .fr,
+.payment-form.namabank .fr,
+.payment-form.eximbank .fr,
+.payment-form.maritimebank .fr,
+.payment-form.mbbank .fr,
+.payment-form.vietabank .fr{display: block;}
+
+.payment-form.vietcombank .cardinfo,
+.payment-form.vietinbank .cardinfo,
+.payment-form.vibbank .cardinfo,
+.payment-form.vietabank .cardinfo,
+.payment-form.hdbank .cardinfo,
+.payment-form.vietabank .cardinfo,
+.payment-form.eximbank .cardinfo,
+.payment-form.maritimebank .cardinfo,
+.payment-form.mbbank .cardinfo,
+.payment-form.namabank .cardinfo{width: 350px;}
+
+.cardinfo .card-field{padding: 0.5em 0px; display: none !important;}
+.cardinfo .card-field label{float: left; display: inline; width: 120px;}
+.cardinfo .card-field input.input-text{width: 180px;}
+.cardinfo .card-field input.expiry{width: 30px;}
+.cardinfo .card-field input#vpc_CardSecurityCode{width: 50px;}
+.cardinfo .confirm-field{text-align: center; border-top: 1px dotted #e0e0e0; margin-top: 15px; display: block !important;}
+.cardinfo .confirm-field p{margin: 5px 0px 10px;}
+.cardinfo .card-field .btn-payment-submit{
+  background: url(../images/btn-payment-submit.png) no-repeat center center;
+  border: none; padding: 0px; width: 167px; height: 29px; cursor: pointer;
+}
+
+.payment-form.visacard .card-field,
+.payment-form.mastercard .card-field,
+.payment-form.vietcombank .card-field,
+.payment-form.vietinbank .card-field,
+.payment-form.hdbank .card-field,
+.payment-form.vibbank .card-field,
+.payment-form.eximbank .card-field,
+.payment-form.mbbank .card-field,
+.payment-form.tienphongbank .card-field,
+.payment-form.maritimebank .card-field,
+.payment-form.vietabank .card-field,
+.payment-form.namabank .card-field{
+  display: block !important;
+}
+
+.payment-form.maritimebank .card-field-exprire,
+.payment-form.tienphongbank .card-field-exprire,
+.payment-form.tienphongbank .card-field-name,
+.payment-form.vietabank .card-field-exprire,
+.payment-form.eximbank .card-field-exprire,
+.payment-form.namabank .card-field-exprire
+{display: none !important;}
+
+
+/*.techcombank .confirm-field{display: none !important;}*/
+
+.atmcard .cardinfo{width: 100%;}
+.atmcard .fr{display: none;}
+
+#linkTech{width: 80%; margin-top: 5px;}

@@ -1,0 +1,90 @@
+/* SIGNUP_PAGE */
+#signup-page #payment-info {
+	border: none;
+}
+
+#signup-page #payment-info td {
+	border: none;
+}
+
+#signup-page #payment-info input {
+	width: 300px;
+}
+
+#signup-page #payment-info select{
+    width: 150px;
+}
+
+#signup-page #payment-info span.help {
+	color: #757575;
+	display: block;
+	font-size: 0.9em;
+	margin: 0.1em 0;
+}
+
+#signup-page #payment-info .payment-box {
+	padding: 10px 10px 10px 10px;
+}
+
+/* LOGIN_PAGE */
+#login-page #payment-info {
+}
+
+#login-page #payment-info td {
+	border: none;
+}
+
+#login-page #payment-info input {
+	border: 1px solid #ADC2D6;
+	padding: 2px;
+}
+
+#login-page #payment-info input.box {
+	width: 180px;
+}
+
+#login-page #payment-info span.help {
+	color: #757575;
+	display: block;
+	font-size: 0.9em;
+	margin: 0.1em 0;
+}
+
+#login-page #payment-info .payment-box {
+	padding: 10px;
+}
+
+/* LOGIN_PAGE */
+#user_info #payment-info, #user_info #payment-info td {
+	border: none;
+}
+
+#user_info #payment-info input {
+	width: 300px;
+}
+
+#user_info #payment-info input.box {
+	width: 250px;
+}
+
+#user_info #payment-info .payment-box {
+	padding: 10px;
+}
+
+#user_info .user_gold {
+	background: url("../images/info_gold.png") no-repeat;
+    padding-left: 20px;
+}
+
+#user_info #payment-info span.help {
+	color: #757575;
+	display: block;
+	font-size: 0.9em;
+	margin: 0.1em 0;
+}
+
+.theme-item{
+    float: left; display: inline; margin-right: 10px;
+    height: 30px; margin-top: 10px; margin-bottom: 10px;
+}
+.theme-item img{vertical-align: middle; margin-top: -5px;}
