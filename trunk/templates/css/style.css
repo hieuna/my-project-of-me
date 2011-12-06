@@ -1,0 +1,232 @@
+body{
+	font-family: Arial, Tahoma, Verdana; font-size: 12px; color: #252525px; padding: 0; margin: 0;
+}
+#T3-Wrapper{
+	margin: 0 auto;
+}
+a, a:link, a:visited {
+    color: #034B8A; cursor: pointer; text-decoration: none;
+}
+a:hover {
+    color: #FF6600; text-decoration: none;
+}
+ul{
+	margin: 0; padding: 0;
+}
+li{
+	list-style: none;
+}
+/*-- HEADER --*/
+#MenuTop{
+	height: 41px; background: url("../images/bg_top_page.gif") repeat-x;
+}
+#box-menu-top{
+	width: 980px; height: 41px; color: #034B8A;
+}
+#box-menu-top .box-menu{
+	width: 74%; float: left; padding-top: 8px; text-align: left;
+}
+#box-menu-top .box-menu-text{
+	width: 26%; float: left; font-family: Tahoma; font-size: 11px; font-weight: normal; text-align: right; position: relative; z-index: 1000;
+}
+#box-menu-top .box-menu-text a:visited {
+    color: #034B8A;
+}
+#box-menu-top .box-menu-text a:hover {
+    text-decoration: underline;
+}
+#box-menu-top .box-menu-text .regis-selected .lg-left {
+    background: url("../images/login_left.gif") no-repeat left top;
+}
+#box-menu-top .box-menu-text .regis-selected .lg-right {
+    background: url("../images/login_right.gif") no-repeat right top;
+}
+a.btnMenu {
+    background: url("../images/bgr_cen.gif") repeat-x left top; cursor: pointer; float: left; font-size: 12px; margin-right: 2px;
+}
+.btnMenuLeft {
+    float: left;
+}
+a.btnMenu .all {
+    background: url("../images/menu_home.gif") no-repeat left top;
+}
+.electric, .shopping, .fashion, .brands, .estate, .car, .saleoff {
+    background: url("../images/header_icon.gif") no-repeat left top;
+}
+a.btnMenu .shopping {
+    background-position: 0 0; padding-left: 5px;
+}
+a.btnMenu .electric {
+    background-position: 0 -315px; padding-left: 5px;
+}
+a.btnMenu .fashion {
+    background-position: 0 -105px; padding-left: 5px;
+}
+a.btnMenu .brands {
+    background-position: 0 -210px; padding-left: 2px;
+}
+a.btnMenu .estate {
+    background-position: 0 -419px; padding-left: 4px;
+}
+a.btnMenu .saleoff {
+    background-position: 0 -631px; padding-left: 8px;
+}
+a.btnMenu .car {
+    background-position: 0 -526px; padding-left: 5px;
+}
+a.btnMenu:hover {
+    background: url("../images/bgr_cen.gif") repeat-x left -33px;
+}
+a.btnMenu:hover .btnMenuLeft {
+    float: left;
+}
+a.btnMenu:hover .all {
+    background: url("../images/menu_home.gif") no-repeat left -33px; float: left;
+}
+a.btnMenu:hover .shopping {
+    background-position: 0 -33px;
+}
+a.btnMenu:hover .electric {
+    background-position: 0 -348px;
+}
+a.btnMenu:hover .fashion {
+    background-position: 0 -138px;
+}
+a.btnMenu:hover .brands {
+    background-position: 0 -243px;
+}
+a.btnMenu:hover .estate {
+    background-position: 0 -452px;
+}
+a.btnMenu:hover .saleoff {
+    background-position: 0 -664px;
+}
+a.btnMenu:hover .car {
+    background-position: 0 -559px;
+}
+a.btnMenuSelect .all {
+    background: url("../images/menu_home.gif") no-repeat scroll left -66px transparent;
+}
+a.btnMenuSelect .all {
+    background-position: 0 -66px;
+}
+a.btnMenuSelect .shopping {
+    background-position: 0 -66px;
+}
+a.btnMenuSelect .electric {
+    background-position: 0 -381px;
+}
+a.btnMenuSelect .fashion {
+    background-position: 0 -171px;
+}
+a.btnMenuSelect .brands {
+    background-position: 0 -276px;
+}
+a.btnMenuSelect .estate {
+    background-position: 0 -485px;
+}
+a.btnMenuSelect .saleoff {
+    background-position: 0 -697px; padding-left: 6px;
+}
+a.btnMenuSelect .car {
+    background-position: 0 -592px;
+}
+a.btnMenu:hover .btnMenuRight {
+    background: url("../images/icon_finish.gif") no-repeat right -33px; float: left;
+}
+a.btnMenuSelect {
+    background: url("../images/bgr_cen.gif") repeat-x left -66px; cursor: pointer; float: left; font-size: 12px; font-weight: bold; margin-right: 2px;
+}
+.btnMenuRight {
+    background: url("../images/icon_finish.gif") no-repeat right top; float: left; height: 33px; line-height: 34px; padding-left: 29px; padding-right: 7px;
+}
+.btnMenuSelectRight {
+    background: url("../images/icon_finish.gif") no-repeat right top; float: left; height: 33px; line-height: 36px; padding-left: 33px; padding-right: 10px;
+}
+
+#header{
+	width: 980px; min-height: 120px; height: auto !important; height: 120px;
+}
+
+#submenu_top{
+	width: 100%; height: 35px; background: #044B8B; border-bottom: 6px solid #D7E0E9;
+}
+#main_submenu{
+	width: 980px; line-height: 35px; text-align: left; font-weight: bold; color: #F7F8FC;
+}
+#main_submenu .txt_menu_first{
+	height: 35px; float: left; margin: 0; padding-left: 2px;
+}
+#main_submenu .txt_menu{
+	height: 35px; float: left; background: url("../images/vline.gif") no-repeat left center; margin: 0; padding-left: 2px;
+}
+#main_submenu a.sub_default{
+	padding: 0 10px; color: #F7F8FC; float: left;
+}
+#main_submenu a.sub_default:hover{
+	background: #00325e;
+}
+#main_submenu a.sub_default_active{
+	background: url("../images/mn_select.gif") repeat-x; float: left; padding: 0 10px; color: #074B88;
+}
+/*-- END HEADER --*/
+
+/*-- BOX MAIN --*/
+#box_main{
+	width: 980px; height: auto;
+}
+#box-left-center{
+	width: 680px; height: auto; float: left; display: block;
+}
+#box-right{
+	width: 300px; height: auto; float: left; margin: 12px 0 0; display: block; height: 300px; background: #000;
+}
+.box_frame{
+	width: 668px; float: left; text-align: left; margin-top: 10px; border: 1px solid #D8DFEA;
+}
+.box_frame_header{
+	width: 100%; height:30px; border-bottom: 1px solid #d8dfea;
+}
+.box_frame_header .title_header{
+	font-size: 14px; line-height: 30px; text-align: left; font-weight: bold; padding-left: 10px;
+}
+.box_frame_header .title_header a{
+	color: #024D8E; text-decoration: none;
+}
+.content_frame{
+	width: 100%; float: left; padding: 5px 0;
+}
+.content_frame ul#top_sp li{
+	width: 165px; height:270px; float: left; margin: 1px; text-align: center; padding: 0;
+}
+.content_frame ul#top_sp li a img.img_radius{
+	width: 150px; height: 200px; border: 1px dotted #E4E4E4; padding: 2px; display: inline-block;
+}
+.content_frame ul#top_sp li div{
+	width: 100%; text-align: center; font-size: 12px; color: #333;
+}
+.content_frame ul#top_sp li div a{
+	font-weight: bold; color:#034B8A;
+}
+.content_frame ul#top_sp li div span.price{
+	color: #CE3400; font-weight: bold;
+}
+.content_frame ul#top_sp li div a.post_by{
+	font-weight: normal; text-decoration: underline; font-size: 11px;
+}
+.boxcate{
+	overflow: hidden;
+}
+.boxcate table.TblCate{
+	width: 100%;
+}
+.boxcate table.TblCate tr td.cateItem{
+	width: 25%; vertical-align: top; padding: 5px 0 5px 10px;
+}
+.boxcate table.TblCate tr td.cateItem a{
+	background: url("../images/arrow.gif") no-repeat left center; padding-left: 10px; font-size: 11px; text-decoration: none; color: #034B8A;
+}
+.boxcate table.TblCate tr td.cateItem a:hover{
+	text-decoration: underline;
+}
+/*-- END BOX MAIN --*/
