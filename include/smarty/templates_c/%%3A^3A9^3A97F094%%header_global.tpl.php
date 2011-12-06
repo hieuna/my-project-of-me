@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2011-12-05 23:44:46
+<?php /* Smarty version 2.6.26, created on 2011-12-06 10:03:34
          compiled from header_global.tpl */ ?>
 <!DOCTYPE html 
 	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
