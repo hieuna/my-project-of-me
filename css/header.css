@@ -1,0 +1,114 @@
+body{
+	font-family: Arial, Tahoma, Verdana; font-size: 12px; color: #333; padding: 0; margin: 0; text-align: center; background: url("../images/bg.jpg") no-repeat top center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    behavior: url(ie-css3.htc);
+}
+.clearfix:after, .clr:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+html[xmlns] .clearfix, html[xmlns] .clr {
+	display: block;
+}
+ 
+* html .clearfix, * html .clr {
+	height: 1%;
+}
+body ul{
+	margin: 0; padding: 0;
+}
+body li{
+	list-style: none;
+}
+.fullBg {
+    position: fixed; top: 0; left: 0; overflow: hidden; z-index: 100;
+}
+#header{
+	width: 100%; position: absolute; text-align: center; top: 0; left: 0; z-index: 999;
+}
+#top_header{
+	width: 100%; height: 70px; border-bottom: 5px solid #F9D83F; background: #606062; text-align: center;
+}
+#top_header .main_top_header{
+	width: 800px; margin: 0 auto; padding-top: 25px;
+}
+#top_header .main_top_header .logo{
+	float: left;
+}
+#top_header .main_top_header .logo img{
+	border: none;
+}
+#top_header .formSearch{
+	float: right; margin-right: 5px; margin-top: 2px;
+}
+#top_header .formSearch input.text{
+	width: 325px; height: 22px; background: #BEBFC1; border: 0; color: #333; font-size: 11px; padding-left: 10px;
+}
+#top_header .formSearch img{
+	border: 0;
+}
+#top_header .my-account{
+	width: 160px; height: 23px; float: right; background: #FFE401 url("../images/account.jpg") no-repeat 5px center; margin-top: 2px;
+}
+#top_header .my-account div{
+	padding-left: 5px; line-height: 23px;
+}
+#top_header .my-account a{
+	color: #323637; text-decoration: none; font-weight: bold;
+}
+#top_header .my-account a:hover{
+	text-decoration: underline;
+}
+#header #bottom_header{
+	width: 100%; position: relative; margin-bottom: 15px; padding-bottom: 5px;
+}
+#header #bottom_header .main_bottom_header{
+	width: 760px; margin: 0 auto; background: #fff; padding: 0 20px;
+}
+#header #bottom_header .main_bottom_header .keyword{
+	width: 100%; height:25px; float: left; color: #333; font-size: 11px; text-align: left; padding-top: 12px; font-weight: bold;
+}
+#header #bottom_header .main_bottom_header .keyword a{
+	color: #333; font-weight: normal; font-size: 11px; text-decoration: none;
+}
+#header #bottom_header .main_bottom_header .keyword a:hover{
+	text-decoration: underline;
+}
+#header #bottom_header .main_bottom_header .menu{
+	width: 100%;
+}
+#header #bottom_header .main_bottom_header .menu ul{
+	margin: 0; padding: 0;
+}
+#header #bottom_header .main_bottom_header .menu ul li{
+	padding-left: 22px; float: left; height: 22px; text-align: left; list-style: none; line-height: 23px; margin-right: 70px;
+}
+#header #bottom_header .main_bottom_header .menu ul li:last-child{
+	margin-right: 0;
+}
+#header #bottom_header .main_bottom_header .menu ul li a{
+	font-weight: bold; text-decoration: none; color: #333; text-transform: uppercase;
+}
+#header #bottom_header .main_bottom_header .menu ul li.phone{
+	background: url("../images/icon-phone.jpg") no-repeat left center;
+}
+#header #bottom_header .main_bottom_header .menu ul li.tablet{
+	background: url("../images/icon-tablet.jpg") no-repeat left center; padding-left: 40px;
+}
+#header #bottom_header .main_bottom_header .menu ul li.laptop{
+	background: url("../images/icon-laptop.jpg") no-repeat left center; padding-left: 30px;
+}
+#header #bottom_header .main_bottom_header .menu ul li.thietbiso{
+	background: url("../images/icon-thietbiso.jpg") no-repeat left center; padding-left: 37px;
+}
+#header #bottom_header .main_bottom_header .menu ul li.phukien{
+	background: url("../images/icon-phukien.jpg") no-repeat left center; padding-left: 20px;
+}

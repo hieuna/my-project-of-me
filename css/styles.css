@@ -1,0 +1,25 @@
+/* form register get phone */
+#frmGetPhone{
+	width: 760px; height: 300px; margin: 20px 0; padding-top: 40px; text-align: center;
+}
+table.tblRegister{
+	padding: 10px 20px; margin: 0; color: #333; border: 1px solid #ccc; margin: 0 auto;
+}
+table.tblRegister th{
+	font-weight: bold; text-align: left; padding: 5px; text-transform: uppercase;
+}
+table.tblRegister td{
+	text-align: left; padding: 5px;
+}
+table.tblRegister td input.txtInput{
+	width: 250px; border: 1px solid #ccc; outline: 0 none; padding: 6px !important; background: url("../images/input-bg.png") no-repeat; color:#567792; font-weight: bold;
+}
+table.tblRegister td input.txtInput:focus{
+	background-color: #FFFFDD;
+}
+table.tblRegister td input.btsubmit{
+	background: #FFAA22 url("../images/bg-btn-signup.png") repeat-x; border: 1px solid #FFAA22; color: #333333; cursor: pointer; display: block; font-weight: bold; height: 35px; padding: 4px 8px; text-align: center; text-decoration: none; text-shadow: 0 1px 0 #FFEE66;
+}
+table.tblRegister td select.selectbox{
+	width: 260px; border: 1px solid #ccc; height: 30px; font-size: 15px; background: url("../images/input-bg.png") no-repeat; color:#567792; padding: 4px 2px;
+}

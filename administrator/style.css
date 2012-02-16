@@ -1,0 +1,187 @@
+/* CSS Document */
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a.mainLink:link, a.mainLink:visited, a.mainLink:active {
+    text-decoration:     none;    
+    color:               #696ab5;
+	font-family:  Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	font-size: 12px;
+}
+a.mainLink:hover {
+    text-decoration:     none;
+    color:               #585880;
+	font-family:       Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	font-size: 12px;
+}
+.title_top_1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.stlTitle
+{
+		font-weight: bolder;
+		font-size: 12px;
+		color: #333399;
+		font-family: Tahoma;		
+}
+.stlHead
+{
+		font-weight: bolder;
+		font-size: 12px;
+		color: #333399;
+		font-family: Tahoma;		
+}
+.stlContent
+{
+		font-size: 14px;
+		color: #333399;
+		font-family: Tahoma;		
+}
+.link_menu_top {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.link_menu_top:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #990000;
+	text-decoration: underline;
+}
+.title_module {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #CC6633;
+	text-decoration: none;
+}
+.link_del_top {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #999999;
+	text-decoration: none;
+}
+.link_del_top:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #990000;
+	text-decoration: underline;
+}
+.txt_title_field_list {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.txt_normal {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.link_edit_item {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.link_edit_item:hover {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.link_item {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #FF3333;
+	text-decoration: none;
+}
+.link_item:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #003399;
+	text-decoration: underline;
+}
+.txt_name_product {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #990000;
+	text-decoration: none;
+}
+.link_menu_index {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: underline;
+}
+.link_menu_index:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #7F7F7F;
+	text-decoration: underline;
+}
+.txtField {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #660066;
+	text-decoration: none;
+}
+.txtBtn {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #990000;
+	text-decoration: underline;
+}
+.menu3{font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:underline;}
+.menu3:hover{font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#cc0000; text-decoration:underline;}
+.txtPage{font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:underline;}
+.txtDisplay {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #990000;
+	text-decoration: none;
+}
+
+/*-- ADD STYLE --*/
+#main-form{
+	font-family: Arial, Tahoma, Verdana; font-size: 12px; color: #333;
+}
+#main-form table.adminTable{
+	margin: 0; padding: 0; width: 100%;
+}
+#main-form table.adminTable td{
+	text-align: left; padding: 2px 5px;
+}
+.adm_selectbox{
+	width: 250px; border: 1px solid #ccc; height: 22px;	 
+}
+.adm_inputbox{
+	width: 250px; height: 22px; border: 1px solid #ccc;
+}
