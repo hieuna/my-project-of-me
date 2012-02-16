@@ -3,14 +3,14 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Feb 16, 2012 at 02:11 PM
+-- Generation Time: Feb 16, 2012 at 05:18 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 -- 
--- Database: `mbm_xtech`
+-- Database: `database_projects`
 -- 
 
 -- --------------------------------------------------------
@@ -472,6 +472,40 @@ CREATE TABLE `tbl_newsmid` (
 
 -- 
 -- Dumping data for table `tbl_newsmid`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_products`
+-- 
+
+CREATE TABLE `tbl_products` (
+  `product_id` int(11) unsigned NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL,
+  `code` varchar(50) NOT NULL,
+  `model` varchar(100) NOT NULL,
+  `slogan` varchar(255) NOT NULL,
+  `intro` tinytext NOT NULL,
+  `description` text NOT NULL,
+  `meta_keywords` varchar(255) NOT NULL,
+  `price` float NOT NULL,
+  `price_ny` float NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `state` tinyint(1) NOT NULL default '1',
+  `ordering` int(11) NOT NULL,
+  `created` datetime NOT NULL,
+  `admin_created` int(11) NOT NULL,
+  `modified` datetime NOT NULL,
+  `admin_modified` int(11) NOT NULL,
+  `hot` tinyint(1) NOT NULL default '0',
+  `new` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`product_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- 
+-- Dumping data for table `tbl_products`
 -- 
 
 
