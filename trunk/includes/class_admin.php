@@ -1,4 +1,12 @@
 <?php
+/*
+ * Version: 1.0
+ * Code By: Kiều Văn Ngọc
+ * Email: ngockv@gmail.com
+ * Mobile: 097.8686.055
+ * Website:
+ * Name Table Defined: TBL_ADMIN
+ */
 class PGAdmin
 {
 	var $is_message;
@@ -35,6 +43,11 @@ class PGAdmin
 		$this->admin_enabled = 1;
 	}
 	
+	/*
+	 * Load list fields
+	 * $where : Điều Kiện câu truy vấn
+	 * $start, $limit: LIMIT cho câu truy vấn
+	 */
 	public function loadList($where = null, $start=null, $limit=null){
 		global $database;
 
@@ -48,12 +61,29 @@ class PGAdmin
 			$res = $database->db_query("SELECT admin_name FROM ".TBL_ADMIN." WHERE admin_id=".$row["admin_created"]);
 			$this_user = $database->getRow($res);
 			$row['name_created'] = $this_user["admin_name"];
+			if ($row['admin_access']) {
+				$aryAccess = unserialize($row['admin_access']);
+				$pageAccess = array();
+				foreach ($aryAccess as $key=>$access) {
+					if (count($access)) {
+						foreach ($access as $kp=>$perm) {
+							$pageAccess[$key][$kp] = $arrPermiss[$perm];
+						}
+						$pageAccess[$key] = join(", ", $pageAccess[$key]);
+					}
+				}
+				$row['admin_access'] = $pageAccess;
+			}
 			$admin[] = $row;
 		}
 		
 		return $admin;
 	}
 	
+	/*
+	 * Load field
+	 * $admin_id : ID of field
+	 */
 	public function load($admin_id = null){
 		global $database;
 		if (!is_null($admin_id) && is_numeric($admin_id) && ($admin_id>0)){
@@ -124,6 +154,9 @@ class PGAdmin
 		return $result;
 	}
 	
+	/*
+	 * Remove Admin
+	 */
 	public function remove($cid = null){
 		global $database;
 		if (!is_array($cid)){
@@ -139,17 +172,20 @@ class PGAdmin
 			$sql = "DELETE FROM ".TBL_ADMIN." WHERE ( $cids )";
 			$database->db_query($sql);
 			
-			$this->is_message = 'Đã xóa '.$total.' banner thành công !';
+			$this->is_message = 'Đã xóa '.$total.' quản trị thành công !';
 		}
 		
 		return $this->is_message;
 	}
 	
+	/*
+	 * Publish and unpublish Admin
+	 */
 	public function published($cid, $published = 0){
 		global $database;
 		if (count( $cid ) < 1) {
 			$action = $published == 1 ? 'Mở khóa' : 'Khóa';
-			echo "<script> alert('Chọn một banner để $action'); window.history.go(-1);</script>\n";
+			echo "<script> alert('Chọn một quản trị viên để $action'); window.history.go(-1);</script>\n";
 			exit;
 		}
 	
