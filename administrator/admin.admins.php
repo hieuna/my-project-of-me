@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 include "admin.header.php";
 include "check.login.php";
 
