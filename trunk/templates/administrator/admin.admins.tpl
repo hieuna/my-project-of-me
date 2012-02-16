@@ -255,7 +255,14 @@
 					<a href="{$page}?task=edit&admin_id={$lsAdmin[loops].admin_id}">{$lsAdmin[loops].admin_email}</a>
 				</td>
 				<td>{$lsAdmin[loops].admin_username}</td>
-				<td>{$lsAdmin[loops].admin_username}</td>
+				<td>
+				{foreach from=$lsAdmin[loops].admin_access key=k item=access}
+				{if $access}
+					<u><b>{$k}</b></u><br />
+					{$access}<br />
+				{/if}
+				{/foreach}
+				</td>
 				<td align="center">{if $lsAdmin[loops].admin_registerDate=='0000-00-00 00:00:00'}Không xác định{else}{$lsAdmin[loops].admin_registerDate|date_format:"%d/%m/%Y %H:%M:%S"}{/if}</td>
 				<td align="center">
 					{if $lsAdmin[loops].admin_lastvisitDate=='0000-00-00 00:00:00'}Không xác định{else}{$lsAdmin[loops].admin_lastvisitDate|date_format:"%d/%m/%Y %H:%M:%S"}{/if}
