@@ -131,7 +131,7 @@
 	<tr>
 		<td class="key"><label for="name">Nhóm thành viên <font color="Red">*</font></label></td>
 		<td>
-			<select onchange="objUser.onchangeGroup()" size="1" class="inputbox" id="cbo_group" name="cbo_group" style="width:190px">
+			<select onchange="objUser.onchangeGroup()" size="1" class="adm_selectbox" id="cbo_group" name="cbo_group" style="width:190px">
 					<option {if $actived==0}selected="selected"{/if} value="0">- Nhóm thành viên -</option>
 					{foreach from=$arrGroup key=gId item=group}
 					{if $gId > $userInfo.admin_group || $userInfo.admin_group==1}
@@ -145,7 +145,7 @@
 		<tr id="rSite" style="display:none">
 		<td class="key"><label for="name">Quản trị website</label></td>
 		<td>
-			<select name="cbo_site[]" id="cbo_site" multiple style="width:190px">
+			<select name="cbo_site[]" id="cbo_site" class="adm_selectbox" multiple>
 					{foreach from=$sites key=siteid item=sitename}
             			<option value="{$siteid}">{$sitename}</option>
             		{/foreach}

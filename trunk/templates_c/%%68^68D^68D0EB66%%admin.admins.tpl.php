@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-16 14:49:51
+<?php /* Smarty version 2.6.10, created on 2012-02-16 14:56:48
          compiled from D:/AppServ/www/projects/templates/administrator/admin.admins.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format', 'D:/AppServ/www/projects/templates/administrator/admin.admins.tpl', 259, false),)), $this); ?>
@@ -144,7 +144,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format
 	<tr>
 		<td class="key"><label for="name">Nhóm thành viên <font color="Red">*</font></label></td>
 		<td>
-			<select onchange="objUser.onchangeGroup()" size="1" class="inputbox" id="cbo_group" name="cbo_group" style="width:190px">
+			<select onchange="objUser.onchangeGroup()" size="1" class="adm_selectbox" id="cbo_group" name="cbo_group" style="width:190px">
 					<option <?php if ($this->_tpl_vars['actived'] == 0): ?>selected="selected"<?php endif; ?> value="0">- Nhóm thành viên -</option>
 					<?php $_from = $this->_tpl_vars['arrGroup']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['gId'] => $this->_tpl_vars['group']):
@@ -162,7 +162,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format
 		<tr id="rSite" style="display:none">
 		<td class="key"><label for="name">Quản trị website</label></td>
 		<td>
-			<select name="cbo_site[]" id="cbo_site" multiple style="width:190px">
+			<select name="cbo_site[]" id="cbo_site" class="adm_selectbox" multiple>
 					<?php $_from = $this->_tpl_vars['sites']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['siteid'] => $this->_tpl_vars['sitename']):
 ?>
