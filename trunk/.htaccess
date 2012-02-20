@@ -16,7 +16,7 @@ Deny from all
 </FilesMatch>
 
 # Set the default handler.
-DirectoryIndex hotdeal.php gateway.php index.php
+DirectoryIndex index.php
 
 # SEO URL Settings
 RewriteEngine On
