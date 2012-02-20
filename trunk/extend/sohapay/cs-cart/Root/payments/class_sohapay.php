@@ -1,16 +1,7 @@
 ﻿<?php
+if ( !defined('AREA') ) { die('Access denied'); }
 
-/**
-*	
-*		Phiên bản: 2.0
-*		Ngày: 10-01-2012
-*		Tên lớp: PG_checkout
-*		Chức năng: Tích hợp thanh toán qua API
-*			- Xây dựng URL chuyển thông tin tới SohaPay để xử lý việc thanh toán cho merchant site.
-*			- Xác thực tính chính xác của thông tin đơn hàng được gửi về từ SohaPay.
-*		
-**/
-
+//START CLASS_SOHAPAY
 define('PG_URL_ROOT', 'https://sohapay.com/');
 
 class PG_checkout 
@@ -25,10 +16,10 @@ class PG_checkout
 	private $pg_url_embed = 'merchant_popup.php';
 	
 	// Mã merchante site 
-	private $merchant_site_code = 'u172';	// Biến này được SohaPay cung cấp cho merchant site
+	private $merchant_site_code = '';	// Biến này được SohaPay cung cấp cho merchant site
 	
 	// Mật khẩu bảo mật
-	private $secure_secret= '06fd8a20d9e2051df546'; // Biến này được SohaPay cung cấp cho merchant site
+	private $secure_secret= ''; // Biến này được SohaPay cung cấp cho merchant site
 	
 	function __construct($site_code="", $site_secure=""){         
         if (!empty($site_code) && !empty($site_secure)){
@@ -44,7 +35,6 @@ class PG_checkout
 	//Hàm xây dựng url, trong đó có tham số mã hóa (còn gọi là public key)
 	public function buildCheckoutUrl($return_url, $transaction_info, $order_code, $price, $order_email, $order_mobile)
 	{
-		
 		// Mảng các tham số chuyển tới Soha Payment
 		$arr_param = array(
 			'site_code'			=>	strval($this->merchant_site_code),
@@ -479,4 +469,46 @@ class PG_checkout
 		return $code;
 	}
 }
+/*-- END CLASS_SOHAPAY --*/
+
+// Return from paypal website
+if (!defined('PAYMENT_NOTIFICATION')) {
+	//THAM SO TRUYEN VAO CHO SOHAPAY
+	$merchant_site_code		= $processor_data['params']['site_code'];//id của site
+	$merchant_secure_secret	= $processor_data['params']['secure_secret'];//mật khẩu giao tiếp api
+    $return_url				= $processor_data['params']['return_url'];//Địa chị trả về
+    $website_merchant		= $processor_data['params']['website'];//Website của merchant
+    
+    //THAM SO CUA DON HANG
+    //var_dump($order_info);
+    $order_code = $processor_data['params']['order_code'].(($order_info['repaid']) ? ($order_id .'_'. $order_info['repaid']) : $order_id)."_".time();
+	$order_email = $order_info['email'];
+	//Order Total
+	$shp_price = fn_format_price($order_info['total']);
+	$shp_price =str_replace('.','',$shp_price);
+	$transaction_info = 'Thanh toán đơn đặt hàng từ '.$website_merchant.' qua cổng thanh toán SohaPay';
+	
+	//SOHAPAY
+    $classPayment= new PG_checkout($merchant_site_code, $merchant_secure_secret);
+	$sohapay_checkout_url = $classPayment->buildCheckoutUrl($return_url, $transaction_info, $order_code, $shp_price, $order_email);
+	//END SOHAPAY
+	
+	$msg = fn_get_lang_var('text_cc_processor_connection');
+	$msg = str_replace('[processor]', 'Quá trình thanh toán qua SohaPay bắt đầu', $msg);
+	echo <<<EOT
+	<html>
+	<body onLoad="document.nganluong_form.submit();">
+	<form action="{$sohapay_checkout_url}" method="post" name="nganluong_form">
+ 
+	</form>
+	<div align=center>{$msg}</div>
+	</body>
+	</html>
+EOT;
+	fn_flush();
+
+} else { 
+	echo 'sohapay'; die;	
+}
+exit;
 ?>
