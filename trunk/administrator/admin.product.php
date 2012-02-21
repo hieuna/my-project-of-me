@@ -86,27 +86,28 @@ switch($task){
 		$limit = PGRequest::getInt('limit', $setting['setting_list_limit'], 'POST');
 		
 		//CONDITION
+		$where[] = " p.product_id = pd.product_id";
 		if ($search){
-			$where[] = " name LIKE'%$search%'";
+			$where[] = " pd.name LIKE'%$search%'";
 		}
 		if ($filter_status == 0) {			
-			$where[] = " status=0";
+			$where[] = " p.status=0";
 		}else if ($filter_status == 3){
-			$where[] = " status>=0";			
+			$where[] = " p.status>=0";			
 		}else{
-			$where[] = " status=".$filter_status;
+			$where[] = " p.status=".$filter_status;
 		}
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
-		$order = " ORDER BY ordering ASC, created DESC";
+		$order = " ORDER BY p.ordering ASC, p.created DESC";
 		// GET THE TOTAL NUMBER OF RECORDS
-		$query = "SELECT COUNT(*) AS total FROM ".TBL_CATEGORY.$where;
+		$query = "SELECT COUNT(*) AS total FROM ".TBL_PRODUCT." AS p, ".TBL_PRODUCT_DESCRIPTION." AS pd".$where;
 		$results = $database->db_fetch_assoc($database->db_query($query));
 		// PHAN TRANG
 		$pager = new pager($limit, $results['total'], $p);
 		$offset = $pager->offset;
 		// LAY DANH SACH CHI TIET
-		$obCategory =  new PGCategory();
-		$lsCategory = $obCategory->loadList($where, $order, $offset, $limit);
+		$objProduct =  new PGProduct();
+		$lsProducts = $objProduct->loadList($where, $order, $offset, $limit);
 		
 		$smarty->assign('is_message', $is_message);
 		$smarty->assign('filter_status', $filter_status);
@@ -114,7 +115,7 @@ switch($task){
 		$smarty->assign('search', $search);
 		$smarty->assign('datapage', $pager->page_link());
 		$smarty->assign('p', $p);
-		$smarty->assign('lsCategory', $lsCategory);
+		$smarty->assign('lsProducts', $lsProducts);
 		break;
 }
 
