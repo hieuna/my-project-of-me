@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-21 11:49:29
+<?php /* Smarty version 2.6.10, created on 2012-02-21 17:55:37
          compiled from D:/AppServ/www/projects/templates/administrator/admin.cpanel.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'admin.header.tpl', 'smarty_include_vars' => array()));
@@ -34,9 +34,18 @@ templates/administrator/images/icon-48-user.png">
 									<div class="box-elemet-icon">
 										<div class="icon">
 											<a href="admin.category.php">
-												<img alt="Thông tin tài khoản" src="<?php echo $this->_tpl_vars['http_root']; ?>
-templates/administrator/images/config.png">	
+												<img alt="Quản trị nhóm sản phẩm" src="<?php echo $this->_tpl_vars['http_root']; ?>
+templates/administrator/images/categories.png">	
 												<span>Nhóm sản phẩm</span>
+											</a>	
+										</div>
+									</div>
+									<div class="box-elemet-icon">
+										<div class="icon">
+											<a href="admin.product.php">
+												<img alt="Quản trị sản phẩm" src="<?php echo $this->_tpl_vars['http_root']; ?>
+templates/administrator/images/icon-48-archive.png">	
+												<span>Quản trị sản phẩm</span>
 											</a>	
 										</div>
 									</div>

@@ -27,8 +27,16 @@
 									<div class="box-elemet-icon">
 										<div class="icon">
 											<a href="admin.category.php">
-												<img alt="Thông tin tài khoản" src="{$http_root}templates/administrator/images/config.png">	
+												<img alt="Quản trị nhóm sản phẩm" src="{$http_root}templates/administrator/images/categories.png">	
 												<span>Nhóm sản phẩm</span>
+											</a>	
+										</div>
+									</div>
+									<div class="box-elemet-icon">
+										<div class="icon">
+											<a href="admin.product.php">
+												<img alt="Quản trị sản phẩm" src="{$http_root}templates/administrator/images/icon-48-archive.png">	
+												<span>Quản trị sản phẩm</span>
 											</a>	
 										</div>
 									</div>
