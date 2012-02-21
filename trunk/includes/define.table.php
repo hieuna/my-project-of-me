@@ -1,7 +1,7 @@
 <?php
 //Dinh nghia ten cac bang de truy xuat co so du lieu
 define('TBL_BANNER','tbl_banner');
-define('TBL_CATEGORY', 'category');
+define('TBL_CATEGORY', 'tbl_categories');
 define('TBL_PRODUCT', 'tbl_products');
 
 define('TBL_ADMIN','tbl_admins');

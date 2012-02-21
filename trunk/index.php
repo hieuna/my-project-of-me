@@ -20,59 +20,51 @@
 <body>
 <div class="helper-container">
 	<a name="top"></a>
-	
-<div id="ajax_loading_box" class="ajax-loading-box"><div class="right-inner-loading-box"><div id="ajax_loading_message" class="ajax-inner-loading-box">Loading...</div></div></div>
-
-	
-
-
-
-
-<div id="container" class="container">
-
-		<div id="header">
-<div class="header-helper-container">
-	<div class="logo-image">
-		<a href="index.php"><img src="/cscart/skins/default_orange/customer/images/customer_area_logo.png" width="176" height="69" border="0" alt="Simbirsk Technologies Ltd" /></a>
+	<div id="ajax_loading_box" class="ajax-loading-box">
+		<div class="right-inner-loading-box">
+			<div id="ajax_loading_message" class="ajax-inner-loading-box">Loading...</div>
+		</div>
 	</div>
-	
-	<p class="quick-links">&nbsp;
-			<a href="index.php">Home</a>
-			<a href="index.php?dispatch=pages.view&amp;page_id=3">About Us</a>
-
-			<a href="index.php?dispatch=pages.view&amp;page_id=1">Contact Us</a>
-			<a href="index.php?dispatch=gift_certificates.add">Gift certificates</a>
-			<a href="index.php?dispatch=promotions.list">Promotions</a>
-			<a href="index.php?dispatch=sitemap.view">Sitemap</a>
-	</p>
-	
-	
-<div id="top_menu">
-<ul class="top-menu dropdown"><li class="first-level cm-active"><span><a href="index.php">Home</a></span></li><li class="first-level "><span><a href="index.php?dispatch=categories.catalog">Catalog</a></span></li><li class="first-level "><span><a href="index.php?dispatch=profiles.update">My Account</a></span></li><li class="first-level "><span><a href="index.php?dispatch=checkout.cart">View cart</a></span></li><li class="first-level "><span><a href="index.php?dispatch=pages.view&amp;page_id=3">Company</a></span>
-
-<ul class="dropdown-vertical-rtl">
-			<li >
-		<a href="index.php?dispatch=pages.view&amp;page_id=3">About our company</a>
-			</li>
-		<li class="h-sep">&nbsp;</li>
-			<li >
-		<a href="index.php?dispatch=pages.view&amp;page_id=1">Contact us</a>
-			</li>
-
-		<li class="h-sep">&nbsp;</li>
-			<li >
-		<a href="index.php?dispatch=pages.view&amp;page_id=4">Poll of the week</a>
-			</li>
-		<li class="h-sep">&nbsp;</li>
-			<li >
-		<a href="index.php?dispatch=pages.view&amp;page_id=2">What is CS-Cart?</a>
-			</li>
-
-		</ul>
-</li></ul>
-</div>
-<span class="helper-block">&nbsp;</span>
-</div>
+	<div id="container" class="container">
+		<div id="header">
+			<div class="header-helper-container">
+				<div class="logo-image">
+					<a href="index.php"><img src="/cscart/skins/default_orange/customer/images/customer_area_logo.png" width="176" height="69" border="0" alt="Simbirsk Technologies Ltd" /></a>
+				</div>
+				<p class="quick-links">&nbsp;
+						<a href="index.php">Home</a>
+						<a href="index.php?dispatch=pages.view&amp;page_id=3">About Us</a>
+			
+						<a href="index.php?dispatch=pages.view&amp;page_id=1">Contact Us</a>
+						<a href="index.php?dispatch=gift_certificates.add">Gift certificates</a>
+						<a href="index.php?dispatch=promotions.list">Promotions</a>
+						<a href="index.php?dispatch=sitemap.view">Sitemap</a>
+				</p>
+			<div id="top_menu">
+			<ul class="top-menu dropdown"><li class="first-level cm-active"><span><a href="index.php">Home</a></span></li><li class="first-level "><span><a href="index.php?dispatch=categories.catalog">Catalog</a></span></li><li class="first-level "><span><a href="index.php?dispatch=profiles.update">My Account</a></span></li><li class="first-level "><span><a href="index.php?dispatch=checkout.cart">View cart</a></span></li><li class="first-level "><span><a href="index.php?dispatch=pages.view&amp;page_id=3">Company</a></span>
+			<ul class="dropdown-vertical-rtl">
+						<li >
+					<a href="index.php?dispatch=pages.view&amp;page_id=3">About our company</a>
+						</li>
+					<li class="h-sep">&nbsp;</li>
+						<li >
+					<a href="index.php?dispatch=pages.view&amp;page_id=1">Contact us</a>
+						</li>
+			
+					<li class="h-sep">&nbsp;</li>
+						<li >
+					<a href="index.php?dispatch=pages.view&amp;page_id=4">Poll of the week</a>
+						</li>
+					<li class="h-sep">&nbsp;</li>
+						<li >
+					<a href="index.php?dispatch=pages.view&amp;page_id=2">What is CS-Cart?</a>
+						</li>
+			
+					</ul>
+			</li></ul>
+			</div>
+			<span class="helper-block">&nbsp;</span>
+	</div>
 
 <div class="top-tools-container">
 	<span class="float-left">&nbsp;</span>
@@ -1340,58 +1332,15 @@ function fn_form_pre_product_form_250001498()
 </div>
 	<div class="sidebox-bottom"><span>&nbsp;</span></div>
 </div>
-<div class="sidebox-wrapper ">
-	<h3 class="sidebox-title"><span>Bestsellers</span></h3>
-	<div class="sidebox-body"><ul class="bullets-list">
 
-	<li>
-		<a href="index.php?dispatch=products.view&amp;product_id=812">multiples tee</a>
-
-	</li>
-	<li>
-		<a href="index.php?dispatch=products.view&amp;product_id=826">patch pocket skort</a>
-	</li>
-	<li>
-		<a href="index.php?dispatch=products.view&amp;product_id=809">Soffe Shorts</a>
-	</li>
-
-</ul>
-</div>
-	<div class="sidebox-bottom"><span>&nbsp;</span></div>
-</div>
 			</div>
 						
 						<div class="right-column">
 				<div class="ad-container center">
 		<a href="index.php?dispatch=statistics.banners&amp;banner_id=1" >		<img class=" "  src="/cscart/images/promo/0/common_image_1.jpg" width="171" height="149" alt="build_your_pc.jpg"  border="0" />
-		</a>	</div><div class="sidebox-wrapper ">
-
-	<h3 class="sidebox-title"><span>Site news</span></h3>
-	<div class="sidebox-body"><ul class="site-news">
-	<li>
-		<strong>01/16/2009</strong>
-		<a href="index.php?dispatch=news.view&amp;news_id=4">CS-Cart Version 2.0 released!</a>
-	</li>
-		<li class="delim"></li>
-
-		<li>
-		<strong>01/01/2009</strong>
-		<a href="index.php?dispatch=news.view&amp;news_id=3">Happy New Year to you!!!</a>
-	</li>
-		<li class="delim"></li>
-		<li>
-		<strong>12/10/2008</strong>
-
-		<a href="index.php?dispatch=news.view&amp;news_id=2">Design Updates</a>
-	</li>
-	</ul>
-
-<p class="right">
-	<a href="index.php?dispatch=news.list" class="extra-link">view all</a>
-</p>
-</div>
-	<div class="sidebox-bottom"><span>&nbsp;</span></div>
-</div><div class="sidebox-wrapper ">
+		</a>	</div>
+		
+<div class="sidebox-wrapper ">
 
 	<h3 class="sidebox-title"><span>Latest DVDs</span></h3>
 	<div class="sidebox-body">
@@ -1399,31 +1348,7 @@ function fn_form_pre_product_form_250001498()
 	
 
 <ul>
-			
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<li class="compact">
+<li class="compact">
 				<form action="index.php" method="post" name="product_form_260001028" enctype="multipart/form-data" class="cm-disable-empty-files cm-ajax">
 <input type="hidden" name="result_ids" value="cart_status,wish_list" />
 <input type="hidden" name="redirect_url" value="index.php" />
@@ -1680,7 +1605,8 @@ function fn_form_pre_product_form_250001498()
 	</li>
 	</ul></div>
 	<div class="sidebox-bottom"><span>&nbsp;</span></div>
-</div><div class="sidebox-wrapper ">
+</div>
+<div class="sidebox-wrapper ">
 	<h3 class="sidebox-title"><span>My account</span></h3>
 
 	<div class="sidebox-body">
@@ -1717,7 +1643,8 @@ function fn_form_pre_product_form_250001498()
 <!--track_orders--></div>
 </div>
 	<div class="sidebox-bottom"><span>&nbsp;</span></div>
-</div><div class="sidebox-wrapper ">
+</div>
+<div class="sidebox-wrapper ">
 	<h3 class="sidebox-title"><span>Recently viewed</span></h3>
 
 	<div class="sidebox-body"><ul class="bullets-list">
@@ -1729,7 +1656,9 @@ function fn_form_pre_product_form_250001498()
 </ul>
 </div>
 	<div class="sidebox-bottom"><span>&nbsp;</span></div>
-</div><div class="sidebox-wrapper hidden cm-hidden-wrapper">
+</div>
+
+<div class="sidebox-wrapper hidden cm-hidden-wrapper">
 	<h3 class="sidebox-title"><span>Feature comparison</span></h3>
 
 	<div class="sidebox-body"><div id="comparison_list">

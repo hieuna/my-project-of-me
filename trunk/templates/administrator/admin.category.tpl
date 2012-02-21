@@ -73,7 +73,7 @@
 	   			</tbody>
 	   		</table>
 	   </div>
-	   <div class="header hotdeal">{$page_title}</div>
+	   <div class="header category">{$page_title}</div>
 	   <div class="clr"></div>
    </div>
    <div class="b">
@@ -84,7 +84,7 @@
    {if $mosmsg}<div class="message">{$mosmsg}</div>{/if}
 </div>
 {if $task == "add" || $task == "edit"}
-<form action="admin.hotdeal.php" method="post" name="adminForm" enctype="multipart/form-data">
+<form action="{$page}" method="post" name="adminForm" enctype="multipart/form-data">
 <table class="adminTable">
    <tbody>
    	<tr>
@@ -97,96 +97,34 @@
    			<option value="">Lựa chọn theo nhóm</option>
    			{/if}
    			{section name=loops loop=$categorys}
-   			<option {if $thisHotDeal->category_id==$categorys[loops].category_id || $category_id==$categorys[loops].category_id} selected="selected"{/if} value="admin.hotdeal.php?task={$task}&id={$thisHotDeal->id}&category_id={$categorys[loops].category_id}">{$categorys[loops].name}</option>
+   			<option {if $thisCategory->category_id==$categorys[loops].category_id || $category_id==$categorys[loops].category_id} selected="selected"{/if} value="admin.hotdeal.php?task={$task}&id={$thisCategory->id}&category_id={$categorys[loops].category_id}">{$categorys[loops].name}</option>
    			{/section}
    		</select>
    		</td>
    	</tr>
    	<tr>
-   		<td valign="top">Chọn sản phẩm</td>
-   		<td>
-   		<select name="product_id" class="adm_selectbox">
-   			<option value="">Lựa chọn sản phẩm</option>
-   			{section name=loops loop=$products}
-   			<option {if $thisHotDeal->product_id==$products[loops].product_id}selected="selected"{/if} value="{$products[loops].product_id}">{$products[loops].name} - {$products[loops].price|number_format} VNĐ</option>
-   			{/section}
-   		</select>
-   		<div id="feauture_product" style="margin:10px 0; padding:10px;">
-   			<select name="feauture[]" multiple="multiple" style="width:250px; height:200px;">
-   			{foreach from=$thisHotDeal->feauture item=foo}
-			    <option value="{$foo}">{$foo}</option>
-			{/foreach}
-   			</select>
-   		</div>
-   		{if $thisHotDeal->feauture}
-   		<input type="checkbox" value="{$thisHotDeal->product_id}" name="chkFT" /> Chọn tính năng khác
-   		{/if}
-   		</td>
+   		<td>Tên nhóm sản phẩm</td>
+   		<td><input type="text" name="name" class="adm_inputbox" value="{$thisCategory->name}" /></td>
    	</tr>
    	<tr>
-   		<td>Giá niêm yết</td>
-   		<td><input type="text" name="price_ny" class="adm_inputbox" value="{$thisHotDeal->price_ny}" /></td>
+   		<td>Bí danh</td>
+   		<td><input type="text" name="alias" class="adm_inputbox" value="{$thisCategory->alias}" /></td>
    	</tr>
    	<tr>
-   		<td>Giá khuyến mại</td>
-   		<td><input type="text" name="price_hotdeal" class="adm_inputbox" value="{$thisHotDeal->price_hotdeal}" /></td>
-   	</tr>
-   	<tr>
-   		<td>Mức giảm</td>
-   		<td><input type="text" name="discount" class="adm_inputbox" value="{$thisHotDeal->discount}" disabled="disabled" /> (%)</td>
-   	</tr>
-   	<tr>
-   		<td>Tiêu đề Hot Deal</td>
-   		<td><input type="text" name="title" class="adm_inputbox" value="{$thisHotDeal->title}" /></td>
-   	</tr>
-   	<tr>
-   		<td>Mô tả Hot Deal</td>
-   		<td><textarea cols="30" rows="5" name="description">{$thisHotDeal->description}</textarea></td>
-   	</tr>
-   	<tr>
-   		<td>Số lượng sản phẩm</td>
-   		<td><input type="text" name="count" class="adm_inputbox" value="{$thisHotDeal->count}" /></td>
-   	</tr>
-   	<tr>
-   		<td>Tên tính năng</td>
-   		<td><input type="text" name="title_feauture" class="adm_inputbox" value="{$thisHotDeal->title_feauture}" /></td>
-   	</tr>
-   	<tr>
-   		<td valign="top">Ảnh tính năng</td>
-   		<td valign="top">
-   			<div style="widtd:100%; margin: 10px 0;">
-   				<img src="{$http_root}{$thisHotDeal->image}" width="150" border="0" />
-   			</div>
-   			<input type="file" name="img" size="25" class="adm_inputbox" value="" />
-   		</td>
+   		<td valign="top">Mô tả</td>
+   		<td><textarea cols="30" rows="5" name="description">{$thisCategory->description}</textarea></td>
    	</tr>
    	<tr>
    		<td>Ngày cập nhật</td>
-   		<td><input type="text" name="start_date" id="start_date" class="adm_inputbox" value="{$thisHotDeal->start_date}" /></td>
+   		<td><input type="text" name="created" id="created" class="adm_inputbox" value="{$thisCategory->created}" /></td>
    	</tr>
-   	<tr>
-   		<td>Ngày kết thúc</td>
-   		<td><input type="text" name="end_date" id="end_date" class="adm_inputbox" value="{$thisHotDeal->end_date}" /></td>
-   	</tr>
-   	<tr>
-   		<td>Tên người liên hệ</td>
-   		<td><input type="text" name="ct_name" class="adm_inputbox" value="{$thisHotDeal->ct_name}" /></td>
-   	</tr>
-   	<tr>
-   		<td>Điện thoại liên hệ</td>
-   		<td><input type="text" name="ct_phone" class="adm_inputbox" value="{$thisHotDeal->ct_phone}" /></td>
-   	</tr>
-   	<tr>
-   		<td>Yahoo liên hệ</td>
-   		<td><input type="text" name="ct_yahoo" class="adm_inputbox" value="{$thisHotDeal->ct_yahoo}" /></td>
-   	</tr>
-   	<tr>
-   		<td>Skype liên hệ</td>
-   		<td><input type="text" name="ct_skype" class="adm_inputbox" value="{$thisHotDeal->ct_skype}" /></td>
+   		<tr>
+   		<td>Thứ tự</td>
+   		<td><input type="text" name="ordering" id="ordering" class="adm_inputbox small" value="{$thisCategory->ordering}" /></td>
    	</tr>
    	<tr>
    		<td>Trạng thái</td>
-   		<td><input type="checkbox" name="published" class="adm_chk" {if $thisHotDeal->published == 1} checked="checked"{/if} value="1" /> Hiển thị</td>
+   		<td><input type="checkbox" name="status" class="adm_chk" {if $thisCategory->status == 1} checked="checked"{/if} value="1" /> Hiển thị</td>
    	</tr>
    </tbody>
    <tfoot>
@@ -194,29 +132,15 @@
    		<td></td>
    		<td>
    			<input type="hidden" name="category_id_value" value="{$category_id}" />
-   			<input type="hidden" name="id" value="{$thisHotDeal->id}" />
+   			<input type="hidden" name="category_id" value="{$thisCategory->category_id}" />
    			<input type="hidden" name="task" value="save" />
    		</td>
    	</tr>
    </tfoot>
 </table>
 </form>
-{literal}
-<script type="text/javascript">
-$(function(){
-	$('select[name=product_id]').change(function(){
-		var val = $(this).val();
-		$("#feauture_product").load("ajax.php?task=feauture_product&product_id="+val);
-	});
-	$('input[name=chkFT]').click(function(){
-		var val = $(this).val();
-		$("#feauture_product").load("ajax.php?task=feauture_product&product_id="+val);
-	});
-});
-</script>
-{/literal}
 {else}
-<form name="adminForm" method="post" action="admin.hotdeal.php">
+<form name="adminForm" method="post" action="{$page}">
 	<table style="margin-bottom:5px;">
 		<tbody>
 			<tr>
@@ -244,22 +168,22 @@ $(function(){
 					<input type="checkbox" onclick="checkAll(50);" value="" name="toggle">
 				</th>
 				<th class="title" nowrap="nowrap" style="text-align: left; padding-left: 5px;">
-					<strong>Tên Hot Deal</strong>
+					<strong>Tên nhóm sản phẩm</strong>
 				</th>
 				<th class="title" nowrap="nowrap">
-					<strong>Sản phẩm</strong>
+					<strong>Bí danh</strong>
 				</th>
 				<th class="title" nowrap="nowrap">
-					<strong>Giá niêm yết</strong>
+					<strong>Parent ID</strong>
 				</th>
 				<th class="title" nowrap="nowrap">
-					<strong>Giá khuyến mãi</strong>
+					<strong>Số sản phẩm</strong>
 				</th>	
 				<th class="title" nowrap="nowrap">
-					<strong>Ngày hết hạn</strong>
+					<strong>Người tạo</strong>
 				</th>
-				<th width="15" nowrap="nowrap">
-					<strong>Số lượng</strong>
+				<th class="title" nowrap="nowrap">
+					<strong>Ngày tạo</strong>
 				</th>
 				<th width="15" nowrap="nowrap">
 					<strong>Trạng thái</strong>
@@ -267,33 +191,31 @@ $(function(){
 			</tr>
 		</thead>
 		<tbody>
-			{section name=loops loop=$lsHotDeal}
+			{section name=loops loop=$lsCategory}
 			<tr class="row{if $smarty.section.loops.index%2==0}0{else}1{/if}">
 				<td>{$smarty.section.loops.index+1}</td>
 				<td align="center">
-					<input type="checkbox" onclick="isChecked(this.checked);" value="{$lsHotDeal[loops].id}" name="cid[]" id="cb{$lsHotDeal[loops].id}">
+					<input type="checkbox" onclick="isChecked(this.checked);" value="{$lsCategory[loops].category_id}" name="cid[]" id="cb{$lsCategory[loops].category_id}">
 				</td>
 				<td>
-					<a href="admin.hotdeal.php?task=edit&id={$lsHotDeal[loops].id}">{$lsHotDeal[loops].title}</a>
+					<a href="{$page}?task=edit&category_id={$lsCategory[loops].category_id}">{$lsCategory[loops].name}</a>
+				</td>
+				<td align="center">{$lsCategory[loops].alias}</td>
+				<td align="center">{$lsCategory[loops].parent_id}</td>
+				<td align="center">{$lsCategory[loops].product_count}</td>
+				<td align="center">
+					{$lsCategory[loops].name_created}
 				</td>
 				<td align="center">
-					{$lsHotDeal[loops].name}
-				</td>
-				<td align="center">{$lsHotDeal[loops].price_ny|number_format} VNĐ</td>
-				<td align="center">{$lsHotDeal[loops].price_hotdeal|number_format} VNĐ</td>
-				<td align="left">
-					{$lsHotDeal[loops].end_date}
+					{$lsCategory[loops].created}
 				</td>
 				<td align="center">
-					{$lsHotDeal[loops].count}
-				</td>
-				<td align="center">
-					{if $lsHotDeal[loops].published == 1}
-						<a onclick="return listItemTask('cb{$lsHotDeal[loops].id}','unpublish')" title="Ẩn đi">
+					{if $lsCategory[loops].status == 1}
+						<a onclick="return listItemTask('cb{$lsCategory[loops].category_id}','unpublish')" title="Ẩn đi">
 						<img src="../images/publish_g.png" width="16" style="cursor:pointer" alt="Ẩn đi" border="0" />
 						</a>
 					{else}
-						<a onclick="return listItemTask('cb{$lsHotDeal[loops].id}','publish')" title="Hiển thị">
+						<a onclick="return listItemTask('cb{$lsCategory[loops].category_id}','publish')" title="Hiển thị">
 						<img src="../images/publish_x.png" width="16" style="cursor:pointer" alt="Hiển thị" border="0" />
 						</a>
 					{/if}
