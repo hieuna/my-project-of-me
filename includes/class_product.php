@@ -10,46 +10,86 @@
 class PGProduct{
 	var $is_message;
 	
+	//TBL_PRODUCT
 	var $product_id;
-	var $name;
 	var $code;
 	var $model;
-	var $slogan;
-	var $intro;
-	var $description;
-	var $meta_keywords;
 	var $price;
 	var $price_ny;
-	var $image;
-	var $state;
+	var $amount;
+	var $weight;
+	var $length;
+	var $width;
+	var $height;
+	var $status;
 	var $ordering;
 	var $created;
 	var $admin_created;
 	var $modified;
 	var $admin_modified;
-	var $hot;
-	var $new;
+	var $category_id;
+	//TBL_PRODUCT_DESCRIPTION
+	var $name;
+	var $alias;
+	var $introtext;
+	var $fulltext;
+	var $meta_keywords;
+	var $meta_description;
+	var $search_words;
+	var $page_title;
+	//TBL_PRODUCT_DISCOUNT
+	var $discount;
+	var $percent;
+	//TBL_PRODUCT_COLOR
+	var $name_color;
+	var $value_color;
+	var $price_color;
+	var $show_color;
+	//TBL_PRODUCT_IMAGE
+	var $small_image;
+	var $medium_image;
+	var $large_image;
 	
 	function __construct(){
+		//TBL_PRODUCT
 		$this->product_id = 0;
-		$this->name = "";
 		$this->code = "";
 		$this->model = "";
-		$this->slogan = "";
-		$this->intro = "";
-		$this->description = "";
-		$this->meta_keywords = "";
 		$this->price = 0;
 		$this->price_ny = 0;
-		$this->image = "";
-		$this->state = 1;
+		$this->amount = 0;
+		$this->weight = 0;
+		$this->length = 0;
+		$this->width = 0;
+		$this->height = 0;
+		$this->status = 1;
 		$this->ordering = 0;
 		$this->created = "";
 		$this->admin_created = 0;
 		$this->modified = "";
 		$this->admin_modified = 0;
-		$this->hot = 0;
-		$this->new = 0;
+		$this->category_id = 0;
+		//TBL_PRODUCT_DESCRIPTION
+		$this->name = "";
+		$this->alias = "";
+		$this->introtext = "";
+		$this->fulltext = "";
+		$this->meta_keywords = "";
+		$this->meta_description = "";
+		$this->search_words = "";
+		$this->page_title = "";
+		//TBL_PRODUCT_DISCOUNT
+		$this->discount = 0;
+		$this->percent = 0;
+		//TBL_PRODUCT_COLOR
+		$this->name_color = "";
+		$this->value_color = "";
+		$this->price_color = 0;
+		$this->show_color = 1;
+		//TBL_PRODUCT_IMAGE
+		$this->small_image = "";
+		$this->medium_image = "";
+		$this->large_image = "";
 	}
 	
 	/*
@@ -62,15 +102,15 @@ class PGProduct{
 		global $database;
 
 		if (is_null($order)){
-			$orderBy = "\n ORDER BY ordering ASC, created DESC";
+			$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
 		}else{
 			$orderBy = $order;
 		}
 		if (is_numeric($start) && is_numeric($limit)){
-			$wLimit = "\n LIMIT ".$start.", ".$limit;
+			$wLimit = " LIMIT ".$start.", ".$limit;
 		}
 		
-		$sql = "SELECT * FROM ".TBL_PRODUCT.$where.$orderBy.$wLimit;
+		$sql = "SELECT p.code, p.model, p.price, p.price_ny, p.amount, pd.name, pd.page_title FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd " .$where.$orderBy.$wLimit;
 		$results = $database->db_query($sql);
 		while ($row = $database->db_fetch_assoc($results)){
 			$res = $database->db_query("SELECT admin_name FROM ".TBL_ADMIN." WHERE admin_id=".$row["admin_created"]);
@@ -91,25 +131,34 @@ class PGProduct{
 		if (!is_null($product_id) && is_numeric($product_id) && ($product_id>0)){
 			$result = $database->db_query("SELECT * FROM ".TBL_PRODUCT." WHERE product_id=$product_id LIMIT 1");
 			if ($objProduct = $database->db_fetch_object($result)){
+				//TBL_PRODUCT
 				$this->product_id		= $objProduct->product_id;
-				$this->name				= $objProduct->name;
 				$this->code				= $objProduct->code;
 				$this->model			= $objProduct->model;
-				$this->slogan			= $objProduct->slogan;
-				$this->intro			= $objProduct->intro;
-				$this->description		= $objProduct->description;
-				$this->meta_keywords	= $objProduct->meta_keywords;
 				$this->price			= $objProduct->price;
 				$this->price_ny			= $objProduct->price_ny;
-				$this->image			= $objProduct->image;
-				$this->state			= $objProduct->state;
+				$this->amount			= $objProduct->amount;
+				$this->weight			= $objProduct->weight;
+				$this->length			= $objProduct->length;
+				$this->width			= $objProduct->width;
+				$this->height			= $objProduct->height;
+				$this->status			= $objProduct->status;
 				$this->ordering			= $objProduct->ordering;
 				$this->created			= $objProduct->created;
 				$this->admin_created	= $objProduct->admin_created;
 				$this->modified			= $objProduct->modified;
 				$this->admin_modified	= $objProduct->admin_modified;
-				$this->hot				= $objProduct->hot;
-				$this->new				= $objProduct->new;	
+				$this->category_id		= $objProduct->category_id;
+				
+				//TBL_PRODUCT_DESCRIPTION
+				$this->name				= $objProduct->name;
+				$this->alias			= $objProduct->alias;
+				$this->introtext		= $objProduct->introtext;
+				$this->fulltext			= $objProduct->fulltext;
+				$this->meta_keywords	= $objProduct->meta_keywords;
+				$this->meta_description	= $objProduct->meta_description;
+				$this->search_words		= $objProduct->search_words;
+				$this->page_title		= $objProduct->page_title;
 			}
 		}
 		return $this;
@@ -129,65 +178,59 @@ class PGProduct{
 
 		if (!isset($objProduct->product_id) || is_null($objProduct->product_id) || ($objProduct->product_id==0)){
       		$sql = "INSERT INTO ".TBL_PRODUCT." (
-      			name,
 		        code,
 		        model,
-		        slogan,
-		        intro,
-        		description,
-		        meta_keywords,
 		        price,
 		        price_ny,
-		        image,
-		        state,
+		        amount,
+		        weight,
+		        length,
+		        width,
+		        height,
+		        status,
 		        ordering,
 		        created,
 		        admin_created,
 		        modified,
 		        admin_modified,
-		        hot,
-		        new
+		        category_id
 		    ) VALUES (
-		    	'{$objProduct->name}',
 		    	'{$objProduct->code}',
 		        '{$objProduct->model}',
-		        '{$objProduct->slogan}',
-		        '{$objProduct->intro}',
-		        '{$objProduct->description}',
-		        '{$objProduct->meta_keywords}',
 		        '{$objProduct->price}',
 		        '{$objProduct->price_ny}',
-		        '{$objProduct->image}',
-		        '{$objProduct->state}',
+		        '{$objProduct->amount}',
+		        '{$objProduct->weight}',
+		        '{$objProduct->length}',
+		        '{$objProduct->width}',
+		        '{$objProduct->height}',
+		        '{$objProduct->status}',
 		        '{$objProduct->ordering}',
 		        '{$objProduct->created}',
 		        '{$objProduct->admin_created}',
 		        '{$objProduct->modified}',
 		        '{$objProduct->admin_modified}',
-		        '{$objProduct->hot}',
-		        '{$objProduct->new}'
+		        '{$objProduct->category_id}'
 		    )";
 	      	if ($database->db_query($sql)) $this->is_message = "Thêm mới sản phẩm thành công !";	
 		}else{
 			$sql = "UPDATE ".TBL_PRODUCT." SET 
-					name='{$objProduct->name}', 
 					code='{$objProduct->code}', 
 					model='{$objProduct->model}',
-					slogan='{$objProduct->slogan}',
-					intro='{$objProduct->intro}',
-					description='{$objProduct->description}',
-					meta_keywords='{$objProduct->meta_keywords}',
 					price='{$objProduct->price}',
 					price_ny='{$objProduct->price_ny}',
-					image='{$objProduct->image}',
-					state='{$objProduct->state}',
+					amount='{$objProduct->amount}',
+					weight='{$objProduct->weight}',
+					length='{$objProduct->length}',
+					width='{$objProduct->width}',
+					height='{$objProduct->height}',
+					status='{$objProduct->status}',
 					ordering='{$objProduct->ordering}',
 					created='{$objProduct->created}',
 					admin_created='{$objProduct->admin_created}',
 					modified='{$objProduct->modified}',
 					admin_modified='{$objProduct->admin_modified}',
-					hot='{$objProduct->hot}',
-					new='{$objProduct->new}'
+					category_id='{$objProduct->category_id}'
 					WHERE product_id='{$objProduct->product_id}' LIMIT 1";
 			if ($database->db_query($sql)) $this->is_message = "Cập nhật sản phẩm thành công !";	
 		}
