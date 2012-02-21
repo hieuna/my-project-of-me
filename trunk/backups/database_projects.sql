@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Feb 21, 2012 at 06:16 PM
+-- Generation Time: Feb 22, 2012 at 12:57 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -61,29 +61,6 @@ CREATE TABLE `tbl_admins_sites` (
 
 -- 
 -- Dumping data for table `tbl_admins_sites`
--- 
-
-
--- --------------------------------------------------------
-
--- 
--- Table structure for table `tbl_adv`
--- 
-
-CREATE TABLE `tbl_adv` (
-  `adv_id` int(11) NOT NULL auto_increment,
-  `adv_img` varchar(200) collate utf8_unicode_ci NOT NULL default '',
-  `adv_link` varchar(200) collate utf8_unicode_ci NOT NULL default '',
-  `adv_title` text collate utf8_unicode_ci,
-  `adv_status` tinyint(1) NOT NULL default '0',
-  `adv_date` timestamp NULL default NULL,
-  `adv_click` int(11) default NULL,
-  `adv_location` varchar(6) collate utf8_unicode_ci NOT NULL default '0' COMMENT 'Vị trí bên trái hay phải',
-  PRIMARY KEY  (`adv_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=23 ;
-
--- 
--- Dumping data for table `tbl_adv`
 -- 
 
 
@@ -422,113 +399,27 @@ INSERT INTO `tbl_hotdeal` VALUES (28, 2670, 35, 8600000, 3500000, 5100000, 59, '
 -- --------------------------------------------------------
 
 -- 
--- Table structure for table `tbl_menulevel1`
--- 
-
-CREATE TABLE `tbl_menulevel1` (
-  `mn_id` int(11) NOT NULL auto_increment COMMENT 'Mã menu cấp 1',
-  `mn_name` varchar(40) collate utf8_unicode_ci NOT NULL default '',
-  `mn_order` tinyint(4) NOT NULL default '0',
-  PRIMARY KEY  (`mn_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=24 ;
-
--- 
--- Dumping data for table `tbl_menulevel1`
--- 
-
-
--- --------------------------------------------------------
-
--- 
--- Table structure for table `tbl_menulevel2`
--- 
-
-CREATE TABLE `tbl_menulevel2` (
-  `submn_id` int(11) NOT NULL auto_increment COMMENT 'Mã menu cấp 2',
-  `mn_id` int(11) NOT NULL default '0' COMMENT 'mã menu cấp 1',
-  `submn_name` varchar(50) collate utf8_unicode_ci NOT NULL default '',
-  `submn_order` tinyint(4) NOT NULL default '0',
-  PRIMARY KEY  (`submn_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=25 ;
-
--- 
--- Dumping data for table `tbl_menulevel2`
--- 
-
-
--- --------------------------------------------------------
-
--- 
--- Table structure for table `tbl_news`
--- 
-
-CREATE TABLE `tbl_news` (
-  `news_id` int(11) NOT NULL auto_increment,
-  `news_title` varchar(200) collate utf8_unicode_ci NOT NULL default '',
-  `news_sums` text collate utf8_unicode_ci NOT NULL,
-  `news_details` text collate utf8_unicode_ci NOT NULL,
-  `news_date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-  `news_status` tinyint(1) NOT NULL default '0',
-  `news_hot` tinyint(1) NOT NULL default '0',
-  `news_img` varchar(200) collate utf8_unicode_ci NOT NULL default '',
-  `news_cat` varchar(8) collate utf8_unicode_ci NOT NULL default '',
-  PRIMARY KEY  (`news_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=45 ;
-
--- 
--- Dumping data for table `tbl_news`
--- 
-
-
--- --------------------------------------------------------
-
--- 
--- Table structure for table `tbl_newsmid`
--- 
-
-CREATE TABLE `tbl_newsmid` (
-  `newMid_id` int(11) NOT NULL auto_increment COMMENT 'Mã tin trung tâm',
-  `newMid_title` varchar(200) collate utf8_unicode_ci NOT NULL default '' COMMENT 'Tiêu đề',
-  `newMid_sums` text collate utf8_unicode_ci NOT NULL COMMENT 'Tóm tắt',
-  `newMid_details` text collate utf8_unicode_ci NOT NULL COMMENT 'Chi tiết',
-  `newMid_img` varchar(200) collate utf8_unicode_ci NOT NULL default '' COMMENT 'Ảnh',
-  `newMid_status` tinyint(1) NOT NULL default '0' COMMENT 'Trạng thái cho hiển thị',
-  `newMid_order` tinyint(4) NOT NULL default '0' COMMENT 'Vị trí xuất hiện',
-  `newMid_date` timestamp NULL default NULL COMMENT 'Ngày đưa lên',
-  PRIMARY KEY  (`newMid_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
-
--- 
--- Dumping data for table `tbl_newsmid`
--- 
-
-
--- --------------------------------------------------------
-
--- 
 -- Table structure for table `tbl_products`
 -- 
 
 CREATE TABLE `tbl_products` (
   `product_id` int(11) unsigned NOT NULL auto_increment,
-  `name` varchar(255) NOT NULL,
   `code` varchar(50) NOT NULL,
   `model` varchar(100) NOT NULL,
-  `slogan` varchar(255) NOT NULL,
-  `intro` tinytext NOT NULL,
-  `description` text NOT NULL,
-  `meta_keywords` varchar(255) NOT NULL,
   `price` float NOT NULL,
   `price_ny` float NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `state` tinyint(1) NOT NULL default '1',
+  `amount` mediumint(9) NOT NULL,
+  `weight` decimal(10,0) NOT NULL,
+  `length` mediumint(9) NOT NULL,
+  `width` mediumint(9) NOT NULL,
+  `height` mediumint(9) NOT NULL,
+  `status` tinyint(1) NOT NULL default '1',
   `ordering` int(11) NOT NULL,
   `created` datetime NOT NULL,
   `admin_created` int(11) NOT NULL,
   `modified` datetime NOT NULL,
   `admin_modified` int(11) NOT NULL,
-  `hot` tinyint(1) NOT NULL default '0',
-  `new` tinyint(1) NOT NULL default '0',
+  `category_id` int(11) NOT NULL,
   PRIMARY KEY  (`product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -540,12 +431,53 @@ CREATE TABLE `tbl_products` (
 -- --------------------------------------------------------
 
 -- 
+-- Table structure for table `tbl_products_color`
+-- 
+
+CREATE TABLE `tbl_products_color` (
+  `product_id` int(10) unsigned NOT NULL,
+  `name_color` varchar(100) NOT NULL,
+  `value_color` varchar(100) NOT NULL,
+  `price_color` float NOT NULL,
+  `show_color` tinyint(1) NOT NULL default '1'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Dumping data for table `tbl_products_color`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_products_description`
+-- 
+
+CREATE TABLE `tbl_products_description` (
+  `product_id` int(11) unsigned NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `introtext` tinytext NOT NULL,
+  `fulltext` text NOT NULL,
+  `meta_keywords` varchar(255) NOT NULL,
+  `meta_description` varchar(255) NOT NULL,
+  `search_words` text NOT NULL,
+  `page_title` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Dumping data for table `tbl_products_description`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
 -- Table structure for table `tbl_products_discount`
 -- 
 
 CREATE TABLE `tbl_products_discount` (
-  `product_id` int(11) NOT NULL,
-  `price` float NOT NULL,
+  `product_id` int(11) unsigned NOT NULL,
   `discount` float NOT NULL,
   `percent` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -558,19 +490,41 @@ CREATE TABLE `tbl_products_discount` (
 -- --------------------------------------------------------
 
 -- 
--- Table structure for table `tbl_represent`
+-- Table structure for table `tbl_products_feauture`
 -- 
 
-CREATE TABLE `tbl_represent` (
-  `re_id` int(11) NOT NULL auto_increment,
-  `re_sum` text collate utf8_unicode_ci NOT NULL,
-  `re_content` text collate utf8_unicode_ci NOT NULL COMMENT 'nội dung giới thiê',
-  `re_status` tinyint(1) NOT NULL default '0' COMMENT 'Trạng thái hiển thị hay Ko ?',
-  PRIMARY KEY  (`re_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
+CREATE TABLE `tbl_products_feauture` (
+  `feature_id` bigint(20) unsigned NOT NULL auto_increment,
+  `feature_type` varchar(1) NOT NULL,
+  `feature_name` varchar(255) NOT NULL,
+  `categories_path` text NOT NULL,
+  `parent_id` mediumint(9) NOT NULL,
+  `display_on_product` tinyint(1) NOT NULL default '1',
+  `display_on_catalog` tinyint(1) NOT NULL default '1',
+  `status` tinyint(4) NOT NULL default '1',
+  PRIMARY KEY  (`feature_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
--- Dumping data for table `tbl_represent`
+-- Dumping data for table `tbl_products_feauture`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_products_image`
+-- 
+
+CREATE TABLE `tbl_products_image` (
+  `product_id` int(10) unsigned NOT NULL,
+  `small_image` varchar(255) NOT NULL,
+  `medium_image` varchar(255) NOT NULL,
+  `large_image` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Dumping data for table `tbl_products_image`
 -- 
 
 
