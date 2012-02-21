@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Feb 16, 2012 at 05:18 PM
+-- Generation Time: Feb 21, 2012 at 06:16 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -116,6 +116,34 @@ CREATE TABLE `tbl_banner` (
 
 INSERT INTO `tbl_banner` VALUES (4, 'image/banners/2.jpg', 'http://xtech.vn/register_get_phone.php?product_id=', 1, 1, '', '', 'đặt hàng online htc cha cha', '', 0, '2012-02-10 12:00:00', 0, 2374);
 INSERT INTO `tbl_banner` VALUES (5, '', '', 0, 1, '', '', 'Chương trình mới', '', 0, '2012-02-10 04:29:02', 0, 0);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_categories`
+-- 
+
+CREATE TABLE `tbl_categories` (
+  `category_id` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `product_count` int(11) NOT NULL,
+  `description` tinytext NOT NULL,
+  `status` tinyint(1) NOT NULL default '1',
+  `ordering` int(11) NOT NULL,
+  `created` datetime NOT NULL,
+  `created_by` int(11) NOT NULL,
+  `parent_id` int(11) NOT NULL,
+  PRIMARY KEY  (`category_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+-- 
+-- Dumping data for table `tbl_categories`
+-- 
+
+INSERT INTO `tbl_categories` VALUES (1, 'Áo sơ mi', 'ao-so-mi', 0, 'Áo sơ mi cho trẻ nam và nữ', 1, 0, '2012-02-21 02:52:13', 1, 0);
+INSERT INTO `tbl_categories` VALUES (2, 'Váy cho trẻ 5 tuổi', 'Vay cho tre 5 tuoi', 0, 'Váy cho bé gái 5 tuổi', 1, 0, '2012-02-21 04:15:23', 1, 0);
+INSERT INTO `tbl_categories` VALUES (5, 'Bộ Vest cho bé trai 5 tuổi', 'Bo-Vest-cho-be-trai-5-tuoi', 0, 'Bộ vest cho bé trai 5 tuổi', 1, 3, '2012-02-21 04:17:41', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -381,7 +409,7 @@ CREATE TABLE `tbl_hotdeal` (
 -- Dumping data for table `tbl_hotdeal`
 -- 
 
-INSERT INTO `tbl_hotdeal` VALUES (1, 2435, 40, 0, 20000000, 9290000, 32, 'Macbook Air giảm giá cực số 128GB', 'Chíp đă năng lõi kép', 'Sản phẩm chỉ có tại xtech.vn, chương trình khuyến mãi được thể hiện bổ xung vào dịp tết, hãy nhanh tay, số lượng có hạn', '', 0, 0, '', '', '', '', '', 1, '2012-01-11 00:00:00', '2012-01-25 00:00:00', 0);
+INSERT INTO `tbl_hotdeal` VALUES (1, 2435, 40, 0, 20000000, 9290000, 32, 'Macbook Air giảm giá cực số 128GB', 'Chíp đă năng lõi kép', 'Sản phẩm chỉ có tại xtech.vn, chương trình khuyến mãi được thể hiện bổ xung vào dịp tết, hãy nhanh tay, số lượng có hạn', '', 0, 0, '', '', '', '', '', 0, '2012-01-11 00:00:00', '2012-01-25 00:00:00', 0);
 INSERT INTO `tbl_hotdeal` VALUES (2, 2473, 40, 0, 30000000, 8990000, 23, 'Macbook iMac khuyến mãi sock', 'Chip đă năng tính năg', 'Chỉ có tại Xtech.vn, giá cực kỳ hấp dẫn, các bạn hãy tham gia chương trình khuyến mãi của chúng tôi để trở thành người may mắn nhận giải thưởng này', '', 0, 0, '', '', '', '', '', 1, '2012-01-19 00:00:00', '2012-01-31 00:00:00', 0);
 INSERT INTO `tbl_hotdeal` VALUES (4, 2166, 634, 0, 6000000, 999000, 14, 'Samsung B7610 giảm giá sock', 'Màn hình cảm ứng', 'Sản phẩm có tại xtech đang được khuyến mãi giảm giá, các bạn hãy nhanh tay mua hàng', '', 0, 0, '', '', '', '', '', 1, '2012-01-18 00:00:00', '2012-01-25 00:00:00', 0);
 INSERT INTO `tbl_hotdeal` VALUES (23, 2708, 0, 5600000, 5400000, 200000, 4, 'Smartphone cao cấp', '', 'Chào mừng các cậu nhé', '', 0, 8, '', '', '', '', '', 1, '01/19/2012 03:10', '01/26/2012 04:19', 0);
@@ -506,6 +534,24 @@ CREATE TABLE `tbl_products` (
 
 -- 
 -- Dumping data for table `tbl_products`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_products_discount`
+-- 
+
+CREATE TABLE `tbl_products_discount` (
+  `product_id` int(11) NOT NULL,
+  `price` float NOT NULL,
+  `discount` float NOT NULL,
+  `percent` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Dumping data for table `tbl_products_discount`
 -- 
 
 
