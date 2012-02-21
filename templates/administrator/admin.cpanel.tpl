@@ -18,17 +18,17 @@
 								<div id="cpanel">
 									<div class="box-elemet-icon">
 										<div class="icon">
-											<a href="admin.account.php">
-												<img alt="Thông tin tài khoản" src="{$http_root}templates/administrator/images/config.png">	
-												<span>Thông tin tài khoản</span>
+											<a href="admin.admins.php">
+												<img alt="Quản trị viên" src="{$http_root}templates/administrator/images/icon-48-user.png">	
+												<span>Quản trị viên</span>
 											</a>	
 										</div>
 									</div>
 									<div class="box-elemet-icon">
 										<div class="icon">
-											<a href="admin.admins.php">
-												<img alt="Quản trị viên" src="{$http_root}templates/administrator/images/icon-48-user.png">	
-												<span>Quản trị viên</span>
+											<a href="admin.category.php">
+												<img alt="Thông tin tài khoản" src="{$http_root}templates/administrator/images/config.png">	
+												<span>Nhóm sản phẩm</span>
 											</a>	
 										</div>
 									</div>

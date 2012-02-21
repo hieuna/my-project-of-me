@@ -23,6 +23,7 @@ include "../includes/database_config.php";
 include "../includes/class_admin.php";
 include "../includes/class_validate.php";
 include "../includes/class_acl.php";
+include "../includes/class_category.php";
 include "../includes/class_site.php";
 include "../includes/class_hotdeal.php";
 include "../includes/class_customer_hotdeal.php";

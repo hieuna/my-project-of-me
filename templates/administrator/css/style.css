@@ -218,6 +218,9 @@ select.adm_selectbox{
 	width: 260px; border: 1px solid #ccc; height: 30px; font-size: 15px; background: url("../images/input-bg.png") no-repeat; color:#567792; padding: 4px 2px;
 	border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;
 }
+.small{
+	width: 50px;
+}
 
 /*-- submenu --*/
 div#submenu-box div.t {
@@ -304,7 +307,7 @@ table.toolbar span {
 div.header {
 	color: #333; font-size: 20px; font-weight: bold; line-height: 55px; margin-left: 10px; padding-left: 55px; text-align: left;
 }
-.account{
+.category{
 	background: url("../images/config.png") no-repeat top left;
 }
 .admins{

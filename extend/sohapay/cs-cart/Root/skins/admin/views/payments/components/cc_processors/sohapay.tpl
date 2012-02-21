@@ -13,11 +13,6 @@
 </div>
 
 <div class="form-field">
-	<label for="url">Địa chỉ trả về:</label>
-	<input type="text" name="payment_data[processor_params][return_url]" id="return_url" value="{$processor_params.return_url}" class="input-text" />
-</div>
-
-<div class="form-field">
 	<label for="url">Tên website của bạn:</label>
 	<input type="text" name="payment_data[processor_params][website]" id="website" value="{$processor_params.website}" class="input-text" />
 </div>
