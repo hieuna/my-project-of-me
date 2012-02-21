@@ -20,6 +20,9 @@ $(function(){
 	function(){
 		$(this).removeClass('hover');
 	});
+
+	//jQuery Inline Content Editor Plugin
+	$('#wysiwyg').wysiwyg();
 });
 </script>
 {/literal}
