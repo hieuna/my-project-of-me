@@ -199,6 +199,9 @@ table.adminTable thead th{
 table.adminTable thead th span{
 	margin-left: 10px;
 }
+table.adminBorder{
+	border: 2px solid #ccc; padding: 0;
+}
 .adm_selectbox{
 	width: 250px; border: 1px solid #ccc; height: 22px;	 
 }
@@ -220,6 +223,9 @@ select.adm_selectbox{
 }
 .small{
 	width: 50px;
+}
+.title_box_tbl{
+	background: #E3E3E3; font-weight: bold; text-transform: uppercase; height: 30px;
 }
 
 /*-- submenu --*/
@@ -307,11 +313,14 @@ table.toolbar span {
 div.header {
 	color: #333; font-size: 20px; font-weight: bold; line-height: 55px; margin-left: 10px; padding-left: 55px; text-align: left;
 }
-.category{
-	background: url("../images/config.png") no-repeat top left;
-}
 .admins{
 	background: url("../images/icon-48-user.png") no-repeat top left;
+}
+.category{
+	background: url("../images/categories.png") no-repeat top left;
+}
+.product{
+	background: url("../images/icon-48-archive.png") no-repeat top left;
 }
 .hotdeal{
 	background: url("../images/impressions.png") no-repeat top left;
