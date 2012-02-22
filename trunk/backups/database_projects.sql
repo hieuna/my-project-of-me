@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Feb 22, 2012 at 12:57 AM
+-- Generation Time: Feb 23, 2012 at 12:37 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -112,7 +112,7 @@ CREATE TABLE `tbl_categories` (
   `created_by` int(11) NOT NULL,
   `parent_id` int(11) NOT NULL,
   PRIMARY KEY  (`category_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 -- 
 -- Dumping data for table `tbl_categories`
@@ -121,6 +121,7 @@ CREATE TABLE `tbl_categories` (
 INSERT INTO `tbl_categories` VALUES (1, 'Áo sơ mi', 'ao-so-mi', 0, 'Áo sơ mi cho trẻ nam và nữ', 1, 0, '2012-02-21 02:52:13', 1, 0);
 INSERT INTO `tbl_categories` VALUES (2, 'Váy cho trẻ 5 tuổi', 'Vay cho tre 5 tuoi', 0, 'Váy cho bé gái 5 tuổi', 1, 0, '2012-02-21 04:15:23', 1, 0);
 INSERT INTO `tbl_categories` VALUES (5, 'Bộ Vest cho bé trai 5 tuổi', 'Bo-Vest-cho-be-trai-5-tuoi', 0, 'Bộ vest cho bé trai 5 tuổi', 1, 3, '2012-02-21 04:17:41', 1, 0);
+INSERT INTO `tbl_categories` VALUES (8, '', '', 0, '', 0, 0, '0000-00-00 00:00:00', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -413,6 +414,7 @@ CREATE TABLE `tbl_products` (
   `length` mediumint(9) NOT NULL,
   `width` mediumint(9) NOT NULL,
   `height` mediumint(9) NOT NULL,
+  `number_color` int(11) NOT NULL,
   `status` tinyint(1) NOT NULL default '1',
   `ordering` int(11) NOT NULL,
   `created` datetime NOT NULL,
@@ -421,12 +423,13 @@ CREATE TABLE `tbl_products` (
   `admin_modified` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
   PRIMARY KEY  (`product_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 -- 
 -- Dumping data for table `tbl_products`
 -- 
 
+INSERT INTO `tbl_products` VALUES (1, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -454,7 +457,7 @@ CREATE TABLE `tbl_products_color` (
 -- 
 
 CREATE TABLE `tbl_products_description` (
-  `product_id` int(11) unsigned NOT NULL,
+  `product_id` int(11) unsigned NOT NULL auto_increment,
   `name` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `introtext` tinytext NOT NULL,
@@ -462,8 +465,9 @@ CREATE TABLE `tbl_products_description` (
   `meta_keywords` varchar(255) NOT NULL,
   `meta_description` varchar(255) NOT NULL,
   `search_words` text NOT NULL,
-  `page_title` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `page_title` varchar(255) NOT NULL,
+  PRIMARY KEY  (`product_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
 -- Dumping data for table `tbl_products_description`
@@ -479,7 +483,8 @@ CREATE TABLE `tbl_products_description` (
 CREATE TABLE `tbl_products_discount` (
   `product_id` int(11) unsigned NOT NULL,
   `discount` float NOT NULL,
-  `percent` int(11) NOT NULL
+  `percent` int(11) NOT NULL,
+  PRIMARY KEY  (`product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- 
@@ -517,11 +522,12 @@ CREATE TABLE `tbl_products_feauture` (
 -- 
 
 CREATE TABLE `tbl_products_image` (
-  `product_id` int(10) unsigned NOT NULL,
+  `product_id` int(10) unsigned NOT NULL auto_increment,
   `small_image` varchar(255) NOT NULL,
   `medium_image` varchar(255) NOT NULL,
-  `large_image` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `large_image` varchar(255) NOT NULL,
+  PRIMARY KEY  (`product_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
 -- Dumping data for table `tbl_products_image`
