@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-22 23:24:08
+<?php /* Smarty version 2.6.10, created on 2012-02-23 00:34:41
          compiled from D:/AppServ/www/projects/templates/administrator/admin.product.tpl */ ?>
 <div id="toolbar-box">
    <div class="t">
@@ -230,9 +230,9 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 			   		<td colspan="2" class="title_box_tbl">Thông tin về màu sắc</td>
 			   	</tr>
 			   	<tr>
-			   		<td width="25%">Số màu sản phẩm</td>
+			   		<td width="15%">Số màu</td>
 			   		<td>
-			   			<select name="color[]" id="color" class="adm_selectbox">
+			   			<select name="number_color" id="color" class="adm_selectbox">
 							<?php unset($this->_sections['foo']);
 $this->_sections['foo']['name'] = 'foo';
 $this->_sections['foo']['start'] = (int)1;
@@ -269,10 +269,9 @@ $this->_sections['foo']['last']       = ($this->_sections['foo']['iteration'] ==
 			   		</td>
 			   	</tr>
 			   	<tr>
-			   		<td valign="top">Chọn màu</td>
+			   		<td valign="top"></td>
 			   		<td>
 			   			<div id="show_color">
-			   				<input type="text" maxlength="6" size="6" class="colorpickerField" value="00ff00" />
 			   			</div>
 			   		</td>
 			   	</tr>

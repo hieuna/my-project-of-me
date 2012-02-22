@@ -32,39 +32,31 @@ switch($task){
 		break;
 		
 	case 'save':
-		var_dump($_POST); die;
-		$category_id		= PGRequest::getInt('category_id', 0, 'POST');
-		$product_id			= PGRequest::getInt('product_id', 0, 'POST');
-		$product_id_value	= PGRequest::getInt('product_id_value', 0, 'POST');
-		$name				= $database->getEscaped(PGRequest::getString('name', '', 'POST'));
-		$alias				= $database->getEscaped(PGRequest::getString('alias', '', 'POST'));
-		$description		= $database->getEscaped(PGRequest::getString('description', '', 'POST'));
-		$created			= $database->getEscaped(PGRequest::getString('created', ''));
-		$status				= PGRequest::GetInt('status', 0, 'POST');
-		$ordering			= PGRequest::GetInt('ordering', 0, 'POST');
+		$product_id		= PGRequest::getInt('product_id', 0, 'POST');
 		
-		$objCategory = new PGCategory();
-		$thisCategory = $objCategory->load($product_id);
-		if (!$objCategory->is_message){
-			$objCategory->category_id 	= $category_id_value;
-			$objCategory->name			= $name;
-			if ($alias != ""){
-				$objCategory->alias 	= $alias;
-			}else{
-				$name_alias				= RemoveSign($name);
-				$name_alias				= str_replace(" ", "-", $name_alias);
-				$name_alias				= preg_replace('/[^a-z0-9]+/i','-',$name_alias);
-				$objCategory->alias 	= $name_alias;
+		$objProduct = new PGProduct();
+		$thisProduct = $objProduct->load($product_id);
+		if (!$objProduct->is_message){
+			foreach ($_POST as $key =>$value) {
+				//echo $key."&nbsp;".$value."<br />";
+				if ($objProduct->key == 'alias'){
+					if ($objProduct->key != ""){
+						$objProduct->alias 	= $objProduct->key;
+					}else{
+						if ($objProduct->key == 'name'){
+							$name_alias			= RemoveSign($objProduct->key);
+							$name_alias			= str_replace(" ", "-", $name_alias);
+							$name_alias			= preg_replace('/[^a-z0-9]+/i','-',$name_alias);
+							$objProduct->alias 	= $name_alias;
+						}
+					}
+				}
+				$objProduct->key	= $value;
 			}
-			$objCategory->description	= $description;
-			$objCategory->status		= $status;
-			$objCategory->created		= $created;
-			$objCategory->created_by	= $admin_id;
-			$objCategory->ordering		= $ordering;
-			$objCategory->save($thisCategory);
+			$objProduct->save($thisProduct);
 			cheader($page);
 		}else{
-			$error = $objCategory->is_message;
+			$error = $objProduct->is_message;
 		}
 		break;
 
