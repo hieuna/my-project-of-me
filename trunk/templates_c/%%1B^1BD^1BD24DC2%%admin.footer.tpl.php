@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-22 10:06:15
+<?php /* Smarty version 2.6.10, created on 2012-02-22 23:25:37
          compiled from D:/AppServ/www/projects/templates/administrator/admin.footer.tpl */ ?>
 	</div>
 	<!-- BORDER BOTTOM -->

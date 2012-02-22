@@ -4,7 +4,6 @@ session_start();
 
 include "../config/config.php";
 include "../includes/clsCommons.php";
-include "../includes/FCKeditor/fckeditor.php";
 include "../includes/clsPaging.php";
 include "../includes/define.table.php";
 

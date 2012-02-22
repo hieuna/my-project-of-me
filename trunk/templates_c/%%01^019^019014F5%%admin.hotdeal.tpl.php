@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-21 13:54:01
+<?php /* Smarty version 2.6.10, created on 2012-02-22 21:40:54
          compiled from D:/AppServ/www/projects/templates/administrator/admin.hotdeal.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.hotdeal.tpl', 111, false),)), $this); ?>

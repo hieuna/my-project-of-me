@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-21 16:28:09
+<?php /* Smarty version 2.6.10, created on 2012-02-22 23:29:59
          compiled from D:/AppServ/www/projects/templates/administrator/admin.category.tpl */ ?>
 <div id="toolbar-box">
    <div class="t">
