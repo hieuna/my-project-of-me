@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-22 10:06:11
+<?php /* Smarty version 2.6.10, created on 2012-02-22 22:35:29
          compiled from D:/AppServ/www/projects/templates/administrator/admin.header.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -10,6 +10,8 @@ templates/administrator/css/style.css" type="text/css" />
 includes/js/JQuery/jquery-1.7.min.js" type="text/javascript"></script>
 <script src="<?php echo $this->_tpl_vars['http_root']; ?>
 includes/js/javascript.js" type="text/javascript"></script>
+<script src="<?php echo $this->_tpl_vars['http_root']; ?>
+includes/js/core.js" type="text/javascript"></script>
 
 <link rel="stylesheet" media="all" type="text/css" href="<?php echo $this->_tpl_vars['http_root']; ?>
 includes/js/JQuery/css/jquery-ui-1.8.16.custom.css" />
@@ -35,9 +37,10 @@ includes/js/JQuery/tiny_mce/tiny_mce.js"></script>
 	<?php echo '
 	tinyMCE.init({
 		// General options
-		mode : "textareas",
+		mode : "exact",
+		elements : "fulltext",
 		theme : "advanced",
-		plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave",
+		plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,inlinepopups,autosave",
 
 		// Theme options
 		theme_advanced_buttons1 : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
@@ -58,17 +61,6 @@ includes/js/JQuery/tiny_mce/tiny_mce.js"></script>
 		external_image_list_url : "lists/image_list.js",
 		media_external_list_url : "lists/media_list.js",
 
-		// Style formats
-		style_formats : [
-			{title : \'Bold text\', inline : \'b\'},
-			{title : \'Red text\', inline : \'span\', styles : {color : \'#ff0000\'}},
-			{title : \'Red header\', block : \'h1\', styles : {color : \'#ff0000\'}},
-			{title : \'Example 1\', inline : \'span\', classes : \'example1\'},
-			{title : \'Example 2\', inline : \'span\', classes : \'example2\'},
-			{title : \'Table styles\'},
-			{title : \'Table row 1\', selector : \'tr\', classes : \'tablerow1\'}
-		],
-
 		// Replace values for the template plugin
 		template_replace_values : {
 			username : "Some User",
@@ -79,6 +71,21 @@ includes/js/JQuery/tiny_mce/tiny_mce.js"></script>
 
 </script>
 <!-- /TinyMCE -->
+
+<!-- Pick Color -->
+<script type="text/javascript" src="<?php echo $this->_tpl_vars['http_root']; ?>
+includes/js/JQuery/colorpicker/js/colorpicker.js"></script>
+<script type="text/javascript" src="<?php echo $this->_tpl_vars['http_root']; ?>
+includes/js/JQuery/colorpicker/js/eye.js"></script>
+<script type="text/javascript" src="<?php echo $this->_tpl_vars['http_root']; ?>
+includes/js/JQuery/colorpicker/js/utils.js"></script>
+<script type="text/javascript" src="<?php echo $this->_tpl_vars['http_root']; ?>
+includes/js/JQuery/colorpicker/js/layout.js?ver=1.0.2"></script>
+<link rel="stylesheet" href="<?php echo $this->_tpl_vars['http_root']; ?>
+includes/js/JQuery/colorpicker/css/colorpicker.css" type="text/css" />
+<link rel="stylesheet" href="<?php echo $this->_tpl_vars['http_root']; ?>
+includes/js/JQuery/colorpicker/css/layout.css" type="text/css" />
+<!-- /Pick Color -->
 
 <title>Quản trị hệ thống - <?php echo $this->_tpl_vars['page_title']; ?>
 </title>

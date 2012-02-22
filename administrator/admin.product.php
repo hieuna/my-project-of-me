@@ -13,18 +13,29 @@ switch($task){
 		if ($task == 'edit') $page_title = "Cập nhật sản phẩm";
 		else $page_title = "Thêm mới sản phẩm";
 		
-		$category_id	= PGRequest::getInt('category_id', 0, 'GET');
+		$product_id	= PGRequest::getInt('product_id', 0, 'GET');
+		
+		$objProduct = new PGProduct();
+		$thisProduct = $objProduct->load($product_id);
+		
+		//show category
+		$where[] = " status=1";
+		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
+		$order = " ORDER BY ordering ASC, category_id DESC";
 		
 		$objCategory = new PGCategory();
-		$thisCategory = $objCategory->load($category_id);
+		$lsCategory = $objCategory->loadList($where, $order);
 		
-		$smarty->assign('category_id', $category_id);
-		$smarty->assign('thisCategory', $thisCategory);
+		$smarty->assign('product_id', $product_id);
+		$smarty->assign('thisProduct', $thisProduct);
+		$smarty->assign('lsCategory', $lsCategory);
 		break;
 		
 	case 'save':
+		var_dump($_POST); die;
 		$category_id		= PGRequest::getInt('category_id', 0, 'POST');
-		$category_id_value	= PGRequest::getInt('category_id_value', 0, 'POST');
+		$product_id			= PGRequest::getInt('product_id', 0, 'POST');
+		$product_id_value	= PGRequest::getInt('product_id_value', 0, 'POST');
 		$name				= $database->getEscaped(PGRequest::getString('name', '', 'POST'));
 		$alias				= $database->getEscaped(PGRequest::getString('alias', '', 'POST'));
 		$description		= $database->getEscaped(PGRequest::getString('description', '', 'POST'));
@@ -33,7 +44,7 @@ switch($task){
 		$ordering			= PGRequest::GetInt('ordering', 0, 'POST');
 		
 		$objCategory = new PGCategory();
-		$thisCategory = $objCategory->load($category_id);
+		$thisCategory = $objCategory->load($product_id);
 		if (!$objCategory->is_message){
 			$objCategory->category_id 	= $category_id_value;
 			$objCategory->name			= $name;

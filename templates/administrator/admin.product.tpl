@@ -95,67 +95,111 @@
 			   		<td colspan="2" class="title_box_tbl">Thông tin cơ bản</td>
 			   	</tr>
 			   	<tr>
-			   		<td width="20%">Nhóm sản phẩm</td>
-			   		<td width="80%">
-			   		<select name="category_id" class="adm_selectbox" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+			   		<td width="25%">Nhóm sản phẩm</td>
+			   		<td>
+			   		<select name="category_id" class="adm_selectbox">
 			   			{if $task=="edit"}
 			   			<option value="{$thisBanner->category_id}" selected="selected">{$name_category_banner}</option>
 			   			{else}
 			   			<option value="">Lựa chọn theo nhóm</option>
 			   			{/if}
-			   			{section name=loops loop=$categorys}
-			   			<option {if $thisCategory->category_id==$categorys[loops].category_id || $category_id==$categorys[loops].category_id} selected="selected"{/if} value="admin.hotdeal.php?task={$task}&id={$thisCategory->id}&category_id={$categorys[loops].category_id}">{$categorys[loops].name}</option>
+			   			{section name=loops loop=$lsCategory}
+			   			<option {if $thisCategory->category_id==$categorys[loops].category_id || $category_id==$categorys[loops].category_id} selected="selected"{/if} value="{$lsCategory[loops].category_id}">{$lsCategory[loops].name}</option>
 			   			{/section}
 			   		</select>
 			   		</td>
 			   	</tr>
 			   	<tr>
 			   		<td>Mã sản phẩm</td>
-			   		<td><input type="text" name="code" class="adm_inputbox" value="{$thisCategory->code}" /></td>
+			   		<td><input type="text" name="code" class="adm_inputbox" value="{$thisProduct->code}" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Model</td>
-			   		<td><input type="text" name="model" class="adm_inputbox" value="{$thisCategory->model}" /></td>
-			   	</tr>
-			   	<tr>
-			   		<td>Giá bán</td>
-			   		<td><input type="text" name="price" class="adm_inputbox" value="{$thisCategory->price}" /></td>
-			   	</tr>
-			   	<tr>
-			   		<td>Giá niêm yết</td>
-			   		<td><input type="text" name="price_ny" class="adm_inputbox" value="{$thisCategory->price_ny}" /></td>
+			   		<td><input type="text" name="model" class="adm_inputbox" value="{$thisProduct->model}" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Số lượng</td>
-			   		<td><input type="text" name="amount" class="adm_inputbox" value="{$thisCategory->amount}" /></td>
+			   		<td><input type="text" name="amount" onkeypress="return shp.numberOnly(this, event);" class="adm_inputbox" value="{$thisProduct->amount}" /></td>
+			   	</tr>
+			   	<tr>
+			   		<td>Ảnh mô tả</td>
+			   		<td><input type="file" name="img" size="28" class="adm_file" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Trọng lượng</td>
-			   		<td><input type="text" name="model" class="adm_inputbox" value="{$thisCategory->weight}" /> (g)</td>
+			   		<td><input type="text" name="model" class="adm_inputbox" value="{$thisProduct->weight}" /> (g)</td>
 			   	</tr>
 			   	<tr>
 			   		<td>Chiều dài</td>
-			   		<td><input type="text" name="length" class="adm_inputbox" value="{$thisCategory->length}" /> (cm)</td>
+			   		<td><input type="text" name="length" class="adm_inputbox" value="{$thisProduct->length}" /> (cm)</td>
 			   	</tr>
 			   	<tr>
 			   		<td>Chiều rộng</td>
-			   		<td><input type="text" name="width" class="adm_inputbox" value="{$thisCategory->width}" /> (cm)</td>
+			   		<td><input type="text" name="width" class="adm_inputbox" value="{$thisProduct->width}" /> (cm)</td>
 			   	</tr>
 			   	<tr>
 			   		<td>Chiều cao</td>
-			   		<td><input type="text" name="height" class="adm_inputbox" value="{$thisCategory->height}" /> (cm)</td>
+			   		<td><input type="text" name="height" class="adm_inputbox" value="{$thisProduct->height}" /> (cm)</td>
 			   	</tr>
 			   	<tr>
 			   		<td>Ngày cập nhật</td>
-			   		<td><input type="text" name="created" id="created" class="adm_inputbox" value="{$thisCategory->created}" /></td>
+			   		<td><input type="text" name="created" id="created" class="adm_inputbox" value="{$thisProduct->created}" /></td>
 			   	</tr>
 			   		<tr>
 			   		<td>Thứ tự</td>
-			   		<td><input type="text" name="ordering" id="ordering" class="adm_inputbox small" value="{$thisCategory->ordering}" /></td>
+			   		<td><input type="text" name="ordering" id="ordering" class="adm_inputbox small" value="{$thisProduct->ordering}" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Trạng thái</td>
-			   		<td><input type="checkbox" name="status" class="adm_chk" {if $thisCategory->status == 1} checked="checked"{/if} value="1" /> Hiển thị</td>
+			   		<td><input type="checkbox" name="status" class="adm_chk" {if $thisProduct->status == 1} checked="checked"{/if} value="1" /> Hiển thị</td>
+			   	</tr>
+			   </tbody>
+			</table>
+			<table class="adminTable adminBorder">
+			   <tbody>
+			   	<tr>
+			   		<td colspan="2" class="title_box_tbl">Thông tin về giá</td>
+			   	</tr>
+			   	<tr>
+			   		<td>Giá niêm yết</td>
+			   		<td><input type="text" name="price_ny" class="adm_inputbox" onkeypress="return shp.numberOnly(this, event);" value="{$thisProduct->price_ny}" /></td>
+			   	</tr>
+			   	<tr>
+			   		<td width="25%">Giá bán</td>
+			   		<td><input type="text" name="price" class="adm_inputbox" onkeypress="return shp.numberOnly(this, event);" value="{$thisProduct->price}" /></td>
+			   	</tr>
+			   	<tr>
+			   		<td>Giảm giá</td>
+			   		<td><input type="text" name="discount" class="adm_inputbox" onkeypress="return shp.numberOnly(this, event);" value="{$thisProduct->discount}" /></td>
+			   	</tr>
+			   	<tr>
+			   		<td>Giảm %</td>
+			   		<td><input type="text" disabled="disabled" name="percent" class="adm_inputbox small" value="{$thisProduct->percent}" /> (%)</td>
+			   	</tr>
+			   </tbody>
+			</table>
+			<table class="adminTable adminBorder">
+			   <tbody>
+			   	<tr>
+			   		<td colspan="2" class="title_box_tbl">Thông tin về màu sắc</td>
+			   	</tr>
+			   	<tr>
+			   		<td width="25%">Số màu sản phẩm</td>
+			   		<td>
+			   			<select name="color[]" id="color" class="adm_selectbox">
+							{section name=foo start=1 loop=11 step=1}
+								<option value="{$smarty.section.foo.index}">{$smarty.section.foo.index} màu sản phẩm</option>
+							{/section}
+			   			</select>
+			   		</td>
+			   	</tr>
+			   	<tr>
+			   		<td valign="top">Chọn màu</td>
+			   		<td>
+			   			<div id="show_color">
+			   				<input type="text" maxlength="6" size="6" class="colorpickerField" value="00ff00" />
+			   			</div>
+			   		</td>
 			   	</tr>
 			   </tbody>
 			</table>
@@ -164,52 +208,65 @@
 			<table class="adminTable adminBorder">
 			   <tbody>
 			   	<tr>
-			   		<td colspan="2" class="title_box_tbl">Thông tin mô tả</td>
+			   		<td class="title_box_tbl">Thông tin mô tả</td>
 			   	</tr>
 			   	<tr>
-			   		<td>Tên sản phẩm</td>
-			   		<td><input type="text" name="name" class="adm_inputbox" value="{$thisCategory->name}" /></td>
+			   		<td>
+			   			<b>Tên sản phẩm</b><br />
+			   			<input type="text" name="name" class="adm_inputbox" value="{$thisProduct->name}" />
+			   		</td>
 			   	</tr>
 			   	<tr>
-			   		<td>Bí danh</td>
-			   		<td><input type="text" name="alias" class="adm_inputbox" value="{$thisCategory->alias}" /></td>
+			   		<td>
+			   			<b>Bí danh</b><br />
+			   			<input type="text" name="alias" class="adm_inputbox" value="{$thisProduct->alias}" />
+			   		</td>
 			   	</tr>
 			   	<tr>
-			   		<td valign="top">Mô tả ngắn</td>
-			   		<td><textarea cols="50" rows="5" name="introtext" id="wysiwyg">{$thisCategory->introtext}</textarea></td>
+			   		<td>
+			   			<b>Mô tả ngắn</b><br />
+			   			<textarea cols="65" rows="5" name="introtext" id="wysiwyg">{$thisProduct->introtext}</textarea>
+			   		</td>
 			   	</tr>
 			   	<tr>
-			   		<td valign="top"></td>
 			   		<td>
 			   			<b>Mô tả chi tiết</b><br />
-			   			<textarea cols="30" rows="5" id="fulltext" name="fulltext">{$thisCategory->fulltext}</textarea>
+			   			<textarea cols="30" rows="5" id="fulltext" name="fulltext">{$thisProduct->fulltext}</textarea>
 			   			<a href="javascript:;" onclick="tinyMCE.get('elm1').show();return false;">[Show]</a>
 						<a href="javascript:;" onclick="tinyMCE.get('elm1').hide();return false;">[Hide]</a>
 			   		</td>
 			   	</tr>
 			   	<tr>
-			   		<td valign="top">Từ khóa Meta</td>
-			   		<td><textarea cols="50" rows="5" id="meta_keywords" name="meta_keywords">{$thisCategory->meta_keywords}</textarea></td>
+			   		<td>
+			   			<b>Từ khóa Meta</b><br />
+			   			<textarea cols="50" rows="5" id="meta_keywords" name="meta_keywords">{$thisProduct->meta_keywords}</textarea>
+			   		</td>
 			   	</tr>
 			   	<tr>
-			   		<td valign="top">Từ khóa mô tả</td>
-			   		<td><textarea cols="50" rows="5" id="meta_description" name="meta_description">{$thisCategory->meta_description}</textarea></td>
+			   		<td>
+			   			<b>Từ khóa mô tả</b><br />
+			   			<textarea cols="50" rows="5" id="meta_description" name="meta_description">{$thisProduct->meta_description}</textarea>
+			   		</td>
 			   	</tr>
 			   	<tr>
-			   		<td valign="top">Từ khóa tìm kiếm</td>
-			   		<td><textarea cols="50" rows="5" id="search_words" name="search_words">{$thisCategory->search_words}</textarea></td>
+			   		<td>
+			   			<b>Từ khóa tìm kiếm</b><br />
+			   			<textarea cols="50" rows="5" id="search_words" name="search_words">{$thisProduct->search_words}</textarea>
+			   		</td>
 			   	</tr>
 			   	<tr>
-			   		<td>Tiêu đề trang</td>
-			   		<td><input type="text" name="alias" class="adm_inputbox" value="{$thisCategory->alias}" /></td>
+			   		<td>
+			   			<b>Tiêu đề trang</b><br />
+			   			<input type="text" name="alias" class="adm_inputbox" value="{$thisProduct->alias}" />
+			   		</td>
 			   	</tr>
 			   </tbody>
 			   <tfoot>
 			   	<tr>
 			   		<td></td>
 			   		<td>
-			   			<input type="hidden" name="category_id_value" value="{$category_id}" />
-			   			<input type="hidden" name="category_id" value="{$thisCategory->category_id}" />
+			   			<input type="hidden" name="product_id_value" value="{$product_id}" />
+			   			<input type="hidden" name="product_id" value="{$thisProduct->product_id}" />
 			   			<input type="hidden" name="task" value="save" />
 			   		</td>
 			   	</tr>
@@ -220,6 +277,16 @@
 	</tbody>
 </table>
 </form>
+<script>
+{literal}
+$(function(){
+	$('#color').change(function(){
+		var value = $('#color').val();
+		$("#show_color").load("ajax.php?task=addcolor&number="+value);
+	});
+});
+{/literal}
+</script>
 {else}
 <form name="adminForm" method="post" action="{$page}">
 	<table style="margin-bottom:5px;">

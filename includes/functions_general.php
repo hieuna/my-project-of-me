@@ -1026,4 +1026,18 @@ function convertKhongdau($string)
 	$string = strtr($string, $trans);
 	return $string;
 }
+
+//function show color
+function gwsc() {
+    $cs = array('00', '33', '66', '99', 'CC', 'FF');
+
+    for($i=0; $i<6; $i++) {
+        for($j=0; $j<6; $j++) {
+            for($k=0; $k<6; $k++) {
+                $c = $cs[$i] .$cs[$j] .$cs[$k];
+                echo "<option value=\"$c\">#$c</option>\n";
+            }
+        }
+    }
+}
 ?>

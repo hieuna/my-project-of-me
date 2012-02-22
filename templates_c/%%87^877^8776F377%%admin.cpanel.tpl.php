@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-21 17:55:37
+<?php /* Smarty version 2.6.10, created on 2012-02-22 20:08:05
          compiled from D:/AppServ/www/projects/templates/administrator/admin.cpanel.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'admin.header.tpl', 'smarty_include_vars' => array()));

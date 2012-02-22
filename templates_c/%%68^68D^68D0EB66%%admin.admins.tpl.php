@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-16 15:25:58
+<?php /* Smarty version 2.6.10, created on 2012-02-22 23:30:07
          compiled from D:/AppServ/www/projects/templates/administrator/admin.admins.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format', 'D:/AppServ/www/projects/templates/administrator/admin.admins.tpl', 266, false),)), $this); ?>
