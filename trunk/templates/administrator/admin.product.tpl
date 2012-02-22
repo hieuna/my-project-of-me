@@ -179,8 +179,9 @@
 			   		<td><textarea cols="50" rows="5" name="introtext" id="wysiwyg">{$thisCategory->introtext}</textarea></td>
 			   	</tr>
 			   	<tr>
-			   		<td valign="top">Mô tả chi tiết</td>
+			   		<td valign="top"></td>
 			   		<td>
+			   			<b>Mô tả chi tiết</b><br />
 			   			<textarea cols="30" rows="5" id="fulltext" name="fulltext">{$thisCategory->fulltext}</textarea>
 			   			<a href="javascript:;" onclick="tinyMCE.get('elm1').show();return false;">[Show]</a>
 						<a href="javascript:;" onclick="tinyMCE.get('elm1').hide();return false;">[Hide]</a>
@@ -188,15 +189,15 @@
 			   	</tr>
 			   	<tr>
 			   		<td valign="top">Từ khóa Meta</td>
-			   		<td><textarea cols="50" rows="5" name="meta_keywords">{$thisCategory->meta_keywords}</textarea></td>
+			   		<td><textarea cols="50" rows="5" id="meta_keywords" name="meta_keywords">{$thisCategory->meta_keywords}</textarea></td>
 			   	</tr>
 			   	<tr>
 			   		<td valign="top">Từ khóa mô tả</td>
-			   		<td><textarea cols="50" rows="5" name="meta_description">{$thisCategory->meta_description}</textarea></td>
+			   		<td><textarea cols="50" rows="5" id="meta_description" name="meta_description">{$thisCategory->meta_description}</textarea></td>
 			   	</tr>
 			   	<tr>
 			   		<td valign="top">Từ khóa tìm kiếm</td>
-			   		<td><textarea cols="50" rows="5" name="search_words">{$thisCategory->search_words}</textarea></td>
+			   		<td><textarea cols="50" rows="5" id="search_words" name="search_words">{$thisCategory->search_words}</textarea></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Tiêu đề trang</td>
