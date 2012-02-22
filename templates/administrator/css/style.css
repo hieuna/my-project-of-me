@@ -224,6 +224,9 @@ select.adm_selectbox{
 .adm_file{
 	border: none;
 }
+.medium{
+	width: 100px;
+}
 .small{
 	width: 50px;
 }

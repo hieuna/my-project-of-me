@@ -21,6 +21,7 @@ class PGProduct{
 	var $length;
 	var $width;
 	var $height;
+	var $number_color;
 	var $status;
 	var $ordering;
 	var $created;
@@ -62,6 +63,7 @@ class PGProduct{
 		$this->length = 0;
 		$this->width = 0;
 		$this->height = 0;
+		$this->number_color = 0;
 		$this->status = 1;
 		$this->ordering = 0;
 		$this->created = "";
@@ -142,6 +144,7 @@ class PGProduct{
 				$this->length			= $objProduct->length;
 				$this->width			= $objProduct->width;
 				$this->height			= $objProduct->height;
+				$this->number_color		= $objProduct->number_color;
 				$this->status			= $objProduct->status;
 				$this->ordering			= $objProduct->ordering;
 				$this->created			= $objProduct->created;
@@ -159,6 +162,11 @@ class PGProduct{
 				$this->meta_description	= $objProduct->meta_description;
 				$this->search_words		= $objProduct->search_words;
 				$this->page_title		= $objProduct->page_title;
+				
+				//TBL_PRODUCT_IMAGE
+				$this->small_image		= $objProduct->small_image;
+				$this->medium_image		= $objProduct->medium_image;
+				$this->large_image		= $large_image->large_image;
 			}
 		}
 		return $this;
@@ -178,41 +186,24 @@ class PGProduct{
 
 		if (!isset($objProduct->product_id) || is_null($objProduct->product_id) || ($objProduct->product_id==0)){
       		$sql = "INSERT INTO ".TBL_PRODUCT." (
-		        code,
-		        model,
-		        price,
-		        price_ny,
-		        amount,
-		        weight,
-		        length,
-		        width,
-		        height,
-		        status,
-		        ordering,
-		        created,
-		        admin_created,
-		        modified,
-		        admin_modified,
-		        category_id
+		        code, model, price, price_ny, amount, weight, length, width, height, status, ordering, created, admin_created, modified, admin_modified, category_id
 		    ) VALUES (
-		    	'{$objProduct->code}',
-		        '{$objProduct->model}',
-		        '{$objProduct->price}',
-		        '{$objProduct->price_ny}',
-		        '{$objProduct->amount}',
-		        '{$objProduct->weight}',
-		        '{$objProduct->length}',
-		        '{$objProduct->width}',
-		        '{$objProduct->height}',
-		        '{$objProduct->status}',
-		        '{$objProduct->ordering}',
-		        '{$objProduct->created}',
-		        '{$objProduct->admin_created}',
-		        '{$objProduct->modified}',
-		        '{$objProduct->admin_modified}',
-		        '{$objProduct->category_id}'
+		    	'{$objProduct->code}', '{$objProduct->model}', '{$objProduct->price}', '{$objProduct->price_ny}', '{$objProduct->amount}', '{$objProduct->weight}', '{$objProduct->length}', '{$objProduct->width}', '{$objProduct->height}', '{$objProduct->status}', '{$objProduct->ordering}', '{$objProduct->created}', '{$objProduct->admin_created}', '{$objProduct->modified}', '{$objProduct->admin_modified}', '{$objProduct->category_id}'
 		    )";
-	      	if ($database->db_query($sql)) $this->is_message = "Thêm mới sản phẩm thành công !";	
+      		
+      		$query = "INSERT INTO ".TBL_PRODUCT_DESCRIPTION."(
+      			name, alias, introtext, fulltext, meta_keywords, meta_description, search_words, page_title
+      		) VALUES (
+      			'{$objProduct->name}', '{$objProduct->alias}', '{$objProduct->introtext}', '{$objProduct->fulltext}', '{$objProduct->meta_keywords}', '{$objProduct->meta_description}', '{$objProduct->search_words}', '{$objProduct->page_title}'
+      		)";
+      		
+      		$queryImage = "INSERT INTO".TBL_PRODUCT_IMAGE."(
+      			small_image, medium_image, large_image
+      		) VALUES (
+      			'{$objProduct->small_image}', '{$objProduct->medium_image}', '{$objProduct->large_image}'
+      		)";
+      		
+	      	if ($database->db_query($sql) && $database->db_query($query) && $database->db_query($queryImage)) $this->is_message = "Thêm mới sản phẩm thành công !";	
 		}else{
 			$sql = "UPDATE ".TBL_PRODUCT." SET 
 					code='{$objProduct->code}', 
@@ -232,7 +223,24 @@ class PGProduct{
 					admin_modified='{$objProduct->admin_modified}',
 					category_id='{$objProduct->category_id}'
 					WHERE product_id='{$objProduct->product_id}' LIMIT 1";
-			if ($database->db_query($sql)) $this->is_message = "Cập nhật sản phẩm thành công !";	
+			
+			$query = "UPDATE ".TBL_PRODUCT_DESCRIPTION." SET 
+					name='{$objProduct->name}', 
+					alias='{$objProduct->alias}',
+					introtext='{$objProduct->introtext}',
+					fulltext='{$objProduct->fulltext}',
+					meta_keywords='{$objProduct->meta_keywords}',
+					meta_description='{$objProduct->meta_description}',
+					search_words='{$objProduct->search_words}',
+					page_title='{$objProduct->page_title}'
+					WHERE product_id='{$objProduct->product_id}' LIMIT 1";
+			
+			$queryImage = "UPDATE ".TBL_PRODUCT_DESCRIPTION." SET 
+					small_image='{$objProduct->small_image}', 
+					medium_image='{$objProduct->medium_image}',
+					large_image='{$objProduct->large_image}'
+					WHERE product_id='{$objProduct->product_id}' LIMIT 1";
+			if ($database->db_query($sql) && $database->db_query($query) && $database->db_query($queryImage)) $this->is_message = "Cập nhật sản phẩm thành công !";	
 		}
 		return $this->is_message;
 	}

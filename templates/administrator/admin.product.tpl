@@ -184,9 +184,9 @@
 			   		<td colspan="2" class="title_box_tbl">Thông tin về màu sắc</td>
 			   	</tr>
 			   	<tr>
-			   		<td width="25%">Số màu sản phẩm</td>
+			   		<td width="15%">Số màu</td>
 			   		<td>
-			   			<select name="color[]" id="color" class="adm_selectbox">
+			   			<select name="number_color" id="color" class="adm_selectbox">
 							{section name=foo start=1 loop=11 step=1}
 								<option value="{$smarty.section.foo.index}">{$smarty.section.foo.index} màu sản phẩm</option>
 							{/section}
@@ -194,10 +194,9 @@
 			   		</td>
 			   	</tr>
 			   	<tr>
-			   		<td valign="top">Chọn màu</td>
+			   		<td valign="top"></td>
 			   		<td>
 			   			<div id="show_color">
-			   				<input type="text" maxlength="6" size="6" class="colorpickerField" value="00ff00" />
 			   			</div>
 			   		</td>
 			   	</tr>

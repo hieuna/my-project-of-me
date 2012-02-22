@@ -43,7 +43,10 @@ if ($task == 'feauture_product'){
 elseif ($task == 'addcolor'){
 	$number		= PGRequest::getInt('number', 'GET', 0);
 	for ($i=1; $i<=$number; $i++){
-		echo '<p style="margin:10px 0;"><input type="text" maxlength="6" name="colors_'.$i.'" size="6" class="colorpickerField" value="00ff00" /></p>';
+		echo '<p style="margin:10px 0;">
+			<label>Chọn màu: </label><input type="text" maxlength="6" name="colors_'.$i.'" size="6" class="colorpickerField adm_inputbox medium" value="00ff00" />
+			<label>Giá: </label><input type="text" name="price_color_'.$i.'" class="adm_inputbox medium" onkeypress="return shp.numberOnly(this, event);" value="" />
+		</p>';
 	}
 	?>
 	<script type="text/javascript">
