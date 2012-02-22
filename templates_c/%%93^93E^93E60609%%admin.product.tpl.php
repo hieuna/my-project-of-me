@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-21 17:55:17
+<?php /* Smarty version 2.6.10, created on 2012-02-22 11:56:00
          compiled from D:/AppServ/www/projects/templates/administrator/admin.product.tpl */ ?>
 <div id="toolbar-box">
    <div class="t">
@@ -76,7 +76,7 @@
 	   			</tbody>
 	   		</table>
 	   </div>
-	   <div class="header category"><?php echo $this->_tpl_vars['page_title']; ?>
+	   <div class="header product"><?php echo $this->_tpl_vars['page_title']; ?>
 </div>
 	   <div class="clr"></div>
    </div>
@@ -92,19 +92,26 @@
 <form action="<?php echo $this->_tpl_vars['page']; ?>
 " method="post" name="adminForm" enctype="multipart/form-data">
 <table class="adminTable">
-   <tbody>
-   	<tr>
-   		<td width="20%">Nhóm sản phẩm</td>
-   		<td width="80%">
-   		<select name="category_id" class="adm_selectbox" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
-   			<?php if ($this->_tpl_vars['task'] == 'edit'): ?>
-   			<option value="<?php echo $this->_tpl_vars['thisBanner']->category_id; ?>
+	<tbody>
+		<tr>
+			<td width="45%" valign="top">
+			<table class="adminTable adminBorder">
+			   <tbody>
+			   	<tr>
+			   		<td colspan="2" class="title_box_tbl">Thông tin cơ bản</td>
+			   	</tr>
+			   	<tr>
+			   		<td width="20%">Nhóm sản phẩm</td>
+			   		<td width="80%">
+			   		<select name="category_id" class="adm_selectbox" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+			   			<?php if ($this->_tpl_vars['task'] == 'edit'): ?>
+			   			<option value="<?php echo $this->_tpl_vars['thisBanner']->category_id; ?>
 " selected="selected"><?php echo $this->_tpl_vars['name_category_banner']; ?>
 </option>
-   			<?php else: ?>
-   			<option value="">Lựa chọn theo nhóm</option>
-   			<?php endif; ?>
-   			<?php unset($this->_sections['loops']);
+			   			<?php else: ?>
+			   			<option value="">Lựa chọn theo nhóm</option>
+			   			<?php endif; ?>
+			   			<?php unset($this->_sections['loops']);
 $this->_sections['loops']['name'] = 'loops';
 $this->_sections['loops']['loop'] = is_array($_loop=$this->_tpl_vars['categorys']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
 $this->_sections['loops']['show'] = true;
@@ -128,57 +135,145 @@ $this->_sections['loops']['index_next'] = $this->_sections['loops']['index'] + $
 $this->_sections['loops']['first']      = ($this->_sections['loops']['iteration'] == 1);
 $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'] == $this->_sections['loops']['total']);
 ?>
-   			<option <?php if ($this->_tpl_vars['thisCategory']->category_id == $this->_tpl_vars['categorys'][$this->_sections['loops']['index']]['category_id'] || $this->_tpl_vars['category_id'] == $this->_tpl_vars['categorys'][$this->_sections['loops']['index']]['category_id']): ?> selected="selected"<?php endif; ?> value="admin.hotdeal.php?task=<?php echo $this->_tpl_vars['task']; ?>
+			   			<option <?php if ($this->_tpl_vars['thisCategory']->category_id == $this->_tpl_vars['categorys'][$this->_sections['loops']['index']]['category_id'] || $this->_tpl_vars['category_id'] == $this->_tpl_vars['categorys'][$this->_sections['loops']['index']]['category_id']): ?> selected="selected"<?php endif; ?> value="admin.hotdeal.php?task=<?php echo $this->_tpl_vars['task']; ?>
 &id=<?php echo $this->_tpl_vars['thisCategory']->id; ?>
 &category_id=<?php echo $this->_tpl_vars['categorys'][$this->_sections['loops']['index']]['category_id']; ?>
 "><?php echo $this->_tpl_vars['categorys'][$this->_sections['loops']['index']]['name']; ?>
 </option>
-   			<?php endfor; endif; ?>
-   		</select>
-   		</td>
-   	</tr>
-   	<tr>
-   		<td>Tên nhóm sản phẩm</td>
-   		<td><input type="text" name="name" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->name; ?>
+			   			<?php endfor; endif; ?>
+			   		</select>
+			   		</td>
+			   	</tr>
+			   	<tr>
+			   		<td>Mã sản phẩm</td>
+			   		<td><input type="text" name="code" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->code; ?>
 " /></td>
-   	</tr>
-   	<tr>
-   		<td>Bí danh</td>
-   		<td><input type="text" name="alias" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->alias; ?>
+			   	</tr>
+			   	<tr>
+			   		<td>Model</td>
+			   		<td><input type="text" name="model" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->model; ?>
 " /></td>
-   	</tr>
-   	<tr>
-   		<td valign="top">Mô tả</td>
-   		<td><textarea cols="30" rows="5" name="description"><?php echo $this->_tpl_vars['thisCategory']->description; ?>
+			   	</tr>
+			   	<tr>
+			   		<td>Giá bán</td>
+			   		<td><input type="text" name="price" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->price; ?>
+" /></td>
+			   	</tr>
+			   	<tr>
+			   		<td>Giá niêm yết</td>
+			   		<td><input type="text" name="price_ny" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->price_ny; ?>
+" /></td>
+			   	</tr>
+			   	<tr>
+			   		<td>Số lượng</td>
+			   		<td><input type="text" name="amount" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->amount; ?>
+" /></td>
+			   	</tr>
+			   	<tr>
+			   		<td>Trọng lượng</td>
+			   		<td><input type="text" name="model" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->weight; ?>
+" /> (g)</td>
+			   	</tr>
+			   	<tr>
+			   		<td>Chiều dài</td>
+			   		<td><input type="text" name="length" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->length; ?>
+" /> (cm)</td>
+			   	</tr>
+			   	<tr>
+			   		<td>Chiều rộng</td>
+			   		<td><input type="text" name="width" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->width; ?>
+" /> (cm)</td>
+			   	</tr>
+			   	<tr>
+			   		<td>Chiều cao</td>
+			   		<td><input type="text" name="height" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->height; ?>
+" /> (cm)</td>
+			   	</tr>
+			   	<tr>
+			   		<td>Ngày cập nhật</td>
+			   		<td><input type="text" name="created" id="created" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->created; ?>
+" /></td>
+			   	</tr>
+			   		<tr>
+			   		<td>Thứ tự</td>
+			   		<td><input type="text" name="ordering" id="ordering" class="adm_inputbox small" value="<?php echo $this->_tpl_vars['thisCategory']->ordering; ?>
+" /></td>
+			   	</tr>
+			   	<tr>
+			   		<td>Trạng thái</td>
+			   		<td><input type="checkbox" name="status" class="adm_chk" <?php if ($this->_tpl_vars['thisCategory']->status == 1): ?> checked="checked"<?php endif; ?> value="1" /> Hiển thị</td>
+			   	</tr>
+			   </tbody>
+			</table>
+			</td>
+			<td valign="top">
+			<table class="adminTable adminBorder">
+			   <tbody>
+			   	<tr>
+			   		<td colspan="2" class="title_box_tbl">Thông tin mô tả</td>
+			   	</tr>
+			   	<tr>
+			   		<td>Tên sản phẩm</td>
+			   		<td><input type="text" name="name" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->name; ?>
+" /></td>
+			   	</tr>
+			   	<tr>
+			   		<td>Bí danh</td>
+			   		<td><input type="text" name="alias" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->alias; ?>
+" /></td>
+			   	</tr>
+			   	<tr>
+			   		<td valign="top">Mô tả ngắn</td>
+			   		<td><textarea cols="50" rows="5" name="introtext" id="wysiwyg"><?php echo $this->_tpl_vars['thisCategory']->introtext; ?>
 </textarea></td>
-   	</tr>
-   	<tr>
-   		<td>Ngày cập nhật</td>
-   		<td><input type="text" name="created" id="created" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->created; ?>
+			   	</tr>
+			   	<tr>
+			   		<td valign="top"></td>
+			   		<td>
+			   			<b>Mô tả chi tiết</b><br />
+			   			<textarea cols="30" rows="5" id="fulltext" name="fulltext"><?php echo $this->_tpl_vars['thisCategory']->fulltext; ?>
+</textarea>
+			   			<a href="javascript:;" onclick="tinyMCE.get('elm1').show();return false;">[Show]</a>
+						<a href="javascript:;" onclick="tinyMCE.get('elm1').hide();return false;">[Hide]</a>
+			   		</td>
+			   	</tr>
+			   	<tr>
+			   		<td valign="top">Từ khóa Meta</td>
+			   		<td><textarea cols="50" rows="5" id="meta_keywords" name="meta_keywords"><?php echo $this->_tpl_vars['thisCategory']->meta_keywords; ?>
+</textarea></td>
+			   	</tr>
+			   	<tr>
+			   		<td valign="top">Từ khóa mô tả</td>
+			   		<td><textarea cols="50" rows="5" id="meta_description" name="meta_description"><?php echo $this->_tpl_vars['thisCategory']->meta_description; ?>
+</textarea></td>
+			   	</tr>
+			   	<tr>
+			   		<td valign="top">Từ khóa tìm kiếm</td>
+			   		<td><textarea cols="50" rows="5" id="search_words" name="search_words"><?php echo $this->_tpl_vars['thisCategory']->search_words; ?>
+</textarea></td>
+			   	</tr>
+			   	<tr>
+			   		<td>Tiêu đề trang</td>
+			   		<td><input type="text" name="alias" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->alias; ?>
 " /></td>
-   	</tr>
-   		<tr>
-   		<td>Thứ tự</td>
-   		<td><input type="text" name="ordering" id="ordering" class="adm_inputbox small" value="<?php echo $this->_tpl_vars['thisCategory']->ordering; ?>
-" /></td>
-   	</tr>
-   	<tr>
-   		<td>Trạng thái</td>
-   		<td><input type="checkbox" name="status" class="adm_chk" <?php if ($this->_tpl_vars['thisCategory']->status == 1): ?> checked="checked"<?php endif; ?> value="1" /> Hiển thị</td>
-   	</tr>
-   </tbody>
-   <tfoot>
-   	<tr>
-   		<td></td>
-   		<td>
-   			<input type="hidden" name="category_id_value" value="<?php echo $this->_tpl_vars['category_id']; ?>
+			   	</tr>
+			   </tbody>
+			   <tfoot>
+			   	<tr>
+			   		<td></td>
+			   		<td>
+			   			<input type="hidden" name="category_id_value" value="<?php echo $this->_tpl_vars['category_id']; ?>
 " />
-   			<input type="hidden" name="category_id" value="<?php echo $this->_tpl_vars['thisCategory']->category_id; ?>
+			   			<input type="hidden" name="category_id" value="<?php echo $this->_tpl_vars['thisCategory']->category_id; ?>
 " />
-   			<input type="hidden" name="task" value="save" />
-   		</td>
-   	</tr>
-   </tfoot>
+			   			<input type="hidden" name="task" value="save" />
+			   		</td>
+			   	</tr>
+			   </tfoot>
+			</table>
+			</td>
+		</tr>
+	</tbody>
 </table>
 </form>
 <?php else: ?>
@@ -212,7 +307,7 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 					<input type="checkbox" onclick="checkAll(50);" value="" name="toggle">
 				</th>
 				<th class="title" nowrap="nowrap" style="text-align: left; padding-left: 5px;">
-					<strong>Tên nhóm sản phẩm</strong>
+					<strong>Tên sản phẩm</strong>
 				</th>
 				<th class="title" nowrap="nowrap">
 					<strong>Bí danh</strong>

@@ -171,7 +171,7 @@ class PGCategory{
 		global $database;
 		if (count( $cid ) < 1) {
 			$action = $published == 1 ? 'Mở khóa' : 'Khóa';
-			echo "<script> alert('Chọn một banner để $action'); window.history.go(-1);</script>\n";
+			echo "<script> alert('Chọn một nhóm sản phẩm để $action'); window.history.go(-1);</script>\n";
 			exit;
 		}
 	
@@ -183,12 +183,12 @@ class PGCategory{
 	
 		switch ( $published ) {
 			case 1:
-				$this->is_message = $total .' quản trị viên đã mở khóa thành công !';
+				$this->is_message = $total .' nhóm sản phẩm đã hiển thị thành công !';
 				break;
 	
 			case 0:
 			default:
-				$this->is_message = $total .' quản trị viên đã khóa thành công !';
+				$this->is_message = $total .' nhóm sản phẩm đã ẩn thành công !';
 				break;
 		}
 		

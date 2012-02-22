@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-16 14:49:43
+<?php /* Smarty version 2.6.10, created on 2012-02-22 10:06:15
          compiled from D:/AppServ/www/projects/templates/administrator/admin.footer.tpl */ ?>
 	</div>
 	<!-- BORDER BOTTOM -->
@@ -22,6 +22,9 @@ $(function(){
 	function(){
 		$(this).removeClass(\'hover\');
 	});
+
+	//jQuery Inline Content Editor Plugin
+	$(\'#wysiwyg\').wysiwyg();
 });
 </script>
 '; ?>
