@@ -37,6 +37,71 @@ switch($task){
 		
 		$objProduct = new PGProduct();
 		$thisProduct = $objProduct->load($product_id);
+		
+		//Upload file img
+		if ($_FILES["img"]["name"] != ""){
+            $fileName =  $_FILES["img"]["name"];
+            $dir_large	=$dir_upload."products/large/".$fileName;
+            $dir_medium	= $dir_upload."products/medium/".$fileName;
+            $dir_small	= $dir_upload."products/small/".$fileName;
+            //large image
+            if (move_uploaded_file($_FILES["img"]["tmp_name"], $dir_large))
+            {
+            	if ($thisProduct->product_id == 0){
+            		$large_image = "image/products/large/".$fileName;
+            	}else{
+	            	if(file_exists($dir_root.$thisProduct->large_image)) {
+					  @unlink($dir_root.$thisProduct->large_image);		  
+					}
+            		$large_image= "image/products/large/".$fileName;
+            	}
+            }
+            else
+            {
+            	if ($thisProduct->product_id == 0) $large_image = "";
+            	else $large_image = $thisProduct->large_image;
+            }
+			//medium image
+            if (move_uploaded_file($_FILES["img"]["tmp_name"], $dir_medium))
+            {
+            	if ($thisProduct->product_id == 0){
+            		$large_image = "image/products/medium/".$fileName;
+            	}else{
+	            	if(file_exists($dir_root.$thisProduct->medium_image)) {
+					  @unlink($dir_root.$thisProduct->medium_image);		  
+					}
+            		$large_image= "image/products/medium/".$fileName;
+            	}
+            	Resize_File($_FILES["img"]["tmp_name"], $dir_medium, _WIDTH_MEDIUM_IMAGE_PRODUCT);
+            }
+            else
+            {
+            	if ($thisProduct->product_id == 0) $medium_image = "";
+            	else $medium_image = $thisProduct->medium_image;
+            }
+			//small image
+            if (move_uploaded_file($_FILES["img"]["tmp_name"], $dir_small))
+            {
+            	if ($thisProduct->product_id == 0){
+            		$large_image = "image/products/small/".$fileName;
+            	}else{
+	            	if(file_exists($dir_root.$thisProduct->small_image)) {
+					  @unlink($dir_root.$thisProduct->small_image);		  
+					}
+            		$large_image= "image/products/small/".$fileName;
+            	}
+            	Resize_File($_FILES["img"]["tmp_name"], $dir_small, _WIDTH_SMALL_IMAGE_PRODUCT);
+            }
+            else
+            {
+            	if ($thisProduct->product_id == 0) $small_image = "";
+            	else $small_image = $thisProduct->small_image;
+            }	
+		}else{
+			$large_image = $thisProduct->large_image;
+			$medium_image = $thisProduct->medium_image;
+			$small_image = $thisProduct->small_image;
+		}
 		if (!$objProduct->is_message){
 			foreach ($_POST as $key =>$value) {
 				//echo $key."&nbsp;".$value."<br />";
@@ -53,6 +118,9 @@ switch($task){
 				}
 				$objProduct->$key		= $value;
 				$objProduct->admin_created	= $admin_id;
+				$objProduct->large_image = $large_image;
+				$objProduct->medium_image = $medium_image;
+				$objProduct->small_image = $small_image;
 			}
 			$objProduct->save($thisProduct);
 			$objColor = new PGColor();

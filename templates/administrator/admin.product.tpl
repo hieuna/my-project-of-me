@@ -84,7 +84,7 @@
    {if $mosmsg}<div class="message">{$mosmsg}</div>{/if}
 </div>
 {if $task == "add" || $task == "edit"}
-<form action="{$page}" method="post" name="adminForm" enctype="multipart/form-data">
+<form action="{$page}" method="post" name="adminForm" class="form-validate" enctype="multipart/form-data">
 <table class="adminTable">
 	<tbody>
 		<tr>
@@ -98,20 +98,16 @@
 			   		<td width="25%">Nhóm sản phẩm</td>
 			   		<td>
 			   		<select name="category_id" class="adm_selectbox">
-			   			{if $task=="edit"}
-			   			<option value="{$thisBanner->category_id}" selected="selected">{$name_category_banner}</option>
-			   			{else}
 			   			<option value="">Lựa chọn theo nhóm</option>
-			   			{/if}
-			   			{section name=loops loop=$lsProducts}
-			   			<option {if $thisCategory->category_id==$categorys[loops].category_id || $category_id==$categorys[loops].category_id} selected="selected"{/if} value="{$lsProducts[loops].category_id}">{$lsProducts[loops].name}</option>
+			   			{section name=loops loop=$lsCategory}
+			   			<option {if $thisProduct->category_id==$lsCategory[loops].category_id} selected="selected"{/if} value="{$lsCategory[loops].category_id}">{$lsCategory[loops].name}</option>
 			   			{/section}
 			   		</select>
 			   		</td>
 			   	</tr>
 			   	<tr>
 			   		<td>Mã sản phẩm</td>
-			   		<td><input type="text" name="code" class="adm_inputbox" value="{$thisProduct->code}" /></td>
+			   		<td><input type="text" name="code" class="adm_inputbox required" value="{$thisProduct->code}" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Model</td>
@@ -123,7 +119,14 @@
 			   	</tr>
 			   	<tr>
 			   		<td>Ảnh mô tả</td>
-			   		<td><input type="file" name="img" size="28" class="adm_file" /></td>
+			   		<td>
+			   		{if $thisProduct->large_image !=""}
+			   		<div style="widtd:100%; margin: 10px 0;">
+		   				<img src="{$http_root}{$thisProduct->large_image}" width="250" border="0" />
+		   			</div>
+			   		{/if}
+			   		<input type="file" name="img" size="28" class="adm_file" />
+			   		</td>
 			   	</tr>
 			   	<tr>
 			   		<td>Trọng lượng</td>
@@ -162,11 +165,11 @@
 			   	</tr>
 			   	<tr>
 			   		<td>Giá niêm yết</td>
-			   		<td><input type="text" name="price_ny" class="adm_inputbox" onkeypress="return shp.numberOnly(this, event);" value="{$thisProduct->price_ny}" /></td>
+			   		<td><input type="text" name="price_ny" class="adm_inputbox required" onkeypress="return shp.numberOnly(this, event);" value="{$thisProduct->price_ny}" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td width="25%">Giá bán</td>
-			   		<td><input type="text" name="price" class="adm_inputbox" onkeypress="return shp.numberOnly(this, event);" value="{$thisProduct->price}" /></td>
+			   		<td><input type="text" name="price" class="adm_inputbox required" onkeypress="return shp.numberOnly(this, event);" value="{$thisProduct->price}" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Giảm giá</td>
@@ -212,7 +215,7 @@
 			   	<tr>
 			   		<td>
 			   			<b>Tên sản phẩm</b><br />
-			   			<input type="text" name="name" class="adm_inputbox" value="{$thisProduct->name}" />
+			   			<input type="text" name="name" class="adm_inputbox required" value="{$thisProduct->name}" />
 			   		</td>
 			   	</tr>
 			   	<tr>
@@ -365,8 +368,8 @@ $(function(){
 				<td>
 					<a href="{$page}?task=edit&product_id={$lsProducts[loops].product_id}">{$lsProducts[loops].name}</a>
 				</td>
-				<td align="center">{$lsProducts[loops].code}</td>
-				<td align="center">{$lsProducts[loops].model}</td>
+				<td align="center"><a href="{$page}?task=edit&product_id={$lsProducts[loops].product_id}">{$lsProducts[loops].code}</a></td>
+				<td align="center"><a href="{$page}?task=edit&product_id={$lsProducts[loops].product_id}">{$lsProducts[loops].model}</a></td>
 				<td align="center">{$lsProducts[loops].price_ny|number_format} VNĐ</td>
 				<td align="center">{$lsProducts[loops].price|number_format} VNĐ</td>
 				<td align="center">{$lsProducts[loops].amount}</td>

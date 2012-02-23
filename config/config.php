@@ -16,7 +16,7 @@ define('HTTP_SERVER', 'http://localhost/projects/');
 define('DB_DRIVER', 'mysql');
 define('DB_HOSTNAME', '127.0.0.1');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'ngockieuvan@vccorp.vn');
+define('DB_PASSWORD', 'ngockv842006');
 define('DB_DATABASE', 'database_projects');
 define('DB_PREFIX', '');
 
@@ -30,4 +30,8 @@ $dir_upload				= 'D:/AppServ/www/projects/image/';
 //SYSTEM
 define('EMAIL_SYSTEM', 'ngockv@gmail.com');
 define('NAME_EMAIL_SYSTEM', 'Email từ hệ thống Xtech');
+
+//WIDTH IMAGE PRODUCT
+define('_WIDTH_MEDIUM_IMAGE_PRODUCT', 100);
+define('_WIDTH_SMALL_IMAGE_PRODUCT', 50);
 ?>

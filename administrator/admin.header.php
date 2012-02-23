@@ -66,10 +66,7 @@ $smarty	= new Smarty();
 $smarty->template_dir	=	$template_root;
 $smarty->compile_dir	=	$template_root_c;
 $smarty->assign('http_root',$http_root);
-
-//CREATE clsCommons();
-$cls = new clsCommons();
-$lblDisplay='';
+$smarty->assign('template_root', $template_root);
 
 $smarty->display($template_root.'administrator/admin.header.tpl');
 ?>

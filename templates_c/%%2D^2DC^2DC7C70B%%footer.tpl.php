@@ -1,3 +1,5 @@
+<?php /* Smarty version 2.6.10, created on 2012-02-23 19:55:52
+         compiled from D:/AppServ/www/projects/templates//footer.tpl */ ?>
 <div id="footer" class="clearfix">
     		<div class="main_footer">
     			<div class="boxFooterLeft">
@@ -80,7 +82,8 @@
     	<div id="footer2" class="clearfix">
     		<div class="main_footer">
     			<ul>
-    				<li><a href="{$http_root}">Trang chủ</a></li>
+    				<li><a href="<?php echo $this->_tpl_vars['http_root']; ?>
+">Trang chủ</a></li>
     				<li><a href="index.php?route=information/information&information_id=51">Giới thiệu</a></li>
     				<!--<li><a href="#">Tuyển dụng</a></li>-->
     				<!--<li><a href="javascript:void(0);">Sitemap</a></li>-->
@@ -225,4 +228,8 @@
 			</div>
 		</div>
     </body>
-    {include file="footer_global.tpl"}
+    <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "footer_global.tpl", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
