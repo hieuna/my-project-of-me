@@ -41,11 +41,6 @@ class PGProduct{
 	//TBL_PRODUCT_DISCOUNT
 	var $discount;
 	var $percent;
-	//TBL_PRODUCT_COLOR
-	var $name_color;
-	var $value_color;
-	var $price_color;
-	var $show_color;
 	//TBL_PRODUCT_IMAGE
 	var $small_image;
 	var $medium_image;
@@ -66,7 +61,7 @@ class PGProduct{
 		$this->number_color = 0;
 		$this->status = 1;
 		$this->ordering = 0;
-		$this->created = "";
+		$this->created = date("Y-m-d h:i:s");
 		$this->admin_created = 0;
 		$this->modified = "";
 		$this->admin_modified = 0;
@@ -83,11 +78,6 @@ class PGProduct{
 		//TBL_PRODUCT_DISCOUNT
 		$this->discount = 0;
 		$this->percent = 0;
-		//TBL_PRODUCT_COLOR
-		$this->name_color = "";
-		$this->value_color = "";
-		$this->price_color = 0;
-		$this->show_color = 1;
 		//TBL_PRODUCT_IMAGE
 		$this->small_image = "";
 		$this->medium_image = "";
@@ -192,12 +182,12 @@ class PGProduct{
 		    )";
       		
       		$query = "INSERT INTO ".TBL_PRODUCT_DESCRIPTION."(
-      			name, alias, introtext, fulltext, meta_keywords, meta_description, search_words, page_title
+      			name, alias, introtext, `fulltext`, meta_keywords, meta_description, search_words, page_title
       		) VALUES (
       			'{$objProduct->name}', '{$objProduct->alias}', '{$objProduct->introtext}', '{$objProduct->fulltext}', '{$objProduct->meta_keywords}', '{$objProduct->meta_description}', '{$objProduct->search_words}', '{$objProduct->page_title}'
       		)";
       		
-      		$queryImage = "INSERT INTO".TBL_PRODUCT_IMAGE."(
+      		$queryImage = "INSERT INTO ".TBL_PRODUCT_IMAGE."(
       			small_image, medium_image, large_image
       		) VALUES (
       			'{$objProduct->small_image}', '{$objProduct->medium_image}', '{$objProduct->large_image}'
@@ -218,9 +208,8 @@ class PGProduct{
 					status='{$objProduct->status}',
 					ordering='{$objProduct->ordering}',
 					created='{$objProduct->created}',
-					admin_created='{$objProduct->admin_created}',
-					modified='{$objProduct->modified}',
-					admin_modified='{$objProduct->admin_modified}',
+					modified='".date("Y-m-d h:i:s")."',
+					admin_modified='{$admin_id}',
 					category_id='{$objProduct->category_id}'
 					WHERE product_id='{$objProduct->product_id}' LIMIT 1";
 			
@@ -228,7 +217,7 @@ class PGProduct{
 					name='{$objProduct->name}', 
 					alias='{$objProduct->alias}',
 					introtext='{$objProduct->introtext}',
-					fulltext='{$objProduct->fulltext}',
+					`fulltext`='{$objProduct->fulltext}',
 					meta_keywords='{$objProduct->meta_keywords}',
 					meta_description='{$objProduct->meta_description}',
 					search_words='{$objProduct->search_words}',
@@ -298,6 +287,35 @@ class PGProduct{
 		}
 		
 		return $this->is_message;
+	}
+}
+
+//class color of product
+class PGColor{
+	//TBL_PRODUCT_COLOR
+	var $name_color;
+	var $value_color;
+	var $price_color;
+	var $show_color;
+	
+	function __construct(){
+		//TBL_PRODUCT_COLOR
+		$this->name_color = "";
+		$this->value_color = "";
+		$this->price_color = 0;
+		$this->show_color = 1;
+	}
+	
+	function save($number, $product_id, $value_color, $price_color, $show_hide){
+		global $database;
+    
+		if (!is_object($objColor)) $objColor = $this;
+		
+		if ($number>0){
+			for ($i=0; $i<=$number; $i++){
+				$database->db_query("INSERT INTO ".TBL_PRODUCT_COLOR." VALUES('{$product_id}', '{$value_color}', '#{$value_color}', '{$price_color}', '{$show_hide}')");
+			}
+		}
 	}
 }
 ?>
