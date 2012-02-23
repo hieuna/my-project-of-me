@@ -1,6 +1,4 @@
 ﻿<?php
-if ( !defined('AREA') ) { die('Access denied'); }
-
 //START CLASS_SOHAPAY
 define('PG_URL_ROOT', 'http://localhost/sohapayment/');
 
@@ -372,7 +370,7 @@ class PG_checkout
 	        case "0" : $result = "Giao dịch thành công"; break;
 	        case "?" : $result = "Tình trạng giao dịch không xác định"; break;
 	        case "1" : $result = "Lỗi không xác định"; break;
-	        case "2" : $result = "Ngân hàng từ tối giao dịch"; break;
+	        case "2" : $result = "Ngân hàng từ chối giao dịch"; break;
 	        case "3" : $result = "Không có trả lời từ Ngân hàng"; break;
 	        case "4" : $result = "Thẻ hết hạn"; break;
 	        case "5" : $result = "Số dư không đủ để thanh toán"; break;
@@ -470,39 +468,69 @@ class PG_checkout
 	}
 }
 /*-- END CLASS_SOHAPAY --*/
-
-// Return from paypal website
-// SOHAPAY
+if (!isset($processor_data)){
+  $payment_id = db_get_field("SELECT ?:orders.payment_id FROM ?:orders WHERE ?:orders.order_id = ?i", $_REQUEST['order_id']);
+  $processor_data = fn_get_payment_method_data($payment_id);
+}
 $merchant_site_code		= $processor_data['params']['site_code'];//id của site
 $merchant_secure_secret	= $processor_data['params']['secure_secret'];//mật khẩu giao tiếp api
-$classPayment = new PG_checkout($merchant_site_code, $merchant_secure_secret);	
-	
-if (!defined('PAYMENT_NOTIFICATION')) {
+$classPayment = new PG_checkout($merchant_site_code, $merchant_secure_secret);
+
+// Return from paypal website
+if ( !defined('AREA') ) { die('Access denied'); }
+
+if (defined('PAYMENT_NOTIFICATION')) {  
+  if ($mode == 'notify') {
+		$order_id = $_REQUEST['order_id'];
+		$order_info = fn_get_order_info($order_id);
+		
+		$shp_check = $classPayment->verifyReturnUrl();
+		$shp_error_text= isset($_GET["error_text"])?$_GET["error_text"]:"";
+		$shp_payment_type = isset($_GET["payment_type"])?$_GET["payment_type"]:"";
+		$shp_respone_code = isset($_GET["response_code"])?$_GET["response_code"]:"";
+		$shp_respone_massage = isset($_GET["response_message"])?$_GET["response_message"]:"";
+	  
+		$pp_response = array();
+  
+		if ($shp_check && empty($shp_error_text)){
+		  $pp_response['order_status']    = 'P';
+		  $pp_response['transaction_id']  = isset($_GET['order_code'])?$_GET['order_code']:"";
+		}else{
+		  $pp_response['order_status']    = 'F';
+		  if (empty($shp_error_text)){
+			if ($shp_payment_type==1) $pp_response['reason_text'] = $classPayment->getResponseDescriptionInternational($shp_respone_code);
+		  else $pp_response['reason_text'] = $classPayment->getResponseDescriptionDomestic($shp_respone_code);
+		  }else{
+			$pp_response['reason_text'] = $shp_error_text;
+		  }
+		} 
+		if (fn_check_payment_script('sohapay.php', $order_id)) {
+			fn_finish_payment($order_id, $pp_response);
+			if ($pp_response['order_status']=='P') fn_order_placement_routines($order_id, array(), true, 'save');
+			else fn_order_placement_routines($order_id);
+		}
+	}
+} else {
 	//THAM SO TRUYEN VAO CHO SOHAPAY
-	$merchant_site_code		= $processor_data['params']['site_code'];//id của site
-	$merchant_secure_secret	= $processor_data['params']['secure_secret'];//mật khẩu giao tiếp api
-    $return_url				= Registry::get('config.current_location')."/$index_script?dispatch=payment_notification.return&payment=paypal&order_id=$order_id";
-    $website_merchant		= $processor_data['params']['website'];//Website của merchant
-    
-    //THAM SO CUA DON HANG
-    //var_dump($order_info);
-    $order_code = $processor_data['params']['order_code'].(($order_info['repaid']) ? ($order_id .'_'. $order_info['repaid']) : $order_id)."_".time();
+	$website_merchant		= $processor_data['params']['website'];//Website của merchant
+	$return_url = Registry::get('config.current_location') . "/$index_script?dispatch=payment_notification.notify&payment=sohapay&order_id=$order_id";
+  
+	//THAM SO CUA DON HANG
+	$order_code = $processor_data['params']['order_code'].(($order_info['repaid']) ? ($order_id .'_'. $order_info['repaid']) : $order_id)."_".time();
 	$order_email = $order_info['email'];
-	//Order Total
-	$shp_price_total1 = fn_format_price($order_info['total']);
-	$shp_price =str_replace('.','',$shp_price_total1);
+	$shp_price = $order_info['total'];
 	$transaction_info = 'Thanh toán đơn đặt hàng từ '.$website_merchant.' qua cổng thanh toán SohaPay';
-	$_phone = preg_replace('/[^\d]/', '', $order_info['phone']);
+	$order_info['phone'] = preg_replace('/[^\d]/', '', $order_info['phone']);
 	
-	$sohapay_checkout_url = $classPayment->buildCheckoutUrl($return_url, $transaction_info, $order_code, $shp_price, $order_email, $_phone);
+	$sohapay_checkout_url = $classPayment->buildCheckoutUrl($return_url, $transaction_info, $order_code, $order_info['total'], $order_info['email'], $order_info['phone']);
 	
 	$msg = fn_get_lang_var('text_cc_processor_connection');
 	$msg = str_replace('[processor]', 'Quá trình thanh toán qua SohaPay bắt đầu', $msg);
 	
 	echo <<<EOT
 	<html>
-	<body onLoad="document.nganluong_form.submit();">
-	<form action="{$sohapay_checkout_url}" method="post" name="nganluong_form">
+	<body onLoad="document.sohapay_form.submit();">
+	<form action="{$sohapay_checkout_url}" method="post" name="sohapay_form">
  
 	</form>
 	<div align=center>{$msg}</div>
@@ -510,85 +538,6 @@ if (!defined('PAYMENT_NOTIFICATION')) {
 	</html>
 EOT;
 	fn_flush();
-
-} else {
-	// Return from paypal website
-	var_dump($_REQUEST)	; echo $mode; die; 
-	if ($mode == 'notify' && !empty($_REQUEST['order_id'])) {
-		
-		if (fn_check_payment_script('sohapay.php', $_REQUEST['order_id'], $processor_data)) {
-
-			$pp_response = array();
-			
-			$order_info = fn_get_order_info($_REQUEST['order_id']);
-			
-			$pp_mc_gross = !empty($_REQUEST['mc_gross']) ? $_REQUEST['mc_gross'] : 0;
-			
-			if ($pp_mc_gross != $order_info['total']) {
-				$pp_response['order_status'] = 'F';
-				$pp_response['reason_text'] = fn_get_lang_var('order_total_not_correct');
-				$pp_response['transaction_id'] = @$_REQUEST['txn_id'];
-			} elseif (stristr($_REQUEST['payment_status'], 'Completed')) {
-				$params = $processor_data['params'];
-				$paypal_host = ($params['mode'] == 'test' ? "www.sohapay.com" : "www.sohapay.com");
-				$post_data = array();
-				$paypal_post = $_REQUEST;
-				unset($paypal_post['dispatch']);
-	
-				$paypal_post["cmd"] = "_notify-validate";
-				foreach ($paypal_post as $k => $v) {
-					$post_data[] = "$k=$v";
-				}
-	
-				list($headers, $result) = fn_https_request('POST', "https://www.sohapay.com", $post_data);
-	
-				if (stristr($result, 'VERIFIED')) {
-					$pp_response['order_status'] = 'P';
-					$pp_response['reason_text'] = '';
-					$pp_response['transaction_id'] = @$_REQUEST['txn_id'];
-				} elseif (stristr($result, 'INVALID')) {
-					$pp_response['order_status'] = 'D';
-					$pp_response['reason_text'] = '';
-					$pp_response['transaction_id'] = @$_REQUEST['txn_id'];
-				} else {
-					$pp_response['order_status'] = 'F';
-					$pp_response['reason_text'] = '';
-					$pp_response['transaction_id'] = @$_REQUEST['txn_id'];
-				}
-			} elseif (stristr($_REQUEST['payment_status'], 'Pending')) {
-					$pp_response['order_status'] = 'O';
-					$pp_response['reason_text'] = '';
-					$pp_response['transaction_id'] = @$_REQUEST['txn_id'];
-	
-			} elseif (stristr($_REQUEST['payment_status'], 'Refunded')) {
-					$_order = db_get_row("SELECT status, total FROM ?:orders WHERE order_id = ?i", $_REQUEST['order_id']);
-	
-					$pp_response['order_status'] = (floatval($_order['total']) - abs(floatval($_REQUEST['payment_gross'])) == 0) ? 'I' : $_order['status'];
-					$pp_response['reason_text'] = '';
-					$pp_response['transaction_id'] = @$_REQUEST['txn_id'];
-	
-			} else {
-					$pp_response['order_status'] = 'D';
-					$pp_response['reason_text'] = '';
-					$pp_response['transaction_id'] = @$_REQUEST['txn_id'];
-			}
-	
-			fn_finish_payment($_REQUEST['order_id'], $pp_response);
-		}
-		exit;
-
-	} elseif ($mode == 'return') {
-		fn_order_placement_routines($_REQUEST['order_id'], false);
-
-	} elseif ($mode == 'cancel') {
-		$order_info = fn_get_order_info($_REQUEST['order_id']);
-
-		$pp_response['order_status'] = 'F';
-		$pp_response["reason_text"] = fn_get_lang_var('text_transaction_declined');
-
-		fn_finish_payment($_REQUEST['order_id'], $pp_response, false);
-		fn_order_placement_routines($_REQUEST['order_id']);
-	}
+  exit();  
 }
-exit;
 ?>

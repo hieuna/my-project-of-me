@@ -3,12 +3,12 @@
 
 <!--SOHAPAY-->
 <div class="form-field">
-	<label for="merchant">Site Code :</label>
+	<label for="merchant">Mã site code(ID) :</label>
 	<input type="text" name="payment_data[processor_params][site_code]" id="merchant_site_code" value="{$processor_params.site_code}" class="input-text" />
 </div>
 
 <div class="form-field">
-	<label for="checkout">Secure Secret:</label>
+	<label for="checkout">Mật khẩu(Secure Secret):</label>
 	<input type="text" name="payment_data[processor_params][secure_secret]" id="merchant_secure_secret" value="{$processor_params.secure_secret}" class="input-text" />
 </div>
 
