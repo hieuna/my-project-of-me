@@ -10,20 +10,4 @@
 		</p>
 	</div>
 </body>
-{literal}
-<script type="text/javascript">
-$(function(){
-	$('#start_date, #end_date, #date').datetimepicker();
-	$("ul#menu li").hover(function(){
-		$(this).addClass('hover');
-	},
-	function(){
-		$(this).removeClass('hover');
-	});
-
-	//jQuery Inline Content Editor Plugin
-	$('#wysiwyg').wysiwyg();
-});
-</script>
-{/literal}
-</html>
+{include file="$template_root/administrator/admin.footer_global.tpl"}

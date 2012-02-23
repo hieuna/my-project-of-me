@@ -84,8 +84,9 @@
    {if $mosmsg}<div class="message">{$mosmsg}</div>{/if}
 </div>
 {if $task == "add" || $task == "edit"}
-<form action="{$page}" method="post" name="adminForm" enctype="multipart/form-data">
+<form action="{$page}" method="post" name="adminForm" class="form-validate">
 <table class="adminTable">
+	<input type="submit" value="sun" />
    <tbody>
    	<tr>
    		<td width="20%">Nhóm sản phẩm</td>
@@ -104,7 +105,7 @@
    	</tr>
    	<tr>
    		<td>Tên nhóm sản phẩm</td>
-   		<td><input type="text" name="name" class="adm_inputbox" value="{$thisCategory->name}" /></td>
+   		<td><input type="text" name="name" class="adm_inputbox required" value="{$thisCategory->name}" /></td>
    	</tr>
    	<tr>
    		<td>Bí danh</td>

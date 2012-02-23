@@ -93,6 +93,16 @@ class PGCategory{
 	}
 	
 	/*
+	 *Check input category
+	 */
+	public function checkInput($name){
+		if ($name == "") $this->is_message = "Tên nhóm sản phẩm không để trống !";
+		if ($this->is_message) return;
+		
+		return;
+	}
+	
+	/*
 	 * Save Category
 	 * Truyền các trường bằng tham số
 	 * VD: $objCategory->name = "Kiều Văn Ngọc";

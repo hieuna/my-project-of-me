@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-23 18:23:00
+<?php /* Smarty version 2.6.10, created on 2012-02-24 00:29:48
          compiled from D:/AppServ/www/projects/templates/administrator/admin.product.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 370, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 373, false),)), $this); ?>
 <div id="toolbar-box">
    <div class="t">
    	<div class="t">
@@ -92,7 +92,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
 </div>
 <?php if ($this->_tpl_vars['task'] == 'add' || $this->_tpl_vars['task'] == 'edit'): ?>
 <form action="<?php echo $this->_tpl_vars['page']; ?>
-" method="post" name="adminForm" enctype="multipart/form-data">
+" method="post" name="adminForm" class="form-validate" enctype="multipart/form-data">
 <table class="adminTable">
 	<tbody>
 		<tr>
@@ -106,16 +106,10 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
 			   		<td width="25%">Nhóm sản phẩm</td>
 			   		<td>
 			   		<select name="category_id" class="adm_selectbox">
-			   			<?php if ($this->_tpl_vars['task'] == 'edit'): ?>
-			   			<option value="<?php echo $this->_tpl_vars['thisBanner']->category_id; ?>
-" selected="selected"><?php echo $this->_tpl_vars['name_category_banner']; ?>
-</option>
-			   			<?php else: ?>
 			   			<option value="">Lựa chọn theo nhóm</option>
-			   			<?php endif; ?>
 			   			<?php unset($this->_sections['loops']);
 $this->_sections['loops']['name'] = 'loops';
-$this->_sections['loops']['loop'] = is_array($_loop=$this->_tpl_vars['lsProducts']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['loops']['loop'] = is_array($_loop=$this->_tpl_vars['lsCategory']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
 $this->_sections['loops']['show'] = true;
 $this->_sections['loops']['max'] = $this->_sections['loops']['loop'];
 $this->_sections['loops']['step'] = 1;
@@ -137,8 +131,8 @@ $this->_sections['loops']['index_next'] = $this->_sections['loops']['index'] + $
 $this->_sections['loops']['first']      = ($this->_sections['loops']['iteration'] == 1);
 $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'] == $this->_sections['loops']['total']);
 ?>
-			   			<option <?php if ($this->_tpl_vars['thisCategory']->category_id == $this->_tpl_vars['categorys'][$this->_sections['loops']['index']]['category_id'] || $this->_tpl_vars['category_id'] == $this->_tpl_vars['categorys'][$this->_sections['loops']['index']]['category_id']): ?> selected="selected"<?php endif; ?> value="<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['category_id']; ?>
-"><?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['name']; ?>
+			   			<option <?php if ($this->_tpl_vars['thisProduct']->category_id == $this->_tpl_vars['lsCategory'][$this->_sections['loops']['index']]['category_id']): ?> selected="selected"<?php endif; ?> value="<?php echo $this->_tpl_vars['lsCategory'][$this->_sections['loops']['index']]['category_id']; ?>
+"><?php echo $this->_tpl_vars['lsCategory'][$this->_sections['loops']['index']]['name']; ?>
 </option>
 			   			<?php endfor; endif; ?>
 			   		</select>
@@ -146,7 +140,7 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 			   	</tr>
 			   	<tr>
 			   		<td>Mã sản phẩm</td>
-			   		<td><input type="text" name="code" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->code; ?>
+			   		<td><input type="text" name="code" class="adm_inputbox required" value="<?php echo $this->_tpl_vars['thisProduct']->code; ?>
 " /></td>
 			   	</tr>
 			   	<tr>
@@ -161,7 +155,15 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 			   	</tr>
 			   	<tr>
 			   		<td>Ảnh mô tả</td>
-			   		<td><input type="file" name="img" size="28" class="adm_file" /></td>
+			   		<td>
+			   		<?php if ($this->_tpl_vars['thisProduct']->large_image != ""): ?>
+			   		<div style="widtd:100%; margin: 10px 0;">
+		   				<img src="<?php echo $this->_tpl_vars['http_root'];  echo $this->_tpl_vars['thisProduct']->large_image; ?>
+" width="250" border="0" />
+		   			</div>
+			   		<?php endif; ?>
+			   		<input type="file" name="img" size="28" class="adm_file" />
+			   		</td>
 			   	</tr>
 			   	<tr>
 			   		<td>Trọng lượng</td>
@@ -206,12 +208,12 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 			   	</tr>
 			   	<tr>
 			   		<td>Giá niêm yết</td>
-			   		<td><input type="text" name="price_ny" class="adm_inputbox" onkeypress="return shp.numberOnly(this, event);" value="<?php echo $this->_tpl_vars['thisProduct']->price_ny; ?>
+			   		<td><input type="text" name="price_ny" class="adm_inputbox required" onkeypress="return shp.numberOnly(this, event);" value="<?php echo $this->_tpl_vars['thisProduct']->price_ny; ?>
 " /></td>
 			   	</tr>
 			   	<tr>
 			   		<td width="25%">Giá bán</td>
-			   		<td><input type="text" name="price" class="adm_inputbox" onkeypress="return shp.numberOnly(this, event);" value="<?php echo $this->_tpl_vars['thisProduct']->price; ?>
+			   		<td><input type="text" name="price" class="adm_inputbox required" onkeypress="return shp.numberOnly(this, event);" value="<?php echo $this->_tpl_vars['thisProduct']->price; ?>
 " /></td>
 			   	</tr>
 			   	<tr>
@@ -289,7 +291,7 @@ $this->_sections['foo']['last']       = ($this->_sections['foo']['iteration'] ==
 			   	<tr>
 			   		<td>
 			   			<b>Tên sản phẩm</b><br />
-			   			<input type="text" name="name" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->name; ?>
+			   			<input type="text" name="name" class="adm_inputbox required" value="<?php echo $this->_tpl_vars['thisProduct']->name; ?>
 " />
 			   		</td>
 			   	</tr>
@@ -484,10 +486,14 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 "><?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['name']; ?>
 </a>
 				</td>
-				<td align="center"><?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['code']; ?>
-</td>
-				<td align="center"><?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['model']; ?>
-</td>
+				<td align="center"><a href="<?php echo $this->_tpl_vars['page']; ?>
+?task=edit&product_id=<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['product_id']; ?>
+"><?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['code']; ?>
+</a></td>
+				<td align="center"><a href="<?php echo $this->_tpl_vars['page']; ?>
+?task=edit&product_id=<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['product_id']; ?>
+"><?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['model']; ?>
+</a></td>
 				<td align="center"><?php echo ((is_array($_tmp=$this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['price_ny'])) ? $this->_run_mod_handler('number_format', true, $_tmp) : number_format($_tmp)); ?>
  VNĐ</td>
 				<td align="center"><?php echo ((is_array($_tmp=$this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['price'])) ? $this->_run_mod_handler('number_format', true, $_tmp) : number_format($_tmp)); ?>

@@ -130,7 +130,7 @@ class PGProduct{
 	public function load($product_id = null){
 		global $database;
 		if (!is_null($product_id) && is_numeric($product_id) && ($product_id>0)){
-			$result = $database->db_query("SELECT * FROM ".TBL_PRODUCT." WHERE product_id=$product_id LIMIT 1");
+			$result = $database->db_query("SELECT * FROM ".TBL_PRODUCT." AS p, ".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm WHERE p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=$product_id LIMIT 1");
 			if ($objProduct = $database->db_fetch_object($result)){
 				//TBL_PRODUCT
 				$this->product_id		= $objProduct->product_id;
@@ -165,7 +165,7 @@ class PGProduct{
 				//TBL_PRODUCT_IMAGE
 				$this->small_image		= $objProduct->small_image;
 				$this->medium_image		= $objProduct->medium_image;
-				$this->large_image		= $large_image->large_image;
+				$this->large_image		= $objProduct->large_image;
 			}
 		}
 		return $this;
@@ -185,9 +185,9 @@ class PGProduct{
 
 		if (!isset($objProduct->product_id) || is_null($objProduct->product_id) || ($objProduct->product_id==0)){
       		$sql = "INSERT INTO ".TBL_PRODUCT." (
-		        code, model, price, price_ny, amount, weight, length, width, height, status, ordering, created, admin_created, modified, admin_modified, category_id
+		        code, model, price, price_ny, amount, number_color, weight, length, width, height, status, ordering, created, admin_created, modified, admin_modified, category_id
 		    ) VALUES (
-		    	'{$objProduct->code}', '{$objProduct->model}', '{$objProduct->price}', '{$objProduct->price_ny}', '{$objProduct->amount}', '{$objProduct->weight}', '{$objProduct->length}', '{$objProduct->width}', '{$objProduct->height}', '{$objProduct->status}', '{$objProduct->ordering}', '{$objProduct->created}', '{$objProduct->admin_created}', '{$objProduct->modified}', '{$objProduct->admin_modified}', '{$objProduct->category_id}'
+		    	'{$objProduct->code}', '{$objProduct->model}', '{$objProduct->price}', '{$objProduct->price_ny}', '{$objProduct->amount}', '{$objProduct->number_color}', '{$objProduct->weight}', '{$objProduct->length}', '{$objProduct->width}', '{$objProduct->height}', '{$objProduct->status}', '{$objProduct->ordering}', '{$objProduct->created}', '{$objProduct->admin_created}', '{$objProduct->modified}', '{$objProduct->admin_modified}', '{$objProduct->category_id}'
 		    )";
       		
       		$query = "INSERT INTO ".TBL_PRODUCT_DESCRIPTION."(
@@ -214,6 +214,7 @@ class PGProduct{
 					price='{$objProduct->price}',
 					price_ny='{$objProduct->price_ny}',
 					amount='{$objProduct->amount}',
+					number_color='{$objProduct->number_color}',
 					weight='{$objProduct->weight}',
 					length='{$objProduct->length}',
 					width='{$objProduct->width}',
@@ -237,7 +238,7 @@ class PGProduct{
 					page_title='{$objProduct->page_title}'
 					WHERE product_id='{$objProduct->product_id}' LIMIT 1";
 			
-			$queryImage = "UPDATE ".TBL_PRODUCT_DESCRIPTION." SET 
+			$queryImage = "UPDATE ".TBL_PRODUCT_IMAGE." SET 
 					small_image='{$objProduct->small_image}', 
 					medium_image='{$objProduct->medium_image}',
 					large_image='{$objProduct->large_image}'

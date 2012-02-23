@@ -395,6 +395,9 @@ table.adminlist td, table.adminlist th { padding: 8px; }
 table.adminlist thead th {
 	text-align: center; background: #e5eff4; color: #000; border-bottom: 1px solid #cee3ee; border-left: 1px solid #d3e6f0; border-top: 1px solid #FFF; font-size: 12px; padding:6px 4px 6px 4px;
 }
+table.adminlist thead th.title strong{
+	font-weight: bold;
+}
 table.adminlist thead a:hover { 
 	text-decoration: none; 
 }
@@ -436,6 +439,9 @@ table.adminlist .pagination {
 }
 .message {
     color: #CC3300; font-family: Arial, Tahoma, Helvetica, sans-serif; font-size: 14px; font-weight: bold; text-align: center; padding-top: 10px;
+}
+.error{
+	color: red; font-style: italic; padding-left: 10px;
 }
 
 /*-- navigation --*/

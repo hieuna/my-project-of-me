@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-23 18:08:43
+<?php /* Smarty version 2.6.10, created on 2012-02-23 23:02:40
          compiled from D:/AppServ/www/projects/templates/administrator/admin.category.tpl */ ?>
 <div id="toolbar-box">
    <div class="t">
@@ -90,8 +90,9 @@
 </div>
 <?php if ($this->_tpl_vars['task'] == 'add' || $this->_tpl_vars['task'] == 'edit'): ?>
 <form action="<?php echo $this->_tpl_vars['page']; ?>
-" method="post" name="adminForm" enctype="multipart/form-data">
+" method="post" name="adminForm" class="form-validate">
 <table class="adminTable">
+	<input type="submit" value="sun" />
    <tbody>
    	<tr>
    		<td width="20%">Nhóm sản phẩm</td>
@@ -139,7 +140,7 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
    	</tr>
    	<tr>
    		<td>Tên nhóm sản phẩm</td>
-   		<td><input type="text" name="name" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->name; ?>
+   		<td><input type="text" name="name" class="adm_inputbox required" value="<?php echo $this->_tpl_vars['thisCategory']->name; ?>
 " /></td>
    	</tr>
    	<tr>

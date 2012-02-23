@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-22 23:25:37
+<?php /* Smarty version 2.6.10, created on 2012-02-23 21:08:27
          compiled from D:/AppServ/www/projects/templates/administrator/admin.footer.tpl */ ?>
 	</div>
 	<!-- BORDER BOTTOM -->
@@ -12,21 +12,8 @@
 		</p>
 	</div>
 </body>
-<?php echo '
-<script type="text/javascript">
-$(function(){
-	$(\'#start_date, #end_date, #date\').datetimepicker();
-	$("ul#menu li").hover(function(){
-		$(this).addClass(\'hover\');
-	},
-	function(){
-		$(this).removeClass(\'hover\');
-	});
-
-	//jQuery Inline Content Editor Plugin
-	$(\'#wysiwyg\').wysiwyg();
-});
-</script>
-'; ?>
-
-</html>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['template_root'])."/administrator/admin.footer_global.tpl", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>

@@ -18,7 +18,7 @@ switch($task){
 		$objCategory = new PGCategory();
 		$thisCategory = $objCategory->load($category_id);
 		$where[] = " status=1";
-		if ($task=='add') $where[] = "";
+		if ($task=='add') $where[] = "parent_id>=0";
 		else $where[] = " parent_id<=".$thisCategory->parent_id;	
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
 		$order = " ORDER BY ordering ASC, category_id DESC";
@@ -41,6 +41,7 @@ switch($task){
 		
 		$objCategory = new PGCategory();
 		$thisCategory = $objCategory->load($category_id);
+		$objCategory->checkInput($name);
 		if (!$objCategory->is_message){
 			$objCategory->category_id 	= $category_id_value;
 			$objCategory->name			= $name;
@@ -61,8 +62,9 @@ switch($task){
 			$objCategory->save($thisCategory);
 			cheader($page);
 		}else{
-			$error = $objCategory->is_message;
+			$mosmsg = $objCategory->is_message;
 		}
+		$smarty->assign('mosmsg', $mosmsg);
 		break;
 
 	case 'publish':
