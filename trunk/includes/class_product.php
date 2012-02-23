@@ -286,7 +286,7 @@ class PGProduct{
 		$total = count ( $cid );
 		$cids = 'product_id=' . implode( ' OR product_id=', $cid );
 		
-		$database->db_query("UPDATE ".TBL_PRODUCT." SET admin_enabled=".(int) $published." WHERE ( $cids )");
+		$database->db_query("UPDATE ".TBL_PRODUCT." SET status=".(int) $published." WHERE ( $cids )");
 	
 		switch ( $published ) {
 			case 1:

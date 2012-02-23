@@ -67,20 +67,20 @@ switch($task){
 		break;
 
 	case 'publish':
-		$objCategory = new PGCategory();
-		$message = $objCategory->published($cid, 1);
+		$objProduct = new PGProduct();
+		$message = $objProduct->published($cid, 1);
 		cheader($page.'?mosmsg='. $message);
 		break;
 
 	case 'unpublish':
-		$objCategory = new PGCategory();
-		$message = $objCategory->published($cid, 0);
+		$objProduct = new PGProduct();
+		$message = $objProduct->published($cid, 0);
 		cheader($page.'?mosmsg='. $message);
 		break;
 
 	case 'remove':
-		$objCategory = new PGCategory();
-		$objCategory->remove($cid);
+		$objProduct = new PGProduct();
+		$objProduct->remove($cid);
 		cheader($page);
 		break;	
 	

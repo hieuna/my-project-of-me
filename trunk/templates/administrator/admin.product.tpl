@@ -360,10 +360,10 @@ $(function(){
 			<tr class="row{if $smarty.section.loops.index%2==0}0{else}1{/if}">
 				<td>{$smarty.section.loops.index+1}</td>
 				<td align="center">
-					<input type="checkbox" onclick="isChecked(this.checked);" value="{$lsProducts[loops].category_id}" name="cid[]" id="cb{$lsProducts[loops].category_id}">
+					<input type="checkbox" onclick="isChecked(this.checked);" value="{$lsProducts[loops].product_id}" name="cid[]" id="cb{$lsProducts[loops].product_id}">
 				</td>
 				<td>
-					<a href="{$page}?task=edit&category_id={$lsProducts[loops].category_id}">{$lsProducts[loops].name}</a>
+					<a href="{$page}?task=edit&product_id={$lsProducts[loops].product_id}">{$lsProducts[loops].name}</a>
 				</td>
 				<td align="center">{$lsProducts[loops].code}</td>
 				<td align="center">{$lsProducts[loops].model}</td>
@@ -378,11 +378,11 @@ $(function(){
 				<td align="center">{$lsProducts[loops].name_category}</td>
 				<td align="center">
 					{if $lsProducts[loops].status == 1}
-						<a onclick="return listItemTask('cb{$lsProducts[loops].category_id}','unpublish')" title="Ẩn đi">
+						<a onclick="return listItemTask('cb{$lsProducts[loops].product_id}','unpublish')" title="Ẩn đi">
 						<img src="../images/publish_g.png" width="16" style="cursor:pointer" alt="Ẩn đi" border="0" />
 						</a>
 					{else}
-						<a onclick="return listItemTask('cb{$lsProducts[loops].category_id}','publish')" title="Hiển thị">
+						<a onclick="return listItemTask('cb{$lsProducts[loops].product_id}','publish')" title="Hiển thị">
 						<img src="../images/publish_x.png" width="16" style="cursor:pointer" alt="Hiển thị" border="0" />
 						</a>
 					{/if}
