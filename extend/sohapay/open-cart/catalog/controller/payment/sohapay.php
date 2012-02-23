@@ -10,20 +10,21 @@ class ControllerPaymentSohaPay extends Controller {
 		$order_info = $this->model_checkout_order->getOrder($this->session->data['order_id']);
 		
 		$this->load->library('encryption');
-		//$this->data['action'] = 'https://www.nganluong.vn/checkout.php';
-		//Tạo link checkout cho nganluong
-		$secure_pass= $this->config->get('nganluong_security');
-		$merchant_site_code=$this->config->get('nganluong_merchant');
+		//Tạo link checkout cho sohapay
+		$merchant_site_code=$this->config->get('sohapay_site_code');
+		$secure_secret= $this->config->get('sohapay_secure_secret');
 		$return_url=HTTPS_SERVER . 'index.php?route=checkout/success';
-		$receiver=$this->config->get('nganluong_receiver');
 		$transaction_info="không có gì";
 		$order_code=$this->session->data['order_id'];
+		$order_email=$this->session->data['order_email'];
+		$order_mobile=$this->session->data['order_mobile'];
 		$price=$this->currency->format($order_info['total'], $order_info['currency'], $order_info['value'], FALSE);
-		$this->data['action'] = $this->model_payment_nganluong->buildCheckoutUrl($return_url, $receiver, $transaction_info, $order_code, $price,$merchant_site_code,$secure_pass);
+		
+		$this->data['action'] = $this->model_payment_sohapay->buildCheckoutUrl($return_url, $transaction_info, $order_code, $price, $order_email, $order_mobile);
 	    // echo  $this->data['action'];die();
 		//==============================
 
-		$this->data['ap_merchant'] = $this->config->get('nganluong_merchant');
+		$this->data['ap_merchant'] = $this->config->get('sohapay_merchant');
 		$this->data['ap_amount'] = $this->currency->format($order_info['total'], $order_info['currency'], $order_info['value'], FALSE);
 		$this->data['ap_currency'] = $order_info['currency'];
 		$this->data['ap_purchasetype'] = 'Item';
@@ -45,19 +46,19 @@ class ControllerPaymentSohaPay extends Controller {
 		
 		$this->id = 'payment';
 		
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/nganluong.tpl')) {
-			$this->template = $this->config->get('config_template') . '/template/payment/nganluong.tpl';
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/sohapay.tpl')) {
+			$this->template = $this->config->get('config_template') . '/template/payment/sohapay.tpl';
 		} else {
-			$this->template = 'default/template/payment/nganluong.tpl';
+			$this->template = 'default/template/payment/sohapay.tpl';
 		}		
 		
 		$this->render();
 	}
 	
 	public function callback() {
-		if (isset($this->request->post['ap_securitycode']) && ($this->request->post['ap_securitycode'] == $this->config->get('nganluong_security'))) {
+		if (isset($this->request->post['ap_securitycode']) && ($this->request->post['ap_securitycode'] == $this->config->get('sohapay_security'))) {
 			$this->load->model('checkout/order');
-			$this->model_checkout_order->confirm($this->request->post['ap_itemcode'], $this->config->get('nganluong_order_status_id'));
+			$this->model_checkout_order->confirm($this->request->post['ap_itemcode'], $this->config->get('sohapay_order_status_id'));
 		}
 	}
 }
