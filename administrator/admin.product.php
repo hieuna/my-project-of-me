@@ -33,25 +33,27 @@ switch($task){
 		
 	case 'save':
 		$product_id		= PGRequest::getInt('product_id', 0, 'POST');
+		echo $number_color	= PGRequest::getInt('number_color', 0, 'POST');
+		die;
 		
 		$objProduct = new PGProduct();
 		$thisProduct = $objProduct->load($product_id);
 		if (!$objProduct->is_message){
 			foreach ($_POST as $key =>$value) {
 				//echo $key."&nbsp;".$value."<br />";
-				if ($objProduct->key == 'alias'){
-					if ($objProduct->key != ""){
-						$objProduct->alias 	= $objProduct->key;
-					}else{
-						if ($objProduct->key == 'name'){
-							$name_alias			= RemoveSign($objProduct->key);
-							$name_alias			= str_replace(" ", "-", $name_alias);
-							$name_alias			= preg_replace('/[^a-z0-9]+/i','-',$name_alias);
-							$objProduct->alias 	= $name_alias;
-						}
+				if ($key == 'alias' && $value != ""){
+					$name_alias 		= $value;
+					$objProduct->alias 	= $name_alias;
+				}else{
+					if ($key == 'name'){
+						$name_alias			= RemoveSign($value);
+						$name_alias			= str_replace(" ", "-", $name_alias);
+						$name_alias			= preg_replace('/[^a-z0-9]+/i','-',$name_alias);
 					}
+					$objProduct->alias 	= $name_alias;
 				}
-				$objProduct->key	= $value;
+				$objProduct->$key		= $value;
+				$objProduct->admin_created	= $admin_id;
 			}
 			$objProduct->save($thisProduct);
 			cheader($page);

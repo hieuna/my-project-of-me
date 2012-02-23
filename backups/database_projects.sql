@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Feb 23, 2012 at 12:37 AM
+-- Generation Time: Feb 23, 2012 at 08:32 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -423,13 +423,12 @@ CREATE TABLE `tbl_products` (
   `admin_modified` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
   PRIMARY KEY  (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
 -- Dumping data for table `tbl_products`
 -- 
 
-INSERT INTO `tbl_products` VALUES (1, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 

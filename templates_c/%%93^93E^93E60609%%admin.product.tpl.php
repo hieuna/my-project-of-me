@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-23 00:34:41
+<?php /* Smarty version 2.6.10, created on 2012-02-23 07:49:17
          compiled from D:/AppServ/www/projects/templates/administrator/admin.product.tpl */ ?>
 <div id="toolbar-box">
    <div class="t">
@@ -164,22 +164,22 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 			   	<tr>
 			   		<td>Trọng lượng</td>
 			   		<td><input type="text" name="model" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->weight; ?>
-" /> (g)</td>
+" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Chiều dài</td>
 			   		<td><input type="text" name="length" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->length; ?>
-" /> (cm)</td>
+" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Chiều rộng</td>
 			   		<td><input type="text" name="width" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->width; ?>
-" /> (cm)</td>
+" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Chiều cao</td>
 			   		<td><input type="text" name="height" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->height; ?>
-" /> (cm)</td>
+" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Ngày cập nhật</td>
@@ -338,7 +338,7 @@ $this->_sections['foo']['last']       = ($this->_sections['foo']['iteration'] ==
 			   	<tr>
 			   		<td>
 			   			<b>Tiêu đề trang</b><br />
-			   			<input type="text" name="alias" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->alias; ?>
+			   			<input type="text" name="page_title" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->page_title; ?>
 " />
 			   		</td>
 			   	</tr>

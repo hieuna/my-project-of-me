@@ -127,19 +127,19 @@
 			   	</tr>
 			   	<tr>
 			   		<td>Trọng lượng</td>
-			   		<td><input type="text" name="model" class="adm_inputbox" value="{$thisProduct->weight}" /> (g)</td>
+			   		<td><input type="text" name="model" class="adm_inputbox" value="{$thisProduct->weight}" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Chiều dài</td>
-			   		<td><input type="text" name="length" class="adm_inputbox" value="{$thisProduct->length}" /> (cm)</td>
+			   		<td><input type="text" name="length" class="adm_inputbox" value="{$thisProduct->length}" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Chiều rộng</td>
-			   		<td><input type="text" name="width" class="adm_inputbox" value="{$thisProduct->width}" /> (cm)</td>
+			   		<td><input type="text" name="width" class="adm_inputbox" value="{$thisProduct->width}" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Chiều cao</td>
-			   		<td><input type="text" name="height" class="adm_inputbox" value="{$thisProduct->height}" /> (cm)</td>
+			   		<td><input type="text" name="height" class="adm_inputbox" value="{$thisProduct->height}" /></td>
 			   	</tr>
 			   	<tr>
 			   		<td>Ngày cập nhật</td>
@@ -256,7 +256,7 @@
 			   	<tr>
 			   		<td>
 			   			<b>Tiêu đề trang</b><br />
-			   			<input type="text" name="alias" class="adm_inputbox" value="{$thisProduct->alias}" />
+			   			<input type="text" name="page_title" class="adm_inputbox" value="{$thisProduct->page_title}" />
 			   		</td>
 			   	</tr>
 			   </tbody>
