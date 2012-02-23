@@ -116,7 +116,7 @@
    	</tr>
    	<tr>
    		<td>Ngày cập nhật</td>
-   		<td><input type="text" name="created" id="created" class="adm_inputbox" value="{$thisCategory->created}" /></td>
+   		<td><input type="text" name="created" id="date" class="adm_inputbox" value="{$thisCategory->created}" /></td>
    	</tr>
    		<tr>
    		<td>Thứ tự</td>

@@ -17,8 +17,10 @@ switch($task){
 		
 		$objCategory = new PGCategory();
 		$thisCategory = $objCategory->load($category_id);
-		//$ww
-		$where = " WHERE parent_id=0 AND status=1";
+		$where[] = " status=1";
+		if ($task=='add') $where[] = "";
+		else $where[] = " parent_id<=".$thisCategory->parent_id;	
+		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
 		$order = " ORDER BY ordering ASC, category_id DESC";
 		$lsCategory = $objCategory->loadList($where, $order);
 		
