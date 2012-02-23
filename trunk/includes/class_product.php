@@ -9,6 +9,7 @@
  */
 class PGProduct{
 	var $is_message;
+	var $product_info;
 	
 	//TBL_PRODUCT
 	var $product_id;
@@ -102,12 +103,20 @@ class PGProduct{
 			$wLimit = " LIMIT ".$start.", ".$limit;
 		}
 		
-		$sql = "SELECT p.code, p.model, p.price, p.price_ny, p.amount, pd.name, pd.page_title FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd " .$where.$orderBy.$wLimit;
+		$sql = "SELECT p.*, pd.name FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd " .$where.$orderBy.$wLimit;
 		$results = $database->db_query($sql);
 		while ($row = $database->db_fetch_assoc($results)){
-			$res = $database->db_query("SELECT admin_name FROM ".TBL_ADMIN." WHERE admin_id=".$row["admin_created"]);
-			$this_user_create = $database->getRow($res);
+			$res_created = $database->db_query("SELECT admin_name FROM ".TBL_ADMIN." WHERE admin_id=".$row["admin_created"]);
+			$this_user_create = $database->getRow($res_created);
+			$res_created2 = $database->db_query("SELECT admin_name FROM ".TBL_ADMIN." WHERE admin_id=".$row["admin_modified"]);
+			$this_user_create2 = $database->getRow($res_created2);
+			$res_cate = $database->db_query("SELECT name FROM ".TBL_CATEGORY." WHERE category_id=".$row["category_id"]);
+			$thisCategory = $database->getRow($res_cate);
+			
 			$row['name_created'] = $this_user_create["admin_name"];
+			$row['admin_modified'] = $this_user_create2["admin_name"];
+			$row["name_category"] = $thisCategory["name"];
+			
 			$lsProducts[] = $row;
 		}
 		
@@ -193,7 +202,11 @@ class PGProduct{
       			'{$objProduct->small_image}', '{$objProduct->medium_image}', '{$objProduct->large_image}'
       		)";
       		
-	      	if ($database->db_query($sql) && $database->db_query($query) && $database->db_query($queryImage)) $this->is_message = "Thêm mới sản phẩm thành công !";	
+	      	if ($database->db_query($sql) && $database->db_query($query) && $database->db_query($queryImage)) $this->is_message = "Thêm mới sản phẩm thành công !";
+	      	else $this->is_message = "Không thêm được sản phẩm !";
+	      	//Lay Product ID
+			$product_id = $database->db_insert_id();
+			$this->product_info = $database->db_fetch_assoc($database->db_query("SELECT * FROM ".TBL_PRODUCT." WHERE product_id='{$product_id}' LIMIT 1"));
 		}else{
 			$sql = "UPDATE ".TBL_PRODUCT." SET 
 					code='{$objProduct->code}', 
@@ -229,9 +242,9 @@ class PGProduct{
 					medium_image='{$objProduct->medium_image}',
 					large_image='{$objProduct->large_image}'
 					WHERE product_id='{$objProduct->product_id}' LIMIT 1";
-			if ($database->db_query($sql) && $database->db_query($query) && $database->db_query($queryImage)) $this->is_message = "Cập nhật sản phẩm thành công !";	
+			if ($database->db_query($sql) && $database->db_query($query) && $database->db_query($queryImage)) $this->is_message = "Cập nhật sản phẩm thành công !";
 		}
-		return $this->is_message;
+		return true;
 	}
 	
 	/*
@@ -306,12 +319,12 @@ class PGColor{
 		$this->show_color = 1;
 	}
 	
-	function save($number, $product_id, $value_color, $price_color, $show_hide){
+	function save($product_id, $value_color, $price_color, $show_hide = null){
 		global $database;
     
 		if (!is_object($objColor)) $objColor = $this;
-		
-		if ($number>0){
+		echo $product_id;
+		if ($product_id>0){
 			for ($i=0; $i<=$number; $i++){
 				$database->db_query("INSERT INTO ".TBL_PRODUCT_COLOR." VALUES('{$product_id}', '{$value_color}', '#{$value_color}', '{$price_color}', '{$show_hide}')");
 			}

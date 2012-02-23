@@ -103,8 +103,8 @@
 			   			{else}
 			   			<option value="">Lựa chọn theo nhóm</option>
 			   			{/if}
-			   			{section name=loops loop=$lsCategory}
-			   			<option {if $thisCategory->category_id==$categorys[loops].category_id || $category_id==$categorys[loops].category_id} selected="selected"{/if} value="{$lsCategory[loops].category_id}">{$lsCategory[loops].name}</option>
+			   			{section name=loops loop=$lsProducts}
+			   			<option {if $thisCategory->category_id==$categorys[loops].category_id || $category_id==$categorys[loops].category_id} selected="selected"{/if} value="{$lsProducts[loops].category_id}">{$lsProducts[loops].name}</option>
 			   			{/section}
 			   		</select>
 			   		</td>
@@ -318,19 +318,37 @@ $(function(){
 					<strong>Tên sản phẩm</strong>
 				</th>
 				<th class="title" nowrap="nowrap">
-					<strong>Bí danh</strong>
+					<strong>Mã</strong>
 				</th>
 				<th class="title" nowrap="nowrap">
-					<strong>Parent ID</strong>
+					<strong>Model</strong>
 				</th>
 				<th class="title" nowrap="nowrap">
-					<strong>Số sản phẩm</strong>
+					<strong>Giá niêm yết</strong>
 				</th>	
+				<th class="title" nowrap="nowrap">
+					<strong>Giá bán</strong>
+				</th>
+				<th class="title" nowrap="nowrap">
+					<strong>Số lượng</strong>
+				</th>
+				<th class="title" nowrap="nowrap">
+					<strong>Số màu</strong>
+				</th>
+				<th class="title" nowrap="nowrap">
+					<strong>Ngày tạo</strong>
+				</th>
 				<th class="title" nowrap="nowrap">
 					<strong>Người tạo</strong>
 				</th>
 				<th class="title" nowrap="nowrap">
-					<strong>Ngày tạo</strong>
+					<strong>Ngày cập nhật</strong>
+				</th>
+				<th class="title" nowrap="nowrap">
+					<strong>Người cập nhật</strong>
+				</th>
+				<th class="title" nowrap="nowrap">
+					<strong>Nhóm sản phẩm</strong>
 				</th>
 				<th width="15" nowrap="nowrap">
 					<strong>Trạng thái</strong>
@@ -338,31 +356,33 @@ $(function(){
 			</tr>
 		</thead>
 		<tbody>
-			{section name=loops loop=$lsCategory}
+			{section name=loops loop=$lsProducts}
 			<tr class="row{if $smarty.section.loops.index%2==0}0{else}1{/if}">
 				<td>{$smarty.section.loops.index+1}</td>
 				<td align="center">
-					<input type="checkbox" onclick="isChecked(this.checked);" value="{$lsCategory[loops].category_id}" name="cid[]" id="cb{$lsCategory[loops].category_id}">
+					<input type="checkbox" onclick="isChecked(this.checked);" value="{$lsProducts[loops].category_id}" name="cid[]" id="cb{$lsProducts[loops].category_id}">
 				</td>
 				<td>
-					<a href="{$page}?task=edit&category_id={$lsCategory[loops].category_id}">{$lsCategory[loops].name}</a>
+					<a href="{$page}?task=edit&category_id={$lsProducts[loops].category_id}">{$lsProducts[loops].name}</a>
 				</td>
-				<td align="center">{$lsCategory[loops].alias}</td>
-				<td align="center">{$lsCategory[loops].parent_id}</td>
-				<td align="center">{$lsCategory[loops].product_count}</td>
+				<td align="center">{$lsProducts[loops].code}</td>
+				<td align="center">{$lsProducts[loops].model}</td>
+				<td align="center">{$lsProducts[loops].price_ny|number_format} VNĐ</td>
+				<td align="center">{$lsProducts[loops].price|number_format} VNĐ</td>
+				<td align="center">{$lsProducts[loops].amount}</td>
+				<td align="center">{$lsProducts[loops].number_color}</td>
+				<td align="center">{$lsProducts[loops].created}</td>
+				<td align="center">{$lsProducts[loops].name_created}</td>
+				<td align="center">{$lsProducts[loops].modified}</td>
+				<td align="center">{$lsProducts[loops].admin_modified}</td>
+				<td align="center">{$lsProducts[loops].name_category}</td>
 				<td align="center">
-					{$lsCategory[loops].name_created}
-				</td>
-				<td align="center">
-					{$lsCategory[loops].created}
-				</td>
-				<td align="center">
-					{if $lsCategory[loops].status == 1}
-						<a onclick="return listItemTask('cb{$lsCategory[loops].category_id}','unpublish')" title="Ẩn đi">
+					{if $lsProducts[loops].status == 1}
+						<a onclick="return listItemTask('cb{$lsProducts[loops].category_id}','unpublish')" title="Ẩn đi">
 						<img src="../images/publish_g.png" width="16" style="cursor:pointer" alt="Ẩn đi" border="0" />
 						</a>
 					{else}
-						<a onclick="return listItemTask('cb{$lsCategory[loops].category_id}','publish')" title="Hiển thị">
+						<a onclick="return listItemTask('cb{$lsProducts[loops].category_id}','publish')" title="Hiển thị">
 						<img src="../images/publish_x.png" width="16" style="cursor:pointer" alt="Hiển thị" border="0" />
 						</a>
 					{/if}
@@ -370,13 +390,13 @@ $(function(){
 			</tr>
 			{sectionelse}
 			<tr>
-				<td colspan="9" align="center"><font color="red">Không tồn tại bản ghi nào thỏa mãn điều kiện tìm kiếm!</font></td>
+				<td colspan="15" align="center"><font color="red">Không tồn tại bản ghi nào thỏa mãn điều kiện tìm kiếm!</font></td>
 			</tr>
 			{/section}
 		</tbody>
 		<tfoot>
 			<tr>
-				<td colspan="9">
+				<td colspan="15">
 					{$datapage}
 				</td>
 			</tr>

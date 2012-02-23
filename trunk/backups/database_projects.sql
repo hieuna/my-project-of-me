@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Feb 23, 2012 at 08:32 AM
+-- Generation Time: Feb 23, 2012 at 06:02 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -104,7 +104,6 @@ CREATE TABLE `tbl_categories` (
   `category_id` int(10) unsigned NOT NULL auto_increment,
   `name` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `product_count` int(11) NOT NULL,
   `description` tinytext NOT NULL,
   `status` tinyint(1) NOT NULL default '1',
   `ordering` int(11) NOT NULL,
@@ -112,16 +111,17 @@ CREATE TABLE `tbl_categories` (
   `created_by` int(11) NOT NULL,
   `parent_id` int(11) NOT NULL,
   PRIMARY KEY  (`category_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 -- 
 -- Dumping data for table `tbl_categories`
 -- 
 
-INSERT INTO `tbl_categories` VALUES (1, 'Áo sơ mi', 'ao-so-mi', 0, 'Áo sơ mi cho trẻ nam và nữ', 1, 0, '2012-02-21 02:52:13', 1, 0);
-INSERT INTO `tbl_categories` VALUES (2, 'Váy cho trẻ 5 tuổi', 'Vay cho tre 5 tuoi', 0, 'Váy cho bé gái 5 tuổi', 1, 0, '2012-02-21 04:15:23', 1, 0);
-INSERT INTO `tbl_categories` VALUES (5, 'Bộ Vest cho bé trai 5 tuổi', 'Bo-Vest-cho-be-trai-5-tuoi', 0, 'Bộ vest cho bé trai 5 tuổi', 1, 3, '2012-02-21 04:17:41', 1, 0);
-INSERT INTO `tbl_categories` VALUES (8, '', '', 0, '', 0, 0, '0000-00-00 00:00:00', 1, 0);
+INSERT INTO `tbl_categories` VALUES (1, 'Quần áo Nam', 'Quan-ao-Nam', 'Quần áo nam', 1, 0, '2012-02-23 05:21:35', 1, 0);
+INSERT INTO `tbl_categories` VALUES (2, 'Quần áo nữ', 'Quan-ao-nu', 'Quần áo nữ', 1, 0, '2012-02-23 05:21:50', 1, 0);
+INSERT INTO `tbl_categories` VALUES (3, 'Váy cho trẻ 5 tuổi', 'Vay-cho-tre-5-tuoi', 'Váy cho trẻ 5 tuổi', 1, 0, '2012-02-23 05:22:04', 1, 0);
+INSERT INTO `tbl_categories` VALUES (4, 'Áo sơ mi cho trẻ nam', 'Ao-so-mi-cho-tre-nam', 'Áo sơ mi cho trẻ 5 tuổi', 1, 0, '2012-02-23 05:22:20', 1, 0);
+INSERT INTO `tbl_categories` VALUES (5, 'Áo bông cho trẻ', 'Ao-bong-cho-tre', 'Áo bông cho trẻ', 1, 0, '2012-02-23 05:43:41', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -423,12 +423,31 @@ CREATE TABLE `tbl_products` (
   `admin_modified` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
   PRIMARY KEY  (`product_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 -- 
 -- Dumping data for table `tbl_products`
 -- 
 
+INSERT INTO `tbl_products` VALUES (1, 'UDQLU', '10gam', 150000, 200000, 10, 0, 20, 5, 2, 0, 1, 0, '2012-02-23 02:07:15', 1, '0000-00-00 00:00:00', 0, 2);
+INSERT INTO `tbl_products` VALUES (2, 'ASM05', '20gam', 0, 0, 10, 0, 20, 5, 3, 0, 1, 0, '2012-02-23 02:10:51', 1, '0000-00-00 00:00:00', 0, 1);
+INSERT INTO `tbl_products` VALUES (3, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:24:22', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (4, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (5, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (6, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (7, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (8, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (9, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (10, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (11, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (12, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (13, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (14, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (15, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (16, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (17, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (18, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:38:19', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (19, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:39:14', 1, '0000-00-00 00:00:00', 0, 5);
 
 -- --------------------------------------------------------
 
@@ -448,6 +467,13 @@ CREATE TABLE `tbl_products_color` (
 -- Dumping data for table `tbl_products_color`
 -- 
 
+INSERT INTO `tbl_products_color` VALUES (16, '0a3d0a', '#0a3d0a', 0, 0);
+INSERT INTO `tbl_products_color` VALUES (19, '24f224', '#24f224', 0, 0);
+INSERT INTO `tbl_products_color` VALUES (19, '132413', '#132413', 0, 0);
+INSERT INTO `tbl_products_color` VALUES (19, 'e326e0', '#e326e0', 0, 0);
+INSERT INTO `tbl_products_color` VALUES (19, '00ffe6', '#00ffe6', 0, 0);
+INSERT INTO `tbl_products_color` VALUES (19, 'ff2f00', '#ff2f00', 0, 0);
+INSERT INTO `tbl_products_color` VALUES (19, 'ced1de', '#ced1de', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -466,12 +492,31 @@ CREATE TABLE `tbl_products_description` (
   `search_words` text NOT NULL,
   `page_title` varchar(255) NOT NULL,
   PRIMARY KEY  (`product_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 -- 
 -- Dumping data for table `tbl_products_description`
 -- 
 
+INSERT INTO `tbl_products_description` VALUES (1, 'Sản phẩm cho bé gái', 'San-pham-cho-be-gai', 'Sản phẩm đặc trưng', '<p>Sản phẩm cạo r&acirc;u</p>', 'Chao cac ban', 'vay', 'váy', 'Váy cho trẻ nhỏ');
+INSERT INTO `tbl_products_description` VALUES (2, 'Áo sơ mi cho trẻ nam', 'Ao-so-mi-cho-tre-nam', '', '<p>ấfasfa</p>', 'fasf', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (3, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (4, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (5, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (6, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (7, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (8, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (9, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (10, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (11, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (12, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (13, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (14, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (15, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (16, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (17, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (18, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (19, '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -526,12 +571,31 @@ CREATE TABLE `tbl_products_image` (
   `medium_image` varchar(255) NOT NULL,
   `large_image` varchar(255) NOT NULL,
   PRIMARY KEY  (`product_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 -- 
 -- Dumping data for table `tbl_products_image`
 -- 
 
+INSERT INTO `tbl_products_image` VALUES (1, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (2, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (3, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (4, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (5, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (6, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (7, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (8, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (9, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (10, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (11, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (12, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (13, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (14, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (15, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (16, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (17, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (18, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (19, '', '', '');
 
 -- --------------------------------------------------------
 

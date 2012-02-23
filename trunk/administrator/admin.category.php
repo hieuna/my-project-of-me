@@ -17,9 +17,14 @@ switch($task){
 		
 		$objCategory = new PGCategory();
 		$thisCategory = $objCategory->load($category_id);
+		//$ww
+		$where = " WHERE parent_id=0 AND status=1";
+		$order = " ORDER BY ordering ASC, category_id DESC";
+		$lsCategory = $objCategory->loadList($where, $order);
 		
 		$smarty->assign('category_id', $category_id);
 		$smarty->assign('thisCategory', $thisCategory);
+		$smarty->assign('lsCategory', $lsCategory);
 		break;
 		
 	case 'save':
@@ -50,6 +55,7 @@ switch($task){
 			$objCategory->created		= $created;
 			$objCategory->created_by	= $admin_id;
 			$objCategory->ordering		= $ordering;
+			$objCategory->parent_id		= $category_id;
 			$objCategory->save($thisCategory);
 			cheader($page);
 		}else{
