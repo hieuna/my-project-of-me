@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-23 18:02:19
+<?php /* Smarty version 2.6.10, created on 2012-02-23 18:08:43
          compiled from D:/AppServ/www/projects/templates/administrator/admin.category.tpl */ ?>
 <div id="toolbar-box">
    <div class="t">
@@ -154,7 +154,7 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
    	</tr>
    	<tr>
    		<td>Ngày cập nhật</td>
-   		<td><input type="text" name="created" id="created" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->created; ?>
+   		<td><input type="text" name="created" id="date" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisCategory']->created; ?>
 " /></td>
    	</tr>
    		<tr>

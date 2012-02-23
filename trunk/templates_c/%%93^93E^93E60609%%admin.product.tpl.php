@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-23 16:44:59
+<?php /* Smarty version 2.6.10, created on 2012-02-23 18:10:21
          compiled from D:/AppServ/www/projects/templates/administrator/admin.product.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 370, false),)), $this); ?>
@@ -185,7 +185,7 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 			   	</tr>
 			   	<tr>
 			   		<td>Ngày cập nhật</td>
-			   		<td><input type="text" name="created" id="created" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->created; ?>
+			   		<td><input type="text" name="created" id="date" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->created; ?>
 " /></td>
 			   	</tr>
 			   		<tr>
