@@ -90,14 +90,14 @@
    	<tr>
    		<td width="20%">Nhóm sản phẩm</td>
    		<td width="80%">
-   		<select name="category_id" class="adm_selectbox" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+   		<select name="category_id" class="adm_selectbox">
    			{if $task=="edit"}
-   			<option value="{$thisBanner->category_id}" selected="selected">{$name_category_banner}</option>
+   			<option value="{$thisCategory->category_id}" {if $thisCategory->parent_id==$thisCategory->category_id}selected="selected"{/if}>{$thisCategory->name}</option>
    			{else}
    			<option value="">Lựa chọn theo nhóm</option>
    			{/if}
-   			{section name=loops loop=$categorys}
-   			<option {if $thisCategory->category_id==$categorys[loops].category_id || $category_id==$categorys[loops].category_id} selected="selected"{/if} value="admin.hotdeal.php?task={$task}&id={$thisCategory->id}&category_id={$categorys[loops].category_id}">{$categorys[loops].name}</option>
+   			{section name=loops loop=$lsCategory}
+   			<option {if $thisCategory->category_id==$lsCategory[loops].category_id || $category_id==$lsCategory[loops].category_id} selected="selected"{/if} value="admin.hotdeal.php?task={$task}&id={$thisCategory->id}&category_id={$lsCategory[loops].category_id}">{$lsCategory[loops].name}</option>
    			{/section}
    		</select>
    		</td>
@@ -112,7 +112,7 @@
    	</tr>
    	<tr>
    		<td valign="top">Mô tả</td>
-   		<td><textarea cols="30" rows="5" name="description">{$thisCategory->description}</textarea></td>
+   		<td><textarea cols="65" rows="5" name="description" id="wysiwyg">{$thisCategory->description}</textarea></td>
    	</tr>
    	<tr>
    		<td>Ngày cập nhật</td>
@@ -132,7 +132,6 @@
    		<td></td>
    		<td>
    			<input type="hidden" name="category_id_value" value="{$category_id}" />
-   			<input type="hidden" name="category_id" value="{$thisCategory->category_id}" />
    			<input type="hidden" name="task" value="save" />
    		</td>
    	</tr>
@@ -174,7 +173,7 @@
 					<strong>Bí danh</strong>
 				</th>
 				<th class="title" nowrap="nowrap">
-					<strong>Parent ID</strong>
+					<strong>Thuộc nhóm</strong>
 				</th>
 				<th class="title" nowrap="nowrap">
 					<strong>Số sản phẩm</strong>
@@ -201,7 +200,7 @@
 					<a href="{$page}?task=edit&category_id={$lsCategory[loops].category_id}">{$lsCategory[loops].name}</a>
 				</td>
 				<td align="center">{$lsCategory[loops].alias}</td>
-				<td align="center">{$lsCategory[loops].parent_id}</td>
+				<td align="center">{$lsCategory[loops].name_parent}</td>
 				<td align="center">{$lsCategory[loops].product_count}</td>
 				<td align="center">
 					{$lsCategory[loops].name_created}

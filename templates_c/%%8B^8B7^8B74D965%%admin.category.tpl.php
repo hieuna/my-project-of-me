@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-22 23:29:59
+<?php /* Smarty version 2.6.10, created on 2012-02-23 18:02:19
          compiled from D:/AppServ/www/projects/templates/administrator/admin.category.tpl */ ?>
 <div id="toolbar-box">
    <div class="t">
@@ -96,17 +96,17 @@
    	<tr>
    		<td width="20%">Nhóm sản phẩm</td>
    		<td width="80%">
-   		<select name="category_id" class="adm_selectbox" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+   		<select name="category_id" class="adm_selectbox">
    			<?php if ($this->_tpl_vars['task'] == 'edit'): ?>
-   			<option value="<?php echo $this->_tpl_vars['thisBanner']->category_id; ?>
-" selected="selected"><?php echo $this->_tpl_vars['name_category_banner']; ?>
+   			<option value="<?php echo $this->_tpl_vars['thisCategory']->category_id; ?>
+" <?php if ($this->_tpl_vars['thisCategory']->parent_id == $this->_tpl_vars['thisCategory']->category_id): ?>selected="selected"<?php endif; ?>><?php echo $this->_tpl_vars['thisCategory']->name; ?>
 </option>
    			<?php else: ?>
    			<option value="">Lựa chọn theo nhóm</option>
    			<?php endif; ?>
    			<?php unset($this->_sections['loops']);
 $this->_sections['loops']['name'] = 'loops';
-$this->_sections['loops']['loop'] = is_array($_loop=$this->_tpl_vars['categorys']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['loops']['loop'] = is_array($_loop=$this->_tpl_vars['lsCategory']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
 $this->_sections['loops']['show'] = true;
 $this->_sections['loops']['max'] = $this->_sections['loops']['loop'];
 $this->_sections['loops']['step'] = 1;
@@ -128,10 +128,10 @@ $this->_sections['loops']['index_next'] = $this->_sections['loops']['index'] + $
 $this->_sections['loops']['first']      = ($this->_sections['loops']['iteration'] == 1);
 $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'] == $this->_sections['loops']['total']);
 ?>
-   			<option <?php if ($this->_tpl_vars['thisCategory']->category_id == $this->_tpl_vars['categorys'][$this->_sections['loops']['index']]['category_id'] || $this->_tpl_vars['category_id'] == $this->_tpl_vars['categorys'][$this->_sections['loops']['index']]['category_id']): ?> selected="selected"<?php endif; ?> value="admin.hotdeal.php?task=<?php echo $this->_tpl_vars['task']; ?>
+   			<option <?php if ($this->_tpl_vars['thisCategory']->category_id == $this->_tpl_vars['lsCategory'][$this->_sections['loops']['index']]['category_id'] || $this->_tpl_vars['category_id'] == $this->_tpl_vars['lsCategory'][$this->_sections['loops']['index']]['category_id']): ?> selected="selected"<?php endif; ?> value="admin.hotdeal.php?task=<?php echo $this->_tpl_vars['task']; ?>
 &id=<?php echo $this->_tpl_vars['thisCategory']->id; ?>
-&category_id=<?php echo $this->_tpl_vars['categorys'][$this->_sections['loops']['index']]['category_id']; ?>
-"><?php echo $this->_tpl_vars['categorys'][$this->_sections['loops']['index']]['name']; ?>
+&category_id=<?php echo $this->_tpl_vars['lsCategory'][$this->_sections['loops']['index']]['category_id']; ?>
+"><?php echo $this->_tpl_vars['lsCategory'][$this->_sections['loops']['index']]['name']; ?>
 </option>
    			<?php endfor; endif; ?>
    		</select>
@@ -149,7 +149,7 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
    	</tr>
    	<tr>
    		<td valign="top">Mô tả</td>
-   		<td><textarea cols="30" rows="5" name="description"><?php echo $this->_tpl_vars['thisCategory']->description; ?>
+   		<td><textarea cols="65" rows="5" name="description" id="wysiwyg"><?php echo $this->_tpl_vars['thisCategory']->description; ?>
 </textarea></td>
    	</tr>
    	<tr>
@@ -172,8 +172,6 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
    		<td></td>
    		<td>
    			<input type="hidden" name="category_id_value" value="<?php echo $this->_tpl_vars['category_id']; ?>
-" />
-   			<input type="hidden" name="category_id" value="<?php echo $this->_tpl_vars['thisCategory']->category_id; ?>
 " />
    			<input type="hidden" name="task" value="save" />
    		</td>
@@ -218,7 +216,7 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 					<strong>Bí danh</strong>
 				</th>
 				<th class="title" nowrap="nowrap">
-					<strong>Parent ID</strong>
+					<strong>Thuộc nhóm</strong>
 				</th>
 				<th class="title" nowrap="nowrap">
 					<strong>Số sản phẩm</strong>
@@ -275,7 +273,7 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 				</td>
 				<td align="center"><?php echo $this->_tpl_vars['lsCategory'][$this->_sections['loops']['index']]['alias']; ?>
 </td>
-				<td align="center"><?php echo $this->_tpl_vars['lsCategory'][$this->_sections['loops']['index']]['parent_id']; ?>
+				<td align="center"><?php echo $this->_tpl_vars['lsCategory'][$this->_sections['loops']['index']]['name_parent']; ?>
 </td>
 				<td align="center"><?php echo $this->_tpl_vars['lsCategory'][$this->_sections['loops']['index']]['product_count']; ?>
 </td>

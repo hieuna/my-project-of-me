@@ -13,7 +13,6 @@ class PGCategory{
 	var $category_id;
 	var $name;
 	var $alias;
-	var $product_count;
 	var $description= "";
 	var $status;
 	var $ordering;
@@ -25,7 +24,6 @@ class PGCategory{
 		$this->category_id = 0;
 		$this->name = "";
 		$this->alias = "";
-		$this->product_count = 0;
 		$this->description = "";
 		$this->status = 1;
 		$this->ordering = 0;
@@ -58,6 +56,13 @@ class PGCategory{
 			$res = $database->db_query("SELECT admin_name FROM ".TBL_ADMIN." WHERE admin_id=".$row["created_by"]);
 			$this_user_create = $database->getRow($res);
 			$row['name_created'] = $this_user_create["admin_name"];
+			$result = $database->db_query("SELECT COUNT(*) AS total FROM ".TBL_PRODUCT." WHERE category_id=".$row["category_id"]);
+			$total = $database->getRow($result);
+			$row["product_count"] = $total["total"];
+			$result_cate = $database->db_query("SELECT name FROM ".TBL_CATEGORY." WHERE category_id=".$row["parent_id"]);
+			$name_category_parent = $database->getRow($result_cate);
+			$row["name_parent"] = $name_category_parent["name"];	
+			
 			$lsCategories[] = $row;
 		}
 		
@@ -76,7 +81,6 @@ class PGCategory{
 				$this->category_id		= $objCategory->category_id;
 				$this->name				= $objCategory->name;
 				$this->alias			= $objCategory->alias;
-				$this->product_count	= $objCategory->product_count;
 				$this->description		= $objCategory->description;
 				$this->status			= $objCategory->status;
 				$this->ordering			= $objCategory->ordering;
@@ -104,7 +108,6 @@ class PGCategory{
       		$sql = "INSERT INTO ".TBL_CATEGORY." (
       			name,
 		        alias,
-		        product_count,
 		        description,
 		        status,
         		ordering,
@@ -114,7 +117,6 @@ class PGCategory{
 		    ) VALUES (
 		    	'{$objCategory->name}',
 		    	'{$objCategory->alias}',
-		        '{$objCategory->product_count}',
 		        '{$objCategory->description}',
 		        '{$objCategory->status}',
 		        '{$objCategory->ordering}',
@@ -127,7 +129,6 @@ class PGCategory{
 			$sql = "UPDATE ".TBL_CATEGORY." SET 
 					name='{$objCategory->name}', 
 					alias='{$objCategory->alias}', 
-					product_count='{$objCategory->product_count}',
 					description='{$objCategory->description}',
 					status='{$objCategory->status}',
 					ordering='{$objCategory->ordering}',

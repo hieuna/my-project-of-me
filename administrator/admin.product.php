@@ -33,8 +33,7 @@ switch($task){
 		
 	case 'save':
 		$product_id		= PGRequest::getInt('product_id', 0, 'POST');
-		echo $number_color	= PGRequest::getInt('number_color', 0, 'POST');
-		die;
+		$number_color	= PGRequest::getInt('number_color', 0, 'POST');
 		
 		$objProduct = new PGProduct();
 		$thisProduct = $objProduct->load($product_id);
@@ -56,6 +55,11 @@ switch($task){
 				$objProduct->admin_created	= $admin_id;
 			}
 			$objProduct->save($thisProduct);
+			$objColor = new PGColor();
+			for ($i=1; $i<=$number_color; $i++){
+				//echo PGRequest::GetCmd('colors_'.$i, '', 'POST');
+				$objColor->save($objProduct->product_info['product_id'], PGRequest::GetCmd('colors_'.$i, '', 'POST'), '#'.PGRequest::GetCmd('colors_'.$i, '', 'POST'));
+			}
 			cheader($page);
 		}else{
 			$error = $objProduct->is_message;
