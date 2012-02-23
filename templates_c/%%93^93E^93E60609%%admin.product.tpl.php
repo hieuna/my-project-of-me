@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-23 18:10:21
+<?php /* Smarty version 2.6.10, created on 2012-02-23 18:23:00
          compiled from D:/AppServ/www/projects/templates/administrator/admin.product.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 370, false),)), $this); ?>
@@ -474,13 +474,13 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 				<td><?php echo $this->_sections['loops']['index']+1; ?>
 </td>
 				<td align="center">
-					<input type="checkbox" onclick="isChecked(this.checked);" value="<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['category_id']; ?>
-" name="cid[]" id="cb<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['category_id']; ?>
+					<input type="checkbox" onclick="isChecked(this.checked);" value="<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['product_id']; ?>
+" name="cid[]" id="cb<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['product_id']; ?>
 ">
 				</td>
 				<td>
 					<a href="<?php echo $this->_tpl_vars['page']; ?>
-?task=edit&category_id=<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['category_id']; ?>
+?task=edit&product_id=<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['product_id']; ?>
 "><?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['name']; ?>
 </a>
 				</td>
@@ -508,12 +508,12 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 </td>
 				<td align="center">
 					<?php if ($this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['status'] == 1): ?>
-						<a onclick="return listItemTask('cb<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['category_id']; ?>
+						<a onclick="return listItemTask('cb<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['product_id']; ?>
 ','unpublish')" title="Ẩn đi">
 						<img src="../images/publish_g.png" width="16" style="cursor:pointer" alt="Ẩn đi" border="0" />
 						</a>
 					<?php else: ?>
-						<a onclick="return listItemTask('cb<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['category_id']; ?>
+						<a onclick="return listItemTask('cb<?php echo $this->_tpl_vars['lsProducts'][$this->_sections['loops']['index']]['product_id']; ?>
 ','publish')" title="Hiển thị">
 						<img src="../images/publish_x.png" width="16" style="cursor:pointer" alt="Hiển thị" border="0" />
 						</a>
