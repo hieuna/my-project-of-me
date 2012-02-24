@@ -17,41 +17,22 @@ switch($task){
 		
 		$objMenuType = new PGMenuType();
 		$thisMenuType = $objMenuType->load($menutype_id);
-		$where[] = " status=1";
-		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
-		$order = " ORDER BY menutype_id DESC";
-		$lsMenuType = $objMenuType->loadList($where, $order);
 		
 		$smarty->assign('menutype_id', $menutype_id);
-		$smarty->assign('thisMenu', $thisMenuType);
-		$smarty->assign('lsMenuType', $lsMenuType);
+		$smarty->assign('thisMenuType', $thisMenuType);
 		break;
 		
 	case 'save':
 		$menutype_id		= PGRequest::getInt('menutype_id', 0, 'POST');
-		$menutype			= PGRequest::getInt('menutype', 0, 'POST');
 		$name				= $database->getEscaped(PGRequest::getString('name', '', 'POST'));
 		$status				= PGRequest::GetInt('status', 0, 'POST');
 		
 		$objMenuType = new PGMenuType();
 		$thisMenuType = $objMenuType->load($menutype_id);
-		if (!$objMenu->is_message){
-			$objMenu->menutype 		= $menutype;
-			$objMenu->name			= $name;
-			if ($alias != ""){
-				$objMenu->alias 	= $alias;
-			}else{
-				$name_alias			= RemoveSign($name);
-				$name_alias			= str_replace(" ", "-", $name_alias);
-				$name_alias			= preg_replace('/[^a-z0-9]+/i','-',$name_alias);
-				$objMenu->alias 	= $name_alias;
-			}
-			$objMenu->link			= $link;
-			$objMenu->status		= $status;
-			$objMenu->type			= $type;
-			$objMenu->ordering		= $ordering;
-			$objMenu->parent_id		= $parent_id;
-			$objMenu->save($thisMenu);
+		if (!$objMenuType->is_message){
+			$objMenuType->name			= $name;
+			$objMenuType->status		= $status;
+			$objMenuType->save($thisMenuType);
 			cheader($page);
 		}else{
 			$mosmsg = $objMenu->is_message;
@@ -60,20 +41,20 @@ switch($task){
 		break;
 
 	case 'publish':
-		$objMenu = new PGMenuType();
-		$message = $objMenu->published($cid, 1);
+		$objMenuType = new PGMenuType();
+		$message = $objMenuType->published($cid, 1);
 		cheader($page.'?mosmsg='. $message);
 		break;
 
 	case 'unpublish':
-		$objMenu = new PGMenuType();
-		$message = $objMenu->published($cid, 0);
+		$objMenuType = new PGMenuType();
+		$message = $objMenuType->published($cid, 0);
 		cheader($page.'?mosmsg='. $message);
 		break;
 
 	case 'remove':
-		$objMenu = new PGMenuType();
-		$objMenu->remove($cid);
+		$objMenuType = new PGMenuType();
+		$objMenuType->remove($cid);
 		cheader($page);
 		break;	
 	
@@ -99,16 +80,16 @@ switch($task){
 			$where[] = " status=".$filter_status;
 		}
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
-		$order = " ORDER BY ordering ASC, menutype_id DESC";
+		$order = " ORDER BY menutype_id DESC";
 		// GET THE TOTAL NUMBER OF RECORDS
-		$query = "SELECT COUNT(*) AS total FROM ".TBL_MENU.$where;
+		$query = "SELECT COUNT(*) AS total FROM ".TBL_MENUTYPE.$where;
 		$results = $database->db_fetch_assoc($database->db_query($query));
 		// PHAN TRANG
 		$pager = new pager($limit, $results['total'], $p);
 		$offset = $pager->offset;
 		// LAY DANH SACH CHI TIET
-		$obMenuType =  new PGMenuType();
-		$lsMenuType = $obMenuType->loadList($where, $order, $offset, $limit);
+		$objMenuType =  new PGMenuType();
+		$lsMenuType = $objMenuType->loadList($where, $order, $offset, $limit);
 		
 		$smarty->assign('is_message', $is_message);
 		$smarty->assign('filter_status', $filter_status);

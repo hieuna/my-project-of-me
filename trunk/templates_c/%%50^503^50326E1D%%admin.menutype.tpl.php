@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-24 17:40:42
+<?php /* Smarty version 2.6.10, created on 2012-02-24 18:00:39
          compiled from D:/AppServ/www/projects/templates/administrator/admin.menutype.tpl */ ?>
 <div id="toolbar-box">
    <div class="t">
@@ -95,19 +95,19 @@
     <tbody>
    	<tr>
    		<td>Tên nhóm menu</td>
-   		<td><input type="text" name="name" class="adm_inputbox required" value="<?php echo $this->_tpl_vars['thisMenu']->name; ?>
+   		<td><input type="text" name="name" class="adm_inputbox required" value="<?php echo $this->_tpl_vars['thisMenuType']->name; ?>
 " /></td>
    	</tr>
    	<tr>
    		<td>Trạng thái</td>
-   		<td><input type="checkbox" name="status" class="adm_chk" <?php if ($this->_tpl_vars['thisMenu']->status == 1): ?> checked="checked"<?php endif; ?> value="1" /> Hiển thị</td>
+   		<td><input type="checkbox" name="status" class="adm_chk" <?php if ($this->_tpl_vars['thisMenuType']->status == 1): ?> checked="checked"<?php endif; ?> value="1" /> Hiển thị</td>
    	</tr>
    </tbody>
    <tfoot>
    	<tr>
    		<td></td>
    		<td>
-   			<input type="hidden" name="menutype_id_value" value="<?php echo $this->_tpl_vars['menutype_id']; ?>
+   			<input type="hidden" name="menutype_id" value="<?php echo $this->_tpl_vars['menutype_id']; ?>
 " />
    			<input type="hidden" name="task" value="save" />
    		</td>
@@ -156,7 +156,7 @@
 		<tbody>
 			<?php unset($this->_sections['loops']);
 $this->_sections['loops']['name'] = 'loops';
-$this->_sections['loops']['loop'] = is_array($_loop=$this->_tpl_vars['lsMenu']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['loops']['loop'] = is_array($_loop=$this->_tpl_vars['lsMenuType']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
 $this->_sections['loops']['show'] = true;
 $this->_sections['loops']['max'] = $this->_sections['loops']['loop'];
 $this->_sections['loops']['step'] = 1;
@@ -182,24 +182,24 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 				<td><?php echo $this->_sections['loops']['index']+1; ?>
 </td>
 				<td align="center">
-					<input type="checkbox" onclick="isChecked(this.checked);" value="<?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['menutype_id']; ?>
-" name="cid[]" id="cb<?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['menutype_id']; ?>
+					<input type="checkbox" onclick="isChecked(this.checked);" value="<?php echo $this->_tpl_vars['lsMenuType'][$this->_sections['loops']['index']]['menutype_id']; ?>
+" name="cid[]" id="cb<?php echo $this->_tpl_vars['lsMenuType'][$this->_sections['loops']['index']]['menutype_id']; ?>
 ">
 				</td>
 				<td>
 					<a href="<?php echo $this->_tpl_vars['page']; ?>
-?task=edit&menutype_id=<?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['menutype_id']; ?>
-"><?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['name']; ?>
+?task=edit&menutype_id=<?php echo $this->_tpl_vars['lsMenuType'][$this->_sections['loops']['index']]['menutype_id']; ?>
+"><?php echo $this->_tpl_vars['lsMenuType'][$this->_sections['loops']['index']]['name']; ?>
 </a>
 				</td>
 				<td align="center">
-					<?php if ($this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['status'] == 1): ?>
-						<a onclick="return listItemTask('cb<?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['menutype_id']; ?>
+					<?php if ($this->_tpl_vars['lsMenuType'][$this->_sections['loops']['index']]['status'] == 1): ?>
+						<a onclick="return listItemTask('cb<?php echo $this->_tpl_vars['lsMenuType'][$this->_sections['loops']['index']]['menutype_id']; ?>
 ','unpublish')" title="Ẩn đi">
 						<img src="../images/publish_g.png" width="16" style="cursor:pointer" alt="Ẩn đi" border="0" />
 						</a>
 					<?php else: ?>
-						<a onclick="return listItemTask('cb<?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['menutype_id']; ?>
+						<a onclick="return listItemTask('cb<?php echo $this->_tpl_vars['lsMenuType'][$this->_sections['loops']['index']]['menutype_id']; ?>
 ','publish')" title="Hiển thị">
 						<img src="../images/publish_x.png" width="16" style="cursor:pointer" alt="Hiển thị" border="0" />
 						</a>
