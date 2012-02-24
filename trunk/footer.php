@@ -1,3 +1,3 @@
 <?php
-$smarty->display($template_root.'/footer.tpl');
+$smarty->display($dir_template.'/footer.tpl');
 ?>

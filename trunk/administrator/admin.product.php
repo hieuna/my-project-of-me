@@ -230,7 +230,7 @@ switch($task){
 			$where[] = " p.status=".$filter_status;
 		}
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
-		$order = " ORDER BY p.ordering ASC, p.created DESC";
+		$order = " ORDER BY p.ordering ASC, p.product_id DESC";
 		// GET THE TOTAL NUMBER OF RECORDS
 		$query = "SELECT COUNT(*) AS total FROM ".TBL_PRODUCT." AS p, ".TBL_PRODUCT_DESCRIPTION." AS pd".$where;
 		$results = $database->db_fetch_assoc($database->db_query($query));

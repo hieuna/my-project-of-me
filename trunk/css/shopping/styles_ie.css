@@ -1,5 +1,5 @@
 /* Hack to avoid float div float outside the container */
-.border, .sidebox-wrapper, .info-field-body, .tab-wrapper, .tab-content-border, ul.bullets-list li, .form-field, .search-field, .info-field-title, .step-body, .item-wrap, .pagination-container, .buttons-container, .top-tools-container, #footer, .sidebox-body, .bottom-search, .content-tools, * html .form-field ul {
+.border, .sidebox-wrapper, .info-field-body, .tab-wrapper, .tab-content-border, ul.bullets-list li, .form-field, .info-field-title, .step-body, .item-wrap, .pagination-container, .buttons-container, .top-tools-container, #footer, .sidebox-body, .bottom-search, .content-tools, * html #category_rows, * html .tabs, * html .form-field ul {
 	height: 1%;
 }
 .updates-wrapper .form-field {
@@ -8,7 +8,7 @@
 #footer {
 	margin-top: 15px;
 }
-.step-title, .step-title-active, .clear, * html .updates-wrapper #container, .quick-links {
+.step-title, .step-title-active, .clear, * html .updates-wrapper, #container, .quick-links {
 	zoom: 1;
 }
 .step-title a, .step-title-active a, .search-blocks {
@@ -81,7 +81,7 @@
 	vertical-align: -5px;
 }
 .button-submit {
-	border: 1px solid #ff8900;
+	border: 1px solid #2D90D3;
 }
 .button-submit input {
 	padding: 1px 0 0;
@@ -289,13 +289,6 @@
 * html .mainbox-cart-body {
 	height: 230px;
 }
-* html .close-icon {
-	right: -82%;
-	margin-left: -20px;
-}
-* html ul.cm-select-list {
-	margin-top: -15px;
-}
 .calendar-but {
 	vertical-align: -6px;
 }
@@ -376,7 +369,7 @@ div.tags-buttons {
 
 /* Product notification */
 * html .notification-correct {
-	border: 1px solid #d1d1d1;
+	border: 1px solid #adc9b2;
 }
 /* /Product notification */
 
@@ -393,7 +386,7 @@ div.tags-buttons {
 	width: 99%;
 }
 * html .error-message .arrow {
-	border: 5px solid #fffbec;
+	border: 5px solid #ffffff;
 	border-bottom-color: #f5f5ea;
 	border-top-width: 0;
 }

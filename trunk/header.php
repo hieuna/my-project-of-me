@@ -34,33 +34,20 @@ $datetime = new PGDatetime();
 // CREATE URL CLASS
 $uri = & PGURI::getInstance();
 
+// CREATE NEW SMARTY
 $smarty	= new Smarty();
 $smarty->template_dir	=	$template_root;
 $smarty->compile_dir	=	$template_root_c;
+
+
+$name_template = "shopping";
+$dir_template = $template_root.$name_template;
+
 $smarty->assign('http_root',$http_root);
+$smarty->assign('template_root', $template_root);
+$smarty->assign('name_template', $name_template);
+$smarty->assign('dir_template', $dir_template);
 
-//get background
-$sql = "Select * From `banner_gateway` Where `pos`='MOBILE 0' Order by `id` desc LIMIT 0, 1;";
-$result = mysql_query($sql);
- while ($row = mysql_fetch_array($result)) {
- 	$filePath = $row{'file'};
- 	$bg = $filePath;
- }
-        
-//search auto completed
-$sql = "SELECT p.product_id AS product_id, p.price AS price, p.image AS image, d.name AS name FROM product AS p, product_description AS d WHERE p.product_id=d.product_id ORDER BY d.name ASC";
-$result = mysql_query($sql);
-$array = '';
-$i = 0;
-while ($row = mysql_fetch_array($result)){
-	$i++;
-	if ($i>1){
-	$array .= ",";
-	}
-	$array .= '"'.$row["name"].'"';
-}
 
-$smarty->assign('bg', $bg);
-$smarty->assign('array', $array);
-$smarty->display($template_root.'/header.tpl');
+$smarty->display($dir_template.'/header.tpl');
 ?>

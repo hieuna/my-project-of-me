@@ -91,7 +91,7 @@ ul.dropdown ul {
 	padding: 1px;
 	margin-top: 0;
 	background-color: #ffffff;
-	border:1px solid #f7941c;
+	border:1px solid #1ca434;
 }
 ul.dropdown-vertical a {
 	padding: 4px 20px 4px 4px;
@@ -102,13 +102,13 @@ ul.dropdown ul li a {
 	font-size: 11px;
 }
 ul.dropdown li:hover {
-	background-color: #bbdbff;
+	background-color: #bbefc5;
 }
 ul.dropdown *.dir {
 	background: url('images/icons/category_collapsed.gif') no-repeat right center;
 }
 ul.dropdown *.dir:hover {
-	background: #bbdbff url('images/icons/category_expanded.gif') no-repeat right center;
+	background: #bbefc5 url('images/icons/category_expanded.gif') no-repeat right center;
 }
 
 /** Separator **/

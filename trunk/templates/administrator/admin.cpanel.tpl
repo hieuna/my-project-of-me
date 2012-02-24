@@ -44,15 +44,15 @@
 										<div class="icon">
 											<a href="menulevel1.list.php?page=0">
 												<img alt="Quản trị menu chính" src="{$http_root}templates/administrator/images/icon-48-themes.png">	
-												<span>Quản trị menu chính</span>
+												<span>Quản trị nhóm</span>
 											</a>	
 										</div>
 									</div>
 									<div class="box-elemet-icon">
 										<div class="icon">
-											<a href="menulevel2.list.php?page=0">
+											<a href="admin.menu.php">
 												<img alt="Quản trị submenu" src="{$http_root}templates/administrator/images/icon-48-levels.png">	
-												<span>Quản trị submenu</span>
+												<span>Quản trị menu</span>
 											</a>	
 										</div>
 									</div>
