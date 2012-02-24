@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-24 18:20:13
+<?php /* Smarty version 2.6.10, created on 2012-02-24 22:42:19
          compiled from D:/AppServ/www/projects/templates/administrator/admin.menu.tpl */ ?>
 <div id="toolbar-box">
    <div class="t">
@@ -94,7 +94,8 @@
 <table class="adminTable">
     <tbody>
    	<tr>
-   		<td width="20%">Nhóm menu</td>
+   		<td width="20%">Nhóm menu<?php echo $this->_tpl_vars['thisMenu']->menutype; ?>
+</td>
    		<td width="80%">
    		<select name="menutype" class="adm_selectbox">
    			<option value="">Lựa chọn theo nhóm</option>
@@ -122,7 +123,7 @@ $this->_sections['loops']['index_next'] = $this->_sections['loops']['index'] + $
 $this->_sections['loops']['first']      = ($this->_sections['loops']['iteration'] == 1);
 $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'] == $this->_sections['loops']['total']);
 ?>
-   			<option <?php if ($this->_tpl_vars['thisMenu']->menutype == $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['menutype_id']): ?> selected="selected"<?php endif; ?> value="<?php echo $this->_tpl_vars['lsMenuType'][$this->_sections['loops']['index']]['menutype_id']; ?>
+   			<option <?php if ($this->_tpl_vars['thisMenu']->menutype == $this->_tpl_vars['lsMenuType'][$this->_sections['loops']['index']]['menutype_id']): ?> selected="selected"<?php endif; ?> value="<?php echo $this->_tpl_vars['lsMenuType'][$this->_sections['loops']['index']]['menutype_id']; ?>
 "><?php echo $this->_tpl_vars['lsMenuType'][$this->_sections['loops']['index']]['name']; ?>
 </option>
    			<?php endfor; endif; ?>
@@ -133,13 +134,7 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
    		<td width="20%">Trực thuộc nhóm</td>
    		<td width="80%">
    		<select name="parent_id" class="adm_selectbox">
-   			<?php if ($this->_tpl_vars['task'] == 'edit'): ?>
-   			<option value="<?php echo $this->_tpl_vars['thisMenu']->menu_id; ?>
-" <?php if ($this->_tpl_vars['thisMenu']->parent_id == $this->_tpl_vars['thisMenu']->menu_id): ?>selected="selected"<?php endif; ?>><?php echo $this->_tpl_vars['thisMenu']->name; ?>
-</option>
-   			<?php else: ?>
    			<option value="">Lựa chọn theo nhóm</option>
-   			<?php endif; ?>
    			<?php unset($this->_sections['loops']);
 $this->_sections['loops']['name'] = 'loops';
 $this->_sections['loops']['loop'] = is_array($_loop=$this->_tpl_vars['lsMenu']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
@@ -164,7 +159,7 @@ $this->_sections['loops']['index_next'] = $this->_sections['loops']['index'] + $
 $this->_sections['loops']['first']      = ($this->_sections['loops']['iteration'] == 1);
 $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'] == $this->_sections['loops']['total']);
 ?>
-   			<option <?php if ($this->_tpl_vars['thisMenu']->menu_id == $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['menu_id'] || $this->_tpl_vars['menu_id'] == $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['menu_id']): ?> selected="selected"<?php endif; ?> value="<?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['menu_id']; ?>
+   			<option <?php if ($this->_tpl_vars['thisMenu']->parent_id == $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['menu_id']): ?> selected="selected"<?php endif; ?> value="<?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['menu_id']; ?>
 "><?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['name']; ?>
 </option>
    			<?php endfor; endif; ?>
@@ -182,13 +177,19 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 " /></td>
    	</tr>
    	<tr>
-   		<td>Link đến</td>
-   		<td><input type="text" name="link" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisMenu']->link; ?>
-" /></td>
+   		<td>Kiểu menu</td>
+   		<td>
+   			<select name="type" class="adm_selectbox">
+   				<option value="category">Link nhóm sản phẩm</option>
+   				<option value="product">Link sản phẩm</option>
+   				<option value="feauture">Link tính năng</option>
+   				<option value="news">Link nhóm tin tức</option>
+   			</select>
+   		</td>
    	</tr>
    	<tr>
-   		<td>Kiểu menu</td>
-   		<td><input type="text" name="type" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisMenu']->type; ?>
+   		<td>Link đến</td>
+   		<td><input type="text" name="link" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisMenu']->link; ?>
 " /></td>
    	</tr>
    	<tr>

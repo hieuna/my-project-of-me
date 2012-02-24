@@ -217,7 +217,7 @@ class PGMenu{
 	public function load($menu_id = null){
 		global $database;
 		if (!is_null($menu_id) && is_numeric($menu_id) && ($menu_id>0)){
-			$result = $database->db_query("SELECT * FROM ".TBL_MENU." WHERE memu_id=$menu_id LIMIT 1");
+			$result = $database->db_query("SELECT * FROM ".TBL_MENU." WHERE menu_id=$menu_id LIMIT 1");
 			if ($objMenu = $database->db_fetch_object($result)){
 				$this->menu_id			= $objMenu->menu_id;
 				$this->menutype			= $objMenu->menutype;
