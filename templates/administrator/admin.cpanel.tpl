@@ -42,9 +42,9 @@
 									</div>
 									<div class="box-elemet-icon">
 										<div class="icon">
-											<a href="menulevel1.list.php?page=0">
+											<a href="admin.menutype.php">
 												<img alt="Quản trị menu chính" src="{$http_root}templates/administrator/images/icon-48-themes.png">	
-												<span>Quản trị nhóm</span>
+												<span>Quản trị nhóm menu</span>
 											</a>	
 										</div>
 									</div>

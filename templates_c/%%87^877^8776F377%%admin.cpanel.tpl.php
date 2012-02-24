@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-24 16:09:02
+<?php /* Smarty version 2.6.10, created on 2012-02-24 17:34:31
          compiled from D:/AppServ/www/projects/templates/administrator/admin.cpanel.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'admin.header.tpl', 'smarty_include_vars' => array()));
@@ -51,10 +51,10 @@ templates/administrator/images/icon-48-archive.png">
 									</div>
 									<div class="box-elemet-icon">
 										<div class="icon">
-											<a href="menulevel1.list.php?page=0">
+											<a href="admin.menutype.php">
 												<img alt="Quản trị menu chính" src="<?php echo $this->_tpl_vars['http_root']; ?>
 templates/administrator/images/icon-48-themes.png">	
-												<span>Quản trị nhóm</span>
+												<span>Quản trị nhóm menu</span>
 											</a>	
 										</div>
 									</div>

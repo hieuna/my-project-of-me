@@ -337,6 +337,9 @@ div.header {
 .banner{
 	background: url("../images/icon-48-media.png") no-repeat top left;
 }
+.menutype{
+	background: url("../images/icon-48-themes.png") no-repeat top left;
+}
 .menu{
 	background: url("../images/icon-48-levels.png") no-repeat top left;
 }

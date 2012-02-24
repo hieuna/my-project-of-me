@@ -5,9 +5,162 @@
  * Email: ngockv@gmail.com
  * Mobile: 097.8686.055
  * Website:
+ * Name Table Defined: TBL_MENUTYPE
+ */
+class PGMenuType{
+	var $is_message;
+	
+	var $menutype_id;
+	var $name;
+	var $status;
+	
+	function __construct(){
+		$this->menutype_id = 0;
+		$this->name = "";
+		$this->status = 1;
+	}
+	
+	/*
+	 * Load list fields
+	 * $where : Điều Kiện câu truy vấn
+	 * $order: Điều kiện sắp xếp câu truy vấn
+	 * $start, $limit: LIMIT cho câu truy vấn
+	 */
+	public function loadList($where = null, $order=null, $start=null, $limit=null){
+		global $database;
+
+		if (is_null($order)){
+			$orderBy = " ORDER BY menutype_id DESC";
+		}else{
+			$orderBy = $order;
+		}
+		if (is_numeric($start) && is_numeric($limit)){
+			$wLimit = " LIMIT ".$start.", ".$limit;
+		}
+		
+		$sql = "SELECT * FROM ".TBL_MENUTYPE.$where.$orderBy.$wLimit;
+		$results = $database->db_query($sql);
+		while ($row = $database->db_fetch_assoc($results)){
+			$lsMenuType[] = $row;
+		}
+		
+		return $lsMenuType;
+	}
+	
+	/*
+	 * Load field
+	 * $menutype_id : ID of field
+	 */
+	public function load($menutype_id = null){
+		global $database;
+		if (!is_null($menutype_id) && is_numeric($menutype_id) && ($menutype_id>0)){
+			$result = $database->db_query("SELECT * FROM ".TBL_MENUTYPE." WHERE memutype_id=$menutype_id LIMIT 1");
+			if ($objMenu = $database->db_fetch_object($result)){
+				$this->menutype_id		= $objMenu->menutype_id;
+				$this->name				= $objMenu->name;
+				$this->status			= $objMenu->status;
+			}
+		}
+		return $this;
+	}
+	
+	/*
+	 * Save MenuType
+	 * Truyền các trường bằng tham số
+	 * VD: $objMenuType->name = "Tên menu";
+	 */
+	public function save($objMenuType = null){
+		global $database;
+    
+		if (!is_object($objMenuType)) $objMenuType = $this;
+
+		if (!isset($objMenuType->menutype_id) || is_null($objMenuType->menutype_id) || ($objMenuType->menutype_id==0)){
+      		$sql = "INSERT INTO ".TBL_MENUTYPE." (
+      			name,
+		        status
+		    ) VALUES (
+		    	'{$objMenuType->name}',
+		        '{$objMenuType->status}'
+		    )";
+	      	if ($database->db_query($sql)) $this->is_message = "Thêm mới nhóm menu thành công !";	
+		}else{
+			$sql = "UPDATE ".TBL_MENUTYPE." SET 
+					name='{$objMenuType->name}', 
+					status='{$objMenuType->status}'
+					WHERE menutype_id='{$objMenuType->menutype_id}' LIMIT 1";
+			if ($database->db_query($sql)) $this->is_message = "Cập nhật nhóm menu thành công !";	
+		}
+		return $this->is_message;
+	}
+	
+	/*
+	 * Remove Product
+	 */
+	public function remove($cid = null){
+		global $database;
+		if (!is_array($cid)){
+			$this->error = 'Tham số truyền vào không tồn tại !';
+		}else{
+			$total = count( $cid );
+			if ( $total < 1) {
+				echo "<script> alert('Lựa chọn một mục để xóa !'); window.history.go(-1);</script>\n";
+				exit;
+			}
+			mosArrayToInts( $cid );
+			$cids = 'menutype_id=' . implode( ' OR menutype_id=', $cid );
+			$sql = "DELETE FROM ".TBL_MENUTYPE." WHERE ( $cids )";
+			$database->db_query($sql);
+			
+			$this->is_message = 'Đã xóa '.$total.' nhóm menu thành công !';
+		}
+		
+		return $this->is_message;
+	}
+	
+	/*
+	 * Publish and unpublish Product
+	 */
+	public function published($cid, $published = 0){
+		global $database;
+		if (count( $cid ) < 1) {
+			$action = $published == 1 ? 'Mở khóa' : 'Khóa';
+			echo "<script> alert('Chọn một nhóm menu để $action'); window.history.go(-1);</script>\n";
+			exit;
+		}
+	
+		mosArrayToInts( $cid );
+		$total = count ( $cid );
+		$cids = 'menutype_id=' . implode( ' OR menutype_id=', $cid );
+		
+		$database->db_query("UPDATE ".TBL_MENUTYPE." SET status=".(int) $published." WHERE ( $cids )");
+	
+		switch ( $published ) {
+			case 1:
+				$this->is_message = $total .' nhóm menu đã hiển thị thành công !';
+				break;
+	
+			case 0:
+			default:
+				$this->is_message = $total .' nhóm menu đã ẩn thành công !';
+				break;
+		}
+		
+		return $this->is_message;
+	}
+}
+
+
+/*
+ * Version: 1.0
+ * Code By: Kiều Văn Ngọc
+ * Email: ngockv@gmail.com
+ * Mobile: 097.8686.055
+ * Website:
  * Name Table Defined: TBL_MENU
  */
 class PGMenu{
+	var $is_message;
+	
 	var $menu_id;
 	var $menutype;
 	var $name;
