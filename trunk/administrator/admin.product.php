@@ -41,67 +41,120 @@ switch($task){
 		//Upload file img
 		if ($_FILES["img"]["name"] != ""){
             $fileName =  $_FILES["img"]["name"];
-            $dir_large	=$dir_upload."products/large/".$fileName;
-            $dir_medium	= $dir_upload."products/medium/".$fileName;
-            $dir_small	= $dir_upload."products/small/".$fileName;
-            //large image
-            if (move_uploaded_file($_FILES["img"]["tmp_name"], $dir_large))
+            $dir	=$dir_upload."products/".$fileName;
+            if (move_uploaded_file($_FILES["img"]["tmp_name"], $dir))
             {
             	if ($thisProduct->product_id == 0){
-            		$large_image = "image/products/large/".$fileName;
+            		$image1 = "image/products/".$fileName;
             	}else{
-	            	if(file_exists($dir_root.$thisProduct->large_image)) {
-					  @unlink($dir_root.$thisProduct->large_image);		  
+	            	if(file_exists($dir_root.$thisProduct->image1)) {
+					  @unlink($dir_root.$thisProduct->image1);		  
 					}
-            		$large_image= "image/products/large/".$fileName;
+            		$image1 = "image/products/".$fileName;
             	}
             }
             else
             {
-            	if ($thisProduct->product_id == 0) $large_image = "";
-            	else $large_image = $thisProduct->large_image;
+            	if ($thisProduct->product_id == 0) $image1 = "";
+            	else $image1 = $thisProduct->image1;
             }
-			//medium image
-            if (move_uploaded_file($_FILES["img"]["tmp_name"], $dir_medium))
-            {
-            	if ($thisProduct->product_id == 0){
-            		$large_image = "image/products/medium/".$fileName;
-            	}else{
-	            	if(file_exists($dir_root.$thisProduct->medium_image)) {
-					  @unlink($dir_root.$thisProduct->medium_image);		  
-					}
-            		$large_image= "image/products/medium/".$fileName;
-            	}
-            	Resize_File($_FILES["img"]["tmp_name"], $dir_medium, _WIDTH_MEDIUM_IMAGE_PRODUCT);
-            }
-            else
-            {
-            	if ($thisProduct->product_id == 0) $medium_image = "";
-            	else $medium_image = $thisProduct->medium_image;
-            }
-			//small image
-            if (move_uploaded_file($_FILES["img"]["tmp_name"], $dir_small))
-            {
-            	if ($thisProduct->product_id == 0){
-            		$large_image = "image/products/small/".$fileName;
-            	}else{
-	            	if(file_exists($dir_root.$thisProduct->small_image)) {
-					  @unlink($dir_root.$thisProduct->small_image);		  
-					}
-            		$large_image= "image/products/small/".$fileName;
-            	}
-            	Resize_File($_FILES["img"]["tmp_name"], $dir_small, _WIDTH_SMALL_IMAGE_PRODUCT);
-            }
-            else
-            {
-            	if ($thisProduct->product_id == 0) $small_image = "";
-            	else $small_image = $thisProduct->small_image;
-            }	
 		}else{
-			$large_image = $thisProduct->large_image;
-			$medium_image = $thisProduct->medium_image;
-			$small_image = $thisProduct->small_image;
+			$image1 = $thisProduct->image1;
 		}
+		//file2
+		if ($_FILES["img2"]["name"] != ""){
+            $fileName2 =  $_FILES["img2"]["name"];
+            $dir2	=$dir_upload."products/".$fileName2;
+            if (move_uploaded_file($_FILES["img2"]["tmp_name"], $dir2))
+            {
+            	if ($thisProduct->product_id == 0){
+            		$image2 = "image/products/".$fileName2;
+            	}else{
+	            	if(file_exists($dir_root.$thisProduct->image2)) {
+					  @unlink($dir_root.$thisProduct->image2);		  
+					}
+            		$image2 = "image/products/".$fileName2;
+            	}
+            }
+            else
+            {
+            	if ($thisProduct->product_id == 0) $image2 = "";
+            	else $image2 = $thisProduct->image2;
+            }
+		}else{
+			$image2 = $thisProduct->image2;
+		}
+		//file3
+		if ($_FILES["img3"]["name"] != ""){
+            $fileName3 =  $_FILES["img3"]["name"];
+            $dir3	=$dir_upload."products/".$fileName3;
+            if (move_uploaded_file($_FILES["img3"]["tmp_name"], $dir3))
+            {
+            	if ($thisProduct->product_id == 0){
+            		$image3 = "image/products/".$fileName3;
+            	}else{
+	            	if(file_exists($dir_root.$thisProduct->image3)) {
+					  @unlink($dir_root.$thisProduct->image3);		  
+					}
+            		$image3 = "image/products/".$fileName3;
+            	}
+            }
+            else
+            {
+            	if ($thisProduct->product_id == 0) $image3 = "";
+            	else $image3 = $thisProduct->image3;
+            }
+		}else{
+			$image3 = $thisProduct->image3;
+		}
+		//file4
+		if ($_FILES["img4"]["name"] != ""){
+            $fileName4 =  $_FILES["img4"]["name"];
+            $dir4	=$dir_upload."products/".$fileName4;
+            if (move_uploaded_file($_FILES["img4"]["tmp_name"], $dir4))
+            {
+            	if ($thisProduct->product_id == 0){
+            		$image4 = "image/products/".$fileName4;
+            	}else{
+	            	if(file_exists($dir_root.$thisProduct->image4)) {
+					  @unlink($dir_root.$thisProduct->image4);		  
+					}
+            		$image4 = "image/products/".$fileName4;
+            	}
+            }
+            else
+            {
+            	if ($thisProduct->product_id == 0) $image4 = "";
+            	else $image4 = $thisProduct->image4;
+            }
+		}else{
+			$image4 = $thisProduct->image4;
+		}
+		//file5
+		if ($_FILES["img5"]["name"] != ""){
+            $fileName5 =  $_FILES["img5"]["name"];
+            $dir5	=$dir_upload."products/".$fileName5;
+            if (move_uploaded_file($_FILES["img5"]["tmp_name"], $dir5))
+            {
+            	if ($thisProduct->product_id == 0){
+            		$image5 = "image/products/".$fileName5;
+            	}else{
+	            	if(file_exists($dir_root.$thisProduct->image5)) {
+					  @unlink($dir_root.$thisProduct->image5);		  
+					}
+            		$image5 = "image/products/".$fileName5;
+            	}
+            }
+            else
+            {
+            	if ($thisProduct->product_id == 0) $image5 = "";
+            	else $image5 = $thisProduct->image5;
+            }
+		}else{
+			$image5 = $thisProduct->image5;
+		}
+		//var_dump($_FILES);
+		//End upload
 		if (!$objProduct->is_message){
 			foreach ($_POST as $key =>$value) {
 				//echo $key."&nbsp;".$value."<br />";
@@ -118,9 +171,11 @@ switch($task){
 				}
 				$objProduct->$key		= $value;
 				$objProduct->admin_created	= $admin_id;
-				$objProduct->large_image = $large_image;
-				$objProduct->medium_image = $medium_image;
-				$objProduct->small_image = $small_image;
+				$objProduct->image1 = $image1;
+				$objProduct->image2 = $image2;
+				$objProduct->image3 = $image3;
+				$objProduct->image4 = $image4;
+				$objProduct->image5 = $image5;
 			}
 			$objProduct->save($thisProduct);
 			$objColor = new PGColor();
