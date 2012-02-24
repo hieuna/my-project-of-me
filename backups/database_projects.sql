@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Feb 23, 2012 at 06:02 PM
+-- Generation Time: Feb 24, 2012 at 06:05 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -120,7 +120,7 @@ CREATE TABLE `tbl_categories` (
 INSERT INTO `tbl_categories` VALUES (1, 'Quần áo Nam', 'Quan-ao-Nam', 'Quần áo nam', 1, 0, '2012-02-23 05:21:35', 1, 0);
 INSERT INTO `tbl_categories` VALUES (2, 'Quần áo nữ', 'Quan-ao-nu', 'Quần áo nữ', 1, 0, '2012-02-23 05:21:50', 1, 0);
 INSERT INTO `tbl_categories` VALUES (3, 'Váy cho trẻ 5 tuổi', 'Vay-cho-tre-5-tuoi', 'Váy cho trẻ 5 tuổi', 1, 0, '2012-02-23 05:22:04', 1, 0);
-INSERT INTO `tbl_categories` VALUES (4, 'Áo sơ mi cho trẻ nam', 'Ao-so-mi-cho-tre-nam', 'Áo sơ mi cho trẻ 5 tuổi', 1, 0, '2012-02-23 05:22:20', 1, 0);
+INSERT INTO `tbl_categories` VALUES (4, 'Áo sơ mi cho trẻ nam', 'Ao-so-mi-cho-tre-nam', 'Áo sơ mi cho trẻ 5 tuổi', 1, 0, '2012-02-23 05:22:20', 1, 4);
 INSERT INTO `tbl_categories` VALUES (5, 'Áo bông cho trẻ', 'Ao-bong-cho-tre', 'Áo bông cho trẻ', 1, 0, '2012-02-23 05:43:41', 1, 2);
 
 -- --------------------------------------------------------
@@ -400,6 +400,50 @@ INSERT INTO `tbl_hotdeal` VALUES (28, 2670, 35, 8600000, 3500000, 5100000, 59, '
 -- --------------------------------------------------------
 
 -- 
+-- Table structure for table `tbl_menu`
+-- 
+
+CREATE TABLE `tbl_menu` (
+  `menu_id` int(10) unsigned NOT NULL auto_increment,
+  `menutype` varchar(50) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `link` text NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `status` tinyint(1) NOT NULL default '1',
+  `parent_id` int(11) NOT NULL,
+  `ordering` int(11) NOT NULL,
+  PRIMARY KEY  (`menu_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+-- 
+-- Dumping data for table `tbl_menu`
+-- 
+
+INSERT INTO `tbl_menu` VALUES (1, '0', 'Quần áo trẻ nam', 'Quan-ao-tre-nam', 'top', 'link', 1, 0, 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_menutype`
+-- 
+
+CREATE TABLE `tbl_menutype` (
+  `menutype_id` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL,
+  `status` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (`menutype_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+-- 
+-- Dumping data for table `tbl_menutype`
+-- 
+
+INSERT INTO `tbl_menutype` VALUES (2, 'MenuTop', 1);
+
+-- --------------------------------------------------------
+
+-- 
 -- Table structure for table `tbl_products`
 -- 
 
@@ -423,7 +467,7 @@ CREATE TABLE `tbl_products` (
   `admin_modified` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
   PRIMARY KEY  (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 -- 
 -- Dumping data for table `tbl_products`
@@ -438,16 +482,17 @@ INSERT INTO `tbl_products` VALUES (6, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '20
 INSERT INTO `tbl_products` VALUES (7, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
 INSERT INTO `tbl_products` VALUES (8, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
 INSERT INTO `tbl_products` VALUES (9, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
-INSERT INTO `tbl_products` VALUES (10, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (10, '', '0', 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, '2012-02-23 02:30:44', 1, '2012-02-24 01:18:24', 1, 2);
 INSERT INTO `tbl_products` VALUES (11, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
 INSERT INTO `tbl_products` VALUES (12, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
 INSERT INTO `tbl_products` VALUES (13, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
 INSERT INTO `tbl_products` VALUES (14, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
 INSERT INTO `tbl_products` VALUES (15, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
-INSERT INTO `tbl_products` VALUES (16, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (16, '', '0', 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, '2012-02-23 02:30:44', 1, '2012-02-24 01:24:22', 1, 5);
 INSERT INTO `tbl_products` VALUES (17, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:30:44', 1, '0000-00-00 00:00:00', 0, 5);
-INSERT INTO `tbl_products` VALUES (18, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:38:19', 1, '0000-00-00 00:00:00', 0, 5);
-INSERT INTO `tbl_products` VALUES (19, '', '0', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '2012-02-23 02:39:14', 1, '0000-00-00 00:00:00', 0, 5);
+INSERT INTO `tbl_products` VALUES (18, '', '0', 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, '2012-02-23 02:38:19', 1, '2012-02-24 01:14:35', 1, 4);
+INSERT INTO `tbl_products` VALUES (19, 'AB45', '20gam', 0, 0, 20, 0, 130, 30, 2, 1, 1, 0, '0000-00-00 00:00:00', 1, '2012-02-24 11:31:41', 1, 5);
+INSERT INTO `tbl_products` VALUES (20, 'ATT01', '2gam', 400000, 450000, 15, 0, 1, 50, 2, 3, 1, 0, '0000-00-00 00:00:00', 1, '0000-00-00 00:00:00', 0, 4);
 
 -- --------------------------------------------------------
 
@@ -474,6 +519,9 @@ INSERT INTO `tbl_products_color` VALUES (19, 'e326e0', '#e326e0', 0, 0);
 INSERT INTO `tbl_products_color` VALUES (19, '00ffe6', '#00ffe6', 0, 0);
 INSERT INTO `tbl_products_color` VALUES (19, 'ff2f00', '#ff2f00', 0, 0);
 INSERT INTO `tbl_products_color` VALUES (19, 'ced1de', '#ced1de', 0, 0);
+INSERT INTO `tbl_products_color` VALUES (20, '00e6ff', '#00e6ff', 0, 0);
+INSERT INTO `tbl_products_color` VALUES (20, '66b566', '#66b566', 0, 0);
+INSERT INTO `tbl_products_color` VALUES (20, '810ce8', '#810ce8', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -492,7 +540,7 @@ CREATE TABLE `tbl_products_description` (
   `search_words` text NOT NULL,
   `page_title` varchar(255) NOT NULL,
   PRIMARY KEY  (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 -- 
 -- Dumping data for table `tbl_products_description`
@@ -507,16 +555,17 @@ INSERT INTO `tbl_products_description` VALUES (6, '', '', '', '', '', '', '', ''
 INSERT INTO `tbl_products_description` VALUES (7, '', '', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (8, '', '', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (9, '', '', '', '', '', '', '', '');
-INSERT INTO `tbl_products_description` VALUES (10, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (10, 'uawrafa', 'uawrafa', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (11, '', '', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (12, '', '', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (13, '', '', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (14, '', '', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (15, '', '', '', '', '', '', '', '');
-INSERT INTO `tbl_products_description` VALUES (16, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (16, 'Áo cho trẻ nhỏ', 'Ao-cho-tre-nho', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (17, '', '', '', '', '', '', '', '');
-INSERT INTO `tbl_products_description` VALUES (18, '', '', '', '', '', '', '', '');
-INSERT INTO `tbl_products_description` VALUES (19, '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (18, 'Áo sơm mi nam', 'san-pham', 'san pham', '<p>San pham cong nbghe</p>', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (19, 'áO bông cho trẻ nhỏ', 'aO-bong-cho-tre-nho', 'Chào bạn', '<p>Ch&agrave;o c&aacute;c bạn</p>', 'Từ khóa', 'Mô tả từ khóa', 'TỪ khóa tìm kiếm', 'Tiều đề trang');
+INSERT INTO `tbl_products_description` VALUES (20, 'Quần áo thời trang cho nữ', 'Quan-ao-thoi-trang-cho-nu', 'Quần áo thời trang cho nữ giới', '<p>Bộ quần &aacute;o thời trang trẻ trung v&agrave; năng động cho nữ giới</p>', 'quan ao, thoi trang, nu gioi', 'Quần áo, thời trang, nữ giới, quần áo nữ', 'thời trang', 'Quần áo thời trang');
 
 -- --------------------------------------------------------
 
@@ -567,35 +616,38 @@ CREATE TABLE `tbl_products_feauture` (
 
 CREATE TABLE `tbl_products_image` (
   `product_id` int(10) unsigned NOT NULL auto_increment,
-  `small_image` varchar(255) NOT NULL,
-  `medium_image` varchar(255) NOT NULL,
-  `large_image` varchar(255) NOT NULL,
+  `image1` varchar(255) NOT NULL,
+  `image2` varchar(255) NOT NULL,
+  `image3` varchar(255) NOT NULL,
+  `image4` varchar(255) NOT NULL,
+  `image5` varchar(255) NOT NULL,
   PRIMARY KEY  (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 -- 
 -- Dumping data for table `tbl_products_image`
 -- 
 
-INSERT INTO `tbl_products_image` VALUES (1, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (2, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (3, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (4, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (5, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (6, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (7, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (8, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (9, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (10, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (11, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (12, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (13, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (14, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (15, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (16, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (17, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (18, '', '', '');
-INSERT INTO `tbl_products_image` VALUES (19, '', '', '');
+INSERT INTO `tbl_products_image` VALUES (1, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (2, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (3, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (4, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (5, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (6, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (7, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (8, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (9, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (10, 'image/products/1271994316-yoon-eun-hye.jpg', 'image/products/1297918601_21111676_1-Hinh-anh-ca--Quan-ao-mua-he-qua-dp-gia-re-nhat-thi-trung.jpg', 'image/products/1297918601_21111676_3-Quan-ao-mua-he-qua-dp-gia-re-nhat-thi-trung-Quan-ao.jpg', 'image/products/1276164730_99021333_1-Hinh-anh-ca--Ban-S-Quan-ao-Thi-Trang-Ngoai-Nhap-12k-15k18k25k-1276164730.jpg', 'image/products/meo.jpg');
+INSERT INTO `tbl_products_image` VALUES (11, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (12, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (13, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (14, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (15, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (16, 'image/products/meo.jpg', 'image/products/1276164730_99021333_1-Hinh-anh-ca--Ban-S-Quan-ao-Thi-Trang-Ngoai-Nhap-12k-15k18k25k-1276164730.jpg', 'image/products/1297918601_21111676_3-Quan-ao-mua-he-qua-dp-gia-re-nhat-thi-trung-Quan-ao.jpg', 'image/products/1276164730_99021333_1-Hinh-anh-ca--Ban-S-Quan-ao-Thi-Trang-Ngoai-Nhap-12k-15k18k25k-1276164730.jpg', 'image/products/1271994316-yoon-eun-hye.jpg');
+INSERT INTO `tbl_products_image` VALUES (17, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (18, 'image/products/1271994316-yoon-eun-hye.jpg', 'image/products/1276164730_99021333_1-Hinh-anh-ca--Ban-S-Quan-ao-Thi-Trang-Ngoai-Nhap-12k-15k18k25k-1276164730.jpg', 'image/products/1297918601_21111676_1-Hinh-anh-ca--Quan-ao-mua-he-qua-dp-gia-re-nhat-thi-trung.jpg', 'image/products/1297918601_21111676_3-Quan-ao-mua-he-qua-dp-gia-re-nhat-thi-trung-Quan-ao.jpg', 'image/products/meo.jpg');
+INSERT INTO `tbl_products_image` VALUES (19, '', '', 'image/products/large/meo.jpg', '', '');
+INSERT INTO `tbl_products_image` VALUES (20, 'image/products/254807q.jpg', 'image/products/1271994316-yoon-eun-hye--1-.jpg', 'image/products/1288171257_132432803_1-Hinh-anh-ca--Ban-S-QUN-aO-THI-TRANG-0932906060-1288171257.jpg', 'image/products/12942966692048467137_574_574.jpg', 'image/products/thoi-trang-cong-so-011.jpg');
 
 -- --------------------------------------------------------
 

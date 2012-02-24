@@ -89,18 +89,18 @@
     <tbody>
    	<tr>
    		<td>Tên nhóm menu</td>
-   		<td><input type="text" name="name" class="adm_inputbox required" value="{$thisMenu->name}" /></td>
+   		<td><input type="text" name="name" class="adm_inputbox required" value="{$thisMenuType->name}" /></td>
    	</tr>
    	<tr>
    		<td>Trạng thái</td>
-   		<td><input type="checkbox" name="status" class="adm_chk" {if $thisMenu->status == 1} checked="checked"{/if} value="1" /> Hiển thị</td>
+   		<td><input type="checkbox" name="status" class="adm_chk" {if $thisMenuType->status == 1} checked="checked"{/if} value="1" /> Hiển thị</td>
    	</tr>
    </tbody>
    <tfoot>
    	<tr>
    		<td></td>
    		<td>
-   			<input type="hidden" name="menutype_id_value" value="{$menutype_id}" />
+   			<input type="hidden" name="menutype_id" value="{$menutype_id}" />
    			<input type="hidden" name="task" value="save" />
    		</td>
    	</tr>
@@ -144,22 +144,22 @@
 			</tr>
 		</thead>
 		<tbody>
-			{section name=loops loop=$lsMenu}
+			{section name=loops loop=$lsMenuType}
 			<tr class="row{if $smarty.section.loops.index%2==0}0{else}1{/if}">
 				<td>{$smarty.section.loops.index+1}</td>
 				<td align="center">
-					<input type="checkbox" onclick="isChecked(this.checked);" value="{$lsMenu[loops].menutype_id}" name="cid[]" id="cb{$lsMenu[loops].menutype_id}">
+					<input type="checkbox" onclick="isChecked(this.checked);" value="{$lsMenuType[loops].menutype_id}" name="cid[]" id="cb{$lsMenuType[loops].menutype_id}">
 				</td>
 				<td>
-					<a href="{$page}?task=edit&menutype_id={$lsMenu[loops].menutype_id}">{$lsMenu[loops].name}</a>
+					<a href="{$page}?task=edit&menutype_id={$lsMenuType[loops].menutype_id}">{$lsMenuType[loops].name}</a>
 				</td>
 				<td align="center">
-					{if $lsMenu[loops].status == 1}
-						<a onclick="return listItemTask('cb{$lsMenu[loops].menutype_id}','unpublish')" title="Ẩn đi">
+					{if $lsMenuType[loops].status == 1}
+						<a onclick="return listItemTask('cb{$lsMenuType[loops].menutype_id}','unpublish')" title="Ẩn đi">
 						<img src="../images/publish_g.png" width="16" style="cursor:pointer" alt="Ẩn đi" border="0" />
 						</a>
 					{else}
-						<a onclick="return listItemTask('cb{$lsMenu[loops].menutype_id}','publish')" title="Hiển thị">
+						<a onclick="return listItemTask('cb{$lsMenuType[loops].menutype_id}','publish')" title="Hiển thị">
 						<img src="../images/publish_x.png" width="16" style="cursor:pointer" alt="Hiển thị" border="0" />
 						</a>
 					{/if}
