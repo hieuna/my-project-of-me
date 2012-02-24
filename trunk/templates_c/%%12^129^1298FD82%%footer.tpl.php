@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-24 14:45:31
+<?php /* Smarty version 2.6.10, created on 2012-02-24 23:58:49
          compiled from D:/AppServ/www/projects/templates/shopping/footer.tpl */ ?>
 <div id="footer">
 
@@ -40,15 +40,13 @@
 </form>
 </div>
 <p class="quick-links">
-			<a href="index.php">Home</a>
-			<a href="index.php?dispatch=pages.view&amp;page_id=3">About Us</a>
-			<a href="index.php?dispatch=pages.view&amp;page_id=1">Contact Us</a>
-
-			<a href="index.php?dispatch=gift_certificates.add">Gift certificates</a>
-			<a href="index.php?dispatch=promotions.list">Promotions</a>
+			<a href="index.php">Trang chủ</a>
+			<a href="index.php?dispatch=pages.view&amp;page_id=3">Giới thiệu</a>
+			<a href="index.php?dispatch=pages.view&amp;page_id=1">Liên hệ</a>
+			<a href="index.php?dispatch=promotions.list">Khuyến mãi</a>
 			<a href="index.php?dispatch=sitemap.view">Sitemap</a>
 	</p>
-<p class="bottom-copyright class">&copy; 2004-2012 Simbirsk Technologies Ltd. &nbsp;Powered by CS-Cart - Shopping Cart Software
+<p class="bottom-copyright class">&copy; 2012 Công ty cổ phần MBM. &nbsp;
 </p>
 
 
