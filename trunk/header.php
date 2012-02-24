@@ -8,6 +8,7 @@ include "includes/define.table.php";
 // INCLUDE DATABASE INFORMATION
 include "includes/database_config.php";
 
+include "includes/class_menu.php";
 include "includes/class_banner.php";
 include "includes/class_hotdeal.php";
 include "includes/class_customer_hotdeal.php";
