@@ -91,13 +91,9 @@
    		<td width="20%">Nhóm menu</td>
    		<td width="80%">
    		<select name="menutype" class="adm_selectbox">
-   			{if $task=="edit"}
-   			<option value="{$thisMenu->menu_id}" {if $thisMenu->parent_id==$thisMenu->menu_id}selected="selected"{/if}>{$thisMenu->name}</option>
-   			{else}
    			<option value="">Lựa chọn theo nhóm</option>
-   			{/if}
-   			{section name=loops loop=$lsMenu}
-   			<option {if $thisMenu->menu_id==$lsMenu[loops].menu_id || $menu_id==$lsMenu[loops].menu_id} selected="selected"{/if} value="admin.hotdeal.php?task={$task}&id={$thisMenu->id}&menu_id={$lsMenu[loops].menu_id}">{$lsMenu[loops].name}</option>
+   			{section name=loops loop=$lsMenuType}
+   			<option {if $thisMenu->menutype==$lsMenu[loops].menutype_id} selected="selected"{/if} value="{$lsMenuType[loops].menutype_id}">{$lsMenuType[loops].name}</option>
    			{/section}
    		</select>
    		</td>
@@ -112,7 +108,7 @@
    			<option value="">Lựa chọn theo nhóm</option>
    			{/if}
    			{section name=loops loop=$lsMenu}
-   			<option {if $thisMenu->menu_id==$lsMenu[loops].menu_id || $menu_id==$lsMenu[loops].menu_id} selected="selected"{/if} value="admin.hotdeal.php?task={$task}&id={$thisMenu->id}&menu_id={$lsMenu[loops].menu_id}">{$lsMenu[loops].name}</option>
+   			<option {if $thisMenu->menu_id==$lsMenu[loops].menu_id || $menu_id==$lsMenu[loops].menu_id} selected="selected"{/if} value="{$lsMenu[loops].menu_id}">{$lsMenu[loops].name}</option>
    			{/section}
    		</select>
    		</td>

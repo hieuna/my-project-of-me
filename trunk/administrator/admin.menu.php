@@ -17,6 +17,7 @@ switch($task){
 		
 		$objMenu = new PGMenu();
 		$thisMenu = $objMenu->load($menu_id);
+		
 		$where[] = " status=1";
 		if ($task=='add') $where[] = "parent_id>=0";
 		else $where[] = " parent_id<=".$thisMenu->parent_id;	
@@ -24,9 +25,13 @@ switch($task){
 		$order = " ORDER BY ordering ASC, menu_id DESC";
 		$lsMenu = $objMenu->loadList($where, $order);
 		
+		$objMenuType = new PGMenuType();
+		$lsMenuType = $objMenuType->loadList(" WHERE status=1", " ORDER BY menutype_id DESC");
+		
 		$smarty->assign('menu_id', $menu_id);
 		$smarty->assign('thisMenu', $thisMenu);
 		$smarty->assign('lsMenu', $lsMenu);
+		$smarty->assign('lsMenuType', $lsMenuType);
 		break;
 		
 	case 'save':
