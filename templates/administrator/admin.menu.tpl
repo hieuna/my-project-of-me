@@ -88,12 +88,12 @@
 <table class="adminTable">
     <tbody>
    	<tr>
-   		<td width="20%">Nhóm menu</td>
+   		<td width="20%">Nhóm menu{$thisMenu->menutype}</td>
    		<td width="80%">
    		<select name="menutype" class="adm_selectbox">
    			<option value="">Lựa chọn theo nhóm</option>
    			{section name=loops loop=$lsMenuType}
-   			<option {if $thisMenu->menutype==$lsMenu[loops].menutype_id} selected="selected"{/if} value="{$lsMenuType[loops].menutype_id}">{$lsMenuType[loops].name}</option>
+   			<option {if $thisMenu->menutype==$lsMenuType[loops].menutype_id} selected="selected"{/if} value="{$lsMenuType[loops].menutype_id}">{$lsMenuType[loops].name}</option>
    			{/section}
    		</select>
    		</td>
@@ -102,13 +102,9 @@
    		<td width="20%">Trực thuộc nhóm</td>
    		<td width="80%">
    		<select name="parent_id" class="adm_selectbox">
-   			{if $task=="edit"}
-   			<option value="{$thisMenu->menu_id}" {if $thisMenu->parent_id==$thisMenu->menu_id}selected="selected"{/if}>{$thisMenu->name}</option>
-   			{else}
    			<option value="">Lựa chọn theo nhóm</option>
-   			{/if}
    			{section name=loops loop=$lsMenu}
-   			<option {if $thisMenu->menu_id==$lsMenu[loops].menu_id || $menu_id==$lsMenu[loops].menu_id} selected="selected"{/if} value="{$lsMenu[loops].menu_id}">{$lsMenu[loops].name}</option>
+   			<option {if $thisMenu->parent_id==$lsMenu[loops].menu_id} selected="selected"{/if} value="{$lsMenu[loops].menu_id}">{$lsMenu[loops].name}</option>
    			{/section}
    		</select>
    		</td>
@@ -122,12 +118,19 @@
    		<td><input type="text" name="alias" class="adm_inputbox" value="{$thisMenu->alias}" /></td>
    	</tr>
    	<tr>
-   		<td>Link đến</td>
-   		<td><input type="text" name="link" class="adm_inputbox" value="{$thisMenu->link}" /></td>
+   		<td>Kiểu menu</td>
+   		<td>
+   			<select name="type" class="adm_selectbox">
+   				<option value="category">Link nhóm sản phẩm</option>
+   				<option value="product">Link sản phẩm</option>
+   				<option value="feauture">Link tính năng</option>
+   				<option value="news">Link nhóm tin tức</option>
+   			</select>
+   		</td>
    	</tr>
    	<tr>
-   		<td>Kiểu menu</td>
-   		<td><input type="text" name="type" class="adm_inputbox" value="{$thisMenu->type}" /></td>
+   		<td>Link đến</td>
+   		<td><input type="text" name="link" class="adm_inputbox" value="{$thisMenu->link}" /></td>
    	</tr>
    	<tr>
    		<td>Thứ tự</td>

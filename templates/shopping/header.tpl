@@ -13,36 +13,36 @@
 					<a href="index.php"><img src="/cscart/skins/default_orange/customer/images/customer_area_logo.png" width="176" height="69" border="0" alt="Simbirsk Technologies Ltd" /></a>
 				</div>
 				<p class="quick-links">&nbsp;
-						<a href="index.php">Home</a>
-						<a href="index.php?dispatch=pages.view&amp;page_id=3">About Us</a>
+						<a href="index.php">Trang chủ</a>
+						<a href="index.php?dispatch=pages.view&amp;page_id=3">Giới thiệu</a>
 			
-						<a href="index.php?dispatch=pages.view&amp;page_id=1">Contact Us</a>
-						<a href="index.php?dispatch=gift_certificates.add">Gift certificates</a>
-						<a href="index.php?dispatch=promotions.list">Promotions</a>
+						<a href="index.php?dispatch=pages.view&amp;page_id=1">Liên hệ</a>
+						<a href="index.php?dispatch=promotions.list">Khuyến mãi</a>
 						<a href="index.php?dispatch=sitemap.view">Sitemap</a>
 				</p>
 			<div id="top_menu">
-			<ul class="top-menu dropdown"><li class="first-level cm-active"><span><a href="index.php">Home</a></span></li><li class="first-level "><span><a href="index.php?dispatch=categories.catalog">Catalog</a></span></li><li class="first-level "><span><a href="index.php?dispatch=profiles.update">My Account</a></span></li><li class="first-level "><span><a href="index.php?dispatch=checkout.cart">View cart</a></span></li><li class="first-level "><span><a href="index.php?dispatch=pages.view&amp;page_id=3">Company</a></span>
-			<ul class="dropdown-vertical-rtl">
-						<li >
-					<a href="index.php?dispatch=pages.view&amp;page_id=3">About our company</a>
-						</li>
-					<li class="h-sep">&nbsp;</li>
-						<li >
-					<a href="index.php?dispatch=pages.view&amp;page_id=1">Contact us</a>
-						</li>
-			
-					<li class="h-sep">&nbsp;</li>
-						<li >
-					<a href="index.php?dispatch=pages.view&amp;page_id=4">Poll of the week</a>
-						</li>
-					<li class="h-sep">&nbsp;</li>
-						<li >
-					<a href="index.php?dispatch=pages.view&amp;page_id=2">What is CS-Cart?</a>
-						</li>
-			
-					</ul>
-			</li></ul>
+				<ul class="top-menu dropdown">
+					<li class="first-level cm-active"><span><a href="index.php">Trang chủ</a></span></li>
+					<li class="first-level "><span><a href="index.php?dispatch=categories.catalog">Nhóm sản phẩm</a></span></li>
+					<li class="first-level "><span><a href="index.php?dispatch=profiles.update">Tài khoản của tôi</a></span>
+					</li><li class="first-level "><span><a href="index.php?dispatch=checkout.cart">Giỏ hàng</a></span></li>
+					<li class="first-level "><span><a href="index.php?dispatch=pages.view&amp;page_id=3">Về công ty</a></span>
+						<ul class="dropdown-vertical-rtl">
+							<li >
+								<a href="index.php?dispatch=pages.view&amp;page_id=3">Giới thiệu công ty</a>
+							</li>
+							<li class="h-sep">&nbsp;</li>
+							<li >
+								<a href="index.php?dispatch=pages.view&amp;page_id=1">Liên hệ với chúng tôi</a>
+							</li>
+							<li class="h-sep">&nbsp;</li>
+							<li >
+								<a href="index.php?dispatch=pages.view&amp;page_id=4">Thăm dò ý kiến</a>
+							</li>
+							<li class="h-sep">&nbsp;</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 			<span class="helper-block">&nbsp;</span>
 	</div>
