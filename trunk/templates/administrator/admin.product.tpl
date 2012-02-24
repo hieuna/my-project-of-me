@@ -89,6 +89,7 @@
 	<tbody>
 		<tr>
 			<td width="45%" valign="top">
+			<!-- BASIC -->
 			<table class="adminTable adminBorder">
 			   <tbody>
 			   	<tr>
@@ -116,17 +117,6 @@
 			   	<tr>
 			   		<td>Số lượng</td>
 			   		<td><input type="text" name="amount" onkeypress="return shp.numberOnly(this, event);" class="adm_inputbox" value="{$thisProduct->amount}" /></td>
-			   	</tr>
-			   	<tr>
-			   		<td>Ảnh mô tả</td>
-			   		<td>
-			   		{if $thisProduct->large_image !=""}
-			   		<div style="widtd:100%; margin: 10px 0;">
-		   				<img src="{$http_root}{$thisProduct->large_image}" width="250" border="0" />
-		   			</div>
-			   		{/if}
-			   		<input type="file" name="img" size="28" class="adm_file" />
-			   		</td>
 			   	</tr>
 			   	<tr>
 			   		<td>Trọng lượng</td>
@@ -158,6 +148,7 @@
 			   	</tr>
 			   </tbody>
 			</table>
+			<!-- PRICE -->
 			<table class="adminTable adminBorder">
 			   <tbody>
 			   	<tr>
@@ -181,6 +172,7 @@
 			   	</tr>
 			   </tbody>
 			</table>
+			<!-- COLOR -->
 			<table class="adminTable adminBorder">
 			   <tbody>
 			   	<tr>
@@ -205,8 +197,62 @@
 			   	</tr>
 			   </tbody>
 			</table>
+			<!-- IMAGE -->
+			<table class="adminTable adminBorder">
+			   <tbody>
+			   	<tr>
+			   		<td colspan="3" class="title_box_tbl">Thông tin về hình ảnh</td>
+			   	</tr>
+			   	<tr>
+			   		<td valign="top">
+				   		<div class="image_box">
+				   			{if $thisProduct->image1 !=""}
+			   				<img src="{$http_root}{$thisProduct->image1}" width="100" border="0" />
+			   				{/if}
+			   			</div>
+				   		<input type="file" name="img" size="10" class="adm_file" />
+			   		</td>
+			   		<td valign="top">
+				   		<div class="image_box">
+				   			{if $thisProduct->image2 !=""}
+			   				<img src="{$http_root}{$thisProduct->image2}" width="100" border="0" />
+			   				{/if}
+			   			</div>
+				   		<input type="file" name="img2" size="10" class="adm_file" />
+			   		</td>
+			   		<td valign="top">
+				   		<div class="image_box">
+				   			{if $thisProduct->image3 !=""}
+			   				<img src="{$http_root}{$thisProduct->image3}" width="100" border="0" />
+			   				{/if}
+			   			</div>
+				   		<input type="file" name="img3" size="10" class="adm_file" />
+			   		</td>
+			   	</tr>
+			   	<tr>
+			   		<td valign="top">
+				   		<div class="image_box">
+				   			{if $thisProduct->image4 !=""}
+			   				<img src="{$http_root}{$thisProduct->image4}" width="100" border="0" />
+			   				{/if}
+			   			</div>
+				   		<input type="file" name="img4" size="10" class="adm_file" />
+			   		</td>
+			   		<td valign="top">
+				   		<div class="image_box">
+				   			{if $thisProduct->image5 !=""}
+			   				<img src="{$http_root}{$thisProduct->image5}" width="100" border="0" />
+			   				{/if}
+			   			</div>
+				   		<input type="file" name="img5" size="10" class="adm_file" />
+			   		</td>
+			   		<td></td>
+			   	</tr>
+			   </tbody>
+			</table>
 			</td>
 			<td valign="top">
+			<!-- DESCIPTION -->
 			<table class="adminTable adminBorder">
 			   <tbody>
 			   	<tr>
