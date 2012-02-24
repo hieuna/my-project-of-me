@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-24 00:29:48
+<?php /* Smarty version 2.6.10, created on 2012-02-24 12:03:29
          compiled from D:/AppServ/www/projects/templates/administrator/admin.product.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 373, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 419, false),)), $this); ?>
 <div id="toolbar-box">
    <div class="t">
    	<div class="t">
@@ -97,6 +97,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
 	<tbody>
 		<tr>
 			<td width="45%" valign="top">
+			<!-- BASIC -->
 			<table class="adminTable adminBorder">
 			   <tbody>
 			   	<tr>
@@ -154,18 +155,6 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 " /></td>
 			   	</tr>
 			   	<tr>
-			   		<td>Ảnh mô tả</td>
-			   		<td>
-			   		<?php if ($this->_tpl_vars['thisProduct']->large_image != ""): ?>
-			   		<div style="widtd:100%; margin: 10px 0;">
-		   				<img src="<?php echo $this->_tpl_vars['http_root'];  echo $this->_tpl_vars['thisProduct']->large_image; ?>
-" width="250" border="0" />
-		   			</div>
-			   		<?php endif; ?>
-			   		<input type="file" name="img" size="28" class="adm_file" />
-			   		</td>
-			   	</tr>
-			   	<tr>
 			   		<td>Trọng lượng</td>
 			   		<td><input type="text" name="model" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->weight; ?>
 " /></td>
@@ -201,6 +190,7 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 			   	</tr>
 			   </tbody>
 			</table>
+			<!-- PRICE -->
 			<table class="adminTable adminBorder">
 			   <tbody>
 			   	<tr>
@@ -228,6 +218,7 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 			   	</tr>
 			   </tbody>
 			</table>
+			<!-- COLOR -->
 			<table class="adminTable adminBorder">
 			   <tbody>
 			   	<tr>
@@ -281,8 +272,67 @@ $this->_sections['foo']['last']       = ($this->_sections['foo']['iteration'] ==
 			   	</tr>
 			   </tbody>
 			</table>
+			<!-- IMAGE -->
+			<table class="adminTable adminBorder">
+			   <tbody>
+			   	<tr>
+			   		<td colspan="3" class="title_box_tbl">Thông tin về hình ảnh</td>
+			   	</tr>
+			   	<tr>
+			   		<td valign="top">
+				   		<div class="image_box">
+				   			<?php if ($this->_tpl_vars['thisProduct']->image1 != ""): ?>
+			   				<img src="<?php echo $this->_tpl_vars['http_root'];  echo $this->_tpl_vars['thisProduct']->image1; ?>
+" width="100" border="0" />
+			   				<?php endif; ?>
+			   			</div>
+				   		<input type="file" name="img" size="10" class="adm_file" />
+			   		</td>
+			   		<td valign="top">
+				   		<div class="image_box">
+				   			<?php if ($this->_tpl_vars['thisProduct']->image2 != ""): ?>
+			   				<img src="<?php echo $this->_tpl_vars['http_root'];  echo $this->_tpl_vars['thisProduct']->image2; ?>
+" width="100" border="0" />
+			   				<?php endif; ?>
+			   			</div>
+				   		<input type="file" name="img2" size="10" class="adm_file" />
+			   		</td>
+			   		<td valign="top">
+				   		<div class="image_box">
+				   			<?php if ($this->_tpl_vars['thisProduct']->image3 != ""): ?>
+			   				<img src="<?php echo $this->_tpl_vars['http_root'];  echo $this->_tpl_vars['thisProduct']->image3; ?>
+" width="100" border="0" />
+			   				<?php endif; ?>
+			   			</div>
+				   		<input type="file" name="img3" size="10" class="adm_file" />
+			   		</td>
+			   	</tr>
+			   	<tr>
+			   		<td valign="top">
+				   		<div class="image_box">
+				   			<?php if ($this->_tpl_vars['thisProduct']->image4 != ""): ?>
+			   				<img src="<?php echo $this->_tpl_vars['http_root'];  echo $this->_tpl_vars['thisProduct']->image4; ?>
+" width="100" border="0" />
+			   				<?php endif; ?>
+			   			</div>
+				   		<input type="file" name="img4" size="10" class="adm_file" />
+			   		</td>
+			   		<td valign="top">
+				   		<div class="image_box">
+				   			<?php if ($this->_tpl_vars['thisProduct']->image5 != ""): ?>
+			   				<img src="<?php echo $this->_tpl_vars['http_root'];  echo $this->_tpl_vars['thisProduct']->image5; ?>
+" width="100" border="0" />
+			   				<?php endif; ?>
+			   			</div>
+				   		<input type="file" name="img5" size="10" class="adm_file" />
+			   		</td>
+			   		<td></td>
+			   	</tr>
+			   </tbody>
+			</table>
 			</td>
 			<td valign="top">
+			<!-- DESCIPTION -->
 			<table class="adminTable adminBorder">
 			   <tbody>
 			   	<tr>
