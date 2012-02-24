@@ -9,6 +9,7 @@ define('TBL_PRODUCT_DISCOUNT', 'tbl_products_discount');
 define('TBL_PRODUCT_COLOR', 'tbl_products_color');
 define('TBL_PRODUCT_FEAUTURE', 'tbl_products_feauture');
 define('TBL_PRODUCT_SALE', 'tbl_products_sale');
+define('TBL_MENU', 'tbl_menu');
 
 
 define('TBL_ADMIN','tbl_admins');

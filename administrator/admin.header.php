@@ -28,6 +28,7 @@ include "../includes/class_site.php";
 include "../includes/class_hotdeal.php";
 include "../includes/class_customer_hotdeal.php";
 include "../includes/class_banner.php";
+include "../includes/class_menu.php";
 include "../includes/class_datetime.php";
 include "../includes/class_database.php";
 include "../includes/class_settings.php";
