@@ -43,9 +43,11 @@ class PGProduct{
 	var $discount;
 	var $percent;
 	//TBL_PRODUCT_IMAGE
-	var $small_image;
-	var $medium_image;
-	var $large_image;
+	var $image1;
+	var $image2;
+	var $image3;
+	var $image4;
+	var $image5;
 	
 	function __construct(){
 		//TBL_PRODUCT
@@ -80,9 +82,11 @@ class PGProduct{
 		$this->discount = 0;
 		$this->percent = 0;
 		//TBL_PRODUCT_IMAGE
-		$this->small_image = "";
-		$this->medium_image = "";
-		$this->large_image = "";
+		$this->image1 = "";
+		$this->image2 = "";
+		$this->image3 = "";
+		$this->image4 = "";
+		$this->image5 = "";
 	}
 	
 	/*
@@ -163,9 +167,11 @@ class PGProduct{
 				$this->page_title		= $objProduct->page_title;
 				
 				//TBL_PRODUCT_IMAGE
-				$this->small_image		= $objProduct->small_image;
-				$this->medium_image		= $objProduct->medium_image;
-				$this->large_image		= $objProduct->large_image;
+				$this->image1		= $objProduct->image1;
+				$this->image2		= $objProduct->image2;
+				$this->image3		= $objProduct->image3;
+				$this->image4		= $objProduct->image4;
+				$this->image5		= $objProduct->image5;
 			}
 		}
 		return $this;
@@ -197,9 +203,9 @@ class PGProduct{
       		)";
       		
       		$queryImage = "INSERT INTO ".TBL_PRODUCT_IMAGE."(
-      			small_image, medium_image, large_image
+      			image1, image2, image3, image4, image5
       		) VALUES (
-      			'{$objProduct->small_image}', '{$objProduct->medium_image}', '{$objProduct->large_image}'
+      			'{$objProduct->image1}', '{$objProduct->image2}', '{$objProduct->image3}', '{$objProduct->image4}', '{$objProduct->image5}'
       		)";
       		
 	      	if ($database->db_query($sql) && $database->db_query($query) && $database->db_query($queryImage)) $this->is_message = "Thêm mới sản phẩm thành công !";
@@ -239,9 +245,11 @@ class PGProduct{
 					WHERE product_id='{$objProduct->product_id}' LIMIT 1";
 			
 			$queryImage = "UPDATE ".TBL_PRODUCT_IMAGE." SET 
-					small_image='{$objProduct->small_image}', 
-					medium_image='{$objProduct->medium_image}',
-					large_image='{$objProduct->large_image}'
+					image1='{$objProduct->image1}', 
+					image2='{$objProduct->image2}',
+					image3='{$objProduct->image3}',
+					image4='{$objProduct->image4}',
+					image5='{$objProduct->image5}'
 					WHERE product_id='{$objProduct->product_id}' LIMIT 1";
 			if ($database->db_query($sql) && $database->db_query($query) && $database->db_query($queryImage)) $this->is_message = "Cập nhật sản phẩm thành công !";
 		}
