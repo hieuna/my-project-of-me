@@ -314,7 +314,7 @@ class PGProduct{
 	/*
  	* FONT-END
  	*/
-	public function ProducsHotDeal($start=null, $limit=null){
+	public function ProducsHotDeal(){
 		global $database;
 		
 		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id";
@@ -322,20 +322,22 @@ class PGProduct{
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
 		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
 		
-		if (is_numeric($start) && is_numeric($limit)){
-			$wLimit = " LIMIT ".$start.", ".$limit;
+		$query = "SELECT category_id, name FROM ".TBL_CATEGORY." WHERE status=1";
+		$results_cate = $database->db_query($query);
+		$html = "";
+		$i = 0;
+		while ($rows = $database->db_fetch_assoc($results_cate)){
+			$sql = "SELECT p.product_id, p.category_id, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm ".$where." AND p.category_id=".$rows["category_id"].$orderBy;
+			$results = $database->db_query($sql);
+			while ($row = $database->db_fetch_assoc($results)){
+				$html .= "<script type='text/javascript'>";
+				$html .= "items[".$i."] = {name: '".$row["name"]."', link: 'index.php?dispatch=view.product&product_id=".$row["product_id"]."', image: '".$row["image1"]."', cat_id: '".$row["category_id"]."', width: 75, height: 75};";
+				$html .= "</script>\n";
+				$i++;
+			}
+			$html .= '<a name="'.$rows["category_id"].'" class="cm-deals-category">'.$rows["name"].'</a>&nbsp;&nbsp;';
 		}
-		
-		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm ".$where.$orderBy.$wLimit;
-		$results = $database->db_query($sql);
-		$i=1;
-		while ($row = $database->db_fetch_assoc($results)){
-			$row["link"] = "index.php?dispatch=view.product&product_id=".$row["product_id"];
-			$row["stt"]	= $i;
-			$lsProducts[] = $row;
-			$i++;
-		}
-		return $lsProducts;
+		return $html;
 	}
 	
 	public function ProductSpecial($start=null, $limit=null){
