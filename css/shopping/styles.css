@@ -642,6 +642,7 @@ p.price {
 .sidebox-wrapper {
 	border: 1px solid #1ca434;
 	margin-bottom: 8px;
+	border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; behavior: url(ie-css3.htc);
 }
 .sidebox-title {
 	background: #1ca434 url(images/sb_title_bg.gif) repeat-x left top;
@@ -667,6 +668,7 @@ p.price {
 .sidebox-categories-wrapper {
 	border: 1px solid #1ca434;
 	margin-bottom: 8px;
+	border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; behavior: url(ie-css3.htc);
 }
 .sidebox-categories-wrapper .sidebox-title {
 	padding-left: 10px;

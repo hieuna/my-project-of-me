@@ -4,51 +4,19 @@
 					<div class="sidebox-body">
 				
 				<div class="clear">
+					{$showMenuLeft}
 					<ul id="vmenu_8" class="dropdown dropdown-vertical">
+						{section name=loops loop=$lsMenuLeft}
 						<li class="dir">
 							<ul>
-								<li><a href="index.php?dispatch=categories.view&amp;category_id=152">Children&#039;s Books</a></li>
+								<li><a href="index.php?dispatch=categories.view&amp;category_id=152">sadsadasdsa</a></li>
 								<li class="h-sep">&nbsp;</li>
-								<li><a href="index.php?dispatch=categories.view&amp;category_id=153">Computers &amp; Internet</a></li>
+								<li><a href="index.php?dispatch=categories.view&amp;category_id=153">Nhóm sản phẩm con</a></li>
 							</ul>
-							<a href="index.php?dispatch=categories.view&amp;category_id=93">Books</a>
+							<a href="index.php?dispatch=categories.view&amp;category_id=93">{$lsMenuLeft[loops].name}</a>
 						</li>
 						<li class="h-sep">&nbsp;</li>
-						<li class="dir">
-							<ul>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=122">Desktops</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=86">Handhelds &amp; PDAs</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=99">Monitors &amp; Projectors</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=156">Computer Cases</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=157">Motherboards</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=158">Processors</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=159">Memory modules</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=161">Video Cards</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=164">Modems</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=162">Printers</a></li>
-							</ul>
-							<a href="index.php?dispatch=categories.view&amp;category_id=85">Computers</a>
-						</li>
-						<li class="h-sep">&nbsp;</li>
-						<li class="dir">
-							<ul>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=114">Blues</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=115">Classic Rock</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=116">Hard Rock &amp; Metal</a></li>
-							</ul>
-							<a href="index.php?dispatch=categories.view&amp;category_id=113">Music</a>
-						</li>
+						{/section}
 					</ul>
 				
 				</div></div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-24 23:17:24
+<?php /* Smarty version 2.6.10, created on 2012-02-25 10:55:24
          compiled from D:/AppServ/www/projects/templates/shopping/header.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['dir_template'])."/header_global.tpl", 'smarty_include_vars' => array()));
@@ -16,7 +16,7 @@ unset($_smarty_tpl_vars);
 		<div id="header">
 			<div class="header-helper-container">
 				<div class="logo-image">
-					<a href="index.php"><img src="/cscart/skins/default_orange/customer/images/customer_area_logo.png" width="176" height="69" border="0" alt="Simbirsk Technologies Ltd" /></a>
+					<a href="index.php"><img src="/cscart/skins/default_orange/customer/images/customer_area_logo.png" width="176" height="69" border="0" alt="Logo sẽ đặt ở đây" /></a>
 				</div>
 				<p class="quick-links">&nbsp;
 						<a href="index.php">Trang chủ</a>
