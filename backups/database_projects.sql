@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Feb 24, 2012 at 06:05 PM
+-- Generation Time: Feb 25, 2012 at 12:12 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -414,13 +414,34 @@ CREATE TABLE `tbl_menu` (
   `parent_id` int(11) NOT NULL,
   `ordering` int(11) NOT NULL,
   PRIMARY KEY  (`menu_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
 
 -- 
 -- Dumping data for table `tbl_menu`
 -- 
 
-INSERT INTO `tbl_menu` VALUES (1, '0', 'Quần áo trẻ nam', 'Quan-ao-tre-nam', 'top', 'link', 1, 0, 1);
+INSERT INTO `tbl_menu` VALUES (1, '3', 'Thời trang bé Gái', 'Thoi-trang-be-Gai', 'top', 'category', 1, 0, 1);
+INSERT INTO `tbl_menu` VALUES (2, '3', 'Thời trang bé Trai', 'Thoi-trang-be-Trai', 'top', 'category', 1, 0, 1);
+INSERT INTO `tbl_menu` VALUES (3, '3', 'Thời trang Baby Gap', 'Thoi-trang-Baby-Gap', 'index.php?option=com_order&task=order', 'category', 1, 0, 1);
+INSERT INTO `tbl_menu` VALUES (4, '3', 'Thời trang sơ sinh', 'Thoi-trang-so-sinh', 'index.php?option=com_order&task=order', 'category', 1, 0, 0);
+INSERT INTO `tbl_menu` VALUES (5, '3', 'Quần Chip', 'Quan-Chip', '', 'category', 1, 0, 0);
+INSERT INTO `tbl_menu` VALUES (6, '3', 'Áo Khoác', 'Ao-khoac', '', 'category', 1, 0, 0);
+INSERT INTO `tbl_menu` VALUES (7, '3', 'Áo Mưa', 'Ao-Mua', '', 'category', 1, 0, 0);
+INSERT INTO `tbl_menu` VALUES (8, '3', 'Chăn - Khăn', 'Chan-Khan', '', 'category', 1, 0, 0);
+INSERT INTO `tbl_menu` VALUES (9, '3', 'Kẹp tóc', 'Kep-toc', '', 'category', 1, 0, 0);
+INSERT INTO `tbl_menu` VALUES (10, '3', 'Nón - Mắt Kính', 'Non-Mat-Kinh', '', 'category', 1, 0, 0);
+INSERT INTO `tbl_menu` VALUES (11, '3', 'Ba lô', 'Ba-lo', '', 'category', 1, 0, 0);
+INSERT INTO `tbl_menu` VALUES (12, '3', 'Tất Chân', 'Tat-Chan', '', 'category', 1, 0, 0);
+INSERT INTO `tbl_menu` VALUES (13, '3', 'Giày - Dép', 'Giay-Dep', '', 'category', 1, 0, 0);
+INSERT INTO `tbl_menu` VALUES (14, '3', 'Phụ Kiện Sơ Sinh', 'Phu-Kien-So-Sinh', '', 'category', 1, 4, 0);
+INSERT INTO `tbl_menu` VALUES (15, '3', 'Body sơ sinh', 'Body-so-sinh', '', 'category', 1, 4, 0);
+INSERT INTO `tbl_menu` VALUES (16, '3', 'Quần áo sơ sinh', 'Quan-ao-so-sinh', '', 'category', 1, 4, 0);
+INSERT INTO `tbl_menu` VALUES (17, '3', 'Váy cao cấp', 'Vay-cao-cap', '', 'category', 1, 1, 0);
+INSERT INTO `tbl_menu` VALUES (18, '3', 'Váy', 'Vay', '', 'category', 1, 1, 0);
+INSERT INTO `tbl_menu` VALUES (19, '3', 'Áo', 'Ao', '', 'category', 1, 1, 0);
+INSERT INTO `tbl_menu` VALUES (20, '3', 'Quần', 'Quan', '', 'category', 1, 1, 0);
+INSERT INTO `tbl_menu` VALUES (21, '3', 'Đồ Bộ', 'Do-Bo', '', 'category', 1, 1, 0);
+INSERT INTO `tbl_menu` VALUES (22, '3', 'Đồ tắm', 'Do-tam', '', 'category', 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -433,13 +454,14 @@ CREATE TABLE `tbl_menutype` (
   `name` varchar(255) NOT NULL,
   `status` tinyint(1) NOT NULL default '1',
   PRIMARY KEY  (`menutype_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 -- 
 -- Dumping data for table `tbl_menutype`
 -- 
 
 INSERT INTO `tbl_menutype` VALUES (2, 'MenuTop', 1);
+INSERT INTO `tbl_menutype` VALUES (3, 'menuLeft', 1);
 
 -- --------------------------------------------------------
 
