@@ -3,12 +3,6 @@ include("header.php");
 $page_title = "Shopping";
 $dispatch		= PGRequest::GetCmd('dispatch', '');
 
-if ($dispatch){
-	
-}else{
-	
-}
-
 //Load left menu
 $objMenu = new PGMenu();
 $showMenuLeft = $objMenu->MenuVertical(" ORDER BY menu_id");
@@ -23,10 +17,15 @@ $lsProductSpecial = $objProduct->ProductSpecial(0, 9);
 
 $smarty->assign('page_title', $page_title);
 $smarty->assign('showMenuLeft', $showMenuLeft);
+$smarty->assign('lsProductHotdeal', $lsProductHotdeal);
 $smarty->assign('lsProductNews', $lsProductNews);
 $smarty->assign('lsProductSpecial', $lsProductSpecial);	
 
-$smarty->display($dir_template.'/index.tpl');
+if ($dispatch){
+	
+}else{
+	$smarty->display($dir_template.'/index.tpl');
+}
 	
 include("footer.php");
 ?>
