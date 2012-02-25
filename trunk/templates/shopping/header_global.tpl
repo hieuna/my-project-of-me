@@ -27,7 +27,7 @@
 <script src="includes/js/JQuery/jquery.cycle.all.min.js" type="text/javascript"></script>
 <!-- On Top -->
 <script src="includes/js/scrolltopcontrol.js" type="text/javascript"></script>
-
+{include file="$dir_template/script_hotdeal.tpl"}
 </head>
 
 <body>

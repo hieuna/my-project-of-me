@@ -310,6 +310,79 @@ class PGProduct{
 		
 		return $this->is_message;
 	}
+	
+	/*
+ 	* FONT-END
+ 	*/
+	public function ProducsHotDeal($start=null, $limit=null){
+		global $database;
+		
+		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id";
+		$where[] = " p.status=1";
+		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
+		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		
+		if (is_numeric($start) && is_numeric($limit)){
+			$wLimit = " LIMIT ".$start.", ".$limit;
+		}
+		
+		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm ".$where.$orderBy.$wLimit;
+		$results = $database->db_query($sql);
+		$i=1;
+		while ($row = $database->db_fetch_assoc($results)){
+			$row["link"] = "index.php?dispatch=view.product&product_id=".$row["product_id"];
+			$row["stt"]	= $i;
+			$lsProducts[] = $row;
+			$i++;
+		}
+		return $lsProducts;
+	}
+	
+	public function ProductSpecial($start=null, $limit=null){
+		global $database;
+		
+		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id";
+		$where[] = " p.status=1";
+		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
+		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		
+		if (is_numeric($start) && is_numeric($limit)){
+			$wLimit = " LIMIT ".$start.", ".$limit;
+		}
+		
+		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm ".$where.$orderBy.$wLimit;
+		$results = $database->db_query($sql);
+		$i=1;
+		while ($row = $database->db_fetch_assoc($results)){
+			$row["link"] = "index.php?dispatch=view.product&product_id=".$row["product_id"];
+			$row["stt"]	= $i;
+			$lsProducts[] = $row;
+			$i++;
+		}
+		return $lsProducts;
+	}
+	
+	public function ProductNews($start=null, $limit=null){
+		global $database;
+		
+		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id";
+		$where[] = " p.status=1";
+		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
+		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		
+		if (is_numeric($start) && is_numeric($limit)){
+			$wLimit = " LIMIT ".$start.", ".$limit;
+		}
+		
+		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm ".$where.$orderBy.$wLimit;
+		$results = $database->db_query($sql);
+		while ($row = $database->db_fetch_assoc($results)){
+			$row["link"] = "index.php?dispatch=view.product&product_id=".$row["product_id"];
+			$lsProducts[] = $row;
+		}
+		return $lsProducts;
+	}
+	
 }
 
 //class color of product
@@ -340,4 +413,5 @@ class PGColor{
 		}
 	}
 }
+
 ?>
