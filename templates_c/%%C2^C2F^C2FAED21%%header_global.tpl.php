@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-24 15:06:56
+<?php /* Smarty version 2.6.10, created on 2012-02-26 00:42:51
          compiled from D:/AppServ/www/projects/templates/shopping/header_global.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -34,7 +34,11 @@
 <script src="includes/js/JQuery/jquery.cycle.all.min.js" type="text/javascript"></script>
 <!-- On Top -->
 <script src="includes/js/scrolltopcontrol.js" type="text/javascript"></script>
-
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['dir_template'])."/script_hotdeal.tpl", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 </head>
 
 <body>

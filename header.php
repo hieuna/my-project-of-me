@@ -9,6 +9,8 @@ include "includes/define.table.php";
 include "includes/database_config.php";
 
 include "includes/class_menu.php";
+include "includes/class_category.php";
+include "includes/class_product.php";
 include "includes/class_banner.php";
 include "includes/class_hotdeal.php";
 include "includes/class_customer_hotdeal.php";
