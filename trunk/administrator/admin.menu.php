@@ -36,6 +36,7 @@ switch($task){
 		
 	case 'save':
 		$menu_id			= PGRequest::getInt('menu_id', 0, 'POST');
+		$menu_id_value		= PGRequest::getInt('menu_id_value', 0, 'POST');
 		$menutype			= PGRequest::getInt('menutype', 0, 'POST');
 		$name				= $database->getEscaped(PGRequest::getString('name', '', 'POST'));
 		$alias				= $database->getEscaped(PGRequest::getString('alias', '', 'POST'));
@@ -46,7 +47,7 @@ switch($task){
 		$parent_id			= PGRequest::GetInt('parent_id', 0, 'POST');
 		
 		$objMenu = new PGMenu();
-		$thisMenu = $objMenu->load($menu_id);
+		$thisMenu = $objMenu->load($menu_id_value);
 		if (!$objMenu->is_message){
 			$objMenu->menutype 		= $menutype;
 			$objMenu->name			= $name;

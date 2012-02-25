@@ -10,7 +10,7 @@
 		<div id="header">
 			<div class="header-helper-container">
 				<div class="logo-image">
-					<a href="index.php"><img src="/cscart/skins/default_orange/customer/images/customer_area_logo.png" width="176" height="69" border="0" alt="Simbirsk Technologies Ltd" /></a>
+					<a href="index.php"><img src="/cscart/skins/default_orange/customer/images/customer_area_logo.png" width="176" height="69" border="0" alt="Logo sẽ đặt ở đây" /></a>
 				</div>
 				<p class="quick-links">&nbsp;
 						<a href="index.php">Trang chủ</a>

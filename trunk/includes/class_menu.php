@@ -334,4 +334,50 @@ class PGMenu{
 		
 		return $this->is_message;
 	}
+	
+	/*
+	 * function show menu font-end
+	 * 
+	 */
+	public function MenuVertical($order=null){
+		global $database;
+
+		if (is_null($order)){
+			$orderBy = " ORDER BY ordering ASC, menu_id DESC";
+		}else{
+			$orderBy = $order;
+		}
+		
+		$where[] = "menutype=3";
+		$where[]= " status=1";
+		$where[] = " parent_id=0";
+		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : ''); 
+		
+		$sql = "SELECT * FROM ".TBL_MENU.$where.$orderBy;
+		$results = $database->db_query($sql);
+		$html = '<ul class="dropdown dropdown-vertical">';
+		while ($row = $database->db_fetch_assoc($results)){
+			$queryCount = "SELECT COUNT(*) AS total FROM ".TBL_MENU." WHERE status=1 AND parent_id=".$row["menu_id"];
+			$rs = $database->db_fetch_assoc($database->db_query($queryCount));
+			$total = $rs['total'];
+			$query = "SELECT name, link FROM ".TBL_MENU." WHERE status=1 AND parent_id=".$row["menu_id"]." ORDER BY ordering ASC, menu_id DESC";
+			$rsQuery = $database->db_query($query);
+			
+			$html .= '<li class="dir">';
+				if ($total>0){
+					$html .= '<ul>';
+					while ($rows = $database->db_fetch_assoc($rsQuery)){
+						$html .= '<li><a href="'.$rows["link"].'">'.$rows["name"].'</a></li>';
+						$html .= '<li class="h-sep">&nbsp;</li>';
+					}
+					$html .= '</ul>';
+				}
+				$html .= '<a href="'.$row["link"].'">'.$row["name"].'</a>';
+			$html .= '</li>';
+			$html .= '<li class="h-sep">&nbsp;</li>';
+		}
+		$html .= '</ul>';
+		
+		return $html;
+	}
 }

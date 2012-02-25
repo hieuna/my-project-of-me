@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-25 01:33:08
+<?php /* Smarty version 2.6.10, created on 2012-02-25 11:24:52
          compiled from D:/AppServ/www/projects/templates/shopping/colsLeft.tpl */ ?>
 <div class="left-column">
 	<div class="sidebox-categories-wrapper ">
@@ -6,51 +6,44 @@
 					<div class="sidebox-body">
 				
 				<div class="clear">
+					<?php echo $this->_tpl_vars['showMenuLeft']; ?>
+
 					<ul id="vmenu_8" class="dropdown dropdown-vertical">
+						<?php unset($this->_sections['loops']);
+$this->_sections['loops']['name'] = 'loops';
+$this->_sections['loops']['loop'] = is_array($_loop=$this->_tpl_vars['lsMenuLeft']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['loops']['show'] = true;
+$this->_sections['loops']['max'] = $this->_sections['loops']['loop'];
+$this->_sections['loops']['step'] = 1;
+$this->_sections['loops']['start'] = $this->_sections['loops']['step'] > 0 ? 0 : $this->_sections['loops']['loop']-1;
+if ($this->_sections['loops']['show']) {
+    $this->_sections['loops']['total'] = $this->_sections['loops']['loop'];
+    if ($this->_sections['loops']['total'] == 0)
+        $this->_sections['loops']['show'] = false;
+} else
+    $this->_sections['loops']['total'] = 0;
+if ($this->_sections['loops']['show']):
+
+            for ($this->_sections['loops']['index'] = $this->_sections['loops']['start'], $this->_sections['loops']['iteration'] = 1;
+                 $this->_sections['loops']['iteration'] <= $this->_sections['loops']['total'];
+                 $this->_sections['loops']['index'] += $this->_sections['loops']['step'], $this->_sections['loops']['iteration']++):
+$this->_sections['loops']['rownum'] = $this->_sections['loops']['iteration'];
+$this->_sections['loops']['index_prev'] = $this->_sections['loops']['index'] - $this->_sections['loops']['step'];
+$this->_sections['loops']['index_next'] = $this->_sections['loops']['index'] + $this->_sections['loops']['step'];
+$this->_sections['loops']['first']      = ($this->_sections['loops']['iteration'] == 1);
+$this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'] == $this->_sections['loops']['total']);
+?>
 						<li class="dir">
 							<ul>
-								<li><a href="index.php?dispatch=categories.view&amp;category_id=152">Children&#039;s Books</a></li>
+								<li><a href="index.php?dispatch=categories.view&amp;category_id=152">sadsadasdsa</a></li>
 								<li class="h-sep">&nbsp;</li>
-								<li><a href="index.php?dispatch=categories.view&amp;category_id=153">Computers &amp; Internet</a></li>
+								<li><a href="index.php?dispatch=categories.view&amp;category_id=153">Nhóm sản phẩm con</a></li>
 							</ul>
-							<a href="index.php?dispatch=categories.view&amp;category_id=93">Books</a>
+							<a href="index.php?dispatch=categories.view&amp;category_id=93"><?php echo $this->_tpl_vars['lsMenuLeft'][$this->_sections['loops']['index']]['name']; ?>
+</a>
 						</li>
 						<li class="h-sep">&nbsp;</li>
-						<li class="dir">
-							<ul>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=122">Desktops</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=86">Handhelds &amp; PDAs</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=99">Monitors &amp; Projectors</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=156">Computer Cases</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=157">Motherboards</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=158">Processors</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=159">Memory modules</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=161">Video Cards</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=164">Modems</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=162">Printers</a></li>
-							</ul>
-							<a href="index.php?dispatch=categories.view&amp;category_id=85">Computers</a>
-						</li>
-						<li class="h-sep">&nbsp;</li>
-						<li class="dir">
-							<ul>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=114">Blues</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=115">Classic Rock</a></li>
-								<li class="h-sep">&nbsp;</li>
-								<li ><a href="index.php?dispatch=categories.view&amp;category_id=116">Hard Rock &amp; Metal</a></li>
-							</ul>
-							<a href="index.php?dispatch=categories.view&amp;category_id=113">Music</a>
-						</li>
+						<?php endfor; endif; ?>
 					</ul>
 				
 				</div></div>
