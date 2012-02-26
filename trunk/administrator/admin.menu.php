@@ -46,6 +46,9 @@ switch($task){
 		$ordering			= PGRequest::GetInt('ordering', 0, 'POST');
 		$parent_id			= PGRequest::GetInt('parent_id', 0, 'POST');
 		
+		//process link
+		if ($type == 'category') $type_link = _CATEGORY_VALUE_LINK.$link;
+		
 		$objMenu = new PGMenu();
 		$thisMenu = $objMenu->load($menu_id_value);
 		if (!$objMenu->is_message){
@@ -59,7 +62,7 @@ switch($task){
 				$name_alias			= preg_replace('/[^a-z0-9]+/i','-',$name_alias);
 				$objMenu->alias 	= $name_alias;
 			}
-			$objMenu->link			= $link;
+			if ($type !="") $objMenu->link			= $type_link;			
 			$objMenu->status		= $status;
 			$objMenu->type			= $type;
 			$objMenu->ordering		= $ordering;

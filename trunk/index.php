@@ -1,29 +1,26 @@
 <?php 
 include("header.php");
-$page_title = "Shopping";
+include("application.php");
+
 $dispatch		= PGRequest::GetCmd('dispatch', '');
 
-//Load left menu
-$objMenu = new PGMenu();
-$showMenuLeft = $objMenu->MenuVertical(" ORDER BY menu_id");
-
-$objProduct =  new PGProduct();
-//Load moduels product hotdeal
-$lsProductHotdeal = $objProduct->ProducsHotDeal();
-//Load modules new product
-$lsProductNews = $objProduct->ProductNews(0, 5);
-//Load modules special product
-$lsProductSpecial = $objProduct->ProductSpecial(0, 9);
-
-$smarty->assign('page_title', $page_title);
-$smarty->assign('showMenuLeft', $showMenuLeft);
-$smarty->assign('lsProductHotdeal', $lsProductHotdeal);
-$smarty->assign('lsProductNews', $lsProductNews);
-$smarty->assign('lsProductSpecial', $lsProductSpecial);	
-
-if ($dispatch){
-	
+if ($dispatch == 'category.view'){
+	require_once 'category.product.php';
+}else if ($dispatch == 'product.view'){
+	require_once 'product.view.php';
 }else{
+	$page_title = "Shopping";
+	
+	//Load modules special product
+	$lsProductSpecial = $objProduct->ProductSpecial(0, 9);
+	//load moduels discount product
+	$lsProductDiscount = $objProduct->ProductDiscount(0, 9);
+
+	
+	$smarty->assign('page_title', $page_title);
+	$smarty->assign('lsProductSpecial', $lsProductSpecial);
+	$smarty->assign('lsProductDiscount', $lsProductDiscount);	
+	
 	$smarty->display($dir_template.'/index.tpl');
 }
 	

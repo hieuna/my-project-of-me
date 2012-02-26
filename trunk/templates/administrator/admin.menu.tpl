@@ -118,9 +118,10 @@
    		<td><input type="text" name="alias" class="adm_inputbox" value="{$thisMenu->alias}" /></td>
    	</tr>
    	<tr>
-   		<td>Kiểu menu</td>
+   		<td>Kiểu link</td>
    		<td>
    			<select name="type" class="adm_selectbox">
+   				<option value="">Lựa chọn kiểu link</option>
    				<option value="category">Link nhóm sản phẩm</option>
    				<option value="product">Link sản phẩm</option>
    				<option value="feauture">Link tính năng</option>
@@ -130,7 +131,7 @@
    	</tr>
    	<tr>
    		<td>Link đến</td>
-   		<td><input type="text" name="link" class="adm_inputbox" value="{$thisMenu->link}" /></td>
+   		<td><div id="process_link">{$thisMenu->link}</div></td>
    	</tr>
    	<tr>
    		<td>Thứ tự</td>
@@ -150,8 +151,20 @@
    		</td>
    	</tr>
    </tfoot>
-</table>
+</table>			
 </form>
+{literal}
+<<script type="text/javascript">
+<!--
+$(function(){
+	$('select[name=type]').change(function(){
+		var value = $('select[name=type]').val();
+		$('#process_link').load("ajax.php?task=process_link&value="+value);
+	});
+});
+//-->
+</script>
+{/literal}
 {else}
 <form name="adminForm" method="post" action="{$page}">
 	<table style="margin-bottom:5px;">

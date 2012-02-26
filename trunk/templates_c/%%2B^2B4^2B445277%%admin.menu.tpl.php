@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-24 22:42:19
+<?php /* Smarty version 2.6.10, created on 2012-02-26 06:25:36
          compiled from D:/AppServ/www/projects/templates/administrator/admin.menu.tpl */ ?>
 <div id="toolbar-box">
    <div class="t">
@@ -177,9 +177,10 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 " /></td>
    	</tr>
    	<tr>
-   		<td>Kiểu menu</td>
+   		<td>Kiểu link</td>
    		<td>
    			<select name="type" class="adm_selectbox">
+   				<option value="">Lựa chọn kiểu link</option>
    				<option value="category">Link nhóm sản phẩm</option>
    				<option value="product">Link sản phẩm</option>
    				<option value="feauture">Link tính năng</option>
@@ -189,8 +190,8 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
    	</tr>
    	<tr>
    		<td>Link đến</td>
-   		<td><input type="text" name="link" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisMenu']->link; ?>
-" /></td>
+   		<td><div id="process_link"><?php echo $this->_tpl_vars['thisMenu']->link; ?>
+</div></td>
    	</tr>
    	<tr>
    		<td>Thứ tự</td>
@@ -212,8 +213,21 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
    		</td>
    	</tr>
    </tfoot>
-</table>
+</table>			
 </form>
+<?php echo '
+<<script type="text/javascript">
+<!--
+$(function(){
+	$(\'select[name=type]\').change(function(){
+		var value = $(\'select[name=type]\').val();
+		$(\'#process_link\').load("ajax.php?task=process_link&value="+value);
+	});
+});
+//-->
+</script>
+'; ?>
+
 <?php else: ?>
 <form name="adminForm" method="post" action="<?php echo $this->_tpl_vars['page']; ?>
 ">
