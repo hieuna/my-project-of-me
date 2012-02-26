@@ -67,7 +67,7 @@ var currencies = {
 };
 
 var cart_language = '';
-var images_dir = '';
+var images_dir = '{/literal}{$http_root}{literal}css/{/literal}{$name_template}{literal}/images/';
 var notice_displaying_time = 5;
 var cart_prices_w_taxes = false;
 var translate_mode = false;

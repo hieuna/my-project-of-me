@@ -57,10 +57,10 @@ class PGProduct{
 		$this->price = 0;
 		$this->price_ny = 0;
 		$this->amount = 0;
-		$this->weight = 0;
-		$this->length = 0;
-		$this->width = 0;
-		$this->height = 0;
+		$this->weight = "";
+		$this->length = "";
+		$this->width = "";
+		$this->height = "";
 		$this->number_color = 0;
 		$this->status = 1;
 		$this->ordering = 0;
@@ -172,6 +172,10 @@ class PGProduct{
 				$this->image3		= $objProduct->image3;
 				$this->image4		= $objProduct->image4;
 				$this->image5		= $objProduct->image5;
+				if ($objProduct->number_color > 0){
+					foreach ($array_expression as $value) {
+					}
+				}
 			}
 		}
 		return $this;
