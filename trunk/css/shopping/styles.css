@@ -1681,7 +1681,7 @@ a.secondary-link {
 	text-decoration: line-through; color: #666; font-weight: normal;
 }
 .color{
-	display: block; float: left; width: 20px; height: 20px; border: 1px solid #ccc; margin-left: 10px;
+	display: block; float: left; width: 20px; height: 20px; border: 1px solid #ccc; margin-left: 10px; cursor: pointer;
 }
 .fl{
 	float: left;

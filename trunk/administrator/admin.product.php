@@ -180,8 +180,8 @@ switch($task){
 			$objProduct->save($thisProduct);
 			$objColor = new PGColor();
 			for ($i=1; $i<=$number_color; $i++){
-				//echo PGRequest::GetCmd('colors_'.$i, '', 'POST');
-				$objColor->save($objProduct->product_info['product_id'], PGRequest::GetCmd('colors_'.$i, '', 'POST'), '#'.PGRequest::GetCmd('colors_'.$i, '', 'POST'));
+				//echo PGRequest::GetCmd('price_color_'.$i, '', 'POST'); die;
+				$objColor->save($objProduct->product_info['product_id'], PGRequest::GetCmd('colors_'.$i, '', 'POST'), '#'.PGRequest::GetCmd('colors_'.$i, '', 'POST'), PGRequest::GetInt('price_color_'.$i, 0, 'POST'), 1);
 			}
 			cheader($page);
 		}else{

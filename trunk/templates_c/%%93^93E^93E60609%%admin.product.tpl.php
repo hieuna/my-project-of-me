@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-26 09:58:55
+<?php /* Smarty version 2.6.10, created on 2012-02-26 10:50:27
          compiled from D:/AppServ/www/projects/templates/administrator/admin.product.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 419, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 425, false),)), $this); ?>
 <div id="toolbar-box">
    <div class="t">
    	<div class="t">
@@ -267,6 +267,18 @@ $this->_sections['foo']['last']       = ($this->_sections['foo']['iteration'] ==
 			   		<td valign="top"></td>
 			   		<td>
 			   			<div id="show_color">
+			   			<?php $_from = $this->_tpl_vars['thisProduct']->colors; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['k'] => $this->_tpl_vars['color']):
+?>
+			   			<p style="margin:10px 0;">
+							<label>Chọn màu: </label><input type="text" maxlength="6" name="colors_<?php echo $this->_tpl_vars['k']; ?>
+" size="6" class="colorpickerField adm_inputbox medium" value="<?php echo $this->_tpl_vars['color']['value_color']; ?>
+" />
+							<label>Giá: </label><input type="text" name="price_color_<?php echo $this->_tpl_vars['k']; ?>
+" class="adm_inputbox medium" onkeypress="return shp.numberOnly(this, event);" value="<?php echo $this->_tpl_vars['color']['price_color']; ?>
+" />
+						</p>
+			   			<?php endforeach; endif; unset($_from); ?>
 			   			</div>
 			   		</td>
 			   	</tr>

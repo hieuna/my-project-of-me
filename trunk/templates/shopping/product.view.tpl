@@ -69,11 +69,13 @@
 														<span class="price">VNĐ</span>
 													</span>
 												</span>
-												{section name=loops loop=$product->number_color}
-												<span class="color" style="background-color:{$product->value_color}"></span>
-												{sectionelse}
+												{if $product->number_color>0}
+													{foreach from=$product->colors key=k item=color}
+														<span class="color" style="background-color: {$color.value_color}" id="color_{$color.value_color}"></span>
+													{/foreach}
+												{else}
 												<span class="fl">Một giá với toàn bộ các màu</span>
-												{/section}
+												{/if}
 											</p>
 											{if $product->percent>0}
 											<p>	
