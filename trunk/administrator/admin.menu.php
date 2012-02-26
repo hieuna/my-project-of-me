@@ -48,6 +48,10 @@ switch($task){
 		
 		//process link
 		if ($type == 'category') $type_link = _CATEGORY_VALUE_LINK.$link;
+		else if ($type == 'product') $type_link = _PRODUCT_VALUE_LINK.$link;
+		else if ($type == 'feauture') $type_link = _FEAUTURE_VALUE_LINK.$link;
+		else if ($type == 'category.news') $type_link = _CATNEW_VALUE_LINK.$link;
+		else if ($type == 'news') $type_link = _NEW_VALUE_LINK.$link;
 		
 		$objMenu = new PGMenu();
 		$thisMenu = $objMenu->load($menu_id_value);
@@ -104,20 +108,21 @@ switch($task){
 		$limit = PGRequest::getInt('limit', $setting['setting_list_limit'], 'POST');
 		
 		//CONDITION
+		$where[] = " m.menutype=mt.menutype_id";
 		if ($search){
-			$where[] = " name LIKE'%$search%'";
+			$where[] = " m.name LIKE'%$search%'";
 		}
 		if ($filter_status == 0) {			
-			$where[] = " status=0";
+			$where[] = " m.status=0";
 		}else if ($filter_status == 3){
-			$where[] = " status>=0";			
+			$where[] = " m.status>=0";			
 		}else{
-			$where[] = " status=".$filter_status;
+			$where[] = " m.status=".$filter_status;
 		}
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
-		$order = " ORDER BY ordering ASC, menu_id DESC";
+		$order = " ORDER BY m.ordering ASC, m.menu_id DESC";
 		// GET THE TOTAL NUMBER OF RECORDS
-		$query = "SELECT COUNT(*) AS total FROM ".TBL_MENU.$where;
+		$query = "SELECT COUNT(*) AS total FROM ".TBL_MENU." AS m, ".TBL_MENUTYPE." AS mt ".$where;
 		$results = $database->db_fetch_assoc($database->db_query($query));
 		// PHAN TRANG
 		$pager = new pager($limit, $results['total'], $p);

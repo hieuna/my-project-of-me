@@ -198,7 +198,7 @@ class PGMenu{
 		global $database;
 
 		if (is_null($order)){
-			$orderBy = " ORDER BY ordering ASC, menu_id DESC";
+			$orderBy = " ORDER BY m.ordering ASC, m.menu_id DESC";
 		}else{
 			$orderBy = $order;
 		}
@@ -206,9 +206,13 @@ class PGMenu{
 			$wLimit = " LIMIT ".$start.", ".$limit;
 		}
 		
-		$sql = "SELECT * FROM ".TBL_MENU.$where.$orderBy.$wLimit;
+		$sql = "SELECT m.*, mt.name AS nametype FROM ".TBL_MENU." AS m, ".TBL_MENUTYPE." AS mt ".$where.$orderBy.$wLimit;
 		$results = $database->db_query($sql);
 		while ($row = $database->db_fetch_assoc($results)){
+			$query = "SELECT name AS nameparent FROM ".TBL_MENU." WHERE menu_id=".$row["parent_id"];
+			$result = $database->db_query($query);
+			$thisName = $database->getRow($result);
+			$row["nameparent"] = $thisName["nameparent"];
 			$lsMenu[] = $row;
 		}
 		

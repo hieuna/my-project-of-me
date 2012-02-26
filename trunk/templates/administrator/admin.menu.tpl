@@ -125,7 +125,8 @@
    				<option value="category">Link nhóm sản phẩm</option>
    				<option value="product">Link sản phẩm</option>
    				<option value="feauture">Link tính năng</option>
-   				<option value="news">Link nhóm tin tức</option>
+   				<option value="category.news">Link nhóm tin tức</option>
+   				<option value="news">Link đến bài tin tức</option>
    			</select>
    		</td>
    	</tr>
@@ -227,13 +228,17 @@ $(function(){
 					<a href="{$page}?task=edit&menu_id={$lsMenu[loops].menu_id}">{$lsMenu[loops].name}</a>
 				</td>
 				<td align="center">{$lsMenu[loops].alias}</td>
-				<td align="center">{$lsMenu[loops].name_parent}</td>
-				<td align="center">{$lsMenu[loops].product_count}</td>
+				<td align="center">{$lsMenu[loops].nametype}</td>
+				<td align="center">{$lsMenu[loops].link}</td>
 				<td align="center">
-					{$lsMenu[loops].name_created}
+					{$lsMenu[loops].type}
 				</td>
 				<td align="center">
-					{$lsMenu[loops].created}
+					{if $lsMenu[loops].parent_id == 0}
+					<b>Nhóm chính</b>
+					{else}
+					<i>{$lsMenu[loops].nameparent}</i>
+					{/if}
 				</td>
 				<td align="center">
 					{if $lsMenu[loops].status == 1}

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-26 06:25:36
+<?php /* Smarty version 2.6.10, created on 2012-02-26 12:16:49
          compiled from D:/AppServ/www/projects/templates/administrator/admin.menu.tpl */ ?>
 <div id="toolbar-box">
    <div class="t">
@@ -184,7 +184,8 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
    				<option value="category">Link nhóm sản phẩm</option>
    				<option value="product">Link sản phẩm</option>
    				<option value="feauture">Link tính năng</option>
-   				<option value="news">Link nhóm tin tức</option>
+   				<option value="category.news">Link nhóm tin tức</option>
+   				<option value="news">Link đến bài tin tức</option>
    			</select>
    		</td>
    	</tr>
@@ -322,17 +323,21 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 				</td>
 				<td align="center"><?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['alias']; ?>
 </td>
-				<td align="center"><?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['name_parent']; ?>
+				<td align="center"><?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['nametype']; ?>
 </td>
-				<td align="center"><?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['product_count']; ?>
+				<td align="center"><?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['link']; ?>
 </td>
 				<td align="center">
-					<?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['name_created']; ?>
+					<?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['type']; ?>
 
 				</td>
 				<td align="center">
-					<?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['created']; ?>
-
+					<?php if ($this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['parent_id'] == 0): ?>
+					<b>Nhóm chính</b>
+					<?php else: ?>
+					<i><?php echo $this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['nameparent']; ?>
+</i>
+					<?php endif; ?>
 				</td>
 				<td align="center">
 					<?php if ($this->_tpl_vars['lsMenu'][$this->_sections['loops']['index']]['status'] == 1): ?>
