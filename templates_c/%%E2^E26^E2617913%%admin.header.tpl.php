@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-23 21:05:05
+<?php /* Smarty version 2.6.10, created on 2012-02-26 12:36:01
          compiled from D:/AppServ/www/projects/templates/administrator/admin.header.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['template_root'])."/administrator/admin.header_global.tpl", 'smarty_include_vars' => array()));
@@ -21,8 +21,8 @@ unset($_smarty_tpl_vars);
 			<ul id="menu">
 				<li class="node"><a href="admin.cpanel.php">Trang quản trị</a></li>
 				<li class="node"><a href="admin.admins.php">Quản lý Admin</a></li>
-				<li class="node"><a href="#">Quản lý menu chính</a></li>
-				<li class="node"><a href="#">Quản lý submenu</a></li>
+				<li class="node"><a href="admin.menutype.php">Quản lý nhóm menu</a></li>
+				<li class="node"><a href="admin.menu.php">Quản lý menu</a></li>
 				<li class="node"><a href="admin.customer_hotdeal.php">Quản lý khách hàng</a></li>
 				<li class="node"><a href="admin.banner.php">Quản lý banner</a></li>
 				<li class="node"><a href="#">Tin tức giữa</a></li>

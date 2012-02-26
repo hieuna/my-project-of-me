@@ -178,15 +178,20 @@ switch($task){
 				$objProduct->image5 = $image5;
 			}
 			$objProduct->save($thisProduct);
+			if ($product_id == 0) $pro_id = $objProduct->product_info['product_id'];
+			else $pro_id = $thisProduct->product_id;
 			$objColor = new PGColor();
-			for ($i=1; $i<=$number_color; $i++){
-				//echo PGRequest::GetCmd('price_color_'.$i, '', 'POST'); die;
-				$objColor->save($objProduct->product_info['product_id'], PGRequest::GetCmd('colors_'.$i, '', 'POST'), '#'.PGRequest::GetCmd('colors_'.$i, '', 'POST'), PGRequest::GetInt('price_color_'.$i, 0, 'POST'), 1);
+			$database->db_query("DELETE FROM ".TBL_PRODUCT_COLOR." WHERE product_id=".$pro_id);
+			$i=1;
+			while ($i<=$number_color){
+				//echo PGRequest::GetCmd('price_color_'.$i, '', 'POST');
+				$objColor->save($pro_id, PGRequest::GetCmd('colors_'.$i, '', 'POST'), PGRequest::GetCmd('colors_'.$i, '', 'POST'), PGRequest::GetInt('price_color_'.$i, 0, 'POST'), 1);
+				$i++;
 			}
-			cheader($page);
 		}else{
 			$error = $objProduct->is_message;
 		}
+		cheader($page);
 		break;
 
 	case 'publish':

@@ -22,7 +22,7 @@
 										//]]&gt;
 										</script>
 										{/literal}
-										<script src="/cscart/js/previewer.js" type="text/javascript"></script>	
+										<script src="includes/js/previewer.js" type="text/javascript"></script>	
 										<a rev="{$product->image1}" href="{$product->image1}" id="detailed_href1_742">
 										<img src="{$product->image1}" alt="{$product->name}" class="cm-thumbnails" id="det_img_742" width="250" border="0" /></a>
 										<p id="detailed_box_742" class="center">
@@ -65,13 +65,13 @@
 											<p>	
 												<span class="price-update fl">
 													<span class="price">Giá bán: 
-														<span class="price">{$product->price|number_format}</span>
+														<span class="price" id="price_{$product->product_id}">{$product->price|number_format}</span>
 														<span class="price">VNĐ</span>
 													</span>
 												</span>
 												{if $product->number_color>0}
 													{foreach from=$product->colors key=k item=color}
-														<span class="color" style="background-color: {$color.value_color}" id="color_{$color.value_color}"></span>
+														<span class="color" style="background-color: #{$color.value_color}" id="color_{$color.color_id}"></span>
 													{/foreach}
 												{else}
 												<span class="fl">Một giá với toàn bộ các màu</span>
@@ -95,7 +95,6 @@
 										
 										<div id="product_options_update_742" class="cm-reload-742">
 											<input type="hidden" value="1" name="appearance[show_product_options]">
-											<script src="/cscart/js/jquery.simpletip-1.3.1.js" type="text/javascript"></script>
 											<input type="hidden" value="1" name="appearance[details_page]">
 											<input type="hidden" value="D" name="additional_info[info_type]">
 											<input type="hidden" value="1" name="additional_info[get_icon]">
@@ -167,7 +166,17 @@
 										</div>
 									</div>
 							</form>
-							<script src="/cscart/js/tabs.js" type="text/javascript"></script>
+							{literal}
+							<script>
+							$(function(){
+								$('.color').click(function(){
+									var color_id = $(this).attr('id').substring(6);
+									$('#price_{/literal}{$product->product_id}{literal}').load("ajax.php?task=change_price_color&color_id="+color_id);
+								});
+							});
+							</script>
+							{/literal}
+							<script src="includes/js/tabs.js" type="text/javascript"></script>
 							<div class="tabs clear cm-j-tabs">
 								<ul>
 									<li class="cm-js cm-active" id="block_description"><a>Mô tả sản phẩm</a></li>

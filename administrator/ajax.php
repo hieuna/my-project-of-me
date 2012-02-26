@@ -89,4 +89,23 @@ elseif ($task=='process_link'){
 		}
 		echo '</select>';
 	}
+	else if ($value == "product"){
+		$sql = "SELECT p.product_id, pd.name FROM ".TBL_PRODUCT." AS p, ".TBL_PRODUCT_DESCRIPTION." AS pd WHERE p.product_id=pd.product_id AND p.status=1 ORDER BY p.product_id DESC";
+		$result = $database->db_query($sql);
+		echo '<select name="link" class="adm_selectbox select">';
+		echo '<option value="">Lựa chọn sản phẩm</option>';
+		while ($row = $database->db_fetch_assoc($result)){
+			echo '<option value="'.$row["product_id"].'">'.$row["name"].'</option>';
+		}
+		echo '</select>';
+	}
+	else if ($value == "feauture"){
+		echo 'Cập nhật tính năng sau...';
+	}
+	else if ($value == "category.news"){
+		echo 'Cập nhật tính năng sau...';
+	}
+	else if ($value == "news"){
+		echo 'Cập nhật tính năng sau...';
+	}
 }

@@ -15,8 +15,8 @@
 			<ul id="menu">
 				<li class="node"><a href="admin.cpanel.php">Trang quản trị</a></li>
 				<li class="node"><a href="admin.admins.php">Quản lý Admin</a></li>
-				<li class="node"><a href="#">Quản lý menu chính</a></li>
-				<li class="node"><a href="#">Quản lý submenu</a></li>
+				<li class="node"><a href="admin.menutype.php">Quản lý nhóm menu</a></li>
+				<li class="node"><a href="admin.menu.php">Quản lý menu</a></li>
 				<li class="node"><a href="admin.customer_hotdeal.php">Quản lý khách hàng</a></li>
 				<li class="node"><a href="admin.banner.php">Quản lý banner</a></li>
 				<li class="node"><a href="#">Tin tức giữa</a></li>

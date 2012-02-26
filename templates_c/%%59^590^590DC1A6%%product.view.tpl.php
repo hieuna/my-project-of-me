@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-26 10:34:26
+<?php /* Smarty version 2.6.10, created on 2012-02-26 14:47:48
          compiled from D:/AppServ/www/projects/templates/shopping/product.view.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 60, false),array('modifier', 'date_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 143, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 60, false),array('modifier', 'date_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 142, false),)), $this); ?>
 <div id="content">
 	<div class="content-helper clear">
 		<div class="central-column">
@@ -31,7 +31,7 @@ unset($_smarty_tpl_vars);
 										</script>
 										'; ?>
 
-										<script src="/cscart/js/previewer.js" type="text/javascript"></script>	
+										<script src="includes/js/previewer.js" type="text/javascript"></script>	
 										<a rev="<?php echo $this->_tpl_vars['product']->image1; ?>
 " href="<?php echo $this->_tpl_vars['product']->image1; ?>
 " id="detailed_href1_742">
@@ -84,7 +84,8 @@ unset($_smarty_tpl_vars);
 											<p>	
 												<span class="price-update fl">
 													<span class="price">Giá bán: 
-														<span class="price"><?php echo ((is_array($_tmp=$this->_tpl_vars['product']->price)) ? $this->_run_mod_handler('number_format', true, $_tmp) : number_format($_tmp)); ?>
+														<span class="price" id="price_<?php echo $this->_tpl_vars['product']->product_id; ?>
+"><?php echo ((is_array($_tmp=$this->_tpl_vars['product']->price)) ? $this->_run_mod_handler('number_format', true, $_tmp) : number_format($_tmp)); ?>
 </span>
 														<span class="price">VNĐ</span>
 													</span>
@@ -93,8 +94,8 @@ unset($_smarty_tpl_vars);
 													<?php $_from = $this->_tpl_vars['product']->colors; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['k'] => $this->_tpl_vars['color']):
 ?>
-														<span class="color" style="background-color: <?php echo $this->_tpl_vars['color']['value_color']; ?>
-" id="color_<?php echo $this->_tpl_vars['color']['value_color']; ?>
+														<span class="color" style="background-color: #<?php echo $this->_tpl_vars['color']['value_color']; ?>
+" id="color_<?php echo $this->_tpl_vars['color']['color_id']; ?>
 "></span>
 													<?php endforeach; endif; unset($_from); ?>
 												<?php else: ?>
@@ -121,7 +122,6 @@ unset($_smarty_tpl_vars);
 										
 										<div id="product_options_update_742" class="cm-reload-742">
 											<input type="hidden" value="1" name="appearance[show_product_options]">
-											<script src="/cscart/js/jquery.simpletip-1.3.1.js" type="text/javascript"></script>
 											<input type="hidden" value="1" name="appearance[details_page]">
 											<input type="hidden" value="D" name="additional_info[info_type]">
 											<input type="hidden" value="1" name="additional_info[get_icon]">
@@ -207,7 +207,18 @@ unset($_smarty_tpl_vars);
 										</div>
 									</div>
 							</form>
-							<script src="/cscart/js/tabs.js" type="text/javascript"></script>
+							<?php echo '
+							<script>
+							$(function(){
+								$(\'.color\').click(function(){
+									var color_id = $(this).attr(\'id\').substring(6);
+									$(\'#price_';  echo $this->_tpl_vars['product']->product_id;  echo '\').load("ajax.php?task=change_price_color&color_id="+color_id);
+								});
+							});
+							</script>
+							'; ?>
+
+							<script src="includes/js/tabs.js" type="text/javascript"></script>
 							<div class="tabs clear cm-j-tabs">
 								<ul>
 									<li class="cm-js cm-active" id="block_description"><a>Mô tả sản phẩm</a></li>
