@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-26 10:03:54
+<?php /* Smarty version 2.6.10, created on 2012-02-26 10:34:26
          compiled from D:/AppServ/www/projects/templates/shopping/product.view.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 60, false),array('modifier', 'date_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 141, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 60, false),array('modifier', 'date_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 143, false),)), $this); ?>
 <div id="content">
 	<div class="content-helper clear">
 		<div class="central-column">
@@ -89,33 +89,15 @@ unset($_smarty_tpl_vars);
 														<span class="price">VNĐ</span>
 													</span>
 												</span>
-												<?php unset($this->_sections['loops']);
-$this->_sections['loops']['name'] = 'loops';
-$this->_sections['loops']['loop'] = is_array($_loop=$this->_tpl_vars['product']->number_color) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
-$this->_sections['loops']['show'] = true;
-$this->_sections['loops']['max'] = $this->_sections['loops']['loop'];
-$this->_sections['loops']['step'] = 1;
-$this->_sections['loops']['start'] = $this->_sections['loops']['step'] > 0 ? 0 : $this->_sections['loops']['loop']-1;
-if ($this->_sections['loops']['show']) {
-    $this->_sections['loops']['total'] = $this->_sections['loops']['loop'];
-    if ($this->_sections['loops']['total'] == 0)
-        $this->_sections['loops']['show'] = false;
-} else
-    $this->_sections['loops']['total'] = 0;
-if ($this->_sections['loops']['show']):
-
-            for ($this->_sections['loops']['index'] = $this->_sections['loops']['start'], $this->_sections['loops']['iteration'] = 1;
-                 $this->_sections['loops']['iteration'] <= $this->_sections['loops']['total'];
-                 $this->_sections['loops']['index'] += $this->_sections['loops']['step'], $this->_sections['loops']['iteration']++):
-$this->_sections['loops']['rownum'] = $this->_sections['loops']['iteration'];
-$this->_sections['loops']['index_prev'] = $this->_sections['loops']['index'] - $this->_sections['loops']['step'];
-$this->_sections['loops']['index_next'] = $this->_sections['loops']['index'] + $this->_sections['loops']['step'];
-$this->_sections['loops']['first']      = ($this->_sections['loops']['iteration'] == 1);
-$this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'] == $this->_sections['loops']['total']);
+												<?php if ($this->_tpl_vars['product']->number_color > 0): ?>
+													<?php $_from = $this->_tpl_vars['product']->colors; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['k'] => $this->_tpl_vars['color']):
 ?>
-												<span class="color" style="background-color:<?php echo $this->_tpl_vars['product']->value_color; ?>
+														<span class="color" style="background-color: <?php echo $this->_tpl_vars['color']['value_color']; ?>
+" id="color_<?php echo $this->_tpl_vars['color']['value_color']; ?>
 "></span>
-												<?php endfor; else: ?>
+													<?php endforeach; endif; unset($_from); ?>
+												<?php else: ?>
 												<span class="fl">Một giá với toàn bộ các màu</span>
 												<?php endif; ?>
 											</p>

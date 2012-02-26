@@ -173,7 +173,10 @@ class PGProduct{
 				$this->image4		= $objProduct->image4;
 				$this->image5		= $objProduct->image5;
 				if ($objProduct->number_color > 0){
-					foreach ($array_expression as $value) {
+					$query = "SELECT value_color FROM ".TBL_PRODUCT_COLOR." WHERE product_id=".$objProduct->product_id;
+					$results = $database->db_query($query);
+					while ($row = $database->db_fetch_assoc($results)){
+						$this->colors[] = $row;
 					}
 				}
 			}
@@ -440,6 +443,8 @@ class PGProduct{
 //class color of product
 class PGColor{
 	//TBL_PRODUCT_COLOR
+	var $color_id;
+	var $product_id;
 	var $name_color;
 	var $value_color;
 	var $price_color;
@@ -447,6 +452,8 @@ class PGColor{
 	
 	function __construct(){
 		//TBL_PRODUCT_COLOR
+		$this->color_id = 0;
+		$this->product_id = 0;
 		$this->name_color = "";
 		$this->value_color = "";
 		$this->price_color = 0;
@@ -457,11 +464,15 @@ class PGColor{
 		global $database;
     
 		if (!is_object($objColor)) $objColor = $this;
-		echo $product_id;
 		if ($product_id>0){
 			for ($i=0; $i<=$number; $i++){
-				$database->db_query("INSERT INTO ".TBL_PRODUCT_COLOR." VALUES('{$product_id}', '{$value_color}', '#{$value_color}', '{$price_color}', '{$show_hide}')");
+				//echo $sql = "INSERT INTO ".TBL_PRODUCT_COLOR."(product_id, name_color, value_color, price_color, show_color) VALUES('{$product_id}', '{$value_color}', '#{$value_color}', '{$price_color}', '{$show_hide}')"; die;
+				$database->db_query("INSERT INTO ".TBL_PRODUCT_COLOR."(product_id, name_color, value_color, price_color, show_color) VALUES('{$product_id}', '{$value_color}', '#{$value_color}', '{$price_color}', '{$show_hide}')");
 			}
+		}else{
+			$sql = "UPDATE ".TBL_PRODUCT_COLOR."
+			SET 
+			";
 		}
 	}
 }

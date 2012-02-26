@@ -192,6 +192,12 @@
 			   		<td valign="top"></td>
 			   		<td>
 			   			<div id="show_color">
+			   			{foreach from=$thisProduct->colors key=k item=color}
+			   			<p style="margin:10px 0;">
+							<label>Chọn màu: </label><input type="text" maxlength="6" name="colors_{$k}" size="6" class="colorpickerField adm_inputbox medium" value="{$color.value_color}" />
+							<label>Giá: </label><input type="text" name="price_color_{$k}" class="adm_inputbox medium" onkeypress="return shp.numberOnly(this, event);" value="{$color.price_color}" />
+						</p>
+			   			{/foreach}
 			   			</div>
 			   		</td>
 			   	</tr>
