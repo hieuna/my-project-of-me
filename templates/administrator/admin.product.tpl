@@ -183,7 +183,7 @@
 			   		<td>
 			   			<select name="number_color" id="color" class="adm_selectbox">
 							{section name=foo start=1 loop=11 step=1}
-								<option value="{$smarty.section.foo.index}">{$smarty.section.foo.index} màu sản phẩm</option>
+								<option value="{$smarty.section.foo.index}"{if $thisProduct->number_color==$smarty.section.foo.index} selected="selected"{/if}}>{$smarty.section.foo.index} màu sản phẩm</option>
 							{/section}
 			   			</select>
 			   		</td>

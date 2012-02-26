@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-26 01:05:30
+<?php /* Smarty version 2.6.10, created on 2012-02-26 08:06:13
          compiled from D:/AppServ/www/projects/templates/shopping/script_hotdeal.tpl */ ?>
 <!-- Hotdeals -->
 <link href="css/<?php echo $this->_tpl_vars['name_template']; ?>
@@ -70,7 +70,7 @@ var currencies = {
 };
 
 var cart_language = \'\';
-var images_dir = \'\';
+var images_dir = \'';  echo $this->_tpl_vars['http_root'];  echo 'css/';  echo $this->_tpl_vars['name_template'];  echo '/images/\';
 var notice_displaying_time = 5;
 var cart_prices_w_taxes = false;
 var translate_mode = false;

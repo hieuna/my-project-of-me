@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-24 12:03:29
+<?php /* Smarty version 2.6.10, created on 2012-02-26 09:58:55
          compiled from D:/AppServ/www/projects/templates/administrator/admin.product.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 419, false),)), $this); ?>
@@ -257,7 +257,7 @@ $this->_sections['foo']['first']      = ($this->_sections['foo']['iteration'] ==
 $this->_sections['foo']['last']       = ($this->_sections['foo']['iteration'] == $this->_sections['foo']['total']);
 ?>
 								<option value="<?php echo $this->_sections['foo']['index']; ?>
-"><?php echo $this->_sections['foo']['index']; ?>
+"<?php if ($this->_tpl_vars['thisProduct']->number_color == $this->_sections['foo']['index']): ?> selected="selected"<?php endif; ?>}><?php echo $this->_sections['foo']['index']; ?>
  màu sản phẩm</option>
 							<?php endfor; endif; ?>
 			   			</select>
