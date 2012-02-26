@@ -7,6 +7,9 @@ include "../includes/database_config.php";
 
 include "../includes/class_datetime.php";
 include "../includes/class_database.php";
+include "../includes/class_menu.php";
+include "../includes/class_category.php";
+include "../includes/class_product.php";
 include "../includes/filter/filterinput.php";
 include "../includes/environment/uri.php";
 include "../includes/environment/request.php";
@@ -67,4 +70,23 @@ elseif ($task == 'addcolor'){
 	});
 	</script>
 	<?php 
+}
+
+//process link
+elseif ($task=='process_link'){
+	$value		= PGRequest::GetCmd('value', '');
+	if ($value == "category"){
+		$sql = "SELECT category_id, name, parent_id FROM ".TBL_CATEGORY." WHERE status=1 ORDER BY category_id DESC";
+		$result = $database->db_query($sql);
+		echo '<select name="link" class="adm_selectbox select">';
+		echo '<option value="">Lựa chọn nhóm sản phẩm</option>';
+		while ($row = $database->db_fetch_assoc($result)){
+			if ($row["parent_id"] == 0){
+				echo '<option value="'.$row["category_id"].'">'.$row["name"].'</option>';
+			}else{
+				echo '<option value="'.$row["category_id"].'">--'.$row["name"].'</option>';
+			}
+		}
+		echo '</select>';
+	}
 }

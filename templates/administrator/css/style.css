@@ -221,6 +221,9 @@ select.adm_selectbox{
 	width: 260px; border: 1px solid #ccc; height: 30px; font-size: 15px; background: url("../images/input-bg.png") no-repeat; color:#567792; padding: 4px 2px;
 	border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;
 }
+select.select{
+	background-color: #FFFFDD;
+}
 .adm_file{
 	border: none;
 }
@@ -452,7 +455,6 @@ table.adminlist .pagination {
 .image_box{
 	width: 100px; height: 100px; overflow: hidden; float: left; border: 2px solid #ccc; padding: 1px; margin: 5px 0;
 }
-
 /*-- navigation --*/
 .container {
 	clear:both; text-decoration:none;

@@ -1,4 +1,9 @@
 <?php
+define('_CATEGORY_VALUE_LINK', 'index.php?dispatch=category.view&category_id=');
+define('_PRODUCT_VALUE_LINK', 'index.php?dispatch=product.view&product_id=');
+define('_FEAUTURE_VALUE_LINK', 'index.php?dispatch=feauture.view&feauture=');
+define('_CATNEW_VALUE_LINK', 'index.php?dispatch=categorynew.view&category_id=');
+define('_NEW_VALUE_LINK', 'index.php?dispatch=new.view&news_id=');
 /*
  * Version: 1.0
  * Code By: Kiều Văn Ngọc
