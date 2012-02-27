@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Feb 26, 2012 at 04:06 PM
+-- Generation Time: Feb 27, 2012 at 06:06 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -156,11 +156,6 @@ INSERT INTO `tbl_customer_hotdel` VALUES (5, 'Phạm Hồng Quân', '', '0987811
 INSERT INTO `tbl_customer_hotdel` VALUES (6, '', '', '', '', 1270000, '0000-00-00 00:00:00', 22, 0, 1, 0, 1, '');
 INSERT INTO `tbl_customer_hotdel` VALUES (9, '', '', '', '', 0, '0000-00-00 00:00:00', 27, 0, 1, 0, 1, '');
 INSERT INTO `tbl_customer_hotdel` VALUES (10, '', '', '', '', 0, '0000-00-00 00:00:00', 30, 0, 1, 0, 1, '');
-INSERT INTO `tbl_customer_hotdel` VALUES (11, '', '', '', '', 0, '0000-00-00 00:00:00', 25, 0, 1, 0, 1, '');
-INSERT INTO `tbl_customer_hotdel` VALUES (12, '', '', '', '', 0, '0000-00-00 00:00:00', 25, 0, 1, 0, 1, '');
-INSERT INTO `tbl_customer_hotdel` VALUES (13, '', '', '', '', 0, '0000-00-00 00:00:00', 23, 0, 1, 0, 1, '');
-INSERT INTO `tbl_customer_hotdel` VALUES (14, '', '', '', '', 0, '0000-00-00 00:00:00', 23, 0, 1, 0, 1, '');
-INSERT INTO `tbl_customer_hotdel` VALUES (15, '', '', '', '', 0, '0000-00-00 00:00:00', 23, 0, 1, 0, 1, '');
 INSERT INTO `tbl_customer_hotdel` VALUES (16, '', '', '', '', 0, '0000-00-00 00:00:00', 32, 0, 1, 0, 1, '');
 INSERT INTO `tbl_customer_hotdel` VALUES (17, '', '', '', '', 0, '0000-00-00 00:00:00', 32, 0, 1, 0, 1, '');
 INSERT INTO `tbl_customer_hotdel` VALUES (18, '', '', '', '', 0, '0000-00-00 00:00:00', 32, 0, 1, 0, 1, '');
@@ -388,14 +383,14 @@ CREATE TABLE `tbl_hotdeal` (
 -- 
 
 INSERT INTO `tbl_hotdeal` VALUES (1, 2435, 40, 0, 20000000, 9290000, 32, 'Macbook Air giảm giá cực số 128GB', 'Chíp đă năng lõi kép', 'Sản phẩm chỉ có tại xtech.vn, chương trình khuyến mãi được thể hiện bổ xung vào dịp tết, hãy nhanh tay, số lượng có hạn', '', 0, 0, '', '', '', '', '', 0, '2012-01-11 00:00:00', '2012-01-25 00:00:00', 0);
-INSERT INTO `tbl_hotdeal` VALUES (2, 2473, 40, 0, 30000000, 8990000, 23, 'Macbook iMac khuyến mãi sock', 'Chip đă năng tính năg', 'Chỉ có tại Xtech.vn, giá cực kỳ hấp dẫn, các bạn hãy tham gia chương trình khuyến mãi của chúng tôi để trở thành người may mắn nhận giải thưởng này', '', 0, 0, '', '', '', '', '', 1, '2012-01-19 00:00:00', '2012-01-31 00:00:00', 0);
-INSERT INTO `tbl_hotdeal` VALUES (4, 2166, 634, 0, 6000000, 999000, 14, 'Samsung B7610 giảm giá sock', 'Màn hình cảm ứng', 'Sản phẩm có tại xtech đang được khuyến mãi giảm giá, các bạn hãy nhanh tay mua hàng', '', 0, 0, '', '', '', '', '', 1, '2012-01-18 00:00:00', '2012-01-25 00:00:00', 0);
-INSERT INTO `tbl_hotdeal` VALUES (23, 2708, 0, 5600000, 5400000, 200000, 4, 'Smartphone cao cấp', '', 'Chào mừng các cậu nhé', '', 0, 8, '', '', '', '', '', 1, '01/19/2012 03:10', '01/26/2012 04:19', 0);
-INSERT INTO `tbl_hotdeal` VALUES (17, 2640, 35, 0, 2200000, 0, 0, 'Chương trình khuyến mãi PentaxQ', 'Đa năng', 'Sản phẩm chỉ được giảm giá tại xtech.v', '', 0, 0, '', 'Kiều Út Ngọc', '01643385050', 'boy_phong_luu105', 'kieuvanngocday', 1, '01/09/2012 07:30', '01/30/2012 05:26', 0);
-INSERT INTO `tbl_hotdeal` VALUES (18, 3321, 35, 0, 6800000, 0, 0, 'Sản phẩm philips X501 khuyến mãi cực hot', 'Sản phẩm đặc trưng', 'Chương trình khuyến mãi chỉ có tại MBM và Xtech.vn, bạn hãy nhanh chân đến với chung tôi để có được sản phẩm', '', 0, 10, '', 'Kiều Văn Ngọc', '0978686055', 'kieuvanngoc105', 'kieu.van.ngoc', 1, '01/17/2012 17:13', '01/28/2012 04:10', 0);
-INSERT INTO `tbl_hotdeal` VALUES (25, 2697, 17, 20000000, 18000000, 2000000, 10, 'Smartphone cao cấp', '', 'xdsafasfsafsaf', '', 0, 0, '', '', '', '', '', 1, '', '', 0);
-INSERT INTO `tbl_hotdeal` VALUES (26, 3751, 17, 16500000, 12000000, 4500000, 27, 'Giảm giá Laptop cực kỳ sock', '', 'Hãy đến ngay với chúng tôi để có được sản phẩm giảm giá cực sock này', '', 0, 10, '', '', '', '', '', 1, '', '', 0);
-INSERT INTO `tbl_hotdeal` VALUES (28, 2670, 35, 8600000, 3500000, 5100000, 59, 'Philips X116 giảm giá  socks', '', '', 'image/hotdeal/bestseller1.jpg', 0, 12, '', 'Kiều Văn Ngọc', '0978686055', 'kieuvanngoc105', 'kieu.van.ngoc', 1, '02/16/2012 00:00', '02/24/2012 00:00', 0);
+INSERT INTO `tbl_hotdeal` VALUES (2, 2473, 40, 0, 30000000, 8990000, 23, 'Macbook iMac khuyến mãi sock', 'Chip đă năng tính năg', 'Chỉ có tại Xtech.vn, giá cực kỳ hấp dẫn, các bạn hãy tham gia chương trình khuyến mãi của chúng tôi để trở thành người may mắn nhận giải thưởng này', '', 0, 0, '', '', '', '', '', 0, '2012-01-19 00:00:00', '2012-01-31 00:00:00', 0);
+INSERT INTO `tbl_hotdeal` VALUES (4, 2166, 634, 0, 6000000, 999000, 14, 'Samsung B7610 giảm giá sock', 'Màn hình cảm ứng', 'Sản phẩm có tại xtech đang được khuyến mãi giảm giá, các bạn hãy nhanh tay mua hàng', '', 0, 0, '', '', '', '', '', 0, '2012-01-18 00:00:00', '2012-01-25 00:00:00', 0);
+INSERT INTO `tbl_hotdeal` VALUES (23, 2708, 0, 0, 0, 0, 0, 'Smartphone cao cấp', '', 'Chào mừng các cậu nhé', '', 0, 0, '', '', '', '', '', 1, '2012-02-27 12:22:06', '2012-02-28 12:22:06', 0);
+INSERT INTO `tbl_hotdeal` VALUES (17, 2640, 35, 0, 2200000, 0, 0, 'Chương trình khuyến mãi PentaxQ', 'Đa năng', 'Sản phẩm chỉ được giảm giá tại xtech.v', '', 0, 0, '', 'Kiều Út Ngọc', '01643385050', 'boy_phong_luu105', 'kieuvanngocday', 0, '01/09/2012 07:30', '01/30/2012 05:26', 0);
+INSERT INTO `tbl_hotdeal` VALUES (18, 3321, 35, 0, 6800000, 0, 0, 'Sản phẩm philips X501 khuyến mãi cực hot', 'Sản phẩm đặc trưng', 'Chương trình khuyến mãi chỉ có tại MBM và Xtech.vn, bạn hãy nhanh chân đến với chung tôi để có được sản phẩm', '', 0, 10, '', 'Kiều Văn Ngọc', '0978686055', 'kieuvanngoc105', 'kieu.van.ngoc', 0, '01/17/2012 17:13', '01/28/2012 04:10', 0);
+INSERT INTO `tbl_hotdeal` VALUES (25, 2697, 17, 0, 0, 0, 0, 'Smartphone cao cấp', '', 'xdsafasfsafsaf', '', 0, 0, '', '', '', '', '', 0, '2012-02-28 12:33:05', '', 0);
+INSERT INTO `tbl_hotdeal` VALUES (26, 3751, 17, 0, 0, 0, 0, 'Giảm giá Laptop cực kỳ sock', '', 'Hãy đến ngay với chúng tôi để có được sản phẩm giảm giá cực sock này', '', 0, 0, '', '', '', '', '', 1, '2012-02-27 02:31:48', '2012-02-28 02:31:48', 0);
+INSERT INTO `tbl_hotdeal` VALUES (28, 2670, 35, 0, 0, 0, 0, 'Philips X116 giảm giá  socks', '', '', 'image/hotdeal/bestseller1.jpg', 0, 0, '', 'Kiều Văn Ngọc', '0978686055', 'kieuvanngoc105', 'kieu.van.ngoc', 1, '2012-02-27 12:19:06', '2012-02-28 12:19:06', 0);
 
 -- --------------------------------------------------------
 
@@ -498,14 +493,14 @@ CREATE TABLE `tbl_products` (
 
 INSERT INTO `tbl_products` VALUES (1, 'UDQLU', '0', 150000, 200000, 10, 0, 20, 5, 2, 3, 1, 0, '2012-02-23 02:07:15', 1, '2012-02-26 03:58:16', 1, 2);
 INSERT INTO `tbl_products` VALUES (2, 'ASM05', '20gam', 380000, 420000, 10, 0, 20, 5, 3, 6, 1, 0, '2012-02-23 02:10:51', 1, '2012-02-26 04:00:14', 1, 1);
-INSERT INTO `tbl_products` VALUES (26, 'CS01', '4gam', 420000, 450000, 30, 0, 20, 5, 30, 5, 1, 0, '2012-02-26 12:46:27', 1, '0000-00-00 00:00:00', 0, 2);
+INSERT INTO `tbl_products` VALUES (26, 'CS01', '0', 420000, 450000, 30, 0, 20, 5, 30, 5, 1, 0, '2012-02-26 12:46:27', 1, '2012-02-27 05:57:49', 1, 2);
 INSERT INTO `tbl_products` VALUES (10, 'AQN', '10gam', 520000, 560000, 50, 0, 20, 15, 2, 10, 1, 0, '2012-02-23 02:30:44', 1, '2012-02-26 04:04:15', 1, 1);
-INSERT INTO `tbl_products` VALUES (25, 'CS01', '0', 420000, 450000, 30, 0, 20, 5, 30, 2, 1, 0, '2012-02-26 12:46:27', 1, '2012-02-26 02:28:58', 1, 2);
-INSERT INTO `tbl_products` VALUES (24, '', '0', 0, 0, 0, 0, 0, 0, 0, 2, 1, 0, '2012-02-26 10:46:49', 1, '2012-02-26 10:54:25', 1, 4);
+INSERT INTO `tbl_products` VALUES (25, 'CS01', '0', 420000, 450000, 30, 0, 20, 5, 30, 2, 1, 0, '2012-02-26 12:46:27', 1, '2012-02-27 05:34:54', 1, 2);
+INSERT INTO `tbl_products` VALUES (24, 'VDD', '0', 420000, 460000, 20, 0, 20, 6, 30, 2, 1, 0, '2012-02-26 10:46:49', 1, '2012-02-27 05:34:30', 1, 2);
 INSERT INTO `tbl_products` VALUES (16, 'ÀGGS', '0', 250000, 0, 0, 0, 0, 0, 0, 2, 1, 0, '2012-02-23 02:30:44', 1, '2012-02-26 04:04:56', 1, 5);
 INSERT INTO `tbl_products` VALUES (18, 'ADGH', '0', 300000, 350000, 0, 0, 0, 0, 0, 2, 1, 0, '2012-02-23 02:38:19', 1, '2012-02-26 04:05:26', 1, 4);
 INSERT INTO `tbl_products` VALUES (19, 'AB45', '0', 380000, 0, 20, 0, 130, 30, 2, 2, 1, 0, '0000-00-00 00:00:00', 1, '2012-02-26 10:44:43', 1, 5);
-INSERT INTO `tbl_products` VALUES (20, 'ATT01', '0', 400000, 450000, 15, 0, 1, 50, 2, 3, 1, 0, '0000-00-00 00:00:00', 1, '2012-02-26 04:06:11', 1, 1);
+INSERT INTO `tbl_products` VALUES (20, 'ATT01', '0', 400000, 450000, 15, 0, 1, 50, 2, 3, 1, 0, '0000-00-00 00:00:00', 1, '2012-02-27 05:48:38', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -521,7 +516,7 @@ CREATE TABLE `tbl_products_color` (
   `price_color` float NOT NULL,
   `show_color` tinyint(1) NOT NULL default '1',
   PRIMARY KEY  (`color_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=76 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=202 ;
 
 -- 
 -- Dumping data for table `tbl_products_color`
@@ -530,16 +525,15 @@ CREATE TABLE `tbl_products_color` (
 INSERT INTO `tbl_products_color` VALUES (1, 21, '00ff00', '#00ff00', 0, 0);
 INSERT INTO `tbl_products_color` VALUES (2, 21, '00ff00', '#00ff00', 0, 0);
 INSERT INTO `tbl_products_color` VALUES (3, 21, '00ff00', '#00ff00', 0, 0);
-INSERT INTO `tbl_products_color` VALUES (7, 26, '0af50a', '#0af50a', 0, 127);
-INSERT INTO `tbl_products_color` VALUES (5, 24, '497d49', '#497d49', 0, 1);
-INSERT INTO `tbl_products_color` VALUES (6, 24, '00ff00', '#00ff00', 0, 1);
-INSERT INTO `tbl_products_color` VALUES (8, 26, '417d41', '#417d41', 0, 127);
-INSERT INTO `tbl_products_color` VALUES (9, 26, '6200ff', '#6200ff', 0, 127);
-INSERT INTO `tbl_products_color` VALUES (10, 26, 'f08a88', '#f08a88', 0, 127);
-INSERT INTO `tbl_products_color` VALUES (11, 26, '304be3', '#304be3', 0, 127);
+INSERT INTO `tbl_products_color` VALUES (201, 26, '', '', 0, 1);
+INSERT INTO `tbl_products_color` VALUES (93, 24, '', '', 0, 1);
+INSERT INTO `tbl_products_color` VALUES (200, 26, '417d41', '417d41', 0, 1);
+INSERT INTO `tbl_products_color` VALUES (199, 26, '6200ff', '6200ff', 0, 1);
+INSERT INTO `tbl_products_color` VALUES (198, 26, 'f08a88', 'f08a88', 0, 1);
+INSERT INTO `tbl_products_color` VALUES (197, 26, '304be3', '304be3', 0, 1);
 INSERT INTO `tbl_products_color` VALUES (48, 1, 'b2ccb2', 'b2ccb2', 135000, 1);
-INSERT INTO `tbl_products_color` VALUES (47, 25, '161716', '161716', 280000, 1);
-INSERT INTO `tbl_products_color` VALUES (46, 25, '24fc24', '24fc24', 270000, 1);
+INSERT INTO `tbl_products_color` VALUES (95, 25, '', '', 0, 1);
+INSERT INTO `tbl_products_color` VALUES (94, 25, '24fc24', '24fc24', 270000, 1);
 INSERT INTO `tbl_products_color` VALUES (49, 1, '0e450e', '0e450e', 145000, 1);
 INSERT INTO `tbl_products_color` VALUES (50, 1, '303630', '303630', 140000, 1);
 INSERT INTO `tbl_products_color` VALUES (51, 2, '36ad36', '36ad36', 350000, 1);
@@ -562,9 +556,10 @@ INSERT INTO `tbl_products_color` VALUES (70, 16, '', '', 0, 1);
 INSERT INTO `tbl_products_color` VALUES (69, 16, '3c543c', '3c543c', 220000, 1);
 INSERT INTO `tbl_products_color` VALUES (71, 18, '3ac43a', '3ac43a', 280000, 1);
 INSERT INTO `tbl_products_color` VALUES (72, 18, '717371', '717371', 250000, 1);
-INSERT INTO `tbl_products_color` VALUES (73, 20, '86b586', '86b586', 380000, 1);
-INSERT INTO `tbl_products_color` VALUES (74, 20, '27b027', '27b027', 350000, 1);
-INSERT INTO `tbl_products_color` VALUES (75, 20, 'b8c4b8', 'b8c4b8', 330000, 1);
+INSERT INTO `tbl_products_color` VALUES (146, 20, '', '', 0, 1);
+INSERT INTO `tbl_products_color` VALUES (145, 20, 'b8c4b8', 'b8c4b8', 330000, 1);
+INSERT INTO `tbl_products_color` VALUES (144, 20, '27b027', '27b027', 350000, 1);
+INSERT INTO `tbl_products_color` VALUES (92, 24, '449144', '449144', 425000, 1);
 
 -- --------------------------------------------------------
 
@@ -612,7 +607,7 @@ INSERT INTO `tbl_products_description` VALUES (20, 'Quần áo thời trang cho 
 INSERT INTO `tbl_products_description` VALUES (21, '', '', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (22, '', '', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (23, '', '', '', '', '', '', '', '');
-INSERT INTO `tbl_products_description` VALUES (24, 'ấdfsagfas', 'gfasgas', '', '', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (24, 'Bộ váy đầm rất đẹp', 'Bo-vay-dam-rat-dep', 'Bộ váy đầm rất đẹp và rất thời trang', '<p>Bộ v&aacute;y đầm rất đẹp v&agrave; rất thời trang</p>', 'Váy, đầm, vay, dam', 'Váy thời trang, đầm thời trang', 'váy, đầm', 'Váy đầm thời trang');
 INSERT INTO `tbl_products_description` VALUES (25, 'Thời trang cho bé', 'Thoi-trang-cho be', 'Thời trang công sở', '<p>Thời trang c&ocirc;ng sở của ch&uacute;ng t&ocirc;i</p>', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (26, 'Thời trang công sở', 'Thoi-trang-cong-so', 'Thời trang công sở', '<p>Thời trang c&ocirc;ng sở của ch&uacute;ng t&ocirc;i</p>', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (27, 'sdgsdgdsgds', 'sdgsdgdsgds', '', '', '', '', '', '');
@@ -624,16 +619,17 @@ INSERT INTO `tbl_products_description` VALUES (27, 'sdgsdgdsgds', 'sdgsdgdsgds',
 -- 
 
 CREATE TABLE `tbl_products_discount` (
-  `product_id` int(11) unsigned NOT NULL,
+  `product_id` int(11) unsigned NOT NULL auto_increment,
   `discount` float NOT NULL,
   `percent` int(11) NOT NULL,
   PRIMARY KEY  (`product_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 -- 
 -- Dumping data for table `tbl_products_discount`
 -- 
 
+INSERT INTO `tbl_products_discount` VALUES (24, 380000, 10);
 
 -- --------------------------------------------------------
 
@@ -657,6 +653,33 @@ CREATE TABLE `tbl_products_feauture` (
 -- Dumping data for table `tbl_products_feauture`
 -- 
 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_products_group`
+-- 
+
+CREATE TABLE `tbl_products_group` (
+  `product_id` int(10) unsigned NOT NULL auto_increment,
+  `is_new` tinyint(1) NOT NULL,
+  `is_hot` tinyint(1) NOT NULL,
+  `is_special` tinyint(1) NOT NULL,
+  `is_seller` tinyint(1) NOT NULL,
+  `is_upcoming` tinyint(1) NOT NULL,
+  `is_stock` tinyint(1) NOT NULL default '1',
+  `is_view` tinyint(1) NOT NULL,
+  PRIMARY KEY  (`product_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
+
+-- 
+-- Dumping data for table `tbl_products_group`
+-- 
+
+INSERT INTO `tbl_products_group` VALUES (24, 0, 1, 1, 0, 1, 1, 0);
+INSERT INTO `tbl_products_group` VALUES (25, 0, 1, 0, 1, 0, 0, 0);
+INSERT INTO `tbl_products_group` VALUES (26, 0, 1, 1, 1, 0, 0, 0);
+INSERT INTO `tbl_products_group` VALUES (20, 1, 1, 1, 1, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -701,7 +724,7 @@ INSERT INTO `tbl_products_image` VALUES (20, 'image/products/254807q.jpg', 'imag
 INSERT INTO `tbl_products_image` VALUES (21, '', '', '', '', '');
 INSERT INTO `tbl_products_image` VALUES (22, '', '', '', '', '');
 INSERT INTO `tbl_products_image` VALUES (23, '', '', '', '', '');
-INSERT INTO `tbl_products_image` VALUES (24, '', '', '', '', '');
+INSERT INTO `tbl_products_image` VALUES (24, 'image/products/Bo-vay-dam-rat-dep-1330332302-image1.jpg', 'image/products/Bo-vay-dam-rat-dep-1330332302-image2.jpg', 'image/products/Bo-vay-dam-rat-dep-1330332302-image3.gif.jpg', 'image/products/Bo-vay-dam-rat-dep-1330332302-image4.jpg', 'image/products/Bo-vay-dam-rat-dep-1330332302-image5.jpg');
 INSERT INTO `tbl_products_image` VALUES (25, 'image/products/1275384756-thoi-trang-cong-so-quan-092.jpg', 'image/products/65069427-small_71764.jpg', 'image/products/thoi-trang-cong-so.jpg', 'image/products/yku1304564013.jpg', 'image/products/thoitranghe2.jpg');
 INSERT INTO `tbl_products_image` VALUES (26, 'image/products/1275384756-thoi-trang-cong-so-quan-092.jpg', 'image/products/65069427-small_71764.jpg', 'image/products/thoi-trang-cong-so.jpg', 'image/products/yku1304564013.jpg', 'image/products/thoitranghe2.jpg');
 INSERT INTO `tbl_products_image` VALUES (27, 'image/products/1271350735_88120270_3-Thi-trang-cong-so-V-Style-Nhan-dat-may-va-thiet-ke-thi-trang-chuyen-nghiep-Quan-ao-1271350735.jpg', '', '', '', '');

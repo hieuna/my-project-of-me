@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-26 14:47:48
+<?php /* Smarty version 2.6.10, created on 2012-02-27 18:01:38
          compiled from D:/AppServ/www/projects/templates/shopping/product.view.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 60, false),array('modifier', 'date_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 142, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 60, false),array('modifier', 'date_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 146, false),)), $this); ?>
 <div id="content">
 	<div class="content-helper clear">
 		<div class="central-column">
@@ -103,6 +103,7 @@ unset($_smarty_tpl_vars);
 												<?php endif; ?>
 											</p>
 											<?php if ($this->_tpl_vars['product']->percent > 0): ?>
+											<br />
 											<p>	
 												<span class="price-update">
 													<span class="price">Giá bán giảm: 
@@ -115,9 +116,12 @@ unset($_smarty_tpl_vars);
 											</p>
 											<?php endif; ?>		
 										</div>
-										<span id="product_amount_update_742" class="cm-reload-742">
-											<input type="hidden" value="1" name="appearance[show_product_amount]">
-											<span id="in_stock_info_742" class="strong in-stock">Còn hàng</span>
+										<span class="cm-reload-742">
+											<?php if ($this->_tpl_vars['product']->is_stock == 1): ?>
+											<span class="strong in-stock">Còn hàng</span>
+											<?php else: ?>
+											<span class="strong in-stock red">Hết hàng</span>
+											<?php endif; ?>
 										</span>
 										
 										<div id="product_options_update_742" class="cm-reload-742">

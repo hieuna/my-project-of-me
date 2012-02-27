@@ -78,6 +78,7 @@
 												{/if}
 											</p>
 											{if $product->percent>0}
+											<br />
 											<p>	
 												<span class="price-update">
 													<span class="price">Giá bán giảm: 
@@ -88,9 +89,12 @@
 											</p>
 											{/if}		
 										</div>
-										<span id="product_amount_update_742" class="cm-reload-742">
-											<input type="hidden" value="1" name="appearance[show_product_amount]">
-											<span id="in_stock_info_742" class="strong in-stock">Còn hàng</span>
+										<span class="cm-reload-742">
+											{if $product->is_stock==1}
+											<span class="strong in-stock">Còn hàng</span>
+											{else}
+											<span class="strong in-stock red">Hết hàng</span>
+											{/if}
 										</span>
 										
 										<div id="product_options_update_742" class="cm-reload-742">
