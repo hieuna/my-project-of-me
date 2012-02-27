@@ -2,7 +2,7 @@
 include "admin.header.php";
 include "check.login.php";
 
-$page = "admin.hotdeal";
+$page = "admin.hotdeal.php";
 
 $task = PGRequest::GetCmd('task', '');
 if ($task == 'cancel') $task = 'view';
@@ -183,9 +183,17 @@ switch($task){
 		$hotdeal = new PGHotDeal();
 		$hotdeal->remove($cid);
 		cheader('admin.hotdeal.php');
-		break;	
+		break;
+	case 'refresh':
+		$id			= PGRequest::GetInt('id', 0, 'GET');
+		$hotdeal = new PGHotDeal();
+		$hotdeal->refresh($id);
+		cheader('admin.hotdeal.php');
+		break;		
 	
 	default :
+		$date = date("Y-m-d h:s:i");
+		$now = strtotime($date);
 		include ("check.permission.php");
 		$page_title = "Danh sách Hot Deal";
 		$mosmsg		= strval( ( stripslashes( strip_tags( PGRequest::getString('mosmsg', $mosmsg, '') ) ) ) );
@@ -218,6 +226,10 @@ switch($task){
 		$sql = "SELECT * FROM ".TBL_HOTDEAL.$where." ORDER BY ordering ASC, id DESC LIMIT $offset, $limit";
 		$result = $database->db_query($sql);
 		while ($hotdeal = $database->db_fetch_assoc($result)){
+			//echo strtotime($hotdeal["end_date"])."<br />";
+			if($now > strtotime($hotdeal["end_date"])){
+				$database->db_query("UPDATE ".TBL_HOTDEAL." SET published=0 WHERE id=".$hotdeal["id"]);
+			}
 			$query = "SELECT p.price AS price_ny, pd.name AS namesp, pm.image AS imagesp, c.image AS image_cat, cd.name AS name_cat"
 					."\n FROM ".TBL_PRODUCT." AS p, ".TBL_PRODUCT_DESC." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_CATEGORY." AS c, ".TBL_CATEGORY_DESC." AS cd, ".TBL_PRODUCT_CATEGORY." AS pc"
 					."\n WHERE p.product_id=pd.product_id AND p.product_id=pm.product_id AND p.product_id=pc.product_id AND pc.category_id=c.category_id AND pc.category_id=cd.category_id AND p.product_id=".$hotdeal["product_id"]
@@ -253,6 +265,7 @@ switch($task){
 		break;
 }
 
+$smarty->assign('page'. $page);
 $smarty->assign('task', $task);
 $smarty->assign("page_title", $page_title);
 $smarty->assign('error',$error);
