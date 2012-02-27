@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Feb 27, 2012 at 06:06 PM
+-- Generation Time: Feb 28, 2012 at 12:25 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -43,7 +43,7 @@ CREATE TABLE `tbl_admins` (
 -- 
 
 INSERT INTO `tbl_admins` VALUES (1, 'Kiều Văn Ngọc', 'ngockieuvan@vccorp.vn', 'kieuvanngoc', 'f1b8be6c6d03d1abf6f01ec160774ea4', 1, 'A2OLyR4BizBmAhLT', 1, '', 1, 1, '0000-00-00 00:00:00', '2012-02-03 22:12:10', 1);
-INSERT INTO `tbl_admins` VALUES (25, 'Phan Thị Trang', 'xtech@gmail.com', 'admin', 'e10adc3949ba59abbe56e057f20f883e', 1, '', 2, 'a:2:{s:11:"admin.sites";s:0:"";s:13:"admin.hotdeal";a:6:{i:0;s:1:"1";i:1;s:1:"2";i:2;s:1:"3";i:3;s:1:"5";i:4;s:1:"6";i:5;s:1:"7";}}', 0, 1, '1970-01-01 07:00:00', '0000-00-00 00:00:00', 1);
+INSERT INTO `tbl_admins` VALUES (25, 'Phan Thị Trang', 'xtech@gmail.com', 'admin', 'e807f1fcf82d132f9bb018ca6738a19f', 1, '', 1, '', 0, 1, '1970-01-01 07:00:00', '0000-00-00 00:00:00', 1);
 INSERT INTO `tbl_admins` VALUES (26, 'Bạch Quý Hợi', 'bqh@yahoo.com', 'bachquyhoi', 'e807f1fcf82d132f9bb018ca6738a19f', 1, '', 2, 'a:2:{s:11:"admin.sites";s:0:"";s:13:"admin.hotdeal";a:1:{i:0;s:1:"5";}}', 0, 0, '1970-01-01 07:00:00', '0000-00-00 00:00:00', 1);
 INSERT INTO `tbl_admins` VALUES (29, 'Quản trị viên', 'quantrivien@gmail.com', 'quantrivien', 'fef1ddf26aacab614a822e243bdb16cb', 1, '', 2, 'a:3:{s:12:"admin_admins";s:0:"";s:11:"admin_sites";s:0:"";s:13:"admin_hotdeal";a:2:{i:0;s:1:"5";i:1;s:1:"7";}}', 0, 0, '1970-01-01 07:00:00', '0000-00-00 00:00:00', 1);
 INSERT INTO `tbl_admins` VALUES (38, 'Nguyễn Văn Minh', 'minhnv@gmail.com', 'minhnv', 'e10adc3949ba59abbe56e057f20f883e', 1, '', 2, 'a:4:{s:12:"admin_admins";s:0:"";s:11:"admin_sites";s:0:"";s:13:"admin_hotdeal";a:1:{i:0;s:1:"2";}s:22:"admin_customer_hotdeal";s:0:"";}', 1, 38, '2012-02-15 05:24:45', '0000-00-00 00:00:00', 1);
@@ -492,13 +492,13 @@ CREATE TABLE `tbl_products` (
 -- 
 
 INSERT INTO `tbl_products` VALUES (1, 'UDQLU', '0', 150000, 200000, 10, 0, 20, 5, 2, 3, 1, 0, '2012-02-23 02:07:15', 1, '2012-02-26 03:58:16', 1, 2);
-INSERT INTO `tbl_products` VALUES (2, 'ASM05', '20gam', 380000, 420000, 10, 0, 20, 5, 3, 6, 1, 0, '2012-02-23 02:10:51', 1, '2012-02-26 04:00:14', 1, 1);
+INSERT INTO `tbl_products` VALUES (2, 'ASM05', '0', 380000, 420000, 10, 0, 20, 5, 3, 6, 1, 0, '2012-02-23 02:10:51', 1, '2012-02-28 12:17:17', 25, 1);
 INSERT INTO `tbl_products` VALUES (26, 'CS01', '0', 420000, 450000, 30, 0, 20, 5, 30, 5, 1, 0, '2012-02-26 12:46:27', 1, '2012-02-27 05:57:49', 1, 2);
-INSERT INTO `tbl_products` VALUES (10, 'AQN', '10gam', 520000, 560000, 50, 0, 20, 15, 2, 10, 1, 0, '2012-02-23 02:30:44', 1, '2012-02-26 04:04:15', 1, 1);
-INSERT INTO `tbl_products` VALUES (25, 'CS01', '0', 420000, 450000, 30, 0, 20, 5, 30, 2, 1, 0, '2012-02-26 12:46:27', 1, '2012-02-27 05:34:54', 1, 2);
-INSERT INTO `tbl_products` VALUES (24, 'VDD', '0', 420000, 460000, 20, 0, 20, 6, 30, 2, 1, 0, '2012-02-26 10:46:49', 1, '2012-02-27 05:34:30', 1, 2);
+INSERT INTO `tbl_products` VALUES (10, 'AQN', '0', 520000, 560000, 50, 0, 20, 15, 2, 10, 1, 0, '2012-02-23 02:30:44', 1, '2012-02-28 12:17:52', 25, 1);
+INSERT INTO `tbl_products` VALUES (25, 'CS01', '0', 420000, 450000, 30, 0, 20, 5, 30, 2, 1, 0, '2012-02-26 12:46:27', 1, '2012-02-28 12:18:13', 25, 2);
+INSERT INTO `tbl_products` VALUES (24, 'VDD', '0', 420000, 460000, 20, 0, 20, 6, 30, 2, 1, 0, '2012-02-26 10:46:49', 1, '2012-02-27 11:33:16', 25, 2);
 INSERT INTO `tbl_products` VALUES (16, 'ÀGGS', '0', 250000, 0, 0, 0, 0, 0, 0, 2, 1, 0, '2012-02-23 02:30:44', 1, '2012-02-26 04:04:56', 1, 5);
-INSERT INTO `tbl_products` VALUES (18, 'ADGH', '0', 300000, 350000, 0, 0, 0, 0, 0, 2, 1, 0, '2012-02-23 02:38:19', 1, '2012-02-26 04:05:26', 1, 4);
+INSERT INTO `tbl_products` VALUES (18, 'ADGH', '0', 300000, 350000, 0, 0, 0, 0, 0, 2, 1, 0, '2012-02-23 02:38:19', 1, '2012-02-28 12:11:57', 25, 4);
 INSERT INTO `tbl_products` VALUES (19, 'AB45', '0', 380000, 0, 20, 0, 130, 30, 2, 2, 1, 0, '0000-00-00 00:00:00', 1, '2012-02-26 10:44:43', 1, 5);
 INSERT INTO `tbl_products` VALUES (20, 'ATT01', '0', 400000, 450000, 15, 0, 1, 50, 2, 3, 1, 0, '0000-00-00 00:00:00', 1, '2012-02-27 05:48:38', 1, 1);
 
@@ -516,7 +516,7 @@ CREATE TABLE `tbl_products_color` (
   `price_color` float NOT NULL,
   `show_color` tinyint(1) NOT NULL default '1',
   PRIMARY KEY  (`color_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=202 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=234 ;
 
 -- 
 -- Dumping data for table `tbl_products_color`
@@ -526,40 +526,40 @@ INSERT INTO `tbl_products_color` VALUES (1, 21, '00ff00', '#00ff00', 0, 0);
 INSERT INTO `tbl_products_color` VALUES (2, 21, '00ff00', '#00ff00', 0, 0);
 INSERT INTO `tbl_products_color` VALUES (3, 21, '00ff00', '#00ff00', 0, 0);
 INSERT INTO `tbl_products_color` VALUES (201, 26, '', '', 0, 1);
-INSERT INTO `tbl_products_color` VALUES (93, 24, '', '', 0, 1);
+INSERT INTO `tbl_products_color` VALUES (203, 24, '', '', 0, 1);
 INSERT INTO `tbl_products_color` VALUES (200, 26, '417d41', '417d41', 0, 1);
 INSERT INTO `tbl_products_color` VALUES (199, 26, '6200ff', '6200ff', 0, 1);
 INSERT INTO `tbl_products_color` VALUES (198, 26, 'f08a88', 'f08a88', 0, 1);
 INSERT INTO `tbl_products_color` VALUES (197, 26, '304be3', '304be3', 0, 1);
 INSERT INTO `tbl_products_color` VALUES (48, 1, 'b2ccb2', 'b2ccb2', 135000, 1);
-INSERT INTO `tbl_products_color` VALUES (95, 25, '', '', 0, 1);
-INSERT INTO `tbl_products_color` VALUES (94, 25, '24fc24', '24fc24', 270000, 1);
+INSERT INTO `tbl_products_color` VALUES (233, 25, '', '', 0, 1);
+INSERT INTO `tbl_products_color` VALUES (232, 25, '24fc24', '24fc24', 270000, 1);
 INSERT INTO `tbl_products_color` VALUES (49, 1, '0e450e', '0e450e', 145000, 1);
 INSERT INTO `tbl_products_color` VALUES (50, 1, '303630', '303630', 140000, 1);
-INSERT INTO `tbl_products_color` VALUES (51, 2, '36ad36', '36ad36', 350000, 1);
-INSERT INTO `tbl_products_color` VALUES (52, 2, 'b6c4b6', 'b6c4b6', 330000, 1);
-INSERT INTO `tbl_products_color` VALUES (53, 2, '5e665e', '5e665e', 335000, 1);
-INSERT INTO `tbl_products_color` VALUES (54, 2, '1d1f1d', '1d1f1d', 290000, 1);
-INSERT INTO `tbl_products_color` VALUES (55, 2, '962744', '962744', 400000, 1);
-INSERT INTO `tbl_products_color` VALUES (56, 2, '0e074a', '0e074a', 355000, 1);
-INSERT INTO `tbl_products_color` VALUES (57, 10, 'dfe8df', 'dfe8df', 500000, 1);
-INSERT INTO `tbl_products_color` VALUES (58, 10, '848784', '848784', 550000, 1);
-INSERT INTO `tbl_products_color` VALUES (59, 10, '515451', '515451', 580000, 1);
-INSERT INTO `tbl_products_color` VALUES (60, 10, '191a19', '191a19', 520000, 1);
-INSERT INTO `tbl_products_color` VALUES (61, 10, '58b058', '58b058', 515000, 1);
-INSERT INTO `tbl_products_color` VALUES (62, 10, 'b869b0', 'b869b0', 520000, 1);
-INSERT INTO `tbl_products_color` VALUES (63, 10, '4f294d', '4f294d', 480000, 1);
-INSERT INTO `tbl_products_color` VALUES (64, 10, '400a3b', '400a3b', 450000, 1);
-INSERT INTO `tbl_products_color` VALUES (65, 10, 'f0fc85', 'f0fc85', 450000, 1);
-INSERT INTO `tbl_products_color` VALUES (66, 10, 'ffd900', 'ffd900', 440000, 1);
+INSERT INTO `tbl_products_color` VALUES (221, 2, '', '', 0, 1);
+INSERT INTO `tbl_products_color` VALUES (220, 2, 'b6c4b6', 'b6c4b6', 330000, 1);
+INSERT INTO `tbl_products_color` VALUES (219, 2, '5e665e', '5e665e', 335000, 1);
+INSERT INTO `tbl_products_color` VALUES (218, 2, '1d1f1d', '1d1f1d', 290000, 1);
+INSERT INTO `tbl_products_color` VALUES (217, 2, '962744', '962744', 400000, 1);
+INSERT INTO `tbl_products_color` VALUES (216, 2, '0e074a', '0e074a', 355000, 1);
+INSERT INTO `tbl_products_color` VALUES (231, 10, '', '', 0, 1);
+INSERT INTO `tbl_products_color` VALUES (230, 10, 'ffd900', 'ffd900', 440000, 1);
+INSERT INTO `tbl_products_color` VALUES (229, 10, 'f0fc85', 'f0fc85', 450000, 1);
+INSERT INTO `tbl_products_color` VALUES (228, 10, '400a3b', '400a3b', 450000, 1);
+INSERT INTO `tbl_products_color` VALUES (227, 10, '4f294d', '4f294d', 480000, 1);
+INSERT INTO `tbl_products_color` VALUES (226, 10, 'b869b0', 'b869b0', 520000, 1);
+INSERT INTO `tbl_products_color` VALUES (225, 10, '58b058', '58b058', 515000, 1);
+INSERT INTO `tbl_products_color` VALUES (224, 10, '191a19', '191a19', 520000, 1);
+INSERT INTO `tbl_products_color` VALUES (223, 10, '515451', '515451', 580000, 1);
+INSERT INTO `tbl_products_color` VALUES (222, 10, '848784', '848784', 550000, 1);
 INSERT INTO `tbl_products_color` VALUES (70, 16, '', '', 0, 1);
 INSERT INTO `tbl_products_color` VALUES (69, 16, '3c543c', '3c543c', 220000, 1);
-INSERT INTO `tbl_products_color` VALUES (71, 18, '3ac43a', '3ac43a', 280000, 1);
-INSERT INTO `tbl_products_color` VALUES (72, 18, '717371', '717371', 250000, 1);
+INSERT INTO `tbl_products_color` VALUES (207, 18, '', '', 0, 1);
+INSERT INTO `tbl_products_color` VALUES (206, 18, '717371', '717371', 250000, 1);
 INSERT INTO `tbl_products_color` VALUES (146, 20, '', '', 0, 1);
 INSERT INTO `tbl_products_color` VALUES (145, 20, 'b8c4b8', 'b8c4b8', 330000, 1);
 INSERT INTO `tbl_products_color` VALUES (144, 20, '27b027', '27b027', 350000, 1);
-INSERT INTO `tbl_products_color` VALUES (92, 24, '449144', '449144', 425000, 1);
+INSERT INTO `tbl_products_color` VALUES (202, 24, '449144', '449144', 425000, 1);
 
 -- --------------------------------------------------------
 
@@ -593,7 +593,7 @@ INSERT INTO `tbl_products_description` VALUES (6, '', '', '', '', '', '', '', ''
 INSERT INTO `tbl_products_description` VALUES (7, '', '', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (8, '', '', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (9, '', '', '', '', '', '', '', '');
-INSERT INTO `tbl_products_description` VALUES (10, 'Công sở cho nam giới', 'cong-so-cho-nam-gioi', 'Quần áo công sở cho nam giới', '<p>Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới</p>\r\n<p>Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới<br />&nbsp;</p>\r\n<p>Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới<br /> </p>', '', '', '', '');
+INSERT INTO `tbl_products_description` VALUES (10, 'Công sở cho nam giới', 'cong-so-cho-nam-gioi', 'Quần áo công sở cho nam giới', '<p>Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới</p>\r\n<p>Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới<br />&nbsp;</p>\r\n<p>Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới Quần &aacute;o c&ocirc;ng sở cho nam giới</p>', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (11, '', '', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (12, '', '', '', '', '', '', '', '');
 INSERT INTO `tbl_products_description` VALUES (13, '', '', '', '', '', '', '', '');
@@ -623,13 +623,16 @@ CREATE TABLE `tbl_products_discount` (
   `discount` float NOT NULL,
   `percent` int(11) NOT NULL,
   PRIMARY KEY  (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 -- 
 -- Dumping data for table `tbl_products_discount`
 -- 
 
 INSERT INTO `tbl_products_discount` VALUES (24, 380000, 10);
+INSERT INTO `tbl_products_discount` VALUES (25, 400000, 5);
+INSERT INTO `tbl_products_discount` VALUES (2, 360000, 5);
+INSERT INTO `tbl_products_discount` VALUES (10, 500000, 4);
 
 -- --------------------------------------------------------
 
@@ -676,10 +679,13 @@ CREATE TABLE `tbl_products_group` (
 -- Dumping data for table `tbl_products_group`
 -- 
 
-INSERT INTO `tbl_products_group` VALUES (24, 0, 1, 1, 0, 1, 1, 0);
-INSERT INTO `tbl_products_group` VALUES (25, 0, 1, 0, 1, 0, 0, 0);
+INSERT INTO `tbl_products_group` VALUES (24, 1, 1, 1, 0, 1, 1, 0);
+INSERT INTO `tbl_products_group` VALUES (25, 1, 1, 1, 1, 0, 0, 0);
 INSERT INTO `tbl_products_group` VALUES (26, 0, 1, 1, 1, 0, 0, 0);
 INSERT INTO `tbl_products_group` VALUES (20, 1, 1, 1, 1, 1, 1, 0);
+INSERT INTO `tbl_products_group` VALUES (18, 0, 0, 1, 0, 0, 0, 0);
+INSERT INTO `tbl_products_group` VALUES (2, 0, 0, 1, 0, 0, 0, 0);
+INSERT INTO `tbl_products_group` VALUES (10, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 

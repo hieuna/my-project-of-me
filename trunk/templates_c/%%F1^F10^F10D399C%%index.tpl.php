@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-26 06:48:19
+<?php /* Smarty version 2.6.10, created on 2012-02-28 00:19:46
          compiled from D:/AppServ/www/projects/templates/shopping/index.tpl */ ?>
 <div id="content">
 	<div class="content-helper clear">
@@ -29,11 +29,11 @@ $this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['dir
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-				<?php $_smarty_tpl_vars = $this->_tpl_vars;
+				<!--  <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['dir_template'])."/category_other.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?>
+ ?>-->
 			</div>
 		</div>
 		<?php $_smarty_tpl_vars = $this->_tpl_vars;
