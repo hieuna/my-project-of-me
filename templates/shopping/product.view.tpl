@@ -24,7 +24,7 @@
 										{/literal}
 										<script src="includes/js/previewer.js" type="text/javascript"></script>	
 										<a rev="{$product->image1}" href="{$product->image1}" id="detailed_href1_742">
-										<img src="{$product->image1}" alt="{$product->name}" class="cm-thumbnails" id="det_img_742" width="250" border="0" /></a>
+										<img src="{$product->image1}" alt="{$product->name}" class="cm-thumbnails" width="200" border="0" /></a>
 										<p id="detailed_box_742" class="center">
 											<a class="cm-thumbnails-opener view-larger-image" href="{$product->image1}" id="detailed_href2_742">Xem ảnh lớn</a>
 										</p>
