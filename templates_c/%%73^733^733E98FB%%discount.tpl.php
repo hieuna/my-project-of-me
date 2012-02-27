@@ -1,9 +1,9 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-26 04:50:34
+<?php /* Smarty version 2.6.10, created on 2012-02-28 00:15:46
          compiled from D:/AppServ/www/projects/templates/shopping/discount.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/discount.tpl', 26, false),)), $this); ?>
 <div class="mainbox2-container">
-	<h1 class="mainbox2-title clear"><span>Sản phẩm nổi bật</span></h1>
+	<h1 class="mainbox2-title clear"><span>Sản phẩm giảm giá</span></h1>
 	<div class="mainbox2-body">
 		<table cellpadding="3" cellspacing="3" border="0" width="100%">
 		<tr>
