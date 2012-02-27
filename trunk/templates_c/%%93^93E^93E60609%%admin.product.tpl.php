@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-26 10:50:27
+<?php /* Smarty version 2.6.10, created on 2012-02-27 17:57:26
          compiled from D:/AppServ/www/projects/templates/administrator/admin.product.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 425, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 450, false),)), $this); ?>
 <div id="toolbar-box">
    <div class="t">
    	<div class="t">
@@ -284,6 +284,24 @@ $this->_sections['foo']['last']       = ($this->_sections['foo']['iteration'] ==
 			   	</tr>
 			   </tbody>
 			</table>
+			<!-- GROUP -->
+			<table class="adminTable adminBorder padding">
+			   <tbody>
+			   	<tr>
+			   		<td colspan="3" class="title_box_tbl">Nhóm sản phẩm</td>
+			   	</tr>
+			   	<tr>
+			   		<td width="33%"><input type="checkbox" name="is_new"<?php if ($this->_tpl_vars['thisProduct']->is_new == 1): ?> checked="checked"<?php endif; ?> value="1" /> Sản phẩm mới</td>
+			   		<td width="33%"><input type="checkbox" name="is_hot"<?php if ($this->_tpl_vars['thisProduct']->is_hot == 1): ?> checked="checked"<?php endif; ?> value="1" /> Sản phẩm hot</td>
+			   		<td><input type="checkbox" name="is_special" value="1"<?php if ($this->_tpl_vars['thisProduct']->is_special == 1): ?> checked="checked"<?php endif; ?> /> Nổi bật</td>
+			   	</tr>
+			   	<tr>
+			   		<td><input type="checkbox" name="is_seller" value="1"<?php if ($this->_tpl_vars['thisProduct']->is_seller == 1): ?> checked="checked"<?php endif; ?> /> Bán chạy</td>
+			   		<td><input type="checkbox" name="is_upcoming" value="1"<?php if ($this->_tpl_vars['thisProduct']->is_upcoming == 1): ?> checked="checked"<?php endif; ?> /> Sắp ra mắt</td>
+			   		<td><input type="checkbox" name="is_stock" value="1"<?php if ($this->_tpl_vars['thisProduct']->is_stock == 1): ?> checked="checked"<?php endif; ?> /> Còn hàng</td>
+			   	</tr>
+			   </tbody>
+			</table>
 			<!-- IMAGE -->
 			<table class="adminTable adminBorder">
 			   <tbody>
@@ -379,6 +397,13 @@ $this->_sections['foo']['last']       = ($this->_sections['foo']['iteration'] ==
 			   			<a href="javascript:;" onclick="tinyMCE.get('elm1').show();return false;">[Show]</a>
 						<a href="javascript:;" onclick="tinyMCE.get('elm1').hide();return false;">[Hide]</a>
 			   		</td>
+			   	</tr>
+			   	</tbody>
+			</table>
+			<table class="adminTable adminBorder">
+				<tbody>
+				<tr>
+			   		<td class="title_box_tbl">Thông tin SEO</td>
 			   	</tr>
 			   	<tr>
 			   		<td>

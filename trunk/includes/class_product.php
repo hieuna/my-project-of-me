@@ -39,9 +39,6 @@ class PGProduct{
 	var $meta_description;
 	var $search_words;
 	var $page_title;
-	//TBL_PRODUCT_DISCOUNT
-	var $discount;
-	var $percent;
 	//TBL_PRODUCT_IMAGE
 	var $image1;
 	var $image2;
@@ -78,9 +75,6 @@ class PGProduct{
 		$this->meta_description = "";
 		$this->search_words = "";
 		$this->page_title = "";
-		//TBL_PRODUCT_DISCOUNT
-		$this->discount = 0;
-		$this->percent = 0;
 		//TBL_PRODUCT_IMAGE
 		$this->image1 = "";
 		$this->image2 = "";
@@ -172,12 +166,34 @@ class PGProduct{
 				$this->image3		= $objProduct->image3;
 				$this->image4		= $objProduct->image4;
 				$this->image5		= $objProduct->image5;
+				
+				//product color
 				if ($objProduct->number_color > 0){
 					$query = "SELECT color_id, value_color, price_color FROM ".TBL_PRODUCT_COLOR." WHERE product_id=".$objProduct->product_id;
 					$results = $database->db_query($query);
 					while ($row = $database->db_fetch_assoc($results)){
 						$this->colors[] = $row;
 					}
+				}
+				//product discount
+				$sql_discount = "SELECT * FROM ".TBL_PRODUCT_DISCOUNT." WHERE product_id=".$objProduct->product_id." LIMIT 1";
+				$rsDiscount = $database->db_query($sql_discount);
+				while ($rowdiscount = $database->db_fetch_assoc($rsDiscount)){
+					$this->discount = $rowdiscount["discount"];
+					$this->percent = $rowdiscount["percent"];
+				}
+				
+				//product group
+				$sql_gr = "SELECT * FROM ".TBL_PRODUCT_GROUP." WHERE product_id=".$objProduct->product_id." LIMIT 1";
+				$result_gr = $database->db_query($sql_gr);
+				while ($rowgr = $database->db_fetch_assoc($result_gr)){
+					$this->is_new 		= $rowgr["is_new"];
+					$this->is_hot 		= $rowgr["is_hot"];
+					$this->is_special	= $rowgr["is_special"];
+					$this->is_seller	= $rowgr["is_seller"];
+					$this->is_upcoming	= $rowgr["is_upcoming"];
+					$this->is_stock		= $rowgr["is_stock"];
+					$this->is_view		= $rowgr["is_view"];
 				}
 			}
 		}
@@ -280,6 +296,20 @@ class PGProduct{
 			$cids = 'product_id=' . implode( ' OR product_id=', $cid );
 			$sql = "DELETE FROM ".TBL_PRODUCT." WHERE ( $cids )";
 			$database->db_query($sql);
+			$database->db_query("DELETE FROM ".TBL_PRODUCT_DESCRIPTION." WHERE ( $cid )");
+			$database->db_query("DELETE FROM ".TBL_PRODUCT_COLOR." WHERE ( $cid )");
+			$database->db_query("DELETE FROM ".TBL_PRODUCT_DISCOUNT." WHERE ( $cid )");
+			$database->db_query("DELETE FROM ".TBL_PRODUCT_GROUP." WHERE ( $cid )");
+			//unlink image
+			$query = "SELECT * FROM ".TBL_PRODUCT_IMAGE." WHERE ( $cid )";
+			$results = $database->db_query($query);
+			while ($row = $database->db_fetch_assoc($results)){
+				if(file_exists($dir_root.$row["image1"])) @unlink($dir_root.$row["image1"]);		  
+				if(file_exists($dir_root.$row["image2"])) @unlink($dir_root.$row["image2"]);
+				if(file_exists($dir_root.$row["image3"])) @unlink($dir_root.$row["image3"]);
+				if(file_exists($dir_root.$row["image4"])) @unlink($dir_root.$row["image4"]);
+				if(file_exists($dir_root.$row["image5"])) @unlink($dir_root.$row["image5"]);
+			}
 			
 			$this->is_message = 'Đã xóa '.$total.' sản phẩm thành công !';
 		}
@@ -460,7 +490,7 @@ class PGColor{
 		$this->show_color = 1;
 	}
 	
-	function save($product_id, $name_color, $value_color, $price_color, $show_hide = null){
+	public function save($product_id, $name_color, $value_color, $price_color, $show_hide = null){
 		global $database;
     	//echo $show_hide; die;
 		if (!is_object($objColor)) $objColor = $this;
@@ -469,4 +499,97 @@ class PGColor{
 	}
 }
 
+
+//class discount of product
+class PGDiscount{
+	//TBL_PRODUCT_DISCOUNT
+	var $product_id;
+	var $discount;
+	var $percent;
+	
+	function __construct(){
+		//TBL_PRODUCT_DISCOUNT
+		$this->product_id = 0;
+		$this->discount = 0;
+		$this->percent = 0;
+	}
+	
+	public function save($product_id, $discount, $percent){
+		global $database;
+		//echo $product_id; die;
+		if ($product_id > 0){
+			$sql = "SELECT COUNT(*) AS total FROM ".TBL_PRODUCT_DISCOUNT." WHERE product_id=".$product_id;
+			$result = $database->db_query($sql);
+			$total = $database->db_fetch_assoc($result);
+			$count = $total["total"];
+			if ($count == 0)
+				$database->db_query("INSERT INTO ".TBL_PRODUCT_DISCOUNT." VALUES (".$product_id.", ".$discount.", ".$percent.")");
+			else
+				$database->db_query("UPDATE ".TBL_PRODUCT_DISCOUNT." SET discount={".$discount."}, percent={".$percent."} WHERE product_id=".$product_id);
+		}
+		return;
+	}
+}
+
+//class group of product
+//TBL_PRODUCT_GROUP
+class PGGroup{
+	var $product_id;
+	var $is_new;
+	var $is_hot;
+	var $is_special;
+	var $is_seller;
+	var $is_stock;
+	var $is_upcoming;
+	var $is_view;
+	
+	function __construct(){
+		$this->product_id = 0;
+		$this->is_new = 0;
+		$this->is_hot = 0;
+		$this->is_special = 0;
+		$this->is_seller = 0;
+		$this->is_upcoming = 0;
+		$this->is_stock = 1;
+		$this->is_view = 0;
+	}
+	
+	public function save($product_id, $new, $hot, $special, $seller, $upcoming, $stock, $view=null){
+		global $database;
+		
+		if ($product_id > 0){
+			$sql = "SELECT COUNT(*) AS total FROM ".TBL_PRODUCT_GROUP." WHERE product_id=".$product_id;
+			$result = $database->db_query($sql);
+			$total = $database->db_fetch_assoc($result);
+			$count = $total["total"];
+			if ($count == 0){
+				$query = "INSERT INTO ".TBL_PRODUCT_GROUP."
+				\n VALUES(".$product_id.", ".$new.", ".$hot.", ".$special.", ".$seller.", ".$upcoming.", ".$stock.", 0)
+				";
+				$database->db_query($query);
+			}else{
+				$query = "UPDATE ".TBL_PRODUCT_GROUP."
+				\n SET is_new=".$new.", is_hot=".$hot.", is_special=".$special.", is_seller=".$seller.", is_upcoming=".$upcoming.", is_stock=".$stock."
+				\n WHERE product_id=".$product_id."
+				";
+				$database->db_query($query);
+			}
+		}
+		return;
+	}
+	
+	public function upview($product_id){
+		global $database;
+		$sql = "SELECT is_view FROM ".TBL_PRODUCT_GROUP." WHERE product_id=".$product_id;
+		$result = $database->db_query($sql);
+		$row = $database->getRow($result);
+		$count = $row["is_view"]+1;
+
+		if (!is_null($product_id) && is_numeric($product_id) && ($product_id>0)){
+			$sql = "UPDATE ".TBL_PRODUCT_GROUP." SET is_view=".$count." WHERE product_id=$product_id";
+			$database->db_query($sql);
+		}
+		return;
+	}
+}
 ?>

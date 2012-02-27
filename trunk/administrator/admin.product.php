@@ -39,8 +39,13 @@ switch($task){
 		$thisProduct = $objProduct->load($product_id);
 		
 		//Upload file img
+		$title_alias 		= $database->getEscaped(PGRequest::GetString('name', '', 'POST'));
+		$title_seo			= RemoveSign($title_alias);
+		$title_seo_en		= str_replace(" ", "-", $title_seo);
+		$title_seo_en		= preg_replace('/[^a-z0-9]+/i','-',$title_seo_en)."-".time();
+		
 		if ($_FILES["img"]["name"] != ""){
-            $fileName =  $_FILES["img"]["name"];
+            $fileName =  get_new_file_name($_FILES["img"]["name"], $title_seo_en."-image1");
             $dir	=$dir_upload."products/".$fileName;
             if (move_uploaded_file($_FILES["img"]["tmp_name"], $dir))
             {
@@ -63,7 +68,7 @@ switch($task){
 		}
 		//file2
 		if ($_FILES["img2"]["name"] != ""){
-            $fileName2 =  $_FILES["img2"]["name"];
+            $fileName2 =  get_new_file_name($_FILES["img2"]["name"], $title_seo_en."-image2");
             $dir2	=$dir_upload."products/".$fileName2;
             if (move_uploaded_file($_FILES["img2"]["tmp_name"], $dir2))
             {
@@ -86,7 +91,7 @@ switch($task){
 		}
 		//file3
 		if ($_FILES["img3"]["name"] != ""){
-            $fileName3 =  $_FILES["img3"]["name"];
+            $fileName3 =  get_new_file_name($_FILES["img3"]["name"], $title_seo_en."-image3");
             $dir3	=$dir_upload."products/".$fileName3;
             if (move_uploaded_file($_FILES["img3"]["tmp_name"], $dir3))
             {
@@ -109,7 +114,7 @@ switch($task){
 		}
 		//file4
 		if ($_FILES["img4"]["name"] != ""){
-            $fileName4 =  $_FILES["img4"]["name"];
+            $fileName4 =  get_new_file_name($_FILES["img4"]["name"], $title_seo_en."-image4");
             $dir4	=$dir_upload."products/".$fileName4;
             if (move_uploaded_file($_FILES["img4"]["tmp_name"], $dir4))
             {
@@ -132,7 +137,7 @@ switch($task){
 		}
 		//file5
 		if ($_FILES["img5"]["name"] != ""){
-            $fileName5 =  $_FILES["img5"]["name"];
+            $fileName5 =  get_new_file_name($_FILES["img5"]["name"], $title_seo_en."-image5");
             $dir5	=$dir_upload."products/".$fileName5;
             if (move_uploaded_file($_FILES["img5"]["tmp_name"], $dir5))
             {
@@ -169,17 +174,19 @@ switch($task){
 					}
 					$objProduct->alias 	= $name_alias;
 				}
-				$objProduct->$key		= $value;
+				$objProduct->$key			= $value;
 				$objProduct->admin_created	= $admin_id;
-				$objProduct->image1 = $image1;
-				$objProduct->image2 = $image2;
-				$objProduct->image3 = $image3;
-				$objProduct->image4 = $image4;
-				$objProduct->image5 = $image5;
+				$objProduct->image1 		= $image1;
+				$objProduct->image2 		= $image2;
+				$objProduct->image3 		= $image3;
+				$objProduct->image4 		= $image4;
+				$objProduct->image5 		= $image5;
 			}
 			$objProduct->save($thisProduct);
 			if ($product_id == 0) $pro_id = $objProduct->product_info['product_id'];
 			else $pro_id = $thisProduct->product_id;
+			
+			//product color
 			$objColor = new PGColor();
 			$database->db_query("DELETE FROM ".TBL_PRODUCT_COLOR." WHERE product_id=".$pro_id);
 			$i=1;
@@ -188,6 +195,25 @@ switch($task){
 				$objColor->save($pro_id, PGRequest::GetCmd('colors_'.$i, '', 'POST'), PGRequest::GetCmd('colors_'.$i, '', 'POST'), PGRequest::GetInt('price_color_'.$i, 0, 'POST'), 1);
 				$i++;
 			}
+			
+			//product discount
+			if (PGRequest::GetInt('discount', 0, 'POST') > 0){
+				$muc_giam 	= PGRequest::GetInt('price', 0, 'POST') - PGRequest::GetInt('discount', 0, 'POST');
+				$percent	= ($muc_giam/PGRequest::GetInt('price', 0, 'POST'))*100;
+				$objDiscount = new PGDiscount();
+				$objDiscount->save($pro_id, PGRequest::GetInt('discount', 0, 'POST'), $percent);	
+			}
+			
+			//product group
+			$is_new 		= PGRequest::GetInt('is_new', 0, 'POST');
+			$is_hot 		= PGRequest::GetInt('is_hot', 0, 'POST');
+			$is_special 	= PGRequest::GetInt('is_special', 0, 'POST');
+			$is_seller		= PGRequest::GetInt('is_seller', 0, 'POST');
+			$is_upcoming	= PGRequest::GetInt('is_upcoming', 0, 'POST');
+			$is_stock		= PGRequest::GetInt('is_stock', 0, 'POST');
+			$objGroup = new PGGroup();
+			$objGroup->save($pro_id, $is_new, $is_hot, $is_special, $is_seller, $is_upcoming, $is_stock);
+			
 		}else{
 			$error = $objProduct->is_message;
 		}

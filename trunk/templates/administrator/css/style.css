@@ -202,6 +202,9 @@ table.adminTable thead th span{
 table.adminBorder{
 	border: 2px solid #ccc; padding: 0; margin-bottom: 15px;
 }
+table.padding td{
+	padding: 7px;
+}
 .adm_selectbox{
 	width: 250px; border: 1px solid #ccc; height: 22px;	 
 }

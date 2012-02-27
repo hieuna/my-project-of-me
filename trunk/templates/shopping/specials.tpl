@@ -34,8 +34,9 @@
 									<input type="hidden" name="appearance[separate_buttons]" value="" />
 									<input type="hidden" name="appearance[show_list_buttons]" value="" />
 									<input type="hidden" name="appearance[but_role]" value="" />
+									
 									<span id="cart_add_block_180001153">
-										<a class="cm-submit-link text-button" id="button_cart_180001153" name="dispatch:-checkout.add..1153-:">Vào giỏ hàng</a>
+										<a class="cm-submit-link text-button" id="button_cart_180001153" name="dispatch:-checkout.add..1153-:">Giỏ hàng</a>
 									</span>
 								</div>
 							</td>

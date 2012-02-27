@@ -203,6 +203,24 @@
 			   	</tr>
 			   </tbody>
 			</table>
+			<!-- GROUP -->
+			<table class="adminTable adminBorder padding">
+			   <tbody>
+			   	<tr>
+			   		<td colspan="3" class="title_box_tbl">Nhóm sản phẩm</td>
+			   	</tr>
+			   	<tr>
+			   		<td width="33%"><input type="checkbox" name="is_new"{if $thisProduct->is_new == 1} checked="checked"{/if} value="1" /> Sản phẩm mới</td>
+			   		<td width="33%"><input type="checkbox" name="is_hot"{if $thisProduct->is_hot == 1} checked="checked"{/if} value="1" /> Sản phẩm hot</td>
+			   		<td><input type="checkbox" name="is_special" value="1"{if $thisProduct->is_special == 1} checked="checked"{/if} /> Nổi bật</td>
+			   	</tr>
+			   	<tr>
+			   		<td><input type="checkbox" name="is_seller" value="1"{if $thisProduct->is_seller == 1} checked="checked"{/if} /> Bán chạy</td>
+			   		<td><input type="checkbox" name="is_upcoming" value="1"{if $thisProduct->is_upcoming == 1} checked="checked"{/if} /> Sắp ra mắt</td>
+			   		<td><input type="checkbox" name="is_stock" value="1"{if $thisProduct->is_stock == 1} checked="checked"{/if} /> Còn hàng</td>
+			   	</tr>
+			   </tbody>
+			</table>
 			<!-- IMAGE -->
 			<table class="adminTable adminBorder">
 			   <tbody>
@@ -289,6 +307,13 @@
 			   			<a href="javascript:;" onclick="tinyMCE.get('elm1').show();return false;">[Show]</a>
 						<a href="javascript:;" onclick="tinyMCE.get('elm1').hide();return false;">[Hide]</a>
 			   		</td>
+			   	</tr>
+			   	</tbody>
+			</table>
+			<table class="adminTable adminBorder">
+				<tbody>
+				<tr>
+			   		<td class="title_box_tbl">Thông tin SEO</td>
 			   	</tr>
 			   	<tr>
 			   		<td>

@@ -412,7 +412,7 @@ p.price {
 /* Styles for the 100% width layout */ 
 /* Uncomment this set of styles for the 100% width layout. */
 #container {
-	width: 100%;
+	/*width: 100%;*/ width: 1000px;
 }
 .central-column {
 	padding: 0;
@@ -861,7 +861,8 @@ p.price {
 	width: 13px;
 }
 td.product-image img {
-	margin: 0 15px 0 10px;
+	/*margin: 0 15px 0 10px;*/
+	margin: 0 5px 0 0px;
 }
 .discount-label {
 	background: url('images/discount_label_left.png') no-repeat left top;
@@ -1604,6 +1605,9 @@ a.secondary-link {
 }
 .out-of-stock {
 	color: #666666;
+}
+.red{
+	color: red;
 }
 .features-list {
 	margin: 0;

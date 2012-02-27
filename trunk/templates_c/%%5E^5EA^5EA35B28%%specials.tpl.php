@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-26 04:42:37
+<?php /* Smarty version 2.6.10, created on 2012-02-27 14:03:59
          compiled from D:/AppServ/www/projects/templates/shopping/specials.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/specials.tpl', 26, false),)), $this); ?>
@@ -69,8 +69,9 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 									<input type="hidden" name="appearance[separate_buttons]" value="" />
 									<input type="hidden" name="appearance[show_list_buttons]" value="" />
 									<input type="hidden" name="appearance[but_role]" value="" />
+									
 									<span id="cart_add_block_180001153">
-										<a class="cm-submit-link text-button" id="button_cart_180001153" name="dispatch:-checkout.add..1153-:">Vào giỏ hàng</a>
+										<a class="cm-submit-link text-button" id="button_cart_180001153" name="dispatch:-checkout.add..1153-:">Giỏ hàng</a>
 									</span>
 								</div>
 							</td>
