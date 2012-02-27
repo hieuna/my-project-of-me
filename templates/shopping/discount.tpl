@@ -1,5 +1,5 @@
 <div class="mainbox2-container">
-	<h1 class="mainbox2-title clear"><span>Sản phẩm nổi bật</span></h1>
+	<h1 class="mainbox2-title clear"><span>Sản phẩm giảm giá</span></h1>
 	<div class="mainbox2-body">
 		<table cellpadding="3" cellspacing="3" border="0" width="100%">
 		<tr>
