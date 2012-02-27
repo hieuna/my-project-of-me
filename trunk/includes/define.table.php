@@ -22,4 +22,7 @@ define('TBL_VOTE', 'tbl_voting_IP');
 define('TBL_HOTDEAL', 'tbl_hotdeal');
 define('TBL_HOTDEAL', 'tbl_hotdeal');
 define('TBL_CUSTOMER_HOTDEAL', 'tbl_customer_hotdel');
+
+//define date
+define('_DATE_NEW_PRODUCT', 3);
 ?>

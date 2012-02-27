@@ -380,8 +380,9 @@ class PGProduct{
 	public function ProductSpecial($start=null, $limit=null){
 		global $database;
 		
-		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id";
+		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=pg.product_id";
 		$where[] = " p.status=1";
+		$where[] = " pg.is_special=1";
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
 		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
 		
@@ -389,7 +390,7 @@ class PGProduct{
 			$wLimit = " LIMIT ".$start.", ".$limit;
 		}
 		
-		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm ".$where.$orderBy.$wLimit;
+		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_GROUP." AS pg ".$where.$orderBy.$wLimit;
 		$results = $database->db_query($sql);
 		$i=1;
 		while ($row = $database->db_fetch_assoc($results)){
@@ -404,8 +405,9 @@ class PGProduct{
 	public function ProductNews($start=null, $limit=null){
 		global $database;
 		
-		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id";
+		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=pg.product_id";
 		$where[] = " p.status=1";
+		$where[] = " pg.is_new=1";
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
 		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
 		
@@ -413,7 +415,7 @@ class PGProduct{
 			$wLimit = " LIMIT ".$start.", ".$limit;
 		}
 		
-		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm ".$where.$orderBy.$wLimit;
+		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_GROUP." AS pg ".$where.$orderBy.$wLimit;
 		$results = $database->db_query($sql);
 		while ($row = $database->db_fetch_assoc($results)){
 			$row["link"] = "index.php?dispatch=product.view&product_id=".$row["product_id"];
@@ -425,9 +427,9 @@ class PGProduct{
 	public function ProductDiscount($start=null, $limit=null){
 		global $database;
 		
-		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id";
+		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=pdis.product_id";
 		$where[] = " p.status=1";
-		$where[] = " pdes.persent>0";
+		$where[] = " pdis.percent>0";
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
 		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
 		
@@ -435,11 +437,14 @@ class PGProduct{
 			$wLimit = " LIMIT ".$start.", ".$limit;
 		}
 		
-		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_DISCOUNT." AS pdes ".$where.$orderBy.$wLimit;
+		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_DISCOUNT." AS pdis ".$where.$orderBy.$wLimit;
 		$results = $database->db_query($sql);
+		$i = 1;
 		while ($row = $database->db_fetch_assoc($results)){
 			$row["link"] = "index.php?dispatch=product.view&product_id=".$row["product_id"];
+			$row["stt"]	= $i;
 			$lsProducts[] = $row;
+			$i++;
 		}
 		return $lsProducts;
 	}
