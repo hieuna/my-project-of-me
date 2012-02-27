@@ -52,10 +52,10 @@
 	<span class="float-right">&nbsp;</span>
 	<div class="top-tools-helper">
 		<div class="float-right" id="sign_io">
-										<a id="sw_login" class="cm-combination">Sign in</a>
+										<a id="sw_login" class="cm-combination">Đăng nhập</a>
 
-				or
-				<a href="index.php?dispatch=profiles.add" rel="nofollow">Register</a>
+				hoặc
+				<a href="index.php?dispatch=profiles.add" rel="nofollow">Đăng ký</a>
 						
 						<div id="login" class="cm-popup-box hidden">
 				<div class="login-popup">
@@ -69,12 +69,12 @@
 
 <div class="form-field">
 
-	<label for="login_popup" class="cm-required">Username:</label>
+	<label for="login_popup" class="cm-required">Tên đăng nhập:</label>
 	<input type="text" id="login_popup" name="user_login" size="30" value="" class="input-text cm-focus" />
 </div>
 
 <div class="form-field">
-	<label for="psw_popup" class="cm-required">Password:</label>
+	<label for="psw_popup" class="cm-required">Mật khẩu:</label>
 	<input type="password" id="psw_popup" name="password" size="30" value="" class="input-text password" />
 </div>
 
@@ -171,8 +171,8 @@
 																													</ul>
 								</div>
 				<div class="buttons-container full-cart">
-					<a href="index.php?dispatch=checkout.cart" rel="nofollow" class="view-cart">View cart</a>
-											<a href="index.php?dispatch=checkout.checkout" rel="nofollow">Checkout</a>
+					<a href="index.php?dispatch=checkout.cart" rel="nofollow" class="view-cart">Xem giỏ hàng</a>
+											<a href="index.php?dispatch=checkout.checkout" rel="nofollow">Thanh toán</a>
 									</div>
 			</div>
 
@@ -181,7 +181,7 @@
 
 	<div class="checkout-link full-cart">
 
-	<a href="index.php?dispatch=checkout.checkout" rel="nofollow">Checkout</a>
+	<a href="index.php?dispatch=checkout.checkout" rel="nofollow">Thanh toán</a>
 
 	</div>
 	<!--cart_status--></div>
@@ -189,22 +189,7 @@
 
 			
 			
-							<div class="select-wrap">
 
-		
-		
-	<a class="select-link cm-combo-on cm-combination" id="sw_select_USD_wrap_">US Dollars&nbsp;($)</a>
-
-	<div id="select_USD_wrap_" class="select-popup cm-popup-box hidden">
-		<img src="/cscart/skins/default_orange/customer/images/icons/icon_close.gif" width="13" height="13" border="0" alt="" class="close-icon no-margin cm-popup-switch" />
-		<ul class="cm-select-list">
-							<li><a rel="nofollow" name="USD" href="index.php?currency=USD"  class=" active">US Dollars&nbsp;($)</a></li>
-
-							<li><a rel="nofollow" name="EUR" href="index.php?currency=EUR"  class=" ">Euro&nbsp;(&#8364;)</a></li>
-							<li><a rel="nofollow" name="GBP" href="index.php?currency=GBP"  class=" ">GB Pound&nbsp;(&#163;)</a></li>
-					</ul>
-	</div>
-</div>
 					</div>
 
 	</div>
