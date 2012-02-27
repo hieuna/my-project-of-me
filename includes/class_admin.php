@@ -148,7 +148,7 @@ class PGAdmin
 					admin_access='{$oAdmin->admin_access}',
 					admin_modify={$admin_id}
 					WHERE admin_id='{$oAdmin->admin_id}' LIMIT 1";
-			echo $sql; die;
+			//echo $sql; die;
 			$result = $database->db_query($sql);
 		}
 		return $result;
