@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-22 21:40:54
+<?php /* Smarty version 2.6.10, created on 2012-02-27 11:53:29
          compiled from D:/AppServ/www/projects/templates/administrator/admin.hotdeal.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.hotdeal.tpl', 111, false),)), $this); ?>
@@ -91,7 +91,8 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
 </div><?php endif; ?>
 </div>
 <?php if ($this->_tpl_vars['task'] == 'add' || $this->_tpl_vars['task'] == 'edit'): ?>
-<form action="admin.hotdeal.php" method="post" name="adminForm" enctype="multipart/form-data">
+<form action="<?php echo $this->_tpl_vars['page']; ?>
+" method="post" name="adminForm" enctype="multipart/form-data">
 <table class="adminTable">
    <tbody>
    	<tr>
@@ -300,7 +301,8 @@ $(function(){
 '; ?>
 
 <?php else: ?>
-<form name="adminForm" method="post" action="admin.hotdeal.php">
+<form name="adminForm" method="post" action="<?php echo $this->_tpl_vars['page']; ?>
+">
 	<table style="margin-bottom:5px;">
 		<tbody>
 			<tr>
@@ -385,7 +387,8 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 ">
 				</td>
 				<td>
-					<a href="admin.hotdeal.php?task=edit&id=<?php echo $this->_tpl_vars['lsHotDeal'][$this->_sections['loops']['index']]['id']; ?>
+					<a href="<?php echo $this->_tpl_vars['page']; ?>
+?task=edit&id=<?php echo $this->_tpl_vars['lsHotDeal'][$this->_sections['loops']['index']]['id']; ?>
 "><?php echo $this->_tpl_vars['lsHotDeal'][$this->_sections['loops']['index']]['title']; ?>
 </a>
 				</td>
@@ -415,6 +418,11 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 						<a onclick="return listItemTask('cb<?php echo $this->_tpl_vars['lsHotDeal'][$this->_sections['loops']['index']]['id']; ?>
 ','publish')" title="Hiển thị">
 						<img src="../images/publish_x.png" width="16" style="cursor:pointer" alt="Hiển thị" border="0" />
+						</a>
+						<a href="<?php echo $this->_tpl_vars['page']; ?>
+?task=refresh&id=<?php echo $this->_tpl_vars['lsHotDeal'][$this->_sections['loops']['index']]['id']; ?>
+" title="Làm mới">
+						<img src="../images/Refresh-icon.png" width="16" style="cursor:pointer" alt="Làm mới" border="0" />
 						</a>
 					<?php endif; ?>
 				</td>

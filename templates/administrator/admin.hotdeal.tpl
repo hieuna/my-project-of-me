@@ -84,7 +84,7 @@
    {if $mosmsg}<div class="message">{$mosmsg}</div>{/if}
 </div>
 {if $task == "add" || $task == "edit"}
-<form action="admin.hotdeal.php" method="post" name="adminForm" enctype="multipart/form-data">
+<form action="{$page}" method="post" name="adminForm" enctype="multipart/form-data">
 <table class="adminTable">
    <tbody>
    	<tr>
@@ -216,7 +216,7 @@ $(function(){
 </script>
 {/literal}
 {else}
-<form name="adminForm" method="post" action="admin.hotdeal.php">
+<form name="adminForm" method="post" action="{$page}">
 	<table style="margin-bottom:5px;">
 		<tbody>
 			<tr>
@@ -274,7 +274,7 @@ $(function(){
 					<input type="checkbox" onclick="isChecked(this.checked);" value="{$lsHotDeal[loops].id}" name="cid[]" id="cb{$lsHotDeal[loops].id}">
 				</td>
 				<td>
-					<a href="admin.hotdeal.php?task=edit&id={$lsHotDeal[loops].id}">{$lsHotDeal[loops].title}</a>
+					<a href="{$page}?task=edit&id={$lsHotDeal[loops].id}">{$lsHotDeal[loops].title}</a>
 				</td>
 				<td align="center">
 					{$lsHotDeal[loops].name}
@@ -295,6 +295,9 @@ $(function(){
 					{else}
 						<a onclick="return listItemTask('cb{$lsHotDeal[loops].id}','publish')" title="Hiển thị">
 						<img src="../images/publish_x.png" width="16" style="cursor:pointer" alt="Hiển thị" border="0" />
+						</a>
+						<a href="{$page}?task=refresh&id={$lsHotDeal[loops].id}" title="Làm mới">
+						<img src="../images/Refresh-icon.png" width="16" style="cursor:pointer" alt="Làm mới" border="0" />
 						</a>
 					{/if}
 				</td>

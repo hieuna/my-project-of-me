@@ -301,4 +301,20 @@ class PGHotDeal{
 		}
 		return false;
 	}
+	
+	public function refresh($id){
+		global $database;
+		$date = strtotime("1 day");
+		$beforeDate = date("Y-m-d h:s:i", $date);
+		$sql = "UPDATE ".TBL_HOTDEAL." SET published=1, count=0, view=0, start_date='".date("Y-m-d h:s:i")."', end_date='".$beforeDate."', discount=0, muc_giam=0, price_hotdeal=0, price_ny=0, feauture='' WHERE id=".$id;
+		$query = "DELETE FROM ".TBL_CUSTOMER_HOTDEAL." WHERE hotdeal_id=".$id;
+		//die;
+		if ($database->db_query($sql) && $database->db_query($query)){
+			$msg = 'Làm mới hotdeal thành công !';
+		}else{
+			$msg = 'Làm mới hotdeal không thành công !';
+		}
+		
+		return $msg;
+	}
 }
