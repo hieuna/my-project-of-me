@@ -95,7 +95,7 @@ class PGHotDeal{
 			else
 				$condition = "";
 		}
-		$sql = "SELECT * FROM ".TBL_HOTDEAL.$condition." ORDER BY ordering ASC, id DESC";
+		$sql = "SELECT * FROM ".TBL_HOTDEAL.$condition." ORDER BY start_date DESC";
 		$result = $database->db_query($sql);
 		$i = 0;
 		while ($hotdeal = $database->db_fetch_assoc($result)){
