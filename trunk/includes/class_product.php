@@ -449,6 +449,21 @@ class PGProduct{
 		return $lsProducts;
 	}
 	
+	public function Product_of_day(){
+		global $database;
+		
+		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=pg.product_id";
+		$where[] = " p.status=1";
+		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
+		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		
+		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_GROUP." AS pg ".$where.$orderBy." LIMIT 0,1";
+		$result = $database->db_query($sql);
+		$row = $database->db_fetch_object($result);
+		
+		return $row;
+	}
+	
 	public function showList($where=null, $order=null, $start=null, $limit=null){
 		global $database;
 				
