@@ -8,6 +8,8 @@ $category = $objCategory->load($category_id);
 //load product of Category
 $objProduct = new PGProduct();
 $product = $objProduct->load($product_id);
+$objGroup = new PGGroup();
+$objGroup->upview($product_id);
 
 $smarty->assign('category', $category);
 $smarty->assign('product', $product);
