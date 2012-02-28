@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-27 18:01:38
+<?php /* Smarty version 2.6.10, created on 2012-02-28 18:08:05
          compiled from D:/AppServ/www/projects/templates/shopping/product.view.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 60, false),array('modifier', 'date_format', 'D:/AppServ/www/projects/templates/shopping/product.view.tpl', 146, false),)), $this); ?>
@@ -37,7 +37,7 @@ unset($_smarty_tpl_vars);
 " id="detailed_href1_742">
 										<img src="<?php echo $this->_tpl_vars['product']->image1; ?>
 " alt="<?php echo $this->_tpl_vars['product']->name; ?>
-" class="cm-thumbnails" id="det_img_742" width="250" border="0" /></a>
+" class="cm-thumbnails" width="200" border="0" /></a>
 										<p id="detailed_box_742" class="center">
 											<a class="cm-thumbnails-opener view-larger-image" href="<?php echo $this->_tpl_vars['product']->image1; ?>
 " id="detailed_href2_742">Xem ảnh lớn</a>
