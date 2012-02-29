@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Feb 29, 2012 at 09:52 AM
+-- Generation Time: Feb 29, 2012 at 09:54 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -43,7 +43,7 @@ CREATE TABLE `tbl_admins` (
 -- 
 
 INSERT INTO `tbl_admins` VALUES (1, 'Kiều Văn Ngọc', 'ngockieuvan@vccorp.vn', 'kieuvanngoc', 'f1b8be6c6d03d1abf6f01ec160774ea4', 1, 'A2OLyR4BizBmAhLT', 1, '', 1, 1, '0000-00-00 00:00:00', '2012-02-03 22:12:10', 1);
-INSERT INTO `tbl_admins` VALUES (25, 'Phan Thị Trang', 'xtech@gmail.com', 'admin', 'e10adc3949ba59abbe56e057f20f883e', 1, '', 2, 'a:2:{s:11:"admin.sites";s:0:"";s:13:"admin.hotdeal";a:6:{i:0;s:1:"1";i:1;s:1:"2";i:2;s:1:"3";i:3;s:1:"5";i:4;s:1:"6";i:5;s:1:"7";}}', 0, 1, '1970-01-01 07:00:00', '0000-00-00 00:00:00', 1);
+INSERT INTO `tbl_admins` VALUES (25, 'Phan Thị Trang', 'xtech@gmail.com', 'admin', 'e807f1fcf82d132f9bb018ca6738a19f', 1, '', 2, 'a:2:{s:11:"admin.sites";s:0:"";s:13:"admin.hotdeal";a:6:{i:0;s:1:"1";i:1;s:1:"2";i:2;s:1:"3";i:3;s:1:"5";i:4;s:1:"6";i:5;s:1:"7";}}', 0, 1, '1970-01-01 07:00:00', '0000-00-00 00:00:00', 1);
 INSERT INTO `tbl_admins` VALUES (26, 'Bạch Quý Hợi', 'bqh@yahoo.com', 'bachquyhoi', 'e807f1fcf82d132f9bb018ca6738a19f', 1, '', 2, 'a:2:{s:11:"admin.sites";s:0:"";s:13:"admin.hotdeal";a:1:{i:0;s:1:"5";}}', 0, 0, '1970-01-01 07:00:00', '0000-00-00 00:00:00', 1);
 INSERT INTO `tbl_admins` VALUES (29, 'Quản trị viên', 'quantrivien@gmail.com', 'quantrivien', 'fef1ddf26aacab614a822e243bdb16cb', 1, '', 2, 'a:3:{s:12:"admin_admins";s:0:"";s:11:"admin_sites";s:0:"";s:13:"admin_hotdeal";a:2:{i:0;s:1:"5";i:1;s:1:"7";}}', 0, 0, '1970-01-01 07:00:00', '0000-00-00 00:00:00', 1);
 INSERT INTO `tbl_admins` VALUES (38, 'Nguyễn Văn Minh', 'minhnv@gmail.com', 'minhnv', 'e10adc3949ba59abbe56e057f20f883e', 1, '', 2, 'a:4:{s:12:"admin_admins";s:0:"";s:11:"admin_sites";s:0:"";s:13:"admin_hotdeal";a:1:{i:0;s:1:"2";}s:22:"admin_customer_hotdeal";s:0:"";}', 1, 38, '2012-02-15 05:24:45', '0000-00-00 00:00:00', 1);
