@@ -159,6 +159,14 @@
 
     <default>
         <payment>
+        	<sohapay>
+                <active>1</active>
+                <model>payment/method_sohapay</model>
+                <order_status>pending</order_status>
+                <title>Tích hợp thanh toán qua SohaPay</title>
+                <allowspecific>0</allowspecific>
+                <group>offline</group>
+            </sohapay>
             <ccsave>
                 <active>1</active>
                 <cctypes>AE,VI,MC,DI</cctypes>
@@ -177,14 +185,7 @@
                 <allowspecific>0</allowspecific>
                 <group>offline</group>
             </checkmo>
-			<sohapay>
-                <active>1</active>
-                <model>payment/method_sohapay</model>
-                <order_status>pending</order_status>
-                <title>Tích hợp thanh toán SohaPay</title>
-                <allowspecific>0</allowspecific>
-                <group>offline</group>
-            </sohapay>
+
             <free>
                 <active>1</active>
                 <model>payment/method_free</model>
