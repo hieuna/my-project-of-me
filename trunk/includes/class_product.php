@@ -454,10 +454,11 @@ class PGProduct{
 		
 		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=pg.product_id";
 		$where[] = " p.status=1";
+		$where[] = " pg.is_stock=1";
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
-		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		$orderBy = " ORDER BY pg.is_view DESC";
 		
-		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_GROUP." AS pg ".$where.$orderBy." LIMIT 0,1";
+		$sql = "SELECT p.product_id, p.code, p.price, pd.name, pd.introtext, pm.image1, pg.is_stock FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_GROUP." AS pg ".$where.$orderBy." LIMIT 0,1";
 		$result = $database->db_query($sql);
 		$row = $database->db_fetch_object($result);
 		
