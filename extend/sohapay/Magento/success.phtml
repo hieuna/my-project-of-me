@@ -1,0 +1,72 @@
+<?php
+$order = Mage::getModel('sales/order')->loadByIncrementId($this->getOrderId());
+//SOHAPAY 
+include ("class_payment.php");
+//var_dump($order); die;
+$merchant_site_code		= $_SESSION['site_code'];//id của site
+$merchant_secure_secret	= $_SESSION['secure_secret'];//mật khẩu giao tiếp api
+$classPayment = new PG_checkout($merchant_site_code, $merchant_secure_secret);
+if(isset($_GET['secure_code']) && !empty($_GET['secure_code'])) #Nhận thông tin
+{
+	#Thông tin giao dịch
+	$transaction_info = @$_GET['transaction_info'];
+	#Mã sản phẩm, mã đơn hàng, giỏ hàng giao dịch
+	$order_code = @$_GET['order_code'];
+	#Tổng số tiền thanh toán
+	$price = @$_GET['price'];
+	#Mã giao dịch thanh toán tại nganluong.vn
+	$payment_id = @$_GET['payment_id'];
+	#Loại giao dịch tại nganluong.vn (1=thanh toán ngay, 2=thanh toán tạm giữ)
+	$payment_type = @$_GET['payment_type'];
+	#Thông tin chi tiết về lỗi trong quá trình thanh toán
+	$error_text = @$_GET['error_text'];
+	#Lấy mã kiểm tra tính hợp lệ của đầu vào
+	$secure_code = @$_GET['secure_code'];
+	#Xử lý đầu vào
+	$shp_check = $classPayment->verifyReturnUrl();
+	if($shp_check === FALSE)
+	{
+		#Tham số gửi về không hợp lệ, có sự can thiệp từ bên ngoài
+		echo 'Kết quả thanh toán không hợp lệ';
+	}
+	else
+	{
+		if($error_text != '')
+		{
+			#Có lỗi trong quá trình thanh toán
+			echo 'Có lỗi: '.$error_text.'! Hãy thực hiện lại!';
+		}
+		else
+		{
+			#Thanh toán thành công
+			echo 'Thanh toán thành công!';
+		}
+	}
+}
+else #Gửi thông tin
+{
+	#Mã sản phẩm, mã đơn hàng, mã giỏ hàng
+	$order_code =$this->__($this->escapeHtml($this->getOrderId()));
+	#Tổng số tiền thanh toán
+	$price = intval($order["base_grand_total"]);
+	#Thông tin giao dịch đến sohapay
+	$return_url = $_SESSION['return_url'];
+	$website_merchant = $_SESSION['name_store'];
+	//$transaction_info = "Chao cac ban";
+	$transaction_info = 'Thanh toán đơn đặt hàng từ '.$website_merchant.' qua cổng thanh toán SohaPay';
+	$order_email = $order["customer_email"];
+	$order_mobile = "";
+	if ($order->getPayment()->getMethod() == "sohapay")
+	{
+		$sohapay_checkout_url = $classPayment->buildCheckoutUrl($return_url, $transaction_info, $order_code, $price, $order_email, $order_mobile);
+		echo <<<EOT
+			<html>
+			<body onLoad="document.sohapay_form.submit();">
+			<form action="{$sohapay_checkout_url}" method="post" name="sohapay_form">
+			</form>
+			</body>
+			</html>
+EOT;
+	 }
+}
+?>

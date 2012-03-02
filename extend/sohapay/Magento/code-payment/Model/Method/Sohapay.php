@@ -44,6 +44,15 @@ class Mage_Payment_Model_Method_Sohapay extends Mage_Payment_Model_Method_Abstra
         if ($this->getPayableTo()) {
             $details['payable_to'] = $this->getPayableTo();
         }
+    	if($this->getMerchantSite()){
+        	$details['merchantID']=$this->getMerchantSite();
+        }
+        if($this->getSecureCode()){
+        	$details['secure_code']=$this->getSecureCode();
+        }
+    	if($this->getNameStore()){
+        	$details['name_store']=$this->getNameStore();
+        }
         if ($this->getMailingAddress()) {
             $details['mailing_address'] = $this->getMailingAddress();
         }
@@ -64,6 +73,19 @@ class Mage_Payment_Model_Method_Sohapay extends Mage_Payment_Model_Method_Abstra
     public function getMailingAddress()
     {
         return $this->getConfigData('mailing_address');
+    }
+    
+	public function getMerchantSite()
+    {
+    	return $this->getConfigData('merchantID');
+    }
+    public function getSecureCode()
+    {
+    	return $this->getConfigData('secure_code');
+    }
+	public function getNameStore()
+    {
+    	return $this->getConfigData('name_store');
     }
     
     public function getReturnUrl()

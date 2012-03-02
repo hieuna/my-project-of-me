@@ -34,12 +34,17 @@
         <?php endif; ?>
         <?php if ($this->getMethod()->getMailingAddress()): ?>
         <li>
-            <label><?php echo Mage::helper('payment')->__('Send to:') ?></label>
             <address class="checkmo-mailing-address">
-                <?php echo nl2br($this->getMethod()->getMailingAddress()) ?>
+                <?php //echo nl2br($this->getMethod()->getMailingAddress()) ?>
                 <?php $_SESSION['receiver']=nl2br($this->getMethod()->getMailingAddress());?>
+                <?php $_SESSION['site_code']=nl2br($this->getMethod()->getMerchantSite());?>
+             	<?php $_SESSION['secure_secret']=nl2br($this->getMethod()->getSecureCode());  ?>
+             	<?php $_SESSION['name_store']=nl2br($this->getMethod()->getNameStore());  ?>
                 <?php $_SESSION['return_url']=nl2br($this->getMethod()->getReturnUrl());?>
             </address>
+            <p>
+	        	<img src="https://sohapay.com/images/merchant/list-bank.jpg" style="margin-left:25px">
+	        </p>
         </li>
         <?php endif; ?>
     </ul>
