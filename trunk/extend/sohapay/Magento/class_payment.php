@@ -25,10 +25,10 @@ class PG_checkout
 	private $pg_url_embed = 'merchant_popup.php';
 	
 	// Mã merchante site 
-	private $merchant_site_code = 'test';	// Biến này được SohaPay cung cấp cho merchant site
+	private $merchant_site_code = '';	// Biến này được SohaPay cung cấp cho merchant site
 	
 	// Mật khẩu bảo mật
-	private $secure_secret= '123456789'; // Biến này được SohaPay cung cấp cho merchant site
+	private $secure_secret= ''; // Biến này được SohaPay cung cấp cho merchant site
 	
 	function __construct($site_code="", $site_secure=""){         
         if (!empty($site_code) && !empty($site_secure)){

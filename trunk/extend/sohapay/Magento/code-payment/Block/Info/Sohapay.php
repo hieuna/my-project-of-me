@@ -29,6 +29,9 @@ class Mage_Payment_Block_Info_Sohapay extends Mage_Payment_Block_Info
 {
 
     protected $_payableTo;
+    protected $_merchantID;
+    protected $_secure_code;
+    protected $_name_store;
     protected $_mailingAddress;
     protected $_return_url;
     protected function _construct()
@@ -55,6 +58,27 @@ class Mage_Payment_Block_Info_Sohapay extends Mage_Payment_Block_Info
      *
      * @return string
      */
+	public function getMerchantSite()
+    {
+    	if (is_null($this->_merchantID)) {
+            $this->_convertAdditionalData();
+        }
+        return $this->_merchantID;
+    }
+    public function getSecureCode()
+    {
+    	if (is_null($this->_secure_code)) {
+            $this->_convertAdditionalData();
+        }
+        return $this->_secure_code;
+    }
+	public function getNameStore()
+    {
+    	if (is_null($this->_name_store)) {
+            $this->_convertAdditionalData();
+        }
+        return $this->_name_store;
+    }
     public function getMailingAddress()
     {
         if (is_null($this->_mailingAddress)) {
@@ -79,10 +103,16 @@ class Mage_Payment_Block_Info_Sohapay extends Mage_Payment_Block_Info
         $details = @unserialize($this->getInfo()->getAdditionalData());
         if (is_array($details)) {
             $this->_payableTo = isset($details['payable_to']) ? (string) $details['payable_to'] : '';
+            $this->_merchantID = isset($details['_merchantID']) ? (string) $details['_merchantID'] : '';
+            $this->_secure_code = isset($details['_secure_code']) ? (string) $details['_secure_code'] : '';
+            $this->_name_store = isset($details['_name_store']) ? (string) $details['_name_store'] : '';
             $this->_mailingAddress = isset($details['mailing_address']) ? (string) $details['mailing_address'] : '';
              $this->_return_url = isset($details['return_url']) ? (string) $details['return_url'] : '';
         } else {
             $this->_payableTo = '';
+            $this->_merchantID = '';
+            $this->_secure_code = '';
+            $this->_name_store = '';
             $this->_mailingAddress = '';
             $this->_return_url='';
         }
