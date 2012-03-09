@@ -28,7 +28,7 @@
 		</div>
 		
 		<div class="updates-wrapper deals-footer cm-deals-categories">
-			<a name="0" class="cm-deals-category">All categories</a>&nbsp;&nbsp;
+			<a name="0" class="cm-deals-category">Tất cả</a>&nbsp;&nbsp;
 			{$lsProductHotdeal}
 		</div>	
 	</div>

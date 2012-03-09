@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-26 04:39:54
+<?php /* Smarty version 2.6.10, created on 2012-03-09 17:39:35
          compiled from D:/AppServ/www/projects/templates/shopping/hotdeals.tpl */ ?>
 <div class="mainbox-container">
 	<?php echo '
@@ -31,7 +31,7 @@
 		</div>
 		
 		<div class="updates-wrapper deals-footer cm-deals-categories">
-			<a name="0" class="cm-deals-category">All categories</a>&nbsp;&nbsp;
+			<a name="0" class="cm-deals-category">Tất cả</a>&nbsp;&nbsp;
 			<?php echo $this->_tpl_vars['lsProductHotdeal']; ?>
 
 		</div>	
