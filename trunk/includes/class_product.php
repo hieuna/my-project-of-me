@@ -364,15 +364,21 @@ class PGProduct{
 		$html = "";
 		$i = 0;
 		while ($rows = $database->db_fetch_assoc($results_cate)){
-			$sql = "SELECT p.product_id, p.category_id, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm ".$where." AND p.category_id=".$rows["category_id"].$orderBy;
-			$results = $database->db_query($sql);
-			while ($row = $database->db_fetch_assoc($results)){
-				$html .= "<script type='text/javascript'>";
-				$html .= "items[".$i."] = {name: '".$row["name"]."', link: 'index.php?dispatch=product.view&product_id=".$row["product_id"]."', image: '".$row["image1"]."', cat_id: '".$row["category_id"]."', width: 75, height: 75};";
-				$html .= "</script>\n";
-				$i++;
+			$query_count = "SELECT COUNT(*) AS total FROM ".TBL_PRODUCT." WHERE category_id=".$rows["category_id"]." AND status=1";
+			$result_count = $database->db_query($query_count);
+			$count = $database->getRow($result_count);
+			$total = $count["total"];
+			if ($total > 0){
+				$sql = "SELECT p.product_id, p.category_id, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm ".$where." AND p.category_id=".$rows["category_id"].$orderBy;
+				$results = $database->db_query($sql);
+				while ($row = $database->db_fetch_assoc($results)){
+					$html .= "<script type='text/javascript'>";
+					$html .= "items[".$i."] = {name: '".$row["name"]."', link: 'index.php?dispatch=product.view&product_id=".$row["product_id"]."', image: '".$row["image1"]."', cat_id: '".$row["category_id"]."', width: 75, height: 75};";
+					$html .= "</script>\n";
+					$i++;
+				}
+				$html .= '<a name="'.$rows["category_id"].'" class="cm-deals-category">'.$rows["name"].'</a>&nbsp;&nbsp;';
 			}
-			$html .= '<a name="'.$rows["category_id"].'" class="cm-deals-category">'.$rows["name"].'</a>&nbsp;&nbsp;';
 		}
 		return $html;
 	}

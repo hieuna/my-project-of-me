@@ -69,6 +69,19 @@ class PGCategory{
 		return $lsCategories;
 	}
 	
+	/* show category_id có parent_id */
+	public function showCategoryID($category_id){
+		global $database;
+		if ($category_id > 0){
+			$sql = "SELECT category_id FROM ".TBL_CATEGORY." WHERE parent_id=".$category_id;
+			$results = $database->db_query($sql);
+			while ($row = $database->db_fetch_assoc($results)){
+				$lsIDCategory[] = $row;
+			}
+			return $lsIDCategory;
+		}
+	}
+	
 	/*
 	 * Load field
 	 * $category_id : ID of field
