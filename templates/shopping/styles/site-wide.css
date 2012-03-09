@@ -999,29 +999,6 @@ div.navFooterLogoLine{
 .ap_popover_unsprited .ap_footer .ap_left   {
 	background-image: url("../images/po_top.png");
 }
-.ap_popover_unsprited .ap_footer .ap_right  {
-	background-image: url(http://g-ecx.images-amazon.com/images/G/01/javascripts/lib/popover/images/po_bottom_right._V265110087_.png);
-}
-.ap_popover_unsprited .ap_footer .ap_middle {
-	background-image: url(http://g-ecx.images-amazon.com/images/G/01/javascripts/lib/popover/images/po_bottom._V265110084_.png);
-}
-/* Everything else -- sprited */
-.ap_popover_sprited .ap_body .ap_left, 
-.ap_popover_sprited .ap_body .ap_right {
-    background-image: url(http://g-ecx.images-amazon.com/images/G/01/javascripts/lib/popover/images/light/sprite-v._V219326283_.png);
-}
-.ap_popover_sprited .ap_header .ap_left, 
-.ap_popover_sprited .ap_header .ap_right,
-.ap_popover_sprited .ap_header .ap_middle,
-.ap_popover_sprited .ap_footer .ap_left, 
-.ap_popover_sprited .ap_footer .ap_right,
-.ap_popover_sprited .ap_footer .ap_middle,
-.ap_popover_sprited .ap_closebutton {
-    background-image: url(http://g-ecx.images-amazon.com/images/G/01/javascripts/lib/popover/images/light/sprite-h._V219326280_.png);
-}
-.ap_popover_sprited .ap_body .ap_right-arrow, .ap_popover_sprited .ap_body .ap_left-arrow {
-    background-image: url(http://g-ecx.images-amazon.com/images/G/01/javascripts/lib/popover/images/light/sprite-arrow-v._V219326286_.png);
-}	
 body {
 	font-family: Arial,Verdana, "Helvetica Neue", Helvetica, sans-serif;
 }
