@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-28 00:19:46
+<?php /* Smarty version 2.6.10, created on 2012-03-09 23:24:31
          compiled from D:/AppServ/www/projects/templates/shopping/index.tpl */ ?>
 <div id="content">
 	<div class="content-helper clear">

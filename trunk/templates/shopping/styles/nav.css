@@ -1,0 +1,18 @@
+.nav-sprite {
+  background-image: url(http://g-ecx.images-amazon.com/images/G/01/gno/beacon/BeaconSprite-US-01._V141013396_.png);
+}
+.nav_pop_h {
+  background-image: url(http://g-ecx.images-amazon.com/images/G/01/gno/beacon/nav-pop-h._V155853593_.png);
+}
+.nav_pop_v {
+  background-image: url(http://g-ecx.images-amazon.com/images/G/01/gno/beacon/nav-pop-v._V155853593_.png);
+}
+.nav_ie6 .nav_pop_h {
+  background-image: url(http://g-ecx.images-amazon.com/images/G/01/gno/beacon/nav-pop-8bit-h._V155961234_.png);
+}
+.nav_ie6 .nav_pop_v {
+  background-image: url(http://g-ecx.images-amazon.com/images/G/01/gno/beacon/nav-pop-8bit-v._V155961234_.png);
+}
+.nav-ajax-loading .nav-ajax-message {
+  background: center center url(http://g-ecx.images-amazon.com/images/G/01/javascripts/lib/popover/images/snake._V192571611_.gif) no-repeat;
+}
