@@ -18,11 +18,12 @@ switch($task){
 		$objMenu = new PGMenu();
 		$thisMenu = $objMenu->load($menu_id);
 		
-		$where[] = " status=1";
-		if ($task=='add') $where[] = "parent_id>=0";
-		else $where[] = " parent_id<=".$thisMenu->parent_id;	
+		$where[] = " m.menutype = mt.menutype_id";
+		$where[] = " m.status=1";
+		if ($task=='add') $where[] = "m.parent_id>=0";
+		else $where[] = " m.parent_id<=".$thisMenu->parent_id;	
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
-		$order = " ORDER BY ordering ASC, menu_id DESC";
+		$order = " ORDER BY m.ordering ASC, m.menu_id DESC";
 		$lsMenu = $objMenu->loadList($where, $order);
 		
 		$objMenuType = new PGMenuType();
