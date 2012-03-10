@@ -1,196 +1,177 @@
 {include file="$dir_template/header_global.tpl"}
-<div class="helper-container">
-	<a name="top"></a>
-	<div id="ajax_loading_box" class="ajax-loading-box">
-		<div class="right-inner-loading-box">
-			<div id="ajax_loading_message" class="ajax-inner-loading-box">Loading...</div>
-		</div>
-	</div>
-	<div id="container" class="container">
-		<div id="header">
-			<div class="header-helper-container">
-				<div class="logo-image">
-					<a href="index.php"><img src="/cscart/skins/default_orange/customer/images/customer_area_logo.png" width="176" height="69" border="0" alt="Logo sẽ đặt ở đây" /></a>
-				</div>
-				<p class="quick-links">&nbsp;
-						<a href="index.php">Trang chủ</a>
-						<a href="index.php?dispatch=pages.view&amp;page_id=3">Giới thiệu</a>
-			
-						<a href="index.php?dispatch=pages.view&amp;page_id=1">Liên hệ</a>
-						<a href="index.php?dispatch=promotions.list">Khuyến mãi</a>
-						<a href="index.php?dispatch=sitemap.view">Sitemap</a>
-				</p>
-			<div id="top_menu">
-				<ul class="top-menu dropdown">
-					<li class="first-level cm-active"><span><a href="index.php">Trang chủ</a></span></li>
-					<li class="first-level "><span><a href="index.php?dispatch=categories.catalog">Nhóm sản phẩm</a></span></li>
-					<li class="first-level "><span><a href="index.php?dispatch=profiles.update">Tài khoản của tôi</a></span>
-					</li><li class="first-level "><span><a href="index.php?dispatch=checkout.cart">Giỏ hàng</a></span></li>
-					<li class="first-level "><span><a href="index.php?dispatch=pages.view&amp;page_id=3">Về công ty</a></span>
-						<ul class="dropdown-vertical-rtl">
-							<li >
-								<a href="index.php?dispatch=pages.view&amp;page_id=3">Giới thiệu công ty</a>
-							</li>
-							<li class="h-sep">&nbsp;</li>
-							<li >
-								<a href="index.php?dispatch=pages.view&amp;page_id=1">Liên hệ với chúng tôi</a>
-							</li>
-							<li class="h-sep">&nbsp;</li>
-							<li >
-								<a href="index.php?dispatch=pages.view&amp;page_id=4">Thăm dò ý kiến</a>
-							</li>
-							<li class="h-sep">&nbsp;</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<span class="helper-block">&nbsp;</span>
-	</div>
+<header>
+  <div id='navbar' class='nav-beacon nav-logo-small'>
+    <div id='nav-cross-shop'>
 
-<div class="top-tools-container">
-	<span class="float-left">&nbsp;</span>
-	<span class="float-right">&nbsp;</span>
-	<div class="top-tools-helper">
-		<div class="float-right" id="sign_io">
-										<a id="sw_login" class="cm-combination">Đăng nhập</a>
+      <a href='/ref=gno_logo' id='nav-logo' class='nav_a nav-sprite' alt='Amazon'>
+        Amazon
+        <span class='nav-prime-tag nav-sprite'></span>
 
-				hoặc
-				<a href="index.php?dispatch=profiles.add" rel="nofollow">Đăng ký</a>
-						
-						<div id="login" class="cm-popup-box hidden">
-				<div class="login-popup">
-					<div class="header">Sign in</div>
-					
+      </a>
 
+      <ul id='nav-cross-shop-links'>
+                    <li class='nav-xs-link first'>
+              <a href='/gp/goldbox/ref=cs_top_nav_gb27' class='nav_a nav_a'>Today's Deals</a>
+            </li>
+                    <li class='nav-xs-link '>
+              <a href='/gp/gc/nav-split/ref=topnav_gcsplit' class='nav_a'>Gift Cards</a>
 
-	<form name="login_popup_form" action="index.php" method="post">
-<input type="hidden" name="form_name" value="login_popup_form" />
-<input type="hidden" name="return_url" value="index.php" />
+            </li>
+                    <li class='nav-xs-link '>
+              <a href='/Help/b/ref=topnav_help?ie=UTF8&node=508510' class='nav_a'>Help</a>
+            </li>
+                
+      </ul>
 
-<div class="form-field">
+      
+      <div id='welcomeRowTable' >
+        <!--[if IE ]><div class='nav-ie-min-width' style='width: 770px'></div><![endif]-->
+        <div >
 
-	<label for="login_popup" class="cm-required">Tên đăng nhập:</label>
-	<input type="text" id="login_popup" name="user_login" size="30" value="" class="input-text cm-focus" />
+          <div id='navSwmSlot'>
+            <div id='nav-swm-slot' >
+    <a class='nav_a nav-swm-primary' href="/gp/subs/primeclub/signup/main.html/ref=nav_swm_prm_201202?pf_rd_p=1350444442&pf_rd_s=nav-sitewide-msg&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=0F50DNGPMDNXKSZSZ9NJ">
+    FREE Two-Day Shipping: See details
+  </a>
 </div>
+          </div>
+        </div>
+      </div>
 
-<div class="form-field">
-	<label for="psw_popup" class="cm-required">Mật khẩu:</label>
-	<input type="password" id="psw_popup" name="password" size="30" value="" class="input-text password" />
-</div>
+      <div style='clear: both;'></div>
+    </div>
 
-	
-		
-	<p class="left">Type the characters you see in the picture below.</p>
+    <div id='nav-bar-outer'>
 
-		
-	<p><input class="captcha-input-text valign" type="text" name="verification_answer" value= "" autocomplete="off" />
-			<img id="verification_image_login_login_popup_form" class="image-captcha valign" src="index.php?dispatch=image.captcha&amp;verification_id=e39f3833c1f94df521e6c940b5fe83dd:login_login_popup_form&amp;login_login_popup_form4f427cad51047&amp;" alt="" onclick="this.src += 'reload' ;"  width="100" height="25" />
-	</p>
+      <div id='nav-logo-borderfade'><div class='nav-fade-mask'></div><div class='nav-fade nav-sprite'></div></div>
 
-<div class="clear">
-	<div class="float-left">
-		<input class="valign checkbox" type="checkbox" name="remember_me" id="remember_me_popup" value="Y" />
-		<label for="remember_me_popup" class="valign lowercase">Remember me</label>
-	</div>
+      <div id='nav-bar-inner' class='nav-sprite'>
 
-	<div class="float-right">
-		
-		
- 
-	<span   class="button-submit-action"><input   type="submit" name="dispatch[auth.login]"  value="Sign in" /></span>
+        <a id='nav-shop-all-button' href='/gp/site-directory/ref=topnav_sad' class='nav_a nav-button-outer nav-menu-inactive' alt='Shop By Department'>
+          <span class='nav-button-mid nav-sprite'>
 
-	</div>
-</div>
-<p class="center"><a href="index.php?dispatch=auth.recover_password">Forgot your password?</a></p>
-</form>
+            <span class='nav-button-inner nav-sprite'>
+              <span class='nav-button-title'>Shop by</span>
+              <span class='nav-button-title nav-button-strong'>Department</span>
+            </span>
+          </span>
+          <span class='nav-down-arrow nav-sprite'></span>
+        </a>
 
-				</div>
-			</div>
+        <label id='nav-search-label' for='twotabsearchtextbox'>
+          Search
+        </label>
 
-					<!--sign_io--></div>
-		<div class="top-search">
-			<form action="index.php" name="search_form" method="get">
-<input type="hidden" name="subcats" value="Y" />
-<input type="hidden" name="status" value="A" />
-<input type="hidden" name="pshort" value="Y" />
-<input type="hidden" name="pfull" value="Y" />
-<input type="hidden" name="pname" value="Y" />
-<input type="hidden" name="pkeywords" value="Y" />
-<input type="hidden" name="search_performed" value="Y" />
- 
+        <div>
+          <form
+            action='/s/ref=nb_sb_noss'
+            method='get' name='site-search'
+            class='nav-searchbar-inner nav-left-search-in'
+          >
 
-<span class="search-products-text">Search:</span>
+                          <span id='nav-search-in' class='nav-sprite'>
+                <span id='nav-search-in-content' data-value="search-alias=aps">
+                  All
+                </span>
 
-<select	name="cid" class="search-selectbox">
-	<option	value="0">- All categories -</option>
-		<option	value="93" >Books</option>
-		<option	value="85" >Computers</option>
-		<option	value="113" >Music</option>
-		<option	value="87" >Apparel</option>
-		<option	value="111" >DVD</option>
+                <span class='nav-down-arrow nav-sprite'></span>
+                <select name="url" id="searchDropdownBox" class="searchSelect" title="Search in"   ><option value="search-alias=aps" selected="selected">All Departments</option><option value="search-alias=instant-video">Amazon Instant Video</option><option value="search-alias=appliances">Appliances</option><option value="search-alias=mobile-apps">Apps for Android
+</option><option value="search-alias=arts-crafts">Arts, Crafts & Sewing</option><option value="search-alias=automotive">Automotive</option><option value="search-alias=baby-products">Baby</option><option value="search-alias=beauty">Beauty</option><option value="search-alias=stripbooks">Books</option><option value="search-alias=mobile">Cell Phones & Accessories</option><option value="search-alias=apparel">Clothing & Accessories</option><option value="search-alias=computers">Computers</option><option value="search-alias=electronics">Electronics</option><option value="search-alias=gift-cards">Gift Cards</option><option value="search-alias=grocery">Grocery & Gourmet Food</option><option value="search-alias=hpc">Health & Personal Care</option><option value="search-alias=garden">Home & Kitchen</option><option value="search-alias=industrial">Industrial & Scientific</option><option value="search-alias=jewelry">Jewelry</option><option value="search-alias=digital-text">Kindle Store</option><option value="search-alias=magazines">Magazine Subscriptions</option><option value="search-alias=movies-tv">Movies & TV</option><option value="search-alias=digital-music">MP3 Downloads</option><option value="search-alias=popular">Music</option><option value="search-alias=mi">Musical Instruments</option><option value="search-alias=office-products">Office Products</option><option value="search-alias=lawngarden">Patio, Lawn & Garden</option><option value="search-alias=pets">Pet Supplies</option><option value="search-alias=shoes">Shoes</option><option value="search-alias=software">Software</option><option value="search-alias=sporting">Sports & Outdoors</option><option value="search-alias=tools">Tools & Home Improvement</option><option value="search-alias=toys-and-games">Toys & Games</option><option value="search-alias=videogames">Video Games</option><option value="search-alias=watches">Watches</option></select>
 
-		<option	value="95" >Audio &amp; Video</option>
-		<option	value="119" >Cell Phones</option>
-		<option	value="129" >Sports &amp; Outdoors</option>
-	</select>
+              </span>
+            
+            <div class='nav-searchfield-outer nav-sprite' >
+              <div class='nav-searchfield-inner nav-sprite'>
+                <div class='nav-searchfield-width'>
+                  <div id='nav-iss-attach'>
+                    <input type='text' id='twotabsearchtextbox' title='Search For' value='' name='field-keywords' autocomplete='off'>
+                  </div>
+                </div>
+                <!--[if IE ]><div class='nav-ie-min-width' style='width: 360px'></div><![endif]-->
 
-<input type="text" name="q" value="" onfocus="this.select();" class="search-input" /><input type="image" src="/cscart/skins/default_orange/customer/images/icons/go.gif" alt="Search" title="Search" class="go-button" /><input type="hidden" name="dispatch" value="products.search" /><a href="index.php?dispatch=products.search" class="search-advanced">Advanced search</a>
+              </div>
+            </div>
 
-</form>
-		</div>
-	</div>
-</div>
+            
+            <div class='nav-submit-button nav-sprite'>
+              <input
+                type='submit'
+                value='Go'
+                class='nav-submit-input'
+                title='Go'
+              >
+            </div>
 
-<div class="content-tools">
-	<span class="float-left">&nbsp;</span>
-	<span class="float-right">&nbsp;</span>
-	<div class="content-tools-helper clear">
-		
-	<div id="cart_status">
+          </form>
+        </div>
 
-	<div class="float-left">
-					<img id="sw_cart_box" class="cm-combination cm-combo-on valign hand" src="/cscart/skins/default_orange/customer/images/icons/filled_cart_icon.gif" border="0" alt="Cart" title="Cart" />
-			<span class="lowercase"><a href="index.php?dispatch=checkout.cart"><strong>1</strong>&nbsp;item(s)</a>, 			Subtotal:&nbsp;<strong>$449.99</strong></span>
-			
-		<div id="cart_box" class="cart-list hidden cm-popup-box cm-smart-position">
-			<img src="/cscart/skins/default_orange/customer/images/icons/filled_cart_list_icon.gif" alt="Cart" class="cm-popup-switch hand cart-list-icon" />
-			<div class="list-container">
-				<div class="list">
+        <a id='nav-your-account' href='/gp/css/homepage.html/ref=gno_yam_ya' class='nav_a nav-button-outer nav-menu-inactive' alt='Your Account'>
+          <span class='nav-button-mid nav-sprite'>
+            <span class='nav-button-inner nav-sprite'>
+              <span class='nav-button-title'>
+                Hello.
+                <span class='nav-button-em'>Sign in</span>
+              </span>
+              <span class='nav-button-title nav-button-strong'>Your Account</span>
 
-									<ul>
-																														<li class="clear">
-							<a href="index.php?dispatch=products.view&amp;product_id=742">HP iPAQ hx2415 Pocket PC</a>
-	
+            </span>
+          </span>
+          <span class='nav-down-arrow nav-sprite'></span>
+        </a>
 
-	<a  name="delete_cart_item" href="index.php?dispatch=checkout.delete.from_status&amp;cart_id=2912454768" class="cm-ajax" rev="cart_status"><img src="/cscart/skins/default_orange/customer/images/icons/icon_delete_small.gif" width="10" height="9" border="0" alt="Delete" title="Delete" /></a>
+        <span class='nav-divider nav-divider-account'></span>
 
-							<p>
-								<strong class="valign">1</strong>&nbsp;x&nbsp;<span class="none">$</span><span id="sec_price_2912454768" class="none">449.99</span>							</p>
+        <a id='nav-cart' href='/gp/cart/view.html/ref=gno_cart' class='nav_a nav-button-outer nav-menu-inactive' alt='Shopping Cart'>
+          <span class='nav-button-mid nav-sprite'>
+            <span class='nav-button-inner nav-sprite'>
 
-						</li>
-																													</ul>
-								</div>
-				<div class="buttons-container full-cart">
-					<a href="index.php?dispatch=checkout.cart" rel="nofollow" class="view-cart">Xem giỏ hàng</a>
-											<a href="index.php?dispatch=checkout.checkout" rel="nofollow">Thanh toán</a>
-									</div>
-			</div>
+              <span class='nav-button-title nav-button-strong'>Cart</span>
 
-		</div>
-	</div>
+              <span class='nav-cart-button nav-sprite'></span>
+              <span id='nav-cart-count' class='nav-cart-0'>0</span>
 
-	<div class="checkout-link full-cart">
+            </span>
+          </span>
+          <span class='nav-down-arrow nav-sprite'></span>
 
-	<a href="index.php?dispatch=checkout.checkout" rel="nofollow">Thanh toán</a>
+        </a>
 
-	</div>
-	<!--cart_status--></div>
-		<div class="float-right">
+        <span class='nav-divider nav-divider-cart'></span>
 
-			
-			
+        <a id='nav-wishlist' href='/gp/registry/wishlist/ref=wish_list' class='nav_a nav-button-outer nav-menu-inactive' alt='Wish List'>
+          <span class='nav-button-mid nav-sprite'>
+            <span class='nav-button-inner nav-sprite'>
+              <span class='nav-button-title'>Wish</span>
+              <span class='nav-button-title nav-button-strong'>List</span>
 
-					</div>
+            </span>
+          </span>
+          <span class='nav-down-arrow nav-sprite'></span>
+        </a>
 
-	</div>
-</div></div>
+          <ul id='nav-subnav' style='display: none;'>
+            <li class='nav-subnav-item nav-category-button'>
+              <a href='' class='nav_a'>
+                
+              </a>
+
+            </li>
+
+                <li class="nav-subnav-item ">
+                  <a href='' class='nav_a'>
+                    Gift Certificates/Cards
+                  </a>
+                </li>
+                <li class="nav-subnav-item ">
+                  <a href='' class='nav_a'>
+                    International
+                  </a>
+
+                </li>
+
+          </ul>
+
+      </div>
+    </div>
+  </div>
+</header>
