@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-10 11:54:57
+<?php /* Smarty version 2.6.10, created on 2012-03-10 12:23:06
          compiled from D:/AppServ/www/projects/templates/shopping/header.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['dir_template'])."/header_global.tpl", 'smarty_include_vars' => array()));
