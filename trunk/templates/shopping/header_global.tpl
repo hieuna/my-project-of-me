@@ -21,5 +21,6 @@
 		<link type="text/css" href="{$url_template}/styles/ie8.css" rel="stylesheet">
 	<![endif]-->
 	<link type="text/css" href="{$url_template}/styles/footer.css" rel="stylesheet">
+	<script type="text/javascript" src="{$http_root}includes/js/JQuery/jquery-1.7.min.js"></script>
 </head>
 <body>
