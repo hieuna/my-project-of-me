@@ -53,5 +53,4 @@ $smarty->assign('dir_template', $dir_template);
 $smarty->assign('url_template', $url_template);
 
 $smarty->display($dir_template.'/header.tpl');
-//$smarty->assign('header', $header);
 ?>
