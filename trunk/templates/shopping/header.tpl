@@ -1,4 +1,10 @@
 {include file="$dir_template/header_global.tpl"}
+<a name="top"></a>
+	<div style="position:absolute; left:0px; top:-500px; width:1px;	height:1px; overflow:hidden;">
+		<a href="http://www.amazon.com/access">A different version of this web site containing similar content optimized for screen readers and mobile devices may be found at the web address: www.amazon.com/access</a>
+	</div>
+	<img src="http://g-ecx.images-amazon.com/images/G/01/gno/beacon/BeaconSprite-US-01._V141013396_.png" style="display:none" alt=""/>
+	<img src="http://g-ecx.images-amazon.com/images/G/01/x-locale/common/transparent-pixel._V192234675_.gif" style="display:none" alt="" id="nav_trans_pixel"/>
 <header>
   <div id='navbar' class='nav-beacon nav-logo-small'>
     <div id='nav-cross-shop'>

@@ -1,3 +1,6 @@
+.bunkBed{
+	visibility:visible;
+}
 select#searchDropdownBox {
 	visibility: visible; display: block;
 }
@@ -15,4 +18,7 @@ div.nav-searchfield-width {
 }
 #nav-search-in span#nav-search-in-content {
 	display: none;
+}
+.gwcswWrap .gwcswNav{
+	display:none;
 }

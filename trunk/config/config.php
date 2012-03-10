@@ -16,7 +16,7 @@ define('HTTP_SERVER', 'http://localhost/projects/');
 define('DB_DRIVER', 'mysql');
 define('DB_HOSTNAME', '127.0.0.1');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'ngockv842006');
+define('DB_PASSWORD', 'ngockieuvan@vccorp.vn');
 define('DB_DATABASE', 'database_projects');
 define('DB_PREFIX', '');
 

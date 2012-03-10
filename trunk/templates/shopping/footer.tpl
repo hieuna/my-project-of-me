@@ -1,5 +1,4 @@
 <div id="page-footer">
-	<link type="text/css" href="footer.css" rel="stylesheet">
        <br />
        <div id="rhf" style="clear:both">
 <table id="rhf_table" align="center" width="100%" cellpadding="0" cellspacing="0">
@@ -21,92 +20,10 @@
 
 <div class='rhf_loading_outer'><table class='rhf_loading_middle'><tr><td class='rhf_loading_inner'><img src='http://g-ecx.images-amazon.com/images/G/01/ui/loadIndicators/loadIndicator-large._V192195480_.gif' /></td></tr></table></div>
 
-<script type="text/JavaScript">
-
-amznJQ.onReady('JQuery', function() { (function($) {
 
 
-    window.RECS_rhfShvlLoading = false;
-    window.RECS_rhfShvlLoaded = false;
-    window.RECS_rhfInView = false;
-    window.RECS_rhfMetrics = {};
-    $("#rhf_container").show();
-    var rhfShvlEventHandler = function () {
-        if (   ! window.RECS_rhfShvlLoaded
-            && ! window.RECS_rhfShvlLoading
-            && $('#rhf_container').size() > 0 ) {
-            var yPosition = $(window).scrollTop() + $(window).height();
-            var rhfElementFound = $('#rhfMainHeading').size();
-            var rhfPosition = $('#rhfMainHeading').offset().top;
-
-            if (/webkit.*mobile/i.test(navigator.userAgent)) {
-                rhfPosition -= $(window).scrollTop();
-            }
-
-            if (rhfElementFound && ( rhfPosition - yPosition < 400 )) {
-                window.RECS_rhfMetrics["start"] = (new Date()).getTime();
-                window.RECS_rhfShvlLoading = true;
-                $.ajax({
-                    url: '/gp/history/external/full-rhf-rec-handler.html',
-                    type: "POST",
-                    timeout: 10000,
-                    data: {
-                        shovelerName   : 'rhf0',
-                        key             : 'rhf',
-                        numToPreload    : '8',
-                        isGateway       : 1,
-                        refTag          : 'pd_rhf_gw',
-                        parentSession   : '175-5851829-1777741',
-                        excludeASIN     : '',
-                        renderPopover   : 0,
-                        forceSprites    : 0,
-                        openNewWindow   : 0,
-                        currentPageType : 'Gateway'
-                    },
-                    success: function (responseText, textStatus, XMLHttpRequest) {
-                        $("#rhf_container").html(responseText);
-                        $("#rhf0Shvl").trigger("render-shoveler");
-                        window.RECS_rhfShvlLoaded = true;
-                        window.RECS_rhfMetrics["loaded"] = (new Date()).getTime();
-                    },
-                    error: function (responseText, textStatus, XMLHttpRequest) {
-                        $("#rhf_container").hide();
-                        $("#rhf_error").show();
-                        window.RECS_rhfMetrics["loaded"] = "error";
-                    }
-                });
-            }
-        }
-    };
-    var rhfInView = function() {
-        if (!window.RECS_rhfInView && $('#rhf_container').size() > 0) {
-            var yPosition = $(window).scrollTop() + $(window).height();
-            var rhfElementFound = ($('#rhfMainHeading').size() > 0);
-            var rhfPosition = $('#rhfMainHeading').offset().top;
-            if (/webkit.*mobile/i.test(navigator.userAgent)) {
-                rhfPosition -= $(window).scrollTop();
-            }
-            if (rhfElementFound && ( rhfPosition - yPosition < 0 )) {
-                window.RECS_rhfInView = true;
-                window.RECS_rhfMetrics["inView"] = (new Date()).getTime();
-            }
-        }
-    };
-    $(document).ready(rhfShvlEventHandler);
-    $(window).scroll(rhfShvlEventHandler);
-    $(document).ready(rhfInView);
-    $(window).scroll(rhfInView);
-})(jQuery); });
-</script>
-
-
-</div><noscript>
-
-
-
-
-
-
+</div>
+<noscript>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top: 10px">
     <tr valign="top">
         <td valign="top">
@@ -122,7 +39,8 @@ amznJQ.onReady('JQuery', function() { (function($) {
         </b></div>
     </td></tr>
 </table>
-</noscript><div id="rhf_error" style="display:none;">
+</noscript>
+<div id="rhf_error" style="display:none;">
 
 
 
@@ -371,73 +289,6 @@ amznJQ.onReady('JQuery', function() { (function($) {
 
 
  
-<script type="text/javascript">
-if ( window.amznJQ && amznJQ.addPL ) {
-	amznJQ.addPL(["https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/css/images/amznbtn-sprite._V158305620_.png","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/css/images/amznbtn-sprite02._V167534572_.png","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/css/css-buttons04._V166608618_.css","https://images-na.ssl-images-amazon.com/images/G/01/gno/beacon/BeaconSprite-US-01._V141013396_.png","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/transparent-pixel._V192234675_.gif","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/orders/css/your-orders01g._V159501001_.css","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/orders/images/acorn._V192250692_.gif","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/orders/images/btn-close._V192250694_.gif","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/projects/text-trace/texttrace_typ._V183418138_.js","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/css/your-account02c._V155180059_.css","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/ya/images/shipment_large_lt._V192250661_.gif","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/spotlight/kindle_85._V139446942_.png","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/spotlight/kindle-family-02b._V139448121_.jpg","https://images-na.ssl-images-amazon.com/images/G/01/browser-scripts/us-site-wide-js-1.2.6-beacon/site-wide-5196759278.js","https://images-na.ssl-images-amazon.com/images/G/01/browser-scripts/us-site-wide-css-beacon/site-wide-6234319607.css"]);
-}
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-amznJQ.available("jQuery", function()
-{
-  jQuery(window).load(function()
-  {
-    var cssAssets = [
-      "http://z-ecx.images-amazon.com/images/G/01/browser-scripts/search-css/search-css-2119272235.css"
-    ];
-    
-    var hframe = jQuery('<iframe id="searchPrecache" style="width:0px; height:0px; display:none">');
-    jQuery('body').append(hframe);
-
-    var hFrmElem = document.getElementById("searchPrecache");
-    var hFrmDoc = (hFrmElem.contentWindow || hFrmElem.contentDocument);
-    if (hFrmDoc.document)
-    {
-      hFrmDoc = hFrmDoc.document;
-    }
-
-    var hHead = hFrmDoc.getElementsByTagName("head")[0];
-    if (!hHead)
-    {
-      hFrmDoc.open();
-      hFrmDoc.writeln("<html><head></head></html>");
-      hFrmDoc.close();
-      hHead = hFrmDoc.getElementsByTagName("head")[0];
-    }
-
-    for (var i=0;i<cssAssets.length;i++) {
-      if (cssAssets[i]) {
-        var lnk = hFrmDoc.createElement("link");
-        lnk.href = cssAssets[i];
-        lnk.rel = "stylesheet";
-        lnk.type = "text/css";
-        hHead.appendChild(lnk);
-      }
-    }
-
-    var ia=[
-      "http://g-ecx.images-amazon.com/images/G/01/nav2/images/gui/searchSprite._V137043134_.gif"
-    ];
-
-    for (var i=0;i<ia.length;i++) {
-        new Image().src=ia[i];
-    }
-
-  });
-});
-</script>
 
 
 
@@ -459,102 +310,11 @@ amznJQ.available("jQuery", function()
 
 
 
-<script type="text/javascript">
-amznJQ.available("jQuery", function() {
-    jQuery(window).load(function() {
-        var assets = [];
-        assets.push("http://g-ecx.images-amazon.com/images/G/01/common/sprites/sprite-communities._V163826568_.png");
-        assets.push("http://g-ecx.images-amazon.com/images/G/01/common/sprites/sprite-site-wide-2._V155328293_.png");
-        assets.push("http://g-ecx.images-amazon.com/images/G/01/x-locale/communities/social/snwicons._V156405323_.png");
-        assets.push("http://g-ecx.images-amazon.com/images/G/01/common/sprites/sprite-cbox._V136530231_.png");
-        assets.push("http://g-ecx.images-amazon.com/images/G/01/common/sprites/sprite_box_bb._V158091179_.png");
-        assets.push("http://g-ecx.images-amazon.com/images/G/01/common/sprite/wl_bb_sprite_box._V156421616_.png");
-        assets.push("http://g-ecx.images-amazon.com/images/G/01/common/sprites/sprite_box_mbc._V156421446_.png");
-        assets.push("http://g-ecx.images-amazon.com/images/G/01/common/sprites/sprite-dp-2._V156421439_.png");
-        assets.push("http://g-ecx.images-amazon.com/images/G/01/common/sprites/sprite-accessories-2._V156421502_.png");
-        assets.push("http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/amznlike/amznlike_sprite_02._V196113939_.gif");
-        for (var i = 0; i < assets.length; i++) {
-            var loader = new Image();
-            loader.src = assets[i];
-        }
-        var hframe = jQuery('<iframe id="dpPrecache" style="width:0px; height:0px; display:none">');
-        jQuery('body').append(hframe);
-        var hFrmElem = document.getElementById("dpPrecache");
-        var hFrmDoc = (hFrmElem.contentWindow || hFrmElem.contentDocument);
-        if (hFrmDoc.document) {
-            hFrmDoc = hFrmDoc.document;
-        }
-        var hHead = hFrmDoc.getElementsByTagName("head")[0];
-        if (!hHead) {
-            hFrmDoc.open();
-            hFrmDoc.writeln("<html><head></head></html>");
-            hFrmDoc.close();
-            hHead = hFrmDoc.getElementsByTagName("head")[0];
-        }
-        var c = jQuery.ajaxSettings.cache;
-        jQuery.ajaxSettings.cache = true;
-        jQuery(hHead).append('<link rel="stylesheet" type="text/css" href="http://z-ecx.images-amazon.com/images/G/01/browser-scripts/fruitCSS/US-combined-1479236252.css._V164307877_.css" /><link rel="stylesheet" type="text/css" href="http://z-ecx.images-amazon.com/images/G/01/browser-scripts/dpSpritesCSS/US-combined-4009256230.css._V162928625_.css" />  <link rel="stylesheet" type="text/css" href="http://z-ecx.images-amazon.com/images/G/01/kitchen/scheduled-delivery/sd_style-ScheduledDeliveryJavascript-b1.0.3.23-min._V141313756_.css"/>   	<link rel="stylesheet" type="text/css" href=http://z-ecx.images-amazon.com/images/G/01/productAds/css/detailPageStatic._V136588828_.css />  <link rel="stylesheet" type="text/css" href="http://z-ecx.images-amazon.com/images/G/01/nav2/gamma/ciuCSS/ciuCSS-ciuAnnotations-57856.css" />  <link rel="stylesheet" type="text/css" href="http://z-ecx.images-amazon.com/images/G/01/nav2/gamma/share-with-friends-css/share-with-friends-css-share-65346.css" />  <link rel="stylesheet" type="text/css" href="http://z-ecx.images-amazon.com/images/G/01/nav2/gamma/amazonShoveler/amazonShoveler-amazonShovelerCss-17251.css" />  <link rel="stylesheet" type="text/css" href="http://z-ecx.images-amazon.com/images/G/01/x-locale/communities/profile/customer-popover/style-3._V248984170_.css" />  <link rel="stylesheet" type="text/css" href="http://z-ecx.images-amazon.com/images/G/01/nav2/gamma/accessoriesCSS/US/combined-3689044428._V189697042_.css" /><script type="text/javascript" src="http://z-ecx.images-amazon.com/images/G/01/nav2/gamma/tmmJS/tmmJS-combined-core-65345.js" />   <script type="text/javascript" src="http://z-ecx.images-amazon.com/images/G/01/twister/beta/twister-dpf.026e0e45f6d43c2d4afba61c953d9a84._V1_.js"/>  <script type="text/javascript" src="http://z-ecx.images-amazon.com/images/G/01/nav2/gamma/amazonShoveler/amazonShoveler-amazonShoveler-63445.js" />  <script type="text/javascript" src="http://z-ecx.images-amazon.com/images/G/01/nav2/gamma/cmuAnnotations/cmuAnnotations-cmuAnnotations-49800.js" />  <script type="text/javascript" src="http://z-ecx.images-amazon.com/images/G/01/nav2/gamma/accessoriesJS/accessoriesJS-accessories-49340.js" />  <script type="text/javascript" src="http://z-ecx.images-amazon.com/images/G/01/nav2/gamma/share-with-friends-js/share-with-friends-js-share-44137.js" />  <script type="text/javascript" src="http://z-ecx.images-amazon.com/images/G/01/nav2/gamma/lazyLoadLib/lazyLoadLib-lazyLoadLib-1454.js" />  <script type="text/javascript" src="http://z-ecx.images-amazon.com/images/G/01/nav2/gamma/priceformatterJQ/priceformatterJQ-price-21701.js" />  <script type="text/javascript" src="http://z-ecx.images-amazon.com/images/G/01/x-locale/communities/profile/customer-popover/script-13-min._V224617671_.js" />  <script type="text/javascript" src="http://z-ecx.images-amazon.com/images/G/01/x-locale/personalization/yourstore/js/ratings-bar-366177._V204593665_.js" />');
-        jQuery.ajaxSettings.cache = c;
-
-        amznJQ.available("immersiveView", function(){});
-        amznJQ.available("dpProductImage", function(){});
-
-        amznJQ.available("search-js-general" , function() {
-                window.precacheDetailImages = function(imageUrls, pids) {
-
-                    function transformUrl(imgUrl, pid) {
-                        var suffix               = '._SL500_AA300_.jpg',
-                            defaultApparel       = '._AA300_.jpg',
-                            iVApparel            = '._SX300_SY390_CR,0,0,300,390_.jpg',
-                            imgUrlSplit          = imgUrl.split("._");
-
-                        if(imgUrlSplit.length) {
-                            var prefix = imgUrlSplit[0];
-                            if((!pid  && storeName == "books") || pid == "books_display_on_website") {
-                                if(imgUrl.match("PIsitb-sticker-arrow-dp")){
-                                    var OUID = imgUrl.substr(imgUrl.indexOf('_OU'), 6);                                     
-                                    var lookInsideSticker    = '._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20'+ OUID +'.jpg';
-                                    urls.push(prefix + lookInsideSticker);
-                                } else {
-                                    urls.push(prefix + suffix);
-                                }
-                            } else if((!pid && storeName == "apparel") || pid == "apparel_display_on_website") {
-                                    urls.push(prefix + "._SX342_.jpg");
-                                    urls.push(prefix + "._SY445_.jpg");
-                            } else if((!pid && storeName == "shoes") || pid == "shoes_display_on_website") {
-                                    urls.push(prefix + "._SX395_.jpg");
-                                    urls.push(prefix + "._SY395_.jpg");
-                            } else {
-                                urls.push(prefix + suffix);
-                            }
-                        }
-                    };
-
-                    var dpImages = [],
-                        urls     = [],
-                        numImgsPreload = Math.min(4, imageUrls.length),
-                        storeName = "";
-
-                    for(var i = 0; i < numImgsPreload; i++){
-                        var currPid = (pids && pids.length) ? pids[i] : "";
-                        transformUrl(imageUrls[i], currPid);
-                    }
-
-                    for(var j = 0; j < urls.length; j++) {
-                        var img = new Image();
-                        img.src = urls[j];
-                        dpImages.push(img);
-                    }
-
-                    window.dpImages = dpImages;
-
-                };// precache function ends
-        });
-    });
-});
-
-</script>
 
 
 
     </div>
+    
+
+</body>
+</html>
