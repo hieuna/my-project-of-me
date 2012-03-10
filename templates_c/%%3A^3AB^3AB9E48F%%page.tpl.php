@@ -1,3 +1,5 @@
+<?php /* Smarty version 2.6.10, created on 2012-03-10 11:37:05
+         compiled from D:/AppServ/www/projects/templates/shopping/page.tpl */ ?>
 <div id="page-wrap">
       <div id="content">
         <div id="leftcol" style="display:none;"></div>

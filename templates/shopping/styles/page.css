@@ -1,0 +1,131 @@
+.gwcswWrap
+{
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.gwcswWrap .gwcswNav .gwcswNavWrap
+{
+  visibility: hidden;
+}
+
+.gwcswWrap table
+{
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.gwcswWrap .gwcswNav  table tr td
+{
+  height: 33px;
+  padding: 0 10px;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #555;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.gwcswWrap .gwcswNav  table tr td .gwcswTitle
+{
+  font-family: arial,verdana,helvetica,sans-serif;
+  font-size: 11px;
+  line-height: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+  background-color: #ffffff;
+}
+
+.gwcswWrap .gwcswNav table tr td.hover
+{
+  color: #121212;
+}
+
+.gwcswWrap .gwcswNav table tr td.selected
+{
+  color: #E47911;
+  cursor: default;
+}
+
+.gwcswWrap .gwcswNav table tr td:first-child
+{
+  padding-left: 0;
+}
+
+.gwcswWrap .gwcswNav table tr td:last-child
+{
+  padding-right: 0;
+}
+
+.gwcswWrap .gwcswNotch
+{
+  display: none;
+  position: absolute;
+  width: 294px;
+  height: 10px;
+  filter: inherit;
+}
+
+.gwcswWrap .gwcswNotch img
+{
+  width: 294px;
+  height: 10px;
+  background-color: transparent;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+  zoom: 1;
+}
+
+.gwcswWrap .gwcswSlots
+{
+  z-index: -1;
+}
+
+.gwcswWrap .gwcswSlots .gwcswSlot
+{
+  display: none;
+}
+
+#gwcswTooltip
+{
+  visibility: hidden;
+  position: absolute;
+  top:0px;
+  left:0px;
+  padding: 6px 10px;
+  color: #ffffff;
+  background: rgb(0,0,0) transparent;
+  background: rgba(0,0,0,0.65);
+  text-align: center;
+  font-size: 11px;
+  line-height: 11px;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px 4px 4px 4px;
+  z-index: 300;
+}
+
+#gwcswTooltip #text
+{
+  font-family: arial,verdana,helvetica,sans-serif;
+  white-space: nowrap;
+}
+
+#gwcswTriDown
+{
+  visibility: hidden;
+  position:absolute;
+  width: 13px;
+  height: 7px;
+}
+
+#gwcswTriDown img
+{
+  width: 13px;
+  height: 7px;
+}
