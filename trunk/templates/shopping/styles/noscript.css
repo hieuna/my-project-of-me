@@ -1,0 +1,18 @@
+select#searchDropdownBox {
+	visibility: visible; display: block;
+}
+div.nav-searchfield-width {
+	padding-right: 190px;
+}
+.nav-left-search-in div.nav-searchfield-width {
+	padding-left: 200px; padding-right: 2px;
+}
+.nav-left-search-in #nav-search-in {
+	width: 200px;
+}
+.nav-right-search-in #nav-search-in {
+	overflow: visible; top: 0; right: 0;
+}
+#nav-search-in span#nav-search-in-content {
+	display: none;
+}
