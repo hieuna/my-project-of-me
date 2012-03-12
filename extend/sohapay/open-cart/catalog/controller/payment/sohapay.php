@@ -41,7 +41,6 @@ class ControllerPaymentsohapay extends Controller {
 	
 	public function confirm() {
 		$this->load->model('checkout/order');
-		var_dump($_GET);
 		
 		$shp_check = $classPayment->verifyReturnUrl();
 		$shp_error_text= isset($_GET["error_text"])?$_GET["error_text"]:"";
