@@ -549,7 +549,7 @@ class PGDiscount{
 	
 	public function save($product_id, $discount, $percent, $start_date, $end_date){
 		global $database;
-		echo $start_date; die;
+		//echo $product_id; die;
 		if ($product_id > 0){
 			$sql = "SELECT COUNT(*) AS total FROM ".TBL_PRODUCT_DISCOUNT." WHERE product_id=".$product_id;
 			$result = $database->db_query($sql);
