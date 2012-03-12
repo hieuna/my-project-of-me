@@ -9,6 +9,7 @@
 	<link type="text/css" href="{$url_template}/styles/styles.css" rel="stylesheet">
 	<link type="text/css" href="{$url_template}/styles/site-wide.css" rel="stylesheet">
 	<link type="text/css" href="{$url_template}/styles/websiteGridCSS.css" rel="stylesheet">
+	<link type="text/css" href="{$url_template}/styles/widget.css" rel="stylesheet">
 	<link type="text/css" href="{$url_template}/styles/nav.css" rel="stylesheet">
 	<link type="text/css" href="{$url_template}/styles/page.css" rel="stylesheet">
 	<noscript>
@@ -22,5 +23,6 @@
 	<![endif]-->
 	<link type="text/css" href="{$url_template}/styles/footer.css" rel="stylesheet">
 	<script type="text/javascript" src="{$http_root}includes/js/JQuery/jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="{$http_root}includes/js/JQuery/site-wide.js"></script>
 </head>
 <body>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-10 13:26:37
+<?php /* Smarty version 2.6.10, created on 2012-03-12 16:36:28
          compiled from D:/AppServ/www/projects/templates/shopping/header_global.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -14,6 +14,8 @@
 /styles/site-wide.css" rel="stylesheet">
 	<link type="text/css" href="<?php echo $this->_tpl_vars['url_template']; ?>
 /styles/websiteGridCSS.css" rel="stylesheet">
+	<link type="text/css" href="<?php echo $this->_tpl_vars['url_template']; ?>
+/styles/widget.css" rel="stylesheet">
 	<link type="text/css" href="<?php echo $this->_tpl_vars['url_template']; ?>
 /styles/nav.css" rel="stylesheet">
 	<link type="text/css" href="<?php echo $this->_tpl_vars['url_template']; ?>
@@ -34,5 +36,7 @@
 /styles/footer.css" rel="stylesheet">
 	<script type="text/javascript" src="<?php echo $this->_tpl_vars['http_root']; ?>
 includes/js/JQuery/jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="<?php echo $this->_tpl_vars['http_root']; ?>
+includes/js/JQuery/site-wide.js"></script>
 </head>
-<body>
+<body>
