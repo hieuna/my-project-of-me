@@ -138,7 +138,7 @@
 			   		<td>Ngày cập nhật</td>
 			   		<td><input type="text" name="created" id="date" class="adm_inputbox" value="{$thisProduct->created}" /></td>
 			   	</tr>
-			   		<tr>
+			   	<tr>
 			   		<td>Thứ tự</td>
 			   		<td><input type="text" name="ordering" id="ordering" class="adm_inputbox small" value="{$thisProduct->ordering}" /></td>
 			   	</tr>
@@ -169,6 +169,14 @@
 			   	<tr>
 			   		<td>Giảm %</td>
 			   		<td><input type="text" disabled="disabled" name="percent" class="adm_inputbox small" value="{$thisProduct->percent}" /> (%)</td>
+			   	</tr>
+			   	<tr>
+			   		<td>Ngày bắt đầu</td>
+			   		<td><input type="text" name="start_date" id="start_date" class="adm_inputbox" value="{$thisProduct->start_date}" /></td>
+			   	</tr>
+			   	<tr>
+			   		<td>Ngày kết thúc</td>
+			   		<td><input type="text" name="end_date" id="end_date" class="adm_inputbox" value="{$thisProduct->end_date}" /></td>
 			   	</tr>
 			   </tbody>
 			</table>

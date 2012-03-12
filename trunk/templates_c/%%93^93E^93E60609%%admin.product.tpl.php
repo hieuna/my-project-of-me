@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-27 17:57:26
+<?php /* Smarty version 2.6.10, created on 2012-03-12 17:45:25
          compiled from D:/AppServ/www/projects/templates/administrator/admin.product.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 450, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/administrator/admin.product.tpl', 458, false),)), $this); ?>
 <div id="toolbar-box">
    <div class="t">
    	<div class="t">
@@ -179,7 +179,7 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 			   		<td><input type="text" name="created" id="date" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->created; ?>
 " /></td>
 			   	</tr>
-			   		<tr>
+			   	<tr>
 			   		<td>Thứ tự</td>
 			   		<td><input type="text" name="ordering" id="ordering" class="adm_inputbox small" value="<?php echo $this->_tpl_vars['thisProduct']->ordering; ?>
 " /></td>
@@ -215,6 +215,16 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 			   		<td>Giảm %</td>
 			   		<td><input type="text" disabled="disabled" name="percent" class="adm_inputbox small" value="<?php echo $this->_tpl_vars['thisProduct']->percent; ?>
 " /> (%)</td>
+			   	</tr>
+			   	<tr>
+			   		<td>Ngày bắt đầu</td>
+			   		<td><input type="text" name="start_date" id="start_date" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->start_date; ?>
+" /></td>
+			   	</tr>
+			   	<tr>
+			   		<td>Ngày kết thúc</td>
+			   		<td><input type="text" name="end_date" id="end_date" class="adm_inputbox" value="<?php echo $this->_tpl_vars['thisProduct']->end_date; ?>
+" /></td>
 			   	</tr>
 			   </tbody>
 			</table>

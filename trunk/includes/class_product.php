@@ -181,6 +181,8 @@ class PGProduct{
 				while ($rowdiscount = $database->db_fetch_assoc($rsDiscount)){
 					$this->discount = $rowdiscount["discount"];
 					$this->percent = $rowdiscount["percent"];
+					$this->start_date = $rowdiscount["start_date"];
+					$this->end_date = $rowdiscount["end_date"];
 				}
 				
 				//product group
@@ -533,26 +535,30 @@ class PGDiscount{
 	var $product_id;
 	var $discount;
 	var $percent;
+	var $start_date;
+	var $end_date;
 	
 	function __construct(){
 		//TBL_PRODUCT_DISCOUNT
 		$this->product_id = 0;
 		$this->discount = 0;
 		$this->percent = 0;
+		$this->start_date = "";
+		$this->end_date = "";
 	}
 	
-	public function save($product_id, $discount, $percent){
+	public function save($product_id, $discount, $percent, $start_date, $end_date){
 		global $database;
-		//echo $product_id; die;
+		echo $start_date; die;
 		if ($product_id > 0){
 			$sql = "SELECT COUNT(*) AS total FROM ".TBL_PRODUCT_DISCOUNT." WHERE product_id=".$product_id;
 			$result = $database->db_query($sql);
 			$total = $database->db_fetch_assoc($result);
 			$count = $total["total"];
 			if ($count == 0)
-				$database->db_query("INSERT INTO ".TBL_PRODUCT_DISCOUNT." VALUES (".$product_id.", ".$discount.", ".$percent.")");
+				$database->db_query("INSERT INTO ".TBL_PRODUCT_DISCOUNT." VALUES (".$product_id.", ".$discount.", ".$percent.", '".$start_date."', '".$end_date."')");
 			else
-				$database->db_query("UPDATE ".TBL_PRODUCT_DISCOUNT." SET discount={".$discount."}, percent={".$percent."} WHERE product_id=".$product_id);
+				$database->db_query("UPDATE ".TBL_PRODUCT_DISCOUNT." SET discount={".$discount."}, percent={".$percent."}, start_date={'".$start_date."'}, end_date={'".$end_date."'} WHERE product_id=".$product_id);
 		}
 		return;
 	}

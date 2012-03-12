@@ -200,8 +200,10 @@ switch($task){
 			if (PGRequest::GetInt('discount', 0, 'POST') > 0){
 				$muc_giam 	= PGRequest::GetInt('price', 0, 'POST') - PGRequest::GetInt('discount', 0, 'POST');
 				$percent	= ($muc_giam/PGRequest::GetInt('price', 0, 'POST'))*100;
+				$start_date = PGRequest::GetVar('start_date', '', 'POST');
+				$end_date 	= PGRequest::GetVar('end_date', '', 'POST');
 				$objDiscount = new PGDiscount();
-				$objDiscount->save($pro_id, PGRequest::GetInt('discount', 0, 'POST'), $percent);	
+				$objDiscount->save($pro_id, PGRequest::GetInt('discount', 0, 'POST'), $percent, $start_date, $end_date);	
 			}
 			
 			//product group
