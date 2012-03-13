@@ -461,6 +461,35 @@ class PGProduct{
 		return $lsProducts;
 	}
 	
+	//Load products viewed
+	public function ProductViewed($start=null, $limit=null){
+		global $database;
+		
+		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=pg.product_id";
+		$where[] = " p.status=1";
+		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
+		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		
+		if (is_numeric($start) && is_numeric($limit)){
+			$wLimit = " LIMIT ".$start.", ".$limit;
+		}
+		
+		$sql = "SELECT p.product_id, p.category_id, p.price_ny, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_GROUP." AS pg ".$where.$orderBy.$wLimit;
+		$results = $database->db_query($sql);
+		$i=1;
+		while ($row = $database->db_fetch_assoc($results)){
+			$sql = "SELECT name FROM ".TBL_CATEGORY." WHERE category_id=".$row["category_id"]." LIMIT 0,1";
+			$result = $database->db_query($sql);
+			$field = $database->getRow($result);
+			$row["name_cate"] = $field["name"];
+			$row["link"] = "index.php?dispatch=product.view&product_id=".$row["product_id"];
+			$row["stt"]	= $i;
+			$lsProducts[] = $row;
+			$i++;
+		}
+		return $lsProducts;
+	}
+	
 	//Load products News
 	public function ProductNews($start=null, $limit=null){
 		global $database;
@@ -484,6 +513,7 @@ class PGProduct{
 		return $lsProducts;
 	}
 	
+	//load list products discount
 	public function ProductDiscount($start=null, $limit=null){
 		global $database;
 		
@@ -497,18 +527,20 @@ class PGProduct{
 			$wLimit = " LIMIT ".$start.", ".$limit;
 		}
 		
-		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_DISCOUNT." AS pdis ".$where.$orderBy.$wLimit;
+		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1, pdis.discount, pdis.percent FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_DISCOUNT." AS pdis ".$where.$orderBy.$wLimit;
 		$results = $database->db_query($sql);
 		$i = 1;
 		while ($row = $database->db_fetch_assoc($results)){
 			$row["link"] = "index.php?dispatch=product.view&product_id=".$row["product_id"];
 			$row["stt"]	= $i;
+			$row["price_sale"] = $row["price"]-$row["discount"]; 
 			$lsProducts[] = $row;
 			$i++;
 		}
 		return $lsProducts;
 	}
 	
+	//load list product of day
 	public function Product_of_day(){
 		global $database;
 		

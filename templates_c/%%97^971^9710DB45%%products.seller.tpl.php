@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-13 15:49:57
+<?php /* Smarty version 2.6.10, created on 2012-03-13 23:18:14
          compiled from D:/AppServ/www/projects/templates/shopping/products.seller.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/products.seller.tpl', 14, false),)), $this); ?>
