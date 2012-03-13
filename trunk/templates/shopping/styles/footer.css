@@ -1,8 +1,8 @@
 .rhf-box-corner-sprite {
-    background-image: url('http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/yourstore/bluebox/bluebox-corners._V192187813_.gif');
+    background-image: url("../images/bluebox-corners.gif");
 }
 .rhf-box-sides-sprite {
-    background-image: url('http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/yourstore/bluebox/bluebox-sides._V192187807_.gif');
+    background-image: url("../images/bluebox-sides.gif");
 }
 .rhf-box-tl {
     background-position: 0px 0px;
@@ -40,7 +40,6 @@
     padding: 0 10px;
 }
 
-
 .rhf_loading_outer {
     height: 248px; 
     overflow: hidden; 
@@ -59,11 +58,6 @@
     text-align: center;
     vertical-align: middle;
 }
-
-
-
-
-
 .rhfWrapper .shoveler .shoveler-heading {
     padding-right:14em;
 }
@@ -98,6 +92,8 @@
 }
 
 .rhfWrapper .shoveler .shoveler-content {
+    width: 95%;
+    height: 250px;
     padding-top: 10px;
     margin: 0 35px 0 45px;
     clear:both;
@@ -116,7 +112,7 @@
 }
 
 .rhfWrapper .shoveler ul li.shoveler-progress {
-    background: no-repeat center 45px url('http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/shoveler/loading-indicator._V192185253_.gif');
+    background: no-repeat center 45px url("../images/loading-indicator.gif");
 }
 
 .rhfWrapper .title {
@@ -191,6 +187,7 @@
 .rhfWrapper .shoveler-button-wrapper {
     position:relative;
     width:100%;
+    padding-top: 15px;
 }
 .rhfWrapper .shoveler div.back-button, 
 .rhfWrapper .shoveler div.next-button, 
@@ -232,7 +229,7 @@
 .rhfWrapper .shoveler .back-button a .bg-image, 
 .rhfWrapper .shoveler .next-button a .bg-image,
 .rhfWrapper .shoveler div.disabled-button {
-    background-image:  url('http://g-ecx.images-amazon.com/images/G/01/x-locale/personalization/shoveler/left-right-arrow-semi-rd._V236573507_.gif');
+    background-image:  url("../images/left-right-arrow.gif");
 }
 .rhfWrapper .shoveler .back-button a .bg-image {
     background-position: 0 0; 
@@ -337,7 +334,7 @@
     width: 100%;
     border-top: 1px solid #C9E1F4;
 }
-#rhf_tabs .tabTL, #rhf_tabs .tabTR { background-image: url(http://g-ecx.images-amazon.com/images/G/01/common/sprites/sprite-site-wide-2._V136589172_.png); }
+#rhf_tabs .tabTL, #rhf_tabs .tabTR { background-image: url("../images/sprite-site-wide.png"); }
 #rhf_tabs .active-rhf-tab .tabTL { background-position: 0px 0px; }
 #rhf_tabs .active-rhf-tab .tabTR { background-position: -10px 0px; }
 #rhf_tabs .inactive-rhf-tab .tabTL { background-position: 0px -40px; }

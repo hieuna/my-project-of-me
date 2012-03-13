@@ -11,16 +11,18 @@ if ($dispatch == 'category.view'){
 }else{
 	$page_title = "Shopping";
 	
+	//Load modules special product
+	$lsProductSpecial = $objProduct->ProductSpecial(0, 10);
+	
+	//Load modules seller product
+	$lsProductSeller = $objProduct->ProductSeller(0, 10);
+	
 	//load moduels discount product
 	$lsProductDiscount = $objProduct->ProductDiscount(0, 9);
 	
 	//Load product of day
 	$product_of_day = $objProduct->Product_of_day();
 	
-	//Load modules special product
-	$lsProductSpecial = $objProduct->ProductSpecial(0, 10);
-	//Load modules seller product
-	$lsProductSeller = $objProduct->ProductSeller(0, 10);
 	//Load categories products
 	$where[] = " status=1";
 	$where[] = " parent_id=0";
@@ -66,13 +68,16 @@ if ($dispatch == 'category.view'){
 		}
 	}
 	
-	$smarty->assign('page_title', $page_title);
-	$smarty->assign('lsProductDiscount', $lsProductDiscount);
-	$smarty->assign('product_of_day', $product_of_day);
+	//Load modules viewed product
+	$lsProductViewed = $objProduct->ProductViewed();
 	
+	$smarty->assign('page_title', $page_title);
 	$smarty->assign('lsProductSpecial', $lsProductSpecial);
 	$smarty->assign('lsProductSeller', $lsProductSeller);
+	$smarty->assign('lsProductDiscount', $lsProductDiscount);
+	$smarty->assign('product_of_day', $product_of_day);
 	$smarty->assign('html', $html);
+	$smarty->assign('lsProductViewed', $lsProductViewed);
 	
 	$smarty->display($dir_template.'/index.tpl');
 }
