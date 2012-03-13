@@ -1,8 +1,8 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-13 13:30:02
+<?php /* Smarty version 2.6.10, created on 2012-03-13 15:49:57
          compiled from D:/AppServ/www/projects/templates/shopping/products.special.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/products.special.tpl', 14, false),)), $this); ?>
-<div class="unified_widget rcm widget small_heading" id="ns_0F50DNGPMDNXKSZSZ9NJ_3826_Widget">
+<div class="unified_widget rcm widget small_heading" id="widget_special">
 	<h2>Nhóm sản phẩm nổi bật</h2>
 	<?php unset($this->_sections['loops']);
 $this->_sections['loops']['name'] = 'loops';

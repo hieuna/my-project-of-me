@@ -1,4 +1,4 @@
-<div class="unified_widget rcm widget small_heading" id="ns_0F50DNGPMDNXKSZSZ9NJ_3826_Widget">
+<div class="unified_widget rcm widget small_heading" id="widget_special">
 	<h2>Nhóm sản phẩm nổi bật</h2>
 	{section name=loops loop=$lsProductSpecial}
 	<div style="float: left; width: 20%" class="fluid asin s9a0">
