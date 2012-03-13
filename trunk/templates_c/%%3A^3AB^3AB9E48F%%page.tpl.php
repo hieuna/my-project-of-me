@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-13 13:10:04
+<?php /* Smarty version 2.6.10, created on 2012-03-13 15:43:54
          compiled from D:/AppServ/www/projects/templates/shopping/page.tpl */ ?>
 <div id="page-wrap">
       <div id="content">
@@ -405,11 +405,6 @@
               </div>
             </div>
           </div>
-
-    
-
-
-
         </div>
         <div class="amabot_center" id="centercol">
 			<link type='text/css' href='http://z-ecx.images-amazon.com/images/G/01/s9-campaigns/s9-widget._V136741955_.css' rel='stylesheet'>
