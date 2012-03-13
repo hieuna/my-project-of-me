@@ -34,4 +34,7 @@ define('NAME_EMAIL_SYSTEM', 'Email từ hệ thống Xtech');
 //WIDTH IMAGE PRODUCT
 define('_WIDTH_MEDIUM_IMAGE_PRODUCT', 100);
 define('_WIDTH_SMALL_IMAGE_PRODUCT', 50);
+
+//MỆNH GIÁ
+define('_MENH_GIA', '<span style="font-size: 16px;">₫</span>');
 ?>

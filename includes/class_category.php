@@ -61,7 +61,8 @@ class PGCategory{
 			$row["product_count"] = $total["total"];
 			$result_cate = $database->db_query("SELECT name FROM ".TBL_CATEGORY." WHERE category_id=".$row["parent_id"]);
 			$name_category_parent = $database->getRow($result_cate);
-			$row["name_parent"] = $name_category_parent["name"];	
+			$row["name_parent"] = $name_category_parent["name"];
+			$row["link"] = "index.php?dispatch=category.view&category_id=".$row["category_id"];	
 			
 			$lsCategories[] = $row;
 		}
