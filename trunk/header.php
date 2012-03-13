@@ -43,6 +43,7 @@ $smarty->template_dir	=	$template_root;
 $smarty->compile_dir	=	$template_root_c;
 
 $name_template = "shopping";
+$menh_gia = _MENH_GIA;
 $dir_template = $template_root.$name_template;
 $url_template = $http_root."templates/".$name_template;
 
@@ -51,6 +52,7 @@ $smarty->assign('template_root', $template_root);
 $smarty->assign('name_template', $name_template);
 $smarty->assign('dir_template', $dir_template);
 $smarty->assign('url_template', $url_template);
+$smarty->assign('menh_gia', $menh_gia);
 
 $smarty->display($dir_template.'/header.tpl');
 ?>

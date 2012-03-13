@@ -122,6 +122,30 @@ class PGProduct{
 	}
 	
 	/*
+	 * Load List font-end
+	 */
+	public function loadListFontEnd($where = null, $order=null, $start=null, $limit=null){
+		global $database;
+
+		if (is_null($order)){
+			$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		}else{
+			$orderBy = $order;
+		}
+		if (is_numeric($start) && is_numeric($limit)){
+			$wLimit = " LIMIT ".$start.", ".$limit;
+		}
+		
+		$sql = "SELECT p.product_id, p.price_ny, p.price , pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm ".$where.$orderBy.$wLimit;
+		$results = $database->db_query($sql);
+		while ($row = $database->db_fetch_assoc($results)){
+			$row["link"] = "index.php?dispatch=product.view&product_id=".$row["product_id"];
+			$lsProducts[] = $row;
+		}
+		return $lsProducts;
+	}
+	
+	/*
 	 * Load field
 	 * $product_id : ID of field
 	 */
@@ -218,7 +242,7 @@ class PGProduct{
       		$sql = "INSERT INTO ".TBL_PRODUCT." (
 		        code, model, price, price_ny, amount, number_color, weight, length, width, height, status, ordering, created, admin_created, modified, admin_modified, category_id
 		    ) VALUES (
-		    	'{$objProduct->code}', '{$objProduct->model}', '{$objProduct->price}', '{$objProduct->price_ny}', '{$objProduct->amount}', '{$objProduct->number_color}', '{$objProduct->weight}', '{$objProduct->length}', '{$objProduct->width}', '{$objProduct->height}', '{$objProduct->status}', '{$objProduct->ordering}', '{$objProduct->created}', '{$objProduct->admin_created}', '{$objProduct->modified}', '{$objProduct->admin_modified}', '{$objProduct->category_id}'
+		    	'{$objProduct->code}', '{$objProduct->model}', '{$objProduct->price}', '{$objProduct->price_ny}', '{$objProduct->amount}', '{$objProduct->number_color}', '{$objProduct->weight}', '{$objProduct->length}', '{$objProduct->width}', '{$objProduct->height}', '{$objProduct->status}', '{$objProduct->ordering}', '".unFormatDate($objProduct->created,"Y-m-d h:i:s")."', '{$objProduct->admin_created}', '".unFormatDate($objProduct->modified, "Y-m-d h:i:s")."', '{$objProduct->admin_modified}', '{$objProduct->category_id}'
 		    )";
       		
       		$query = "INSERT INTO ".TBL_PRODUCT_DESCRIPTION."(
@@ -252,7 +276,7 @@ class PGProduct{
 					height='{$objProduct->height}',
 					status='{$objProduct->status}',
 					ordering='{$objProduct->ordering}',
-					created='{$objProduct->created}',
+					created='".unFormatDate($objProduct->created, "Y-m-d h:i:s")."',
 					modified='".date("Y-m-d h:i:s")."',
 					admin_modified='{$admin_id}',
 					category_id='{$objProduct->category_id}'
@@ -385,6 +409,7 @@ class PGProduct{
 		return $html;
 	}
 	
+	//Load products Special
 	public function ProductSpecial($start=null, $limit=null){
 		global $database;
 		
@@ -398,7 +423,7 @@ class PGProduct{
 			$wLimit = " LIMIT ".$start.", ".$limit;
 		}
 		
-		$sql = "SELECT p.product_id, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_GROUP." AS pg ".$where.$orderBy.$wLimit;
+		$sql = "SELECT p.product_id, p.price_ny, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_GROUP." AS pg ".$where.$orderBy.$wLimit;
 		$results = $database->db_query($sql);
 		$i=1;
 		while ($row = $database->db_fetch_assoc($results)){
@@ -410,6 +435,33 @@ class PGProduct{
 		return $lsProducts;
 	}
 	
+	//Load products Seller
+	public function ProductSeller($start=null, $limit=null){
+		global $database;
+		
+		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=pg.product_id";
+		$where[] = " p.status=1";
+		$where[] = " pg.is_seller=1";
+		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
+		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		
+		if (is_numeric($start) && is_numeric($limit)){
+			$wLimit = " LIMIT ".$start.", ".$limit;
+		}
+		
+		$sql = "SELECT p.product_id, p.price_ny, p.price, pd.name, pm.image1 FROM ".TBL_PRODUCT." AS p,".TBL_PRODUCT_DESCRIPTION." AS pd, ".TBL_PRODUCT_IMAGE." AS pm, ".TBL_PRODUCT_GROUP." AS pg ".$where.$orderBy.$wLimit;
+		$results = $database->db_query($sql);
+		$i=1;
+		while ($row = $database->db_fetch_assoc($results)){
+			$row["link"] = "index.php?dispatch=product.view&product_id=".$row["product_id"];
+			$row["stt"]	= $i;
+			$lsProducts[] = $row;
+			$i++;
+		}
+		return $lsProducts;
+	}
+	
+	//Load products News
 	public function ProductNews($start=null, $limit=null){
 		global $database;
 		
@@ -556,9 +608,10 @@ class PGDiscount{
 			$total = $database->db_fetch_assoc($result);
 			$count = $total["total"];
 			if ($count == 0)
-				$database->db_query("INSERT INTO ".TBL_PRODUCT_DISCOUNT." VALUES (".$product_id.", ".$discount.", ".$percent.", '".$start_date."', '".$end_date."')");
-			else
-				$database->db_query("UPDATE ".TBL_PRODUCT_DISCOUNT." SET discount={".$discount."}, percent={".$percent."}, start_date={'".$start_date."'}, end_date={'".$end_date."'} WHERE product_id=".$product_id);
+				$database->db_query("INSERT INTO ".TBL_PRODUCT_DISCOUNT." VALUES (".$product_id.", ".$discount.", ".$percent.", '".unFormatDate($start_date, "Y-m-d h:i:s")."', '".unFormatDate($end_date, "Y-m-d h:i:s")."')");
+			else{
+				$database->db_query("UPDATE ".TBL_PRODUCT_DISCOUNT." SET discount={".$discount."}, percent={".$percent."}, start_date={'".unFormatDate($start_date, "Y-m-d h:i:s")."'}, end_date={'".unFormatDate($end_date, "Y-m-d h:i:s")."'} WHERE product_id=".$product_id);
+			}	
 		}
 		return;
 	}

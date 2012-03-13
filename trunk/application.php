@@ -3,6 +3,7 @@
 $objMenu = new PGMenu();
 $showMenuLeft = $objMenu->MenuVertical(" ORDER BY menu_id");
 $objProduct =  new PGProduct();
+$objCategory = new PGCategory();
 //Load moduels product hotdeal
 $lsProductHotdeal = $objProduct->ProducsHotDeal();
 //Load modules new product

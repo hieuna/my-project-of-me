@@ -19,6 +19,9 @@
 .widget .s9Nav .s9Concept a.noLinkDecoration,.widget .s9Nav .s9Concept a:visited.noLinkDecoration{text-align:center;}
 .widget .rcmBody a:hover.noLinkDecoration,.widget .asin a:hover.noLinkDecoration,.widget .asinTextBlock a:hover.noLinkDecoration{text-decoration:underline;}
 .widget .imageContainer{margin-bottom:4px;position:relative;}
+.widget .imageContainer img{
+	margin-top: 21px; margin-bottom:20px;
+}
 .widget a .imageOverlay{cursor:pointer;}
 .widget .imageOverlay{position:absolute;top:0;left:0;background:#000;z-index:9999;opacity:.03;-moz-opacity:.03;-khtml-opacity:.03;-ms-filter:"alpha(opacity=3)";filter:alpha(opacity=3);}
 .widget .listprice{font-family:Verdana,Arial,Helvetica,sans-serif;text-decoration:line-through;line-height:1.75em;}
