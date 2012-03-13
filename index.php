@@ -65,7 +65,6 @@ if ($dispatch == 'category.view'){
 			$html .= '</div>';
 		}
 	}
-	$html .= $html;
 	
 	$smarty->assign('page_title', $page_title);
 	$smarty->assign('lsProductDiscount', $lsProductDiscount);
