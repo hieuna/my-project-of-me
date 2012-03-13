@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-13 15:43:54
+<?php /* Smarty version 2.6.10, created on 2012-03-13 18:00:20
          compiled from D:/AppServ/www/projects/templates/shopping/page.tpl */ ?>
 <div id="page-wrap">
       <div id="content">
@@ -7,18 +7,80 @@
 
 
         <div class="amabot_right" id="rightcol" style="clear:right;">
-          <div style="display:none;"></div><table border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><map name="CE-0800-09-300x75_NewCameraPhoto_CES-2012"><area shape="rect" coords="0,0,300,75" alt="New in Camera and Photo" href="/s/ref=amb_link_359905822_2?ie=UTF8&bbn=702682011&rh=n%3A172282%2Cn%3A%2113900861%2Cn%3A%212334090011%2Cn%3A%212334152011%2Cn%3A702682011%2Cn%3A502394&page=1&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=right-csm-1&pf_rd_r=0F50DNGPMDNXKSZSZ9NJ&pf_rd_t=101&pf_rd_p=1348334142&pf_rd_i=507846"/> </map><img src="http://g-ecx.images-amazon.com/images/G/01/electronics/camera/gw/camera-newincamphoto2_300x75._.png" align="center" usemap="#CE-0800-09-300x75_NewCameraPhoto_CES-2012" alt="New in Camera and Photo" border="0" /></td></tr></table><br>
-      
-          
-        
-
+          <div style="display:none;"></div>
+          <table border="0" width="100%" cellspacing="0" cellpadding="0">
+          	<tr>
+          		<td align="center">
+          		<map name="CE-0800-09-300x75_NewCameraPhoto_CES-2012">
+          			<area shape="rect" coords="0,0,300,75" alt="New in Camera and Photo" href="/s/ref=amb_link_359905822_2?ie=UTF8&bbn=702682011&rh=n%3A172282%2Cn%3A%2113900861%2Cn%3A%212334090011%2Cn%3A%212334152011%2Cn%3A702682011%2Cn%3A502394&page=1&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=right-csm-1&pf_rd_r=0F50DNGPMDNXKSZSZ9NJ&pf_rd_t=101&pf_rd_p=1348334142&pf_rd_i=507846"/> 
+          		</map>
+          		<img src="http://g-ecx.images-amazon.com/images/G/01/electronics/camera/gw/camera-newincamphoto2_300x75._.png" align="center" usemap="#CE-0800-09-300x75_NewCameraPhoto_CES-2012" alt="New in Camera and Photo" border="0" />
+          		</td>
+          	</tr>
+          	</table>
   
-<div id="DAr2" style="width:300px;height:280px;">
-		<iframe id="DA2351i" title="Advertisement" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true" width="303" height="250" ></iframe>
-	</div>
+			<div id="DAr2" style="width:300px;height:280px;">
+				<embed align="middle" width="300" height="280" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1016945%26adm_aditem%3D105185%26adm_zoneid%3D222%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fwww.mobifone.com.vn%2Fweb%2Fvn%2Fhome%2Fpromotion.jsp%253Fid%253D3263%26adm_random%3D0.1542459492247228&amp;atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/336x280-phunuvn.swf">
+			</div>
       
-          <div id="rightcolbtf2"><div style="height:400px;">&nbsp;</div></div>
-          <div id="rightcolbtf2"><div style="height:200px;">&nbsp;</div></div>
+          <div id="rightcolbtf2">
+          	<div class="unified_widget rcmBody" id="goldboxDotdContentRc">
+					<table style="overflow:hidden;">
+					 <tbody><tr>
+					  <td style="overflow:hidden; padding:0px;">
+					    <h2>
+					      Gold Box Deal of the Day
+					    </h2>
+					  </td>
+					 </tr>
+					</tbody>
+					</table>
+			
+					<table style="overflow:hidden;">
+					 <tbody><tr>
+					  <td style="overflow:hidden; padding:0px 7px 0px 0px; margin:0; width: 1%;">
+					   <left>
+						<a href="http://www.amazon.com/gp/feature.html/ref=xs_gb_gateway_img_A3PEGKBQG3CH3Z?ie=UTF8&amp;docId=1000772981&amp;pf_rd_p=1345954722&amp;pf_rd_s=right-3&amp;pf_rd_t=101&amp;pf_rd_i=507846&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_r=153BNE220TJYN6F4B0MA" class="gbox" title="Save up to 45% on Philips Light Therapy" style=""><img border="0" src="http://ecx.images-amazon.com/images/I/41eFJ9QD44L._SL75_.jpg" class="gbox-img" alt="Save up to 45% on Philips Light Therapy"></a>
+					   </left>
+					  </td>
+					  <td style="overflow:hidden; padding:0px;">
+					    <table style="overflow:hidden;">
+					      <tbody><tr>
+					        <td style="overflow:hidden; padding:0px;">
+					           <div style="margin-bottom:5px;">
+									<a href="http://www.amazon.com/gp/feature.html/ref=xs_gb_gateway_title_A3PEGKBQG3CH3Z?ie=UTF8&amp;docId=1000772981&amp;pf_rd_p=1345954722&amp;pf_rd_s=right-3&amp;pf_rd_t=101&amp;pf_rd_i=507846&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_r=153BNE220TJYN6F4B0MA" class="gbox-b" name="dotd_product_redir" title="Save up to 45% on Philips Light Therapy" style="text-decoration:none;">Save up to 45% on Philips Light Therapy</a>
+					           </div>
+					        </td>
+					      </tr>
+					      <tr>
+					        <td valign="top" style="overflow:hidden; padding:0; margin-top:5px;">
+					        </td>
+					      </tr>
+					    </tbody></table>
+					  </td>
+					 </tr>
+					</tbody>
+					</table>
+					
+					<table style="overflow:hidden;">
+					 <tbody><tr>
+					  <td style="overflow:hidden; padding-top:10px; padding-bottom:0px;">
+					   <p class="seemore">
+					    <span class="carat">
+					     ›
+					    </span>
+					    <span style="margin-left:-4px;">
+					     <a href="/gp/goldbox/ref=xs_gb_gateway_redir">
+					      Today's Deals
+					     </a>
+					    </span>
+					   </p>
+					  </td>
+					 </tr>
+					</tbody>
+					</table>
+			    </div>
+          </div>
         </div>
 
       <div id="centerA" class="bunkBed">
