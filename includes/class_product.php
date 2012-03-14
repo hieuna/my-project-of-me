@@ -410,14 +410,18 @@ class PGProduct{
 	}
 	
 	//Load products Special
-	public function ProductSpecial($start=null, $limit=null){
+	public function ProductSpecial($order=null, $start=null, $limit=null){
 		global $database;
 		
 		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=pg.product_id";
 		$where[] = " p.status=1";
 		$where[] = " pg.is_special=1";
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
-		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		if (is_null($order)){
+			$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		}else{
+			$orderBy = $order;
+		}
 		
 		if (is_numeric($start) && is_numeric($limit)){
 			$wLimit = " LIMIT ".$start.", ".$limit;
@@ -436,14 +440,19 @@ class PGProduct{
 	}
 	
 	//Load products Seller
-	public function ProductSeller($start=null, $limit=null){
+	public function ProductSeller($order=null, $start=null, $limit=null){
 		global $database;
 		
 		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=pg.product_id";
 		$where[] = " p.status=1";
 		$where[] = " pg.is_seller=1";
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
-		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		
+		if (is_null($order)){
+			$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		}else{
+			$orderBy = $order;
+		}
 		
 		if (is_numeric($start) && is_numeric($limit)){
 			$wLimit = " LIMIT ".$start.", ".$limit;
@@ -462,14 +471,18 @@ class PGProduct{
 	}
 	
 	//Load products viewed
-	public function ProductViewed($start=null, $limit=null){
+	public function ProductViewed($order=null, $start=null, $limit=null){
 		global $database;
 		
 		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=pg.product_id";
 		$where[] = " p.status=1";
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
-		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
 		
+		if (is_null($order)){
+			$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		}else{
+			$orderBy = $order;
+		}
 		if (is_numeric($start) && is_numeric($limit)){
 			$wLimit = " LIMIT ".$start.", ".$limit;
 		}
@@ -491,14 +504,19 @@ class PGProduct{
 	}
 	
 	//Load products News
-	public function ProductNews($start=null, $limit=null){
+	public function ProductNews($order=null, $start=null, $limit=null){
 		global $database;
 		
 		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=pg.product_id";
 		$where[] = " p.status=1";
 		$where[] = " pg.is_new=1";
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
-		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		
+		if (is_null($order)){
+			$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		}else{
+			$orderBy = $order;
+		}
 		
 		if (is_numeric($start) && is_numeric($limit)){
 			$wLimit = " LIMIT ".$start.", ".$limit;
@@ -514,14 +532,19 @@ class PGProduct{
 	}
 	
 	//load list products discount
-	public function ProductDiscount($start=null, $limit=null){
+	public function ProductDiscount($order=null, $start=null, $limit=null){
 		global $database;
 		
 		$where[] = " p.product_id=pd.product_id AND pd.product_id=pm.product_id AND pm.product_id=pdis.product_id";
 		$where[] = " p.status=1";
 		$where[] = " pdis.percent>0";
 		$where = (count($where) ? ' WHERE '.implode(' AND ', $where) : '');
-		$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		
+		if (is_null($order)){
+			$orderBy = " ORDER BY p.ordering ASC, p.created DESC";
+		}else{
+			$orderBy = $order;
+		}
 		
 		if (is_numeric($start) && is_numeric($limit)){
 			$wLimit = " LIMIT ".$start.", ".$limit;

@@ -12,13 +12,14 @@ if ($dispatch == 'category.view'){
 	$page_title = "Shopping";
 	
 	//Load modules special product
-	$lsProductSpecial = $objProduct->ProductSpecial(0, 10);
+	
+	$lsProductSpecial = $objProduct->ProductSpecial(" ORDER BY RAND()", 0, 5);
 	
 	//Load modules seller product
-	$lsProductSeller = $objProduct->ProductSeller(0, 10);
+	$lsProductSeller = $objProduct->ProductSeller(" ORDER BY RAND()", 0, 5);
 	
 	//load moduels discount product
-	$lsProductDiscount = $objProduct->ProductDiscount(0, 3);
+	$lsProductDiscount = $objProduct->ProductDiscount(" ORDER BY RAND()", 0, 3);
 	
 	//Load product of day
 	$product_of_day = $objProduct->Product_of_day();
@@ -38,7 +39,7 @@ if ($dispatch == 'category.view'){
 		$total = $count["total"];
 		
 		if ($total > 0){
-			$lsProducts = $objProduct->loadListFontEnd($condition);
+			$lsProducts = $objProduct->loadListFontEnd($condition, " ORDER BY RAND()", 0, 5);
 			$html .= '<div class="unified_widget rcm widget small_heading" id="widget_'.$lsCate["category_id"].'">';
 				$html .= '<h2>'.$lsCate["name"].'</h2>';
 				foreach ($lsProducts as $lsPro) {

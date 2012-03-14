@@ -1,4 +1,43 @@
 <?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<div class="page-title">
+    <h1><?php echo $this->__('Your order has been received') ?></h1>
+</div>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<h2 class="sub-title"><?php echo $this->__('Thank you for your purchase!') ?></h2>
+
+<?php if ($this->getOrderId()):?>
+<?php if ($this->getCanViewOrder()) :?>
+    <p><?php echo $this->__('Your order # is: %s.', sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getViewOrderUrl()), $this->escapeHtml($this->getOrderId()))) ?></p>
+<?php  else :?>
+    <p><?php echo $this->__('Your order # is: %s.', $this->escapeHtml($this->getOrderId())) ?></p>
+<?php endif;?>
+    <p><?php echo $this->__('You will receive an order confirmation email with details of your order and a link to track its progress.') ?></p>
+    <?php
 $order = Mage::getModel('sales/order')->loadByIncrementId($this->getOrderId());
 //SOHAPAY 
 include ("class_payment.php");
@@ -8,37 +47,26 @@ $merchant_secure_secret	= $_SESSION['secure_secret'];//mật khẩu giao tiếp 
 $classPayment = new PG_checkout($merchant_site_code, $merchant_secure_secret);
 if(isset($_GET['secure_code']) && !empty($_GET['secure_code'])) #Nhận thông tin
 {
-	#Thông tin giao dịch
 	$transaction_info = @$_GET['transaction_info'];
-	#Mã sản phẩm, mã đơn hàng, giỏ hàng giao dịch
 	$order_code = @$_GET['order_code'];
-	#Tổng số tiền thanh toán
 	$price = @$_GET['price'];
-	#Mã giao dịch thanh toán tại nganluong.vn
 	$payment_id = @$_GET['payment_id'];
-	#Loại giao dịch tại nganluong.vn (1=thanh toán ngay, 2=thanh toán tạm giữ)
 	$payment_type = @$_GET['payment_type'];
-	#Thông tin chi tiết về lỗi trong quá trình thanh toán
 	$error_text = @$_GET['error_text'];
-	#Lấy mã kiểm tra tính hợp lệ của đầu vào
 	$secure_code = @$_GET['secure_code'];
-	#Xử lý đầu vào
 	$shp_check = $classPayment->verifyReturnUrl();
 	if($shp_check === FALSE)
 	{
-		#Tham số gửi về không hợp lệ, có sự can thiệp từ bên ngoài
 		echo 'Kết quả thanh toán không hợp lệ';
 	}
 	else
 	{
 		if($error_text != '')
 		{
-			#Có lỗi trong quá trình thanh toán
 			echo 'Có lỗi: '.$error_text.'! Hãy thực hiện lại!';
 		}
 		else
 		{
-			#Thanh toán thành công
 			echo 'Thanh toán thành công!';
 		}
 	}
@@ -70,3 +98,28 @@ EOT;
 	 }
 }
 ?>
+<?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
+    <p>
+        <?php echo $this->__('Click <a href="%s" onclick="this.target=\'_blank\'">here to print</a> a copy of your order confirmation.', $this->getPrintUrl()) ?>
+        <?php echo $this->getChildHtml() ?>
+    </p>
+<?php endif;?>
+<?php endif;?>
+
+<?php if ($this->getAgreementRefId()): ?>
+    <p><?php echo $this->__('Your billing agreement # is: %s.', sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getAgreementUrl()), $this->escapeHtml($this->getAgreementRefId())))?></p>
+<?php endif;?>
+
+<?php if ($profiles = $this->getRecurringProfiles()):?>
+<p><?php echo $this->__('Your recurring payment profiles:'); ?></p>
+<ul class="disc">
+<?php foreach($profiles as $profile):?>
+<?php $profileIdHtml = ($this->getCanViewProfiles() ? sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getProfileUrl($profile)), $this->escapeHtml($this->getObjectData($profile, 'reference_id'))) : $this->escapeHtml($this->getObjectData($profile, 'reference_id')));?>
+    <li><?php echo $this->__('Payment profile # %s: "%s".', $profileIdHtml, $this->escapeHtml($this->getObjectData($profile, 'schedule_description')))?></li>
+<?php endforeach;?>
+</ul>
+<?php endif;?>
+
+<div class="buttons-set">
+    <button type="button" class="button" title="<?php echo $this->__('Continue Shopping') ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+</div>
