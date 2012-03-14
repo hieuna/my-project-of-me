@@ -73,17 +73,17 @@
 	 </tr>
 	</tbody>
 	</table>
-
+	{/section}
 	<table style="overflow:hidden;">
 	 <tbody><tr>
 	  <td style="overflow:hidden; padding-top:10px; padding-bottom:0px;">
-	   <p class="seemore">
+	   <p class="seemore" style="text-align: right;">
 	    <span class="carat">
 	     ›
 	    </span>
 	    <span style="margin-left:-4px;">
-	     <a href="/gp/goldbox/ref=xs_gb_gateway_redir">
-	      Today's Deals
+	     <a href="#">
+	      Xem tất cả
 	     </a>
 	    </span>
 	   </p>
@@ -91,5 +91,5 @@
 	 </tr>
 	</tbody>
 	</table>
-	{/section}
+	
 </div>

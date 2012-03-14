@@ -421,12 +421,5 @@
 			{include file = "$dir_template/products.seller.tpl"}
 			{include file = "$dir_template/categories.products.tpl"}
         </div>
-
-        <div class="amabot_right" id="rightcolhidden">
-		    <!-- COLS GOLD BOX -->
-		    {include file = "$dir_template/products.discount.tpl"}
-		    <!-- END GOLD BOX -->
-			<div style="display:none;"></div><table border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><map name="amazon-visa-roto"><area shape="rect" coords="0,0,300,120" alt="Amazon.com Rewards Visa Card" href="/gp/cobrandcard/marketing.html/ref=cobrand_ch_gwT2?ie=UTF8&source=h&place=camp&pr=con321&plattr=CBGWGC0222&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=right-6-contract&pf_rd_r=0F50DNGPMDNXKSZSZ9NJ&pf_rd_t=101&pf_rd_p=1346697522&pf_rd_i=507846"/> </map><img src="http://g-ecx.images-amazon.com/images/G/01/img11/paymnt-card-corp-acct/get-30-inst_300x120._V168517251_.png" width="300" align="center" usemap="#amazon-visa-roto" alt="Amazon.com Rewards Visa Card" height="120" border="0" /></td></tr></table><br>
-        </div>
       </div> <!-- content -->
     </div> <!-- class="page-wrap" -->
