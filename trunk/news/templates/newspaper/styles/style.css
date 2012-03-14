@@ -11,6 +11,13 @@ html {
     height: 100%;
     margin: 0 auto;
     width: 1004px;
+	text-align: center;
+}
+.header{
+	width: 980px; margin: 10px auto;
+}
+.top-ads{
+	width: 100%; margin: 0 auto; padding: 7px 0 4px;
 }
 .master {
     background-color: #FFFFFF;
