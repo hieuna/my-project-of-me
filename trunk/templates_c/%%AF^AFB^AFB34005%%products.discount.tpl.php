@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-14 00:07:18
+<?php /* Smarty version 2.6.10, created on 2012-03-14 14:10:42
          compiled from D:/AppServ/www/projects/templates/shopping/products.discount.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/products.discount.tpl', 42, false),)), $this); ?>
@@ -111,17 +111,17 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 	 </tr>
 	</tbody>
 	</table>
-
+	<?php endfor; endif; ?>
 	<table style="overflow:hidden;">
 	 <tbody><tr>
 	  <td style="overflow:hidden; padding-top:10px; padding-bottom:0px;">
-	   <p class="seemore">
+	   <p class="seemore" style="text-align: right;">
 	    <span class="carat">
 	     ›
 	    </span>
 	    <span style="margin-left:-4px;">
-	     <a href="/gp/goldbox/ref=xs_gb_gateway_redir">
-	      Today's Deals
+	     <a href="#">
+	      Xem tất cả
 	     </a>
 	    </span>
 	   </p>
@@ -129,5 +129,5 @@ $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'
 	 </tr>
 	</tbody>
 	</table>
-	<?php endfor; endif; ?>
+	
 </div>

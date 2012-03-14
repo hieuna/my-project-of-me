@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-13 23:20:29
+<?php /* Smarty version 2.6.10, created on 2012-03-14 13:56:30
          compiled from D:/AppServ/www/projects/templates/shopping/products.viewed.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'D:/AppServ/www/projects/templates/shopping/products.viewed.tpl', 52, false),)), $this); ?>
@@ -54,7 +54,7 @@ $this->_sections['loops']['index_next'] = $this->_sections['loops']['index'] + $
 $this->_sections['loops']['first']      = ($this->_sections['loops']['iteration'] == 1);
 $this->_sections['loops']['last']       = ($this->_sections['loops']['iteration'] == $this->_sections['loops']['total']);
 ?>
-								<li class="shoveler-cell" style="margin-left: 20px; margin-right: 20px;">
+								<li class="shoveler-cell" style="margin-left: 15px; margin-right: 15px;">
 									<div>
 										<span>
 											<a title="<?php echo $this->_tpl_vars['lsProductViewed'][$this->_sections['loops']['index']]['name']; ?>

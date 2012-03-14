@@ -18,7 +18,7 @@ if ($dispatch == 'category.view'){
 	$lsProductSeller = $objProduct->ProductSeller(0, 10);
 	
 	//load moduels discount product
-	$lsProductDiscount = $objProduct->ProductDiscount(0, 9);
+	$lsProductDiscount = $objProduct->ProductDiscount(0, 3);
 	
 	//Load product of day
 	$product_of_day = $objProduct->Product_of_day();

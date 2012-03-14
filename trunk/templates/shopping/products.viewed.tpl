@@ -27,7 +27,7 @@
 				        <div class="shoveler-content" id="tab_content">
 				            <ul>
 				            	{section name=loops loop=$lsProductViewed}
-								<li class="shoveler-cell" style="margin-left: 20px; margin-right: 20px;">
+								<li class="shoveler-cell" style="margin-left: 15px; margin-right: 15px;">
 									<div>
 										<span>
 											<a title="{$lsProductViewed[loops].name}" class="title" href="{$lsProductViewed[loops].link}"> 
