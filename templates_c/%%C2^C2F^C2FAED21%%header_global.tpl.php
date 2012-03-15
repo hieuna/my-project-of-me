@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-13 23:38:51
+<?php /* Smarty version 2.6.10, created on 2012-03-15 17:59:51
          compiled from D:/AppServ/www/projects/templates/shopping/header_global.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -34,6 +34,8 @@
 	<![endif]-->
 	<link type="text/css" href="<?php echo $this->_tpl_vars['url_template']; ?>
 /styles/footer.css" rel="stylesheet">
+	<link type="text/css" href="<?php echo $this->_tpl_vars['url_template']; ?>
+/styles/popup.css" rel="stylesheet">
 	<script type="text/javascript" src="<?php echo $this->_tpl_vars['http_root']; ?>
 includes/js/JQuery/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="<?php echo $this->_tpl_vars['http_root']; ?>

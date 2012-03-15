@@ -1,9 +1,13 @@
 <?php
-//Load left menu
+$objBanner = new PGBanner();
 $objMenu = new PGMenu();
-$showMenuLeft = $objMenu->MenuVertical(" ORDER BY menu_id");
 $objProduct =  new PGProduct();
 $objCategory = new PGCategory();
+
+//Load Banner Topup
+$topup = $objBanner->load();
+//Load left menu
+$showMenuLeft = $objMenu->MenuVertical(" ORDER BY menu_id");
 //Load moduels product hotdeal
 $lsProductHotdeal = $objProduct->ProducsHotDeal();
 //Load modules new product
