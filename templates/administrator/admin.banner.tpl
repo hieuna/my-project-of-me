@@ -92,7 +92,8 @@
    		<td width="20%">Chọn website</td>
    		<td width="80%">
    		<select name="banner_web" class="adm_selectbox">
-   			<option value="1" selected="selected">Website Xtech.vn</option>
+   			<option value="1"{if $thisBanner->banner_web==1} selected="selected"{/if}>Website Xtech.vn</option>
+   			<option value="2"{if $thisBanner->banner_web==2} selected="selected"{/if}>Topup</option>
    		</select>
    		</td>
    	</tr>
@@ -120,6 +121,17 @@
    			<option {if $thisBanner->product_id==$products[loops].product_id || $product_id==$products[loops].product_id}selected="selected"{/if} value="{$products[loops].product_id}">{$products[loops].name} - {$products[loops].price|number_format} VNĐ</option>
    			{/section}
    		</select>
+   		</td>
+   	</tr>
+   	<tr id="topup_row">
+   		<td valign="top">Ảnh topup</td>
+   		<td valign="top">
+   			{if $thisBanner->banner_topup!=""}
+   			<div style="widtd:100%; margin: 10px 0;">
+   				<img src="{$http_root}{$thisBanner->banner_topup}" width="500" border="0" />
+   			</div>
+   			{/if}
+   			<input type="file" name="topup" size="25" class="adm_inputbox" value="" />
    		</td>
    	</tr>
    	<tr>
@@ -174,6 +186,29 @@
    </tfoot>
 </table>
 </form>
+{literal}
+<script>
+$(function(){
+	$('form#frmValidate').validate();
+	{/literal}
+	{if $thisBanner->banner_web == 2}
+		{literal}
+		$('#topup_row').show();
+		{/literal}
+	{else}
+		{literal}
+		$('#topup_row').hide();
+		{/literal}
+	{/if}
+	{literal}	
+	$('select[name=banner_web]').change(function(){
+		var value = $('select[name=banner_web]').val();
+		if (value == 2) $('#topup_row').show();
+		else $('#topup_row').hide();
+	});
+});
+</script>
+{/literal}
 {else}
 <form name="adminForm" method="post" action="{$page}">
 	<table style="margin-bottom:5px;">
@@ -278,10 +313,3 @@
 	<input type="hidden" value="{$total_record}" name="total_record" id="total_record" />
 </form>
 {/if}
-{literal}
-<script>
-$(function(){
-	$('form#frmValidate').validate();
-});
-</script>
-{/literal}

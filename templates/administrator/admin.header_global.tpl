@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="{$http_root}templates/administrator/css/style.css" type="text/css" />
-<script src="{$http_root}includes/js/JQuery/jquery-1.7.min.js" type="text/javascript"></script>
+<script src="{$http_root}includes/js/JQuery/jquery-1.4.2.min.js" type="text/javascript"></script>
 
 <link rel="stylesheet" media="all" type="text/css" href="{$http_root}includes/js/JQuery/css/jquery-ui-1.8.16.custom.css" />
 <link rel="stylesheet" href="{$http_root}includes/js/JQuery/css/jquery-ui-timepicker-addon.css" type="text/css" />

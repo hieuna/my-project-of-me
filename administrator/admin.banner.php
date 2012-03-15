@@ -73,34 +73,89 @@ switch($task){
 		$is_message = $banner->check_input_banner($banner_web, $banner_title);
 		
 		if (!$is_message){
-			//Upload file img
-			if ($_FILES["image"]["name"] != ""){
-	            $fileName =  $_FILES["image"]["name"];
-	            $dir=$dir_upload."banners/".$fileName;
-	            if (move_uploaded_file($_FILES["image"]["tmp_name"], $dir))
-	            {
-	            	if ($thisBanner->banner_id == 0){
-	            		$image = "image/banners/".$fileName;
-	            	}else{
-		            	if(file_exists($dir_root.$thisBanner->banner_image)) {
-						  @unlink($dir_root.$thisBanner->banner_image);		  
-						}
-	            		$image = "image/banners/".$fileName;
-	            	}
-	            }
-	            else
-	            {
-	            	if ($thisBanner->banner_id == 0){
-	            		$image = "";
-	            	}else{
-	            		$image = $thisBanner->banner_image;
-	            	}
-	            }	
+			if ($banner_web == 2){
+				//Upload image topup
+				if ($_FILES["topup"]["name"] != ""){
+		            $fileNameTopup =  "topup_".$_FILES["topup"]["name"];
+		            $dir=$dir_upload."banners/topup/".$fileNameTopup;
+		            if (move_uploaded_file($_FILES["topup"]["tmp_name"], $dir))
+		            {
+		            	if ($thisBanner->banner_id == 0){
+		            		$image_topup = "image/banners/topup/".$fileNameTopup;
+		            	}else{
+			            	if(file_exists($dir_root.$thisBanner->banner_topup)) {
+							  @unlink($dir_root.$thisBanner->banner_topup);		  
+							}
+		            		$image_topup = "image/banners/topup/".$fileNameTopup;
+		            	}
+		            }
+		            else
+		            {
+		            	if ($thisBanner->banner_id == 0){
+		            		$image_topup = "";
+		            	}else{
+		            		$image_topup = $thisBanner->banner_topup;
+		            	}
+		            }	
+				}else{
+					$image_topup = $thisBanner->banner_topup;
+				}
+				//Upload file img
+				if ($_FILES["image"]["name"] != ""){
+		            $fileName =  "profile_".$_FILES["image"]["name"];
+		            $dir=$dir_upload."banners/topup/".$fileName;
+		            if (move_uploaded_file($_FILES["image"]["tmp_name"], $dir))
+		            {
+		            	if ($thisBanner->banner_id == 0){
+		            		$image = "image/banners/topup/".$fileName;
+		            	}else{
+			            	if(file_exists($dir_root.$thisBanner->banner_image)) {
+							  @unlink($dir_root.$thisBanner->banner_image);		  
+							}
+		            		$image = "image/banners/topup/".$fileName;
+		            	}
+		            }
+		            else
+		            {
+		            	if ($thisBanner->banner_id == 0){
+		            		$image = "";
+		            	}else{
+		            		$image = $thisBanner->banner_image;
+		            	}
+		            }	
+				}else{
+					$image = $thisBanner->banner_image;
+				}
 			}else{
-				$image = $thisBanner->banner_image;
+				//Upload file img
+				if ($_FILES["image"]["name"] != ""){
+		            $fileName =  $_FILES["image"]["name"];
+		            $dir=$dir_upload."banners/".$fileName;
+		            if (move_uploaded_file($_FILES["image"]["tmp_name"], $dir))
+		            {
+		            	if ($thisBanner->banner_id == 0){
+		            		$image = "image/banners/".$fileName;
+		            	}else{
+			            	if(file_exists($dir_root.$thisBanner->banner_image)) {
+							  @unlink($dir_root.$thisBanner->banner_image);		  
+							}
+		            		$image = "image/banners/".$fileName;
+		            	}
+		            }
+		            else
+		            {
+		            	if ($thisBanner->banner_id == 0){
+		            		$image = "";
+		            	}else{
+		            		$image = $thisBanner->banner_image;
+		            	}
+		            }	
+				}else{
+					$image = $thisBanner->banner_image;
+				}
 			}
-			
 			$banner->banner_web 		= $banner_web;
+			$banner->banner_topup		= $image_topup;
 			$banner->banner_image		= $image;
 			$banner->banner_url			= $banner_url;
 			$banner->banner_status		= $banner_status;

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-02-23 21:45:59
+<?php /* Smarty version 2.6.10, created on 2012-03-15 14:36:43
          compiled from D:/AppServ/www/projects/templates//administrator/admin.header_global.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="<?php echo $this->_tpl_vars['http_root']; ?>
 templates/administrator/css/style.css" type="text/css" />
 <script src="<?php echo $this->_tpl_vars['http_root']; ?>
-includes/js/JQuery/jquery-1.7.min.js" type="text/javascript"></script>
+includes/js/JQuery/jquery-1.4.2.min.js" type="text/javascript"></script>
 
 <link rel="stylesheet" media="all" type="text/css" href="<?php echo $this->_tpl_vars['http_root']; ?>
 includes/js/JQuery/css/jquery-ui-1.8.16.custom.css" />
