@@ -1,0 +1,51 @@
+#backgroundPopup{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	height:100%;
+	width:100%;
+	top:0;
+	left:0px;
+	background:#000000;
+	border:1px solid #cecece;
+	z-index:1;
+}
+#popupContact{
+	display:none;
+	position:absolute;
+	_position:absolute; /* hack for internet explorer 6*/
+	width:650px;
+	background:#ca1907;
+	border:2px solid #cecece;
+	z-index:2;
+	padding:3px;
+	font-size:12px;
+	padding-bottom:20px;
+}
+#popupContact h1{
+	text-align:left;
+	color:#FFFFFF;
+	font-size:25px;
+	font-weight:bold;
+	border-bottom:1px dotted #D3D3D3;
+	padding-bottom:0px;
+	margin-bottom:5px;
+}
+#popupContactClose{
+	font-size:14px;
+	right:6px;
+	position:absolute;
+	color:#FFFFFF;
+	font-weight:bold;
+	display:block;
+}
+#chitiet{
+	font-size:16px;
+	color:#FFFFFF;
+	font-weight:bold;
+	display:block;
+}
+#button{
+	text-align:center;
+	margin:50px;
+}

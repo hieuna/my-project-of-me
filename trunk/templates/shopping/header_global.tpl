@@ -22,6 +22,7 @@
 		<link type="text/css" href="{$url_template}/styles/ie8.css" rel="stylesheet">
 	<![endif]-->
 	<link type="text/css" href="{$url_template}/styles/footer.css" rel="stylesheet">
+	<link type="text/css" href="{$url_template}/styles/popup.css" rel="stylesheet">
 	<script type="text/javascript" src="{$http_root}includes/js/JQuery/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="{$http_root}includes/js/JQuery/jquery.cycle.all.min.js"></script>
 	<script type="text/javascript" src="{$http_root}includes/js/JQuery/site-wide.js"></script>
