@@ -3,6 +3,7 @@ class PGBanner{
 	var $is_message;
 	
 	var $banner_id;
+	var $banner_topup;
 	var $banner_image;
 	var $banner_url;
 	var $banner_status;
@@ -18,6 +19,7 @@ class PGBanner{
 	
 	function __construct(){
 		$this->banner_id = 0;
+		$this->banner_topup = "";
 		$this->banner_image = "";
 		$this->banner_url = "";
 		$this->banner_status = 1;
@@ -68,6 +70,7 @@ class PGBanner{
 			$result = $database->db_query("SELECT * FROM ".TBL_BANNER." WHERE banner_id=$banner_id LIMIT 1");
 			if ($oBanner = $database->db_fetch_object($result)){
 				$this->banner_id			= $oBanner->banner_id;
+				$this->banner_topup			= $oBanner->banner_topup;
 				$this->banner_image			= $oBanner->banner_image;
 				$this->banner_url			= $oBanner->banner_url;
 				$this->banner_status		= $oBanner->banner_status;
@@ -87,10 +90,11 @@ class PGBanner{
 	
 	public function save($oBanner = null){
 		global $database;
-		if (!is_object($oBanner)) $oDeal = $this;
+		if (!is_object($oBanner)) $oBanner = $this;
 		
 		if (!isset($oBanner->banner_id) || is_null($oBanner->banner_id) || ($oBanner->banner_id==0)){
 			$sql = "INSERT INTO ".TBL_BANNER . " (
+			banner_topup,
 			banner_image,
 			banner_url,
 			banner_status,
@@ -104,6 +108,7 @@ class PGBanner{
 			category_id,
 			product_id
 			) VALUES(
+			'".$oBanner->banner_topup."',
 			'".$oBanner->banner_image."',
 			'".$oBanner->banner_url."',
 			".$oBanner->banner_status.",
@@ -117,9 +122,11 @@ class PGBanner{
 			'".$oBanner->category_id."',
 			'".$oBanner->product_id."'
 			)";
+			//echo $sql; die;
 			if ($database->db_query($sql)) $this->is_message = 'Thêm mới banner thành công !';
 		}else{
 			$sql = "UPDATE ".TBL_BANNER . " SET
+			banner_topup='".$oBanner->banner_topup."',
 			banner_image='".$oBanner->banner_image."',
 			banner_url='".$oBanner->banner_url."',
 			banner_status =".$oBanner->banner_status.",

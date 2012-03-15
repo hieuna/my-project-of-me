@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/hotdeal.css" type="text/css" />
         <link rel="stylesheet" href="css/styles.css" type="text/css" />
         <link rel="stylesheet" href="css/footer.css" type="text/css" />
-        <script src="includes/js/JQuery/jquery-1.7.min.js" type="text/javascript"></script>
+        <script src="includes/js/JQuery/jquery-1.4.2.min.js" type="text/javascript"></script>
         <script src="includes/js/count.js" type="text/javascript"></script>
         <!-- full background -->
         <script src="includes/js/JQuery/jquery.fullbg.min.js" type="text/javascript"></script>
