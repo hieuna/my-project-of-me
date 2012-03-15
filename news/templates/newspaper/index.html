@@ -9,8 +9,74 @@
 
 <body class="body">
 	<div class="header">
+		<div style="position: relative;" class="clearfix">
+		 	<a class="logo" href="/"><h1>Báo điện tử của báo khuyến học &amp; Dân Trí</h1></a>
+		 	<div class="div_gdpda" id="div_gdpda"><a href="/?removecookie=true">Giao diện PDA</a></div>
+			 <div class="searchbox" id="searchbox">
+				  <div class="clearfix">
+					 <input type="text" id="txtData" name="q" onkeypress="return BBEnterPress();">
+					 <input type="submit" onsubmit="BBSearch(); return false;" onclick="BBSearch(); return false;" class="btn" value="Tìm kiếm">
+					 <input type="hidden" value="1" id="dantri">
+				  </div>
+			 </div>
+			 <div class="links">
+				  <a target="_blank" href="http://muachung.vn/" class="icon-game">Mua chung</a>
+				  <a href="/c702s702/blog/trang-1.htm" class="icon-ads">Blog</a>
+				  <a href="/c167/tam-long-nhan-ai.htm" class="icon-humane">Tấm lòng nhân ái</a>
+				  <a target="_blank" href="http://baogiay.dantri.com.vn" class="icon-tuanbao2">Tuần báo</a>
+				  <a href="http://enbac.com" class="icon-bussiness">Mua bán</a>
+				  <a target="_blank" href="http://bexinh.dantri.com.vn" class="icon-bexinh">Bé xinh</a>
+				  <a href="/c673/diendan/trang-1.htm" class="icon-forum">Diễn đàn dân trí</a>
+				  <a target="_blank" href="http://www.dtinews.vn" class="icon-tienganh">English</a>
+			 </div>
+		 </div>
 	</div>
 	<div class="top-ads">
+	</div>
+	<div class="nav-wrap">
+		 <div class="clearfix">
+			 <ul class="nav">
+				 <li class="menu-home"><a href="/" id="vmenu_home"><span><b></b></span></a></li>
+				 <li><a href="/c728/sukien.htm" id="vmenu_728"><span>Sự kiện</span></a></li>
+				 <li><a href="/c20/xa-hoi.htm" id="vmenu_20"><span>Xã hội</span></a></li>
+				 <li><a href="/c36/thegioi.htm" id="vmenu_36"><span>Thế giới</span></a></li>
+				 <li><a href="/c26/thethao.htm" id="vmenu_26"><span>Thể thao</span></a></li>
+				 <li><a href="/c25/giaoduc.htm" id="vmenu_25"><span>Giáo dục</span></a> </li>
+				 <li><a href="/c167/tamlongnhanai.htm" id="vmenu_167"><span>Nhân ái</span></a></li>
+				 <li><a href="/c76/kinhdoanh.htm" id="vmenu_76"><span>Kinh doanh</span></a></li>
+				 <li><a href="/c23/giaitri.htm" id="vmenu_23"><span>Văn hóa</span></a></li>
+				 <li><a href="/c170/skphapluat.htm" id="vmenu_170" class="active"><span>Pháp luật</span></a></li>
+				 <li><a href="/c135/nhipsongtre.htm" id="vmenu_135"><span>Nhịp sống trẻ</span></a></li>
+				 <li><a href="/c130/tinhyeu-gioitinh.htm" id="vmenu_130"><span>Tình yêu</span></a></li>
+				 <li><a href="/c7/suckhoe.htm" id="vmenu_7"><span>Sức khỏe</span></a></li>
+				 <li><a href="/c119/sucmanhso.htm" id="vmenu_119"><span>Sức mạnh số</span></a></li>
+				 <li><a href="/c111/otoxemay.htm" id="vmenu_111"><span>Ô tô - Xe máy</span></a></li>
+				 <li><a href="/c132/chuyenla.htm" id="vmenu_132"><span>Chuyện lạ</span></a></li>
+				 <li class="last"><a href="/c202/diendanbandoc.htm" id="vmenu_202"><span>Bạn đọc</span></a></li>
+			 </ul>
+		 </div>
+		 
+		<div class="subnav">
+		 <ul id="ul_submenu" class="clearfix"> 
+		  
+		 </ul> 
+		 <div class="fr">
+		 <a href="/skphapluat.rss" class="icon-rss2" id="ctl00_Header1_SubMenu1_lnkRss"></a>
+		 </div> 
+		</div>
+		<script language="javascript" type="text/javascript">
+		 if(window.location.href.indexOf("/c135") &gt; 0)
+		 {
+		 var ul_submenu = document.getElementById("ul_submenu");
+		 ul_submenu.innerHTML = ul_submenu.innerHTML + "&lt;li&gt;&lt;a href='http://missteen.dantri.com.vn'&gt;Miss Teen&lt;/a&gt;&lt;/li&gt;";
+		 }
+		 else
+		 if(window.location.href.indexOf("/c25") &gt; 0)
+		 {
+		 var ul_submenu = document.getElementById("ul_submenu");
+		 ul_submenu.innerHTML = "&lt;li&gt;&lt;a href='http://duhoc.dantri.com.vn' target='blank'&gt;Kết nối du học&lt;/a&gt;&lt;/li&gt;" + ul_submenu.innerHTML;
+		 }
+		</script> 
 	</div>
 <div>
 

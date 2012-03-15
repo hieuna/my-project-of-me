@@ -4,20 +4,164 @@ form {
 html {
     height: 100%;
 }
+.clearfix {
+    display: block;
+    width: 100%;
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clear {
+    clear: both;
+    height: 1px;
+    overflow: hidden;
+}
 .body {
     background: url("../images/bgr.jpg") repeat-x scroll right top #4396CA;
     font-family: Arial;
     font-size: 12px;
     height: 100%;
     margin: 0 auto;
-    width: 1004px;
 	text-align: center;
 }
 .header{
-	width: 980px; margin: 10px auto;
+	width: 1004px; margin: 10px auto; background: #fff;
+}
+.logo {
+    background-position: -2px -475px;
+    float: left;
+    height: 55px;
+    width: 225px;
+}
+.logo h1 {
+    display: none;
+}
+.div_gdpda {
+    color: #006432;
+    display: none;
+    float: left;
+    font-weight: bold;
+    padding-top: 15px;
+    width: 90px;
+}
+.searchbox {
+    background-position: 0 -337px;
+    float: left;
+    height: 24px;
+    margin: 15px 0 0 15px;
+    width: 331px;
+}
+.links {
+    float: right;
+    overflow: hidden;
+    width: 400px;
+}
+.links a {
+    color: #000000;
+    font: 700 10px/22px Tahoma;
+    margin: 4px 0 0 4px;
+    text-indent: 30px;
+}
+.links a:hover {
+    color: #FF0000;
+}
+.icon-work, .icon-ads, .icon-game, .icon-bussiness, .icon-humane, .icon-forum, .icon-home, .icon-event, .icon-detail, .icon-rss, .icon-rss2, .icon-yahoo, .icon-google, .icon-facebook, .icon-twitter, .icon-twitter2, .icon-linkhay, .icon-like, .icon-facebook2, .icon-1000y, .icon-ecard, .icon-english, .icon-tuanbao, .icon-rssfeed {
+    float: left;
+    overflow: hidden;
+}
+.icon-work {
+    background-position: -306px -166px;
+    height: 22px;
+    width: 80px;
+}
+.icon-ads {
+    background-image: url("../images/icon_Blog26.png");
+    height: 22px;
+    width: 80px;
+}
+.icon-game {
+    background-image: url("../images/iconMuaChung.png");
+    height: 22px;
+    width: 94px;
+}
+.icon-bussiness {
+    background-image: url("../images/icon_MuaSam.png");
+    height: 22px;
+    width: 93px;
+}
+.icon-humane {
+    background-position: -306px -254px;
+    height: 22px;
+    width: 132px;
+}
+.icon-forum {
+    background-position: -306px -276px;
+    height: 22px;
+    width: 132px;
+}
+.icon-bexinh {
+    background: url("../images/bt_bexinh.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 22px;
+    width: 80px;
+}
+.icon-tuanbao2 {
+    background: url("../images/bt_tuanbao.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 22px;
+    text-indent: 25px !important;
+    width: 77px;
+}
+.icon-tienganh {
+    background: url("../images/button-english.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 22px;
+    width: 77px;
 }
 .top-ads{
 	width: 100%; margin: 0 auto; padding: 7px 0 4px;
+}
+.nav-wrap {
+	width: 100%;
+    background-position: 0 -2308px;
+    background-repeat: repeat-x;
+    height: 56px;
+    background: #fff;
+}
+.nav {
+    margin: 0 auto;
+    width: 1000px;
+}
+.nav li {
+    background-position: 100% -2364px;
+    background-repeat: no-repeat;
+    float: left;
+    height: 24px;
+    margin-top: 3px;
+}
+.nav a {
+    float: left;
+    height: 24px;
+    padding-right: 2px;
+}
+.subnav {
+    margin: auto;
+    width: 980px;
+}
+.subnav ul {
+    height: 25px;
+    overflow: hidden;
+}
+.subnav .fr {
+    margin-top: -23px;
+    position: relative;
+}
+.fr {
+    float: right;
 }
 .master {
     background-color: #FFFFFF;
