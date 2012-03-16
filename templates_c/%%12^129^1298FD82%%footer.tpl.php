@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-15 18:02:11
+<?php /* Smarty version 2.6.10, created on 2012-03-16 10:14:40
          compiled from D:/AppServ/www/projects/templates/shopping/footer.tpl */ ?>
 <div id="page-footer">
        <br />
@@ -259,56 +259,13 @@ unset($_smarty_tpl_vars);
 <div id="SponsoredLinksGateway"></div>
     </div>
 
-<div style="position: absolute; z-index:100; display: block;" id="popupContact">		
-	<a href="http://khoinguyenprint.com.vn" ,="" target="_blank" id="closeWidth">
-		<img src="http://khoinguyenprint.com.vn/images/banners/popupnew.jpg" width="650" height="455" border="0" />
-	</a>
-	<br>
-	<div>
-		<a href="http://khoinguyenprint.com.vn" style="float:left; color:white; font-weight:bold; font-size:14px; text-decoration:none;">Xem chi tiết</a>
-		<a id="popupContactClose" href="javascript:;">[x] Đóng lại</a>
-	</div>
-</div>	
-<div style="height: 100%; opacity: 0.7; display: block;" id="backgroundPopup"></div>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['dir_template'])."/topup.tpl", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 <?php echo '
 <script type="text/javascript">
-	var popupStatus = 0;
-	function loadPopup(){
-		if(popupStatus==0){
-			$("#backgroundPopup").css({
-				"opacity": "0.7"
-			});
-			$("#backgroundPopup").fadeIn("slow");
-			$("#popupContact").fadeIn("slow");
-			popupStatus = 1;
-		}
-	}
-	
-	function disablePopup(){
-		if(popupStatus==1){
-			$("#backgroundPopup").fadeOut("slow");
-			$("#popupContact").fadeOut("slow");
-			popupStatus = 0;
-		}
-	}
-	
-	function centerPopup(){
-		var windowWidth = document.documentElement.clientWidth;
-		var windowHeight = document.documentElement.clientHeight;
-		var popupHeight = $("#popupContact").height();
-		var popupWidth = $("#popupContact").width();
-		$("#popupContact").css({
-			"position": "absolute",
-			"top": windowHeight/2-popupHeight/2,
-			"left": windowWidth/2-popupWidth/2
-		});
-		
-		$("#backgroundPopup").css({
-			"height": windowHeight
-		});
-		
-	}
-	
 	$(function() {
 		//Slide next prev
 	    $(\'#tab_content\').cycle({
@@ -317,32 +274,6 @@ unset($_smarty_tpl_vars);
 	        next: \'#btn_next\',
 	        prev: \'#btn_prev\'
 	    });
-	    
-	  	//LOADING POPUP
-		centerPopup();
-		loadPopup();
-		$("#button").click(function(){
-			centerPopup();
-			loadPopup();
-		});
-					
-		//CLOSING POPUP
-		$("#popupContactClose").click(function(){
-			disablePopup();
-		});
-		$("#closeWidth").click(
-			function(){
-				disablePopup();
-			}
-		)
-		$("#backgroundPopup").click(function(){
-			//disablePopup();
-		});
-		$(document).keypress(function(e){
-			if(e.keyCode==27 && popupStatus==1){
-				disablePopup();
-			}
-		});
 	});
 </script>
 '; ?>
