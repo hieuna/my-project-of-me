@@ -7,10 +7,8 @@
  */
 
 defined('_JEXEC') or die;
-
 /* The following line loads the MooTools JavaScript Library */
 JHtml::_('behavior.framework', true);
-
 /* The following line gets the application object for things like displaying the site name */
 $app 		= JFactory::getApplication();
 $option 	= JRequest::getString('option', '', 'GET');
@@ -29,7 +27,6 @@ $view 		= JRequest::getString('view', '', 'GET');
 		<![endif]>
 		<!--[if IE 9 ]> <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/css3.css" type="text/css" /> <![endif]-->
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery-1.7.min.js" type="text/javascript"></script>
-        <title>CCBM</title>
 	</head>
 	<body class="body">
 	<div class="header">
@@ -402,20 +399,20 @@ $view 		= JRequest::getString('view', '', 'GET');
 				<h2 class='topnews'>tin nổi bật</h2>
 				<div id='item-0' class='newsTopmain-panel'>
 				<a  href='/tintucsukien/tinhoatdongcuabo/Trang/TrườngCaođẳngCôngnghiệpinthôngbáotuyểnsinh.aspx'>
-				<img src="images/20120310_a1.jpg" alt="" hspace="10" vspace="10" width="447px" /></a>
+				<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/20120310_a1.jpg" alt="" hspace="10" vspace="10" width="447px" /></a>
 				<div class='info'> 
 				<h2><a href='/tintucsukien/tinhoatdongcuabo/Trang/TrườngCaođẳngCôngnghiệpinthôngbáotuyểnsinh.aspx'>Trường Cao đẳng Công nghiệp in thông báo tuyển sinh năm 2012</a></h2></div> 
 				 </div>
 				<div id='item-1' class='newsTopmain-panel'>
 				<a  href='/tintucsukien/tintonghop/Trang/TổnghợpbáochíviếtvềngànhTTTTtuần10(từngày03-09032012).aspx'>
 
-				<img src="images/20120309_n3.jpg" alt="" hspace="10" vspace="10" width="447px" /></a>
+				<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/20120309_n3.jpg" alt="" hspace="10" vspace="10" width="447px" /></a>
 				<div class='info'> 
 				<h2><a href='/tintucsukien/tintonghop/Trang/TổnghợpbáochíviếtvềngànhTTTTtuần10(từngày03-09032012).aspx'>Tổng hợp báo chí viết về ngành TT& TT tuần 10 (từ ngày 03-09/03/2012)</a></h2></div> 
 				 </div>
 				<div id='item-2' class='newsTopmain-panel'>
 				<a  href='/tintucsukien/tinhoatdongcuabo/Trang/GiaobanBáochíkhuvựcphíaNam.aspx'>
-				<img src="images/20120308_a1.jpg" alt="" hspace="10" vspace="10" width="447px" /></a>
+				<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/20120308_a1.jpg" alt="" hspace="10" vspace="10" width="447px" /></a>
 				<div class='info'> 
 				<h2><a href='/tintucsukien/tinhoatdongcuabo/Trang/GiaobanBáochíkhuvựcphíaNam.aspx'>Giao ban Báo chí khu vực phía Nam: người phát ngôn tại đơn vị phải chủ động cung cấp thông tin cho báo chí</a></h2></div> 
 				 </div>
