@@ -88,6 +88,21 @@ class PGBanner{
 		return $this;
 	}
 	
+	//Load banner topup
+	public function loadTopup(){
+		global $database;
+		$sql = "SELECT banner_topup, banner_image, banner_url FROM ".TBL_BANNER." WHERE banner_status=1 AND banner_web=2 ORDER BY banner_create DESC LIMIT 1";
+		$result = $database->db_query($sql);
+		if ($oBanner = $database->db_fetch_object($result)){
+			$this->banner_topup			= $oBanner->banner_topup;
+			$this->banner_image			= $oBanner->banner_image;
+			$this->banner_url			= $oBanner->banner_url;
+			$this->banner_status		= $oBanner->banner_status;
+			$this->banner_web			= $oBanner->banner_web;
+		}
+		return $this;
+	}
+	
 	public function save($oBanner = null){
 		global $database;
 		if (!is_object($oBanner)) $oBanner = $this;
