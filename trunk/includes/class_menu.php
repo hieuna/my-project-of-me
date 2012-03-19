@@ -364,7 +364,7 @@ class PGMenu{
 		
 		$sql = "SELECT * FROM ".TBL_MENU.$where.$orderBy;
 		$results = $database->db_query($sql);
-		$html = '<ul class="dropdown dropdown-vertical">';
+		$html = '<ul class="nav_browse_ul" id="nav_cats">';
 		while ($row = $database->db_fetch_assoc($results)){
 			$queryCount = "SELECT COUNT(*) AS total FROM ".TBL_MENU." WHERE status=1 AND parent_id=".$row["menu_id"];
 			$rs = $database->db_fetch_assoc($database->db_query($queryCount));
@@ -372,7 +372,8 @@ class PGMenu{
 			$query = "SELECT name, link FROM ".TBL_MENU." WHERE status=1 AND parent_id=".$row["menu_id"]." ORDER BY ordering ASC, menu_id DESC";
 			$rsQuery = $database->db_query($query);
 			
-			$html .= '<li class="dir">';
+			$html .= '<li class="nav_pop_li">';
+				$html .= '<a href="'.$row["link"].'">'.$row["name"].'</a>';
 				if ($total>0){
 					$html .= '<ul>';
 					while ($rows = $database->db_fetch_assoc($rsQuery)){
@@ -381,9 +382,7 @@ class PGMenu{
 					}
 					$html .= '</ul>';
 				}
-				$html .= '<a href="'.$row["link"].'">'.$row["name"].'</a>';
 			$html .= '</li>';
-			$html .= '<li class="h-sep">&nbsp;</li>';
 		}
 		$html .= '</ul>';
 		

@@ -10,6 +10,7 @@
 	<link type="text/css" href="{$url_template}/styles/widget.css" rel="stylesheet">
 	<link type="text/css" href="{$url_template}/styles/nav.css" rel="stylesheet">
 	<link type="text/css" href="{$url_template}/styles/page.css" rel="stylesheet">
+	<link type="text/css" href="{$url_template}/styles/menu.css" rel="stylesheet">
 	<noscript>
 		<link type="text/css" href="{$url_template}/styles/noscript.css" rel="stylesheet">
 	</noscript>

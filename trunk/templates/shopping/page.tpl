@@ -55,9 +55,6 @@
  
 <div style="display: none;">
 
-
-  {include file = "$dir_template/menuLeft.tpl"}
-
 <div id="nav_your_account_flyout">  
 <ul class="nav_pop_ul">
 
@@ -144,9 +141,6 @@
           </div>
         </div>
         <div class="amabot_center" id="centercol">
-			<link type='text/css' href='http://z-ecx.images-amazon.com/images/G/01/s9-campaigns/s9-widget._V136741955_.css' rel='stylesheet'>
-			<script type="text/javascript" src="http://z-ecx.images-amazon.com/images/G/01/browser-scripts/us-site-wide-js-1.2.6-beacon/site-wide-5196759278.js"></script>
-			<link rel="stylesheet" type="text/css" href="http://z-ecx.images-amazon.com/images/G/01/s9-campaigns/s9-widget._V136741955_.css"/>
 			{include file = "$dir_template/products.special.tpl"}
 			{include file = "$dir_template/products.seller.tpl"}
 			{include file = "$dir_template/categories.products.tpl"}

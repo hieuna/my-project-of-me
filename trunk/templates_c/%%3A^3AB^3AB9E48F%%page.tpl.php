@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-19 17:18:43
+<?php /* Smarty version 2.6.10, created on 2012-03-19 17:37:15
          compiled from D:/AppServ/www/projects/templates/shopping/page.tpl */ ?>
 <div id="page-wrap">
       <div id="content">
@@ -64,13 +64,6 @@ unset($_smarty_tpl_vars);
 
  
 <div style="display: none;">
-
-
-  <?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['dir_template'])."/menuLeft.tpl", 'smarty_include_vars' => array()));
-$this->_tpl_vars = $_smarty_tpl_vars;
-unset($_smarty_tpl_vars);
- ?>
 
 <div id="nav_your_account_flyout">  
 <ul class="nav_pop_ul">
@@ -158,9 +151,6 @@ unset($_smarty_tpl_vars);
           </div>
         </div>
         <div class="amabot_center" id="centercol">
-			<link type='text/css' href='http://z-ecx.images-amazon.com/images/G/01/s9-campaigns/s9-widget._V136741955_.css' rel='stylesheet'>
-			<script type="text/javascript" src="http://z-ecx.images-amazon.com/images/G/01/browser-scripts/us-site-wide-js-1.2.6-beacon/site-wide-5196759278.js"></script>
-			<link rel="stylesheet" type="text/css" href="http://z-ecx.images-amazon.com/images/G/01/s9-campaigns/s9-widget._V136741955_.css"/>
 			<?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['dir_template'])."/products.special.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;

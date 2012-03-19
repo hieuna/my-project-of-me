@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-19 17:21:27
+<?php /* Smarty version 2.6.10, created on 2012-03-19 17:57:36
          compiled from D:/AppServ/www/projects/templates/shopping/header_global.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -18,6 +18,8 @@
 /styles/nav.css" rel="stylesheet">
 	<link type="text/css" href="<?php echo $this->_tpl_vars['url_template']; ?>
 /styles/page.css" rel="stylesheet">
+	<link type="text/css" href="<?php echo $this->_tpl_vars['url_template']; ?>
+/styles/menu.css" rel="stylesheet">
 	<noscript>
 		<link type="text/css" href="<?php echo $this->_tpl_vars['url_template']; ?>
 /styles/noscript.css" rel="stylesheet">
