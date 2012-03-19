@@ -1,6 +1,6 @@
 /*-- MENU LEFT --*/
 ul.nav_browse_ul{
-	margin: 0; padding: 0
+	margin: 0; padding: 0; position: relative;
 }
 ul.nav_browse_ul li{
 	list-style: none;
@@ -15,5 +15,5 @@ ul.nav_browse_ul li.nav_pop_li ul{
 	display: none;
 }
 ul.nav_browse_ul li.nav_hover ul{
-	display: block;
+	display: block; position: absolute; top: 0; right: 0;
 }
