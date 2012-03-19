@@ -37,9 +37,11 @@
 $(function(){
 	$("#nav_cats li").hover(function(){
 		$(this).addClass('nav_hover');
+		$('#nav_cats_wrap').css('width', '450px');
 	},
 	function(){
 		$(this).removeClass('nav_hover');
+		$('#nav_cats_wrap').css('width', '180px');
 	}
 	);
 });

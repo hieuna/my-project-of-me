@@ -49,7 +49,7 @@ class JConfig {
 	var $MetaTitle = '1';
 	var $lifetime = '15';
 	var $session_handler = 'database';
-	var $password = 'ngockieuvan@vccorp.vn';
+	var $password = 'ngockv842006';
 	var $sitename = 'Cổng Truyền Thông Thông Tin';
 	var $MetaDesc = 'Cổng thông tin';
 	var $MetaKeys = 'cổng thông tin, cong thong tin, thong tin';

@@ -375,12 +375,15 @@ class PGMenu{
 			$html .= '<li class="nav_pop_li">';
 				$html .= '<a href="'.$row["link"].'">'.$row["name"].'</a>';
 				if ($total>0){
+					$html .= '<div id="nav_subcats_wrap" class="nav_browse_wrap">';
 					$html .= '<ul>';
+					$html .= '<li class="nav_pop_li nav_browse_cat_head">'.$row["name"].'</li>';
 					while ($rows = $database->db_fetch_assoc($rsQuery)){
 						$html .= '<li><a href="'.$rows["link"].'">'.$rows["name"].'</a></li>';
 						$html .= '<li class="h-sep">&nbsp;</li>';
 					}
 					$html .= '</ul>';
+					$html .= '</div>';
 				}
 			$html .= '</li>';
 		}
