@@ -1,0 +1,19 @@
+/*-- MENU LEFT --*/
+ul.nav_browse_ul{
+	margin: 0; padding: 0
+}
+ul.nav_browse_ul li{
+	list-style: none;
+}
+ul.nav_browse_ul li.nav_pop_li a{
+	text-decoration: none; color: #333;
+}
+ul.nav_browse_ul li.nav_hover a{
+	color: #dd8100;
+}
+ul.nav_browse_ul li.nav_pop_li ul{
+	display: none;
+}
+ul.nav_browse_ul li.nav_hover ul{
+	display: block;
+}

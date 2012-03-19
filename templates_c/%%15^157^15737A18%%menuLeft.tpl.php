@@ -1,43 +1,50 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-19 17:18:43
+<?php /* Smarty version 2.6.10, created on 2012-03-19 17:51:55
          compiled from D:/AppServ/www/projects/templates/shopping/menuLeft.tpl */ ?>
-<div id="nav_browse_flyout">
-    <div id="nav_cats_wrap" class="nav_browse_wrap">
-    KIEU VAN NGOC
-    	<?php echo $this->_tpl_vars['showMenuLeft']; ?>
+<div id="nav_exposed_anchor" class="nav_exposed_sbd">
+	<div id="nav_exposed_skin" style="top: -8px; left: -15px; display: block;" class="">
+		<table cellspacing="0" cellpadding="0">
+			<tbody>
+			<tr>
+				<td class="nav_pop_tl nav_pop_h">
+					<div class="nav_pop_lr_min"></div>
+				</td>
+				<td class="nav_pop_tc nav_pop_h"></td>
+				<td class="nav_pop_tr nav_pop_h">
+					<div class="nav_pop_lr_min"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="nav_pop_cl nav_pop_v"></td>
+				<td class="nav_pop_cc ap_content">
+					<div id="nav_exposed_cats">
+						<div class="nav_browse_wrap" id="nav_cats_wrap">
+							<?php echo $this->_tpl_vars['showMenuLeft']; ?>
 
-	    <ul id="nav_cats" class="nav_browse_ul">
-		        <li id="nav_cat_0" class="nav_pop_li nav_cat">Unlimited Instant Videos</li>
-				<li id="nav_cat_1" class="nav_pop_li nav_cat">MP3s &amp; Cloud Player<div class="nav_tag">19 million songs, play anywhere</div></li>
-				<li id="nav_cat_2" class="nav_pop_li nav_cat">Amazon Cloud Drive<div class="nav_tag">5 GB of free storage</div></li>
-				<li id="nav_cat_3" class="nav_pop_li nav_cat">Kindle</li>
-				<li id="nav_cat_4" class="nav_pop_li nav_cat">Appstore for Android<div class="nav_tag">Get a premium app for free today<span id="nav_amabotandroid"></span></div></li>
-				<li id="nav_cat_5" class="nav_pop_li nav_cat">Digital Games &amp; Software</li>
-				<li id="nav_cat_6" class="nav_pop_li nav_cat">Audible Audiobooks</li>
-				<li id="nav_cat_7" class="nav_pop_li nav_cat nav_divider_before">Books</li>
-				<li id="nav_cat_8" class="nav_pop_li nav_cat">Movies, Music &amp; Games</li>
-				<li id="nav_cat_9" class="nav_pop_li nav_cat">Electronics &amp; Computers</li>
-				<li id="nav_cat_10" class="nav_pop_li nav_cat">Home, Garden &amp; Tools</li>
-				<li id="nav_cat_11" class="nav_pop_li nav_cat">Grocery, Health &amp; Beauty</li>
-				<li id="nav_cat_12" class="nav_pop_li nav_cat">Toys, Kids &amp; Baby</li>
-				<li id="nav_cat_13" class="nav_pop_li nav_cat">Clothing, Shoes &amp; Jewelry</li>
-				<li id="nav_cat_14" class="nav_pop_li nav_cat">Sports &amp; Outdoors</li>
-				<li id="nav_cat_15" class="nav_pop_li nav_cat">Automotive &amp; Industrial</li>
-				<li id="nav_fullstore" class="nav_pop_li nav_divider_before nav_last_li nav_a_carat"><span class="nav_a_carat">&rsaquo;</span><a href="/gp/site-directory/ref=sa_menu_fullstore" class="nav_a">Full Store Directory</a></li>
-	      </ul>
-	      <?php echo '
-	      <script type="text/javascript">
-	      $(function(){
-	          $("#nav_cats li").hover(function(){
-	              $(this).addClass(\'nav_hover\');
-	          },
-	          function(){
-	        	  $(this).removeClass(\'nav_hover\');
-	          }
-	          );
-	      });
-	      </script>
-     	  '; ?>
-
-      	  <div id="nav_cat_indicator" class="nav-sprite"></div>
+      						<div class="nav-sprite" id="nav_cat_indicator" style=""></div>
+    					</div>
+    				</div>
+    			</td>
+    			<td class="nav_pop_cr nav_pop_v"></td>
+    		</tr>
+    		<tr>
+    			<td class="nav_pop_bl nav_pop_v"></td>
+    			<td class="nav_pop_bc nav_pop_h"></td>
+    			<td class="nav_pop_br nav_pop_v"></td>
+    		</tr>
+    		</tbody>
+    	</table>
     </div>
 </div>
+<?php echo '
+<script type="text/javascript">
+$(function(){
+	$("#nav_cats li").hover(function(){
+		$(this).addClass(\'nav_hover\');
+	},
+	function(){
+		$(this).removeClass(\'nav_hover\');
+	}
+	);
+});
+</script>
+'; ?>
