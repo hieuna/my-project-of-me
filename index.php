@@ -12,7 +12,6 @@ if ($dispatch == 'category.view'){
 	$page_title = "Shopping";
 	
 	//Load modules special product
-	
 	$lsProductSpecial = $objProduct->ProductSpecial(" ORDER BY RAND()", 0, 5);
 	
 	//Load modules seller product
