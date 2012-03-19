@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.10, created on 2012-03-19 17:51:55
+<?php /* Smarty version 2.6.10, created on 2012-03-20 00:31:49
          compiled from D:/AppServ/www/projects/templates/shopping/menuLeft.tpl */ ?>
 <div id="nav_exposed_anchor" class="nav_exposed_sbd">
 	<div id="nav_exposed_skin" style="top: -8px; left: -15px; display: block;" class="">
@@ -40,9 +40,11 @@
 $(function(){
 	$("#nav_cats li").hover(function(){
 		$(this).addClass(\'nav_hover\');
+		$(\'#nav_cats_wrap\').css(\'width\', \'450px\');
 	},
 	function(){
 		$(this).removeClass(\'nav_hover\');
+		$(\'#nav_cats_wrap\').css(\'width\', \'180px\');
 	}
 	);
 });
