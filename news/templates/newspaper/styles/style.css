@@ -126,27 +126,26 @@ html {
 	width: 100%; margin: 0 auto; padding: 7px 0 4px; border-top: 2px solid #ccc;
 }
 .nav-wrap {
-	width: 100%;
-    background-position: 0 -2308px;
-    background-repeat: repeat-x;
-    height: 56px;
-    background: #fff;
+	width: 100%; height: 50px; background: url("../images/bg-nav.jpg") repeat-x top;
 }
-.nav {
+.menu-nav {
     margin: 0 auto;
-    width: 1000px;
+    width: 1024px;
 }
-.nav li {
-    background-position: 100% -2364px;
-    background-repeat: no-repeat;
-    float: left;
-    height: 24px;
-    margin-top: 3px;
+.menu-nav li {
+    float: left; height: 24px; line-height: 24px; margin-right: 20px;
 }
-.nav a {
-    float: left;
-    height: 24px;
-    padding-right: 2px;
+.menu-nav li:last-child {
+	margin-right: 0;
+}
+.menu-nav a {
+    color: #fff; font-size: 11px; font-weight: bold; cursor: pointer; display: inline-block; height: 24px;
+}
+.menu-nav li.current a, .menu-nav li a:hover {
+    background: url("../images/bg-button.png") no-repeat top left; color: #2D5362; text-shadow: none;
+}
+.menu-nav li.current a span, .menu-nav li a:hover span {
+    background: url("../images/bg-button.png") no-repeat scroll 100% -26px transparent;
 }
 .subnav {
     margin: auto;
