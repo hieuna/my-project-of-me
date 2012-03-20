@@ -70,19 +70,6 @@ $view 		= JRequest::getString('view', '', 'GET');
 		 <a href="/skphapluat.rss" class="icon-rss2" id="ctl00_Header1_SubMenu1_lnkRss"></a>
 		 </div> 
 		</div>
-		<script language="javascript" type="text/javascript">
-		 if(window.location.href.indexOf("/c135") &gt; 0)
-		 {
-		 var ul_submenu = document.getElementById("ul_submenu");
-		 ul_submenu.innerHTML = ul_submenu.innerHTML + "&lt;li&gt;&lt;a href='http://missteen.dantri.com.vn'&gt;Miss Teen&lt;/a&gt;&lt;/li&gt;";
-		 }
-		 else
-		 if(window.location.href.indexOf("/c25") &gt; 0)
-		 {
-		 var ul_submenu = document.getElementById("ul_submenu");
-		 ul_submenu.innerHTML = "&lt;li&gt;&lt;a href='http://duhoc.dantri.com.vn' target='blank'&gt;Kết nối du học&lt;/a&gt;&lt;/li&gt;" + ul_submenu.innerHTML;
-		 }
-		</script> 
 	</div>
 <div>
 
@@ -1020,57 +1007,6 @@ $view 		= JRequest::getString('view', '', 'GET');
 				<img id="coc_img_weather_t3" src="http://vnexpress.net/Images/Weather/c.gif" border="0" />
 				<div id="coc_img_weather_total"></div>
 				</div>
-				<script>function selectweather(obj){if(obj.selectedIndex > -1){var selectedValue = obj.options[obj.selectedIndex].value;renderweather(selectedValue);}}
-				function renderweather(location){try{switch(location){
-				case 'hcm':document.getElementById('coc_img_weather_icon').src='http://vnexpress.net' + coc_weather_hcmIcon;
-				document.getElementById('coc_img_weather_t1').src='http://vnexpress.net' + coc_weather_hcmT1;
-				if(coc_weather_hcmT2 == '/Images/Weather/'){document.getElementById('coc_img_weather_t2').style.display='none';}
-				else{document.getElementById('coc_img_weather_t2').style.display='inline';document.getElementById('coc_img_weather_t2').src='http://vnexpress.net' + coc_weather_hcmT2};
-				document.getElementById('coc_img_weather_total').innerHTML= coc_weather_hcmTotal;
-				break;
-				case 'sonla':document.getElementById('coc_img_weather_icon').src='http://vnexpress.net' + coc_weather_sonlaIcon;
-				document.getElementById('coc_img_weather_t1').src='http://vnexpress.net' + coc_weather_sonlaT1;
-				if(coc_weather_sonlaT2 == '/Images/Weather/'){document.getElementById('coc_img_weather_t2').style.display='none';}
-				else{document.getElementById('coc_img_weather_t2').style.display='inline';document.getElementById('coc_img_weather_t2').src='http://vnexpress.net' + coc_weather_sonlaT2};
-				document.getElementById('coc_img_weather_total').innerHTML= coc_weather_sonlaTotal;
-				break;
-				case 'haiphong':document.getElementById('coc_img_weather_icon').src='http://vnexpress.net' + coc_weather_haiphongIcon;
-				document.getElementById('coc_img_weather_t1').src='http://vnexpress.net' + coc_weather_haiphongT1;
-				if(coc_weather_haiphongT2 == '/Images/Weather/'){document.getElementById('coc_img_weather_t2').style.display='none';}
-				else{document.getElementById('coc_img_weather_t2').style.display='inline';document.getElementById('coc_img_weather_t2').src='http://vnexpress.net' + coc_weather_haiphongT2};
-				document.getElementById('coc_img_weather_total').innerHTML= coc_weather_haiphongTotal;
-				break;
-				case 'hanoi':document.getElementById('coc_img_weather_icon').src='http://vnexpress.net' + coc_weather_hanoiIcon;
-				document.getElementById('coc_img_weather_t1').src='http://vnexpress.net' + coc_weather_hanoiT1;
-				if(coc_weather_hanoiT2 == '/Images/Weather/'){document.getElementById('coc_img_weather_t2').style.display='none';}
-				else{document.getElementById('coc_img_weather_t2').style.display='inline';document.getElementById('coc_img_weather_t2').src='http://vnexpress.net' + coc_weather_hanoiT2};
-				document.getElementById('coc_img_weather_total').innerHTML= coc_weather_hanoiTotal;
-				break;
-				case 'vinh':document.getElementById('coc_img_weather_icon').src='http://vnexpress.net' + coc_weather_vinhIcon;
-				document.getElementById('coc_img_weather_t1').src='http://vnexpress.net' + coc_weather_vinhT1;
-				if(coc_weather_vinhT2 == '/Images/Weather/'){document.getElementById('coc_img_weather_t2').style.display='none';}
-				else{document.getElementById('coc_img_weather_t2').style.display='inline';document.getElementById('coc_img_weather_t2').src='http://vnexpress.net' + coc_weather_vinhT2};
-				document.getElementById('coc_img_weather_total').innerHTML= coc_weather_vinhTotal;
-				break;
-				case 'danang':document.getElementById('coc_img_weather_icon').src='http://vnexpress.net' + coc_weather_danangIcon;
-				document.getElementById('coc_img_weather_t1').src='http://vnexpress.net' + coc_weather_danangT1;
-				if(coc_weather_danangT2 == '/Images/Weather/'){document.getElementById('coc_img_weather_t2').style.display='none';}
-				else{document.getElementById('coc_img_weather_t2').style.display='inline';document.getElementById('coc_img_weather_t2').src='http://vnexpress.net' + coc_weather_danangT2};
-				document.getElementById('coc_img_weather_total').innerHTML= coc_weather_danangTotal;
-				break;
-				case 'nhatrang':document.getElementById('coc_img_weather_icon').src='http://vnexpress.net' + coc_weather_nhatrangIcon;
-				document.getElementById('coc_img_weather_t1').src='http://vnexpress.net' + coc_weather_nhatrangT1;
-				if(coc_weather_nhatrangT2 == '/Images/Weather/'){document.getElementById('coc_img_weather_t2').style.display='none';}
-				else{document.getElementById('coc_img_weather_t2').style.display='inline';document.getElementById('coc_img_weather_t2').src='http://vnexpress.net' + coc_weather_nhatrangT2};
-				document.getElementById('coc_img_weather_total').innerHTML= coc_weather_nhatrangTotal;
-				break;
-				case 'pleicu':document.getElementById('coc_img_weather_icon').src='http://vnexpress.net' + coc_weather_pleicuIcon;
-				document.getElementById('coc_img_weather_t1').src='http://vnexpress.net' + coc_weather_pleicuT1;
-				if(coc_weather_pleicuT2 == '/Images/Weather/'){document.getElementById('coc_img_weather_t2').style.display='none';}
-				else{document.getElementById('coc_img_weather_t2').style.display='inline';document.getElementById('coc_img_weather_t2').src='http://vnexpress.net' + coc_weather_pleicuT2};
-				document.getElementById('coc_img_weather_total').innerHTML= coc_weather_pleicuTotal;
-				break;
-				}}catch(err){}}renderweather('hanoi');</script>
 				</div>
 				</TD></TR><TR><TD bgColor=#217abc align=left><IMG src="/style%20library/images/mic/weather_r_bottom.jpg" width=235 height=7></TD></TR></TBODY></TABLE>
 				</div></td>
@@ -1658,7 +1594,16 @@ Bạn thường quan tâm tới thông tin nào nhất trên Trang TTĐT Bộ Th
 					</table>
 					
 				
-
-
-			</body>
+ 
+	<script type="text/javascript">
+	$(function(){
+		$('.menu-nav li').hover(function(){
+			$(this).addClass('current');
+		},
+		function(){
+			$(this).removeClass('current');
+		});
+	});
+	</script>
+	</body>
 </html>
