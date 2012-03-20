@@ -59,25 +59,7 @@ $view 		= JRequest::getString('view', '', 'GET');
 	</div>
 	<div class="nav-wrap">
 		 <div class="clearfix">
-			 <ul class="nav">
-				 <li class="menu-home"><a href="/" id="vmenu_home"><span><b></b></span></a></li>
-				 <li><a href="/c728/sukien.htm" id="vmenu_728"><span>Sự kiện</span></a></li>
-				 <li><a href="/c20/xa-hoi.htm" id="vmenu_20"><span>Xã hội</span></a></li>
-				 <li><a href="/c36/thegioi.htm" id="vmenu_36"><span>Thế giới</span></a></li>
-				 <li><a href="/c26/thethao.htm" id="vmenu_26"><span>Thể thao</span></a></li>
-				 <li><a href="/c25/giaoduc.htm" id="vmenu_25"><span>Giáo dục</span></a> </li>
-				 <li><a href="/c167/tamlongnhanai.htm" id="vmenu_167"><span>Nhân ái</span></a></li>
-				 <li><a href="/c76/kinhdoanh.htm" id="vmenu_76"><span>Kinh doanh</span></a></li>
-				 <li><a href="/c23/giaitri.htm" id="vmenu_23"><span>Văn hóa</span></a></li>
-				 <li><a href="/c170/skphapluat.htm" id="vmenu_170" class="active"><span>Pháp luật</span></a></li>
-				 <li><a href="/c135/nhipsongtre.htm" id="vmenu_135"><span>Nhịp sống trẻ</span></a></li>
-				 <li><a href="/c130/tinhyeu-gioitinh.htm" id="vmenu_130"><span>Tình yêu</span></a></li>
-				 <li><a href="/c7/suckhoe.htm" id="vmenu_7"><span>Sức khỏe</span></a></li>
-				 <li><a href="/c119/sucmanhso.htm" id="vmenu_119"><span>Sức mạnh số</span></a></li>
-				 <li><a href="/c111/otoxemay.htm" id="vmenu_111"><span>Ô tô - Xe máy</span></a></li>
-				 <li><a href="/c132/chuyenla.htm" id="vmenu_132"><span>Chuyện lạ</span></a></li>
-				 <li class="last"><a href="/c202/diendanbandoc.htm" id="vmenu_202"><span>Bạn đọc</span></a></li>
-			 </ul>
+		 	<jdoc:include type="modules" name="news-topmenu" />
 		 </div>
 		 
 		<div class="subnav">
