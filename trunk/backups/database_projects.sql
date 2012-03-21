@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Mar 20, 2012 at 03:34 PM
+-- Generation Time: Mar 21, 2012 at 06:07 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -447,13 +447,16 @@ CREATE TABLE `jos_content_frontpage` (
 -- Dumping data for table `jos_content_frontpage`
 -- 
 
-INSERT INTO `jos_content_frontpage` VALUES (45, 2);
-INSERT INTO `jos_content_frontpage` VALUES (6, 3);
-INSERT INTO `jos_content_frontpage` VALUES (44, 4);
-INSERT INTO `jos_content_frontpage` VALUES (5, 5);
-INSERT INTO `jos_content_frontpage` VALUES (9, 6);
-INSERT INTO `jos_content_frontpage` VALUES (30, 7);
-INSERT INTO `jos_content_frontpage` VALUES (16, 8);
+INSERT INTO `jos_content_frontpage` VALUES (45, 4);
+INSERT INTO `jos_content_frontpage` VALUES (6, 5);
+INSERT INTO `jos_content_frontpage` VALUES (44, 6);
+INSERT INTO `jos_content_frontpage` VALUES (5, 7);
+INSERT INTO `jos_content_frontpage` VALUES (9, 8);
+INSERT INTO `jos_content_frontpage` VALUES (30, 9);
+INSERT INTO `jos_content_frontpage` VALUES (16, 10);
+INSERT INTO `jos_content_frontpage` VALUES (24, 3);
+INSERT INTO `jos_content_frontpage` VALUES (19, 2);
+INSERT INTO `jos_content_frontpage` VALUES (22, 1);
 
 -- --------------------------------------------------------
 
@@ -893,7 +896,7 @@ CREATE TABLE `jos_modules` (
   PRIMARY KEY  (`id`),
   KEY `published` (`published`,`access`),
   KEY `newsfeeds` (`module`,`published`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=43 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=44 ;
 
 -- 
 -- Dumping data for table `jos_modules`
@@ -917,17 +920,17 @@ INSERT INTO `jos_modules` VALUES (15, 'Title', '', 1, 'title', 0, '0000-00-00 00
 INSERT INTO `jos_modules` VALUES (16, 'Polls', '', 1, 'right', 0, '0000-00-00 00:00:00', 1, 'mod_poll', 0, 0, 1, 'id=14\ncache=1', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (17, 'User Menu', '', 4, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 1, 1, 'menutype=usermenu\nmoduleclass_sfx=_menu\ncache=1', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (18, 'Login Form', '', 8, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_login', 0, 0, 1, 'greeting=1\nname=0', 1, 0, '');
-INSERT INTO `jos_modules` VALUES (19, 'Latest News', '', 4, 'user1', 0, '0000-00-00 00:00:00', 1, 'mod_latestnews', 0, 0, 1, 'cache=1', 1, 0, '');
+INSERT INTO `jos_modules` VALUES (19, 'Tin nổi bật trang chủ', '', 0, 'news-content-center', 0, '0000-00-00 00:00:00', 1, 'mod_latestnews', 0, 0, 1, 'count=10\nordering=c_dsc\nuser_id=0\nshow_front=1\nsecid=\ncatid=\nmoduleclass_sfx=\ncache=1\ncache_time=900\n\n', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (20, 'Statistics', '', 6, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_stats', 0, 0, 1, 'serverinfo=1\nsiteinfo=1\ncounter=1\nincrease=0\nmoduleclass_sfx=', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (21, 'Who''s Online', '', 1, 'right', 0, '0000-00-00 00:00:00', 1, 'mod_whosonline', 0, 0, 1, 'online=1\nusers=1\nmoduleclass_sfx=', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (22, 'Popular', '', 6, 'user2', 0, '0000-00-00 00:00:00', 1, 'mod_mostread', 0, 0, 1, 'cache=1', 0, 0, '');
-INSERT INTO `jos_modules` VALUES (23, 'Archive', '', 9, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_archive', 0, 0, 1, 'cache=1', 1, 0, '');
+INSERT INTO `jos_modules` VALUES (23, 'Archive', '', 0, 'user2', 0, '0000-00-00 00:00:00', 0, 'mod_archive', 0, 0, 1, 'count=10\nmoduleclass_sfx=\ncache=1\n\n', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (24, 'Sections', '', 10, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_sections', 0, 0, 1, 'cache=1', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (25, 'Newsflash', '', 1, 'top', 0, '0000-00-00 00:00:00', 1, 'mod_newsflash', 0, 0, 1, 'catid=3\r\nstyle=random\r\nitems=\r\nmoduleclass_sfx=', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (26, 'Related Items', '', 11, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_related_items', 0, 0, 1, '', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (27, 'Search', '', 1, 'user4', 0, '0000-00-00 00:00:00', 1, 'mod_search', 0, 0, 0, 'cache=1', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (28, 'Random Image', '', 9, 'right', 0, '0000-00-00 00:00:00', 1, 'mod_random_image', 0, 0, 1, '', 0, 0, '');
-INSERT INTO `jos_modules` VALUES (29, 'Top Menu', '', 0, 'news-topmenu', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 0, 'menutype=topmenu\nmenu_style=list\nstartLevel=0\nendLevel=0\nshowAllChildren=0\nwindow_open=\nshow_whitespace=0\ncache=1\ntag_id=\nclass_sfx=-nav\nmoduleclass_sfx=subnav\nmaxdepth=10\nmenu_images=0\nmenu_images_align=0\nmenu_images_link=0\nexpand_menu=1\nactivate_parent=1\nfull_active_id=0\nindent_image=0\nindent_image1=-1\nindent_image2=-1\nindent_image3=-1\nindent_image4=-1\nindent_image5=-1\nindent_image6=-1\nspacer=\nend_spacer=\n\n', 1, 0, '');
+INSERT INTO `jos_modules` VALUES (29, 'Top Menu', '', 0, 'news-topmenu', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 0, 'menutype=topmenu\nmenu_style=list\nstartLevel=0\nendLevel=0\nshowAllChildren=0\nwindow_open=\nshow_whitespace=0\ncache=1\ntag_id=\nclass_sfx=-nav\nmoduleclass_sfx=\nmaxdepth=10\nmenu_images=0\nmenu_images_align=0\nmenu_images_link=0\nexpand_menu=1\nactivate_parent=1\nfull_active_id=0\nindent_image=0\nindent_image1=-1\nindent_image2=-1\nindent_image3=-1\nindent_image4=-1\nindent_image5=-1\nindent_image6=-1\nspacer=\nend_spacer=\n\n', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (30, 'Banners', '', 1, 'footer', 0, '0000-00-00 00:00:00', 1, 'mod_banners', 0, 0, 0, 'target=1\ncount=1\ncid=1\ncatid=33\ntag_search=0\nordering=random\nheader_text=\nfooter_text=\nmoduleclass_sfx=\ncache=1\ncache_time=15\n\n', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (31, 'Resources', '', 2, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 1, 'menutype=othermenu\nmenu_style=list\nstartLevel=0\nendLevel=0\nshowAllChildren=0\nwindow_open=\nshow_whitespace=0\ncache=1\ntag_id=\nclass_sfx=\nmoduleclass_sfx=_menu\nmaxdepth=10\nmenu_images=0\nmenu_images_align=0\nexpand_menu=0\nactivate_parent=0\nfull_active_id=0\nindent_image=0\nindent_image1=\nindent_image2=\nindent_image3=\nindent_image4=\nindent_image5=\nindent_image6=\nspacer=\nend_spacer=\n\n', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (32, 'Wrapper', '', 12, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_wrapper', 0, 0, 1, '', 0, 0, '');
@@ -940,6 +943,7 @@ INSERT INTO `jos_modules` VALUES (39, 'Example Pages', '', 5, 'left', 0, '0000-0
 INSERT INTO `jos_modules` VALUES (40, 'Key Concepts', '', 3, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 1, 'cache=1\nclass_sfx=\nmoduleclass_sfx=_menu\nmenutype=keyconcepts\nmenu_style=list\nstartLevel=0\nendLevel=0\nshowAllChildren=0\nfull_active_id=0\nmenu_images=0\nmenu_images_align=0\nexpand_menu=0\nactivate_parent=0\nindent_image=0\nindent_image1=\nindent_image2=\nindent_image3=\nindent_image4=\nindent_image5=\nindent_image6=\nspacer=\nend_spacer=\nwindow_open=\n\n', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (41, 'Welcome to Joomla!', '<div style="padding: 5px">  <p>   Congratulations on choosing Joomla! as your content management system. To   help you get started, check out these excellent resources for securing your   server and pointers to documentation and other helpful resources. </p> <p>   <strong>Security</strong><br /> </p> <p>   On the Internet, security is always a concern. For that reason, you are   encouraged to subscribe to the   <a href="http://feedburner.google.com/fb/a/mailverify?uri=JoomlaSecurityNews" target="_blank">Joomla!   Security Announcements</a> for the latest information on new Joomla! releases,   emailed to you automatically. </p> <p>   If this is one of your first Web sites, security considerations may   seem complicated and intimidating. There are three simple steps that go a long   way towards securing a Web site: (1) regular backups; (2) prompt updates to the   <a href="http://www.joomla.org/download.html" target="_blank">latest Joomla! release;</a> and (3) a <a href="http://docs.joomla.org/Security_Checklist_2_-_Hosting_and_Server_Setup" target="_blank" title="good Web host">good Web host</a>. There are many other important security considerations that you can learn about by reading the <a href="http://docs.joomla.org/Category:Security_Checklist" target="_blank" title="Joomla! Security Checklist">Joomla! Security Checklist</a>. </p> <p>If you believe your Web site was attacked, or you think you have discovered a security issue in Joomla!, please do not post it in the Joomla! forums. Publishing this information could put other Web sites at risk. Instead, report possible security vulnerabilities to the <a href="http://developer.joomla.org/security/contact-the-team.html" target="_blank" title="Joomla! Security Task Force">Joomla! Security Task Force</a>.</p><p><strong>Learning Joomla!</strong> </p> <p>   A good place to start learning Joomla! is the   "<a href="http://docs.joomla.org/beginners" target="_blank">Absolute Beginner''s   Guide to Joomla!.</a>" There, you will find a Quick Start to Joomla!   <a href="http://help.joomla.org/ghop/feb2008/task048/joomla_15_quickstart.pdf" target="_blank">guide</a>   and <a href="http://help.joomla.org/ghop/feb2008/task167/index.html" target="_blank">video</a>,   amongst many other tutorials. The   <a href="http://community.joomla.org/magazine/view-all-issues.html" target="_blank">Joomla!   Community Magazine</a> also has   <a href="http://community.joomla.org/magazine/article/522-introductory-learning-joomla-using-sample-data.html" target="_blank">articles   for new learners</a> and experienced users, alike. A great place to look for   answers is the   <a href="http://docs.joomla.org/Category:FAQ" target="_blank">Frequently Asked   Questions (FAQ)</a>. If you are stuck on a particular screen in the   Administrator (which is where you are now), try clicking the Help toolbar   button to get assistance specific to that page. </p> <p>   If you still have questions, please feel free to use the   <a href="http://forum.joomla.org/" target="_blank">Joomla! Forums.</a> The forums   are an incredibly valuable resource for all levels of Joomla! users. Before   you post a question, though, use the forum search (located at the top of each   forum page) to see if the question has been asked and answered. </p> <p>   <strong>Getting Involved</strong> </p> <p>   <a name="twjs" title="twjs"></a> If you want to help make Joomla! better, consider getting   involved. There are   <a href="http://www.joomla.org/about-joomla/contribute-to-joomla.html" target="_blank">many ways   you can make a positive difference.</a> Have fun using Joomla!.</p></div>', 0, 'cpanel', 0, '0000-00-00 00:00:00', 1, 'mod_custom', 0, 2, 1, 'moduleclass_sfx=\n\n', 1, 1, '');
 INSERT INTO `jos_modules` VALUES (42, 'Joomla! Security Newsfeed', '', 6, 'cpanel', 62, '2008-10-25 20:15:17', 1, 'mod_feed', 0, 0, 1, 'cache=1\ncache_time=15\nmoduleclass_sfx=\nrssurl=http://feeds.joomla.org/JoomlaSecurityNews\nrssrtl=0\nrsstitle=1\nrssdesc=0\nrssimage=1\nrssitems=1\nrssitemdesc=1\nword_count=0\n\n', 0, 1, '');
+INSERT INTO `jos_modules` VALUES (43, 'PHÂN NHÓM BÀI VIẾT', '', 0, 'news-frame1', 0, '0000-00-00 00:00:00', 1, 'mod_sections', 0, 0, 1, 'count=12\nmoduleclass_sfx=\ncache=0\ncache_time=900\n\n', 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -961,17 +965,14 @@ INSERT INTO `jos_modules_menu` VALUES (1, 0);
 INSERT INTO `jos_modules_menu` VALUES (16, 1);
 INSERT INTO `jos_modules_menu` VALUES (17, 0);
 INSERT INTO `jos_modules_menu` VALUES (18, 1);
-INSERT INTO `jos_modules_menu` VALUES (19, 1);
-INSERT INTO `jos_modules_menu` VALUES (19, 2);
-INSERT INTO `jos_modules_menu` VALUES (19, 4);
-INSERT INTO `jos_modules_menu` VALUES (19, 27);
-INSERT INTO `jos_modules_menu` VALUES (19, 36);
+INSERT INTO `jos_modules_menu` VALUES (19, 53);
 INSERT INTO `jos_modules_menu` VALUES (21, 1);
 INSERT INTO `jos_modules_menu` VALUES (22, 1);
 INSERT INTO `jos_modules_menu` VALUES (22, 2);
 INSERT INTO `jos_modules_menu` VALUES (22, 4);
 INSERT INTO `jos_modules_menu` VALUES (22, 27);
 INSERT INTO `jos_modules_menu` VALUES (22, 36);
+INSERT INTO `jos_modules_menu` VALUES (23, 53);
 INSERT INTO `jos_modules_menu` VALUES (25, 0);
 INSERT INTO `jos_modules_menu` VALUES (27, 0);
 INSERT INTO `jos_modules_menu` VALUES (29, 0);
@@ -989,6 +990,7 @@ INSERT INTO `jos_modules_menu` VALUES (39, 45);
 INSERT INTO `jos_modules_menu` VALUES (39, 46);
 INSERT INTO `jos_modules_menu` VALUES (39, 47);
 INSERT INTO `jos_modules_menu` VALUES (40, 0);
+INSERT INTO `jos_modules_menu` VALUES (43, 53);
 
 -- --------------------------------------------------------
 
@@ -1277,8 +1279,8 @@ CREATE TABLE `jos_session` (
 -- Dumping data for table `jos_session`
 -- 
 
-INSERT INTO `jos_session` VALUES ('kieuvanngoc', '1332232430', '0f9f179aacefea08e420d69a0b141edb', 0, 62, 'Super Administrator', 25, 1, '__default|a:8:{s:15:"session.counter";i:270;s:19:"session.timer.start";i:1332229903;s:18:"session.timer.last";i:1332232430;s:17:"session.timer.now";i:1332232430;s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0";s:8:"registry";O:9:"JRegistry":3:{s:17:"_defaultNameSpace";s:7:"session";s:9:"_registry";a:6:{s:7:"session";a:1:{s:4:"data";O:8:"stdClass":0:{}}s:11:"application";a:1:{s:4:"data";O:8:"stdClass":1:{s:4:"lang";s:0:"";}}s:10:"com_cpanel";a:1:{s:4:"data";O:8:"stdClass":1:{s:9:"mtupgrade";O:8:"stdClass":1:{s:7:"checked";b:1;}}}s:14:"com_categories";a:1:{s:4:"data";O:8:"stdClass":5:{s:12:"filter_order";s:10:"c.ordering";s:16:"filter_order_Dir";s:0:"";s:11:"com_content";O:8:"stdClass":2:{s:12:"filter_state";s:0:"";s:9:"sectionid";s:1:"1";}s:6:"search";s:0:"";s:10:"limitstart";i:0;}}s:6:"global";a:1:{s:4:"data";O:8:"stdClass":1:{s:4:"list";O:8:"stdClass":1:{s:5:"limit";s:2:"20";}}}s:9:"com_menus";a:1:{s:4:"data";O:8:"stdClass":2:{s:8:"menutype";s:7:"topmenu";s:7:"topmenu";O:8:"stdClass":6:{s:12:"filter_order";s:10:"m.ordering";s:16:"filter_order_Dir";s:3:"ASC";s:12:"filter_state";s:0:"";s:10:"limitstart";s:2:"40";s:10:"levellimit";s:2:"10";s:6:"search";s:0:"";}}}}s:7:"_errors";a:0:{}}s:4:"user";O:5:"JUser":19:{s:2:"id";s:2:"62";s:4:"name";s:18:"Kiều Văn Ngọc";s:8:"username";s:11:"kieuvanngoc";s:5:"email";s:16:"ngockv@gmail.com";s:8:"password";s:65:"c59e3db1f46074b9f0ee95bdb9bbbcef:k1UiIErKajgJO4sEIwUa7wd6keP2bnSa";s:14:"password_clear";s:0:"";s:8:"usertype";s:19:"Super Administrator";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:3:"gid";s:2:"25";s:12:"registerDate";s:19:"2012-03-14 16:06:10";s:13:"lastvisitDate";s:19:"2012-03-20 06:09:52";s:10:"activation";s:0:"";s:6:"params";s:56:"admin_language=\nlanguage=\neditor=\nhelpsite=\ntimezone=0\n\n";s:3:"aid";i:2;s:5:"guest";i:0;s:7:"_params";O:10:"JParameter":7:{s:4:"_raw";s:0:"";s:4:"_xml";N;s:9:"_elements";a:0:{}s:12:"_elementPath";a:1:{i:0;s:68:"D:\\AppServ\\www\\projects\\news\\libraries\\joomla\\html\\parameter\\element";}s:17:"_defaultNameSpace";s:8:"_default";s:9:"_registry";a:1:{s:8:"_default";a:1:{s:4:"data";O:8:"stdClass":5:{s:14:"admin_language";s:0:"";s:8:"language";s:0:"";s:6:"editor";s:0:"";s:8:"helpsite";s:0:"";s:8:"timezone";s:1:"0";}}}s:7:"_errors";a:0:{}}s:9:"_errorMsg";N;s:7:"_errors";a:0:{}}s:13:"session.token";s:32:"4f826b2d2d2adfa78a31548a495c6f1c";}__wf|a:1:{s:13:"session.token";s:32:"5b4e3c54c0589a6c128c157d11602791";}');
-INSERT INTO `jos_session` VALUES ('', '1332232432', 'bd1fff6501d5f7bc6455cf1d1dd17d67', 1, 0, '', 0, 0, '__default|a:7:{s:15:"session.counter";i:4;s:19:"session.timer.start";i:1332232388;s:18:"session.timer.last";i:1332232432;s:17:"session.timer.now";i:1332232432;s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0";s:8:"registry";O:9:"JRegistry":3:{s:17:"_defaultNameSpace";s:7:"session";s:9:"_registry";a:1:{s:7:"session";a:1:{s:4:"data";O:8:"stdClass":0:{}}}s:7:"_errors";a:0:{}}s:4:"user";O:5:"JUser":19:{s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:8:"usertype";N;s:5:"block";N;s:9:"sendEmail";i:0;s:3:"gid";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:3:"aid";i:0;s:5:"guest";i:1;s:7:"_params";O:10:"JParameter":7:{s:4:"_raw";s:0:"";s:4:"_xml";N;s:9:"_elements";a:0:{}s:12:"_elementPath";a:1:{i:0;s:68:"D:\\AppServ\\www\\projects\\news\\libraries\\joomla\\html\\parameter\\element";}s:17:"_defaultNameSpace";s:8:"_default";s:9:"_registry";a:1:{s:8:"_default";a:1:{s:4:"data";O:8:"stdClass":0:{}}}s:7:"_errors";a:0:{}}s:9:"_errorMsg";N;s:7:"_errors";a:0:{}}}');
+INSERT INTO `jos_session` VALUES ('', '1332327909', '182c8e338f99acd88ed064e6b232f6c8', 1, 0, '', 0, 0, '__default|a:7:{s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0";s:15:"session.counter";i:187;s:8:"registry";O:9:"JRegistry":3:{s:17:"_defaultNameSpace";s:7:"session";s:9:"_registry";a:1:{s:7:"session";a:1:{s:4:"data";O:8:"stdClass":0:{}}}s:7:"_errors";a:0:{}}s:4:"user";O:5:"JUser":19:{s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:8:"usertype";N;s:5:"block";N;s:9:"sendEmail";i:0;s:3:"gid";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:3:"aid";i:0;s:5:"guest";i:1;s:7:"_params";O:10:"JParameter":7:{s:4:"_raw";s:0:"";s:4:"_xml";N;s:9:"_elements";a:0:{}s:12:"_elementPath";a:1:{i:0;s:68:"D:\\AppServ\\www\\projects\\news\\libraries\\joomla\\html\\parameter\\element";}s:17:"_defaultNameSpace";s:8:"_default";s:9:"_registry";a:1:{s:8:"_default";a:1:{s:4:"data";O:8:"stdClass":0:{}}}s:7:"_errors";a:0:{}}s:9:"_errorMsg";N;s:7:"_errors";a:0:{}}s:19:"session.timer.start";i:1332320082;s:18:"session.timer.last";i:1332327909;s:17:"session.timer.now";i:1332327909;}');
+INSERT INTO `jos_session` VALUES ('kieuvanngoc', '1332327431', '8eab3782a82cae358e21e2b5623fbc11', 0, 62, 'Super Administrator', 25, 1, '__default|a:8:{s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0";s:15:"session.counter";i:19;s:8:"registry";O:9:"JRegistry":3:{s:17:"_defaultNameSpace";s:7:"session";s:9:"_registry";a:3:{s:7:"session";a:1:{s:4:"data";O:8:"stdClass":0:{}}s:11:"application";a:1:{s:4:"data";O:8:"stdClass":1:{s:4:"lang";s:0:"";}}s:10:"com_cpanel";a:1:{s:4:"data";O:8:"stdClass":1:{s:9:"mtupgrade";O:8:"stdClass":1:{s:7:"checked";b:1;}}}}s:7:"_errors";a:0:{}}s:4:"user";O:5:"JUser":19:{s:2:"id";s:2:"62";s:4:"name";s:18:"Kiều Văn Ngọc";s:8:"username";s:11:"kieuvanngoc";s:5:"email";s:16:"ngockv@gmail.com";s:8:"password";s:65:"c59e3db1f46074b9f0ee95bdb9bbbcef:k1UiIErKajgJO4sEIwUa7wd6keP2bnSa";s:14:"password_clear";s:0:"";s:8:"usertype";s:19:"Super Administrator";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:3:"gid";s:2:"25";s:12:"registerDate";s:19:"2012-03-14 16:06:10";s:13:"lastvisitDate";s:19:"2012-03-21 10:21:48";s:10:"activation";s:0:"";s:6:"params";s:56:"admin_language=\nlanguage=\neditor=\nhelpsite=\ntimezone=0\n\n";s:3:"aid";i:2;s:5:"guest";i:0;s:7:"_params";O:10:"JParameter":7:{s:4:"_raw";s:0:"";s:4:"_xml";N;s:9:"_elements";a:0:{}s:12:"_elementPath";a:1:{i:0;s:68:"D:\\AppServ\\www\\projects\\news\\libraries\\joomla\\html\\parameter\\element";}s:17:"_defaultNameSpace";s:8:"_default";s:9:"_registry";a:1:{s:8:"_default";a:1:{s:4:"data";O:8:"stdClass":5:{s:14:"admin_language";s:0:"";s:8:"language";s:0:"";s:6:"editor";s:0:"";s:8:"helpsite";s:0:"";s:8:"timezone";s:1:"0";}}}s:7:"_errors";a:0:{}}s:9:"_errorMsg";N;s:7:"_errors";a:0:{}}s:13:"session.token";s:32:"4ae8ac61430ecc38ca650db4a3b58ca5";s:19:"session.timer.start";i:1332326813;s:18:"session.timer.last";i:1332327431;s:17:"session.timer.now";i:1332327431;}');
 
 -- --------------------------------------------------------
 
@@ -1349,7 +1351,7 @@ CREATE TABLE `jos_users` (
 -- Dumping data for table `jos_users`
 -- 
 
-INSERT INTO `jos_users` VALUES (62, 'Kiều Văn Ngọc', 'kieuvanngoc', 'ngockv@gmail.com', 'c59e3db1f46074b9f0ee95bdb9bbbcef:k1UiIErKajgJO4sEIwUa7wd6keP2bnSa', 'Super Administrator', 0, 1, 25, '2012-03-14 16:06:10', '2012-03-20 07:51:45', '', 'admin_language=\nlanguage=\neditor=\nhelpsite=\ntimezone=0\n\n');
+INSERT INTO `jos_users` VALUES (62, 'Kiều Văn Ngọc', 'kieuvanngoc', 'ngockv@gmail.com', 'c59e3db1f46074b9f0ee95bdb9bbbcef:k1UiIErKajgJO4sEIwUa7wd6keP2bnSa', 'Super Administrator', 0, 1, 25, '2012-03-14 16:06:10', '2012-03-21 10:46:53', '', 'admin_language=\nlanguage=\neditor=\nhelpsite=\ntimezone=0\n\n');
 
 -- --------------------------------------------------------
 

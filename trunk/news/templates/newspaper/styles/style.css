@@ -130,7 +130,10 @@ html {
 }
 .menu-nav {
     margin: 0 auto;
-    width: 1024px;
+    width: 1004px;
+    position: relative;
+    text-align: left;
+    padding: 0;
 }
 .menu-nav li {
     float: left; height: 26px; line-height: 26px;
@@ -138,32 +141,35 @@ html {
 .menu-nav li:last-child {
 	margin-right: 0;
 }
-.menu-nav a {
+.menu-nav li a {
     color: #fff; font-size: 11px; font-weight: bold; cursor: pointer; display: inline-block; height: 26px; padding-left: 6px;
 }
 .menu-nav li a span{
 	height: 26px; padding-right: 6px; display: inline-block;
 }
-.menu-nav li.current a, .menu-nav li a:hover {
+.menu-nav li#current a, .menu-nav li a:hover {
     background: url("../images/bg-button.png") no-repeat top left; color: #2D5362; text-shadow: none;
 }
-.menu-nav li.current a span, .menu-nav li a:hover span {
+.menu-nav li#current a span, .menu-nav li a:hover span {
     background: url("../images/bg-button.png") no-repeat 100% -26px transparent;
 }
-.subnav {
-    margin: auto;
-    width: 980px;
+.menu-nav li ul{
+	position: absolute; top: 25px; height: 25px; overflow: hidden; left: 0; margin: 0; padding: 0; width: 980px; margin: 0 auto; text-align: center;
 }
-.subnav ul {
-    height: 25px;
-    overflow: hidden;
+.menu-nav li ul li{
+	list-style: none; display: inline-block;
 }
-.subnav .fr {
-    margin-top: -23px;
-    position: relative;
+.menu-nav li#current li a, .menu-nav li#current li a span{
+	background: none;
 }
-.fr {
-    float: right;
+.menu-nav li#current li a{
+	text-decoration: none; color: #a0001d; font-weight: normal;
+}
+.menu-nav li#current li a: hover{
+	text-decoration: underline;
+}
+.menu-nav li#current li a span:hover{
+	color: #e36c0a;
 }
 .master {
     background-color: #FFFFFF;

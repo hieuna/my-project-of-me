@@ -26,6 +26,7 @@ $view 		= JRequest::getString('view', '', 'GET');
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/css3.css" type="text/css" />
 		<![endif]>
 		<!--[if IE 9 ]> <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/css3.css" type="text/css" /> <![endif]-->
+		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/styles/slide_fontpage.css" type="text/css" />
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery-1.7.min.js" type="text/javascript"></script>
 	</head>
 	<body class="body">
@@ -61,15 +62,6 @@ $view 		= JRequest::getString('view', '', 'GET');
 		 <div class="clearfix">
 		 	<jdoc:include type="modules" name="news-topmenu" />
 		 </div>
-		 
-		<div class="subnav">
-		 <ul id="ul_submenu" class="clearfix"> 
-		  
-		 </ul> 
-		 <div class="fr">
-		 <a href="/skphapluat.rss" class="icon-rss2" id="ctl00_Header1_SubMenu1_lnkRss"></a>
-		 </div> 
-		</div>
 	</div>
 <div>
 
@@ -82,7 +74,6 @@ $view 		= JRequest::getString('view', '', 'GET');
 
 	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWOgKn4qPlCwKy4e2fBwLoy569BALY8/ATAsfy65UBAr60ivQLApmqwKEEArPc3cEGAvHyqLkKAvrFuKoJAqSV2/MFAu+0y7AGAqLX9dcGAsCCjpgLAsrDi4YCAsCCttQKApmqmAcC8NrC0gUC8e/QYgLAgr6YCgLOpd/0BQL86rKTDgKqlIbdCwLhy9a4AQLRo9bxDwLc9NWzCAKhnKG4CAKjkNWkDgK0lcijBwKdt5zVBgKj2pmfCAKpgpyODwKd4/3CBgKs7cGMAQLN+qG0CQLYja33CgLVyvTkBgLRo9bxDwLDmN+kCALztoapCwKl0snlBgLH8sPKBwL27ph4AqLDrNYDAtaWlM0FArnYmQUC8PWd1gsCro/f7w0Cg4SQzg8CpMWVrQgC7si83wYCnrn+ywUCr4b14gQC/6DIkA0Cgtq2xQgC6vSo0QEC+qWG1Q0CrqnvwgJ7+XPOdEwVuEJViCipsawU9wLA4Q==" />
 </div>
-	
 	
 	<table cellpadding="0" cellspacing="0" class="master">
 		<tr>
@@ -305,116 +296,16 @@ $view 		= JRequest::getString('view', '', 'GET');
 				</tr>
  				<tr>
     				<td colspan="3">
-    				<div class="console">
-						
-<!-- Console -->
-<span id="ctl00_ctl17_publishingContext1"></span>
-
-<!-- Console -->
-</div>
-    				<div class="topmaincontent">
-    					
-<div class="contenttop_left">
-				<table width="100%" cellpadding="0" cellspacing="0" border="0">
-	<tr>
-		<td id="MSOZoneCell_WebPartctl00_ctl15_MicNew_SlideNewsOnMainTop1" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tr>
-				<td valign="top"><div WebPartID="cace60a6-f3b3-4db5-a690-9fffb06956cb" HasPers="false" id="WebPartctl00_ctl15_MicNew_SlideNewsOnMainTop1" width="100%" class="ms-WPBody" allowDelete="false" allowExport="false" style="" ><div class="featured">
-
-				<div id='bngTC'>
-				<div id='fragment-0' class='ui-tabs-panel ui-tabs-hide'>
-				<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/20120314_b2.jpg" alt="" width="447px" />
-				<div class='info'> 
-				<h2><a href='/tintucsukien/tinhoatdongcuabo/Trang/BộtrưởngNguyễnBắcSonthamdựĐạihộiThôngtindiđộngThếgiới.aspx'>Bộ trưởng Nguyễn Bắc Son tham dự Đại hội Thông tin di động Thế giới</a></h2></div> 
-				 </div>
-				<div id='fragment-1' class='ui-tabs-panel ui-tabs-hide'>
-				<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/20120313T1.JPG" alt="" width="447px" />
-				<div class='info'> 
-				<h2><a href='/tintucsukien/tinhoatdongcuabo/Trang/XâydựnghệthốngđốithoạigiữachínhquyềnđịaphươngvàdoanhnghiệpthôngquaứngdụngCôngnghệthôngtin.aspx'>Xây dựng hệ thống đối thoại giữa chính quyền địa phương và doanh nghiệp thông qua ứng dụng Công nghệ thông tin</a></h2></div> 
-				 </div>
-
-				<div id='fragment-2' class='ui-tabs-panel ui-tabs-hide'>
-				<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/20120313_b1.jpg" alt="" width="447px" />
-				<div class='info'> 
-				<h2><a href='/tintucsukien/tinhoatdongcuabo/Trang/Dựkiếntiêuchícôngtrìnhviễnthôngquantrọngliênquanđếnanninhquốcgia.aspx'>Dự kiến tiêu chí công trình viễn thông quan trọng liên quan đến an ninh quốc gia</a></h2></div> 
-				 </div>
-				</div>
-				<ul class='ui-tabs-nav'>
-				<li class='ui-tabs-nav-item' id='nav-fragment-0'> 
-				<a class='frm' href='#fragment-0'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-				</a></li> 
-				<li class='ui-tabs-nav-item' id='nav-fragment-1'> 
-				<a class='frm' href='#fragment-1'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				</a></li> 
-				<li class='ui-tabs-nav-item' id='nav-fragment-2'> 
-				<a class='frm' href='#fragment-2'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				</a></li> 
-				</ul>
-				</div>
-				</div></td>
-
-			</tr>
-		</table></td>
-	</tr>
-</table></div>
-<div class="contenttop_righ">
-				<table width="100%" cellpadding="0" cellspacing="0" border="0">
-	<tr>
-		<td id="MSOZoneCell_WebPartctl00_ctl15_g_12f784c8_9350_466f_9d8e_94fb91d2d9c4" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tr>
-				<td valign="top"><div WebPartID="12f784c8-9350-466f-9d8e-94fb91d2d9c4" HasPers="false" id="WebPartctl00_ctl15_g_12f784c8_9350_466f_9d8e_94fb91d2d9c4" width="100%" class="ms-WPBody" allowDelete="false" allowExport="false" style="" ><div class="newsTopmain">
-
-				<h2 class='topnews'>tin nổi bật</h2>
-				<div id='item-0' class='newsTopmain-panel'>
-				<a  href='/tintucsukien/tinhoatdongcuabo/Trang/TrườngCaođẳngCôngnghiệpinthôngbáotuyểnsinh.aspx'>
-				<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/20120310_a1.jpg" alt="" hspace="10" vspace="10" width="447px" /></a>
-				<div class='info'> 
-				<h2><a href='/tintucsukien/tinhoatdongcuabo/Trang/TrườngCaođẳngCôngnghiệpinthôngbáotuyểnsinh.aspx'>Trường Cao đẳng Công nghiệp in thông báo tuyển sinh năm 2012</a></h2></div> 
-				 </div>
-				<div id='item-1' class='newsTopmain-panel'>
-				<a  href='/tintucsukien/tintonghop/Trang/TổnghợpbáochíviếtvềngànhTTTTtuần10(từngày03-09032012).aspx'>
-
-				<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/20120309_n3.jpg" alt="" hspace="10" vspace="10" width="447px" /></a>
-				<div class='info'> 
-				<h2><a href='/tintucsukien/tintonghop/Trang/TổnghợpbáochíviếtvềngànhTTTTtuần10(từngày03-09032012).aspx'>Tổng hợp báo chí viết về ngành TT& TT tuần 10 (từ ngày 03-09/03/2012)</a></h2></div> 
-				 </div>
-				<div id='item-2' class='newsTopmain-panel'>
-				<a  href='/tintucsukien/tinhoatdongcuabo/Trang/GiaobanBáochíkhuvựcphíaNam.aspx'>
-				<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/20120308_a1.jpg" alt="" hspace="10" vspace="10" width="447px" /></a>
-				<div class='info'> 
-				<h2><a href='/tintucsukien/tinhoatdongcuabo/Trang/GiaobanBáochíkhuvựcphíaNam.aspx'>Giao ban Báo chí khu vực phía Nam: người phát ngôn tại đơn vị phải chủ động cung cấp thông tin cho báo chí</a></h2></div> 
-				 </div>
-
-				</div>
-				</div></td>
-			</tr>
-		</table><div class="ms-PartSpacingVertical"></div></td>
-	</tr><tr>
-		<td id="MSOZoneCell_WebPartctl00_ctl15_g_42839c1d_e7d4_40eb_b949_d04a0b9a0ec7" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tr>
-				<td valign="top"><div WebPartID="42839c1d-e7d4-40eb-b949-d04a0b9a0ec7" HasPers="false" id="WebPartctl00_ctl15_g_42839c1d_e7d4_40eb_b949_d04a0b9a0ec7" width="100%" class="ms-WPBody" allowDelete="false" allowExport="false" style="" ><div class="newsTopmain2">
-				<img src='/Style Library/Imagesnew/MIC/line.jpg' border='0' height='1px' class='news'>
-
-				<div class='MainBottomNormal2'>
-				<img width='3' hspace='5' height='3' align='absmiddle' src='/Style Library/Imagesnew/MIC/icon_01.jpg'/>
-				<h2><a href='/tintucsukien/tinhoatdongcuabo/Trang/QuảnlýcácchươngtrìnhkhuyếnmãicủacácDoanhnghiệpViễnthông.aspx'>Quản lý các chương trình khuyến mãi của các Doanh nghiệp Viễn thông</a></h2>
-				 </div>
-				<div class='MainBottomNormal2'>
-				<img width='3' hspace='5' height='3' align='absmiddle' src='/Style Library/Imagesnew/MIC/icon_01.jpg'/>
-				<h2><a href='/tintucsukien/tintuctrongnganh/Trang/NhiếpảnhgiaMỹvàcácphóngviênảnhTTTTtraođổinghiệpvụ.aspx'>Nhiếp ảnh gia Mỹ và các phóng viên ảnh TT&TT trao đổi nghiệp vụ</a></h2>
-
-				 </div>
-				</div>
-				</div></td>
-			</tr>
-		</table></td>
-	</tr>
-</table></div>
-
-    				</div>
+	    				<div class="console">
+							<!-- Console -->
+							<span id="ctl00_ctl17_publishingContext1"></span>
+							<!-- Console -->
+						</div>
+	    				<div class="topmaincontent">
+	    					<jdoc:include type="modules" name="news-content-center" />
+	    					<jdoc:include type="modules" name="news-frame1" />	
+	    				</div>
     				</td>
-
  				</tr>
  				<tr style="height:7px;">
  				<td width="0px"></td>
@@ -761,75 +652,6 @@ $view 		= JRequest::getString('view', '', 'GET');
 </div>
 
 <br />
-<table cellpadding="0" cellspacing="0">
-<tr style="background-image:url('/Style Library/Imagesnew/MIC/bgr_menu1.jpg');height:35px;">
-				<td height="35px" >
-					<table cellspacing="0" cellpadding="0" width="30%" border="0" id="main_tintuc_title_0">
-							<tr style="height:35px;">
-								<td class="main_tintuc_box_title_selected_lefttitle">
-								<img alt="" src="/_layouts/images/blank.gif" width="7px" height="28px" /></td>
-								<td align="center" class="main_tintuc_box_selected_title">
-								<a>TIN VIDEO</a></td>
-
-								<td class="main_tintuc_box_title_selected_righttitle">
-								<img alt="" src="/_layouts/images/blank.gif" width="7px" height="28px" /></td>
-							</tr>
-							
-						</table>
-				</td>
-				<td>&nbsp;</td>
-				<td style="background-image:url('/Style Library/Imagesnew/MIC/bgr_menu1.jpg');height:35px;"></td>
-</tr>
-<tr>
-	<td colspan="4" height="3" bgcolor="#0864a6"><img width="1" height="1" src="../../Style Library/Imagesnew/MIC/1x1.gif"></td>
-
- </tr>	
-<tr>
-				<td style="width:65%;">
-				
-				<table width="100%" cellspacing="0" cellpadding="3" border="0"><tbody>
-<tr><td valign="top"><a class="MainBottomFocus_Header1" href="/ShowVideo.aspx?ID=149">Họp Hội đồng giám đốc CNTT của cơ quan nhà nước các tỉnh, thành phố trực thuộc TW</a></td></tr>
-<tr><td align="center">
-<embed height="380" width="444" flashvars="width=444&height=380&file=/Qun l media/Hoi dong CIO cac co quan nha nuoc, cac tinh thanh truc thuoc TW.flv&image=/PublishingImages/20120228-h1.jpg" wmode="transparent" allowfullscreen="true" allowscriptaccess="always" quality="high" name="MediaPlayer" id="MediaPlayer" style="" src="/mediaplayer.swf" type="application/x-shockwave-flash" />
-<br /> &nbsp; &nbsp;<a href="/Qun%20l%20media/Hoi%20dong%20CIO%20cac%20co%20quan%20nha%20nuoc,%20cac%20tinh%20thanh%20truc%20thuoc%20TW.wmv">Download video</a>
-</TD></TR>
-<tr><td></td></tr>
-
-</TBODY></TABLE>
-
-				</td>
-				<td width="1" bgcolor="#CCCCCC"><img width="1" height="1" src="../../Style Library/Imagesnew/MIC/1x1.gif"></td>
-<td>
-
-<div class="MainBottomNormalvideo"><img src="/PublishingImages/20120228-h1.jpg" alt="" align="left" hspace="10" width="66px" style="float:left;" />
-<a class="MainBottomNormal_Header" href="/ShowVideo.aspx?ID=149">Họp Hội đồng giám đốc CNTT của cơ quan nhà nước các tỉnh, thành phố trực thuộc TW</a>
- <span class="MainBottomNormal_Created">(01/03/2012)</span></div>
-<img width="234" height="1" src="images/line2.jpg">
-<div class="MainBottomNormalvideo"><img src="/PublishingImages/20120229-H1.jpg" alt="" align="left" hspace="10" width="66px" style="float:left;" />
-<a class="MainBottomNormal_Header" href="/ShowVideo.aspx?ID=147">Sở TT&TT Hà Nội trao giải thưởng ứng dụng CNTT và ra mắt Trung tâm dữ liệu TP Hà Nội</a>
-
- <span class="MainBottomNormal_Created">(29/02/2012)</span></div>
-<img width="234" height="1" src="images/line2.jpg">
-<div class="MainBottomNormalvideo"><img src="images/20120224_a1.jpg" alt="" align="left" hspace="10" width="66px" style="float:left;" />
-<a class="MainBottomNormal_Header" href="/ShowVideo.aspx?ID=145">Hội nghị tổng kết thi đua khen thưởng Phát thanh, Truyền hình năm 2011</a>
- <span class="MainBottomNormal_Created">(25/02/2012)</span></div>
-<img width="234" height="1" src="images/line2.jpg">
-<div class="MainBottomNormalvideo"><img src="/PublishingImages/TTLL_h1.jpg" alt="" align="left" hspace="10" width="66px" style="float:left;" />
-<a class="MainBottomNormal_Header" href="/ShowVideo.aspx?ID=143">Thứ trưởng Bộ TT&TT Nguyễn Minh Hồng thăm và làm việc với Binh chủng Thông tin liên lạc</a>
- <span class="MainBottomNormal_Created">(17/02/2012)</span></div>
-
-<img width="234" height="1" src="images/line2.jpg">
-<div class="MainBottomNormalvideo"><img src="/PublishingImages/20120213-u1.jpg" alt="" align="left" hspace="10" width="66px" style="float:left;" />
-<a class="MainBottomNormal_Header" href="/ShowVideo.aspx?ID=141">Hoàn thiện dự thảo Quy hoạch phát triển viễn thông quốc gia đến năm 2020  </a>
- <span class="MainBottomNormal_Created">(14/02/2012)</span></div>
-<img width="234" height="1" src="images/line2.jpg">
-<div>&nbsp;</div><div style="text-align:right;">
-<a class="XemTatCa" href='/ShowVideo.aspx'>Xem tất cả &gt;&gt;</a></div>
-
-
-</td>
-</tr>
-</table>
 
        
 <table cellpadding="0" cellspacing="0" width="100%">
@@ -1595,15 +1417,5 @@ Bạn thường quan tâm tới thông tin nào nhất trên Trang TTĐT Bộ Th
 					
 				
  
-	<script type="text/javascript">
-	$(function(){
-		$('.menu-nav li').hover(function(){
-			$(this).addClass('current');
-		},
-		function(){
-			$(this).removeClass('current');
-		});
-	});
-	</script>
 	</body>
 </html>
