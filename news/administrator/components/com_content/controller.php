@@ -447,6 +447,9 @@ class ContentController extends JController
 		$form->set('description', $row->metadesc);
 		$form->set('keywords', $row->metakey);
 		$form->loadINI($row->metadata);
+		
+		// Imagelist
+		$lists['images'] 			= JHTML::_('list.images',  'images', $row->images );
 
 		ContentView::editContent($row, $contentSection, $lists, $sectioncategories, $option, $form);
 	}

@@ -774,6 +774,11 @@ class ContentView
 
 	function _displayArticleDetails(&$row, &$lists )
 	{
+		if ($row->image == '') {
+			$row->image = 'blank.png';
+		}
+		JFilterOutput::objectHTMLSafe( $row, ENT_QUOTES, 'description' );
+		$cparams = JComponentHelper::getParams ('com_media');
 		?>
 		<table  class="adminform">
 		<tr>
@@ -828,6 +833,26 @@ class ContentView
 			</td>
 			<td>
 				<?php echo $lists['catid']; ?>
+			</td>
+		</tr>
+		<tr>
+			<td class="key" valign="top">
+				<label for="image">
+					<?php echo JText::_( 'Image' ); ?>:
+				</label>
+			</td>
+			<td valign="top">
+				<?php echo $lists['images']; ?>
+			</td>
+			<td colspan="2" valign="top">
+			<script language="javascript" type="text/javascript">
+			if (document.forms.adminForm.images.options.value!=''){
+				jsimg='../<?php echo $cparams->get('image_path'); ?>/' + getSelectedValue( 'adminForm', 'images' );
+			} else {
+				jsimg='../images/stories/clock.png';
+			}
+			document.write('<img src=' + jsimg + ' name="imagelib" width="80" height="80" border="2" alt="<?php echo JText::_( 'Preview', true ); ?>" />');
+			</script>
 			</td>
 		</tr>
 		</table>

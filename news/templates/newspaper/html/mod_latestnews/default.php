@@ -1,5 +1,6 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
+$baseurl = JURI::base();
 ?>
 <div class="contenttop_left">
 	<table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -18,7 +19,7 @@ defined('_JEXEC') or die('Restricted access');
 									if ($i<=4){  
 									?>
 										<a href="<?php echo $item->link; ?>">
-						    				<img id="slide-img-<?php echo $i;?>" src="http://localhost/projects/news/templates/newspaper/images/20120301T2.jpg" />
+						    				<img id="slide-img-<?php echo $i;?>" src="<?php echo $baseurl;?>images/stories/<?php echo $item->images;?>" />
 						    			</a>
 									<?php
 									}
@@ -73,7 +74,7 @@ defined('_JEXEC') or die('Restricted access');
 					?>
 					<div id='item-0' class='newsTopmain-panel'>
 						<a href="<?php echo $item->link; ?>">
-							<img src="http://localhost/projects/news/templates/newspaper/images/20120310_a1.jpg" alt="" hspace="10" vspace="10" width="447px" />
+							<img src="<?php echo $baseurl;?>images/stories/<?php echo $item->images;?>" alt="<?php echo $item->title;?>" hspace="10" vspace="10" width="447px" />
 						</a>
 						<div class='info'> 
 							<h2><a href="<?php echo $item->link; ?>"><?php echo $item->text; ?></a></h2>
