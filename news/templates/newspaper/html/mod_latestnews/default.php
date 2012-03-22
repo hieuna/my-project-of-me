@@ -11,6 +11,9 @@ $baseurl = JURI::base();
 				<td valign="top">
 					<div class="featured">
 						<div class="wrap">
+							<div id="desciption">
+								<p id="slide-desc" class="text" style="padding: 0 5px;"></p>
+							</div>
 						   <div id="slide-holder">
 								<div id="slide-runner">
 									<?php
@@ -27,9 +30,7 @@ $baseurl = JURI::base();
 									?>	
 									<?php endforeach; ?>
 								    <div id="slide-controls">
-								     <p id="slide-client" class="text"><strong>post: </strong><span></span></p>
-								     <p id="slide-desc" class="text"></p>
-								     <p id="slide-nav"></p>
+								    	<p id="slide-nav"></p>
 								    </div>
 								</div>
 						   </div>
@@ -41,7 +42,7 @@ $baseurl = JURI::base();
 								foreach ($list as $item) :
 								if ($i<=4){
 								?>
-								{"id":"slide-img-<?php echo $i;?>","client":"<?php echo $item->text; ?>","desc":"<?php echo $item->text; ?>"},
+								{"id":"slide-img-<?php echo $i;?>","client":"","desc":"<?php echo $item->text; ?>"},
 								<?php
 								}
 								$i++;

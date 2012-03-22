@@ -38,7 +38,7 @@ $rows = $db->loadObjectList();
 			<div class="fl wid325">
 				<a href="<?php echo $link;?>" class="fon6"><?php echo $row->title;?></a> 
 				<div class="fon5">
-				<?php echo $row->introtext;?>
+				<?php echo html_entity_decode($row->introtext);?>
 				</div>
 				<a href="<?php echo $link;?>" class="icon-detail fon7">Xem tiếp</a>
 			</div>

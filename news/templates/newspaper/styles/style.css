@@ -21,7 +21,8 @@ html {
     overflow: hidden;
 }
 .body {
-    background: url("../images/bgr.jpg") repeat-x scroll right top #4396CA;
+    /*background: url("../images/bgr.jpg") repeat-x scroll right top #4396CA;*/
+    background: #f0f0f0;
     font-family: Arial;
     font-size: 12px;
     height: 100%;
@@ -223,6 +224,21 @@ html {
 .wid310{
 	width: 310px;
 }
+.wid210{
+	width: 210px;
+}
+.wid200{
+	width: 200px; padding: 5px 0;
+}
+.text_center{
+	text-align: center;
+}
+.margin_auto{
+	margin: 0 auto;
+}
+.margin_auto .banneritem{
+	padding: 2px; border: 1px solid #CCCCCC; margin-bottom: 10px;
+}
 .line1{
 	background-color: #DBDBDB; height: 1px; overflow: hidden;
 }
@@ -239,23 +255,44 @@ html {
 	margin: 0; padding: 0; list-style: none;
 }
 .box_adver_vuong{
-	background: #F3F3F3; width: 300px; padding: 10px 5px 0px 5px; float: left;
+	background: #F3F3F3; padding: 10px 5px 0px 5px; float: left;
 }
 .bannergroup_text{
-	width: 100%; float: left; padding-top: 5px;
+	float: left; padding-top: 5px;
 }
 .bannerheader{
 	color: #999; text-align: left; font-weight: bold; text-shadow: 1px -1px 1px #f5f5f5; padding-top: 5px;
 }
 .banneritem_text{
-	width: 100%; padding: 5px 0; float: left; text-align: left;
+	padding: 2px; border: 1px solid #CCCCCC; float: left; text-align: left; margin-bottom: 10px;
 }
 .banneritem_text img{
-	border: none; width: 300px;
+	border: none;
+}
+/*-- POLL --*/
+table.poll{
+	padding: 0; margin: 0; width: 100%;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-top: 3px solid #FFCC00;
+	border-bottom: 3px solid #003399;
+	padding-bottom: 15px;
 }
 table.poll td{
-	text-align: left;
+	text-align: left; font-size: 12px; color: #000; padding: 2px 2px 2px 5px;
 }
+table.poll thead td{
+	height: 35px; background: url("../images/bgr_menu.jpg") repeat-x;
+	color: #fff; font-weight: bold; text-transform: uppercase; text-shadow: 1px -1px 1px #333;
+	font-size: 16px;
+}
+table.poll td.title_poll{
+	padding: 5px; padding-top: 10px; color: #003366; font-weight: bold; line-height: 18px;
+}
+table.poll .button{
+	border: 1px solid #CCC; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background: #fff; padding: 2px 5px; color: #003366; font-weight: bold; behavior: url(ie-css3.htc);
+}
+/*-- END POLL --*/
 .ul2 li {
     float: left;
     height: 22px;

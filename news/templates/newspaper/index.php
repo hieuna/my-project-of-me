@@ -28,6 +28,9 @@ $view 		= JRequest::getString('view', '', 'GET');
 		<!--[if IE 9 ]> <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/css3.css" type="text/css" /> <![endif]-->
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/styles/slide_fontpage.css" type="text/css" />
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery-1.7.min.js" type="text/javascript"></script>
+        <!-- SLIDESHOW -->
+        <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery.js"></script>
+  		<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/scripts.js"></script>
 	</head>
 	<body class="body">
 	<div class="header">
@@ -143,105 +146,14 @@ $view 		= JRequest::getString('view', '', 'GET');
 														<jdoc:include type="modules" name="news-adver5" />
 													</div>
 												</div>
+												<div class="fr wid210 text_center">
+													<div class="wid200 margin_auto">
+														<jdoc:include type="modules" name="news-right" />
+													</div>
+												</div>
 											</div>
 										</td>
-													
-													<td valign="top" style="padding-right: 4px; width: 220px; margin-left:10px;" >
-													
-													<table border="0" cellpadding="0" cellspacing="0" align="center" class="homerightmail">
-	<div style="height: 4px">
-														</div>
-
-	<tr>
-		<td class="mailtitle" style="background-image:url('/Style Library/Imagesnew/mic/bgr_menu.jpg'); height:35px;">
-			<font class="font_homerightmail_checkmail">Thư điện tử (mic.gov.vn)</font></td>
-		</tr>
-		
-		<tr>
-			<td class="mailcontent">
-				
-					<table border="0" cellpadding="0" cellspacing="0" width="100%">
-						<tr><td colspan="2" height="10" ></td></tr>
-
-						<tr>
-							<td width="100px"><font class="font_homerightmail_login">Tên truy nhập</font></td>
-							<td><input maxlength="120" id="tempMailUser" name="tempMailUser" type="text" class="textbox_mail"></td>
-						</tr>
-						<tr><td colspan="2" height="10"></td></tr>
-						<tr>
-							<td><font class="font_homerightmail_login">Mật khẩu</font></td>
-							<td><input maxlength="40" id="tempMailPassword" name="tempMailPassword" type="password" class="textbox_mail" onkeydown="KeyDownHandler();"></td>
-
-						</tr>
-						<tr><td colspan="2" height="6"></td></tr>
-						<tr><td colspan="2" align="center"><input id="btnEmailLogin" type="button" onclick="SubmitEmailForm();"   value="Đăng nhập" size="15" class="button_mail"></td></tr>
-						<tr><td colspan="2" height="10px"></td></tr>
-					</table>
-			</td>
-		</tr>
-		<tr><td height="2"></td></tr>
-</table>
-
-													<div style="height: 4px">
-														</div>
-													<div style="height: 4px"></div>
-												<table cellpadding="0" cellspacing="0" width="100%">
-<tr>
-<td class="poll-title-td">
-<span class="poll-title">Bình chọn</span></td>
-</tr>
-<tr>
-<td class="poll-table">
-<table width="100%">
-
-<tr>
-<td colspan="2" class="poll-question" >
-Bạn thường quan tâm tới thông tin nào nhất trên Trang TTĐT Bộ Thông tin và Truyền thông?
-<table id="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices" class="ms-" border="0" style="font-family:verdana,arial,helvetica,sans-serif;font-size:8pt;">
-	<tr>
-		<td><input id="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_0" type="radio" name="ctl00$PlaceHolderRightDiv$MICQuickPoll1$rbtlChoices" value="Thông tin giới thiệu về Bộ" /><label for="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_0">Thông tin giới thiệu về Bộ</label></td>
-	</tr><tr>
-		<td><input id="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_1" type="radio" name="ctl00$PlaceHolderRightDiv$MICQuickPoll1$rbtlChoices" value="Tin tức" /><label for="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_1">Tin tức</label></td>
-	</tr><tr>
-		<td><input id="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_2" type="radio" name="ctl00$PlaceHolderRightDiv$MICQuickPoll1$rbtlChoices" value="Văn bản Quản lý nhà nước" /><label for="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_2">Văn bản Quản lý nhà nước</label></td>
-
-	</tr><tr>
-		<td><input id="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_3" type="radio" name="ctl00$PlaceHolderRightDiv$MICQuickPoll1$rbtlChoices" value="Thủ tục hành chính" /><label for="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_3">Thủ tục hành chính</label></td>
-	</tr><tr>
-		<td><input id="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_4" type="radio" name="ctl00$PlaceHolderRightDiv$MICQuickPoll1$rbtlChoices" value="Địa chỉ liên hệ" /><label for="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_4">Địa chỉ liên hệ</label></td>
-	</tr><tr>
-		<td><input id="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_5" type="radio" name="ctl00$PlaceHolderRightDiv$MICQuickPoll1$rbtlChoices" value="Hỏi - đáp" /><label for="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_5">Hỏi - đáp</label></td>
-	</tr><tr>
-
-		<td><input id="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_6" type="radio" name="ctl00$PlaceHolderRightDiv$MICQuickPoll1$rbtlChoices" value="Số liệu thống kê" /><label for="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_6">Số liệu thống kê</label></td>
-	</tr><tr>
-		<td><input id="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_7" type="radio" name="ctl00$PlaceHolderRightDiv$MICQuickPoll1$rbtlChoices" value="Thông tin khác" /><label for="ctl00_PlaceHolderRightDiv_MICQuickPoll1_rbtlChoices_7">Thông tin khác</label></td>
-	</tr>
-</table></td>
-</tr>
-<tr>
-<td align="left" >
-<div id="pollSubmitButton">[
-<a id="ctl00_PlaceHolderRightDiv_MICQuickPoll1_btnSubmit" class="ms-buttonwidthheight" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$PlaceHolderRightDiv$MICQuickPoll1$btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Biểu quyết</a>]</div>
-
-</td>
-<td align="right"><div id="pollSubmitButton">[
-<a id="ctl00_PlaceHolderRightDiv_MICQuickPoll1_btnShowResult" class="ms-buttonwidthheight" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$PlaceHolderRightDiv$MICQuickPoll1$btnShowResult&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Xem kết quả</a>]</div></td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-
-													
-													<div style="height: 4px"></div>
-
-													<div style="height: 4px"></div>
-													<div class="linkAdvertisement_Left"><a href="/ClickAdv.aspx?ID=11&amp;siteurl=%2F&amp;list=Danh%20s%C3%A1ch%20qu%E1%BA%A3ng%20c%C3%A1o%20tr%C3%AAn%20rightmenu"><img alt="" border="0" src="/PublishingImages/banner_diachi.jpg" style="BORDER: 0px solid; "></a></div><div class="linkAdvertisement_Left"><a href="/ClickAdv.aspx?ID=13&amp;siteurl=%2F&amp;list=Danh%20s%C3%A1ch%20qu%E1%BA%A3ng%20c%C3%A1o%20tr%C3%AAn%20rightmenu"><img alt="" border="0" src="/PublishingImages/bn_cq_bcxb.jpg" style="BORDER: 0px solid; "></a></div><div class="linkAdvertisement_Left"><a href="/ClickAdv.aspx?ID=14&amp;siteurl=%2F&amp;list=Danh%20s%C3%A1ch%20qu%E1%BA%A3ng%20c%C3%A1o%20tr%C3%AAn%20rightmenu"><img alt="" border="0" src="/PublishingImages/bn_dv_chuyentrach.jpg" style="BORDER: 0px solid; "></a></div><div class="linkAdvertisement_Left"><a href="/ClickAdv.aspx?ID=17&amp;siteurl=%2F&amp;list=Danh%20s%C3%A1ch%20qu%E1%BA%A3ng%20c%C3%A1o%20tr%C3%AAn%20rightmenu"><img alt="" border="0" src="/PublishingImages/vnpt.gif" style="BORDER: 0px solid; "></a></div><div class="linkAdvertisement_Left"><a href="/ClickAdv.aspx?ID=22&amp;siteurl=%2F&amp;list=Danh%20s%C3%A1ch%20qu%E1%BA%A3ng%20c%C3%A1o%20tr%C3%AAn%20rightmenu"><img alt="" border="0" height="97" src="/PublishingImages/vinaphone.jpg" width="222" style="BORDER: 0px solid; "></a></div><div class="linkAdvertisement_Left"><a href="/ClickAdv.aspx?ID=18&amp;siteurl=%2F&amp;list=Danh%20s%C3%A1ch%20qu%E1%BA%A3ng%20c%C3%A1o%20tr%C3%AAn%20rightmenu"><img alt="" border="0" src="/PublishingImages/bn02.jpg" style="BORDER: 0px solid; "></a></div><div class="linkAdvertisement_Left"><a href="/ClickAdv.aspx?ID=20&amp;siteurl=%2F&amp;list=Danh%20s%C3%A1ch%20qu%E1%BA%A3ng%20c%C3%A1o%20tr%C3%AAn%20rightmenu"><img alt="" border="0" src="/PublishingImages/VTN.jpg" style="BORDER: 0px solid; "></a></div><div class="linkAdvertisement_Left"><a href="/ClickAdv.aspx?ID=23&amp;siteurl=%2F&amp;list=Danh%20s%C3%A1ch%20qu%E1%BA%A3ng%20c%C3%A1o%20tr%C3%AAn%20rightmenu"><img alt="" border="0" src="/PublishingImages/mobifone.jpg" style="BORDER: 0px solid; "></a></div>
-
-														
-													</td>
-												</tr>
+										</tr>
 										</table>
 										</div>
 									</td>
