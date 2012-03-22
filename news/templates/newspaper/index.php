@@ -135,6 +135,12 @@ $view 		= JRequest::getString('view', '', 'GET');
 												<div class="fl wid310">
 													<div class="box_adver_vuong">
 														<jdoc:include type="modules" name="news-adver1" />
+														<jdoc:include type="modules" name="news-adver2" />
+														<jdoc:include type="modules" name="news-adver3" />
+														<div class="banneritem_text">
+															<jdoc:include type="modules" name="news-adver4" />
+														</div>
+														<jdoc:include type="modules" name="news-adver5" />
 													</div>
 												</div>
 											</div>
