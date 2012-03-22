@@ -1,0 +1,131 @@
+@charset "utf-8";
+/** Mod ty gia thoi tiet cho website joomlaa
+*** Cai dat don gian de hieu
+*** Version 1.080911.654
+*** Viet boi Le Duy. Website kiethuc.vn2up.com
+*** Support duyle.2oco@gmail.com hoac tham khao tai website kienthuc.vn2up.com
+**/
+/* CSS Document */
+/****************//* BOX GOLD call ELEMENTS box_gold_, SUB *//****************/
+.box_weather{
+	height:26px;
+	float:left;
+	padding:3px 2px 0px 5px;
+	width:289px;
+}
+.box_weather_text{
+	float:left;
+	width:220px;
+}
+.box_weather_text p{
+	float:left;
+	margin:2px 0px 0px 5px;
+	font-size:10px;
+}
+.box_weather_ddb {
+	float:left;
+	width:60px;
+}
+.box_weather_ddb select{
+	width:60px;
+}
+/****************//* BOX GOLD call ELEMENTS box_gold_, SUB *//****************/
+.box_gold{
+	float:left;
+	width:120px;
+	margin-right:5px;
+}
+/****************//* BOX RATE call ELEMENTS box_rate_*//****************/
+.box_rate{
+	float:left;
+	width:150px;
+	margin-left:5px;
+}
+.box_rate_slide{
+	float:left;
+	width:100%;
+	height:58px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+/****************//* ALL BOX call ELEMENTS others*//****************/
+.box_grw{
+	float:left;
+}
+.box_grwbg{
+	float:left;
+	width:296px;
+	height:150px;
+	background:url(gold_rate_weather.png);
+}
+.box_gr{
+	padding:5px 5px 5px 7px;
+	float:left;
+}
+.Hgold{
+	float:left;
+	background:url(Hgold.png);
+	width:1px;
+	height:82px;
+}
+.title{
+	float:left;
+	width:100%;
+}
+.title span{
+	margin:5px 0px 0px 6px;
+	float:left;
+	color:#FFF;
+	font-weight:bold;
+}
+.unit {
+	float:right;
+	font-size:10px;
+	color:#FFF;
+}
+.unit_bold {
+	float:left;
+	font-weight:bold;
+}
+.goldicon{
+	float:left;
+	background:url(gold_icon.png);
+	height:24px;
+	width:23px
+}
+.priceicon{
+	float:left;
+	background:url(price_icon.png);
+	height:24px;
+	width:24px
+}
+.tbl_allBox{
+	width:100%;
+}
+.tbl_allBox{
+	font-size:11px;
+	background:#a8a8a8;
+}
+.td_allBox{
+	background:#fff;
+}
+
+/* CSS Document */
+/****************//* BOX GOLD call ELEMENTS box_gold_horizontal_, SUB *//****************/
+/****************//* ALL BOX call ELEMENTS horizontal others*//****************/
+.box_grwbg_horizontal{
+	float:left;
+	width:296px;
+	height:250px;
+	background:url(gold_rate_weather_horizontal.png);
+}
+.box_gr_horizontal{
+	padding:5px 5px 5px 7px;
+	float:left;
+	width:95%;
+}
+.box_goldrate_horizontal{
+	float:left;
+	width:100%;
+	margin-right:5px;
+}

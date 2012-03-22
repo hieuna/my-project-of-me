@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Gold Viet Nam</name>
+	<author>Lovethuy1986</author>
+	<creationDate>August 2011</creationDate>
+	<copyright>Copyright (C) 2011 by Le Duy.</copyright>
+	<license>http://www.vn2up.com</license>
+	<authorEmail>duyle.2oco@gmail.com</authorEmail>
+	<authorUrl>http://www.vn2up.com</authorUrl>
+	<version>1.5.0</version>
+	<description>Module the hien gia vang Viet Nam - Source tu vnexpress.net</description>
+	<files>
+		<filename module="mod_gold">mod_gold.php</filename>
+		<folder module="mod_gold">tmpl</folder>
+		<folder module="mod_gold">css</folder>
+	</files>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="MODULE CLASS SUFFIX" description="" />
+		<param name="layout" type="list" default="default" label="Layout" description="Chọn loại giao diện thích hợp cho website của bạn, phiên bản này cung cấp 2 loại: defualt và onecol. Các phiên bản sau sẽ cung cấp nhiều hơn.">
+			<option value="default">Mặc định</option>
+			<option value="horizontal">Chiều dọc</option>
+		</param>
+		<param name="ShowGoldReatWeather" type="radio" default="1" label="Bật/ tắt tỷ giá" description="Chức năng bật hoặc tắt bảng tỷ giá.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="ShowSecurities" type="radio" default="1" label="Bật/ tắt bảng chứng khoán" description="Chức năng bật hoặc tắt bảng chứng khoán.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>	
+</install>

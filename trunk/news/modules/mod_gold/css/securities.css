@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+/** Mod ty gia thoi tiet cho website joomlaa
+*** Cai dat don gian de hieu
+*** Version 1.190911.444
+*** Viet boi Le Duy. Website kiethuc.vn2up.com
+*** Support duyle.2oco@gmail.com hoac tham khao tai website kienthuc.vn2up.com
+**/
+.security{
+	width:100%;
+	float:left;
+	margin-top:5px;
+}
+ul.tabs_vnchoice{
+	width:100%;
+	float:left;
+	margin:0px;
+	padding:0px;
+	background:url(tabs.jpg) repeat-x;
+	border:1px #CCC solid;
+	-moz-border-radius: 4px;
+}
+ul.tabs_vnchoice li{
+	display:block;
+	float:left;
+	height:34px;
+	line-height:31px;
+	border-right:1px #ccc solid;
+}
+ul.tabs_vnchoice li a{
+	float:left;
+	padding:0px 20px 0px 20px;
+	height:34px;
+	text-shadow:0 1px 0 #FFF;
+	color:#999;
+}
+ul.tabs_vnchoice li.active{
+	background:#f0f0f0;
+	-moz-border-radius: 4px 0px 0px;
+	text-decoration:none;
+}
+ul.tabs_vnchoice li a:hover{
+	background:#fff;
+	-moz-border-radius: 4px 0px 0px;
+	text-decoration:none;
+	opacity:0.3;
+}
+.tabs_vncontent{
+	float:left;
+	width:100%;
+	padding:0px;
+	display:block;
+	overflow:hidden;
+}
+.box_vnchoice{
+	width:100%;
+	float:left;
+	height:40px;
+	background:#e2e2e2;
+	line-height:40px;
+	border-top:1px #ccc solid;
+	color:#999999;
+	text-align:center;
+	font-weight:bold;
+	text-shadow:0 1px 0 #FFF;
+}
+.box_vnchoice_code{
+	width:60px;
+	float:left;
+	height:40px;
+	border-right:1px #ccc solid;
+}
+.box_vnchoice_price{
+	width:54px;
+	float:left;
+	height:40px;
+	border-right:1px #ccc solid;
+}
+.box_vnchoice_pmatched{
+	width:110px;
+	float:left;
+	height:40px;
+	border-right:1px #ccc solid;
+}
+.box_vnchoice_match{
+	width:110px;
+	float:left;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	border-bottom:1px #ccc solid
+}
+.box_vnchoice_pmatch{
+	width:54px;
+	float:left;
+	height:20px;
+	line-height:20px;
+	border-right:1px #ccc solid;
+}
+.box_vnchoice_matched{
+	width:55px;
+	float:left;
+	height:20px;
+	line-height:20px;
+}
+.box_vnchoice_rate{
+	width:55px;
+	float:left;
+	height:40px;
+}
