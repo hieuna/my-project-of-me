@@ -82,31 +82,23 @@ $view 		= JRequest::getString('view', '', 'GET');
 		<tr>
 			<td valign="top">
 			<table cellpadding="0" cellspacing="0" width="100%" class="masterContent">
+				<?php
+				if ($view == 'frontpage'){
+				?>
  				<tr>
     				<td colspan="3">
-	    				<div class="console">
-							<!-- Console -->
-							<span id="ctl00_ctl17_publishingContext1"></span>
-							<!-- Console -->
-						</div>
 	    				<div class="topmaincontent">
 	    					<jdoc:include type="modules" name="news-content-center" />
 	    				</div>
     				</td>
  				</tr>
  				<tr style="height:7px;">
- 				<td width="0px"></td>
-
- 				
- 				</td>
- 				
- 				
- 				
- 				<td width="0px"></td>
- 				
+ 					<td width="0px"></td>
+ 					<td></td>
+ 					<td width="0px"></td>
  				</tr>
+ 				<?php }?>
 				<tr>
-
 					<td colspan="3">
 
 					<div style="padding-top: 4px">
@@ -122,14 +114,6 @@ $view 		= JRequest::getString('view', '', 'GET');
 													<?php
 												}else{
 													?>
-													<?php if ($this->getBuffer('message')) : ?>
-													<div class="error">
-														<h2>
-															<?php echo JText::_('Message'); ?>
-														</h2>
-														<jdoc:include type="message" />
-													</div>
-													<?php endif; ?>
 													<jdoc:include type="component" />
 													<?php
 												} 

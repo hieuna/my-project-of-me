@@ -33,7 +33,11 @@ $rows = $db->loadObjectList();
 		?>
 		<div class="mt1 clearfix">
 			<a href="<?php echo $link;?>">
+				<?php if ($row->images != ""):?>
 				<img class="img130" title="<?php echo $row->title;?>" alt="Ảnh nổi bật" src="<?php echo $baseurl;?>images/stories/<?php echo $row->images;?>" />
+				<?php else :?>
+				<img class="img130" title="<?php echo $row->title;?>" alt="Chưa có ảnh" src="<?php echo $baseurl;?>images/no_image.jpg" />
+				<?php endif;?>
 			</a>
 			<div class="fl wid325">
 				<a href="<?php echo $link;?>" class="fon6"><?php echo $row->title;?></a> 

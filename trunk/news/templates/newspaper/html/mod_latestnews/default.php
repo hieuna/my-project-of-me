@@ -22,7 +22,11 @@ $baseurl = JURI::base();
 									if ($i<=4){  
 									?>
 										<a href="<?php echo $item->link; ?>">
+											<?php if ($item->images != ""):?>
 						    				<img id="slide-img-<?php echo $i;?>" src="<?php echo $baseurl;?>images/stories/<?php echo $item->images;?>" />
+						    				<?php else :?>
+						    				<img id="slide-img-<?php echo $i;?>" src="<?php echo $baseurl;?>images/no_image.jpg" />
+						    				<?php endif;?>
 						    			</a>
 									<?php
 									}
@@ -75,7 +79,11 @@ $baseurl = JURI::base();
 					?>
 					<div id='item-0' class='newsTopmain-panel'>
 						<a href="<?php echo $item->link; ?>">
+							<?php if ($item->images != ""):?>
 							<img src="<?php echo $baseurl;?>images/stories/<?php echo $item->images;?>" alt="<?php echo $item->title;?>" hspace="10" vspace="10" width="447px" />
+							<?php else :?>
+							<img src="<?php echo $baseurl;?>images/no_image.jpg" alt="<?php echo $item->title;?>" hspace="10" vspace="10" width="447px" />
+							<?php endif;?>
 						</a>
 						<div class='info'> 
 							<h2><a href="<?php echo $item->link; ?>"><?php echo $item->text; ?></a></h2>
@@ -90,7 +98,6 @@ $baseurl = JURI::base();
 				</td>
 			</tr>
 		</table>
-		<div class="ms-PartSpacingVertical"></div>
 		</td>
 	</tr>
 	<tr>
@@ -98,14 +105,12 @@ $baseurl = JURI::base();
 		<table border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
 				<td valign="top">
-				<img src='/Style Library/Imagesnew/MIC/line.jpg' border='0' height='1px' class='news'>
 				<?php
 				$i = 0;
 				foreach ($list as $item) :
 				if ($i>=8){
 				?>
 				<div class="MainBottomNormal2">
-					<img width="3" hspace="5" height="3" align="absmiddle" src="/Style Library/Imagesnew/MIC/icon_01.jpg" />
 					<h2><a href="<?php echo $item->link; ?>"><?php echo $item->text; ?></a></h2>
 				</div>
 				<?php

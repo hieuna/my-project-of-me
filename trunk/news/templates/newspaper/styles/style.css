@@ -224,6 +224,9 @@ html {
 .wid310{
 	width: 310px;
 }
+.wid300{
+	width: 300px;
+}
 .wid210{
 	width: 210px;
 }
@@ -257,6 +260,7 @@ html {
 .box_adver_vuong{
 	background: #F3F3F3; padding: 10px 5px 0px 5px; float: left;
 }
+/*-- FOR JOOMLA --*/
 .bannergroup_text{
 	float: left; padding-top: 5px;
 }
@@ -269,7 +273,22 @@ html {
 .banneritem_text img{
 	border: none;
 }
-/*-- POLL --*/
+.componentheading{
+	height: 30px; background: #edf8fe; line-height: 30px; padding-left: 10px; font-weight: bold; text-transform: uppercase; color: #003382; text-shadow: 2px -2px 2px #ccc; font-size: 18px;
+}
+a.contentpagetitle{
+	color: #004175; font-weight: bold; font-size: 13px; cursor: pointer; text-decoration: none;
+}
+a.contentpagetitle:hover{
+	color: #4f82ac;
+}
+a.readon{
+	float: right; font-size: 11px; color: #999; text-decoration: none;
+}
+table.contentpaneopen{
+	padding: 0; margin: 0; border: 0;
+}
+/*-- Poll --*/
 table.poll{
 	padding: 0; margin: 0; width: 100%;
 	border-left: 1px solid #ccc;
@@ -292,7 +311,16 @@ table.poll td.title_poll{
 table.poll .button{
 	border: 1px solid #CCC; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background: #fff; padding: 2px 5px; color: #003366; font-weight: bold; behavior: url(ie-css3.htc);
 }
-/*-- END POLL --*/
+/*-- Blog --*/
+table.blog{
+	padding: 15px 10px;
+}
+span.article_separator{
+	width: 100%; height: 1px; display: inline-block; background: #DBDBDB repeat; overflow: hidden; margin-top: 10px;
+}
+
+/*-- END FOR JOOMLA --*/
+
 .ul2 li {
     float: left;
     height: 22px;
