@@ -86,14 +86,14 @@ class modLatestNewsHelper
 			' CASE WHEN CHAR_LENGTH(a.alias) THEN CONCAT_WS(":", a.id, a.alias) ELSE a.id END as slug,'.
 			' CASE WHEN CHAR_LENGTH(cc.alias) THEN CONCAT_WS(":", cc.id, cc.alias) ELSE cc.id END as catslug'.
 			' FROM #__content AS a' .
-			($show_front == '0' ? ' LEFT JOIN #__content_frontpage AS f ON f.content_id = a.id' : '') .
+			' INNER JOIN #__content_frontpage AS f ON f.content_id = a.id' .
 			' INNER JOIN #__categories AS cc ON cc.id = a.catid' .
 			' INNER JOIN #__sections AS s ON s.id = a.sectionid' .
 			' WHERE '. $where .' AND s.id > 0' .
 			($access ? ' AND a.access <= ' .(int) $aid. ' AND cc.access <= ' .(int) $aid. ' AND s.access <= ' .(int) $aid : '').
 			($catid ? $catCondition : '').
 			($secid ? $secCondition : '').
-			($show_front == '0' ? ' AND f.content_id IS NULL ' : '').
+			' AND f.content_id > 0 '.
 			' AND s.published = 1' .
 			' AND cc.published = 1' .
 			' ORDER BY '. $ordering;

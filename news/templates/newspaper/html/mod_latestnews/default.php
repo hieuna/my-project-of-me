@@ -82,12 +82,10 @@ $baseurl = JURI::base();
 							<?php if ($item->images != ""):?>
 							<img src="<?php echo $baseurl;?>images/stories/<?php echo $item->images;?>" alt="<?php echo $item->title;?>" hspace="10" vspace="10" width="447px" />
 							<?php else :?>
-							<img src="<?php echo $baseurl;?>images/no_image.jpg" alt="<?php echo $item->title;?>" hspace="10" vspace="10" width="447px" />
+							<img src="<?php echo $baseurl;?>images/no_image.jpg" alt="<?php echo $item->title;?>" />
 							<?php endif;?>
 						</a>
-						<div class='info'> 
-							<h2><a href="<?php echo $item->link; ?>"><?php echo $item->text; ?></a></h2>
-						</div> 
+						<h2><a href="<?php echo $item->link; ?>"><?php echo $item->text; ?></a></h2>
 					</div>
 					<?php
 					}
