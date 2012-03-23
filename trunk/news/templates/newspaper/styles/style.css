@@ -276,6 +276,9 @@ html {
 .componentheading{
 	height: 30px; background: #edf8fe; line-height: 30px; padding-left: 10px; font-weight: bold; text-transform: uppercase; color: #003382; text-shadow: 2px -2px 2px #ccc; font-size: 18px;
 }
+.contentheading{
+	color: #004175; font-weight: bold; font-size: 14px; margin-top: 5px;
+}
 a.contentpagetitle{
 	color: #004175; font-weight: bold; font-size: 13px; cursor: pointer; text-decoration: none;
 }
@@ -287,6 +290,18 @@ a.readon{
 }
 table.contentpaneopen{
 	padding: 0; margin: 0; border: 0;
+}
+.view_content{
+	padding: 15px 10px;
+}
+.createdate, .modifydate{
+	padding: 2px 0; border-bottom: 1px solid #e8e8e8; text-align: right; color: #999999; font-size: 11px;
+}
+.modifydate{
+	border-bottom: 0;
+}
+.small{
+	display: inline-block; float: right; font-weight: bold; color: #333;
 }
 /*-- Poll --*/
 table.poll{
