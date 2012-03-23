@@ -12,7 +12,7 @@ $baseurl = JURI::base();
 <tr>
 	<?php if ($this->item->params->get('show_title')) : ?>
 	<td class="contentheading<?php echo $this->escape($this->item->params->get( 'pageclass_sfx' )); ?>" width="100%">
-		<a href="<?php echo $this->item->readmore_link; ?>" class="contentpagetitle<?php echo $this->escape($this->item->params->get( 'pageclass_sfx' )); ?>">
+		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->id, $this->item->catid, $this->item->sectionid)); ?>" class="contentpagetitle<?php echo $this->escape($this->item->params->get( 'pageclass_sfx' )); ?>">
 			<?php echo $this->escape($this->item->title); ?></a>
 	</td>
 	<?php endif; ?>
@@ -27,7 +27,7 @@ endif; ?>
 <tr>
 <td valign="top" colspan="2">
 	<div class="mt1 clearfix">
-		<a href="<?php echo $this->item->readmore_link; ?>">
+		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->id, $this->item->catid, $this->item->sectionid)); ?>">
 			<?php if ($this->item->images != ""):?>
 			<img class="img130" src="<?php echo $baseurl;?>images/stories/<?php echo $this->item->images;?>" />
 			<?php else :?>
@@ -46,7 +46,7 @@ endif; ?>
 
 <tr>
 	<td  colspan="2">
-		<a href="<?php echo $this->item->readmore_link; ?>" class="icon-detail fon7">
+		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->id, $this->item->catid, $this->item->sectionid)); ?>" class="icon-detail fon7">
 			<?php if ($this->item->readmore_register) :
 				echo JText::_('Register to read more...');
 			elseif ($readmore = $this->item->params->get('readmore')) :

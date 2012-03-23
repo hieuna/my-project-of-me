@@ -584,11 +584,14 @@ class ContentModelArticle extends JModel
 		$params->set('popup', $pop);
 
 		// Are we showing introtext with the article
+		/*
 		if (!$params->get('show_intro') && !empty($this->_article->fulltext)) {
 			$this->_article->text = $this->_article->fulltext;
 		} else {
 			$this->_article->text = $this->_article->introtext . chr(13).chr(13) . $this->_article->fulltext;
-		}
+		}*/
+		$this->_article->introtext = $this->_article->introtext;
+		$this->_article->text = $this->_article->fulltext;
 
 		// Set the article object's parameters
 		$this->_article->parameters = & $params;
