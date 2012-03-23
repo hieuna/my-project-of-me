@@ -92,10 +92,12 @@ $view 		= JRequest::getString('view', '', 'GET');
 	    				</div>
     				</td>
  				</tr>
- 				<tr style="height:7px;">
- 					<td width="0px"></td>
- 					<td></td>
- 					<td width="0px"></td>
+ 				<tr>
+ 					<td colspan="3">
+	 					<div class="banner_special">
+	    					<jdoc:include type="modules" name="news-sidebar" />
+	    				</div>
+ 					</td>
  				</tr>
  				<?php }?>
 				<tr>
@@ -110,7 +112,9 @@ $view 		= JRequest::getString('view', '', 'GET');
 												<?php
 												if ($view == 'frontpage'){
 													?>
-													<jdoc:include type="modules" name="news-frame1" />
+													<div class="view_content">
+														<jdoc:include type="modules" name="news-frame1" />
+													</div>
 													<?php
 												}else{
 													?>

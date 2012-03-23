@@ -224,6 +224,9 @@ html {
 .wid310{
 	width: 310px;
 }
+.wid306{
+	width: 306px;
+}
 .wid300{
 	width: 300px;
 }
@@ -302,6 +305,15 @@ table.contentpaneopen{
 }
 .small{
 	display: inline-block; float: right; font-weight: bold; color: #333;
+}
+#comments-footer a{
+	display: none;
+}
+.banner_special{
+	width: 100%; text-align: center;
+}
+.banner_special .banneritem{
+	width: 980px; height: 50px; overflow: hidden; padding: 5px 0; margin: 0 auto;
 }
 /*-- Poll --*/
 table.poll{
@@ -2346,10 +2358,10 @@ table.homerightmail td.mailcontent {
     height: 300px !important;
     margin: 0;
     padding: 0;
-    width: 450px !important;
+    width: 465px !important;
 }
 .contenttop_left .featured .info {
-    width: 450px;
+    width: 465px;
 }
 .contenttop_left .featured .info a:link {
     font-family: Arial;
