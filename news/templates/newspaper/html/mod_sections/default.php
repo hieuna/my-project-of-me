@@ -11,7 +11,7 @@ foreach ($list as $item) :
 $sql = "SELECT id, title, name, alias FROM #__categories WHERE section=".$item->id." AND published=1 ORDER BY ordering ASC, id DESC LIMIT 4";
 $db->setQuery($sql);
 $lsCategories = $db->loadObjectList();
-$query = "SELECT id, catid, sectionid, title, alias, title_alias, introtext, images FROM #__content WHERE sectionid=".$item->id." AND state=1 ORDER BY created DESC LIMIT 5";
+$query = "SELECT id, catid, sectionid, title, alias, title_alias, introtext, images FROM #__content WHERE sectionid=".$item->id." AND state=1 ORDER BY created DESC LIMIT 6";
 $db->setQuery($query);
 $rows = $db->loadObjectList();
 ?>
@@ -41,21 +41,18 @@ $rows = $db->loadObjectList();
 			</a>
 			<div class="fl wid306">
 				<a href="<?php echo $link;?>" class="fon6"><?php echo $row->title;?></a> 
-				<div class="fon5">
+				<div class="fon5 mt0">
 				<?php echo html_entity_decode($row->introtext);?>
 				</div>
-				<a href="<?php echo $link;?>" class="icon-detail fon7">Xem tiếp</a>
 			</div>
 		</div>
 		<ul class="ul3 mt2"> 
 		<?php 
 		}else{
 		?>
-		<?php
-		}
-		?>
 		<li><a href="<?php echo $link;?>"><?php echo $row->title;?></a></li>
 		<?php
+		}
 		$i++; 
 	endforeach;
 	?>
