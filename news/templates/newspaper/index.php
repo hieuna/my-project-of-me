@@ -33,39 +33,38 @@ $view 		= JRequest::getString('view', '', 'GET');
   		<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/scripts.js"></script>
 	</head>
 	<body class="body">
-	<div class="header">
-		<div style="position: relative;" class="clearfix">
-		 	<a class="logo" href="/"><h1>Báo điện tử của báo khuyến học &amp; Dân Trí</h1></a>
-		 	<div class="div_gdpda" id="div_gdpda"><a href="/?removecookie=true">Giao diện PDA</a></div>
-			 <div class="searchbox" id="searchbox">
-				  <div class="clearfix">
-					 <input type="text" id="txtData" name="q" onkeypress="return BBEnterPress();">
-					 <input type="submit" onsubmit="BBSearch(); return false;" onclick="BBSearch(); return false;" class="btn" value="Tìm kiếm">
-					 <input type="hidden" value="1" id="dantri">
-				  </div>
-			 </div>
-			 <div class="links">
-				  <a target="_blank" href="http://muachung.vn/" class="icon-game">Mua chung</a>
-				  <a href="/c702s702/blog/trang-1.htm" class="icon-ads">Blog</a>
-				  <a href="/c167/tam-long-nhan-ai.htm" class="icon-humane">Tấm lòng nhân ái</a>
-				  <a target="_blank" href="http://baogiay.dantri.com.vn" class="icon-tuanbao2">Tuần báo</a>
-				  <a href="http://enbac.com" class="icon-bussiness">Mua bán</a>
-				  <a target="_blank" href="http://bexinh.dantri.com.vn" class="icon-bexinh">Bé xinh</a>
-				  <a href="/c673/diendan/trang-1.htm" class="icon-forum">Diễn đàn dân trí</a>
-				  <a target="_blank" href="http://www.dtinews.vn" class="icon-tienganh">English</a>
-			 </div>
-		 </div>
-	</div>
-	<div class="top-ads">
-		<div style="margin: 0pt auto; width: 1004px;">
-			<img width="1004" height="90" border="0" src="http://admicro2.vcmedia.vn/images/muachung122011980x90.jpg" id="ads_zone221_banner0">
-		</div>
-	</div>
-	<div class="nav-wrap">
-		 <div class="clearfix">
-		 	<jdoc:include type="modules" name="news-topmenu" />
-		 </div>
-	</div>
+		<div class="header_full">
+			<div class="header">
+				<div style="position: relative;" class="clearfix">
+				 	<a class="logo" href="index.php"><h1>Cổng thông tin điện tử và truyền thông</h1></a>
+					 <div class="searchbox" id="searchbox">
+						  <div class="clearfix">
+							<jdoc:include type="modules" name="news-search" />
+						  </div>
+					 </div>
+					 <div class="links">
+						  <a target="_blank" href="http://muachung.vn/" class="icon-game">Mua chung</a>
+						  <a href="/c702s702/blog/trang-1.htm" class="icon-ads">Blog</a>
+						  <a href="/c167/tam-long-nhan-ai.htm" class="icon-humane">Tấm lòng nhân ái</a>
+						  <a target="_blank" href="http://baogiay.dantri.com.vn" class="icon-tuanbao2">Tuần báo</a>
+						  <a href="http://enbac.com" class="icon-bussiness">Mua bán</a>
+						  <a target="_blank" href="http://bexinh.dantri.com.vn" class="icon-bexinh">Bé xinh</a>
+						  <a href="/c673/diendan/trang-1.htm" class="icon-forum">Diễn đàn dân trí</a>
+						  <a target="_blank" href="http://www.dtinews.vn" class="icon-tienganh">English</a>
+					 </div>
+				 </div>
+			</div>
+			<div class="top-ads">
+				<div style="margin: 0pt auto; width: 1004px;">
+					<jdoc:include type="modules" name="news-top" />
+				</div>
+			</div>
+			<div class="nav-wrap">
+				 <div class="clearfix">
+				 	<jdoc:include type="modules" name="news-topmenu" />
+				 </div>
+			</div>
+		</div>	
 <div>
 
 

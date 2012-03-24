@@ -838,7 +838,7 @@ class ContentView
 		<tr>
 			<td class="key" valign="top">
 				<label for="image">
-					<?php echo JText::_( 'Image' ); ?>:
+					<?php echo JText::_( 'Image' ); ?>: (460 x 296)
 				</label>
 			</td>
 			<td valign="top">
