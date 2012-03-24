@@ -33,7 +33,7 @@ endif; ?>
 			<img class="img130" src="<?php echo $baseurl;?>images/no_image.jpg" />
 			<?php endif;?>
 		</a>
-		<div class="fl wid300">
+		<div class="fl wid300 mt0">
 			<?php if (isset ($this->item->toc)) : ?>
 				<?php echo $this->item->toc; ?>
 			<?php endif; ?>
@@ -41,19 +41,6 @@ endif; ?>
 		</div>
 	</div>
 </td>
-</tr>
-
-<tr>
-	<td  colspan="2">
-		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->id, $this->item->catid, $this->item->sectionid)); ?>" class="readon<?php echo $this->escape($this->item->params->get('pageclass_sfx')); ?>">
-			<?php if ($this->item->readmore_register) :
-				echo JText::_('Register to read more...');
-			elseif ($readmore = $this->item->params->get('readmore')) :
-				echo $readmore;
-			else :
-				echo JText::sprintf('Read more...');
-			endif; ?></a>
-	</td>
 </tr>
 
 </table>

@@ -42,15 +42,8 @@ $view 		= JRequest::getString('view', '', 'GET');
 							<jdoc:include type="modules" name="news-search" />
 						  </div>
 					 </div>
-					 <div class="links">
-						  <a target="_blank" href="http://muachung.vn/" class="icon-game">Mua chung</a>
-						  <a href="/c702s702/blog/trang-1.htm" class="icon-ads">Blog</a>
-						  <a href="/c167/tam-long-nhan-ai.htm" class="icon-humane">Tấm lòng nhân ái</a>
-						  <a target="_blank" href="http://baogiay.dantri.com.vn" class="icon-tuanbao2">Tuần báo</a>
-						  <a href="http://enbac.com" class="icon-bussiness">Mua bán</a>
-						  <a target="_blank" href="http://bexinh.dantri.com.vn" class="icon-bexinh">Bé xinh</a>
-						  <a href="/c673/diendan/trang-1.htm" class="icon-forum">Diễn đàn dân trí</a>
-						  <a target="_blank" href="http://www.dtinews.vn" class="icon-tienganh">English</a>
+					 <div class="banner-icon">
+						  <jdoc:include type="modules" name="news-icon" />
 					 </div>
 				 </div>
 			</div>
@@ -134,7 +127,7 @@ $view 		= JRequest::getString('view', '', 'GET');
 													</div>
 												</div>
 												<div class="fr wid210 text_center">
-													<div class="wid200 margin_auto">
+													<div class="wid200">
 														<jdoc:include type="modules" name="news-right" />
 													</div>
 												</div>
