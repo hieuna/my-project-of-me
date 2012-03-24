@@ -20,6 +20,9 @@ html {
     height: 1px;
     overflow: hidden;
 }
+body{
+	margin: 0; padding: 0;
+}
 .body {
     /*background: url("../images/bgr.jpg") repeat-x scroll right top #4396CA;*/
     background: #f0f0f0;
@@ -29,14 +32,14 @@ html {
     margin: 0 auto;
 	text-align: center;
 }
+.header_full{
+	width: 100%; background: #fff; text-align: center;
+}
 .header{
-	width: 1004px; margin: 10px auto; background: #fff;
+	width: 1004px; padding: 10px 0; margin: 0 auto;
 }
 .logo {
-    background-position: -2px -475px;
-    float: left;
-    height: 55px;
-    width: 225px;
+    width: 183px; height: 68px; float: left; background: url("../images/logo.jpg") no-repeat top left;
 }
 .logo h1 {
     display: none;
@@ -50,11 +53,26 @@ html {
     width: 90px;
 }
 .searchbox {
-    background-position: 0 -337px;
+    background: url("../images/search-box-bg.png") no-repeat top left;
     float: left;
     height: 24px;
-    margin: 15px 0 0 15px;
-    width: 331px;
+    margin: 15px 0 0 50px;
+    width: 297px;
+}
+.searchbox input {
+    background: none repeat scroll 0 50% transparent;
+    border: 0 none;
+    float: left;
+    height: 22px;
+    margin-left: 2px;
+    width: 215px;
+}
+.searchbox .button {
+    color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+    font: 700 12px/24px Arial;
+    width: 75px;
 }
 .links {
     float: right;
@@ -68,7 +86,7 @@ html {
     text-indent: 30px;
 }
 .links a:hover {
-    color: #FF0000;
+    color: #4169E1; text-decoration: underline;
 }
 .icon-work, .icon-ads, .icon-game, .icon-bussiness, .icon-humane, .icon-forum, .icon-home, .icon-event, .icon-detail, .icon-rss, .icon-rss2, .icon-yahoo, .icon-google, .icon-facebook, .icon-twitter, .icon-twitter2, .icon-linkhay, .icon-like, .icon-facebook2, .icon-1000y, .icon-ecard, .icon-english, .icon-tuanbao, .icon-rssfeed {
     float: left;
@@ -186,15 +204,6 @@ html {
 }
 .spacer {
     width: 12px;
-}
-.logo {
-    height: 110px;
-    margin: 0;
-    padding: 0;
-}
-.logo a {
-    margin: 0;
-    padding: 0;
 }
 .console {
     clear: both;
@@ -2441,11 +2450,8 @@ table.homerightmail td.mailcontent {
     text-decoration: none;
 }
 .contenttop_righ .newsTopmain-panel a:hover {
-    color: #D86C06;
-    font-family: Arial;
-    font-size: 11px;
-    font-weight: bold;
-    text-decoration: none;
+    color: #4169E1;
+    text-decoration: underline;
 }
 .emailname {
     display: none;
