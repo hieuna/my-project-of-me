@@ -146,20 +146,8 @@ $view 		= JRequest::getString('view', '', 'GET');
 							<table cellspacing="0" cellpadding="0" border="0" class="footer">
 								<tr>
 									<td align="center">
-									<p class="bottom">CƠ QUAN CHỦ QUẢN: <strong>BỘ THÔNG 
-									TIN VÀ TRUYỀN THÔNG (MIC)</strong> <br />
-									Giấy phép thiết lập Trang thông tin điện tử số 260/GP-TTĐT do Cục Quản lý Phát thanh, Truyền hình và Thông tin điện tử cấp ngày 08/12/2010. <br />
-									Chịu trách nhiệm chính: Ông Trần Vũ Hà, Q. Giám đốc Trung tâm 
-									Thông tin - Bộ Thông tin và Truyền thông. <br />
-		
-									Bản quyền thuộc Trung tâm Thông tin. Địa chỉ: 18 Nguyễn Du - Hà Nội; <br />
-									Email: <a href="mailto:banbientap@mic.gov.vn">banbientap@mic.gov.vn</a> 
-									; Điện thoại: 04.3.5563462; Fax: 
-									04.3.5563458. <br />
-									<em>Ghi rõ nguồn &quot;MIC&quot; khi phát hành 
-									lại thông tin từ website này </em></p>
+										<jdoc:include type="modules" name="footer" />
 									</td>
-		
 								</tr>
 							</table>
 							</td>
