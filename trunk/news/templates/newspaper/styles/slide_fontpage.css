@@ -9,7 +9,7 @@ div.wrap {
 	padding: 2px;
 }
 div.wrap #desciption{
-	position: absolute; bottom: 0; left: 0; z-index: 1000; background: #000; filter:alpha(opacity=45); /* IE's opacity*/ opacity: 0.45; width: 100%; padding: 5px 0; line-height: 11px;
+	position: absolute; bottom: 0; left: 0; z-index: 1000; background: #000; filter:alpha(opacity=45); /* IE's opacity*/ opacity: 0.45; width: 100%; padding: 5px 0; line-height: 11px; font-weight: bold;
 }
 div.wrap #desciption p{
 	margin: 5px 0;
