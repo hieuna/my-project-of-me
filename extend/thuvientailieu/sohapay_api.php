@@ -9,8 +9,8 @@
 <?php
 include('../class/class_payment.php');
 $sever = "localhost";
-$user = "thuvient";
-$password = "fmQIeCZl";
+//$user = "thuvient";
+//$password = "fmQIeCZl";
 $database = "thuvient_TVso1VN";
 
 $link = mysql_connect($sever,$user,$password) or die("Kết nối không thành công". mysql_error());
