@@ -242,7 +242,7 @@ table.contentpaneopen{
 	padding: 0; margin: 0; border: 0;
 }
 .view_content{
-	padding: 15px 10px;
+	padding: 0 10px; 
 }
 .createdate, .modifydate{
 	padding: 2px 0; border-bottom: 1px solid #e8e8e8; text-align: right; color: #999999; font-size: 11px;
@@ -708,13 +708,7 @@ div.ms-quicklaunchouter {
     width: 368px;
 }
 .footer {
-    background-color: #4396CA;
-    background-position: left top;
-    background-repeat: no-repeat;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px 0;
-    width: 981px;
+	margin: 0 auto;	margin-top: 20px; background: #4396CA; padding: 10px 0; width: 980px;
 }
 .bottom {
     color: #FFFFFF;
