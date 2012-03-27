@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^/deals/ha-noi$ /deals/index.php?city=1 [L]
+RewriteRule ^/deals/ho-chi-minh$ /deals/index.php?city=2 [L]
