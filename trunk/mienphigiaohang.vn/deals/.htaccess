@@ -1,0 +1,49 @@
+RewriteEngine On
+RewriteRule ^ho-chi-minh$ index.php?city=2 [L]
+RewriteRule ^ha-noi$ index.php?city=1 [L]
+RewriteRule ^san-pham-ha-noi$ type.php?city=1 [L]
+RewriteRule ^san-pham-ho-chi-minh$ type.php?city=2 [L]
+
+
+RewriteRule ^([0-9]*)-ha-noi.html$ type.php?city=1&cat_id=$1 [L]
+RewriteRule ^([0-9]*)-ho-chi-minh.html$ type.php?city=2&cat_id=$1 [L]
+RewriteRule ^ha-noi-([^/]*)_([0-9]*).html$ detail_pro.php?module=product&city=1&id=$2 [L]
+RewriteRule ^ho-chi-minh-([^/]*)_([0-9]*).html$ detail_pro.php?module=product&city=2&id=$2 [L]
+
+RewriteRule ^ve-chung-toi.html$ news.php?module=thongtin&id=1 [L]
+RewriteRule ^danh-cho-doanh-nghiep.html$ news.php?module=thongtin&id=2 [L]
+RewriteRule ^quy-che.html$ news.php?module=thongtin&id=3 [L]
+RewriteRule ^cau-hoi-thuong-gap.html$ news.php?module=thongtin&id=4 [L]
+RewriteRule ^huong-dan-thanh-toan.html$ news.php?module=thongtin&id=5 [L]
+
+
+RewriteRule ^dang-ky$ register.php [L]
+RewriteRule ^dang-nhap$ login.php [L]
+RewriteRule ^dang-nhap-thanh-cong.html$ login_success.php [L]
+RewriteRule ^dang-ky-thanh-cong.html$ register_success.php [L]
+
+
+RewriteRule ^sua-thong-tin-ca-nhan-([^/]*).html$ user_profile.php?module=suathongtin&user_name=$1 [L]
+RewriteRule ^doi-mat-khau-([^/]*).html$ user_profile.php?module=doipass&user_name=$1 [L]
+RewriteRule ^thong-tin-gio-hang-([^/]*).html$ user_profile.php?module=donhang&user_name=$1 [L]
+
+
+RewriteRule ^dang-xuat.html$ index.php?act=logout [L]
+RewriteRule ^thanh-toan-san-pham-([0-9]*).html$ payment.php?id=$1 [L]
+RewriteRule ^thanh-toan-san-pham-([0-9]*)-log.html$ payment.php?id=$1&module=login [L]
+
+#RewriteRule ^thanh-toan-thanh-cong-([0-9]*).html$ checkout_success.php?cart_id=$1 [L]
+RewriteRule ^ha-noi-binh-luan-san-pham-([0-9]*).html$ comment.php?city=1&id=$1 [L]
+RewriteRule ^ho-chi-minh-binh-luan-san-pham-([0-9]*).html$ comment.php?city=2&id=$1 [L]
+
+RewriteRule ^san-pham-ha-noi&page=([0-9]*)$ type.php?city=1&page=$1[L]
+RewriteRule ^san-pham-ho-chi-minh&page=([0-9]*)$ type.php?city=2&page=$1[L]
+RewriteRule ^san-pham-ha-noi&cat_id=([0-9]*)&page=([0-9]*)$ type.php?city=1&cat_id=$1&page=$2[L]
+RewriteRule ^san-pham-ho-chi-minh&cat_id=([0-9]*)&page=([0-9]*)$ type.php?city=2&cat_id=$1&page=$2[L]
+
+
+
+
+
+
+

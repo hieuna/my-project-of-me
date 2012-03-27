@@ -1,0 +1,146 @@
+<script src="{$skinpath}/js/jquery.ui.selectmenu.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+			$(document).ready(function () {
+
+				$("input:submit, input:reset").button();
+
+				$("select").selectmenu({
+
+					style: 'dropdown',
+
+					icons: [
+
+						{ find: '.locked', icon: 'ui-icon-locked' },
+
+						{ find: '.unlocked', icon: 'ui-icon-unlocked' },
+
+						{ find: '.folder-open', icon: 'ui-icon-folder-open' }
+
+					]
+
+				});
+
+			});
+			
+			function update_hide(hide,id)
+				{
+					
+					$.ajax({
+							 url:"check_ajax.php",
+							 type:"POST",
+							 data:"tbl=product&do=update_hide&id="+id+"&hide="+hide,
+							 success:function(result){
+								 				if(hide==1)
+												{
+													$("#img0_"+id).show();
+													$("#img1_"+id).hide();
+												}
+												else if(hide==0)
+												{
+													$("#img0_"+id).hide();
+													$("#img1_"+id).show();
+												}
+												
+												
+												
+								 }
+							 })
+				
+				}
+
+		</script>
+      <!-- right -->
+      <div id="right"  class="grid_18">
+        <div class="title" style="padding-bottom:10px">
+          <h4>Danh sách {$select_}</h4>
+         
+        </div>
+        <div class="table">
+       
+                                
+ <div class="view_featured">
+<form name="featured" id="featured" method="get" action="?do=product&action=featured_detail">
+ {foreach item=listfeatured from=$list_featured}
+<input type="hidden" name="id_featured" value="{$listfeatured.id}" />
+<input style=" cursor:pointer; size:10px; padding:5px; border:1px solid #CCC; background:#EDEDED url(../../../templates/images/content_box_title.png) repeat-x" type="button" name="featured_detail" id="featured_detail" onclick="redirect({$listfeatured.id})" value="{$listfeatured.title}"   />
+{/foreach}
+</form>
+
+<script>
+function redirect(id)
+{
+	location.href='index.php?do=product&action=featured_detail&id_featured='+id+'&id_module={$smarty.request.id_module}';
+}
+
+</script>
+
+                                    
+                                    
+             <div style="clear: both">&nbsp;</div>
+             <form method="post">
+            <table cellspacing="0" id="tbl_new">
+              <thead>
+                <tr>
+                  <th class="left">Hình ảnh</th>
+                  <th>Sản phẩm</th>
+                  <th>Thuộc danh mục</th>
+             
+                  <th>Action</th>
+                  <th class="selected"><input type="checkbox" class="check-group" /></th>
+                </tr>
+              </thead>
+              <tbody>
+              {foreach item=info from=$listdetailfeatured}
+                <tr {if $phim.stt eq 0}class="alt"{/if}>
+                  <td  class="username"><strong>{if $info.picture !=''}<img style="width:50px; height:50px" src="http://{$smarty.server.SERVER_NAME}/image.php?image=http://{$smarty.server.SERVER_NAME}/templates/pictures/products/{$info.picture}&width=50&height=50" /></{/if}</strong></td>
+                  <td class="joindate" style="text-align:left">{$info.title}</td>
+                  <td class="joindate2">{$info.parent} </td>
+                 
+                  <td class="action2"><a href="index.php?do=product&action=editpro&id={$info.id}&id_module={$smarty.request.id_module}"><img src="{$skinpath}/images/edit.png" title="Sửa sản phẩm" /></a>&nbsp;&nbsp;&nbsp;<a onClick="return confirm('B&#7841;n c&#243; ch&#7855;c ch&#7855;n mu&#7889;n x&#243;a kh&#244;ng ?');" href="index.php?do=product&action=featured_detail&id={$info.id_f}&id_featured={$smarty.request.id_featured}&id_module={$smarty.request.id_module}&action2=delfeatured"><img src="{$skinpath}/images/delete.png" title="Xóa sản phẩm" /></a></td>
+                  <td class="selected"><input type="checkbox" name="Selected[]" value="{$info.id_f}" class="check-item" /></td>
+                </tr>
+               {/foreach}
+              </tbody>
+            </table><br />
+<br />
+
+
+
+            <div class="action">
+									
+										
+									<div class="button">
+
+										<input type="submit" name="submit" value="Xóa khỏi sản phẩm đặc trưng" onClick="return confirm('Có chắc chắn là bạn muốn thực hiện thao tác này không ?');" class="check-submit" />
+
+									</div>
+
+
+								</div>
+                                
+                                
+                                
+                                
+                              
+
+</form>
+            <!-- pagination -->
+            <div class="pagination">
+           
+              {$page}
+           
+            
+            </div>
+            <!-- end pagination -->
+            
+            
+             
+
+
+ 
+</div>
+        </div>
+        <!-- end table -->
+      </div>
+      <!-- end right -->

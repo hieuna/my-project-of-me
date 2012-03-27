@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+
+.vSlider {  overflow:visible; position:relative; border:none!important;  }
+.vSlider ul.mainslider { margin:0; padding:0; list-style:none; position:relative; overflow:hidden; display:block;  border:none!important;}
+.vSlider ul.mainslider li { background:#fff; position:absolute; top:0; left:0; border:none!important;  margin:0; padding:0; }
+.vSlider ul.mainslider li>a {background:#fff; margin:0; padding:0; outline:none; border:none; text-decoration:none; background:transparent; }
+.vSlider ul.mainslider li>a img { background:#fff; margin:0; padding:0; display:block; }
+
+
+
+.vSlider ul li div.inline { background:#fff }
+
+.reset { z-index:1; }
+.active { z-index:5; }
+
+
+a.q-prev { background:url(i/controls.png) top left no-repeat; display:block; width:39px; height:37px; position:absolute; z-index:199; top:40%; left:0; opacity:0.3;  }
+a.q-prev:hover , a.q-next:hover { opacity:1; }
+a.q-next { background:url(i/controls.png) top right no-repeat; display:block; width:39px; height:37px; position:absolute; z-index:199;  top:40%; right:0; opacity:0.2; }
+
+
+.controls { 
+position:absolute;
+bottom:-17px;
+padding:5px 8px;
+right:0;
+z-index:99;
+ }
+
+.controls li {background:url(i/btn.png) no-repeat -222px -67px;float:left; width:8px; height:8px; margin-right:5px; display:inline-block; text-indent:-9999px}
+.controls li:hover, .controls li.active {background:url(i/btn.png) no-repeat -236px -67px; cursor:pointer;}
+
+.controls li.control_active {background:url(i/btn.png) no-repeat -236px -67px;}
