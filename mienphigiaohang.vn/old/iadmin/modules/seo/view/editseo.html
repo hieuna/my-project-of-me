@@ -1,0 +1,171 @@
+<script src="{$skinpath}/js/jquery.ui.selectmenu.js" type="text/javascript"></script>
+<script type="text/javascript" src="{$skinpath}/js/jquery.validate.min.js"></script>
+
+<script type="text/javascript">
+
+			$(document).ready(function () {
+
+				$("#published").datepicker({
+
+					showOn: 'button',
+
+					buttonImage: 'templates/images/calendar.png',
+
+					buttonImageOnly: true
+
+				});
+
+
+
+				$("select").selectmenu({
+
+					style: 'dropdown',
+
+					width: 200,
+
+					menuWidth: 200
+
+				});
+
+
+
+				$("input[type=file]").file({
+
+					image: "templates/images/browse.gif",
+
+					image_height: 24,
+
+					image_width: 71,
+
+					width: 250
+
+				});
+
+
+
+				$("input:submit, input:reset").button();
+
+			});
+			
+	$(document).ready(function(){
+		$("#addpri1").validate({
+			debug: false,
+			rules: {
+				
+				title: "required",
+				username:"required",
+				
+			},
+			messages: {
+				title: "",
+				username:"",
+				
+			},
+			
+		});
+	});
+	
+	
+	
+	function del_pic(id)
+				{
+					if(confirm('Bạn có chắc chắn muốn xóa!'))
+					{
+					$.ajax({
+							 url:"index.php",
+							 type:"POST",
+							 data:"do=gallary&action=del_pic&id="+id,
+							 success:function(result){
+								 				
+												$(".img").html("");
+												
+												
+								 }
+							 })
+					}
+				
+				}
+		</script>
+        <script type="text/javascript" src="{$skinpath}/fckeditor/fckeditor.js"></script>
+
+
+
+      <!-- right -->
+      <div id="right"  class="grid_18">
+      <div id="messages">
+{$mess}
+        </div>
+        <!-- forms -->
+        <div id="forms">
+        
+          <form action="http://{$domain}/iadmin/index.php?do=seo&action=editseo&id_module={$smarty.request.id_module}" method="post" name="addpri1" id="addpri1" enctype="multipart/form-data">
+          
+            <div class="form">
+              <div class="title">
+                <h4>SEO</h4>
+              </div>
+              <div class="fields">
+                <div class="field">
+                
+                
+                 <div class="field">
+                  <div class="label">
+                    <label for="title">Google key:</label>
+                  </div>
+                  <div class="input">
+                    <input type="text" id="google_key" name="google_key" size="50" value="{$info.google_key}" />
+                  </div>
+                </div>
+                  <div class="field">
+                  <div class="label">
+                    <label for="title">Alexa key:</label>
+                  </div>
+                  <div class="input">
+                    <input type="text" id="alexa_key" name="alexa_key" size="50" value="{$info.alexa_key}" />
+                  </div>
+                </div>
+                
+                
+                  <div class="field">
+                  <div class="label">
+                    <label for="title">Yahoo key:</label>
+                  </div>
+                  <div class="input">
+                    <input type="text" id="yahoo_key" name="yahoo_key" size="50" value="{$info.yahoo_key}" />
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="label">
+                    <label for="title">Google analytics key</label>
+                  </div>
+                  <div class="input">
+                 
+                 <input type="text" id="google_analytics" name="google_analytics" size="50" value="{$info.google_analytics}" />
+
+ </div>
+                </div>
+                
+                 <div class="field">
+                  <div class="label">
+                    <label for="title">Thẻ Meta khác</label>
+                  </div>
+                  <div class="input">
+                  <textarea name="meta" id="meta" style="width:400px; height:100px">{$info.meta}</textarea>
+                  </div>
+                </div>
+                
+                 <div class="buttons">
+                  <input type="submit" name="submit" value="Sửa SEO" />
+                  <input type="reset" name="reset" value="Reset" />
+                </div>
+                
+              
+          
+          </form>
+          
+         
+        </div>
+        <!-- end forms -->
+      </div>
+      <!-- end right -->
+   

@@ -1,0 +1,143 @@
+<script src="{$skinpath}/js/jquery.ui.selectmenu.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+			$(document).ready(function () {
+
+				$("input:submit, input:reset").button();
+
+				$("select").selectmenu({
+
+					style: 'dropdown',
+
+					icons: [
+
+						{ find: '.locked', icon: 'ui-icon-locked' },
+
+						{ find: '.unlocked', icon: 'ui-icon-unlocked' },
+
+						{ find: '.folder-open', icon: 'ui-icon-folder-open' }
+
+					]
+
+				});
+
+			});
+			
+			function update_hide(hide,id)
+				{
+					
+					$.ajax({
+							 url:"index.php",
+							 type:"POST",
+							 data:"do=new&action=update_hide&id="+id+"&hide="+hide,
+							 success:function(result){
+								 				if(hide==1)
+												{
+													$("#img0_"+id).show();
+													$("#img1_"+id).hide();
+												}
+												else if(hide==0)
+												{
+													$("#img0_"+id).hide();
+													$("#img1_"+id).show();
+												}
+												
+												
+												
+								 }
+							 })
+				
+				}
+
+		</script>
+      <!-- right -->
+      <div id="right"  class="grid_18">
+        <div class="title">
+        <p>  <h4 style="padding-bottom:10px">Thống kê truy cập</h4></p><br>
+         
+        </div>
+        
+        <div id="table">
+        
+        <table cellspacing="0" cellpadding="0" id="tbl_order">
+            
+                <tr>
+                 
+                 <td class="n">Tổng truy cập </td>
+               <td class="n">Trong tháng </td>
+              <td class="n">Trong tuần </td>
+                <td class="n">Trong hôm qua </td>
+                <td class="n">Trong hôm nay</td>
+               <td class="n">Đang truy cập</td>
+                 </tr>
+                 <tr>
+            <td class="k">{$info_tk.tongthongke}</td>
+            <td class="k">{$info_tk.tongmonth}</td>
+            <td class="k">{$info_tk.tongtuan}</td>
+            <td class="k">{$info_tk.tonglastday}</td>
+            
+            <td class="k">{$info_tk.tongtoday}</td>
+            <td class="k">{$info_tk.dangtruycap}</td></tr>
+             </table>
+        
+        
+        
+        </div>
+        
+        <div class="table">
+        
+                                    
+                                    
+             <div style="clear: both; padding:10px">Log truy cập</div>
+             <form method="post">
+            <table cellspacing="0" id="tbl_new">
+              <thead>
+                <tr>
+                <th>IP</th>
+                  <th>URL</th>
+                  <th>Ngày</th>
+                  <th>Trình duyệt</th>
+                 <th class="selected"><input type="checkbox" class="check-group" /></th>
+                  
+                 
+                </tr>
+              </thead>
+              <tbody>
+              {foreach item=info from=$info1}
+                <tr {if $phim.stt eq 0}class="alt"{/if}>
+                 <td class="hide">{$info.ip}</td>
+                 <td class="joindate" style="text-align:left">{$info.url}</td>
+                  <td class="joindate" style="text-align:center">{$info.date}</td>
+                  <td class="joindate2">{$info.browser} </td>
+                  
+               <td class="selected" style="padding:5px"><input type="checkbox" name="Selected[]" value="{$info.id}" class="check-item" /></td>
+                 
+                
+                </tr>
+               {/foreach}
+              </tbody>
+            </table><br />
+<br />
+            <div class="action">
+									
+<div class="button">
+
+										<input type="submit" name="submit" value="Delete Apply to Selected" onClick="return confirm('Có chắc chắn là bạn muốn thực hiện thao tác này không ?');" class="check-submit" />
+
+									</div>
+									
+
+								</div>
+</form>
+            <!-- pagination -->
+            <div class="pagination">
+           
+              {$page}
+           
+            
+            </div>
+            <!-- end pagination -->
+        </div>
+        <!-- end table -->
+      </div>
+      <!-- end right -->

@@ -1,0 +1,98 @@
+<script src="{$skinpath}/js/jquery.ui.selectmenu.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+			$(document).ready(function () {
+
+				$("input:submit, input:reset").button();
+
+				$("select").selectmenu({
+
+					style: 'dropdown',
+
+					icons: [
+
+						{ find: '.locked', icon: 'ui-icon-locked' },
+
+						{ find: '.unlocked', icon: 'ui-icon-unlocked' },
+
+						{ find: '.folder-open', icon: 'ui-icon-folder-open' }
+
+					]
+
+				});
+
+			});
+			
+			function update_hide(hide,id)
+				{
+					
+					$.ajax({
+							 url:"index.php",
+							 type:"POST",
+							 data:"do=new&action=update_hide&id="+id+"&hide="+hide,
+							 success:function(result){
+								 				if(hide==1)
+												{
+													$("#img0_"+id).show();
+													$("#img1_"+id).hide();
+												}
+												else if(hide==0)
+												{
+													$("#img0_"+id).hide();
+													$("#img1_"+id).show();
+												}
+												
+												
+												
+								 }
+							 })
+				
+				}
+
+		</script>
+      <!-- right -->
+      <div id="right"  class="grid_18">
+        <div class="title">
+        <p>  <h4 style="padding-bottom:10px">Chi tiết bình luận</h4></p><br>
+         
+        </div>
+        
+        <div id="table">
+        {foreach item=info2 from=$info1}
+        <table cellspacing="2" cellpadding="2" id="tbl_order">
+            
+                <tr>
+                 
+                 <td class="n">Họ tên </td><td class="k">{$info2.name}</td></tr>
+                <tr><td class="n">Email </td><td class="k">{$info2.email}</td></tr>
+               <tr><td class="n">Tiêu đề</td><td class="k">{$info2.title}</td></tr>
+                <tr><td class="n">Thuộc bản tin </td><td class="k">{$info2.name_parent}</td></tr>
+                <tr><td class="n">Nội dung </td><td class="k">{$info2.body}</td></tr>
+                <tr><td class="n">Ngày </td><td class="k" >{$info2.date_Format}</td>
+                 <tr><td class="n">Thuộc module </td><td class="k" >{$info2.name_module}</td>
+                 <tr><td class="n">Ngôn ngữ </td><td class="k" >{$info2.lang}</td>
+                </tr>
+             </table>
+        {/foreach}
+        
+        
+        </div>
+        
+        <div class="table">
+        
+                                    
+                                    
+             <div style="clear: both">&nbsp;</div>
+           
+            <!-- pagination -->
+            <div class="pagination">
+           
+              {$page}
+           
+            
+            </div>
+            <!-- end pagination -->
+        </div>
+        <!-- end table -->
+      </div>
+      <!-- end right -->

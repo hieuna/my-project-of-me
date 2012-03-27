@@ -1,0 +1,116 @@
+<script src="{$skinpath}/js/jquery.ui.selectmenu.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+			$(document).ready(function () {
+
+				$("input:submit, input:reset").button();
+
+				$("select").selectmenu({
+
+					style: 'dropdown',
+
+					icons: [
+
+						{ find: '.locked', icon: 'ui-icon-locked' },
+
+						{ find: '.unlocked', icon: 'ui-icon-unlocked' },
+
+						{ find: '.folder-open', icon: 'ui-icon-folder-open' }
+
+					]
+
+				});
+
+			});
+			
+			function update_hide(hide,id)
+				{
+					
+					$.ajax({
+							 url:"check_ajax.php",
+							 type:"POST",
+							 data:"tbl=post&do=update_hide&id="+id+"&hide="+hide,
+							 success:function(result){
+								 				if(hide==1)
+												{
+													$("#img0_"+id).show();
+													$("#img1_"+id).hide();
+												}
+												else if(hide==0)
+												{
+													$("#img0_"+id).hide();
+													$("#img1_"+id).show();
+												}
+												
+												
+												
+								 }
+							 })
+				
+				}
+
+		</script>
+      <!-- right -->
+      <div id="right"  class="grid_18">
+        <div class="title">
+          <h4>Danh sách giao diện</h4>
+          <div class="button"> <a href="index.php?do=template&action=addtemp&id_module={$id_module}">Thêm giao diện mới</a> </div>
+        </div>
+        <div class="table">
+      
+                                    
+                                    
+             <div style="clear: both">&nbsp;</div>
+             <form method="post">
+            <table cellspacing="0" id="tbl_new">
+              <thead>
+                <tr>
+                 
+                  <th>Tiêu đề</th>
+                  <th>Hiển thị</th>
+                  <th>Action</th>
+                  <th class="selected"><input type="checkbox" class="check-group" /></th>
+                </tr>
+              </thead>
+              <tbody>
+              {foreach item=info from=$info1}
+                <tr {if $phim.stt eq 0}class="alt"{/if}>
+                 
+                  <td class="joindate" style="text-align:left">{$info.title}</td>
+                  
+                
+                  <td class="hide">
+                  <strong id="img_hide{$pri.id}"><img {if $info.hide eq 0} style="display:none"{/if}  id="img0_{$info.id}" onclick="update_hide(0,{$info.id})" src="{$skinpath}/images/tick1.png" />  <img {if $info.hide eq 1} style="display:none"{/if} id="img1_{$info.id}" onclick="update_hide(1,{$info.id})" src="{$skinpath}/images/publish_x.png" /> </strong>
+                  
+                  </td>
+                  <td class="action2"><a href="index.php?do=template&action=edittemp&id={$info.id}&id_module={$id_module}"><img src="{$skinpath}/images/edit.png" title="Sửa giao diện" /></a>&nbsp;&nbsp;&nbsp;<a onClick="return confirm('B&#7841;n c&#243; ch&#7855;c ch&#7855;n mu&#7889;n x&#243;a kh&#244;ng ?');" href="index.php?do=template&action=deltemp&id={$info.id}&id_module={$id_module}"><img src="{$skinpath}/images/delete.png" title="Xóa gallary" /></a></td>
+                  <td class="selected"><input type="checkbox" name="Selected[]" value="{$info.id}" class="check-item" /></td>
+                </tr>
+               {/foreach}
+              </tbody>
+            </table><br />
+<br />
+            <div class="action">
+									
+
+									<div class="button">
+
+										<input type="submit" name="submit" value="Delete Apply to Selected" onClick="return confirm('Có chắc chắn là bạn muốn thực hiện thao tác này không ?');" class="check-submit" />
+
+									</div>
+
+
+								</div>
+</form>
+            <!-- pagination -->
+            <div class="pagination">
+           
+              {$page}
+           
+            
+            </div>
+            <!-- end pagination -->
+        </div>
+        <!-- end table -->
+      </div>
+      <!-- end right -->
