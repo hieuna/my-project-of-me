@@ -23,6 +23,9 @@ html {
 body{
 	margin: 0; padding: 0;
 }
+img{
+	border: none;
+}
 .body {
     background: url("../images/bg.png") repeat;
     font-family: Arial;
@@ -93,40 +96,37 @@ body{
     padding: 0;
 }
 .menu-nav li {
-    float: left; height: 26px; line-height: 26px;
+    float: left; height: 26px; line-height: 26px; margin-right: 3px;
 }
 .menu-nav li:last-child {
 	margin-right: 0;
 }
 .menu-nav li a {
-    color: #fff; font-size: 11px; font-weight: bold; cursor: pointer; display: inline-block; height: 26px; padding-left: 6px;
+    color: #fff; font-size: 11px; font-weight: bold; cursor: pointer; display: inline-block; height: 24px; line-height: 24px; padding-left: 6px;
 }
 .menu-nav li a span{
-	height: 26px; padding-right: 6px; display: inline-block;
+	height: 24px; padding-right: 6px; display: inline-block;
 }
-.menu-nav li#current a, .menu-nav li a:hover {
-    background: url("../images/bg-button.png") no-repeat top left; color: #2D5362; text-shadow: none;
-}
-.menu-nav li#current a span, .menu-nav li a:hover span {
-    background: url("../images/bg-button.png") no-repeat 100% -26px transparent;
+.menu-nav li#current a, .menu-nav li a:hover , .menu-nav li.active a{
+    background: #fff; color: #2D5362; text-shadow: none; 
 }
 .menu-nav li ul{
 	position: absolute; top: 25px; height: 25px; overflow: hidden; left: 0; margin: 0; padding: 0; width: 980px; margin: 0 auto; text-align: center;
 }
-.menu-nav li ul li{
+.menu-nav li.active ul li, .menu-nav li#current ul li{
 	list-style: none; display: inline-block;
 }
-.menu-nav li#current li a, .menu-nav li#current li a span{
-	background: none;
+.menu-nav li.active ul li a, .menu-nav li ul li#current a, .menu-nav li.active ul li.active a{
+	background: none; color:#990406; font-weight: normal;
 }
-.menu-nav li#current li a{
-	text-decoration: none; color: #a0001d; font-weight: normal;
+.menu-nav li.active ul li a, .menu-nav li#current ul li a{
+	color: #990406;
 }
-.menu-nav li#current li a: hover{
-	text-decoration: underline;
+.menu-nav li.active ul li a:hover, .menu-nav li.active ul li.active a:hover, .menu-nav li#current ul li a:hover{
+	color: #f36f21;
 }
-.menu-nav li#current li a span:hover{
-	color: #e36c0a;
+.menu-nav li.active ul li#current a{
+	color: #f36f21; font-weight: bold;	
 }
 .master {
     background-color: #FFFFFF;
