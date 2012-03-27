@@ -4,7 +4,10 @@ form {
 html {
     height: 100%;
 }
-.clearfix, .clr {
+.clearfix{
+    display: block;
+}
+.clr {
     display: block;
     width: 100%;
 }
@@ -198,6 +201,9 @@ img{
 .img130 {
     float: left; margin-right: 5px; padding: 2px; width: 130px; border: 1px solid #D8D8D8;
 }
+.img45 {
+	float: left; margin-right: 5px; padding: 1px; width: 45px; border: 1px solid #D8D8D8;
+}
 .mt0 p{
 	margin: 0;
 }
@@ -208,7 +214,7 @@ img{
 	margin: 0; padding: 0; list-style: none;
 }
 .box_adver_vuong{
-	background: #F3F3F3; padding: 10px 5px 0px 5px; float: left;
+	background: #F3F3F3; padding: 5px 5px 0px 5px; float: left;
 }
 /*-- FOR JOOMLA --*/
 .bannergroup_text{
@@ -309,6 +315,41 @@ span.article_separator{
 }
 .blog_more ul li a:hover{
 	color: #4f82ac;
+}
+/*-- module mostread --*/
+.box_modules{
+	padding: 0; margin: 0; padding-bottom: 10px; float: left;
+}
+.box_modules .title_box_modules{
+	height: 25px; background: url("../images/bgr_menu.jpg") repeat-x; padding-left: 10px; color: #fff; font-weight: bold; text-transform: uppercase; text-shadow: 1px -1px 1px #333; padding-top: 10px;
+}
+ul.mostread{
+	margin: 0; padding: 0;
+}
+ul.mostread li{
+	list-style: none; padding: 5px; text-align: left; clear: both;
+}
+ul.mostread li a{
+	color: #004175; text-decoration: none;
+}
+ul.mostread li a:hover{
+	color: #4F82AC;
+}
+/*-- table focus --*/
+table.focus{
+	margin: 0; padding: 0; border: 1px solid #D8D8D8; background: #fff;
+}
+table.focus td{
+	padding: 8px 5px; text-align: left;
+}
+table.focus td.bdr{
+	border-right: 1px solid #D8D8D8;
+}
+table.focus td a{
+	color: #004175; text-decoration: none;
+}
+table.focus td a:hover{
+	color: #4F82AC;
 }
 /*-- END FOR JOOMLA --*/
 
