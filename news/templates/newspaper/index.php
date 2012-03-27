@@ -125,6 +125,7 @@ $view 		= JRequest::getString('view', '', 'GET');
 															<jdoc:include type="modules" name="news-adver4" />
 														</div>
 														<jdoc:include type="modules" name="news-adver5" />
+														<jdoc:include type="modules" name="news-bottommiddle" />
 													</div>
 												</div>
 												<div class="fr wid210 text_center">
