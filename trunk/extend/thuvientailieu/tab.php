@@ -24,6 +24,7 @@
         <li><a href="#">{vb:rawphrase vinavb_payment_sms}</a></li>
         {vb:raw template_hook.vinavb_payment_tab}
 		<li><a style="cursor: pointer;">Nạp tiền qua SohaPay</a></li>
+		<li><a style="cursor: pointer;">Nạp thẻ cào qua SohaPay</a></li>
     </ul>
     <div class="panes clearfix">
         <section>
@@ -44,22 +45,12 @@
 							alert('Vui lòng nhập số tiền lớn hơn 0');
 							form.price_shp.focus();
 							return false;
-						}
-						else if (form.email_shp.value==''){
-							alert('vui lòng nhập địa chỉ email !');
-							form.email.focus();
-							return false;
-						}
-						else if (form.email_shp.value.indexOf('@',0) == -1 || form.email_shp.value.indexOf('.',0) == -1){
-							alert("Địa chỉ email không hợp lệ !") ;
-							form.email.select() ;
-							return false ;
-						}
+						}						
 						return true;
-						}
+					}
 					</script>
 					<form action="http://thuvientailieu.net/API/sohapay_api.php" method="POST" name="shp_form" onsubmit="javascript:return check(this);">
-						<table cellpadding="5" cellspacing="5" border="0">
+						<table cellpadding="5" cellspacing="5" border="0" align="center">
 							<tr>
 								<td valign="top">Nhập số tiền cần nạp</td>
 								<td valign="top" style="padding-left: 10px;">
@@ -70,30 +61,75 @@
 								<td colspan="2" style="height: 10px;"></td>
 							</tr>
 							<tr>
-								<td valign="top">Email của bạn</td>
-								<td valign="top" style="padding-left: 10px;">
-									<input type="text" name="email_shp" value="" style="height:30px;width:200px" />
-								</td>
-							</tr>
-							<tr>
-								<td colspan="2" style="height: 10px;"></td>
-							</tr>
-							<tr>
-								<td valign="top">Số điện thoại của bạn</td>
-								<td valign="top" style="padding-left: 10px;">
-									<input type="text" name="phone_shp" value="" style="height:30px;width:200px" />
-								</td>
-							</tr>
-							<tr>
-								<td colspan="2" style="height: 10px;"></td>
-							</tr>
-							<tr>
 								<td></td>
-								<td valign="top" style="padding-left: 10px;"><input type="submit" style="width:80px;height:30px" value="Nạp Thẻ" name="sbNapThe"></td>
+								<td valign="top" style="padding-left: 10px;"><input type="submit" style="width:80px;height:30px" value="Nạp Tiền" name="sbNapThe"></td>
 							</tr>
 							<input type="hidden" name="hid" value="1" />
 							<input type="hidden" name="userid" value="{vb:raw bbuserinfo.userid}" />
+							<input type="hidden" name="user_email" value="{vb:raw bbuserinfo.email}" />
 						</table>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- THE CAO -->
+		<section>
+			<div class="section">
+				<div class="blockrow">
+					<script type="text/javascript">
+					var form = document.shp_form2;
+					function check(form){					
+						if (form.price_shp.value == "" || form.price_shp.value == 0){
+							alert('Vui lòng nhập số tiền lớn hơn 0');
+							form.price_shp.focus();
+							return false;
+						}						
+						return true;
+					}
+					</script>
+					<form name="payment" method="post" action="http://thuvientailieu.net/API/naptheshp_api.php">
+					<table border="0" cellpadding="5" cellspacing="5" align="center">
+						<tr>
+							<td align="right" valign="top"><font color="red">(*)</font> Di Động khách hàng</td>
+							<td align="left" valign="top" style="padding-left: 10px;"><input type="text" value="" name="order_mobile" style="height:30px;width:200px" /></td>
+						</tr>
+						<tr>
+							<td colspan="2" style="height: 10px;"></td>
+						</tr>
+						<tr>
+							<td align="right" valign="top"><font color="red">(*)</font> Loại thẻ</td>
+							<td align="left" valign="top" style="padding-left: 10px;">
+								<select name="card_type" onchange="javascript:if(this.value=='vcoin' || this.value=='viettel'){document.getElementById('cardSeri').style.display='block';}else{document.getElementById('cardSeri').style.display='none';}">
+									<option value='vinaphone'>vinaphone</option>
+									<option value='mobifone'>mobifone</option>
+									<option value='viettel'>viettel</option>
+									<option selected="selected" value='vcoin'>thẻ Vcoin</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="height: 10px;"></td>
+						</tr>
+						<tr>
+							<td align="right" valign="top"><font color="red">(*)</font> Số seri</td>
+							<td align="left" valign="top" style="padding-left: 10px;"><input id="cardSeri" type="text" value="" name="card_seri" style="height:30px;width:200px" /></td>
+						</tr>
+						<tr>
+							<td colspan="2" style="height: 10px;"></td>
+						</tr>
+						<tr>
+							<td align="right" valign="top"><font color="red">(*)</font> Mã thẻ</td>
+							<td align="left" valign="top" style="padding-left: 10px;"><input type="text" value="" name="card_code" style="height:30px;width:200px" /><br /><small>(Phải là chữ số, nhiều hơn 11 ký tự)</small></td>
+						</tr>
+						<tr>
+							<td colspan="2" style="height: 10px;"></td>
+						</tr>						
+						<tr><td colspan="2" valign="top" align="center" style="padding-left: 10px;"><input type="submit" value="Nạp thẻ" style="width:80px;height:30px" name="submit" /></td></tr>
+						<input type="hidden" name="hid" value="1" />
+						<input type="hidden" name="userid" value="{vb:raw bbuserinfo.userid}" />
+						<input type="hidden" name="user_email" value="{vb:raw bbuserinfo.email}" />
+						<input type="hidden" name="user_name" value="{vb:raw bbuserinfo.username}" />
+					</table>
 					</form>
 				</div>
 			</div>
