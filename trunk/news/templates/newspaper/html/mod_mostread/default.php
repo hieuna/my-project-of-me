@@ -1,7 +1,7 @@
 <?php // no direct access
 defined('_JEXEC') or die('Restricted access');
 $baseurl = JURI::base();
-//var_dump($list); 
+if(count($list)>0){ 
 ?>
 <div class="box_modules clearfix">
 	<div class="title_box_modules">Bài đọc nhiều nhất</div>
@@ -22,3 +22,4 @@ $baseurl = JURI::base();
 	<?php endforeach; ?>
 	</ul>
 </div>
+<?php }?>

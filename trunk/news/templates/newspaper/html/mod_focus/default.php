@@ -1,7 +1,7 @@
 <?php // no direct access
 defined('_JEXEC') or die('Restricted access');
 $baseurl = JURI::base();
-//var_dump($list); 
+if(count($list)>0){
 ?>
 <div class="box_modules clearfix">
 	<div class="title_box_modules">Tiêu điểm</div>
@@ -38,3 +38,4 @@ $baseurl = JURI::base();
 		</tr>
 	</table>
 </div>
+<?php }?>
