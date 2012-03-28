@@ -1,0 +1,8 @@
+.icon-48-home {
+	color:red;
+	background-image:url("images/annonce48x48.gif");
+}
+
+.icon-16-annonces {
+	background:url("../administrator/components/com_annonces/assets/images/boat.jpg") no-repeat scroll 0 0 transparent;
+}

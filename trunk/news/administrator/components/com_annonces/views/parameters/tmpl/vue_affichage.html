@@ -1,0 +1,100 @@
+<table class="noshow">
+      <tr>
+        <td width="50%">
+        	<fieldset class="adminform">
+				<legend><?php echo JText::_( 'GENERAL' ); ?></legend>
+				<table class="adminForm">
+					
+					<tr>
+						<td width="50%">
+							<label for="headerBgColor">
+								<?php echo JText::_( 'ADS_HEAD_BGCOLOR' ).':'; ?>
+							</label>
+						</td>
+						<td>
+							 <input class="inputbox required" type="text" id="headerBgColor" name="headerBgColor" value="<?php echo $this->parametres->headerBgColor ?>" size="10" maxlength="7" />
+						</td>
+						<td><label>
+						</td>
+					</tr>
+					
+				</table>
+			</fieldset>
+			
+			<fieldset class="adminform">
+			<legend><?php echo JText::_( 'DIPLAY ADS' ); ?></legend>
+				
+				<table class="adminForm">
+					<tr>
+						<td width="50%">
+							<label for="nbpage">
+								<?php echo JText::_( 'NB_PAGE' ).':'; ?>
+							</label>
+						</td>
+						<td>
+							 <input class="inputbox required" type="text" id="nbpage" name="nbpage" value="<?php echo $this->parametres->nbpage ?>" size="5" maxlength="3" />
+						</td>
+						<td><label>
+						</td>
+					</tr>
+					
+					
+				</table>
+				
+			</fieldset>
+			
+			<fieldset class="adminform">
+				<legend><?php echo JText::_( 'DIPLAY AD' ); ?></legend>
+				
+				<table class="adminForm">
+					<tr>
+						<td width="50%">
+							<label for="nbpage">
+								<?php echo JText::_( 'ADS VIEW LAYOUT' ).':'; ?>
+							</label>
+						</td>
+						<td>
+							  <?php
+			                	echo JHTML::_('select.genericlist', Util::viewDetailLayoutList(), 'viewDetailLayout','size="1"', 'value', 'text', $this->parametres->viewDetailLayout );
+		          		?>
+						</td>
+						<td><label>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<label for="nbpage">
+								<?php echo JText::_( 'SEARCH ACTIVE' ).':'; ?>
+							</label>
+						</td>
+						<td>
+							<?php
+								echo JHTML::_('select.booleanlist','searchActive','class="inputbox"',$this->parametres->searchActive); 
+							?>	 
+						</td>
+						<td><label>
+						</td>
+					</tr>
+					
+					<tr>
+						<td width="50%">
+							<label for="nbpage">
+								<?php echo JText::_( 'ENABLE SUBMIT AD IN LIST' ).':'; ?>
+							</label>
+						</td>
+						<td>
+							<?php
+								echo JHTML::_('select.booleanlist','unableSubmitAdInList','class="inputbox"',$this->parametres->unableSubmitAdInList); 
+							?>	 
+						</td>
+						<td><label>
+						</td>
+					</tr>
+					
+					
+					
+				</table>
+			</fieldset>
+		</td>
+	</tr>
+</table>
