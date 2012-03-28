@@ -25,12 +25,34 @@ class modFocusHelper
 		$db			=& JFactory::getDBO();
 		$user		=& JFactory::getUser();
 		$userId		= (int) $user->get('id');
+		
+		$view		= JRequest::GetCmd('view', '', 'GET');
+		$id 		= JRequest::getInt('id', 0, 'GET');
 
 		$count		= (int) $params->get('count', 5);
 		$catid		= trim( $params->get('catid') );
 		$secid		= trim( $params->get('secid') );
 		$show_front	= $params->get('show_front', 1);
 		$aid		= $user->get('aid', 0);
+		
+		if ($secid > 0){
+			$sectionID = $secid;
+		}else{
+			if ($view == 'section'){
+				$sectionID = $id;
+			}else{
+				$sectionID = $secid;
+			}
+		}
+		if ($catid > 0){
+			$cateID = $catid;
+		}else{
+			if ($view == 'category'){
+				$cateID = $id;
+			}else{
+				$cateID = $catid;
+			}
+		}
 
 		$contentConfig = &JComponentHelper::getParams( 'com_content' );
 		$access		= !$contentConfig->get('show_noauth');
@@ -68,15 +90,15 @@ class modFocusHelper
 				break;
 		}
 
-		if ($catid)
+		if ($cateID)
 		{
-			$ids = explode( ',', $catid );
+			$ids = explode( ',', $cateID );
 			JArrayHelper::toInteger( $ids );
 			$catCondition = ' AND (cc.id=' . implode( ' OR cc.id=', $ids ) . ')';
 		}
-		if ($secid)
+		if ($sectionID)
 		{
-			$ids = explode( ',', $secid );
+			$ids = explode( ',', $sectionID );
 			JArrayHelper::toInteger( $ids );
 			$secCondition = ' AND (s.id=' . implode( ' OR s.id=', $ids ) . ')';
 		}
@@ -93,8 +115,8 @@ class modFocusHelper
 			' AND ( a.publish_up = '.$db->Quote($nullDate).' OR a.publish_up <= '.$db->Quote($now).' )' .
 			' AND ( a.publish_down = '.$db->Quote($nullDate).' OR a.publish_down >= '.$db->Quote($now).' )'.
 			($access ? ' AND a.access <= ' .(int) $aid. ' AND cc.access <= ' .(int) $aid. ' AND s.access <= ' .(int) $aid : '').
-			($catid ? $catCondition : '').
-			($secid ? $secCondition : '').
+			($cateID ? $catCondition : '').
+			($sectionID ? $secCondition : '').
 			($show_front == '0' ? ' AND f.content_id IS NULL' : '').
 			' AND a.hot = 1'.
 			' AND s.published = 1' .
