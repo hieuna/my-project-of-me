@@ -6,13 +6,13 @@ class JConfig {
 	var $helpurl = 'http://help.joomla.org';
 	var $debug = '0';
 	var $debug_lang = '0';
-	var $sef = '0';
-	var $sef_rewrite = '0';
-	var $sef_suffix = '0';
-	var $feed_limit = '10';
+	var $sef = '1';
+	var $sef_rewrite = '1';
+	var $sef_suffix = '1';
+	var $feed_limit = '20';
 	var $feed_email = 'author';
 	var $secret = 'L5KxL9y7wCX4PkbX';
-	var $gzip = '0';
+	var $gzip = '1';
 	var $error_reporting = '-1';
 	var $xmlrpc_server = '0';
 	var $log_path = 'D:\\AppServ\\www\\projects\\news\\logs';
@@ -20,7 +20,7 @@ class JConfig {
 	var $live_site = '';
 	var $force_ssl = '0';
 	var $offset = '0';
-	var $caching = '0';
+	var $caching = '1';
 	var $cachetime = '15';
 	var $cache_handler = 'file';
 	var $memcache_settings = array();
@@ -37,7 +37,7 @@ class JConfig {
 	var $dbprefix = 'jos_';
 	var $mailer = 'mail';
 	var $mailfrom = 'ngockv@gmail.com';
-	var $fromname = 'Cổng Truyền Thông Thông Tin';
+	var $fromname = 'Tạp chí doanh nhân Việt';
 	var $sendmail = '/usr/sbin/sendmail';
 	var $smtpauth = '0';
 	var $smtpsecure = 'none';
@@ -50,9 +50,9 @@ class JConfig {
 	var $lifetime = '15';
 	var $session_handler = 'database';
 	var $password = 'ngockv842006';
-	var $sitename = 'Cổng Truyền Thông Thông Tin';
-	var $MetaDesc = 'Cổng thông tin';
-	var $MetaKeys = 'cổng thông tin, cong thong tin, thong tin';
+	var $sitename = 'Tạp chí doanh nhân Việt';
+	var $MetaDesc = 'Tạp chí doanh nhân Việt';
+	var $MetaKeys = 'Tạp chí doanh nhân Việt, tạp chí doanh nhân, doanh nhân, doanh nhân Việt, doanh nhan, tap chi';
 	var $offline_message = 'Website đang nâng cấp phiên bản. Xin vui lòng quay lại ghé thăm sau.';
 }
 ?>
