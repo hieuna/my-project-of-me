@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Mar 28, 2012 at 01:51 AM
+-- Generation Time: Mar 29, 2012 at 01:05 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -12,6 +12,104 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- 
 -- Database: `database_projects`
 -- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_annonces`
+-- 
+
+CREATE TABLE `jos_annonces` (
+  `id` int(11) NOT NULL auto_increment,
+  `etatneuf` tinyint(1) NOT NULL,
+  `categorie` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `constructeur` varchar(100) default NULL,
+  `objet` varchar(100) NOT NULL,
+  `villeObjet` varchar(60) NOT NULL,
+  `annee` int(11) default NULL,
+  `longueur` float default NULL,
+  `largeur` float default NULL,
+  `prix` int(11) default NULL,
+  `vendeurId` int(11) NOT NULL,
+  `telephone` varchar(20) default NULL,
+  `portable` varchar(20) NOT NULL,
+  `approuved` tinyint(1) NOT NULL,
+  `published` tinyint(1) NOT NULL,
+  `description` mediumtext NOT NULL,
+  `propriete1` varchar(50) default NULL,
+  `propriete2` varchar(50) default NULL,
+  `propriete3` varchar(50) default NULL,
+  `propriete4` varchar(50) default NULL,
+  `propriete5` varchar(50) default NULL,
+  `hits` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- 
+-- Dumping data for table `jos_annonces`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_annonces_categories`
+-- 
+
+CREATE TABLE `jos_annonces_categories` (
+  `id` int(11) unsigned NOT NULL auto_increment,
+  `catname` varchar(100) NOT NULL default '',
+  `alias` varchar(100) NOT NULL default '',
+  `catdescription` mediumtext NOT NULL,
+  `meta_keywords` text NOT NULL,
+  `meta_description` text NOT NULL,
+  `published` tinyint(1) NOT NULL default '0',
+  `access` int(11) unsigned NOT NULL default '0',
+  `ordering` int(11) NOT NULL default '0',
+  `showYear` tinyint(1) NOT NULL,
+  `showDimensions` tinyint(1) NOT NULL,
+  `showConstructor` tinyint(1) NOT NULL,
+  `property1` varchar(50) NOT NULL,
+  `property2` varchar(50) NOT NULL,
+  `property3` varchar(50) NOT NULL,
+  `property4` varchar(50) NOT NULL,
+  `property5` varchar(50) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- 
+-- Dumping data for table `jos_annonces_categories`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_annonces_parameters`
+-- 
+
+CREATE TABLE `jos_annonces_parameters` (
+  `id` int(11) NOT NULL,
+  `published_days` int(11) NOT NULL,
+  `currency` varchar(6) NOT NULL,
+  `dateFormat` varchar(20) NOT NULL,
+  `metric` varchar(20) NOT NULL,
+  `headerBgColor` varchar(7) NOT NULL,
+  `updateEmailNotification` tinyint(1) NOT NULL,
+  `searchActive` tinyint(1) default '1',
+  `unableSubmitAdInList` tinyint(1) default '1',
+  `adminValidation` tinyint(1) default '1',
+  `nbpage` int(11) default '10',
+  `viewDetailLayout` varchar(10) default 'default',
+  `maxSize` int(11) default '3000'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Dumping data for table `jos_annonces_parameters`
+-- 
+
+INSERT INTO `jos_annonces_parameters` VALUES (1, 0, '&euro;', '%d/%m/%Y', 'm', '#FA3E4C', 0, 1, 1, 1, 10, 'default', 3000);
 
 -- --------------------------------------------------------
 
@@ -91,17 +189,17 @@ CREATE TABLE `jos_banner` (
 -- Dumping data for table `jos_banner`
 -- 
 
-INSERT INTO `jos_banner` VALUES (1, 1, '', 'Banner quảng cáo 1', 'banner-quang-cao-1', 0, 920, 0, '', 'http://www.opensourcematters.org', '2012-03-22 10:31:48', 1, 0, '0000-00-00 00:00:00', '', '<embed align="middle" height="250" width="300" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1017784%26adm_aditem%3D108372%26adm_zoneid%3D256%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fcitc.edu.vn%2Findex.php%2Fkhoa-hoc-sap-toi%26adm_random%3D0.35882386759139795&amp;atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/14_csu_mba_300x250.swf">', 51, '', 0, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
-INSERT INTO `jos_banner` VALUES (2, 1, '', 'Banner quảng cáo 3', 'banner-quang-cao-3', 0, 917, 0, '', 'http://www.opensourcematters.org', '2012-03-22 10:33:24', 1, 0, '0000-00-00 00:00:00', '', '<embed align="middle" height="250" width="300" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1018560%26adm_aditem%3D112999%26adm_zoneid%3D226%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fnhahanghuongsen.com.vn%2F30-17-202-1009%2Ftin-khuyen-mai%2Fkhuyen-mai-thang-tri-an-khach-hang.html%26adm_random%3D0.4585176340314455&amp;atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/huongsen2_300x250.swf">', 51, '', 0, 2, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
-INSERT INTO `jos_banner` VALUES (3, 1, '', 'Banner quảng cáo 2', 'banner-quang-cao-2', 0, 896, 0, '', 'http://www.joomla.org', '2012-03-22 10:32:24', 1, 0, '0000-00-00 00:00:00', '', '<embed align="middle" height="125" width="300" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1018214%26adm_aditem%3D111384%26adm_zoneid%3D226%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fusth.edu.vn%2Fvi%2Fadmission%2F%26adm_random%3D0.00917030307085187&amp;atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/usth_vne_300x125_1.swf">', 51, '', 0, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
-INSERT INTO `jos_banner` VALUES (4, 1, '', 'Quảng cáo 1', 'quang-cao1', 0, 721, 0, '', 'http://joomlacode.org', '2012-03-22 17:14:57', 1, 0, '0000-00-00 00:00:00', '', '<embed align="middle" width="200" height="270" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2Fc26%2Fthethao.htm%26adm_campaign%3D1018067%26adm_aditem%3D110318%26adm_zoneid%3D228%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fwww.budweiser.vn%2F%26adm_random%3D0.7801478474930832&atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/16_budweiser_180x270-2.swf">', 52, '', 0, 2, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
-INSERT INTO `jos_banner` VALUES (5, 1, '', 'Quảng cáo 2', 'quang-cao2', 0, 712, 0, '', 'http://extensions.joomla.org', '2012-03-22 17:15:04', 1, 0, '0000-00-00 00:00:00', '', '<embed align="middle" width="200" height="270" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1018476%26adm_aditem%3D112621%26adm_zoneid%3D228%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fwww.dongabank.com.vn%2Fservice%2F1185%2Fdonga-bank-trien-khai-chuong-trinh-khuyen-mai-tich-luy-an-tam-ca-nha-trung-lon%26adm_random%3D0.10066033106004446&atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/21_donga_180x270.swf">', 52, '', 0, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
-INSERT INTO `jos_banner` VALUES (6, 1, '', 'Quảng cáo 3', 'quang-cao3', 0, 709, 0, '', 'http://shop.joomla.org', '2012-03-22 17:17:20', 1, 0, '0000-00-00 00:00:00', '', '<embed align="middle" width="200" height="245" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1017942%26adm_aditem%3D109416%26adm_zoneid%3D228%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fwww.seabank.com.vn%2Findex.php%253Foption%253Dcom_content%257Ctask%253Dview%257Cid%253D1838%257CItemid%253D865%26adm_random%3D0.7073634481462505&atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/22_seabank_180x270.swf">', 52, '', 0, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
-INSERT INTO `jos_banner` VALUES (7, 1, '', 'Banner quảng cáo 4', 'banner-quang-cao-4', 0, 872, 1, 'shop-ad.jpg', 'http://shop.joomla.org', '2012-03-22 10:36:07', 1, 0, '0000-00-00 00:00:00', '', '<embed height="250" width="300" allowscriptaccess="always" wmode="transparent" loop="true" play="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="link=http%3A//180.148.142.153/clk.aspx%3Flg%3D-1%26t%3D5%26i%3D0%26b%3D23126%26s%3D1%26r%3D0%26c%3D0%26p%3D0%26n%3D0%26l%3Dhttp%253A//daugac.com/%26uc%3D24%26uv%3Dundefined%26ud%3D1280x1024%26rd%3D0.08846695591118214&amp;zoneid=LargeLogo3&amp;actionTag=http%3A//180.148.142.153/act.aspx%3Ft%3D5%26i%3D0%26b%3D23126%26s%3D1%26r%3D0%26c%3D0%26p%3D0%26n%3D0%26uc%3D24%26uv%3Dundefined%26ud%3D1280x1024%26rd%3D0.22682276123786993" src="http://st.polyad.net/AdImages/2012/03/19/vinaga_300x250_190312(1).swf">', 51, '', 0, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
-INSERT INTO `jos_banner` VALUES (8, 1, '', 'Banner quảng cáo 5', 'banner-quang-cao-5', 0, 877, 0, 'shop-ad-books.jpg', 'http://shop.joomla.org/amazoncom-bookstores.html', '2012-03-22 10:37:09', 1, 0, '0000-00-00 00:00:00', '', '<embed height="250" width="300" allowscriptaccess="always" wmode="transparent" loop="true" play="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="link=http%3A//180.148.142.153/clk.aspx%3Flg%3D-1%26t%3D5%26i%3D0%26b%3D22028%26s%3D1%26r%3D0%26c%3D0%26p%3D0%26n%3D0%26l%3Dhttp%253A//www.trananh.vn/khuyenmai/kmchung/%26uc%3D24%26uv%3Dundefined%26ud%3D1280x1024%26rd%3D0.43207536413369274&amp;zoneid=LargeLogo4&amp;actionTag=http%3A//180.148.142.153/act.aspx%3Ft%3D5%26i%3D0%26b%3D22028%26s%3D1%26r%3D0%26c%3D0%26p%3D0%26n%3D0%26uc%3D24%26uv%3Dundefined%26ud%3D1280x1024%26rd%3D0.510112874453014" src="http://st.polyad.net/AdImages/2012/03/19/TranAnh_300x250_180312_2.swf">', 51, '', 0, 4, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
-INSERT INTO `jos_banner` VALUES (9, 1, '', 'Banner khung nổi bật', 'banner-khung-noi-bat', 0, 327, 0, '', '', '2012-03-23 09:54:13', 1, 0, '0000-00-00 00:00:00', '', '<embed width="980" height="480" src="http://dantri1.vcmedia.vn/uploaded/guest/03.2012/dhnt_980x480code.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" flashvars="div_id=rich_dhnt" allowscriptaccess="always" quality="high">', 53, '', 0, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
-INSERT INTO `jos_banner` VALUES (10, 2, '', 'Banner quảng cáo top', 'banner-quang-cao-top', 0, 335, 0, 'muachung122011980x90.jpg', 'http://spazioshop.vn', '2012-03-24 03:37:45', 1, 0, '0000-00-00 00:00:00', '', '', 54, '', 1, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=1004\nheight=300');
-INSERT INTO `jos_banner` VALUES (11, 1, '', 'Banner header', 'banner-header', 0, 294, 0, 'samsung_364x90_220312.jpg', 'http://www.cbrevietnam.com/', '2012-03-24 13:21:36', 1, 0, '0000-00-00 00:00:00', '', '', 55, '', 0, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
+INSERT INTO `jos_banner` VALUES (1, 1, '', 'Banner quảng cáo 1', 'banner-quang-cao-1', 0, 949, 0, '', 'http://www.opensourcematters.org', '2012-03-22 10:31:48', 1, 0, '0000-00-00 00:00:00', '', '<embed align="middle" height="250" width="300" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1017784%26adm_aditem%3D108372%26adm_zoneid%3D256%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fcitc.edu.vn%2Findex.php%2Fkhoa-hoc-sap-toi%26adm_random%3D0.35882386759139795&amp;atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/14_csu_mba_300x250.swf">', 51, '', 0, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
+INSERT INTO `jos_banner` VALUES (2, 1, '', 'Banner quảng cáo 3', 'banner-quang-cao-3', 0, 946, 0, '', 'http://www.opensourcematters.org', '2012-03-22 10:33:24', 1, 0, '0000-00-00 00:00:00', '', '<embed align="middle" height="250" width="300" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1018560%26adm_aditem%3D112999%26adm_zoneid%3D226%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fnhahanghuongsen.com.vn%2F30-17-202-1009%2Ftin-khuyen-mai%2Fkhuyen-mai-thang-tri-an-khach-hang.html%26adm_random%3D0.4585176340314455&amp;atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/huongsen2_300x250.swf">', 51, '', 0, 2, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
+INSERT INTO `jos_banner` VALUES (3, 1, '', 'Banner quảng cáo 2', 'banner-quang-cao-2', 0, 925, 0, '', 'http://www.joomla.org', '2012-03-22 10:32:24', 1, 0, '0000-00-00 00:00:00', '', '<embed align="middle" height="125" width="300" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1018214%26adm_aditem%3D111384%26adm_zoneid%3D226%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fusth.edu.vn%2Fvi%2Fadmission%2F%26adm_random%3D0.00917030307085187&amp;atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/usth_vne_300x125_1.swf">', 51, '', 0, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
+INSERT INTO `jos_banner` VALUES (4, 1, '', 'Quảng cáo 1', 'quang-cao1', 0, 750, 0, '', 'http://joomlacode.org', '2012-03-22 17:14:57', 1, 0, '0000-00-00 00:00:00', '', '<embed align="middle" width="200" height="270" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2Fc26%2Fthethao.htm%26adm_campaign%3D1018067%26adm_aditem%3D110318%26adm_zoneid%3D228%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fwww.budweiser.vn%2F%26adm_random%3D0.7801478474930832&atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/16_budweiser_180x270-2.swf">', 52, '', 0, 2, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
+INSERT INTO `jos_banner` VALUES (5, 1, '', 'Quảng cáo 2', 'quang-cao2', 0, 741, 0, '', 'http://extensions.joomla.org', '2012-03-22 17:15:04', 1, 0, '0000-00-00 00:00:00', '', '<embed align="middle" width="200" height="270" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1018476%26adm_aditem%3D112621%26adm_zoneid%3D228%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fwww.dongabank.com.vn%2Fservice%2F1185%2Fdonga-bank-trien-khai-chuong-trinh-khuyen-mai-tich-luy-an-tam-ca-nha-trung-lon%26adm_random%3D0.10066033106004446&atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/21_donga_180x270.swf">', 52, '', 0, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
+INSERT INTO `jos_banner` VALUES (6, 1, '', 'Quảng cáo 3', 'quang-cao3', 0, 738, 0, '', 'http://shop.joomla.org', '2012-03-22 17:17:20', 1, 0, '0000-00-00 00:00:00', '', '<embed align="middle" width="200" height="245" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1017942%26adm_aditem%3D109416%26adm_zoneid%3D228%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fwww.seabank.com.vn%2Findex.php%253Foption%253Dcom_content%257Ctask%253Dview%257Cid%253D1838%257CItemid%253D865%26adm_random%3D0.7073634481462505&atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/22_seabank_180x270.swf">', 52, '', 0, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
+INSERT INTO `jos_banner` VALUES (7, 1, '', 'Banner quảng cáo 4', 'banner-quang-cao-4', 0, 901, 1, 'shop-ad.jpg', 'http://shop.joomla.org', '2012-03-22 10:36:07', 1, 0, '0000-00-00 00:00:00', '', '<embed height="250" width="300" allowscriptaccess="always" wmode="transparent" loop="true" play="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="link=http%3A//180.148.142.153/clk.aspx%3Flg%3D-1%26t%3D5%26i%3D0%26b%3D23126%26s%3D1%26r%3D0%26c%3D0%26p%3D0%26n%3D0%26l%3Dhttp%253A//daugac.com/%26uc%3D24%26uv%3Dundefined%26ud%3D1280x1024%26rd%3D0.08846695591118214&amp;zoneid=LargeLogo3&amp;actionTag=http%3A//180.148.142.153/act.aspx%3Ft%3D5%26i%3D0%26b%3D23126%26s%3D1%26r%3D0%26c%3D0%26p%3D0%26n%3D0%26uc%3D24%26uv%3Dundefined%26ud%3D1280x1024%26rd%3D0.22682276123786993" src="http://st.polyad.net/AdImages/2012/03/19/vinaga_300x250_190312(1).swf">', 51, '', 0, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
+INSERT INTO `jos_banner` VALUES (8, 1, '', 'Banner quảng cáo 5', 'banner-quang-cao-5', 0, 906, 0, 'shop-ad-books.jpg', 'http://shop.joomla.org/amazoncom-bookstores.html', '2012-03-22 10:37:09', 1, 0, '0000-00-00 00:00:00', '', '<embed height="250" width="300" allowscriptaccess="always" wmode="transparent" loop="true" play="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="link=http%3A//180.148.142.153/clk.aspx%3Flg%3D-1%26t%3D5%26i%3D0%26b%3D22028%26s%3D1%26r%3D0%26c%3D0%26p%3D0%26n%3D0%26l%3Dhttp%253A//www.trananh.vn/khuyenmai/kmchung/%26uc%3D24%26uv%3Dundefined%26ud%3D1280x1024%26rd%3D0.43207536413369274&amp;zoneid=LargeLogo4&amp;actionTag=http%3A//180.148.142.153/act.aspx%3Ft%3D5%26i%3D0%26b%3D22028%26s%3D1%26r%3D0%26c%3D0%26p%3D0%26n%3D0%26uc%3D24%26uv%3Dundefined%26ud%3D1280x1024%26rd%3D0.510112874453014" src="http://st.polyad.net/AdImages/2012/03/19/TranAnh_300x250_180312_2.swf">', 51, '', 0, 4, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
+INSERT INTO `jos_banner` VALUES (9, 1, '', 'Banner khung nổi bật', 'banner-khung-noi-bat', 0, 333, 0, '', '', '2012-03-23 09:54:13', 1, 0, '0000-00-00 00:00:00', '', '<embed width="980" height="480" src="http://dantri1.vcmedia.vn/uploaded/guest/03.2012/dhnt_980x480code.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" flashvars="div_id=rich_dhnt" allowscriptaccess="always" quality="high">', 53, '', 0, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
+INSERT INTO `jos_banner` VALUES (10, 2, '', 'Banner quảng cáo top', 'banner-quang-cao-top', 0, 364, 0, 'muachung122011980x90.jpg', 'http://spazioshop.vn', '2012-03-24 03:37:45', 1, 0, '0000-00-00 00:00:00', '', '', 54, '', 1, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=1004\nheight=300');
+INSERT INTO `jos_banner` VALUES (11, 1, '', 'Banner header', 'banner-header', 0, 319, 0, 'samsung_364x90_220312.jpg', 'http://www.cbrevietnam.com/', '2012-03-24 13:21:36', 1, 0, '0000-00-00 00:00:00', '', '', 55, '', 0, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 'width=0\nheight=0');
 
 -- --------------------------------------------------------
 
@@ -257,7 +355,7 @@ CREATE TABLE `jos_components` (
   `enabled` tinyint(4) NOT NULL default '1',
   PRIMARY KEY  (`id`),
   KEY `parent_option` (`parent`,`option`(32))
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=50 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;
 
 -- 
 -- Dumping data for table `jos_components`
@@ -296,7 +394,7 @@ INSERT INTO `jos_components` VALUES (31, 'User Manager', '', 0, 0, '', 'Users', 
 INSERT INTO `jos_components` VALUES (32, 'Cache Manager', '', 0, 0, '', 'Cache', 'com_cache', 0, '', 1, '', 1);
 INSERT INTO `jos_components` VALUES (33, 'Control Panel', '', 0, 0, '', 'Control Panel', 'com_cpanel', 0, '', 1, '', 1);
 INSERT INTO `jos_components` VALUES (34, 'Xmap', 'option=com_xmap', 0, 0, 'option=com_xmap', 'Xmap', 'com_xmap', 0, 'js/ThemeOffice/component.png', 0, '', 1);
-INSERT INTO `jos_components` VALUES (35, 'JCE', 'option=com_jce', 0, 0, 'option=com_jce', 'JCE', 'com_jce', 0, 'components/com_jce/media/img/menu/logo.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (35, 'JCE', 'option=com_jce', 0, 0, 'option=com_jce', 'JCE', 'com_jce', 0, 'components/com_jce/media/img/menu/logo.png', 0, '{"editor":{"verify_html":"0","entity_encoding":"raw","cleanup_pluginmode":"0","forced_root_block":"p","newlines":"0","content_style_reset":"0","content_css":"1","content_css_custom":"","compress_javascript":"0","compress_css":"0","compress_gzip":"0","use_cookies":"1","custom_config":"","callback_file":""}}', 1);
 INSERT INTO `jos_components` VALUES (36, 'WF_MENU_CPANEL', '', 0, 35, 'option=com_jce', 'WF_MENU_CPANEL', 'com_jce', 0, 'components/com_jce/media/img/menu/jce-cpanel.png', 0, '', 1);
 INSERT INTO `jos_components` VALUES (37, 'WF_MENU_CONFIG', '', 0, 35, 'option=com_jce&view=config', 'WF_MENU_CONFIG', 'com_jce', 1, 'components/com_jce/media/img/menu/jce-config.png', 0, '', 1);
 INSERT INTO `jos_components` VALUES (38, 'WF_MENU_PROFILES', '', 0, 35, 'option=com_jce&view=profiles', 'WF_MENU_PROFILES', 'com_jce', 2, 'components/com_jce/media/img/menu/jce-profiles.png', 0, '', 1);
@@ -311,6 +409,18 @@ INSERT INTO `jos_components` VALUES (46, 'Custom_BBCode', '', 0, 41, 'option=com
 INSERT INTO `jos_components` VALUES (47, 'Blacklist', '', 0, 41, 'option=com_jcomments&task=blacklist', 'Blacklist', 'com_jcomments', 5, 'components/com_jcomments/assets/icon-16-blacklist.png', 0, '', 1);
 INSERT INTO `jos_components` VALUES (48, 'Import', '', 0, 41, 'option=com_jcomments&task=import', 'Import', 'com_jcomments', 6, 'components/com_jcomments/assets/icon-16-import.png', 0, '', 1);
 INSERT INTO `jos_components` VALUES (49, 'About', '', 0, 41, 'option=com_jcomments&task=about', 'About', 'com_jcomments', 7, 'components/com_jcomments/assets/icon-16-jcomments.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (50, 'JOB_BOARD', 'option=com_jobboard', 0, 0, 'option=com_jobboard', 'JOB_BOARD', 'com_jobboard', 0, 'components/com_jobboard/images/jb_main.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (51, 'M_DASHBOARD', '', 0, 50, 'option=com_jobboard', 'M_DASHBOARD', 'com_jobboard', 0, 'components/com_jobboard/images/icn16_dashboard.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (52, 'M_JOBS', '', 0, 50, 'option=com_jobboard&view=jobs', 'M_JOBS', 'com_jobboard', 1, 'components/com_jobboard/images/icn16_jobs.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (53, 'JOB_APPLICANTS', '', 0, 50, 'option=com_jobboard&view=applicants', 'JOB_APPLICANTS', 'com_jobboard', 2, 'components/com_jobboard/images/icn16_applicants.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (54, 'EMAIL_TEMPLATES', '', 0, 50, 'option=com_jobboard&view=messages', 'EMAIL_TEMPLATES', 'com_jobboard', 3, 'components/com_jobboard/images/icn16_emails.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (55, 'JOB_CATEGORIES', '', 0, 50, 'option=com_jobboard&view=category', 'JOB_CATEGORIES', 'com_jobboard', 4, 'components/com_jobboard/images/icn16_categories.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (56, 'CAREER_LEVELS', '', 0, 50, 'option=com_jobboard&view=careerlevels', 'CAREER_LEVELS', 'com_jobboard', 5, 'components/com_jobboard/images/icn16_careers.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (57, 'EDUCATION_LEVELS', '', 0, 50, 'option=com_jobboard&view=education', 'EDUCATION_LEVELS', 'com_jobboard', 6, 'components/com_jobboard/images/icn16_education.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (58, 'DEPARTMENTS', '', 0, 50, 'option=com_jobboard&view=departments', 'DEPARTMENTS', 'com_jobboard', 7, 'components/com_jobboard/images/icn16_departments.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (59, 'STATUSES', '', 0, 50, 'option=com_jobboard&view=statuses', 'STATUSES', 'com_jobboard', 8, 'components/com_jobboard/images/icn16_statuses.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (60, 'SETTINGS', '', 0, 50, 'option=com_jobboard&view=config', 'SETTINGS', 'com_jobboard', 9, 'components/com_jobboard/images/icn16_settings.png', 0, '', 1);
+INSERT INTO `jos_components` VALUES (61, 'Annonces - Classified ads', 'option=com_annonces', 0, 0, 'option=com_annonces', 'Annonces - Classified ads', 'com_annonces', 0, 'js/ThemeOffice/component.png', 0, '', 1);
 
 -- --------------------------------------------------------
 
@@ -1069,6 +1179,669 @@ CREATE TABLE `jos_jcomments_votes` (
 -- --------------------------------------------------------
 
 -- 
+-- Table structure for table `jos_jobboard_applicants`
+-- 
+
+CREATE TABLE `jos_jobboard_applicants` (
+  `id` int(11) NOT NULL auto_increment,
+  `request_date` datetime NOT NULL default '0000-00-00 00:00:00',
+  `last_updated` datetime NOT NULL default '0000-00-00 00:00:00',
+  `job_id` int(11) NOT NULL default '0',
+  `first_name` varchar(96) NOT NULL default '',
+  `last_name` varchar(96) NOT NULL default '',
+  `email` varchar(254) NOT NULL,
+  `tel` varchar(32) NOT NULL,
+  `title` varchar(96) NOT NULL default '',
+  `filename` varchar(254) NOT NULL default '',
+  `file_hash` varchar(254) NOT NULL default '',
+  `cover_note` text NOT NULL,
+  `admin_notes` text NOT NULL,
+  `notify` int(3) NOT NULL default '1',
+  `notify_admin` int(3) NOT NULL default '1',
+  `status` int(3) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=48 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_applicants`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_jobboard_career_levels`
+-- 
+
+CREATE TABLE `jos_jobboard_career_levels` (
+  `id` int(11) NOT NULL auto_increment,
+  `description` varchar(128) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_career_levels`
+-- 
+
+INSERT INTO `jos_jobboard_career_levels` VALUES (1, 'Internship');
+INSERT INTO `jos_jobboard_career_levels` VALUES (2, 'Entry Level (Less than 2 years of Experience)');
+INSERT INTO `jos_jobboard_career_levels` VALUES (3, 'Mid Career (2+ years of experience)');
+INSERT INTO `jos_jobboard_career_levels` VALUES (4, 'Senior (5+ years of experience)');
+INSERT INTO `jos_jobboard_career_levels` VALUES (5, 'Executive (SVP, EVP, VP etc)');
+INSERT INTO `jos_jobboard_career_levels` VALUES (6, 'Management (Manager/Director)');
+INSERT INTO `jos_jobboard_career_levels` VALUES (7, 'Not Specified');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_jobboard_categories`
+-- 
+
+CREATE TABLE `jos_jobboard_categories` (
+  `id` int(11) NOT NULL auto_increment,
+  `type` varchar(64) NOT NULL,
+  `enabled` tinyint(2) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=48 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_categories`
+-- 
+
+INSERT INTO `jos_jobboard_categories` VALUES (1, 'All Categories', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (2, 'Academic', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (3, 'Accounts', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (4, 'Advertising', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (5, 'Aviation', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (6, 'Banking / Finance And Investment', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (7, 'Call Centre', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (8, 'Chemical / Petrochemical', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (9, 'Civil / Building', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (10, 'Computer and Information Technology', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (11, 'Engineering', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (12, 'Environmental / Horticulture / Agriculture', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (13, 'Fmcg', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (14, 'Freight / Shipping / Transport / Import / Export', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (15, 'Government / Municipal', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (16, 'Hotel / Catering / Hospitality / Leisure', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (17, 'Human Resources', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (18, 'Insurance', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (19, 'Legal', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (20, 'Logistics', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (21, 'Management Consulting', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (22, 'Manufacturing', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (23, 'Matriculants', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (24, 'Mining', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (25, 'Motor Industry', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (26, 'NGO / Non-profit', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (27, 'Office Support', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (28, 'Optometry', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (29, 'Part Time (no Experience Needed)', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (30, 'Pharmaceutical / Medical / Healthcare / Hygiene', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (31, 'Pr / Communications / Journalism / Media And Promotions', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (32, 'Production', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (33, 'Professional', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (34, 'Property', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (35, 'Publishing', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (36, 'Purchasing', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (37, 'Research', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (38, 'Retail', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (39, 'Safety And Security', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (40, 'Sales And Marketing', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (41, 'Stockbroking', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (42, 'Supply Chain', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (43, 'Technical', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (44, 'Telecommunications', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (45, 'Tender And Service Information', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (46, 'Textiles  / Clothing Industry', 1);
+INSERT INTO `jos_jobboard_categories` VALUES (47, 'Travel / Tourism', 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_jobboard_config`
+-- 
+
+CREATE TABLE `jos_jobboard_config` (
+  `id` int(11) NOT NULL auto_increment,
+  `organisation` varchar(255) NOT NULL default 'Some Organisation',
+  `from_mail` varchar(255) NOT NULL default 'someone@somewhere.com',
+  `reply_to` varchar(255) NOT NULL default 'no-reply@somewhere.com',
+  `default_dept` int(11) NOT NULL default '1',
+  `default_country` int(5) NOT NULL default '220',
+  `default_city` varchar(64) NOT NULL default 'SomeCity',
+  `default_jobtype` int(11) NOT NULL default '1',
+  `default_career` int(11) NOT NULL default '3',
+  `default_edu` int(11) NOT NULL default '3',
+  `default_category` int(11) NOT NULL default '2',
+  `default_post_range` enum('0','1','2','3','7','14','30','60') NOT NULL default '0',
+  `allow_unsolicited` tinyint(4) NOT NULL default '1',
+  `allow_applications` tinyint(4) NOT NULL default '1',
+  `dept_notify_admin` int(11) NOT NULL default '1',
+  `dept_notify_contact` int(11) NOT NULL default '1',
+  `show_social` tinyint(4) NOT NULL default '1',
+  `show_viewcount` tinyint(4) NOT NULL default '1',
+  `show_applcount` tinyint(4) NOT NULL default '1',
+  `email_cvattach` tinyint(4) NOT NULL default '0',
+  `show_job_summary` tinyint(4) NOT NULL default '1',
+  `send_tofriend` tinyint(4) NOT NULL default '1',
+  `appl_job_summary` tinyint(4) NOT NULL default '1',
+  `sharing_job_summary` tinyint(4) NOT NULL default '1',
+  `short_date_format` tinyint(4) NOT NULL default '0',
+  `date_separator` tinyint(4) NOT NULL default '0',
+  `long_date_format` tinyint(4) NOT NULL default '0',
+  `jobtype_coloring` tinyint(4) NOT NULL default '1',
+  `social_icon_style` tinyint(4) NOT NULL default '1',
+  `release_ver` text NOT NULL,
+  `use_location` tinyint(4) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_config`
+-- 
+
+INSERT INTO `jos_jobboard_config` VALUES (1, 'My organisation', 'admin@yourdomain.com', 'no-reply@yourdomain.com', 2, 220, 'Johannesburg', 1, 3, 3, 1, '30', 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, '1.5.1', 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_jobboard_countries`
+-- 
+
+CREATE TABLE `jos_jobboard_countries` (
+  `country_id` int(11) NOT NULL auto_increment,
+  `country_name` varchar(100) NOT NULL,
+  `dial_prefix` int(11) NOT NULL,
+  `country_region` varchar(100) NOT NULL,
+  PRIMARY KEY  (`country_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=267 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_countries`
+-- 
+
+INSERT INTO `jos_jobboard_countries` VALUES (1, 'Afghanistan', 93, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (2, 'Albania', 355, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (3, 'Algeria', 213, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (4, 'American Samoa', 1684, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (5, 'Andorra', 376, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (6, 'Angola', 244, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (7, 'Anguilla', 1264, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (8, 'Antarctica', 0, 'Antarctic Region');
+INSERT INTO `jos_jobboard_countries` VALUES (9, 'Antigua and Barbuda', 1268, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (10, 'Arctic Ocean', 0, 'Arctic Region');
+INSERT INTO `jos_jobboard_countries` VALUES (11, 'Argentina', 54, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (12, 'Armenia', 374, 'Commonwealth of Independent States - European States');
+INSERT INTO `jos_jobboard_countries` VALUES (13, 'Aruba', 297, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (14, 'Ashmore and Cartier Islands', 0, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (15, 'Atlantic Ocean', 0, 'World');
+INSERT INTO `jos_jobboard_countries` VALUES (16, 'Australia', 61, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (17, 'Austria', 43, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (18, 'Azerbaijan', 994, 'Commonwealth of Independent States - European States');
+INSERT INTO `jos_jobboard_countries` VALUES (19, 'The Bahamas', 1242, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (20, 'Bahrain', 973, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (21, 'Baker Island', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (22, 'Bangladesh', 880, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (23, 'Barbados', 1246, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (24, 'Bassas da India', 0, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (25, 'Belarus', 375, 'Commonwealth of Independent States - European States');
+INSERT INTO `jos_jobboard_countries` VALUES (26, 'Belgium', 32, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (27, 'Belize', 501, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (28, 'Benin', 229, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (29, 'Bermuda', 1441, 'North America');
+INSERT INTO `jos_jobboard_countries` VALUES (30, 'Bhutan', 975, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (31, 'Bolivia', 591, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (32, 'Bosnia and Herzegovina', 387, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (33, 'Botswana', 267, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (34, 'Bouvet Island', 0, 'Antarctic Region');
+INSERT INTO `jos_jobboard_countries` VALUES (35, 'Brazil', 55, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (36, 'British Indian Ocean Territory', 0, 'World');
+INSERT INTO `jos_jobboard_countries` VALUES (37, 'British Virgin Islands', 1284, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (38, 'Brunei', 673, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (39, 'Bulgaria', 359, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (40, 'Burkina', 226, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (41, 'Burma', 0, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (42, 'Burundi', 257, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (43, 'Cambodia', 855, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (44, 'Cameroon', 237, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (45, 'Canada', 1, 'North America');
+INSERT INTO `jos_jobboard_countries` VALUES (46, 'Cape Verde', 238, 'World');
+INSERT INTO `jos_jobboard_countries` VALUES (47, 'Cayman Islands', 1345, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (48, 'Central African Republic', 236, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (49, 'Chad', 235, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (50, 'Chile', 56, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (51, 'China', 86, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (52, 'Christmas Island', 0, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (53, 'Clipperton Island', 0, 'World');
+INSERT INTO `jos_jobboard_countries` VALUES (54, 'Cocos (Keeling) Islands', 0, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (55, 'Colombia', 57, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (56, 'Comoros', 269, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (57, 'Congo', 242, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (58, 'Cook Islands', 682, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (59, 'Coral Sea Islands', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (60, 'Costa Rica', 506, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (61, 'Cote d''Ivoire', 225, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (62, 'Croatia', 385, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (63, 'Cuba', 0, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (64, 'Cyprus', 357, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (65, 'Czech Republic', 420, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (66, 'Denmark', 45, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (67, 'Djibouti', 253, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (68, 'Dominica', 1767, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (69, 'Dominican Republic', 1, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (70, 'Ecuador', 593, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (71, 'Egypt', 20, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (72, 'El Salvador', 503, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (73, 'Equatorial Guinea', 240, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (74, 'Eritrea', 0, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (75, 'Estonia', 372, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (76, 'Ethiopia', 251, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (77, 'Europa Island', 0, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (78, 'Falkland Islands (Islas Malvinas)', 500, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (79, 'Faroe Islands', 298, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (80, 'Fiji', 679, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (81, 'Finland', 358, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (82, 'France', 33, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (83, 'French Guiana', 594, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (84, 'French Polynesia', 689, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (85, 'French Southern and Antarctic Lands', 0, 'Antarctic Region');
+INSERT INTO `jos_jobboard_countries` VALUES (86, 'Gabon', 241, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (87, 'The Gambia', 220, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (88, 'Gaza Strip', 0, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (89, 'Georgia', 995, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (90, 'Germany', 49, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (91, 'Ghana', 233, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (92, 'Gibraltar', 350, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (93, 'Glorioso Islands', 0, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (94, 'Greece', 30, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (95, 'Greenland', 299, 'Arctic Region');
+INSERT INTO `jos_jobboard_countries` VALUES (96, 'Grenada', 1473, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (97, 'Guadeloupe', 590, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (98, 'Guam', 1671, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (99, 'Guatemala', 502, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (100, 'Guernsey', 44, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (101, 'Guinea', 224, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (102, 'Guinea-Bissau', 0, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (103, 'Guyana', 592, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (104, 'Haiti', 509, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (105, 'Heard Island and McDonald Islands', 0, 'Antarctic Region');
+INSERT INTO `jos_jobboard_countries` VALUES (106, 'Holy See (Vatican City)', 0, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (107, 'Honduras', 504, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (108, 'Hong Kong', 852, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (109, 'Howland Island', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (110, 'Hungary', 36, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (111, 'Iceland', 354, 'Arctic Region');
+INSERT INTO `jos_jobboard_countries` VALUES (112, 'India', 91, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (113, 'Indian Ocean', 0, 'World');
+INSERT INTO `jos_jobboard_countries` VALUES (114, 'Indonesia', 62, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (115, 'Iran', 0, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (116, 'Iraq', 964, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (117, 'Ireland', 353, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (118, 'Israel', 972, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (119, 'Italy', 39, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (120, 'Jamaica', 1876, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (121, 'Jan Mayen', 0, 'Arctic Region');
+INSERT INTO `jos_jobboard_countries` VALUES (122, 'Japan', 81, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (123, 'Jarvis Island', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (124, 'Jersey', 44, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (125, 'Johnston Atoll', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (126, 'Jordan', 962, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (127, 'Juan de Nova Island', 0, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (128, 'Kazakhstan', 7, 'Commonwealth of Independent States - Central Asian States');
+INSERT INTO `jos_jobboard_countries` VALUES (129, 'Kenya', 254, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (130, 'Kingman Reef', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (131, 'Kiribati', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (132, 'Korea,  North', 0, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (133, 'Korea,  South', 82, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (134, 'Kuwait', 965, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (135, 'Kyrgyzstan', 996, 'Commonwealth of Independent States - Central Asian States');
+INSERT INTO `jos_jobboard_countries` VALUES (136, 'Laos', 856, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (137, 'Latvia', 371, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (138, 'Lebanon', 961, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (139, 'Lesotho', 266, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (140, 'Liberia', 231, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (141, 'Libya', 218, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (142, 'Liechtenstein', 423, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (143, 'Lithuania', 370, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (144, 'Luxembourg', 352, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (145, 'Macau', 852, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (146, 'Macedonia', 389, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (147, 'Madagascar', 261, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (148, 'Malawi', 265, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (149, 'Malaysia', 60, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (150, 'Maldives', 960, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (151, 'Mali', 223, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (152, 'Malta', 356, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (153, 'Man,  Isle of', 44, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (154, 'Marshall Islands', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (155, 'Martinique', 596, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (156, 'Mauritania', 222, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (157, 'Mauritius', 230, 'World');
+INSERT INTO `jos_jobboard_countries` VALUES (158, 'Mayotte', 269, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (159, 'Mexico', 52, 'North America');
+INSERT INTO `jos_jobboard_countries` VALUES (160, 'Micronesia,  Federated States of', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (161, 'Midway Islands', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (162, 'Moldova', 373, 'Commonwealth of Independent States - European States');
+INSERT INTO `jos_jobboard_countries` VALUES (163, 'Monaco', 377, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (164, 'Mongolia', 976, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (165, 'Montserrat', 1664, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (166, 'Morocco', 212, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (167, 'Mozambique', 258, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (168, 'Namibia', 264, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (169, 'Nauru', 674, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (170, 'Navassa Island', 0, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (171, 'Nepal', 977, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (172, 'Netherlands', 599, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (173, 'Netherlands Antilles', 0, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (174, 'New Caledonia', 687, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (175, 'New Zealand', 64, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (176, 'Nicaragua', 505, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (177, 'Niger', 227, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (178, 'Nigeria', 234, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (179, 'Niue', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (180, 'Norfolk Island', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (181, 'Northern Mariana Islands', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (182, 'Norway', 47, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (183, 'Oman', 968, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (184, 'Pacific Ocean', 0, 'World');
+INSERT INTO `jos_jobboard_countries` VALUES (185, 'Pakistan', 92, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (186, 'Palau', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (187, 'Palmyra Atoll', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (188, 'Panama', 507, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (189, 'Papua New Guinea', 675, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (190, 'Paracel Islands', 0, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (191, 'Paraguay', 595, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (192, 'Peru', 51, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (193, 'Philippines', 63, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (194, 'Pitcairn Islands', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (195, 'Poland', 48, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (196, 'Portugal', 351, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (197, 'Puerto Rico', 1, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (198, 'Qatar', 974, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (199, 'Reunion', 262, 'World');
+INSERT INTO `jos_jobboard_countries` VALUES (200, 'Romania', 40, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (201, 'Russia', 7, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (202, 'Rwanda', 250, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (203, 'Saint Helena', 0, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (204, 'Saint Kitts and Nevis', 0, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (205, 'Saint Lucia', 0, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (206, 'Saint Pierre and Miquelon', 0, 'North America');
+INSERT INTO `jos_jobboard_countries` VALUES (207, 'Saint Vincent and the Grenadines', 0, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (208, 'San Marino', 378, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (209, 'Sao Tome and Principe', 0, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (210, 'Saudi Arabia', 966, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (211, 'Senegal', 221, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (212, 'Serbia and Montenegro', 381, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (213, 'Seychelles', 248, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (214, 'Sierra Leone', 232, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (215, 'Singapore', 65, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (216, 'Slovakia', 421, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (217, 'Slovenia', 386, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (218, 'Solomon Islands', 677, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (219, 'Somalia', 252, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (220, 'South Africa', 27, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (221, 'South Georgia and the South Sandwich Islands', 0, 'Antarctic Region');
+INSERT INTO `jos_jobboard_countries` VALUES (222, 'Spain', 34, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (223, 'Spratly Islands', 0, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (224, 'Sri Lanka', 94, 'Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (225, 'Sudan', 0, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (226, 'Suriname', 597, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (227, 'Svalbard', 0, 'Arctic Region');
+INSERT INTO `jos_jobboard_countries` VALUES (228, 'Swaziland', 268, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (229, 'Sweden', 46, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (230, 'Switzerland', 41, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (231, 'Syria', 0, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (232, 'Taiwan', 886, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (233, 'Tajikistan', 992, 'Commonwealth of Independent States - Central Asian States');
+INSERT INTO `jos_jobboard_countries` VALUES (234, 'Tanzania', 255, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (235, 'Thailand', 66, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (236, 'Togo', 228, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (237, 'Tokelau', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (238, 'Tonga', 676, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (239, 'Trinidad and Tobago', 1868, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (240, 'Tromelin Island', 0, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (241, 'Tunisia', 216, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (242, 'Turkey', 90, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (243, 'Turkmenistan', 993, 'Commonwealth of Independent States - Central Asian States');
+INSERT INTO `jos_jobboard_countries` VALUES (244, 'Turks and Caicos Islands', 1649, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (245, 'Tuvalu', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (246, 'Uganda', 256, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (247, 'Ukraine', 380, 'Commonwealth of Independent States - European States');
+INSERT INTO `jos_jobboard_countries` VALUES (248, 'United Arab Emirates', 971, 'Middle             East');
+INSERT INTO `jos_jobboard_countries` VALUES (249, 'United Kingdom', 44, 'Europe');
+INSERT INTO `jos_jobboard_countries` VALUES (250, 'United States', 1, 'North America');
+INSERT INTO `jos_jobboard_countries` VALUES (251, 'Uruguay', 598, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (252, 'Uzbekistan', 998, 'Commonwealth of Independent States - Central Asian States');
+INSERT INTO `jos_jobboard_countries` VALUES (253, 'Vanuatu', 678, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (254, 'Venezuela', 58, 'South America');
+INSERT INTO `jos_jobboard_countries` VALUES (255, 'Vietnam', 84, 'Southeast Asia');
+INSERT INTO `jos_jobboard_countries` VALUES (256, 'Virgin Islands', 0, 'Central America/Caribbean');
+INSERT INTO `jos_jobboard_countries` VALUES (257, 'Wake Island', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (258, 'Wallis and Futuna', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (259, 'West Bank', 0, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (260, 'Western Sahara', 0, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (261, 'Western Samoa', 0, 'Oceania');
+INSERT INTO `jos_jobboard_countries` VALUES (262, 'Yemen', 987, 'Middle East');
+INSERT INTO `jos_jobboard_countries` VALUES (263, 'Zaire', 0, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (264, 'Zambia', 260, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (265, 'Zimbabwe', 263, 'Africa');
+INSERT INTO `jos_jobboard_countries` VALUES (266, 'DB_ANYWHERE_CNAME', 0, 'DB_ANYWHERE_REGION');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_jobboard_departments`
+-- 
+
+CREATE TABLE `jos_jobboard_departments` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(64) NOT NULL default 'default',
+  `contact_name` varchar(72) NOT NULL default 'Someone',
+  `contact_email` varchar(254) NOT NULL default 'somedep@somewhere.com',
+  `notify` tinyint(1) NOT NULL default '1',
+  `notify_admin` tinyint(1) NOT NULL default '1',
+  `acceptance_notify` tinyint(1) NOT NULL default '1',
+  `rejection_notify` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_departments`
+-- 
+
+INSERT INTO `jos_jobboard_departments` VALUES (1, 'default', 'admin', 'somedep@somewhere.com', 1, 1, 1, 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_jobboard_education`
+-- 
+
+CREATE TABLE `jos_jobboard_education` (
+  `id` int(11) NOT NULL auto_increment,
+  `level` varchar(64) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_education`
+-- 
+
+INSERT INTO `jos_jobboard_education` VALUES (1, 'Advanced Degree');
+INSERT INTO `jos_jobboard_education` VALUES (2, 'Bachelor''s Degree');
+INSERT INTO `jos_jobboard_education` VALUES (3, 'Diploma');
+INSERT INTO `jos_jobboard_education` VALUES (4, 'High School');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_jobboard_emailmsg`
+-- 
+
+CREATE TABLE `jos_jobboard_emailmsg` (
+  `id` int(11) NOT NULL auto_increment,
+  `type` text NOT NULL,
+  `subject` text NOT NULL,
+  `body` longtext NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_emailmsg`
+-- 
+
+INSERT INTO `jos_jobboard_emailmsg` VALUES (1, 'userrejected', 'Your job application for: [jobtitle]', 'Dear [toname],\r\n\r\nThank you for expressing an interest in applying for a position with [fromname].\r\n\r\nIt is with regret that we inform you that your application was not successful. We will however keep your resume details on our database and contact you should any suitable vacancies arise.  \r\n\r\nWe wish you everything of the best for the future.\r\n\r\nYours Sincerely\r\n[fromname]');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (2, 'adminnew', 'Job post [jobtitle] created', 'The following job post has been created.\r\n\r\nJob Title: [jobtitle]\r\n\r\nJob Department: [department]\r\nJob Location: [location]\r\nJob Status: [status]\r\n\r\nCreated by [appladmin]');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (10, 'userapproved', 'Job Application [jobtitle] approved', 'Dear [toname],\r\n\r\nIt is with great pleasure to inform you that you have been awarded the position of [jobtitle] with [fromname].\r\n\r\nYou will be contacted regarding further details.\r\n\r\nYours Sincerely\r\n[fromname]\r\n');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (13, 'adminupdate_application', 'Job application for [toname] [tosurname] updated', 'The following job application has been updated:\r\n\r\nApplicant Name: [toname] [tosurname]\r\nStatus: [applstatus]\r\nJob Title: [jobtitle]\r\nJob ID: [jobid]\r\nJob Department: [department]\r\n\r\nUpdated by [appladmin]');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (3, 'adminsms', 'Job post: [jobtitle] updated', 'Title:[jobtitle]\r\nLocation:[location]\r\n\r\nRegards,\r\n[fromname]');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (4, 'adminupdate', 'Job post [jobtitle] updated', 'The following job post has been updated:\r\n\r\nJob Title: [jobtitle]\r\nJob ID: [jobid]\r\nJob Department: [department]\r\nJob Location: [location]\r\nJob Status: [status]\r\n\r\nUpdated by [appladmin]\r\n');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (14, 'adminnew_application', 'New job application for [applname] [applsurname]', 'The following job application has been created:\r\n\r\nApplicant Name: [applname] [applsurname]\r\nStatus: [applstatus]\r\nJob Title: [jobtitle]\r\nJob ID: [jobid]\r\nJob Department: [department]\r\n-----------------------------\r\nCV/Resume Title: [appltitle]\r\n\r\nCover Note:\r\n***********\r\n[applcovernote]\r\n***********\r\n\r\nSubmitted by [appladmin]');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (15, 'adminupdate_unsolicited', 'Unsolicited application for [toname] [tosurname] updated', 'The following unsolicited application has been updated:\r\n\r\nApplicant Name: [toname] [tosurname]\r\nApplicant ID: [applicantid]\r\n\r\nUpdated by [appladmin]');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (16, 'adminnew_unsolicited', 'New unsolicited cv/resume', 'A new unsolicited CV/Resume has been submitted.\r\n\r\nApplicant Name: [toname] [tosurname]\r\nCV/Resume Title: [cvtitle]\r\n\r\n------------------------------------\r\n[fromname]');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (5, 'unsolicitednew', '[toname], your CV ([cvtitle])has been received', 'Dear [toname],\r\n\r\nThank you for submitting your CV to [fromname]. \r\n\r\nYour application will be reviewed and we will get in touch with you if a suitable position becomes available.\r\n\r\nYours sincerely,\r\n[fromname]\r\n\r\nPlease do not respond to this message. It is automatically generated and is for information purposes only.');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (6, 'usernew', 'Job application for [jobtitle]-[location] received', 'Dear [toname],\r\n\r\nThank you for applying for the following position with [fromname]:\r\n[jobtitle] \r\n\r\nYour application is on file and will be reviewed.\r\n\r\nShould you not hear from us within 14 days, please consider your application unsuccessful.\r\n\r\nThank you,\r\n[fromname]\r\n\r\nPlease do not respond to this message. It is automatically generated and is for information purposes only.');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (7, 'sharejob', 'Online job recommendation...', 'Hello,\r\n\r\nI found this great job and thought you would be interested in viewing the full Job advert online...');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (8, 'sharejpriv', 'Online job recommendation...', '\r\n\r\n[jobtitle] - [location] \r\n\r\nClick on the following link to view the job details \r\n');
+INSERT INTO `jos_jobboard_emailmsg` VALUES (9, 'usersms', 'Job Application [jobtitle] received', 'Title:[jobtitle]\r\nLocation:[location]\r\n\r\nRegards,\r\n[fromname]');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_jobboard_jobs`
+-- 
+
+CREATE TABLE `jos_jobboard_jobs` (
+  `id` int(11) NOT NULL auto_increment,
+  `post_date` datetime NOT NULL default '0000-00-00 00:00:00',
+  `job_title` varchar(128) NOT NULL,
+  `job_type` enum('DB_JFULLTIME','DB_JCONTRACT','DB_JPARTTIME','DB_JTEMP','DB_JINTERN','DB_JOTHER') NOT NULL default 'DB_JFULLTIME',
+  `category` int(11) NOT NULL default '1',
+  `career_level` int(11) NOT NULL default '1',
+  `education` int(11) NOT NULL default '2',
+  `positions` int(11) NOT NULL default '1',
+  `salary` varchar(96) NOT NULL,
+  `country` int(11) NOT NULL default '220',
+  `city` varchar(64) NOT NULL default 'Some City',
+  `description` text NOT NULL,
+  `duties` text NOT NULL,
+  `job_tags` text NOT NULL,
+  `department` int(11) unsigned NOT NULL default '1',
+  `status` enum('new','reviewed','scheduled','rejected','accepted') NOT NULL default 'new',
+  `num_applications` int(11) NOT NULL default '0',
+  `hits` int(11) unsigned NOT NULL default '0',
+  `published` tinyint(1) NOT NULL default '1',
+  `expiry_date` datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_jobs`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_jobboard_msg`
+-- 
+
+CREATE TABLE `jos_jobboard_msg` (
+  `id` int(11) NOT NULL auto_increment,
+  `job_id` int(11) NOT NULL,
+  `sender_name` varchar(64) NOT NULL,
+  `sender_email` varchar(128) NOT NULL,
+  `recipient_list` text NOT NULL,
+  `message` text NOT NULL,
+  `send_date` datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_msg`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_jobboard_statuses`
+-- 
+
+CREATE TABLE `jos_jobboard_statuses` (
+  `id` int(11) NOT NULL auto_increment,
+  `status_description` varchar(128) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_statuses`
+-- 
+
+INSERT INTO `jos_jobboard_statuses` VALUES (1, 'new');
+INSERT INTO `jos_jobboard_statuses` VALUES (2, 'screened');
+INSERT INTO `jos_jobboard_statuses` VALUES (3, 'interview scheduled');
+INSERT INTO `jos_jobboard_statuses` VALUES (4, 'interviewed');
+INSERT INTO `jos_jobboard_statuses` VALUES (5, 'shortlisted');
+INSERT INTO `jos_jobboard_statuses` VALUES (6, 'approved/placed');
+INSERT INTO `jos_jobboard_statuses` VALUES (7, 'rejected');
+INSERT INTO `jos_jobboard_statuses` VALUES (8, 'on hold');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_jobboard_types`
+-- 
+
+CREATE TABLE `jos_jobboard_types` (
+  `id` int(11) NOT NULL auto_increment,
+  `type` varchar(64) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_types`
+-- 
+
+INSERT INTO `jos_jobboard_types` VALUES (1, 'Full Time');
+INSERT INTO `jos_jobboard_types` VALUES (2, 'Contract');
+INSERT INTO `jos_jobboard_types` VALUES (3, 'Part Time');
+INSERT INTO `jos_jobboard_types` VALUES (4, 'Internship');
+INSERT INTO `jos_jobboard_types` VALUES (5, 'Temp');
+INSERT INTO `jos_jobboard_types` VALUES (6, 'Other');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `jos_jobboard_unsolicited`
+-- 
+
+CREATE TABLE `jos_jobboard_unsolicited` (
+  `id` int(11) NOT NULL auto_increment,
+  `request_date` datetime NOT NULL default '0000-00-00 00:00:00',
+  `last_updated` datetime NOT NULL default '0000-00-00 00:00:00',
+  `job_id` int(11) NOT NULL default '0',
+  `first_name` varchar(96) NOT NULL default '',
+  `last_name` varchar(96) NOT NULL default '',
+  `email` varchar(254) NOT NULL,
+  `tel` varchar(32) NOT NULL,
+  `title` varchar(96) NOT NULL default '',
+  `filename` varchar(254) NOT NULL default '',
+  `file_hash` varchar(254) NOT NULL default '',
+  `cover_note` text NOT NULL,
+  `status` int(3) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+
+-- 
+-- Dumping data for table `jos_jobboard_unsolicited`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
 -- Table structure for table `jos_menu`
 -- 
 
@@ -1097,15 +1870,15 @@ CREATE TABLE `jos_menu` (
   PRIMARY KEY  (`id`),
   KEY `componentid` (`componentid`,`menutype`,`published`,`access`),
   KEY `menutype` (`menutype`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=116 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=119 ;
 
 -- 
 -- Dumping data for table `jos_menu`
 -- 
 
-INSERT INTO `jos_menu` VALUES (1, 'mainmenu', 'Home', 'home', 'index.php?option=com_content&view=frontpage', 'component', 1, 0, 20, 0, 1, 0, '0000-00-00 00:00:00', 0, 0, 0, 3, 'show_page_title=1\npage_title=Welcome to the Frontpage\nshow_description=0\nshow_description_image=0\nnum_leading_articles=1\nnum_intro_articles=4\nnum_columns=2\nnum_links=4\nshow_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\norderby_pri=\norderby_sec=front\nshow_pagination=2\nshow_pagination_results=1\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 1);
-INSERT INTO `jos_menu` VALUES (2, 'mainmenu', 'Joomla! License', 'joomla-license', 'index.php?option=com_content&view=article&id=5', 'component', 1, 0, 20, 0, 4, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 0);
-INSERT INTO `jos_menu` VALUES (41, 'mainmenu', 'FAQ', 'faq', 'index.php?option=com_content&view=section&id=3', 'component', 1, 0, 20, 0, 6, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_page_title=1\nshow_description=0\nshow_description_image=0\nshow_categories=1\nshow_empty_categories=0\nshow_cat_num_articles=1\nshow_category_description=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\norderby=\nshow_noauth=0\nshow_title=1\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1', 0, 0, 0);
+INSERT INTO `jos_menu` VALUES (1, 'mainmenu', 'Home', 'home', 'index.php?option=com_content&view=frontpage', 'component', 1, 0, 20, 0, 1, 62, '2012-03-28 16:26:34', 0, 0, 0, 3, 'num_leading_articles=1\nnum_intro_articles=4\nnum_columns=2\nnum_links=4\norderby_pri=\norderby_sec=front\nmulti_column_order=1\nshow_pagination=2\nshow_pagination_results=1\nshow_feed_link=1\nshow_noauth=0\nshow_title=1\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\nfeed_summary=\npage_title=Tạp chí doanh nhân Việt\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', 0, 0, 1);
+INSERT INTO `jos_menu` VALUES (2, 'mainmenu', 'Joomla! License', 'joomla-license', 'index.php?option=com_content&view=article&id=5', 'component', 1, 0, 20, 0, 3, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 0);
+INSERT INTO `jos_menu` VALUES (41, 'mainmenu', 'FAQ', 'faq', 'index.php?option=com_content&view=section&id=3', 'component', 1, 0, 20, 0, 5, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_page_title=1\nshow_description=0\nshow_description_image=0\nshow_categories=1\nshow_empty_categories=0\nshow_cat_num_articles=1\nshow_category_description=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\norderby=\nshow_noauth=0\nshow_title=1\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (11, 'othermenu', 'Joomla! Home', 'joomla-home', 'http://www.joomla.org', 'url', 1, 0, 0, 0, 1, 0, '0000-00-00 00:00:00', 0, 0, 0, 3, 'menu_image=-1\n\n', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (12, 'othermenu', 'Joomla! Forums', 'joomla-forums', 'http://forum.joomla.org', 'url', 1, 0, 0, 0, 2, 0, '0000-00-00 00:00:00', 0, 0, 0, 3, 'menu_image=-1\n\n', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (13, 'othermenu', 'Joomla! Documentation', 'joomla-documentation', 'http://docs.joomla.org', 'url', 1, 0, 0, 0, 3, 0, '0000-00-00 00:00:00', 0, 0, 0, 3, 'menu_image=-1\n\n', 0, 0, 0);
@@ -1123,15 +1896,15 @@ INSERT INTO `jos_menu` VALUES (29, 'topmenu', 'Features', 'features', 'index.php
 INSERT INTO `jos_menu` VALUES (30, 'topmenu', 'The Community', 'the-community', 'index.php?option=com_content&view=article&id=27', 'component', -2, 0, 20, 0, 7, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (34, 'mainmenu', 'What''s New in 1.5?', 'what-is-new-in-1-5', 'index.php?option=com_content&view=article&id=22', 'component', 1, 27, 20, 1, 1, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nshow_title=1\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (40, 'keyconcepts', 'Extensions', 'extensions', 'index.php?option=com_content&view=article&id=26', 'component', 1, 0, 20, 0, 1, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 0);
-INSERT INTO `jos_menu` VALUES (37, 'mainmenu', 'More about Joomla!', 'more-about-joomla', 'index.php?option=com_content&view=section&id=4', 'component', 1, 0, 20, 0, 5, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_page_title=1\nshow_description=0\nshow_description_image=0\nshow_categories=1\nshow_empty_categories=0\nshow_cat_num_articles=1\nshow_category_description=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\norderby=\nshow_noauth=0\nshow_title=1\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1', 0, 0, 0);
+INSERT INTO `jos_menu` VALUES (37, 'mainmenu', 'More about Joomla!', 'more-about-joomla', 'index.php?option=com_content&view=section&id=4', 'component', 1, 0, 20, 0, 4, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_page_title=1\nshow_description=0\nshow_description_image=0\nshow_categories=1\nshow_empty_categories=0\nshow_cat_num_articles=1\nshow_category_description=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\norderby=\nshow_noauth=0\nshow_title=1\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (43, 'keyconcepts', 'Example Pages', 'example-pages', 'index.php?option=com_content&view=article&id=43', 'component', 1, 0, 20, 0, 3, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (44, 'ExamplePages', 'Section Blog', 'section-blog', 'index.php?option=com_content&view=section&layout=blog&id=3', 'component', 1, 0, 20, 0, 1, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_page_title=1\npage_title=Example of Section Blog layout (FAQ section)\nshow_description=0\nshow_description_image=0\nnum_leading_articles=1\nnum_intro_articles=4\nnum_columns=2\nnum_links=4\nshow_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\norderby_pri=\norderby_sec=\nshow_pagination=2\nshow_pagination_results=1\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (45, 'ExamplePages', 'Section Table', 'section-table', 'index.php?option=com_content&view=section&id=3', 'component', 1, 0, 20, 0, 2, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_page_title=1\npage_title=Example of Table Blog layout (FAQ section)\nshow_description=0\nshow_description_image=0\nshow_categories=1\nshow_empty_categories=0\nshow_cat_num_articles=1\nshow_category_description=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\norderby=\nshow_noauth=0\nshow_title=1\nnlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (46, 'ExamplePages', 'Category Blog', 'categoryblog', 'index.php?option=com_content&view=category&layout=blog&id=31', 'component', 1, 0, 20, 0, 3, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_page_title=1\npage_title=Example of Category Blog layout (FAQs/General category)\nshow_description=0\nshow_description_image=0\nnum_leading_articles=1\nnum_intro_articles=4\nnum_columns=2\nnum_links=4\nshow_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\norderby_pri=\norderby_sec=\nshow_pagination=2\nshow_pagination_results=1\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (47, 'ExamplePages', 'Category Table', 'category-table', 'index.php?option=com_content&view=category&id=32', 'component', 1, 0, 20, 0, 4, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_page_title=1\npage_title=Example of Category Table layout (FAQs/Languages category)\nshow_headings=1\nshow_date=0\ndate_format=\nfilter=1\nfilter_type=title\npageclass_sfx=\nmenu_image=-1\nsecure=0\norderby_sec=\nshow_pagination=1\nshow_pagination_limit=1\nshow_noauth=0\nshow_title=1\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 0);
-INSERT INTO `jos_menu` VALUES (48, 'mainmenu', 'Web Links', 'web-links', 'index.php?option=com_weblinks&view=categories', 'component', 1, 0, 4, 0, 8, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'page_title=Weblinks\nimage=-1\nimage_align=right\npageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_comp_description=1\ncomp_description=\nshow_link_hits=1\nshow_link_description=1\nshow_other_cats=1\nshow_headings=1\nshow_page_title=1\nlink_target=0\nlink_icons=\n\n', 0, 0, 0);
-INSERT INTO `jos_menu` VALUES (49, 'mainmenu', 'News Feeds', 'news-feeds', 'index.php?option=com_newsfeeds&view=categories', 'component', 1, 0, 11, 0, 9, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_page_title=1\npage_title=Newsfeeds\nshow_comp_description=1\ncomp_description=\nimage=-1\nimage_align=right\npageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_headings=1\nshow_name=1\nshow_articles=1\nshow_link=1\nshow_other_cats=1\nshow_cat_description=1\nshow_cat_items=1\nshow_feed_image=1\nshow_feed_description=1\nshow_item_description=1\nfeed_word_count=0\n\n', 0, 0, 0);
-INSERT INTO `jos_menu` VALUES (50, 'mainmenu', 'The News', 'the-news', 'index.php?option=com_content&view=category&layout=blog&id=1', 'component', 1, 0, 20, 0, 7, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_page_title=1\npage_title=The News\nshow_description=0\nshow_description_image=0\nnum_leading_articles=1\nnum_intro_articles=4\nnum_columns=2\nnum_links=4\nshow_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\norderby_pri=\norderby_sec=\nshow_pagination=2\nshow_pagination_results=1\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 0);
+INSERT INTO `jos_menu` VALUES (48, 'mainmenu', 'Web Links', 'web-links', 'index.php?option=com_weblinks&view=categories', 'component', 1, 0, 4, 0, 7, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'page_title=Weblinks\nimage=-1\nimage_align=right\npageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_comp_description=1\ncomp_description=\nshow_link_hits=1\nshow_link_description=1\nshow_other_cats=1\nshow_headings=1\nshow_page_title=1\nlink_target=0\nlink_icons=\n\n', 0, 0, 0);
+INSERT INTO `jos_menu` VALUES (49, 'mainmenu', 'News Feeds', 'news-feeds', 'index.php?option=com_newsfeeds&view=categories', 'component', 1, 0, 11, 0, 8, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_page_title=1\npage_title=Newsfeeds\nshow_comp_description=1\ncomp_description=\nimage=-1\nimage_align=right\npageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_headings=1\nshow_name=1\nshow_articles=1\nshow_link=1\nshow_other_cats=1\nshow_cat_description=1\nshow_cat_items=1\nshow_feed_image=1\nshow_feed_description=1\nshow_item_description=1\nfeed_word_count=0\n\n', 0, 0, 0);
+INSERT INTO `jos_menu` VALUES (50, 'mainmenu', 'The News', 'the-news', 'index.php?option=com_content&view=category&layout=blog&id=1', 'component', 1, 0, 20, 0, 6, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_page_title=1\npage_title=The News\nshow_description=0\nshow_description_image=0\nnum_leading_articles=1\nnum_intro_articles=4\nnum_columns=2\nnum_links=4\nshow_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\norderby_pri=\norderby_sec=\nshow_pagination=2\nshow_pagination_results=1\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (51, 'usermenu', 'Submit an Article', 'submit-an-article', 'index.php?option=com_content&view=article&layout=form', 'component', 1, 0, 20, 0, 2, 0, '0000-00-00 00:00:00', 0, 0, 2, 0, '', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (52, 'usermenu', 'Submit a Web Link', 'submit-a-web-link', 'index.php?option=com_weblinks&view=weblink&layout=form', 'component', 1, 0, 4, 0, 3, 0, '0000-00-00 00:00:00', 0, 0, 2, 0, '', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (53, 'topmenu', 'Trang chủ', 'trang-chu', 'index.php?option=com_content&view=frontpage', 'component', 1, 0, 20, 0, 2, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'num_leading_articles=1\nnum_intro_articles=4\nnum_columns=2\nnum_links=4\norderby_pri=\norderby_sec=front\nmulti_column_order=1\nshow_pagination=2\nshow_pagination_results=1\nshow_feed_link=1\nshow_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', 0, 0, 0);
@@ -1197,6 +1970,9 @@ INSERT INTO `jos_menu` VALUES (112, 'topmenu', 'Chân dung doanh nhân', 'chan-d
 INSERT INTO `jos_menu` VALUES (113, 'topmenu', 'Kinh tế - Đầu tư', 'kinh-te-dau-tu', 'index.php?option=com_content&view=category&layout=blog&id=50', 'component', 1, 65, 20, 1, 1, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_description=0\nshow_description_image=0\nnum_leading_articles=1\nnum_intro_articles=10\nnum_columns=1\nnum_links=10\norderby_pri=\norderby_sec=\nmulti_column_order=0\nshow_pagination=2\nshow_pagination_results=1\nshow_feed_link=1\nshow_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (114, 'topmenu', 'Xuất nhập khẩu', 'xuat-nhap-khau', 'index.php?option=com_content&view=category&layout=blog&id=49', 'component', 1, 65, 20, 1, 2, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_description=0\nshow_description_image=0\nnum_leading_articles=1\nnum_intro_articles=10\nnum_columns=1\nnum_links=10\norderby_pri=\norderby_sec=\nmulti_column_order=0\nshow_pagination=2\nshow_pagination_results=1\nshow_feed_link=1\nshow_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', 0, 0, 0);
 INSERT INTO `jos_menu` VALUES (115, 'topmenu', 'Hợp tác', 'hop-tac', 'index.php?option=com_content&view=category&layout=blog&id=48', 'component', 1, 65, 20, 1, 3, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'show_description=0\nshow_description_image=0\nnum_leading_articles=1\nnum_intro_articles=10\nnum_columns=1\nnum_links=10\norderby_pri=\norderby_sec=\nmulti_column_order=0\nshow_pagination=2\nshow_pagination_results=1\nshow_feed_link=1\nshow_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', 0, 0, 0);
+INSERT INTO `jos_menu` VALUES (116, 'topmenu', 'Việc làm', 'viec-lam', 'index.php?option=com_jobboard&view=main&layout=list', 'component', -2, 0, 50, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'page_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', 0, 0, 0);
+INSERT INTO `jos_menu` VALUES (117, 'GroupMenu', 'Việc làm', 'viec-lam', 'index.php?option=com_jobboard&view=main&layout=table', 'component', 1, 0, 50, 0, 1, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'page_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', 0, 0, 0);
+INSERT INTO `jos_menu` VALUES (118, 'GroupMenu', 'Rao vặt', 'rao-vat', 'index.php?option=com_annonces&view=annonces', 'component', 1, 0, 61, 0, 2, 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'page_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1211,7 +1987,7 @@ CREATE TABLE `jos_menu_types` (
   `description` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `menutype` (`menutype`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 -- 
 -- Dumping data for table `jos_menu_types`
@@ -1223,6 +1999,7 @@ INSERT INTO `jos_menu_types` VALUES (3, 'topmenu', 'Top Menu', 'Top level naviga
 INSERT INTO `jos_menu_types` VALUES (4, 'othermenu', 'Resources', 'Additional links');
 INSERT INTO `jos_menu_types` VALUES (5, 'ExamplePages', 'Example Pages', 'Example Pages');
 INSERT INTO `jos_menu_types` VALUES (6, 'keyconcepts', 'Key Concepts', 'This describes some critical information for new Users.');
+INSERT INTO `jos_menu_types` VALUES (7, 'GroupMenu', 'GroupMenu', 'Nhóm Menu');
 
 -- --------------------------------------------------------
 
@@ -1313,13 +2090,13 @@ CREATE TABLE `jos_modules` (
   PRIMARY KEY  (`id`),
   KEY `published` (`published`,`access`),
   KEY `newsfeeds` (`module`,`published`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=56 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=57 ;
 
 -- 
 -- Dumping data for table `jos_modules`
 -- 
 
-INSERT INTO `jos_modules` VALUES (1, 'Main Menu', '', 1, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 1, 'menutype=mainmenu\nmoduleclass_sfx=_menu\n', 1, 0, '');
+INSERT INTO `jos_modules` VALUES (1, 'Main Menu', '', 2, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 1, 'menutype=mainmenu\nmoduleclass_sfx=_menu\n', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (2, 'Login', '', 1, 'login', 0, '0000-00-00 00:00:00', 1, 'mod_login', 0, 0, 1, '', 1, 1, '');
 INSERT INTO `jos_modules` VALUES (3, 'Popular', '', 3, 'cpanel', 0, '0000-00-00 00:00:00', 1, 'mod_popular', 0, 2, 1, '', 0, 1, '');
 INSERT INTO `jos_modules` VALUES (4, 'Recent added Articles', '', 4, 'cpanel', 0, '0000-00-00 00:00:00', 1, 'mod_latest', 0, 2, 1, 'ordering=c_dsc\nuser_id=0\ncache=0\n\n', 0, 1, '');
@@ -1335,38 +2112,39 @@ INSERT INTO `jos_modules` VALUES (13, 'Admin SubMenu', '', 1, 'submenu', 0, '000
 INSERT INTO `jos_modules` VALUES (14, 'User Status', '', 1, 'status', 0, '0000-00-00 00:00:00', 1, 'mod_status', 0, 2, 1, '', 0, 1, '');
 INSERT INTO `jos_modules` VALUES (15, 'Title', '', 1, 'title', 0, '0000-00-00 00:00:00', 1, 'mod_title', 0, 2, 1, '', 0, 1, '');
 INSERT INTO `jos_modules` VALUES (16, 'Thăm dò ý kiến', '', 1, 'news-adver4', 0, '0000-00-00 00:00:00', 1, 'mod_poll', 0, 0, 1, 'id=14\nmoduleclass_sfx=\ncache=1\ncache_time=900\n\n', 0, 0, '');
-INSERT INTO `jos_modules` VALUES (17, 'User Menu', '', 4, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 1, 1, 'menutype=usermenu\nmoduleclass_sfx=_menu\ncache=1', 1, 0, '');
+INSERT INTO `jos_modules` VALUES (17, 'User Menu', '', 5, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 1, 1, 'menutype=usermenu\nmoduleclass_sfx=_menu\ncache=1', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (18, 'Login Form', '', 8, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_login', 0, 0, 1, 'greeting=1\nname=0', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (19, 'Tin nổi bật trang chủ', '', 0, 'news-content-center', 0, '0000-00-00 00:00:00', 1, 'mod_latestnews', 0, 0, 1, 'count=13\nordering=c_dsc\nuser_id=0\nshow_front=1\nsecid=\ncatid=\nmoduleclass_sfx=\ncache=1\ncache_time=900\n\n', 1, 0, '');
-INSERT INTO `jos_modules` VALUES (20, 'Statistics', '', 6, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_stats', 0, 0, 1, 'serverinfo=1\nsiteinfo=1\ncounter=1\nincrease=0\nmoduleclass_sfx=', 0, 0, '');
+INSERT INTO `jos_modules` VALUES (20, 'Statistics', '', 7, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_stats', 0, 0, 1, 'serverinfo=1\nsiteinfo=1\ncounter=1\nincrease=0\nmoduleclass_sfx=', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (21, 'Who''s Online', '', 1, 'right', 0, '0000-00-00 00:00:00', 1, 'mod_whosonline', 0, 0, 1, 'online=1\nusers=1\nmoduleclass_sfx=', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (22, 'Popular', '', 6, 'user2', 0, '0000-00-00 00:00:00', 1, 'mod_mostread', 0, 0, 1, 'cache=1', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (23, 'Archive', '', 0, 'news-debug', 0, '0000-00-00 00:00:00', 0, 'mod_archive', 0, 0, 0, 'count=10\nmoduleclass_sfx=\ncache=1\n\n', 1, 0, '');
-INSERT INTO `jos_modules` VALUES (24, 'Sections', '', 10, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_sections', 0, 0, 1, 'cache=1', 1, 0, '');
+INSERT INTO `jos_modules` VALUES (24, 'Sections', '', 9, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_sections', 0, 0, 1, 'cache=1', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (25, 'Newsflash', '', 1, 'top', 0, '0000-00-00 00:00:00', 1, 'mod_newsflash', 0, 0, 1, 'catid=3\r\nstyle=random\r\nitems=\r\nmoduleclass_sfx=', 0, 0, '');
-INSERT INTO `jos_modules` VALUES (26, 'Related Items', '', 11, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_related_items', 0, 0, 1, '', 0, 0, '');
+INSERT INTO `jos_modules` VALUES (26, 'Related Items', '', 10, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_related_items', 0, 0, 1, '', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (27, 'Search', '', 0, 'news-search', 0, '0000-00-00 00:00:00', 1, 'mod_search', 0, 0, 0, 'moduleclass_sfx=\nwidth=20\ntext=Tìm kiếm nhanh...\nbutton=1\nbutton_pos=right\nimagebutton=\nbutton_text=Tìm kiếm\nset_itemid=\ncache=1\ncache_time=900\n\n', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (28, 'Random Image', '', 9, 'right', 0, '0000-00-00 00:00:00', 1, 'mod_random_image', 0, 0, 1, '', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (29, 'Top Menu', '', 0, 'news-topmenu', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 0, 'menutype=topmenu\nmenu_style=list\nstartLevel=0\nendLevel=0\nshowAllChildren=0\nwindow_open=\nshow_whitespace=0\ncache=1\ntag_id=\nclass_sfx=-nav\nmoduleclass_sfx=\nmaxdepth=10\nmenu_images=0\nmenu_images_align=0\nmenu_images_link=0\nexpand_menu=1\nactivate_parent=1\nfull_active_id=0\nindent_image=0\nindent_image1=-1\nindent_image2=-1\nindent_image3=-1\nindent_image4=-1\nindent_image5=-1\nindent_image6=-1\nspacer=\nend_spacer=\n\n', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (30, 'Banners Top', '', 0, 'news-top', 0, '0000-00-00 00:00:00', 1, 'mod_banners', 0, 0, 0, 'target=1\ncount=1\ncid=2\ncatid=54\ntag_search=0\nordering=random\nheader_text=\nfooter_text=\nmoduleclass_sfx=\ncache=1\ncache_time=15\n\n', 1, 0, '');
-INSERT INTO `jos_modules` VALUES (31, 'Resources', '', 2, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 1, 'menutype=othermenu\nmenu_style=list\nstartLevel=0\nendLevel=0\nshowAllChildren=0\nwindow_open=\nshow_whitespace=0\ncache=1\ntag_id=\nclass_sfx=\nmoduleclass_sfx=_menu\nmaxdepth=10\nmenu_images=0\nmenu_images_align=0\nexpand_menu=0\nactivate_parent=0\nfull_active_id=0\nindent_image=0\nindent_image1=\nindent_image2=\nindent_image3=\nindent_image4=\nindent_image5=\nindent_image6=\nspacer=\nend_spacer=\n\n', 0, 0, '');
-INSERT INTO `jos_modules` VALUES (32, 'Wrapper', '', 12, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_wrapper', 0, 0, 1, '', 0, 0, '');
+INSERT INTO `jos_modules` VALUES (31, 'Resources', '', 3, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 1, 'menutype=othermenu\nmenu_style=list\nstartLevel=0\nendLevel=0\nshowAllChildren=0\nwindow_open=\nshow_whitespace=0\ncache=1\ntag_id=\nclass_sfx=\nmoduleclass_sfx=_menu\nmaxdepth=10\nmenu_images=0\nmenu_images_align=0\nexpand_menu=0\nactivate_parent=0\nfull_active_id=0\nindent_image=0\nindent_image1=\nindent_image2=\nindent_image3=\nindent_image4=\nindent_image5=\nindent_image6=\nspacer=\nend_spacer=\n\n', 0, 0, '');
+INSERT INTO `jos_modules` VALUES (32, 'Wrapper', '', 11, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_wrapper', 0, 0, 1, '', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (33, 'Footer', '', 2, 'footer', 0, '0000-00-00 00:00:00', 0, 'mod_footer', 0, 0, 0, 'cache=1\n\n', 1, 0, '');
-INSERT INTO `jos_modules` VALUES (34, 'Feed Display', '', 13, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_feed', 0, 0, 1, '', 1, 0, '');
+INSERT INTO `jos_modules` VALUES (34, 'Feed Display', '', 12, 'left', 0, '0000-00-00 00:00:00', 0, 'mod_feed', 0, 0, 1, '', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (35, 'Breadcrumbs', '', 1, 'breadcrumb', 0, '0000-00-00 00:00:00', 1, 'mod_breadcrumbs', 0, 0, 1, 'moduleclass_sfx=\ncache=0\nshowHome=1\nhomeText=Home\nshowComponent=1\nseparator=\n\n', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (36, 'Syndication', '', 3, 'syndicate', 0, '0000-00-00 00:00:00', 1, 'mod_syndicate', 0, 0, 0, '', 1, 0, '');
 INSERT INTO `jos_modules` VALUES (38, 'Banner quảng cáo_300px', '', 0, 'news-adver2', 0, '0000-00-00 00:00:00', 1, 'mod_banners', 0, 0, 1, 'target=1\ncount=5\ncid=1\ncatid=51\ntag_search=0\nordering=0\nheader_text=Dành cho quảng cáo\nfooter_text=\nmoduleclass_sfx=_text\ncache=0\ncache_time=900\n\n', 0, 0, '');
-INSERT INTO `jos_modules` VALUES (39, 'Example Pages', '', 5, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 1, 'cache=1\nclass_sfx=\nmoduleclass_sfx=_menu\nmenutype=ExamplePages\nmenu_style=list_flat\nstartLevel=0\nendLevel=0\nshowAllChildren=0\nfull_active_id=0\nmenu_images=0\nmenu_images_align=0\nexpand_menu=0\nactivate_parent=0\nindent_image=0\nindent_image1=\nindent_image2=\nindent_image3=\nindent_image4=\nindent_image5=\nindent_image6=\nspacer=\nend_spacer=\nwindow_open=\n\n', 0, 0, '');
-INSERT INTO `jos_modules` VALUES (40, 'Key Concepts', '', 3, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 1, 'cache=1\nclass_sfx=\nmoduleclass_sfx=_menu\nmenutype=keyconcepts\nmenu_style=list\nstartLevel=0\nendLevel=0\nshowAllChildren=0\nfull_active_id=0\nmenu_images=0\nmenu_images_align=0\nexpand_menu=0\nactivate_parent=0\nindent_image=0\nindent_image1=\nindent_image2=\nindent_image3=\nindent_image4=\nindent_image5=\nindent_image6=\nspacer=\nend_spacer=\nwindow_open=\n\n', 0, 0, '');
+INSERT INTO `jos_modules` VALUES (39, 'Example Pages', '', 6, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 1, 'cache=1\nclass_sfx=\nmoduleclass_sfx=_menu\nmenutype=ExamplePages\nmenu_style=list_flat\nstartLevel=0\nendLevel=0\nshowAllChildren=0\nfull_active_id=0\nmenu_images=0\nmenu_images_align=0\nexpand_menu=0\nactivate_parent=0\nindent_image=0\nindent_image1=\nindent_image2=\nindent_image3=\nindent_image4=\nindent_image5=\nindent_image6=\nspacer=\nend_spacer=\nwindow_open=\n\n', 0, 0, '');
+INSERT INTO `jos_modules` VALUES (40, 'Key Concepts', '', 4, 'left', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 1, 'cache=1\nclass_sfx=\nmoduleclass_sfx=_menu\nmenutype=keyconcepts\nmenu_style=list\nstartLevel=0\nendLevel=0\nshowAllChildren=0\nfull_active_id=0\nmenu_images=0\nmenu_images_align=0\nexpand_menu=0\nactivate_parent=0\nindent_image=0\nindent_image1=\nindent_image2=\nindent_image3=\nindent_image4=\nindent_image5=\nindent_image6=\nspacer=\nend_spacer=\nwindow_open=\n\n', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (41, 'Welcome to Joomla!', '<div style="padding: 5px">  <p>   Congratulations on choosing Joomla! as your content management system. To   help you get started, check out these excellent resources for securing your   server and pointers to documentation and other helpful resources. </p> <p>   <strong>Security</strong><br /> </p> <p>   On the Internet, security is always a concern. For that reason, you are   encouraged to subscribe to the   <a href="http://feedburner.google.com/fb/a/mailverify?uri=JoomlaSecurityNews" target="_blank">Joomla!   Security Announcements</a> for the latest information on new Joomla! releases,   emailed to you automatically. </p> <p>   If this is one of your first Web sites, security considerations may   seem complicated and intimidating. There are three simple steps that go a long   way towards securing a Web site: (1) regular backups; (2) prompt updates to the   <a href="http://www.joomla.org/download.html" target="_blank">latest Joomla! release;</a> and (3) a <a href="http://docs.joomla.org/Security_Checklist_2_-_Hosting_and_Server_Setup" target="_blank" title="good Web host">good Web host</a>. There are many other important security considerations that you can learn about by reading the <a href="http://docs.joomla.org/Category:Security_Checklist" target="_blank" title="Joomla! Security Checklist">Joomla! Security Checklist</a>. </p> <p>If you believe your Web site was attacked, or you think you have discovered a security issue in Joomla!, please do not post it in the Joomla! forums. Publishing this information could put other Web sites at risk. Instead, report possible security vulnerabilities to the <a href="http://developer.joomla.org/security/contact-the-team.html" target="_blank" title="Joomla! Security Task Force">Joomla! Security Task Force</a>.</p><p><strong>Learning Joomla!</strong> </p> <p>   A good place to start learning Joomla! is the   "<a href="http://docs.joomla.org/beginners" target="_blank">Absolute Beginner''s   Guide to Joomla!.</a>" There, you will find a Quick Start to Joomla!   <a href="http://help.joomla.org/ghop/feb2008/task048/joomla_15_quickstart.pdf" target="_blank">guide</a>   and <a href="http://help.joomla.org/ghop/feb2008/task167/index.html" target="_blank">video</a>,   amongst many other tutorials. The   <a href="http://community.joomla.org/magazine/view-all-issues.html" target="_blank">Joomla!   Community Magazine</a> also has   <a href="http://community.joomla.org/magazine/article/522-introductory-learning-joomla-using-sample-data.html" target="_blank">articles   for new learners</a> and experienced users, alike. A great place to look for   answers is the   <a href="http://docs.joomla.org/Category:FAQ" target="_blank">Frequently Asked   Questions (FAQ)</a>. If you are stuck on a particular screen in the   Administrator (which is where you are now), try clicking the Help toolbar   button to get assistance specific to that page. </p> <p>   If you still have questions, please feel free to use the   <a href="http://forum.joomla.org/" target="_blank">Joomla! Forums.</a> The forums   are an incredibly valuable resource for all levels of Joomla! users. Before   you post a question, though, use the forum search (located at the top of each   forum page) to see if the question has been asked and answered. </p> <p>   <strong>Getting Involved</strong> </p> <p>   <a name="twjs" title="twjs"></a> If you want to help make Joomla! better, consider getting   involved. There are   <a href="http://www.joomla.org/about-joomla/contribute-to-joomla.html" target="_blank">many ways   you can make a positive difference.</a> Have fun using Joomla!.</p></div>', 0, 'cpanel', 0, '0000-00-00 00:00:00', 1, 'mod_custom', 0, 2, 1, 'moduleclass_sfx=\n\n', 1, 1, '');
 INSERT INTO `jos_modules` VALUES (42, 'Joomla! Security Newsfeed', '', 6, 'cpanel', 62, '2008-10-25 20:15:17', 1, 'mod_feed', 0, 0, 1, 'cache=1\ncache_time=15\nmoduleclass_sfx=\nrssurl=http://feeds.joomla.org/JoomlaSecurityNews\nrssrtl=0\nrsstitle=1\nrssdesc=0\nrssimage=1\nrssitems=1\nrssitemdesc=1\nword_count=0\n\n', 0, 1, '');
 INSERT INTO `jos_modules` VALUES (43, 'PHÂN NHÓM BÀI VIẾT', '', 0, 'news-frame1', 0, '0000-00-00 00:00:00', 1, 'mod_sections', 0, 0, 1, 'count=12\nmoduleclass_sfx=\ncache=0\ncache_time=900\n\n', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (44, 'Gold Viet Nam', '', 0, 'news-adver1', 0, '0000-00-00 00:00:00', 1, 'mod_gold', 0, 0, 1, 'moduleclass_sfx=\nlayout=default\nShowGoldReatWeather=1\nShowSecurities=1\n\n', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (45, 'Banner quảng cáo_200px', '', 0, 'news-right', 0, '0000-00-00 00:00:00', 1, 'mod_banners', 0, 0, 1, 'target=1\ncount=3\ncid=0\ncatid=52\ntag_search=0\nordering=0\nheader_text=\nfooter_text=\nmoduleclass_sfx=\ncache=1\ncache_time=900\n\n', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (47, 'Banner quảng cáo_khung tin nổi bật', '', 0, 'news-sidebar', 0, '0000-00-00 00:00:00', 1, 'mod_banners', 0, 0, 0, 'target=1\ncount=1\ncid=1\ncatid=53\ntag_search=0\nordering=0\nheader_text=\nfooter_text=\nmoduleclass_sfx=\ncache=1\ncache_time=900\n\n', 0, 0, '');
-INSERT INTO `jos_modules` VALUES (48, 'Banner-Header-365', '', 1, 'news-icon', 0, '0000-00-00 00:00:00', 1, 'mod_banners', 0, 0, 1, 'target=1\ncount=1\ncid=1\ncatid=55\ntag_search=0\nordering=0\nheader_text=\nfooter_text=\nmoduleclass_sfx=\ncache=1\ncache_time=900\n\n', 0, 0, '');
+INSERT INTO `jos_modules` VALUES (48, 'Banner-Header-365', '', 1, 'news-icon', 0, '0000-00-00 00:00:00', 0, 'mod_banners', 0, 0, 1, 'target=1\ncount=1\ncid=1\ncatid=55\ntag_search=0\nordering=0\nheader_text=\nfooter_text=\nmoduleclass_sfx=\ncache=1\ncache_time=900\n\n', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (49, 'Nội dung footer', '<div>Copyright © 2012 Bản quyền thuộc về Cổng Truyền Thông Thông Tin.</div>\r\n<p><a href="http://www.joomla.org/">Joomla!</a> là phần mềm miễn phí được lưu hành theo giấy phép <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU/GPL</a></p>', 0, 'footer', 0, '0000-00-00 00:00:00', 1, 'mod_custom', 0, 0, 0, 'moduleclass_sfx=\n\n', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (50, 'Bài đọc nhiều nhất', '', 0, 'news-bottommiddle', 0, '0000-00-00 00:00:00', 1, 'mod_mostread', 0, 0, 0, 'moduleclass_sfx=\nshow_front=1\ncount=10\ncatid=\nsecid=\ncache=1\ncache_time=900\n\n', 0, 0, '');
+INSERT INTO `jos_modules` VALUES (56, 'GroupMenu', '', 0, 'news-icon', 0, '0000-00-00 00:00:00', 1, 'mod_mainmenu', 0, 0, 0, 'menutype=GroupMenu\nmenu_style=list\nstartLevel=0\nendLevel=0\nshowAllChildren=0\nwindow_open=\nshow_whitespace=0\ncache=1\ntag_id=\nclass_sfx=\nmoduleclass_sfx=\nmaxdepth=10\nmenu_images=0\nmenu_images_align=0\nmenu_images_link=0\nexpand_menu=0\nactivate_parent=0\nfull_active_id=0\nindent_image=0\nindent_image1=\nindent_image2=\nindent_image3=\nindent_image4=\nindent_image5=\nindent_image6=\nspacer=\nend_spacer=\n\n', 0, 0, '');
 INSERT INTO `jos_modules` VALUES (55, 'Tiêu điểm', '', 0, 'news-debug', 0, '0000-00-00 00:00:00', 1, 'mod_focus', 0, 0, 1, 'count=10\nmoduleclass_sfx=\ncache=1\n\n', 0, 0, '');
 
 -- --------------------------------------------------------
@@ -1424,6 +2202,7 @@ INSERT INTO `jos_modules_menu` VALUES (48, 0);
 INSERT INTO `jos_modules_menu` VALUES (49, 0);
 INSERT INTO `jos_modules_menu` VALUES (50, 0);
 INSERT INTO `jos_modules_menu` VALUES (55, 0);
+INSERT INTO `jos_modules_menu` VALUES (56, 0);
 
 -- --------------------------------------------------------
 
@@ -1718,9 +2497,8 @@ CREATE TABLE `jos_session` (
 -- Dumping data for table `jos_session`
 -- 
 
-INSERT INTO `jos_session` VALUES ('', '1332870594', '8e2d3213edce6d6ad949f4fb0148f385', 1, 0, '', 0, 1, '__default|a:8:{s:15:"session.counter";i:1;s:19:"session.timer.start";i:1332870592;s:18:"session.timer.last";i:1332870592;s:17:"session.timer.now";i:1332870592;s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko/20100101 Firefox/11.0";s:8:"registry";O:9:"JRegistry":3:{s:17:"_defaultNameSpace";s:7:"session";s:9:"_registry";a:1:{s:7:"session";a:1:{s:4:"data";O:8:"stdClass":0:{}}}s:7:"_errors";a:0:{}}s:4:"user";O:5:"JUser":19:{s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:8:"usertype";N;s:5:"block";N;s:9:"sendEmail";i:0;s:3:"gid";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:3:"aid";i:0;s:5:"guest";i:1;s:7:"_params";O:10:"JParameter":7:{s:4:"_raw";s:0:"";s:4:"_xml";N;s:9:"_elements";a:0:{}s:12:"_elementPath";a:1:{i:0;s:68:"D:\\AppServ\\www\\projects\\news\\libraries\\joomla\\html\\parameter\\element";}s:17:"_defaultNameSpace";s:8:"_default";s:9:"_registry";a:1:{s:8:"_default";a:1:{s:4:"data";O:8:"stdClass":0:{}}}s:7:"_errors";a:0:{}}s:9:"_errorMsg";N;s:7:"_errors";a:0:{}}s:13:"session.token";s:32:"df9aef90d626ba80efeeade1e1157483";}');
-INSERT INTO `jos_session` VALUES ('kieuvanngoc', '1332870610', '2e74d1724e65e4d00fe7eaa6ae49fb5d', 0, 62, 'Super Administrator', 25, 1, '__default|a:8:{s:15:"session.counter";i:8;s:19:"session.timer.start";i:1332870592;s:18:"session.timer.last";i:1332870610;s:17:"session.timer.now";i:1332870610;s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko/20100101 Firefox/11.0";s:8:"registry";O:9:"JRegistry":3:{s:17:"_defaultNameSpace";s:7:"session";s:9:"_registry";a:5:{s:7:"session";a:1:{s:4:"data";O:8:"stdClass":7:{s:23:"com_modulesfilter_order";s:10:"m.position";s:27:"com_modulesfilter_order_Dir";s:0:"";s:23:"com_modulesfilter_state";s:0:"";s:26:"com_modulesfilter_position";s:1:"0";s:22:"com_modulesfilter_type";s:1:"0";s:26:"com_modulesfilter_assigned";s:1:"0";s:17:"com_modulessearch";s:0:"";}}s:11:"application";a:1:{s:4:"data";O:8:"stdClass":1:{s:4:"lang";s:0:"";}}s:10:"com_cpanel";a:1:{s:4:"data";O:8:"stdClass":1:{s:9:"mtupgrade";O:8:"stdClass":1:{s:7:"checked";b:1;}}}s:6:"global";a:1:{s:4:"data";O:8:"stdClass":1:{s:4:"list";O:8:"stdClass":1:{s:5:"limit";s:2:"20";}}}s:11:"com_modules";a:1:{s:4:"data";O:8:"stdClass":1:{s:10:"limitstart";s:2:"20";}}}s:7:"_errors";a:0:{}}s:4:"user";O:5:"JUser":19:{s:2:"id";s:2:"62";s:4:"name";s:18:"Kiều Văn Ngọc";s:8:"username";s:11:"kieuvanngoc";s:5:"email";s:16:"ngockv@gmail.com";s:8:"password";s:65:"c59e3db1f46074b9f0ee95bdb9bbbcef:k1UiIErKajgJO4sEIwUa7wd6keP2bnSa";s:14:"password_clear";s:0:"";s:8:"usertype";s:19:"Super Administrator";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:3:"gid";s:2:"25";s:12:"registerDate";s:19:"2012-03-14 16:06:10";s:13:"lastvisitDate";s:19:"2012-03-27 17:17:57";s:10:"activation";s:0:"";s:6:"params";s:56:"admin_language=\nlanguage=\neditor=\nhelpsite=\ntimezone=0\n\n";s:3:"aid";i:2;s:5:"guest";i:0;s:7:"_params";O:10:"JParameter":7:{s:4:"_raw";s:0:"";s:4:"_xml";N;s:9:"_elements";a:0:{}s:12:"_elementPath";a:1:{i:0;s:68:"D:\\AppServ\\www\\projects\\news\\libraries\\joomla\\html\\parameter\\element";}s:17:"_defaultNameSpace";s:8:"_default";s:9:"_registry";a:1:{s:8:"_default";a:1:{s:4:"data";O:8:"stdClass":5:{s:14:"admin_language";s:0:"";s:8:"language";s:0:"";s:6:"editor";s:0:"";s:8:"helpsite";s:0:"";s:8:"timezone";s:1:"0";}}}s:7:"_errors";a:0:{}}s:9:"_errorMsg";N;s:7:"_errors";a:0:{}}s:13:"session.token";s:32:"df9aef90d626ba80efeeade1e1157483";}');
-INSERT INTO `jos_session` VALUES ('', '1332870660', 'e060ca9e6777187c85e89c49ce3031d7', 1, 0, '', 0, 0, '__default|a:8:{s:15:"session.counter";i:65;s:19:"session.timer.start";i:1332866483;s:18:"session.timer.last";i:1332870612;s:17:"session.timer.now";i:1332870660;s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko/20100101 Firefox/11.0";s:8:"registry";O:9:"JRegistry":3:{s:17:"_defaultNameSpace";s:7:"session";s:9:"_registry";a:1:{s:7:"session";a:1:{s:4:"data";O:8:"stdClass":0:{}}}s:7:"_errors";a:0:{}}s:4:"user";O:5:"JUser":19:{s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:8:"usertype";N;s:5:"block";N;s:9:"sendEmail";i:0;s:3:"gid";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:3:"aid";i:0;s:5:"guest";i:1;s:7:"_params";O:10:"JParameter":7:{s:4:"_raw";s:0:"";s:4:"_xml";N;s:9:"_elements";a:0:{}s:12:"_elementPath";a:1:{i:0;s:68:"D:\\AppServ\\www\\projects\\news\\libraries\\joomla\\html\\parameter\\element";}s:17:"_defaultNameSpace";s:8:"_default";s:9:"_registry";a:1:{s:8:"_default";a:1:{s:4:"data";O:8:"stdClass":0:{}}}s:7:"_errors";a:0:{}}s:9:"_errorMsg";N;s:7:"_errors";a:0:{}}s:13:"session.token";s:32:"ce1d38c0f263ca87f178308d1b517721";}');
+INSERT INTO `jos_session` VALUES ('kieuvanngoc', '1332952001', 'b8bb2a7efe6ba940935f2960b6150b59', 0, 62, 'Super Administrator', 25, 1, '__default|a:8:{s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko/20100101 Firefox/11.0";s:15:"session.counter";i:81;s:8:"registry";O:9:"JRegistry":3:{s:17:"_defaultNameSpace";s:7:"session";s:9:"_registry";a:6:{s:7:"session";a:1:{s:4:"data";O:8:"stdClass":7:{s:23:"com_modulesfilter_order";s:10:"m.position";s:27:"com_modulesfilter_order_Dir";s:0:"";s:23:"com_modulesfilter_state";s:0:"";s:26:"com_modulesfilter_position";s:1:"0";s:22:"com_modulesfilter_type";s:1:"0";s:26:"com_modulesfilter_assigned";s:1:"0";s:17:"com_modulessearch";s:0:"";}}s:11:"application";a:1:{s:4:"data";O:8:"stdClass":1:{s:4:"lang";s:0:"";}}s:10:"com_cpanel";a:1:{s:4:"data";O:8:"stdClass":1:{s:9:"mtupgrade";O:8:"stdClass":1:{s:7:"checked";b:1;}}}s:9:"com_menus";a:1:{s:4:"data";O:8:"stdClass":2:{s:8:"menutype";s:8:"mainmenu";s:7:"topmenu";O:8:"stdClass":6:{s:12:"filter_order";s:10:"m.ordering";s:16:"filter_order_Dir";s:3:"ASC";s:12:"filter_state";s:0:"";s:10:"limitstart";s:2:"60";s:10:"levellimit";s:2:"10";s:6:"search";s:0:"";}}}s:6:"global";a:1:{s:4:"data";O:8:"stdClass":1:{s:4:"list";O:8:"stdClass":1:{s:5:"limit";s:2:"20";}}}s:11:"com_modules";a:1:{s:4:"data";O:8:"stdClass":1:{s:10:"limitstart";s:2:"20";}}}s:7:"_errors";a:0:{}}s:4:"user";O:5:"JUser":19:{s:2:"id";s:2:"62";s:4:"name";s:18:"Kiều Văn Ngọc";s:8:"username";s:11:"kieuvanngoc";s:5:"email";s:16:"ngockv@gmail.com";s:8:"password";s:65:"c59e3db1f46074b9f0ee95bdb9bbbcef:k1UiIErKajgJO4sEIwUa7wd6keP2bnSa";s:14:"password_clear";s:0:"";s:8:"usertype";s:19:"Super Administrator";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:3:"gid";s:2:"25";s:12:"registerDate";s:19:"2012-03-14 16:06:10";s:13:"lastvisitDate";s:19:"2012-03-28 14:57:40";s:10:"activation";s:0:"";s:6:"params";s:56:"admin_language=\nlanguage=\neditor=\nhelpsite=\ntimezone=0\n\n";s:3:"aid";i:2;s:5:"guest";i:0;s:7:"_params";O:10:"JParameter":7:{s:4:"_raw";s:0:"";s:4:"_xml";N;s:9:"_elements";a:0:{}s:12:"_elementPath";a:1:{i:0;s:68:"D:\\AppServ\\www\\projects\\news\\libraries\\joomla\\html\\parameter\\element";}s:17:"_defaultNameSpace";s:8:"_default";s:9:"_registry";a:1:{s:8:"_default";a:1:{s:4:"data";O:8:"stdClass":5:{s:14:"admin_language";s:0:"";s:8:"language";s:0:"";s:6:"editor";s:0:"";s:8:"helpsite";s:0:"";s:8:"timezone";s:1:"0";}}}s:7:"_errors";a:0:{}}s:9:"_errorMsg";N;s:7:"_errors";a:0:{}}s:13:"session.token";s:32:"091751e53664ac2eded63076498ad813";s:19:"session.timer.start";i:1332949770;s:18:"session.timer.last";i:1332951995;s:17:"session.timer.now";i:1332952001;}');
+INSERT INTO `jos_session` VALUES ('', '1332952822', '26b63dc87bb9d6d91ee35bd4cad3114a', 1, 0, '', 0, 0, '__default|a:8:{s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko/20100101 Firefox/11.0";s:15:"session.counter";i:2;s:8:"registry";O:9:"JRegistry":3:{s:17:"_defaultNameSpace";s:7:"session";s:9:"_registry";a:1:{s:7:"session";a:1:{s:4:"data";O:8:"stdClass":0:{}}}s:7:"_errors";a:0:{}}s:4:"user";O:5:"JUser":19:{s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:8:"usertype";N;s:5:"block";N;s:9:"sendEmail";i:0;s:3:"gid";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:3:"aid";i:0;s:5:"guest";i:1;s:7:"_params";O:10:"JParameter":7:{s:4:"_raw";s:0:"";s:4:"_xml";N;s:9:"_elements";a:0:{}s:12:"_elementPath";a:1:{i:0;s:68:"D:\\AppServ\\www\\projects\\news\\libraries\\joomla\\html\\parameter\\element";}s:17:"_defaultNameSpace";s:8:"_default";s:9:"_registry";a:1:{s:8:"_default";a:1:{s:4:"data";O:8:"stdClass":0:{}}}s:7:"_errors";a:0:{}}s:9:"_errorMsg";N;s:7:"_errors";a:0:{}}s:13:"session.token";s:32:"57aec39d7154a506475a51defa33a1f0";s:19:"session.timer.start";i:1332952822;s:18:"session.timer.last";i:1332952822;s:17:"session.timer.now";i:1332952822;}');
 
 -- --------------------------------------------------------
 
@@ -1791,7 +2569,7 @@ CREATE TABLE `jos_users` (
 -- Dumping data for table `jos_users`
 -- 
 
-INSERT INTO `jos_users` VALUES (62, 'Kiều Văn Ngọc', 'kieuvanngoc', 'ngockv@gmail.com', 'c59e3db1f46074b9f0ee95bdb9bbbcef:k1UiIErKajgJO4sEIwUa7wd6keP2bnSa', 'Super Administrator', 0, 1, 25, '2012-03-14 16:06:10', '2012-03-27 17:49:55', '', 'admin_language=\nlanguage=\neditor=\nhelpsite=\ntimezone=0\n\n');
+INSERT INTO `jos_users` VALUES (62, 'Kiều Văn Ngọc', 'kieuvanngoc', 'ngockv@gmail.com', 'c59e3db1f46074b9f0ee95bdb9bbbcef:k1UiIErKajgJO4sEIwUa7wd6keP2bnSa', 'Super Administrator', 0, 1, 25, '2012-03-14 16:06:10', '2012-03-28 15:49:31', '', 'admin_language=\nlanguage=\neditor=\nhelpsite=\ntimezone=0\n\n');
 
 -- --------------------------------------------------------
 
@@ -1860,7 +2638,7 @@ CREATE TABLE `jos_wf_profiles` (
 -- 
 
 INSERT INTO `jos_wf_profiles` VALUES (1, 'Default', 'Default Profile for all users', '', '19,20,21,23,24,25', '', 0, 'help,newdocument,undo,redo,spacer,bold,italic,underline,strikethrough,justifyfull,justifycenter,justifyleft,justifyright,spacer,blockquote,formatselect,styleselect,removeformat,cleanup;fontselect,fontsizeselect,forecolor,backcolor,spacer,paste,indent,outdent,numlist,bullist,sub,sup,textcase,charmap,hr;directionality,fullscreen,preview,source,print,searchreplace,spacer,table;visualaid,visualchars,nonbreaking,style,xhtmlxtras,anchor,unlink,link,imgmanager,spellchecker,article', 'contextmenu,browser,inlinepopups,media,help,paste,searchreplace,directionality,fullscreen,preview,source,table,textcase,print,style,nonbreaking,visualchars,xhtmlxtras,imgmanager,link,spellchecker,article', 1, 1, 0, '0000-00-00 00:00:00', '');
-INSERT INTO `jos_wf_profiles` VALUES (2, 'Front End', 'Sample Front-end Profile', '', '19,20,21', '', 1, 'help,newdocument,undo,redo,spacer,bold,italic,underline,strikethrough,justifyfull,justifycenter,justifyleft,justifyright,spacer,formatselect,styleselect;paste,searchreplace,indent,outdent,numlist,bullist,cleanup,charmap,removeformat,hr,sub,sup,textcase,nonbreaking,visualchars;fullscreen,preview,print,visualaid,style,xhtmlxtras,anchor,unlink,link,imgmanager,spellchecker,article', 'contextmenu,inlinepopups,help,paste,searchreplace,fullscreen,preview,print,style,textcase,nonbreaking,visualchars,xhtmlxtras,imgmanager,link,spellchecker,article', 0, 2, 0, '0000-00-00 00:00:00', '');
+INSERT INTO `jos_wf_profiles` VALUES (2, 'Front End', 'Sample Front-end Profile', '', '19,20,21', '', 1, 'help,newdocument,undo,redo,spacer,bold,italic,underline,strikethrough,justifyfull,justifycenter,justifyleft,justifyright,spacer,formatselect,styleselect;paste,searchreplace,indent,outdent,numlist,bullist,cleanup,charmap,removeformat,hr,sub,sup,textcase,nonbreaking,visualchars;fullscreen,preview,print,visualaid,style,xhtmlxtras,anchor,unlink,link,imgmanager,spellchecker,article', 'contextmenu,inlinepopups,help,paste,searchreplace,fullscreen,preview,print,style,textcase,nonbreaking,visualchars,xhtmlxtras,imgmanager,link,spellchecker,article', 0, 2, 0, '0000-00-00 00:00:00', '{"editor":{"width":"","height":"","toolbar_theme":"default","toolbar_align":"left","toolbar_location":"top","statusbar_location":"bottom","path":"1","resizing":"1","resize_horizontal":"1","resizing_use_cookie":"1","dialog_theme":"jce","profile_content_css":"2","profile_content_css_custom":"","relative_urls":"1","invalid_elements":"","invalid_attributes":"dynsrc,lowsrc","invalid_attribute_values":"","extended_elements":"","allow_javascript":"0","allow_css":"0","allow_php":"0","inline_styles":"1","cdata":"1","theme_advanced_blockformats":["p","div","h1","h2","h3","h4","h5","h6","address","code","pre","samp","span"],"theme_advanced_styles":"","theme_advanced_fonts_add":"","theme_advanced_fonts_remove":"","theme_advanced_font_sizes":"8pt,10pt,12pt,14pt,18pt,24pt,36pt","visualchars":"0","toggle":"1","toggle_state":"1","toggle_label":"[Toggle Editor]","custom_colors":"","dir":"","filesystem":{"name":"joomla","joomla":{"allow_root":"0","restrict_dir":"administrator,cache,components,includes,language,libraries,logs,media,modules,plugins,templates,xmlrpc"}},"max_size":"","upload_conflict":"overwrite","upload_runtimes":["html5","flash"],"browser_position":"bottom","folder_tree":"1","list_limit":"all","validate_mimetype":"0","websafe_mode":"utf-8"},"paste":{"use_dialog":"0","dialog_width":"450","dialog_height":"400","force_cleanup":"0","strip_class_attributes":"all","remove_spans":"0","remove_styles":"0","retain_style_properties":"","remove_empty_paragraphs":"1","remove_styles_if_webkit":"0","html":"1","text":"1"},"imgmanager":{"dir":"","max_size":"","extensions":"image=jpeg,jpg,png,gif","hide_xtd_btns":"0","filesystem":{"name":""},"margin_top":"","margin_right":"","margin_bottom":"","margin_left":"","border":"0","border_width":"1","border_style":"solid","border_color":"#000000","align":"","tabs_rollover":"1","tabs_advanced":"1","attributes_dimensions":"1","attributes_align":"1","attributes_margin":"1","attributes_border":"1","upload":"1","folder_new":"1","folder_delete":"1","folder_rename":"1","folder_move":"1","file_delete":"1","file_rename":"1","file_move":"1"},"link":{"target":"","file_browser":"1","tabs_advanced":"1","attributes_anchor":"1","attributes_target":"1","links":{"joomlalinks":{"enable":"1","article_alias":"1","weblinks_alias":"1","content":"1","static":"1","contacts":"1","weblinks":"1","menu":"1"}},"popups":{"jcemediabox":{"enable":"1"},"window":{"enable":"1"}}},"spellchecker":{"engine":"googlespell","languages":"English=en","pspell_mode":"PSPELL_FAST","pspell_spelling":"","pspell_jargon":"","pspell_encoding":"","pspell_dictionary":"components\\/com_jce\\/editor\\/tiny_mce\\/plugins\\/spellchecker\\/dictionary.pws","pspellshell_aspell":"\\/usr\\/bin\\/aspell","pspellshell_tmp":"\\/tmp"},"article":{"show_readmore":"1","show_pagebreak":"1","hide_xtd_btns":"0"}}');
 
 -- --------------------------------------------------------
 
