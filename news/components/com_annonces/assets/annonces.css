@@ -1,0 +1,158 @@
+#listeAnnonces {	padding: 0px;}#listeAnnonces table {	border: 1px solid #DEDEDE;	background: none repeat scroll 0 0 #FCFCFC;}#listeAnnonces table tr td {	padding: 5px;}#listeAnnonces img {	display:block;	width:auto;	margin-left:auto;	margin-right:auto;}td.sectiontableheader {	padding: 4px;	border-right: 1px solid #fff;}
+.sectiontableheader {	padding: 8px 5px;	background: #fa3e4c;	color: #FFFFFF;	font-weight: bold;}
+.sectiontableheader a {	color: #FFFFFF;}#listeAnnonces tr.sectiontableentry1 td {	padding: 5px 5px;	background: url(images/hdot2.gif) repeat-x bottom #F9F9F9;}
+#listeAnnonces tr.sectiontableentry2 td {	padding: 5px 5px;	background: url(images/hdot2.gif) repeat-x bottom #EFEFEF;}
+#listeAnnonces tr.sectiontableentry1:hover td,#listeAnnonces tr.sectiontableentry2:hover td {	background: url(images/hdot2.gif) repeat-x bottom #fbd9df;}actionUser div {	float: left;}
+#categorie {	margin-bottom: 5px;}
+#categorie a {	margin-right:0.7em;}
+#detailAnnonce  {}
+#detailAnnonce .article-tools {	padding: 5px;	margin-bottom: 5px;}
+.titreParag {	color:#FFFFFF;	font-size: 120%;	padding: 5px;	font-weight: bold;}
+#detailAnnonce #photobox  {
+	display:block;
+	float:left;
+	width: 470px;
+	margin-bottom:0px;
+	z-index:1;
+}
+
+#detailAnnonce #photobox2  {
+	margin-bottom:0px;
+	z-index:1;
+	float: left;
+	display: inline;
+	position: relative;
+	width: 98%;
+}
+
+.img_top {  padding:0px; padding-right:5px; margin-bottom:10px}
+.image_top { width:480px; };
+.img_top img { background:#FFF; z-index:1}
+.img-top a {font-size:0px;line-height:0px;}
+.img_cont { margin-left:5px; margin-right:0px; margin-top:10px; float:left;}
+.img_clr {clear:both;}
+.img_thumb { float:left;margin:0px 5px 0px 0px;padding:0px}
+.img_thumb img {display:block;position:relative;background:#FFF;border:1px solid #ccc;margin:-5px 5px 5px -5px;padding:4px;}
+
+.img_cont2 { margin-left:5px; margin-right:0px; margin-top:10px; }
+.img_top2 { float: left; padding:0px; padding-right:5px; margin-bottom:10px}
+.img_thumb2 { text-align:center; margin:0px 5px 0px 0px;padding:0px}
+.img_thumb2 img { background:#FFF;border:1px solid #ccc;margin:0px 10px 5px 10px;padding:4px;}
+
+
+#detailAnnonce #rightbox  {
+	float:right;
+	position: static;
+	background: #ECECEC none repeat scroll 0 0;
+	margin-bottom:10px;
+	padding-left: 0px;
+	overflow:hidden;
+	width: 32%;
+	line-height: 125%;
+	z-index:0;
+}
+
+
+#detailAnnonce #topbox  {
+	float: left;
+	position: static;
+	background: #ECECEC none repeat scroll 0 0;
+	margin-bottom:10px;
+	padding-right: 2px;
+	overflow:hidden;
+	width: 49%;
+	line-height: 100%;
+	z-index:0;
+}
+
+#detailAnnonce #rightbox .article-tools {
+	margin-bottom: 0px;
+}
+
+#topbox td.prix {
+	color:#FA3E4C;
+	font-size:160%;
+	font-weight:bold;
+	margin-left:15px;
+	line-height: 150%;
+}
+
+#topbox td.objet{
+	font-size:120%;
+	font-weight:bold;
+	margin-left:15px;
+}
+
+#rightbox td.prix {
+	color:#FA3E4C;
+	font-size:160%;
+	font-weight:bold;
+	margin-left:15px;
+	line-height: 150%;
+}
+
+#rightbox td.objet{
+	font-size:120%;
+	font-weight:bold;
+	margin-left:15px;
+}
+
+#contactbox {
+	text-align: center;
+}
+
+#detailAnnonce #descriptionBox {
+	clear: both;
+	width: 99%;
+}
+
+.editAnnonce div {	padding-bottom: 5px;
+	display:block;	float: none;	clear: left;
+}
+
+div.editAnnonce fieldset {
+	border:1px solid #DDDDDD;
+	background: none;
+	margin:0 0 1em;
+	padding:1em;
+	font-weight: bold;
+}
+
+div.editAnnonce form label  {
+	display:block;
+	float:left;
+	margin:0;
+	padding:0;
+	vertical-align:top;
+	width:13em;
+}
+
+
+div.editAnnonce small
+{
+	padding-left:5px;
+	padding-right:5px;
+	margin-top: 3px;
+}
+div.editAnnonce form input, 
+div.editAnnonce form button,
+div.editAnnonce form select,
+div.editAnnonce form textarea {
+    margin: 0 0 0.5em 0; padding: 0.2em;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background-color: #fff;
+}
+div.editAnnonce div.checkbox  {	clear: none;}
+div.editAnnonce div.checkbox input, div.editAnnonce div.checkbox label {	padding: 2px;	margin: 2px;	float: left;	position: relative;	padding: 1px 5px 7px 24px;	width: 2em;}
+
+div.pageslinks {	text-align: center;	padding-bottom:5px;	padding-top:5px;}.pageslinks div {	display: inline;	padding: 5px;	text-align: center;}.page-active {	font-weight: bold;}.page-inactive {	font-weight: bold;}.pageslinks ul.pagination {	text-align: center;	background: none;	margin:0px;	padding:0px;}
+
+tr.sortable img {
+   margin-left: 5px;
+}
+
+#recherche_ads {
+	margin: 5px;
+	text-align: right;
+}

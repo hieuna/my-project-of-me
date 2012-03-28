@@ -1,0 +1,45 @@
+<table class="noshow">
+      <tr>
+        <td width="50%">
+        
+			<fieldset class="adminform">
+				<legend><?php echo JText::_( 'Parameters' ); ?></legend>
+					<fieldset class="adminform">
+					<legend><?php echo JText::_( 'VALIDATION PARAMETERS' ); ?></legend>
+						<table class="adminform">
+							
+							<tr>
+								<td width="40%">
+									<label for="updateEmailNotification">
+										<?php echo JText::_( 'ADMIN VALIDATION' ).':'; ?>
+									</label>
+								</td>
+								<td>
+									 <?php
+							             echo JHTML::_('select.booleanlist','adminValidation','class="inputbox"',$this->parametres->adminValidation); 
+								?>	 
+								</td>
+								<td><label>
+								</td>
+							</tr>
+							<tr>
+								<td width="40%">
+									<label for="updateEmailNotification">
+										<?php echo JText::_( 'EMAIL_UPDATE_NOFIF' ).':'; ?>
+									</label>
+								</td>
+								<td>
+									 <?php
+							             echo JHTML::_('select.booleanlist','updateEmailNotification','class="inputbox"',$this->parametres->updateEmailNotification); 
+								?>	 
+								</td>
+								<td><label>
+								</td>
+							</tr>
+							
+						</table>
+					</fieldset>
+				</fieldset>
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,54 @@
+<table class="noshow">
+      <tr>
+        <td width="50%">
+			<fieldset class="adminform">
+			<legend><?php echo JText::_( 'GENERAL' ); ?></legend>
+				
+				<table class="adminform">					<tr>						<td width="20%">							<label for="maxSize">								<?php echo JText::_( 'MAX_UPLOAD_SIZE' ).':'; ?>							</label>						</td>						<td>							 <input class="inputbox required" type="text" id="maxSize" name="maxSize" value="<?php echo $this->parametres->maxSize ?>" size="5" maxlength="7" />						</td>						<td>&nbsp;</td>					</tr>					<tr>						<td width="20%">							<label for="dateFormat">								<?php echo JText::_( 'FORMAT_DATE' ).':'; ?>							</label>						</td>						<td>							 <input class="inputbox required" type="text" id="dateFormat" name="dateFormat" value="<?php echo $this->parametres->dateFormat ?>" size="20" maxlength="20" />						</td>						<td>&nbsp;</td>					</tr>
+					
+					<tr>
+						<td width="20%">
+							<label for="currency">
+								<?php echo JText::_( 'CURRENCY' ).':'; ?>
+							</label>
+						</td>
+						<td>
+							 <input class="inputbox required" type="text" id="currency" name="currency" value="<?php echo $this->parametres->currency ?>" size="5" maxlength="4" />
+						</td>
+						<td><label>
+						</td>
+					</tr>
+					
+					<tr>
+						<td width="20%">
+							<label for="metric">
+								<?php echo JText::_( 'METRIC' ).':'; ?>
+							</label>
+						</td>
+						<td>
+							 <input class="inputbox required" type="text" id="metric" name="metric" value="<?php echo $this->parametres->metric ?>" size="20" maxlength="20" />
+						</td>
+						<td>
+						</td>
+					</tr>
+				</table>	
+
+				<table class="admintable">
+					<tr>
+						<td width="20%">
+							<label for="published_days">
+								<?php echo JText::_( 'DURATION' ).':'; ?>
+							</label>
+						</td>
+						<td>
+							 <input class="inputbox required" type="text" id="published_days" name="published_days" value="<?php echo $this->parametres->published_days ?>" size="5" maxlength="4" />
+						</td>
+						<td><label><?php echo JText::_( 'NO LIMIT DAYS HELP' ); ?></label>
+						</td>
+					</tr>
+				</table>
+				
+			</fieldset>
+		</td>
+	</tr>
+</table>

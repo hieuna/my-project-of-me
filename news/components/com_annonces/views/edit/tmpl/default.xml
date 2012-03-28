@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="ADS_ADD">
+		<message>
+			<![CDATA[ADS_ADD]]>
+		</message>
+	</layout>
+	<state>
+		<name>ADS_ADD</name>
+		<description>OBJET DESC</description>
+	</state>
+</metadata>
