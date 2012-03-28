@@ -67,6 +67,7 @@ $info_topup->data_sign = $data_sign;
 
 //$test = $bk->DoTopupToMerchant($info_topup);
 $test = $bk->DoTopupToMerchant($info_topup);
+var_dump($tss
 if($test["error_code"]==0){
 $xu = $test["info_card"]/100;
     echo '<script>alert("Bạn đã thanh toán thành công thẻ cào '.$ten.' với mệnh giá '.$test["info_card"].'");</script>';

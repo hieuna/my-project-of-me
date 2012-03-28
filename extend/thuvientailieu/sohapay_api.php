@@ -9,8 +9,8 @@
 <?php
 include('../class/class_payment.php');
 $sever = "localhost";
-//$user = "thuvient";
-//$password = "fmQIeCZl";
+$user = "thuvient";
+$password = "159357mm";
 $database = "thuvient_TVso1VN";
 
 $link = mysql_connect($sever,$user,$password) or die("Kết nối không thành công". mysql_error());
@@ -25,8 +25,8 @@ if(isset($_POST['hid'])){
 	$return_url = 'http://thuvientailieu.net/API/sohapay_api.php?task=msg';
 	$transaction_info = 'Nạp tiền từ thuvientailieu.net qua cổng thanh toán SohaPay';
 	$order_price = $_POST['price_shp'];
-	$order_email = $_POST['email_shp'];
-	$order_phone = $_POST['phone_shp'];
+	$order_email = $_POST['user_email'];
+	$order_phone = '';
 	$sohapay_checkout_url = $classPayment->buildCheckoutUrl($return_url, $transaction_info, $order_code, $order_price, $order_email, $order_phone);
 	//var_dump($sohapay_checkout_url); die;
 	//$error_text = $_GET['error_text'];
