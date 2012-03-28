@@ -58,18 +58,6 @@ $view 		= JRequest::getString('view', '', 'GET');
 				 </div>
 			</div>
 		</div>	
-<div>
-
-
-</div>
-
-
-
-<div>
-
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWOgKn4qPlCwKy4e2fBwLoy569BALY8/ATAsfy65UBAr60ivQLApmqwKEEArPc3cEGAvHyqLkKAvrFuKoJAqSV2/MFAu+0y7AGAqLX9dcGAsCCjpgLAsrDi4YCAsCCttQKApmqmAcC8NrC0gUC8e/QYgLAgr6YCgLOpd/0BQL86rKTDgKqlIbdCwLhy9a4AQLRo9bxDwLc9NWzCAKhnKG4CAKjkNWkDgK0lcijBwKdt5zVBgKj2pmfCAKpgpyODwKd4/3CBgKs7cGMAQLN+qG0CQLYja33CgLVyvTkBgLRo9bxDwLDmN+kCALztoapCwKl0snlBgLH8sPKBwL27ph4AqLDrNYDAtaWlM0FArnYmQUC8PWd1gsCro/f7w0Cg4SQzg8CpMWVrQgC7si83wYCnrn+ywUCr4b14gQC/6DIkA0Cgtq2xQgC6vSo0QEC+qWG1Q0CrqnvwgJ7+XPOdEwVuEJViCipsawU9wLA4Q==" />
-</div>
-	
 	<table cellpadding="0" cellspacing="0" class="master">
 		<tr>
 			<td valign="top">
@@ -94,66 +82,65 @@ $view 		= JRequest::getString('view', '', 'GET');
  				<?php }?>
 				<tr>
 					<td colspan="3">
-
 					<div style="padding-top: 4px">
 						<table cellpadding="0" cellspacing="0" width="100%" border="0">
 							<tr>
 								<td width="100%" valign="top">
-											<div class="mainContainer">
-												<div class="fl wid470">
-												<?php
-												if ($view == 'frontpage'){
-													?>
-													<div class="view_content">
-														<jdoc:include type="modules" name="news-frame1" />
-													</div>
-													<?php
-												}else{
-													?>
-													<jdoc:include type="component" />
-													<?php
-												} 
-												?>
-												</div>
-												<div class="fl wid310">
-													<div class="box_adver_vuong">
-														<jdoc:include type="modules" name="news-debug" />
-														<jdoc:include type="modules" name="news-adver1" />
-														<jdoc:include type="modules" name="news-adver2" />
-														<jdoc:include type="modules" name="news-adver3" />
-														<div class="banneritem_text">
-															<jdoc:include type="modules" name="news-adver4" />
-														</div>
-														<jdoc:include type="modules" name="news-adver5" />
-														<jdoc:include type="modules" name="news-bottommiddle" />
-													</div>
-												</div>
-												<div class="fr wid210 text_center">
-													<div class="wid200">
-														<jdoc:include type="modules" name="news-right" />
-													</div>
-												</div>
+									<div class="mainContainer">
+										<div class="fl wid470">
+										<?php
+										if ($view == 'frontpage'){
+											?>
+											<div class="view_content">
+												<jdoc:include type="modules" name="news-frame1" />
 											</div>
-										</td>
-										</tr>
-										</table>
+											<?php
+										}else{
+											?>
+											<jdoc:include type="component" />
+											<?php
+										} 
+										?>
 										</div>
-									</td>
-								</tr>
-							</table>
-							</td>
-						</tr>
-						<tr>
-							<td valign="top">
-							<table cellspacing="0" cellpadding="0" border="0" class="footer">
-								<tr>
-									<td align="center">
-										<jdoc:include type="modules" name="footer" />
-									</td>
-								</tr>
-							</table>
-							</td>
-						</tr>
-					</table>
+										<div class="fl wid310">
+											<div class="box_adver_vuong">
+												<jdoc:include type="modules" name="news-debug" />
+												<jdoc:include type="modules" name="news-adver1" />
+												<jdoc:include type="modules" name="news-adver2" />
+												<jdoc:include type="modules" name="news-adver3" />
+												<div class="banneritem_text">
+													<jdoc:include type="modules" name="news-adver4" />
+												</div>
+												<jdoc:include type="modules" name="news-adver5" />
+												<jdoc:include type="modules" name="news-bottommiddle" />
+											</div>
+										</div>
+										<div class="fr wid210 text_center">
+											<div class="wid200">
+												<jdoc:include type="modules" name="news-right" />
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					</td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<table cellspacing="0" cellpadding="0" border="0" class="footer">
+				<tr>
+					<td align="center">
+						<jdoc:include type="modules" name="footer" />
+					</td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+	</table>
 	</body>
 </html>
