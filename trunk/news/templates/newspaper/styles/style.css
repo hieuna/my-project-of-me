@@ -44,7 +44,7 @@ img{
 	width: 1004px; padding: 10px 0; margin: 0 auto;
 }
 .logo {
-    width: 183px; height: 68px; float: left; background: url("../images/logo.jpg") no-repeat top left;
+    width: 250px; height: 103px; float: left; background: url("../images/logo.png") no-repeat top left;
 }
 .logo h1 {
     display: none;
@@ -191,6 +191,9 @@ img{
 }
 .wid200 .banneritem{
 	padding: 2px; border: 1px solid #CCCCCC; margin-bottom: 10px;
+}
+.wid200 .banneritem img{
+	width: 186px;
 }
 .line1{
 	background-color: #DBDBDB; height: 1px; overflow: hidden;

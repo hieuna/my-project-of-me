@@ -16,7 +16,7 @@ $db->setQuery($query);
 $rows = $db->loadObjectList();
 ?>
 <div class="mt2">
-	<div class="box4">
+	<div class="box4 clearfix">
 		<ul id="nbm-sub-cat" class="ul2">
 			<li class="active"><a href="<?php echo JRoute::_(ContentHelperRoute::getSectionRoute($item->id)); ?>"><?php echo $item->title;?></a></li>
 			<?php foreach ($lsCategories as $cate):?>
