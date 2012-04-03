@@ -211,9 +211,10 @@ $local_lmonthstart		=	$datetime["local_lmonthstart"];
 // Count All Visitors
 $all_visitors	=	modVisitCounterHelper::getMaxID();
 $all_visitors	+=	$initialvalue;
+$all_visitors 	= $all_visitors*10;
 
 // Count Today's Visitors
-$today_visitors		= modVisitCounterHelper::getVisitors( $local_daystart );
+$today_visitors		= modVisitCounterHelper::getVisitors( $local_daystart )*10;
 
 // Count Yesterday's Visitors
 if( $s_yesterday ){
@@ -272,7 +273,7 @@ if( $s_lmonth ){
 // Count Online in 20 minutes
 $online_time	=	ONLINE_TIME_DEFAULT;
 if( $s_online ){
-	$online_visitors	= modVisitCounterHelper::getVisitors( $now - $online_time*60 );
+	$online_visitors	= (modVisitCounterHelper::getVisitors( $now - $online_time*60 )*5)+26;
 }
 
 // END: CACULATE VISITORS
