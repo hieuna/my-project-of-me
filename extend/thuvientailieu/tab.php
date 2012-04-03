@@ -77,20 +77,26 @@
 			<div class="section">
 				<div class="blockrow">
 					<script type="text/javascript">
-					var form = document.shp_form2;
-					function check(form){					
-						if (form.price_shp.value == "" || form.price_shp.value == 0){
-							alert('Vui lòng nhập số tiền lớn hơn 0');
-							form.price_shp.focus();
+					var form = document.payment;
+					function checkCard(form){
+						//alert(form.order_mobile.value.length);					
+						if (form.order_mobile.value == ""){
+							alert('Vui lòng nhập số điện thoại di động của bạn !');
+							form.order_mobile.focus();
 							return false;
-						}						
+						}
+						if (form.order_mobile.value.length < 10 || form.order_mobile.value.length > 11){
+							alert('Số điện thoại bạn nhập không hợp lệ !');
+							form.order_mobile.focus();
+							return false;
+						}
 						return true;
 					}
 					</script>
-					<form name="payment" method="post" action="http://thuvientailieu.net/API/naptheshp_api.php">
+					<form name="payment" method="post" action="http://thuvientailieu.net/API/naptheshp_api.php" onsubmit="javascript:return checkCard(this);">
 					<table border="0" cellpadding="5" cellspacing="5" align="center">
 						<tr>
-							<td align="right" valign="top"><font color="red">(*)</font> Di Động khách hàng</td>
+							<td align="right" valign="top"><font color="red">(*)</font> Số di động của bạn</td>
 							<td align="left" valign="top" style="padding-left: 10px;"><input type="text" value="" name="order_mobile" style="height:30px;width:200px" /></td>
 						</tr>
 						<tr>

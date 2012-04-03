@@ -54,12 +54,12 @@ if(isset($_POST['hid'])){
 	$name = $_POST['user_name'];
 
 	//Khai báo đối tượng của lớp PG_Checkout
-	$classPayment= new PG_checkout();
+	$classPayment= new PG_checkout();	
 	
 	$arrReturn = $classPayment->doChargeCard($card_code, $card_type, $transaction_info, $order_code, $order_email, $order_mobile, $card_seri);
-	//var_dump($arrReturn);
+	//var_dump($arrReturn); die;
 	if ($arrReturn['response_code'] == 1){
-		$money = $arrReturn['price']/100;
+		$money = $arrReturn['price']/1000;
 		$gold = $money*2;
 		$time = date("d/m/y  H:i:s"); 
 		$myStrSQL2="insert into napthe values ('','$name','$money','$time')";
@@ -68,7 +68,7 @@ if(isset($_POST['hid'])){
 	   
 		$gold_update= $total_results+ $gold;
 		$myStrSQL1="update user set money='$gold_update' where userid='$id'";
-		 mysql_query($myStrSQL1);
+		mysql_query($myStrSQL1);
 	}
 	?>
 	<table border="5" cellpadding="5" cellspacing="0" align="center">
@@ -108,13 +108,16 @@ if(isset($_POST['hid'])){
 			<td align="right"><font color="red"></font> Thông báo lỗi</td>
 			<td align="left"><?php echo $arrReturn['error_text']; ?></td>
 		</tr>
+		<tr>
+			<td></td>
+			<td align="left">
+			<input type="button" value="Quay lại trang chủ" onclick="javascript: window.location='http://thuvientailieu.net/forum.php';" />
+			</td>
+		</tr>
 	</table>
 	<?php
 }
 
 ?>
-<script type="text/javascript">
-//window.location = "<?php echo $sohapay_checkout_url;?>";
-</script>
 </body>
 </html>
