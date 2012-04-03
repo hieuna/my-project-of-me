@@ -777,7 +777,6 @@ class ContentView
 		if ($row->image == '') {
 			$row->image = 'blank.png';
 		}
-		JFilterOutput::objectHTMLSafe( $row, ENT_QUOTES, 'description' );
 		$cparams = JComponentHelper::getParams ('com_media');
 		?>
 		<table  class="adminform">

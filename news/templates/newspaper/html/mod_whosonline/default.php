@@ -1,7 +1,7 @@
 <?php // no direct access
 defined('_JEXEC') or die('Restricted access');
 ?>
-<div style="width: 300px; float: left;">
+<div style="width: 300px; float: left; text-align: center; line-height: 25px; color: red;">
 <?php
 if ($showmode == 0 || $showmode == 2) :
     if ($count['guest'] != 0 || $count['user'] != 0) :
