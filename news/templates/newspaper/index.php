@@ -119,6 +119,7 @@ $view 		= JRequest::getString('view', '', 'GET');
 										</div>
 										<div class="fl wid310">
 											<div class="box_adver_vuong">
+												<jdoc:include type="modules" name="news-special" />
 												<jdoc:include type="modules" name="news-debug" />
 												<jdoc:include type="modules" name="news-adver1" />
 												<jdoc:include type="modules" name="news-adver2" />
@@ -128,6 +129,12 @@ $view 		= JRequest::getString('view', '', 'GET');
 												</div>
 												<jdoc:include type="modules" name="news-adver5" />
 												<jdoc:include type="modules" name="news-bottommiddle" />
+												<div class="box_modules clearfix">
+													<div class="banneritem_text">
+														<div class="title_box_modules">Thống kê truy cập</div>
+														<jdoc:include type="modules" name="news-bottom" />
+													</div>
+												</div>
 											</div>
 										</div>
 										<div class="fr wid210 text_center">
