@@ -412,6 +412,12 @@ class ContentController extends JController
 
 		// build the html radio buttons for published
 		$lists['state'] = JHTML::_('select.booleanlist', 'state', '', $row->state);
+		
+		//build the html radio buttons for hot
+		$lists['hot'] = JHTML::_('select.booleanlist', 'hot', '', $row->hot);
+		
+		//build the html radio buttons for hot
+		$lists['special'] = JHTML::_('select.booleanlist', 'special', '', $row->special);
 
 		/*
 		 * We need to unify the introtext and fulltext fields and have the
@@ -533,8 +539,10 @@ class ContentController extends JController
 		}
 
 		// Get a state and parameter variables from the request
-		$row->state	= JRequest::getVar( 'state', 0, '', 'int' );
-		$params		= JRequest::getVar( 'params', null, 'post', 'array' );
+		$row->state		= JRequest::getVar( 'state', 0, '', 'int' );
+		$row->hot		= JRequest::getVar( 'hot', 0, '', 'int' );
+		$row->special	= JRequest::getVar( 'special', 0, '', 'int' );
+		$params			= JRequest::getVar( 'params', null, 'post', 'array' );
 
 		// Build parameter INI string
 		if (is_array($params))
