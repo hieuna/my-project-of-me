@@ -85,6 +85,8 @@ class JTableContent extends JTable
 	var $access				= null;
 	/** @var int */
 	var $hits				= null;
+	var $hot				= null;
+	var $special			= null;
 
 	/**
 	* @param database A database connector object
