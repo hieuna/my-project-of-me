@@ -124,10 +124,10 @@ if ($posttext != ""){
 	$html		.= '<div>'.$posttext.'</div>';
 }
 
-$html .= '<div style="text-align: center;"><a href="http://vina';
-$html .= 'ora.com/joomla/vinaora-visitors-counter.html" target="_self" title="Vinaora Visit';
-$html .= 'ors Counter '.VERSION_MODULE.' for Joomla!" style="border:0px none; text-decoration:none; ">';
-$html .= 'Visitors Counter</a></div>';
+//$html .= '<div style="text-align: center;"><a href="http://vina';
+//$html .= 'ora.com/joomla/vinaora-visitors-counter.html" target="_self" title="Vinaora Visit';
+//$html .= 'ors Counter '.VERSION_MODULE.' for Joomla!" style="border:0px none; text-decoration:none; ">';
+//$html .= 'Visitors Counter</a></div>';
 $html .= '</div>';
 
 // END: SHOW GUEST'S INFO
