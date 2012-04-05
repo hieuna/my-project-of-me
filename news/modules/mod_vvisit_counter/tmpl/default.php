@@ -88,7 +88,7 @@ if ( $s_stats ){
 // BEGIN: SHOW GUEST'S INFO
 // Show Guest's Info
 if ( $s_online || $s_ip || $s_guestinfo || $s_timenow ){
-
+	/*
 	$html  		.=	'<hr style="width: 90%" />';
 	$html		.=	'<div style="text-align: center;">';
 
@@ -117,6 +117,7 @@ if ( $s_online || $s_ip || $s_guestinfo || $s_timenow ){
 	}
 	
 	$html		.=	'</div>';
+	*/	
 }
 
 
