@@ -1,5 +1,5 @@
 <?php die("Access Denied"); ?>
-a:97:{i:1;O:8:"stdClass":25:{s:2:"id";s:1:"1";s:8:"menutype";s:8:"mainmenu";s:4:"name";s:4:"Home";s:5:"alias";s:4:"home";s:4:"link";s:43:"index.php?option=com_content&view=frontpage";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:1:"0";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"0";s:8:"ordering";s:1:"1";s:11:"checked_out";s:2:"63";s:16:"checked_out_time";s:19:"2012-04-02 06:33:05";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"3";s:6:"params";s:591:"num_leading_articles=1
+a:94:{i:1;O:8:"stdClass":25:{s:2:"id";s:1:"1";s:8:"menutype";s:8:"mainmenu";s:4:"name";s:4:"Home";s:5:"alias";s:4:"home";s:4:"link";s:43:"index.php?option=com_content&view=frontpage";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:1:"0";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"0";s:8:"ordering";s:1:"1";s:11:"checked_out";s:2:"63";s:16:"checked_out_time";s:19:"2012-04-02 06:33:05";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"3";s:6:"params";s:591:"num_leading_articles=1
 num_intro_articles=4
 num_columns=2
 num_links=4
@@ -776,7 +776,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:1:{i:0;s:2:"61";}s:5:"route";s:12:"cong-nghe-so";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:7:"section";s:6:"layout";s:4:"blog";s:2:"id";s:1:"6";}}i:63;O:8:"stdClass":25:{s:2:"id";s:2:"63";s:8:"menutype";s:7:"topmenu";s:4:"name";s:10:"Khoa học";s:5:"alias";s:8:"khoa-hoc";s:4:"link";s:58:"index.php?option=com_content&view=section&layout=blog&id=5";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:1:"0";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"0";s:8:"ordering";s:2:"11";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:1:{i:0;s:2:"61";}s:5:"route";s:12:"cong-nghe-so";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:7:"section";s:6:"layout";s:4:"blog";s:2:"id";s:1:"6";}}i:57;O:8:"stdClass":25:{s:2:"id";s:2:"57";s:8:"menutype";s:7:"topmenu";s:4:"name";s:12:"Sức Khỏe";s:5:"alias";s:8:"suc-khoe";s:4:"link";s:58:"index.php?option=com_content&view=section&layout=blog&id=3";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:1:"0";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"0";s:8:"ordering";s:2:"11";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -814,7 +814,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:1:{i:0;s:2:"63";}s:5:"route";s:8:"khoa-hoc";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:7:"section";s:6:"layout";s:4:"blog";s:2:"id";s:1:"5";}}i:57;O:8:"stdClass":25:{s:2:"id";s:2:"57";s:8:"menutype";s:7:"topmenu";s:4:"name";s:12:"Sức Khỏe";s:5:"alias";s:8:"suc-khoe";s:4:"link";s:58:"index.php?option=com_content&view=section&layout=blog&id=3";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:1:"0";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"0";s:8:"ordering";s:2:"12";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:1:{i:0;s:2:"57";}s:5:"route";s:8:"suc-khoe";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:7:"section";s:6:"layout";s:4:"blog";s:2:"id";s:1:"3";}}i:119;O:8:"stdClass":25:{s:2:"id";s:3:"119";s:8:"menutype";s:7:"topmenu";s:4:"name";s:18:"Ẩm thực Việt";s:5:"alias";s:12:"am-thuc-viet";s:4:"link";s:59:"index.php?option=com_content&view=section&layout=blog&id=13";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:1:"0";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"0";s:8:"ordering";s:2:"13";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -852,45 +852,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:1:{i:0;s:2:"57";}s:5:"route";s:8:"suc-khoe";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:7:"section";s:6:"layout";s:4:"blog";s:2:"id";s:1:"3";}}i:119;O:8:"stdClass":25:{s:2:"id";s:3:"119";s:8:"menutype";s:7:"topmenu";s:4:"name";s:18:"Ẩm thực Việt";s:5:"alias";s:12:"am-thuc-viet";s:4:"link";s:59:"index.php?option=com_content&view=section&layout=blog&id=13";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:1:"0";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"0";s:8:"ordering";s:2:"14";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
-show_description_image=0
-num_leading_articles=1
-num_intro_articles=15
-num_columns=1
-num_links=10
-orderby_pri=
-orderby_sec=
-multi_column_order=0
-show_pagination=2
-show_pagination_results=1
-show_feed_link=1
-show_noauth=
-show_title=
-link_titles=
-show_intro=
-show_section=
-link_section=
-show_category=
-link_category=
-show_author=
-show_create_date=
-show_modify_date=
-show_item_navigation=
-show_readmore=
-show_vote=
-show_icons=
-show_pdf_icon=
-show_print_icon=
-show_email_icon=
-show_hits=
-feed_summary=
-page_title=
-show_page_title=1
-pageclass_sfx=
-menu_image=-1
-secure=0
-
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:1:{i:0;s:3:"119";}s:5:"route";s:12:"am-thuc-viet";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:7:"section";s:6:"layout";s:4:"blog";s:2:"id";s:2:"13";}}i:120;O:8:"stdClass":25:{s:2:"id";s:3:"120";s:8:"menutype";s:7:"topmenu";s:4:"name";s:11:"Làm đẹp";s:5:"alias";s:7:"lam-dep";s:4:"link";s:59:"index.php?option=com_content&view=section&layout=blog&id=14";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:1:"0";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"0";s:8:"ordering";s:2:"15";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:1:{i:0;s:3:"119";}s:5:"route";s:12:"am-thuc-viet";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:7:"section";s:6:"layout";s:4:"blog";s:2:"id";s:2:"13";}}i:120;O:8:"stdClass":25:{s:2:"id";s:3:"120";s:8:"menutype";s:7:"topmenu";s:4:"name";s:11:"Làm đẹp";s:5:"alias";s:7:"lam-dep";s:4:"link";s:59:"index.php?option=com_content&view=section&layout=blog&id=14";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:1:"0";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"0";s:8:"ordering";s:2:"14";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -1179,45 +1141,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"55";i:1;s:2:"67";}s:5:"route";s:16:"xa-hoi/phap-luat";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:1:"2";}}i:68;O:8:"stdClass":25:{s:2:"id";s:2:"68";s:8:"menutype";s:7:"topmenu";s:4:"name";s:16:"Ô tô - Xe máy";s:5:"alias";s:9:"oto-xemay";s:4:"link";s:59:"index.php?option=com_content&view=category&layout=blog&id=3";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"55";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"3";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
-show_description_image=0
-num_leading_articles=1
-num_intro_articles=15
-num_columns=1
-num_links=10
-orderby_pri=
-orderby_sec=
-multi_column_order=0
-show_pagination=2
-show_pagination_results=1
-show_feed_link=1
-show_noauth=
-show_title=
-link_titles=
-show_intro=
-show_section=
-link_section=
-show_category=
-link_category=
-show_author=
-show_create_date=
-show_modify_date=
-show_item_navigation=
-show_readmore=
-show_vote=
-show_icons=
-show_pdf_icon=
-show_print_icon=
-show_email_icon=
-show_hits=
-feed_summary=
-page_title=
-show_page_title=1
-pageclass_sfx=
-menu_image=-1
-secure=0
-
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"55";i:1;s:2:"68";}s:5:"route";s:16:"xa-hoi/oto-xemay";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:1:"3";}}i:69;O:8:"stdClass":25:{s:2:"id";s:2:"69";s:8:"menutype";s:7:"topmenu";s:4:"name";s:20:"An toàn giao thông";s:5:"alias";s:18:"an-toan-giao-thong";s:4:"link";s:59:"index.php?option=com_content&view=category&layout=blog&id=4";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"55";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"4";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"55";i:1;s:2:"67";}s:5:"route";s:16:"xa-hoi/phap-luat";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:1:"2";}}i:69;O:8:"stdClass":25:{s:2:"id";s:2:"69";s:8:"menutype";s:7:"topmenu";s:4:"name";s:20:"An toàn giao thông";s:5:"alias";s:18:"an-toan-giao-thong";s:4:"link";s:59:"index.php?option=com_content&view=category&layout=blog&id=4";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"55";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"3";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -1407,7 +1331,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:1:{i:0;s:2:"85";}s:5:"route";s:8:"dien-dan";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:1:"6";}}i:86;O:8:"stdClass":25:{s:2:"id";s:2:"86";s:8:"menutype";s:7:"topmenu";s:4:"name";s:21:"Phòng Khám Đa Khoa";s:5:"alias";s:18:"phong-kham-da-khoa";s:4:"link";s:59:"index.php?option=com_content&view=category&layout=blog&id=9";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"57";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:1:{i:0;s:2:"85";}s:5:"route";s:8:"dien-dan";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:1:"6";}}i:86;O:8:"stdClass":25:{s:2:"id";s:2:"86";s:8:"menutype";s:7:"topmenu";s:4:"name";s:22:"Tin Tức Sức Khỏe";s:5:"alias";s:18:"phong-kham-da-khoa";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=32";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"57";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -1445,7 +1369,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"57";i:1;s:2:"86";}s:5:"route";s:27:"suc-khoe/phong-kham-da-khoa";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:1:"9";}}i:87;O:8:"stdClass":25:{s:2:"id";s:2:"87";s:8:"menutype";s:7:"topmenu";s:4:"name";s:34:"Phòng khám Y Học Cổ truyền";s:5:"alias";s:26:"phong-kham-y-hoc-co-truyen";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=10";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"57";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"2";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"57";i:1;s:2:"86";}s:5:"route";s:27:"suc-khoe/phong-kham-da-khoa";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"32";}}i:87;O:8:"stdClass":25:{s:2:"id";s:2:"87";s:8:"menutype";s:7:"topmenu";s:4:"name";s:25:"Sức Khỏe Giới Tính";s:5:"alias";s:26:"phong-kham-y-hoc-co-truyen";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=32";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"57";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"2";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -1483,7 +1407,11 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"57";i:1;s:2:"87";}s:5:"route";s:35:"suc-khoe/phong-kham-y-hoc-co-truyen";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"10";}}i:88;O:8:"stdClass":25:{s:2:"id";s:2:"88";s:8:"menutype";s:7:"topmenu";s:4:"name";s:13:"Chuyện yêu";s:5:"alias";s:10:"chuyen-yeu";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=12";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"58";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"57";i:1;s:2:"87";}s:5:"route";s:35:"suc-khoe/phong-kham-y-hoc-co-truyen";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"32";}}i:128;O:8:"stdClass":25:{s:2:"id";s:3:"128";s:8:"menutype";s:7:"topmenu";s:4:"name";s:23:"Môi Trường Quanh Ta";s:5:"alias";s:19:"moi-truong-quanh-ta";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=32";s:4:"type";s:3:"url";s:9:"published";s:1:"1";s:6:"parent";s:2:"57";s:11:"componentid";s:1:"0";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"3";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:15:"menu_image=-1
+
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";N;s:4:"tree";a:2:{i:0;s:2:"57";i:1;s:3:"128";}s:5:"route";s:28:"suc-khoe/moi-truong-quanh-ta";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"32";}}i:127;O:8:"stdClass":25:{s:2:"id";s:3:"127";s:8:"menutype";s:7:"topmenu";s:4:"name";s:25:"Địa Chỉ Sức Khỏe";s:5:"alias";s:16:"dia-chi-suc-khoe";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=32";s:4:"type";s:3:"url";s:9:"published";s:1:"1";s:6:"parent";s:2:"57";s:11:"componentid";s:1:"0";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"4";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:15:"menu_image=-1
+
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";N;s:4:"tree";a:2:{i:0;s:2:"57";i:1;s:3:"127";}s:5:"route";s:25:"suc-khoe/dia-chi-suc-khoe";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"32";}}i:88;O:8:"stdClass":25:{s:2:"id";s:2:"88";s:8:"menutype";s:7:"topmenu";s:4:"name";s:13:"Chuyện yêu";s:5:"alias";s:10:"chuyen-yeu";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=12";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"58";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -1635,7 +1563,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:1:{i:0;s:2:"91";}s:5:"route";s:10:"teen-style";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"14";}}i:92;O:8:"stdClass":25:{s:2:"id";s:2:"92";s:8:"menutype";s:7:"topmenu";s:4:"name";s:10:"Kinh doanh";s:5:"alias";s:10:"kinh-doanh";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=16";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"59";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:1:{i:0;s:2:"91";}s:5:"route";s:10:"teen-style";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"14";}}i:93;O:8:"stdClass":25:{s:2:"id";s:2:"93";s:8:"menutype";s:7:"topmenu";s:4:"name";s:11:"Tài chính";s:5:"alias";s:9:"tai-chinh";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=15";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"59";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -1673,7 +1601,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"59";i:1;s:2:"92";}s:5:"route";s:21:"thi-truong/kinh-doanh";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"16";}}i:93;O:8:"stdClass":25:{s:2:"id";s:2:"93";s:8:"menutype";s:7:"topmenu";s:4:"name";s:11:"Tài chính";s:5:"alias";s:9:"tai-chinh";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=15";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"59";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"2";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"59";i:1;s:2:"93";}s:5:"route";s:20:"thi-truong/tai-chinh";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"15";}}i:94;O:8:"stdClass":25:{s:2:"id";s:2:"94";s:8:"menutype";s:7:"topmenu";s:4:"name";s:14:"Chứng Khoán";s:5:"alias";s:10:"thi-truong";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=15";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"59";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"2";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -1711,7 +1639,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"59";i:1;s:2:"93";}s:5:"route";s:20:"thi-truong/tai-chinh";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"15";}}i:94;O:8:"stdClass":25:{s:2:"id";s:2:"94";s:8:"menutype";s:7:"topmenu";s:4:"name";s:15:"Thị trường";s:5:"alias";s:10:"thi-truong";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=17";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"59";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"3";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"59";i:1;s:2:"94";}s:5:"route";s:21:"thi-truong/thi-truong";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"15";}}i:92;O:8:"stdClass":25:{s:2:"id";s:2:"92";s:8:"menutype";s:7:"topmenu";s:4:"name";s:19:"Bất Động Sản";s:5:"alias";s:10:"kinh-doanh";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=16";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"59";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"3";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -1749,7 +1677,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"59";i:1;s:2:"94";}s:5:"route";s:21:"thi-truong/thi-truong";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"17";}}i:95;O:8:"stdClass":25:{s:2:"id";s:2:"95";s:8:"menutype";s:7:"topmenu";s:4:"name";s:11:"Tiêu dùng";s:5:"alias";s:9:"tieu-dung";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=18";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"59";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"4";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"59";i:1;s:2:"92";}s:5:"route";s:21:"thi-truong/kinh-doanh";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"16";}}i:95;O:8:"stdClass":25:{s:2:"id";s:2:"95";s:8:"menutype";s:7:"topmenu";s:4:"name";s:11:"Tiêu dùng";s:5:"alias";s:9:"tieu-dung";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=18";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"59";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"4";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -2471,7 +2399,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"62";i:1;s:2:"81";}s:5:"route";s:21:"the-thao/cac-mon-khac";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"44";}}i:105;O:8:"stdClass":25:{s:2:"id";s:3:"105";s:8:"menutype";s:7:"topmenu";s:4:"name";s:23:"Khoa học công nghệ";s:5:"alias";s:18:"khoa-hoc-cong-nghe";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=32";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"63";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"62";i:1;s:2:"81";}s:5:"route";s:21:"the-thao/cac-mon-khac";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"44";}}i:111;O:8:"stdClass":25:{s:2:"id";s:3:"111";s:8:"menutype";s:7:"topmenu";s:4:"name";s:15:"Tin Doanh Nhân";s:5:"alias";s:17:"chuyen-kinh-doanh";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=46";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"64";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -2509,7 +2437,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"63";i:1;s:3:"105";}s:5:"route";s:27:"khoa-hoc/khoa-hoc-cong-nghe";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"32";}}i:106;O:8:"stdClass":25:{s:2:"id";s:3:"106";s:8:"menutype";s:7:"topmenu";s:4:"name";s:14:"Môi trường";s:5:"alias";s:10:"moi-truong";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=33";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"63";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"2";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"64";i:1;s:3:"111";}s:5:"route";s:33:"doanh-nhan-viet/chuyen-kinh-doanh";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"46";}}i:110;O:8:"stdClass":25:{s:2:"id";s:3:"110";s:8:"menutype";s:7:"topmenu";s:4:"name";s:21:"Doanh Nghiệp Việt";s:5:"alias";s:23:"guong-sang-doanh-nghiep";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=66";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"64";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"2";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -2547,197 +2475,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"63";i:1;s:3:"106";}s:5:"route";s:19:"khoa-hoc/moi-truong";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"33";}}i:107;O:8:"stdClass":25:{s:2:"id";s:3:"107";s:8:"menutype";s:7:"topmenu";s:4:"name";s:25:"Sức khỏe giới tính";s:5:"alias";s:18:"suc-khoe-gioi-tinh";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=34";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"63";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"3";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
-show_description_image=0
-num_leading_articles=1
-num_intro_articles=15
-num_columns=1
-num_links=10
-orderby_pri=
-orderby_sec=
-multi_column_order=0
-show_pagination=2
-show_pagination_results=1
-show_feed_link=1
-show_noauth=
-show_title=
-link_titles=
-show_intro=
-show_section=
-link_section=
-show_category=
-link_category=
-show_author=
-show_create_date=
-show_modify_date=
-show_item_navigation=
-show_readmore=
-show_vote=
-show_icons=
-show_pdf_icon=
-show_print_icon=
-show_email_icon=
-show_hits=
-feed_summary=
-page_title=
-show_page_title=1
-pageclass_sfx=
-menu_image=-1
-secure=0
-
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"63";i:1;s:3:"107";}s:5:"route";s:27:"khoa-hoc/suc-khoe-gioi-tinh";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"34";}}i:108;O:8:"stdClass":25:{s:2:"id";s:3:"108";s:8:"menutype";s:7:"topmenu";s:4:"name";s:10:"Khám phá";s:5:"alias";s:8:"kham-pha";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=35";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"63";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"4";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
-show_description_image=0
-num_leading_articles=1
-num_intro_articles=15
-num_columns=1
-num_links=10
-orderby_pri=
-orderby_sec=
-multi_column_order=0
-show_pagination=2
-show_pagination_results=1
-show_feed_link=1
-show_noauth=
-show_title=
-link_titles=
-show_intro=
-show_section=
-link_section=
-show_category=
-link_category=
-show_author=
-show_create_date=
-show_modify_date=
-show_item_navigation=
-show_readmore=
-show_vote=
-show_icons=
-show_pdf_icon=
-show_print_icon=
-show_email_icon=
-show_hits=
-feed_summary=
-page_title=
-show_page_title=1
-pageclass_sfx=
-menu_image=-1
-secure=0
-
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"63";i:1;s:3:"108";}s:5:"route";s:17:"khoa-hoc/kham-pha";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"35";}}i:109;O:8:"stdClass":25:{s:2:"id";s:3:"109";s:8:"menutype";s:7:"topmenu";s:4:"name";s:15:"Hỏi và đáp";s:5:"alias";s:10:"hoi-va-dap";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=36";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"63";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"5";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
-show_description_image=0
-num_leading_articles=1
-num_intro_articles=15
-num_columns=1
-num_links=10
-orderby_pri=
-orderby_sec=
-multi_column_order=0
-show_pagination=2
-show_pagination_results=1
-show_feed_link=1
-show_noauth=
-show_title=
-link_titles=
-show_intro=
-show_section=
-link_section=
-show_category=
-link_category=
-show_author=
-show_create_date=
-show_modify_date=
-show_item_navigation=
-show_readmore=
-show_vote=
-show_icons=
-show_pdf_icon=
-show_print_icon=
-show_email_icon=
-show_hits=
-feed_summary=
-page_title=
-show_page_title=1
-pageclass_sfx=
-menu_image=-1
-secure=0
-
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"63";i:1;s:3:"109";}s:5:"route";s:19:"khoa-hoc/hoi-va-dap";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"36";}}i:111;O:8:"stdClass":25:{s:2:"id";s:3:"111";s:8:"menutype";s:7:"topmenu";s:4:"name";s:19:"Chuyện kinh doanh";s:5:"alias";s:17:"chuyen-kinh-doanh";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=46";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"64";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
-show_description_image=0
-num_leading_articles=1
-num_intro_articles=15
-num_columns=1
-num_links=10
-orderby_pri=
-orderby_sec=
-multi_column_order=0
-show_pagination=2
-show_pagination_results=1
-show_feed_link=1
-show_noauth=
-show_title=
-link_titles=
-show_intro=
-show_section=
-link_section=
-show_category=
-link_category=
-show_author=
-show_create_date=
-show_modify_date=
-show_item_navigation=
-show_readmore=
-show_vote=
-show_icons=
-show_pdf_icon=
-show_print_icon=
-show_email_icon=
-show_hits=
-feed_summary=
-page_title=
-show_page_title=1
-pageclass_sfx=
-menu_image=-1
-secure=0
-
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"64";i:1;s:3:"111";}s:5:"route";s:33:"doanh-nhan-viet/chuyen-kinh-doanh";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"46";}}i:110;O:8:"stdClass":25:{s:2:"id";s:3:"110";s:8:"menutype";s:7:"topmenu";s:4:"name";s:28:"Gương sáng doanh nghiệp";s:5:"alias";s:23:"guong-sang-doanh-nghiep";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=45";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"64";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"2";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
-show_description_image=0
-num_leading_articles=1
-num_intro_articles=15
-num_columns=1
-num_links=10
-orderby_pri=
-orderby_sec=
-multi_column_order=0
-show_pagination=2
-show_pagination_results=1
-show_feed_link=1
-show_noauth=
-show_title=
-link_titles=
-show_intro=
-show_section=
-link_section=
-show_category=
-link_category=
-show_author=
-show_create_date=
-show_modify_date=
-show_item_navigation=
-show_readmore=
-show_vote=
-show_icons=
-show_pdf_icon=
-show_print_icon=
-show_email_icon=
-show_hits=
-feed_summary=
-page_title=
-show_page_title=1
-pageclass_sfx=
-menu_image=-1
-secure=0
-
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"64";i:1;s:3:"110";}s:5:"route";s:39:"doanh-nhan-viet/guong-sang-doanh-nghiep";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"45";}}i:112;O:8:"stdClass":25:{s:2:"id";s:3:"112";s:8:"menutype";s:7:"topmenu";s:4:"name";s:22:"Chân dung doanh nhân";s:5:"alias";s:20:"chan-dung-doanh-nhan";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=47";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"64";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"3";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"64";i:1;s:3:"110";}s:5:"route";s:39:"doanh-nhan-viet/guong-sang-doanh-nghiep";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"66";}}i:112;O:8:"stdClass":25:{s:2:"id";s:3:"112";s:8:"menutype";s:7:"topmenu";s:4:"name";s:22:"Chân dung doanh nhân";s:5:"alias";s:20:"chan-dung-doanh-nhan";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=47";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:2:"64";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"3";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -2889,7 +2627,9 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"65";i:1;s:3:"115";}s:5:"route";s:29:"moi-truong-kinh-doanh/hop-tac";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"48";}}i:121;O:8:"stdClass":25:{s:2:"id";s:3:"121";s:8:"menutype";s:7:"topmenu";s:4:"name";s:17:"Quán Ngon Việt";s:5:"alias";s:14:"quan-ngon-viet";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=56";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:3:"119";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:2:"65";i:1;s:3:"115";}s:5:"route";s:29:"moi-truong-kinh-doanh/hop-tac";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"48";}}i:129;O:8:"stdClass":25:{s:2:"id";s:3:"129";s:8:"menutype";s:7:"topmenu";s:4:"name";s:21:"Tin Tức Ẩm Thực";s:5:"alias";s:15:"tin-tuc-am-thuc";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=56";s:4:"type";s:3:"url";s:9:"published";s:1:"1";s:6:"parent";s:3:"119";s:11:"componentid";s:1:"0";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:15:"menu_image=-1
+
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";N;s:4:"tree";a:2:{i:0;s:3:"119";i:1;s:3:"129";}s:5:"route";s:28:"am-thuc-viet/tin-tuc-am-thuc";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"56";}}i:122;O:8:"stdClass":25:{s:2:"id";s:3:"122";s:8:"menutype";s:7:"topmenu";s:4:"name";s:18:"Món ngon 3 miền";s:5:"alias";s:15:"mon-ngon-3-mien";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=58";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:3:"119";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"2";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -2927,7 +2667,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:3:"119";i:1;s:3:"121";}s:5:"route";s:27:"am-thuc-viet/quan-ngon-viet";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"56";}}i:122;O:8:"stdClass":25:{s:2:"id";s:3:"122";s:8:"menutype";s:7:"topmenu";s:4:"name";s:18:"Món ngon 3 miền";s:5:"alias";s:15:"mon-ngon-3-mien";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=58";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:3:"119";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"2";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:3:"119";i:1;s:3:"122";}s:5:"route";s:28:"am-thuc-viet/mon-ngon-3-mien";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"58";}}i:121;O:8:"stdClass":25:{s:2:"id";s:3:"121";s:8:"menutype";s:7:"topmenu";s:4:"name";s:17:"Quán Ngon Việt";s:5:"alias";s:14:"quan-ngon-viet";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=56";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:3:"119";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"3";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -2965,7 +2705,9 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:3:"119";i:1;s:3:"122";}s:5:"route";s:28:"am-thuc-viet/mon-ngon-3-mien";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"58";}}i:123;O:8:"stdClass":25:{s:2:"id";s:3:"123";s:8:"menutype";s:7:"topmenu";s:4:"name";s:18:"Thẩm mỹ viện";s:5:"alias";s:12:"tham-my-vien";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=59";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:3:"120";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:3:"119";i:1;s:3:"121";}s:5:"route";s:27:"am-thuc-viet/quan-ngon-viet";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"56";}}i:130;O:8:"stdClass":25:{s:2:"id";s:3:"130";s:8:"menutype";s:7:"topmenu";s:4:"name";s:15:"Tin Làm Đẹp";s:5:"alias";s:11:"tin-lam-dep";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=59";s:4:"type";s:3:"url";s:9:"published";s:1:"1";s:6:"parent";s:3:"120";s:11:"componentid";s:1:"0";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"1";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:15:"menu_image=-1
+
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";N;s:4:"tree";a:2:{i:0;s:3:"120";i:1;s:3:"130";}s:5:"route";s:19:"lam-dep/tin-lam-dep";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"59";}}i:123;O:8:"stdClass":25:{s:2:"id";s:3:"123";s:8:"menutype";s:7:"topmenu";s:4:"name";s:24:"Thẩm mỹ viện & Spa";s:5:"alias";s:12:"tham-my-vien";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=59";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:3:"120";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"2";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -3003,7 +2745,7 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:3:"120";i:1;s:3:"123";}s:5:"route";s:20:"lam-dep/tham-my-vien";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"59";}}i:124;O:8:"stdClass":25:{s:2:"id";s:3:"124";s:8:"menutype";s:7:"topmenu";s:4:"name";s:3:"Spa";s:5:"alias";s:3:"spa";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=57";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:3:"120";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"2";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:3:"120";i:1;s:3:"123";}s:5:"route";s:20:"lam-dep/tham-my-vien";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"59";}}i:124;O:8:"stdClass":25:{s:2:"id";s:3:"124";s:8:"menutype";s:7:"topmenu";s:4:"name";s:19:"Salon tóc 3 miền";s:5:"alias";s:3:"spa";s:4:"link";s:60:"index.php?option=com_content&view=category&layout=blog&id=63";s:4:"type";s:9:"component";s:9:"published";s:1:"1";s:6:"parent";s:3:"120";s:11:"componentid";s:2:"20";s:8:"sublevel";s:1:"1";s:8:"ordering";s:1:"3";s:11:"checked_out";s:1:"0";s:16:"checked_out_time";s:19:"0000-00-00 00:00:00";s:6:"pollid";s:1:"0";s:10:"browserNav";s:1:"0";s:6:"access";s:1:"0";s:8:"utaccess";s:1:"0";s:6:"params";s:584:"show_description=0
 show_description_image=0
 num_leading_articles=1
 num_intro_articles=15
@@ -3041,4 +2783,4 @@ pageclass_sfx=
 menu_image=-1
 secure=0
 
-";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:3:"120";i:1;s:3:"124";}s:5:"route";s:11:"lam-dep/spa";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"57";}}}
+";s:3:"lft";s:1:"0";s:3:"rgt";s:1:"0";s:4:"home";s:1:"0";s:9:"component";s:11:"com_content";s:4:"tree";a:2:{i:0;s:3:"120";i:1;s:3:"124";}s:5:"route";s:11:"lam-dep/spa";s:5:"query";a:4:{s:6:"option";s:11:"com_content";s:4:"view";s:8:"category";s:6:"layout";s:4:"blog";s:2:"id";s:2:"63";}}}
