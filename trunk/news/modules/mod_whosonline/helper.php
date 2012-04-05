@@ -48,8 +48,8 @@ class modWhosonlineHelper {
 			}
 		}
 
-		$result['user']  = $user_array*50+68;
-		$result['guest'] = $guest_array*50+68;
+		$result['user']  = $user_array;
+		$result['guest'] = $guest_array+236;
 
 		return $result;
 	}

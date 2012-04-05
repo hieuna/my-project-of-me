@@ -211,10 +211,10 @@ $local_lmonthstart		=	$datetime["local_lmonthstart"];
 // Count All Visitors
 $all_visitors	=	modVisitCounterHelper::getMaxID();
 $all_visitors	+=	$initialvalue;
-$all_visitors 	= $all_visitors*50;
+$all_visitors 	= $all_visitors+4637;
 
 // Count Today's Visitors
-$today_visitors		= modVisitCounterHelper::getVisitors( $local_daystart )*50;
+$today_visitors		= modVisitCounterHelper::getVisitors( $local_daystart )+236;
 
 // Count Yesterday's Visitors
 if( $s_yesterday ){
@@ -224,6 +224,7 @@ if( $s_yesterday ){
 	else {
 		$yesterday_visitors	= modVisitCounterHelper::getVisitors( $local_yesterdaystart, $local_daystart );
 	}
+	$yesterday_visitors = $yesterday_visitors+236;
 }
 
 // Count This Week's Visitors
@@ -236,6 +237,7 @@ if( $s_week ){
 		$week_visitors	= modVisitCounterHelper::getVisitors( $local_weekstart, $local_daystart );
 		$week_visitors	+=	$today_visitors;
 	}
+	$week_visitors = $week_visitors+236;
 }
 
 // Count Last Week's Visitors
@@ -246,6 +248,7 @@ if( $s_lweek ){
 	else{
 		$lweek_visitors	= modVisitCounterHelper::getVisitors( $local_lweekstart, $local_weekstart );
 	}
+	$lweek_visitors = $lweek_visitors+236;
 }
 
 // Count This Month's Visitors
@@ -258,6 +261,7 @@ if( $s_month ){
 		$month_visitors		= modVisitCounterHelper::getVisitors( $local_monthstart, $local_daystart );
 		$month_visitors		+=  $today_visitors;
 	}
+	$month_visitors = $month_visitors+236;
 }
 
 // Count Last Month's Visitors
@@ -268,12 +272,13 @@ if( $s_lmonth ){
 	else{
 		$lmonth_visitors = modVisitCounterHelper::getVisitors( $local_lmonthstart, $local_monthstart );
 	}
+	$lmonth_visitors = $lmonth_visitors+236;
 }
 
 // Count Online in 20 minutes
 $online_time	=	ONLINE_TIME_DEFAULT;
 if( $s_online ){
-	$online_visitors	= (modVisitCounterHelper::getVisitors( $now - $online_time*60 )*10)+628;
+	$online_visitors	= modVisitCounterHelper::getVisitors( $now - $online_time*60);
 }
 
 // END: CACULATE VISITORS
