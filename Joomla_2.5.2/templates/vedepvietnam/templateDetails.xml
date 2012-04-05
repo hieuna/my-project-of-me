@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension
+	version="2.5"
+	type="template"
+	client="site">
+	<name>vedepvietnam</name>
+	<creationDate>10/10/09</creationDate>
+	<author>Kiều Văn Ngọc</author>
+	<authorEmail>ngockv@gmail.com</authorEmail>
+	<authorUrl>http://www.vedepvietnam.vn</authorUrl>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>2.5.0</version>
+	<description>TPL_ATOMIC_XML_DESCRIPTION</description>
+	<files>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+	</files>
+
+	<positions>		
+		<position>vn-search</position>
+		<position>vn-sidebar</position>
+		<position>vn-topmenu</position>
+		<position>vn-topquote</position>
+		<position>vn-topleft</position>
+		<position>vn-topmiddle</position>
+		<position>vn-topright</position>
+		<position>vn-centerleft</position>
+		<position>vn-centermiddle</position>
+		<position>vn-centerright</position>
+		<position>vn-adver1</position>
+		<position>vn-adver2</position>
+		<position>vn-adver3</position>
+		<position>vn-adver4</position>
+		<position>vn-adver5</position>
+		<position>vn-adver6</position>
+		<position>vn-adver7</position>
+		<position>vn-adver8</position>
+		<position>vn-adver9</position>
+		<position>vn-adver10</position>
+		<position>vn-user1</position>
+		<position>vn-user2</position>
+		<position>vn-user3</position>
+		<position>vn-user4</position>
+		<position>vn-user5</position>
+		<position>vn-user6</position>
+		<position>vn-user7</position>
+		<position>vn-user8</position>
+		<position>vn-user9</position>
+		<position>vn-user10</position>
+		<position>vn-bottomleft</position>
+		<position>vn-bottommiddle</position>
+		<position>vn-bottomright</position>
+	</positions>
+</extension>

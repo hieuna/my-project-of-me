@@ -1,0 +1,92 @@
+@charset "utf-8";
+/*/////////////////////////////////////
+=======================================
+========|| Copyright: thanhPr[0] ||====
+-- mail:phut_thatlong_101@yahoo.com ---
+========|| Allright : Moore Corp ||==== 
+/////////////////////////////////////*/
+/* Begin site Map */
+a{text-decoration:none;}
+.color1{color:#0072bc;}
+a.color1{color:#0072bc;}
+a.color1:hover{color:#F00;}
+.textLine{color:#0072bc; text-decoration:underline;}
+a.textLine{color:#0072bc;text-decoration:underline;}
+a.textLine:hover{color:#F00;}
+.color2{color:#d5030a;}
+a.color2{color:#d5030a;}
+a.color2:hover{color:#ae0f14;}
+.color3{color:#f7941d}
+a.color3{color:#f7941d}
+a.color3:hover{color:#F30}
+.color4{color:#00a651;}
+a.color4{color:#00a651;}
+a.color4:hover{color:#F00;}
+.color5{color:#000;}
+a.color5{color:#000;}
+a.color5:hover{color:#F00;}
+.color6{color:#666;}
+a.color6{color:#666;}
+a.color6:hover{color:#FC0;}
+.colorBlack{color:#000;}
+a.colorBlack{color:#000;}
+a.colorBlack:hover{color:#F30;}
+.color999{color:#959595;}
+.colorF{color:#FFF;}
+a.colorF{color:#FFF;}
+a.colorF:hover{color:#FC0;}
+
+.fontsize9{font-size:9px;}
+.fontsize10{font-size:10px;}
+.fontsize11{font-size:11px;}
+.fontsize12{font-size:12px;}
+.fontsize13{font-size:13px;}
+.fontsize14{font-size:14px;}
+.fontsize15{font-size:15px;}
+.fontsize16{font-size:16px;}
+.fontsize18{font-size:18px;}
+.fontsize19{font-size:19px;}
+.fontsize22{font-size:22px;}
+.fontsize24{font-size:24px;}
+.fontsize36{font-size:36px;}
+.fontsize48{font-size:48px;}
+.fontsize20{font-size:20px;}
+.bold{font-weight:bold;}
+.fontItalic{font-style:italic;}
+.textJustify{text-align:justify;}
+.textRight{text-align:right;}
+.texUnder{text-decoration:underline;}
+.textNomal{font-weight:normal;}
+.textLeft{text-align:left;}
+.textCter{text-align:center;}
+.textTrans{text-transform:uppercase;}
+.textLine{color:#0072bc; text-decoration:underline;}
+a.textLine{color:#0072bc;text-decoration:underline;}
+a.textLine:hover{color:#F00;}
+.paddingTb10px{padding: 10px 0 10px 0;}
+.padding10px{padding:10px;}
+.paddingT10{padding-top:10px;}
+.paddingTb4{padding:4px 0 4px 0;}
+.padding4{padding:4px;}
+.padding6{padding:6px;}
+.paddingBt4{padding-bottom:4px;}
+.paddingBt6{padding-bottom:6px;}
+.paddingLr10{padding:0 10px 0 10px;}
+.paddingBt10{padding-bottom:10px;}
+.paddingleft14{padding-left:14px;}
+.paddingT20{padding-top:20px;}
+.paddingR14{padding-right:14px;}
+.paddingLeft30{padding-left:30px;}
+.padding8{padding:8px;}
+.paddingR2{padding-right:2px;}
+.paddingL10{padding-left:10px;}
+.paddingT30{padding-top:30px;}
+.lineHeight78{line-height:78px;}
+.lineHeight18{line-height:18px;}
+.lineHeight16{line-height:16px;}
+.lineHeight20{line-height:20px;}
+.paddingBt2{padding-bottom:2px;}
+.paddingL6{padding-left:6px;}
+.paddingT6{padding-top:6px;}
+.paddingR10{padding-right:10px;}
+.paddingTb6{padding: 6px 0 6px 0;}
