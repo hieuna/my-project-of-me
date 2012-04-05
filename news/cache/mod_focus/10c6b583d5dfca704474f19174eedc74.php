@@ -1,5 +1,5 @@
 <?php die("Access Denied"); ?>
-a:2:{s:6:"output";s:0:"";s:6:"result";s:4747:"<div class="box_modules clearfix">
+a:2:{s:6:"output";s:0:"";s:6:"result";s:4820:"<div class="box_modules clearfix">
 	<div class="title_box_modules">Tiêu điểm</div>
 	<table cellpadding="0" cellspacing="0" class="focus">
 		<tr>
@@ -18,60 +18,60 @@ a:2:{s:6:"output";s:0:"";s:6:"result";s:4747:"<div class="box_modules clearfix">
 						Chứng khoán Việt Nam tăng mạnh nhất châu Á nhờ hạ lãi suất</a>
 				</td>
 			</tr><tr style="background: #F2F8FF;">				<td class="bdr" valign="top">
+					<a href="/projects/news/du-hoc/37-co-phai-nop-ho-so-vao-truong-khong-to-chuc-thi.html">
+						<img class="img45" src="http://localhost/projects/news//images/stories/lam-ho-so_2afe8.jpg" />
+					</a>
+					<a href="/projects/news/du-hoc/37-co-phai-nop-ho-so-vao-truong-khong-to-chuc-thi.html" class="mostread">
+						Có phải nộp hồ sơ vào trường không tổ chức thi?</a>
+				</td>
+							<td valign="top">
 					<a href="/projects/news/the-news/27-chim-en-xuat-hien-day-dac-o-thanh-pho-lao-cai.html">
 						<img class="img45" src="http://localhost/projects/news//images/stories/dsc5453_f86d8.jpg" />
 					</a>
 					<a href="/projects/news/the-news/27-chim-en-xuat-hien-day-dac-o-thanh-pho-lao-cai.html" class="mostread">
 						Chim én xuất hiện dày đặc ở thành phố Lào Cai </a>
 				</td>
-							<td valign="top">
+			</tr><tr>				<td class="bdr" valign="top">
 					<a href="/projects/news/the-news/25-thac-loan-trong-quan-nhau-phat-tu-van-khong-ngan.html">
 						<img class="img45" src="http://localhost/projects/news//images/stories/2_d9ee8.png" />
 					</a>
 					<a href="/projects/news/the-news/25-thac-loan-trong-quan-nhau-phat-tu-van-khong-ngan.html" class="mostread">
 						Thác loạn trong quán nhậu: Phạt tù vẫn không ngán </a>
 				</td>
-			</tr><tr>				<td class="bdr" valign="top">
+							<td valign="top">
 					<a href="/projects/news/joomla-overview/what-is-new-in-1-5.html">
 						<img class="img45" src="http://localhost/projects/news//images/stories/xavi24031203_30356.jpg" />
 					</a>
 					<a href="/projects/news/joomla-overview/what-is-new-in-1-5.html" class="mostread">
 						Mallorca - Barcelona: Và con tim đã vui trở lại</a>
 				</td>
-							<td valign="top">
+			</tr><tr style="background: #F2F8FF;">				<td class="bdr" valign="top">
 					<a href="/projects/news/the-thao/bong-da-anh/15-stoke-man-city-phao-dai-britannia-dang-doi.html">
 						<img class="img45" src="http://localhost/projects/news//images/stories/stokemancity1_7a210.jpg" />
 					</a>
 					<a href="/projects/news/the-thao/bong-da-anh/15-stoke-man-city-phao-dai-britannia-dang-doi.html" class="mostread">
 						Stoke - Man City: “Pháo đài” Britannia đang đợi...</a>
 				</td>
-			</tr><tr style="background: #F2F8FF;">				<td class="bdr" valign="top">
+							<td valign="top">
 					<a href="/projects/news/the-thao/bong-da-anh/14-arsene-wenger-su-tu-tin-dang-tro-lai-voi-arsenal.html">
 						<img class="img45" src="http://localhost/projects/news//images/stories/wenger_882bf.jpg" />
 					</a>
 					<a href="/projects/news/the-thao/bong-da-anh/14-arsene-wenger-su-tu-tin-dang-tro-lai-voi-arsenal.html" class="mostread">
 						Arsene Wenger: “Sự tự tin đang trở lại với Arsenal”</a>
 				</td>
-							<td valign="top">
+			</tr><tr>				<td class="bdr" valign="top">
 					<a href="/projects/news/the-thao/cup-chau-au/12-chung-ket-noi-bo-hai-cup-chau-au-cho-nguoi-tay-ban-nha.html">
 						<img class="img45" src="http://localhost/projects/news//images/stories/bilbao1_f56d0.jpg" />
 					</a>
 					<a href="/projects/news/the-thao/cup-chau-au/12-chung-ket-noi-bo-hai-cup-chau-au-cho-nguoi-tay-ban-nha.html" class="mostread">
 						Chung kết nội bộ hai cúp châu Âu cho người Tây Ban Nha?</a>
 				</td>
-			</tr><tr>				<td class="bdr" valign="top">
+							<td valign="top">
 					<a href="/projects/news/the-thao/bong-da-quoc-te/9-goi-ten-messi.html">
 						<img class="img45" src="http://localhost/projects/news//images/stories/messi_7a936.jpg" />
 					</a>
 					<a href="/projects/news/the-thao/bong-da-quoc-te/9-goi-ten-messi.html" class="mostread">
 						Gọi tên Messi</a>
-				</td>
-							<td valign="top">
-					<a href="/projects/news/van-hoa/showbiz/7-can-canh-nhan-sac-viet.html">
-						<img class="img45" src="http://localhost/projects/news//images/stories/linh-nga.jpg" />
-					</a>
-					<a href="/projects/news/van-hoa/showbiz/7-can-canh-nhan-sac-viet.html" class="mostread">
-						Cận cảnh nhan sắc Việt</a>
 				</td>
 			</tr><tr style="background: #F2F8FF;">		</tr>
 	</table>
