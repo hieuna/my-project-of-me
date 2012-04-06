@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+.afl{
+	float: left; cursor:pointer;
+}
+.afr{
+	float: right; cursor:pointer;
+}
+ul.categories-module{
+	margin: 0; padding: 0;
+}
+ul.categories-module li{
+	list-style: none; float: left;
+}

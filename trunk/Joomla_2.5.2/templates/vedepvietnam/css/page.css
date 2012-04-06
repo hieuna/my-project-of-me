@@ -1,0 +1,136 @@
+@CHARSET "UTF-8";
+
+ul#MainMnu{margin:0; padding:0;}
+ul#MainMnu li,
+ul#MainMnu li.hover{list-style:none; float:left; position:relative;}
+ul#MainMnu li div#mnu,
+ul#MainMnu li.hover div#mnu{position:absolute; right:0; z-index:200000; visibility:hidden; -moz-box-shadow: 5px 5px 5px #888;-webkit-box-shadow: 5px 5px 5px #888;box-shadow: 5px 5px 5px #888;}
+ul#MainMnu li.hover div#mnu{visibility:visible;}
+
+ul#MainMnu li ul#subMenu{margin:0; padding:0;width:100px;}
+ul#MainMnu li ul#subMenu li,
+ul#MainMnu li ul#subMenu li.hover{text-align:center;   border-bottom:1px solid #ccc; width:99.8%;}
+ul#MainMnu li ul#subMenu li.hover a:hover{display:block;}
+ul#subMenu li a{color:Black; font-weight:normal!important; font-size:12px!important}
+ul#subMenu li a:hover{color:Red!important;background:none!important;}
+
+
+.glidecontentwrapper{
+    position: relative; /* Do not change this value */
+    width: 666px;
+    height: 28px; /* Set height to be able to contain height of largest content shown*/  
+    overflow: hidden; 
+    margin-left:4px;
+}
+
+.glidecontent{ /*style for each glide content DIV within wrapper.*/
+    position: absolute; /* Do not change this value */
+    background-color: #fff;
+    padding: 0px;
+    visibility: hidden;
+    width: 365px;
+    display:block;
+    left: -2px;
+    line-height:22px;
+}
+
+.glidecontent a{color:#000; display:block; padding: 2px 4px 0 4px; background-color: #fff;}
+
+.glidecontent a:hover{display:block; padding: 2px 4px 0 4px; text-decoration:underline;}
+
+.glidecontenttoggler{ /*style for DIV used to contain toggler links. */
+    width: 360px;
+    margin-top: 6px;
+    text-align: center; /*How to align pagination links: "left", "center", or "right"*/
+    background: white; /*always declare an explicit background color for fade effect to properly render in IE*/
+}
+
+.glidecontenttoggler a{ /*style for every navigational link within toggler */
+    display: -moz-inline-box;
+    display: inline-block;        
+    padding: 1px 3px;
+    margin-right: 3px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.glidecontenttoggler a.selected{ /*style for selected page's toggler link. ".selected" class auto generated! */
+    background: #E4EFFA;
+    color: black;
+}
+
+.glidecontenttoggler a:hover{
+    background: #E4EFFA;
+    color: black;
+}
+
+.glidecontenttoggler a.toc{ /*style for individual toggler links (page 1, page 2, etc). ".toc" class auto generated! */
+}
+
+.glidecontenttoggler a.prev, .glidecontenttoggler a.next{ /*style for "prev" and "next" toggler links. ".prev" and ".next" classes auto generated! */
+}
+
+.glidecontenttoggler a.prev:hover, .glidecontenttoggler a.next:hover{
+    background: #1A48A4;
+    color: white;
+}
+
+ .glidecontentwrapper{
+    position: relative; /* Do not change this value */
+    width: 666px;
+    height: 28px; /* Set height to be able to contain height of largest content shown*/  
+    overflow: hidden; 
+    margin-left:4px;
+}
+
+.glidecontent{ /*style for each glide content DIV within wrapper.*/
+    position: absolute; /* Do not change this value */
+    background-color: #fff;
+    padding: 0px;
+    visibility: hidden;
+    width: 365px;
+    display:block;
+    left: -2px;
+    line-height:22px;
+}
+
+.glidecontent a{color:#000; display:block; padding: 2px 4px 0 4px; background-color: #fff;}
+
+.glidecontent a:hover{display:block; padding: 2px 4px 0 4px; text-decoration:underline;}
+
+.glidecontenttoggler{ /*style for DIV used to contain toggler links. */
+    width: 360px;
+    margin-top: 6px;
+    text-align: center; /*How to align pagination links: "left", "center", or "right"*/
+    background: white; /*always declare an explicit background color for fade effect to properly render in IE*/
+}
+
+.glidecontenttoggler a{ /*style for every navigational link within toggler */
+    display: -moz-inline-box;
+    display: inline-block;        
+    padding: 1px 3px;
+    margin-right: 3px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.glidecontenttoggler a.selected{ /*style for selected page's toggler link. ".selected" class auto generated! */
+    background: #E4EFFA;
+    color: black;
+}
+
+.glidecontenttoggler a:hover{
+    background: #E4EFFA;
+    color: black;
+}
+
+.glidecontenttoggler a.toc{ /*style for individual toggler links (page 1, page 2, etc). ".toc" class auto generated! */
+}
+
+.glidecontenttoggler a.prev, .glidecontenttoggler a.next{ /*style for "prev" and "next" toggler links. ".prev" and ".next" classes auto generated! */
+}
+
+.glidecontenttoggler a.prev:hover, .glidecontenttoggler a.next:hover{
+    background: #1A48A4;
+    color: white;
+}
