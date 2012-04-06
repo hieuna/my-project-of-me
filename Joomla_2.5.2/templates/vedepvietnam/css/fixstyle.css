@@ -12,3 +12,9 @@ ul.categories-module{
 ul.categories-module li{
 	list-style: none; float: left;
 }
+#colunmLeft1 ul{
+	margin: 0; padding: 0;
+}
+#colunmLeft1 ul li{
+	
+}
