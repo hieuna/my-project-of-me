@@ -24,6 +24,7 @@ foreach ($results as $result)
 	$db->setQuery($subquery);
 	$sbResults = $db->loadObjectList();
 	//echo count($sbResults);
+	$array = $result->id.",";
 	?>
 	<li>
 		<div class="ChannelSample_left"></div>
@@ -32,11 +33,15 @@ foreach ($results as $result)
 				<div class="boxTabMnuShare">
 	                <a class="txt_16_bold afl"><?php echo $result->title;?></a>
 	                <?php
+	                $i = 0;
 	                foreach ($sbResults as $sbresult){
+	                	$array .= $sbresult->id.",";
 	                	?>
 	                	<a class="txt_12 afr"><?php echo $sbresult->title;?></a><span class="txt_space">|</span>
-	                	<?php 
+	                	<?php
+	                	echo $i++; 
 	                }
+	                $array;
 	                ?>
 	                <div class="clearFix"></div>
 	            </div>
