@@ -14,10 +14,11 @@ ul#MainMnu li ul#subMenu li.hover a:hover{display:block;}
 ul#subMenu li a{color:Black; font-weight:normal!important; font-size:12px!important}
 ul#subMenu li a:hover{color:Red!important;background:none!important;}
 ul#MainMnu li:first-child{
-	width: 41px; height: 27px; display: block; overflow: hidden; background: url("../images/iconHome.jpg") no-repeat top left;
+	background: url("../images/iconHome.jpg") no-repeat top left;
+	padding-left: 20px;
 }
 ul#MainMnu li:first-child a{
-	cursor: pointer; display: none;
+	cursor: pointer;
 }
 ul#MainMnu li:last-child{
 	background: none;

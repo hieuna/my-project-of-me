@@ -44,6 +44,7 @@ class ContentModelArticles extends JModelList
 				'featured', 'a.featured',
 				'language', 'a.language',
 				'hits', 'a.hits',
+				'hots', 'a.hots',
 				'publish_up', 'a.publish_up',
 				'publish_down', 'a.publish_down',
 				'images', 'a.images',
