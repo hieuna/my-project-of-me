@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-ul#MainMnu{margin:0; padding:0;}
+ul#MainMnu{margin:0 auto; padding:0; width: 1100px;}
 ul#MainMnu li,
 ul#MainMnu li.hover{list-style:none; float:left; position:relative;}
 ul#MainMnu li div#mnu,
@@ -13,7 +13,18 @@ ul#MainMnu li ul#subMenu li.hover{text-align:center;   border-bottom:1px solid #
 ul#MainMnu li ul#subMenu li.hover a:hover{display:block;}
 ul#subMenu li a{color:Black; font-weight:normal!important; font-size:12px!important}
 ul#subMenu li a:hover{color:Red!important;background:none!important;}
-
+ul#MainMnu li:first-child{
+	width: 41px; height: 27px; display: block; overflow: hidden; background: url("../images/iconHome.jpg") no-repeat top left;
+}
+ul#MainMnu li:first-child a{
+	cursor: pointer; display: none;
+}
+ul#MainMnu li:last-child{
+	background: none;
+}
+ul#MainMnu li li:first-child{
+	background: none;
+}
 
 .glidecontentwrapper{
     position: relative; /* Do not change this value */
