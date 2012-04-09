@@ -57,6 +57,7 @@ if ( $s_stats ){
 		$timeline	=	modVisitCounterHelper::showTimeLine( $local_yesterdaystart, 0, $offset );
 		$html		.=	modVisitCounterHelper::showStatisticsRows( $stats_type, "vyesterday", $timeline, $yesterday, $yesterday_visitors );
 	}
+	/*
 	if($s_week){
 		$timeline	=	modVisitCounterHelper::showTimeLine( $local_weekstart, $local_daystart, $offset );
 		$html		.=	modVisitCounterHelper::showStatisticsRows( $stats_type, "vweek", $timeline, $x_week, $week_visitors );
@@ -73,6 +74,7 @@ if ( $s_stats ){
 		$timeline	=	modVisitCounterHelper::showTimeLine( $local_lmonthstart, $local_monthstart, $offset );
 		$html		.=	modVisitCounterHelper::showStatisticsRows( $stats_type, "vlmonth", $timeline, $l_month, $lmonth_visitors );
 	}
+	*/
 	if($s_all){
 		if ( !$beginday ) $beginday = "Visitors Counter";
 		$html	.=	modVisitCounterHelper::showStatisticsRows( $stats_type, "vall", $beginday, $all, $all_visitors );
