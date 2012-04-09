@@ -35,6 +35,9 @@ abstract class modCollectionNewsHelper
 		$model->setState('list.limit', (int) $params->get('count', 5));
 
 		$model->setState('filter.published', 1);
+		//set condition
+		$model->setState('filter.hots', 1);
+		$model->setState('filter.hits', 1);
 
 		$model->setState('list.select', 'a.fulltext, a.id, a.title, a.alias, a.title_alias, a.introtext, a.state, a.catid, a.created, a.created_by, a.created_by_alias,' .
 			' a.modified, a.modified_by,a.publish_up, a.publish_down, a.attribs, a.metadata, a.metakey, a.metadesc, a.access,' .
@@ -47,7 +50,7 @@ abstract class modCollectionNewsHelper
 
 		// Category filter
 		$model->setState('filter.category_id', $params->get('catid', array()));
-
+		
 		// Filter by language
 		$model->setState('filter.language', $app->getLanguageFilter());
 
@@ -62,7 +65,8 @@ abstract class modCollectionNewsHelper
 
 		//	Retrieve Content
 		$items = $model->getItems();
-		var_dump($items); die;
+		//echo count($items);
+		//var_dump($items); die;
 
 		foreach ($items as &$item) {
 			$item->readmore = (trim($item->fulltext) != '');
