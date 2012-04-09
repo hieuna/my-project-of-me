@@ -12,6 +12,8 @@ JHtml::_('behavior.framework', true);
 
 /* The following line gets the application object for things like displaying the site name */
 $app = JFactory::getApplication();
+$option	= JRequest::GetCmd('option', '', 'GET');
+$view	= JRequest::GetCmd('view', '', 'GET');
 ?>
 <?php echo '<?'; ?>xml version="1.0" encoding="<?php echo $this->_charset ?>"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -678,11 +680,6 @@ $app = JFactory::getApplication();
         </div>
 		</div>
 		<div class="boxMnuMainTop">
-			<div class="iconHome">
-				<a href="http://tuoitre.vn/" id="mnu_0">
-					<img alt="" src="http://tuoitre.vn/Images/Trans.gif" style="width: 41px; height: 27px; border: 0px;" />
-				</a>
-			</div>
 			<jdoc:include type="modules" name="vn-topmenu" style="none" />
 		</div>
 		<div style="position: relative; z-index: 30000" class="boxMnuItem"></div>
@@ -712,7 +709,7 @@ $app = JFactory::getApplication();
             
 <div class="channeltop">
     <div class="channelttopLeft">
-        
+    <jdoc:include type="modules" name="vn-sidebar" style="none" />   
 <script language="javascript" type="text/javascript">
         function PlayTHTT(src, playerid) {
             try {
@@ -882,7 +879,7 @@ $app = JFactory::getApplication();
 </div>
 
     </div> 
-    <div class="Most_Item" id="idtinnoibat" onclick="ShowtabMospopular('idtinnoibat','idtinmoicapnhat','idtindocnhieunhat','idvandequantam');">Tin n�ng</div>
+    <div class="Most_Item" id="idtinnoibat" onclick="ShowtabMospopular('idtinnoibat','idtinmoicapnhat','idtindocnhieunhat','idvandequantam');">Tin nóng</div>
     <div id="idtinnoibatContent"  class="Mospopcontent">           
         <div style="width:100%;clear:both;height:3px;overflow:hidden;font-size:1px;"></div>           
         
@@ -950,12 +947,12 @@ $app = JFactory::getApplication();
                 </div>
                
     </div>             
-   <div id="idtinmoicapnhat" style="display:none;" onclick="ShowtabMospopular('idtinmoicapnhat','idtinnoibat','idtindocnhieunhat','idvandequantam');" class="Most_Item">Tin m?i nh?n</div>
+   <div id="idtinmoicapnhat" style="display:none;" onclick="ShowtabMospopular('idtinmoicapnhat','idtinnoibat','idtindocnhieunhat','idvandequantam');" class="Most_Item">Tin mới nhất</div>
     <div id="idtinmoicapnhatContent" class="Mospopcontent">                 
         <div style="width:100%;clear:both;height:3px;overflow:hidden;font-size:1px;"></div>
          
     </div>
-    <div id="idtindocnhieunhat" onclick="ShowtabMospopular('idtindocnhieunhat','idtinnoibat','idtinmoicapnhat','idvandequantam');" class="Most_Item">Tin d?c nhi?u nh?t</div>
+    <div id="idtindocnhieunhat" onclick="ShowtabMospopular('idtindocnhieunhat','idtinnoibat','idtinmoicapnhat','idvandequantam');" class="Most_Item">Tin đọc nhiều nhất</div>
     <div id="idtindocnhieunhatContent" class="Mospopcontent">
          <div style="width:100%;clear:both;height:3px;overflow:hidden;font-size:1px;"></div>
         
@@ -1023,7 +1020,7 @@ $app = JFactory::getApplication();
                 </div>
              
     </div>
-    <div id="idvandequantam" onclick="ShowtabMospopular('idvandequantam','idtinnoibat','idtinmoicapnhat','idtindocnhieunhat');" class="Most_Item">Ph?n h?i nhi?u nh?t</div>
+    <div id="idvandequantam" onclick="ShowtabMospopular('idvandequantam','idtinnoibat','idtinmoicapnhat','idtindocnhieunhat');" class="Most_Item">Phản hồi nhiều nhất</div>
     <div id="idvandequantamContent" class="Mospopcontent">
     <div style="width:100%;clear:both;height:3px;overflow:hidden;font-size:1px;"></div>
         
@@ -1135,8 +1132,16 @@ $app = JFactory::getApplication();
             <div class="clearFix"></div>
         </div>
         <div id="colunmLeft1" class="sortHomeCenter">
-			<?php include("html/homepage.php");?>
-			<jdoc:include type="modules" name="vn-centermiddle" style="none" />            
+			<?php
+			if ($view == 'featured'){ 
+				include("html/homepage.php");
+				?>
+				<jdoc:include type="modules" name="vn-centermiddle" style="none" />
+				<?php
+			}else{	
+			?>
+			<jdoc:include type="component" />
+			<?php }?>            
         </div>
         <div id="colunmLeft2">
            
@@ -1420,287 +1425,14 @@ $app = JFactory::getApplication();
 
 
 <div class="boxVote" style="width:200px;">
-    <div class="boxVoteTop" style="width:200px;">
-        <div class="boxVoteBtom" style="width:200px;">
-            <div class="boxTitleVote">
-                Thu ph� giao th�ng</div>
-            <div style="padding: 10px;">
-                <div style="padding-bottom: 10px">
-                    Theo b?n, vi?c thu ph� h?n ch? xe c� nh�n v� ph� xe v�o trung t�m th�nh ph? gi? cao di?m theo d? xu?t c?a B? giao th�ng v?n t?i s?:</div>
-                
-                        <div style="line-height: 24px">
-                            <input value="739" type="radio" name="optDetail" />
-                            Gi�p ngu?i d�n di l?i thu?n l?i hon, an to�n hon</div>
-                    
-                        <div style="line-height: 24px">
-                            <input value="740" type="radio" name="optDetail" />
-                            Kh�ng c� thay d?i, giao th�ng v?n nhu cu</div>
-                    
-                        <div style="line-height: 24px">
-                            <input value="741" type="radio" name="optDetail" />
-                            Ch? l�m kh� v� t?n th�m ti?n v?i ngu?i di xe</div>
-                    
-                        <div style="line-height: 24px">
-                            <input value="742" type="radio" name="optDetail" />
-                            � ki?n kh�c</div>
-                    
-                <div style="padding-top: 10px; width: 98px; margin: 0 auto;">
-                    <input type="button" name="cmdSubmit" onclick="OnCmdSubmitClick('optDetail',160);" class="inputVote" /></div>
-            </div>
-            <div class="boxViewKq">
-                <a href="javascript:OnCmdViewClick(160);" class="color1">Xem k?t qu?</a></div>
-        </div>
-    </div>
+	<jdoc:include type="modules" name="vn-user2" />    
 </div>
 
         </div>
         <div class="clearFix"></div>
     </div>
     <div id="colunmRight">
-        <div style="margin-bottom:5px;clear:both;width:100%;overflow:hidden;">
-          
-
-<div class="boxSearch">
-    <div class="padding2" style="padding-left: 6px;">
-        
-        
-                            
-            <input type="text" id="txtKeyword" onfocus="textboxChange(this,true,'T�m tr�n Tu?i Tr? Online')" onblur="textboxChange(this,false,'T�m tr�n Tu?i Tr? Online')"
-                    value="T�m tr�n Tu?i Tr? Online" class="inputSearch floatLeft" style="width: 179px; height: 17px;" onkeypress="return trapEnterKey('chkYahoo',this.value,event);" />
-                <input type="button" class="inputSearch floatLeft" style="width: 60px; height: 20px;
-                    cursor: pointer" alt="T�m Ki?m" id="go_search_yahoo" name="image" onclick="searchEngine();" />
-        
-        <div class="floatLeft" style="padding-top: 2px; padding-left: 0px;" >        
-             <input type="checkbox" id="chkYahoo" onclick="setvalueYahoo();" /></div>
-    </div>
-</div>
-
-<script type="text/javascript" language="javascript">
-    /* URL encode / decode */
-    var Url =
-    {
-        // public method for url encoding
-        encode: function(string) {
-            return escape(this._utf8_encode(string));
-        },
-
-        // public method for url decoding
-        decode: function(string) {
-            return this._utf8_decode(unescape(string));
-        },
-
-        // private method for UTF-8 encoding
-        _utf8_encode: function(string) {
-            string = string.replace(/\r\n/g, "\n");
-            var utftext = "";
-
-            for (var n = 0; n < string.length; n++) {
-
-                var c = string.charCodeAt(n);
-
-                if (c < 128) {
-                    utftext += String.fromCharCode(c);
-                }
-                else if ((c > 127) && (c < 2048)) {
-                    utftext += String.fromCharCode((c >> 6) | 192);
-                    utftext += String.fromCharCode((c & 63) | 128);
-                }
-                else {
-                    utftext += String.fromCharCode((c >> 12) | 224);
-                    utftext += String.fromCharCode(((c >> 6) & 63) | 128);
-                    utftext += String.fromCharCode((c & 63) | 128);
-                }
-
-            }
-
-            return utftext;
-        },
-
-        // private method for UTF-8 decoding
-        _utf8_decode: function(utftext) {
-            var string = "";
-            var i = 0;
-            var c = c1 = c2 = 0;
-
-            while (i < utftext.length) {
-
-                c = utftext.charCodeAt(i);
-
-                if (c < 128) {
-                    string += String.fromCharCode(c);
-                    i++;
-                }
-                else if ((c > 191) && (c < 224)) {
-                    c2 = utftext.charCodeAt(i + 1);
-                    string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
-                    i += 2;
-                }
-                else {
-                    c2 = utftext.charCodeAt(i + 1);
-                    c3 = utftext.charCodeAt(i + 2);
-                    string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
-                    i += 3;
-                }
-            }
-            return string;
-        }
-    }
-
-    function setvalueYahoo() {
-        if (document.getElementById("chkYahoo").checked) {
-            document.getElementById('txtKeyword').value = "T�m tr�n Yahoo";
-        }
-        else {
-            document.getElementById('txtKeyword').value = "T�m tr�n Tu?i tr?";
-        }
-    }
-
-    function searchEngine() 
-    {
-        var url = "http://tuoitre.vn/Tim-kiem/Index.html?keyword=";
-        
-        if (document.getElementById("chkYahoo").checked) 
-        {
-            url = "http://search.yahoo.com/search?p=";
-            window.open(url, "_blank", "", "");
-        }
-        else 
-        {
-            url += Url.encode(document.getElementById("txtKeyword").value) + "&scope=*&channel=-1&from=&to=&page=1";
-            window.open(url, "_blank", "", "");
-        }
-    }
-
-    // setTypingMode(document.getElementById("cboInputMethod").selectedIndex);
-    // initTyper(document.getElementById("txtKeyword"));    
-</script>
-
-<script type="text/javascript" language="javascript">
-    function trapEnterKey(chkYM,value, e) {
-        // the purpose of this function is to allow the enter key to
-        // point to the correct button to click.
-        var key;
-
-        if (window.event) {
-            // IE
-            key = window.event.keyCode;
-        }
-        else {
-            // firefox
-            key = e.which;
-        }
-
-        if (key == 13) 
-        {
-            var q = value;
-
-            if (q == '') {
-                return false;
-            }
-
-            if ((q.indexOf('AND') == -1) && (q.indexOf('OR') == -1) && (q.indexOf('"') == -1)) {
-                //q = '"' + q + '"';
-                q = q;
-            }
-            
-            // endcode
-            q = Url.encode(q);
-            
-            if (document.getElementById(chkYM).checked) 
-            {
-                //window.location = "http://search.yahoo.com/search?p=" + q;
-                var urlyahoo = "http://search.yahoo.com/search?p=" + q;
-                window.open(urlyahoo, "_blank", "", "");                
-            }
-            else 
-            {
-                var urltto = "http://tuoitre.vn/Tim-kiem/Index.html?scope=*&channel=-1&from=&to=&page=1&keyword=" + q;
-                window.open(urltto, "_blank", "", "");   
-            }
-            
-            event.keyCode = 0;
-
-            return false;
-        }
-        
-        return true;
-    }                         
-</script>
-        </div>
-        
-<div style="margin-bottom:5px;clear:both; display:none;">
-    <a href="http://phienbancu.tuoitre.vn" target="_blank">
-        <img alt="img" title="" src="http://tuoitre.vn/Images/PhienBanCuTTO.jpg" border="0" />
-    </a>
-</div>
-
-
-
-<div class="boxQcRight">
-     <a href=" http://quangcao.tuoitre.vn/Dat-bao-truc-tuyen/index.html" target="_blank">
-        <img src="http://tuoitre.vn/Images/Trans.gif" style="width: 300px; height: 28px; border: 0px;" alt="" />
-     </a>
-</div>
-
-<script type="text/javascript">
-      var adH = 27;
-      var delay = null;
-      function Resize(io) {
-          var m = document.getElementById("adMenu");
-          if (io == 0) {
-              if (adH < 157) {
-                  adH = adH + 5;
-              }
-              else clearInterval(delay);
-              m.style.height = adH.toString() + "px";
-          }
-          if (io == 1) {
-              if (adH > 27) {
-                  adH = adH - 5;
-              }
-              else clearInterval(delay);
-              m.style.height = adH.toString() + "px";
-          }
-      }
-
-      function Control(io) {
-          clearInterval(delay);
-          if (io == 0) {
-              delay = setInterval('Resize(0)', 15)
-          }
-          if (io == 1) {
-              delay = setInterval('Resize(1)', 15)
-          }
-      }
-</script>
-
-<div id="adMenu" style="overflow: hidden;width: 300px; height:27px;padding:0px;margin:0px;" onmouseover="Control(0)" onmouseout="Control(1)">
-    <div class="boxChuyenQc" style="height:27px; line-height:27px;">      
-        <a class="dropdown" target="_blank" href="http://quangcao.tuoitre.vn">Chuy�n trang Qu?ng c�o</a>
-    </div>    
-    <ul class="chuyentrangqcContent" >            
-          <li class="qcitem"><a href="http://quangcao.tuoitre.vn/Nha-Dat/index.html" target="_blank">Th? tru?ng d?a ?c</a></li>
-          <li class="qcitem"><a href="http://quangcao.tuoitre.vn/Viec-lam/index.html" target="_blank">Tuy?n d?ng - T�m vi?c</a></li>
-          <li class="qcitem"><a href="http://quangcao.tuoitre.vn/Hoc-Hanh/index.html" target="_blank">H?c h�nh thi c?</a></li>
-          <li class="qcitem"><a href="http://quangcao.tuoitre.vn/Dich-Vu/index.html"  target="_blank">D?ch v?</a></li>
-          <li class="qcitem"><a href="http://quangcao.tuoitre.vn/Thong-Bao/index.html" target="_blank">Th�ng b�o - B? c�o</a></li>
-          <li class="qcitem"><a href="http://quangcao.tuoitre.vn/Xe-Co-Gioi/index.html" target="_blank">Phuong ti?n v?n chuy?n</a></li>
-          <li class="qcitem"><a href="http://quangcao.tuoitre.vn/San-Pham-Khac/index.html" target="_blank">H�ng h�a</a></li>     
-    </ul> 
-</div>
-<div style="height: 6px; clear: both; width: 100%; overflow: hidden; font-size: 1px;"></div>
-<div class="boxQcRight">
-     <a href="http://tuoitre.vn/Tuyensinh/" target="_blank">
-        <img src="http://tuoitre.vn/Images/TuyenSinh2012_300px.jpg" style="width: 300px; border: 0px;" alt="" />
-     </a>
-</div>
-
-<div class="QCIframe">
-    <div style="clear:both;width:100%;">
-        <iframe src="http://s.tuoitre.vn/tto/home/righttop.html" scrolling="no" align="left" width='300' height='318' frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-</div>
-<div style="width:100%;clear:both;height:8px;overflow:hidden;font-size:1px;"></div>
+    	<jdoc:include type="modules" name="vn-adver1" />
 
 <div class="HeadTTCT fontsize16 color3 bold">
     <div class="paddingLright10px">

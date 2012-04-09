@@ -56,6 +56,7 @@ body{
 	line-height:25px;
 	font-size:13px!important;
 	font-weight:bold;
+	margin: 0; padding: 0; text-align: center;
 }
 .boxMnuSub{
 	/*Hieuvm: background:url(images/bgMnuSubtop1.jpg) bottom left repeat-x; height:31px;*/
@@ -660,7 +661,6 @@ body{
 	color:#fff;	
 	text-align:center;
 }
-.iconHome{background:url(http://123.30.128.11/App_Themes/TTOBlue/images/iconHome.jpg) no-repeat; width:41px; height:27px; display:block; float:left;cursor:pointer;border-right:solid 1px #fff;}
 .qcitem
 {
 	width:95%;
