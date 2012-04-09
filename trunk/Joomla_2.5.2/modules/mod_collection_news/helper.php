@@ -65,7 +65,7 @@ abstract class modCollectionNewsHelper
 
 		//	Retrieve Content
 		$items = $model->getItems();
-		//echo count($items);
+		//echo count($items); die;
 		//var_dump($items); die;
 
 		foreach ($items as &$item) {
@@ -99,5 +99,6 @@ abstract class modCollectionNewsHelper
 		}
 
 		return $items;
+		var_dump($items); die;
 	}
 }
