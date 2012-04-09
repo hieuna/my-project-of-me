@@ -23,7 +23,8 @@ abstract class modCollectionNewsHelper
 		$db		= JFactory::getDbo();
 
 		// Get an instance of the generic articles model
-		$model = JModel::getInstance('Collection', 'ContentModel', array('ignore_request' => true));
+		$model = JModel::getInstance('Articles', 'ContentModel', array('ignore_request' => true));
+		//var_dump($model); die;
 
 		// Set application parameters in model
 		$appParams = JFactory::getApplication()->getParams();
@@ -61,6 +62,7 @@ abstract class modCollectionNewsHelper
 
 		//	Retrieve Content
 		$items = $model->getItems();
+		var_dump($items); die;
 
 		foreach ($items as &$item) {
 			$item->readmore = (trim($item->fulltext) != '');
