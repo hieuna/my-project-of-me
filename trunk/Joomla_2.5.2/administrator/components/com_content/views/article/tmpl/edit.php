@@ -88,6 +88,9 @@ endif;
 
 				<li><?php echo $this->form->getLabel('featured'); ?>
 				<?php echo $this->form->getInput('featured'); ?></li>
+				
+				<li><?php echo $this->form->getLabel('hots'); ?>
+				<?php echo $this->form->getInput('hots'); ?></li>
 
 				<li><?php echo $this->form->getLabel('language'); ?>
 				<?php echo $this->form->getInput('language'); ?></li>

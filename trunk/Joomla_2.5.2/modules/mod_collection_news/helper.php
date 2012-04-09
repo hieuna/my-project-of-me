@@ -37,7 +37,7 @@ abstract class modCollectionNewsHelper
 
 		$model->setState('list.select', 'a.fulltext, a.id, a.title, a.alias, a.title_alias, a.introtext, a.state, a.catid, a.created, a.created_by, a.created_by_alias,' .
 			' a.modified, a.modified_by,a.publish_up, a.publish_down, a.attribs, a.metadata, a.metakey, a.metadesc, a.access,' .
-			' a.hits, a.featured,' .
+			' a.hits, a.featured, a.hits, a.hots,' .
 			' LENGTH(a.fulltext) AS readmore');
 		// Access filter
 		$access = !JComponentHelper::getParams('com_content')->get('show_noauth');

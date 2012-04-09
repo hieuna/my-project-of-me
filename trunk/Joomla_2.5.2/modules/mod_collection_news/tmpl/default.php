@@ -9,9 +9,9 @@
 // no direct access
 defined('_JEXEC') or die;
 ?>
-<div class="newsflash<?php echo $moduleclass_sfx; ?>">
+<div class="newscollection<?php echo $moduleclass_sfx; ?>">
 <?php foreach ($list as $item) :?>
 	<?php
-	 require JModuleHelper::getLayoutPath('mod_articles_news', '_item');?>
+	 require JModuleHelper::getLayoutPath('mod_collection_news', '_item');?>
 <?php endforeach; ?>
 </div>
