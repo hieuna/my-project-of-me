@@ -114,6 +114,24 @@
 			<option value="0">JNO</option>
 			<option value="1">JYES</option>
 		</field>
+		
+		<field name="hots" type="list"
+			label="JHOTS"
+			description="COM_CONTENT_FIELD_HOTS_DESC"
+			default="0"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field name="focus" type="list"
+			label="JFOCUS"
+			description="COM_CONTENT_FIELD_FOCUS_DESC"
+			default="0"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
 
 		<field name="rules" type="rules" label="JFIELD_RULES_LABEL"
 			translate_label="false" class="inputbox" filter="rules"
