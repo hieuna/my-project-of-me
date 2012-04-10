@@ -136,7 +136,6 @@ img{
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 15px;
     text-align: left;
     width: 1004px;
 }
@@ -752,7 +751,15 @@ div.ms-quicklaunchouter {
     width: 368px;
 }
 .footer {
-	margin: 0 auto;	margin-top: 20px; background: #4396CA; padding: 10px 0; width: 980px;
+	margin: 0 auto;	margin-top: 10px; background: #f4f5f6; width: 1004px;
+}
+.copyright{
+	color: #7B7B7B;
+    padding: 10px 30px;
+    text-align: left;
+}
+.copyright p{
+	padding: 0; margin: 0; margin-bottom: 5px;
 }
 .bottom {
     color: #FFFFFF;
@@ -2548,4 +2555,40 @@ table.homerightmail td.mailcontent {
 .ms-pagetitle, .ms-titlearea
 {
 	display:none;
+}
+.divboxPartner{
+	width: 100%; height: 120px; position: relative;
+}
+.divboxPartner h2{
+	position: absolute; left: 12px; top: -45px; padding: 3px 10px; background: #15449e; color: #fff; font-weight: bold;
+	z-index: 999; text-shadow: 1px -1px 1px #333; cursor: pointer;
+	border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	behavior: url(ie-css3.htc);	
+}
+.boxPartner{
+	width: 980px; height: 120px; margin: 0 auto; padding: 5px 0; overflow: hidden; margin-top: 10px;
+	border: 1px solid #c8c8c8; background: #e5e4e5; position: relative;
+	border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	behavior: url(ie-css3.htc);
+}
+.boxPartner ul{
+	margin: 0; padding: 0; width: 980px; height: 120px; overflow: hidden;
+}
+.boxPartner ul li{
+	list-style: none; float: left; margin: 12px 1px 12px 5px; text-align: left;
+	width: 190px; height: 96px; overflow: hidden;
+}
+.boxPartner ul li:last-child{
+	margin-right: 0;
+}
+.boxPartner ul li img{
+	border: 1px solid #97A2AA; width: 99px; height: 88px; margin: 3px 5px 0 0;
+}
+.boxPartner ul li p{
+	margin: 0 5px 0 0; padding: 0; font-size: 11px; color: #333;
+}
+.boxPartner ul li p a{
+	font-weight: bold; font-size: 11px; color: #232323; text-decoration: none;
 }
