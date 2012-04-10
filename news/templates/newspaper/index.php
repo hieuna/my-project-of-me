@@ -20,6 +20,12 @@ $view 		= JRequest::getString('view', '', 'GET');
 	<head>
 		<!-- The following JDOC Head tag loads all the header and meta information from your site config and content. -->
 		<jdoc:include type="head" />
+		<meta content="text/html; charset=utf-8" http-equiv="content-type">
+		<meta content="index, follow" name="robots">
+		<meta content="Super User" name="author">
+		<meta name="keywords" content="tapchidoanhnhanviet.vn, tapchidoanhnhanviet, tapchidoanhnhan, doanhnhanviet, tapchi" />
+		<meta name="description" content="Tạp chí doanh nhân việt, tap chi doanh nhan viet, tạp chí doanh nhân, tap chi doanh nhan, tạp chí, tapchi" />
+		<meta name="generator" content="Joomla! - Open Source Content Management" />		
 		<!-- The following five lines load the Blueprint CSS Framework (http://blueprintcss.org). If you don't want to use this framework, delete these lines. -->
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/styles/style.css" type="text/css" />
         <![if !IE]>
@@ -28,6 +34,7 @@ $view 		= JRequest::getString('view', '', 'GET');
 		<!--[if IE 9 ]> <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/styles/css3.css" type="text/css" /> <![endif]-->
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/styles/slide_fontpage.css" type="text/css" />
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery-1.7.min.js" type="text/javascript"></script>
+        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery.cycle.all.min.js" type="text/javascript"></script>
         <!-- SLIDESHOW -->
         <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery.js"></script>
   		<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/scripts.js"></script>
@@ -154,6 +161,54 @@ $view 		= JRequest::getString('view', '', 'GET');
 		</tr>
 		<tr>
 			<td valign="top">
+				<div class="divboxPartner">
+					<h2>Đối tác tài trợ</h2>
+					<div class="boxPartner" id="tab_content">
+						<ul>
+							<li>
+								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
+								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
+								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
+							</li>
+							<li>
+								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
+								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
+								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
+							</li>
+							<li>
+								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
+								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
+								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
+							</li>
+							<li>
+								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
+								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
+								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
+							</li>
+							<li>
+								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
+								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
+								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
+								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
+								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
+							</li>
+							<li>
+								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
+								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
+								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
 			<table cellspacing="0" cellpadding="0" border="0" class="footer">
 				<tr>
 					<td align="center">
@@ -165,4 +220,12 @@ $view 		= JRequest::getString('view', '', 'GET');
 		</tr>
 	</table>
 	</body>
+	<script type="text/javascript">
+	$(function() {
+	    $('#tab_content').cycle({
+	    	fx: 'scrollLeft',
+	    	timeout: 10000
+	    });
+	});
+	</script>		
 </html>
