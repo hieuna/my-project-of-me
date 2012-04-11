@@ -99,6 +99,5 @@ abstract class modCollectionNewsHelper
 		}
 
 		return $items;
-		var_dump($items); die;
 	}
 }

@@ -1,6 +1,8 @@
 @CHARSET "UTF-8";
 
-ul#MainMnu{margin:0 auto; padding:0; width: 1100px;}
+ul#MainMnu{
+	margin:0 auto; padding:0; display: block; min-width: 1170px; width: auto; width: 1170px;	
+}
 ul#MainMnu li,
 ul#MainMnu li.hover{list-style:none; float:left; position:relative;}
 ul#MainMnu li div#mnu,
