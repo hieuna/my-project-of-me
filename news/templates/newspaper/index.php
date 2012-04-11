@@ -161,50 +161,7 @@ $view 		= JRequest::getString('view', '', 'GET');
 		</tr>
 		<tr>
 			<td valign="top">
-				<div class="divboxPartner">
-					<h2>Đối tác tài trợ</h2>
-					<div class="boxPartner" id="tab_content">
-						<ul>
-							<li>
-								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
-								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
-								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
-							</li>
-							<li>
-								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
-								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
-								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
-							</li>
-							<li>
-								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
-								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
-								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
-							</li>
-							<li>
-								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
-								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
-								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
-							</li>
-							<li>
-								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
-								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
-								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
-							</li>
-						</ul>
-						<ul>
-							<li>
-								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
-								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
-								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
-							</li>
-							<li>
-								<a class="fl" href=""><img src="http://vnexpress.net/Files/Subject/3b/bd/53/06/daydienTranPhu-130.jpg" /></a>
-								<p><a href="/gl/kinh-doanh/doanh-nghiep-viet/2012/04/cfvg-gioi-thieu-tuyen-sinh-mba-va-mba-du-lich/">CFVG giới thiệu tuyển sinh MBA và MBA du lịch</a></p>
-								<p>Nhằm thực hiện theo thông tư của Bộ Thông tin và Truyền thông, nhà mạng VinaPhone đang khuyến khích những khách hàng thuê bao trả trước tiến hành đăng ký thông tin cá nhân.</p>
-							</li>
-						</ul>
-					</div>
-				</div>	
+				<?php include("html/partner.php");?>	
 			</td>
 		</tr>
 		<tr>
