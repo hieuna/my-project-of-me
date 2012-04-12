@@ -547,10 +547,6 @@ body{
 {
 	width:471px;clear:both;background-image:url(images/bgchaneltop.jpg);background-repeat:repeat-x;height:382px;border-left:solid 1px #d7d7d7;overflow:hidden;
 }
-.MostbgItem
-{
-	width:164px;margin-top:4px;padding-left:13px;clear:both;background-image:url(../images/iconBlue.jpg);background-repeat:no-repeat;background-position:5px 7px;
-}
 .MostbgItem_whitedot
 {
 	width:165px;margin-top:3px;padding-left:15px;clear:both;background-image:url(../images/whitedot.jpg);background-repeat:no-repeat;background-position:8px 7px;
@@ -571,17 +567,6 @@ body{
 .itemSubchannel
 {
 	width:200px;margin-top:2px;padding-left:13px;clear:both;background-image:url(images/bluedot.jpg);background-repeat:no-repeat;background-position:5px 6px;
-}
-.amostitem
-{
-	font-family:Arial;
-	font-size:12px;
-	color:#000;	
-	line-height:16px;
-}
-.amostitem:hover
-{
-	color:#004a80;
 }
 .subchannel_top_left
 {
