@@ -39,10 +39,8 @@ abstract class modCollectionNewsHelper
 		$model->setState('filter.hots', 1);
 		$model->setState('filter.hits', 1);
 
-		$model->setState('list.select', 'a.fulltext, a.id, a.title, a.alias, a.title_alias, a.introtext, a.state, a.catid, a.created, a.created_by, a.created_by_alias,' .
-			' a.modified, a.modified_by,a.publish_up, a.publish_down, a.attribs, a.metadata, a.metakey, a.metadesc, a.access,' .
-			' a.hits, a.featured, a.hits, a.hots,' .
-			' LENGTH(a.fulltext) AS readmore');
+		$model->setState('list.select', 'a.id, a.title, a.alias, a.title_alias, a.catid, a.created, a.created_by, a.created_by_alias,' .
+			' a.hits, a.featured, a.hits, a.hots');
 		// Access filter
 		$access = !JComponentHelper::getParams('com_content')->get('show_noauth');
 		$authorised = JAccess::getAuthorisedViewLevels(JFactory::getUser()->get('id'));
@@ -69,7 +67,6 @@ abstract class modCollectionNewsHelper
 		//var_dump($items); die;
 
 		foreach ($items as &$item) {
-			$item->readmore = (trim($item->fulltext) != '');
 			$item->slug = $item->id.':'.$item->alias;
 			$item->catslug = $item->catid.':'.$item->category_alias;
 
@@ -84,20 +81,13 @@ abstract class modCollectionNewsHelper
 				$item->linkText = JText::_('MOD_COLLECTION_NEWS_READMORE_REGISTER');
 			}
 
-			$item->introtext = JHtml::_('content.prepare', $item->introtext, '', 'mod_articles_news.content');
-
-			//new
-			if (!$params->get('image')) {
-				$item->introtext = preg_replace('/<img[^>]*>/', '', $item->introtext);
-			}
-
 			$results = $app->triggerEvent('onContentAfterDisplay', array('com_content.article', &$item, &$params, 1));
 			$item->afterDisplayTitle = trim(implode("\n", $results));
 
 			$results = $app->triggerEvent('onContentBeforeDisplay', array('com_content.article', &$item, &$params, 1));
 			$item->beforeDisplayContent = trim(implode("\n", $results));
 		}
-
+		//print_r($items); die;
 		return $items;
 	}
 }
