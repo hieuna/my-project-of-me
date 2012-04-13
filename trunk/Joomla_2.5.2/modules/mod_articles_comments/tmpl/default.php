@@ -10,13 +10,13 @@
 defined('_JEXEC') or die;
 ?>
 <?php if (!empty($list)) :?>
-	<a class="title_accordion" href="javascript: void(0);">Tin nóng</a>
+	<a class="title_accordion" href="javascript: void(0);">Phản hồi nhiều nhất</a>
 	<div>
 		<ul class="ul-module<?php echo $moduleclass_sfx; ?>">
 			<?php foreach ($list as $item) : ?>
 			<li>
 				<a href="<?php echo $item->link; ?>">
-					<?php echo $item->title; ?>
+					<?php echo $item->title; ?> (<?php echo $item->count;?>)
 				</a>
 			</li>
 			<?php endforeach; ?>

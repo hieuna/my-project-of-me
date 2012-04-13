@@ -33,6 +33,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 
 		<!-- The following line loads the template JavaScript file located in the template folder. It's blank by default. -->
 		<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery.accordion.js"></script>
 	</head>
 	<body style="padding: 0px; margin: 0px;">
    
@@ -81,57 +82,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 					});
 				});      
 			</script>
-
-			<script language="javascript" type="text/javascript">
-				var Items = new Array();
-
-				var TabHovered = null;
-				var SelectedTimerId = 0;
-				var HomeTimerId = 0;
-
-				// Hide All Level 2 Menu
-				function HideAllChild() {
-					for (i = 0; i <= 14; i++) {
-						document.getElementById("mnu_" + i + "_child").style.display = "none";
-					}
-				}
-
-				// Level 1 Menu MouseOver Event
-				function Lever1_Mouseover(obj) {
-					TabHovered = obj;
-
-					//clearTimeout(SelectedTimerId);
-					clearTimeout(HomeTimerId);
-
-					for (var i = 0; i < Items.length; i++) {
-						var itemId = document.getElementById(Items[i]).id;
-						Set_Level1_Normal(itemId);
-					}
-
-					Set_Level1_Selected(obj.id);
-
-					HideAllChild();
-
-					// document.getElementById("menu_child").innerHTML = document.getElementById(obj.id + "_child").innerHTML;
-					document.getElementById(obj.id + "_child").style.display = "block";
-				}
-
-				// Level 2 Menu MouseOver Event
-				function Lever2_Mouseover(obj) {
-					clearTimeout(HomeTimerId);
-				}
-
-				// Set Level 1 Menu Style To Normal
-				function Set_Level1_Normal(id) {
-					document.getElementById(id).className = "mnunomal";
-				}
-
-				// Set Level 1 Menu Style To Selected
-				function Set_Level1_Selected(id) {
-					document.getElementById(id).className = "actived";
-					TabHovered = document.getElementById(id);
-				}
-			</script>
+			
 
 <div id="mnu_10_child" style="display: none; height: 27px; overflow: hidden;" class="boxMnuSub">
     <div style="width: 992px; float: left; height: 27px; overflow: hidden;">
@@ -145,23 +96,6 @@ $view	= JRequest::GetCmd('view', '', 'GET');
             <div style="width: 385px; float: left; overflow: hidden; line-height: 27px;">
                 
 
-<script src="http://tuoitre.vn/jscripts/featuredcontentglider.js" type="text/javascript"></script>
-
- 
-<script type="text/javascript" language="javascript">
-    featuredcontentglider.init({
-        gliderid: "canadaprovinces", //ID of main glider container
-        contentclass: "glidecontent", //Shared CSS class name of each glider content
-        togglerid: "p-select", //ID of toggler container
-        remotecontent: "", //Get gliding contents from external file on server? "filename" or "" to disable
-        selected: 0, //Default selected content index (0=1st)
-        persiststate: false, //Remember last content shown within browser session (true/false)?
-        speed: 500, //Glide animation duration (in milliseconds)
-        direction: "downup", //set direction of glide: "updown", "downup", "leftright", or "rightleft"
-        autorotate: true, //Auto rotate contents (true/false)?
-        autorotateconfig: [3000, 80] //if auto rotate enabled, set [milliseconds_btw_rotations, cycles_before_stopping]
-    })
-</script>
 <div id="canadaprovinces" class="glidecontentwrapper" style="border:none;overflow:hidden;">    
        
             <div class="glidecontent">
@@ -261,23 +195,6 @@ $view	= JRequest::GetCmd('view', '', 'GET');
             </div>
             <div style="width: 385px; float: left; overflow: hidden; line-height: 27px;">
                 
-
-<script src="http://tuoitre.vn/jscripts/featuredcontentglider.js" type="text/javascript"></script>
-
-<script type="text/javascript" language="javascript">
-    featuredcontentglider.init({
-        gliderid: "canadaprovinces", //ID of main glider container
-        contentclass: "glidecontent", //Shared CSS class name of each glider content
-        togglerid: "p-select", //ID of toggler container
-        remotecontent: "", //Get gliding contents from external file on server? "filename" or "" to disable
-        selected: 0, //Default selected content index (0=1st)
-        persiststate: false, //Remember last content shown within browser session (true/false)?
-        speed: 500, //Glide animation duration (in milliseconds)
-        direction: "downup", //set direction of glide: "updown", "downup", "leftright", or "rightleft"
-        autorotate: true, //Auto rotate contents (true/false)?
-        autorotateconfig: [3000, 80] //if auto rotate enabled, set [milliseconds_btw_rotations, cycles_before_stopping]
-    })
-</script>
 <div id="canadaprovinces" class="glidecontentwrapper" style="border:none;overflow:hidden;">    
        
             <div class="glidecontent">
@@ -378,7 +295,6 @@ $view	= JRequest::GetCmd('view', '', 'GET');
             <div style="width: 385px; float: left; overflow: hidden; line-height: 27px;">
                 
 
-<script src="http://tuoitre.vn/jscripts/featuredcontentglider.js" type="text/javascript"></script>
 
  <style type="text/css">
  .glidecontentwrapper{
@@ -441,20 +357,6 @@ $view	= JRequest::GetCmd('view', '', 'GET');
     color: white;
 }
  </style>
-<script type="text/javascript" language="javascript">
-    featuredcontentglider.init({
-        gliderid: "canadaprovinces", //ID of main glider container
-        contentclass: "glidecontent", //Shared CSS class name of each glider content
-        togglerid: "p-select", //ID of toggler container
-        remotecontent: "", //Get gliding contents from external file on server? "filename" or "" to disable
-        selected: 0, //Default selected content index (0=1st)
-        persiststate: false, //Remember last content shown within browser session (true/false)?
-        speed: 500, //Glide animation duration (in milliseconds)
-        direction: "downup", //set direction of glide: "updown", "downup", "leftright", or "rightleft"
-        autorotate: true, //Auto rotate contents (true/false)?
-        autorotateconfig: [3000, 80] //if auto rotate enabled, set [milliseconds_btw_rotations, cycles_before_stopping]
-    })
-</script>
 <div id="canadaprovinces" class="glidecontentwrapper" style="border:none;overflow:hidden;">    
        
             <div class="glidecontent">
@@ -675,7 +577,6 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 </div>
 <div class="clearFix">
 </div>
-<script src="http://tuoitre.vn/Jscripts/JsAfter.js?Version=3.0" type="text/javascript"></script>
 
         </div>
 		</div>
@@ -688,20 +589,6 @@ $view	= JRequest::GetCmd('view', '', 'GET');
         
         <div id="contentBdy">
               
-    <script language="javascript" type="text/javascript">
-        var check = 'False';
-
-        window.onload = function () {
-            if (check.toLowerCase() == "true") {
-                window.open("http://chuyentrang.tuoitre.vn/XongDat-2012/");
-            }
-            else {
-            }
-        }
-    </script>
-
-    <!-- Drag And Drop-->
-    
     <link   rel="stylesheet" type="text/css" href="http://tuoitre.vn/App_Themes/TTOBlue/DragAndDrop.css"/>  
     <div class="clearFix"></div> 
     <div id="colunmLeft">
@@ -710,63 +597,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 <div class="channeltop">
     <div class="channelttopLeft">
     <jdoc:include type="modules" name="vn-sidebar" style="none" />   
-<script language="javascript" type="text/javascript">
-        function PlayTHTT(src, playerid) {
-            try {
-                var s = "";
-                s += " <object id=\"WMPlayer\" codebase=\"http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,5,715\" " +
-                     " type=\"application/x-oleobject\" width=\"500\" height=\"264\" standby=\"Loading Microsoft Windows Media Player components...\" " +
-                     " classid=\"CLSID:6BF52A52-394A-11D3-B153-00C04F79FAA6\" name=\"winMediaPlayer\"> " +
-                         " <param name=\"URL\" value=\"" + src + "\" /> " +
-                         " <param name=\"rate\" value=\"1\" /> " +
-                         " <param name=\"balance\" value=\"0\"> " +
-                         " <param name=\"currentPosition\" value=\"77.8018125\" /> " +
-                         " <param name=\"defaultFrame\" value=\"0\" /> " +
-                         " <param name=\"playCount\" value=\"1\" /> " +
-                         " <param name=\"autoStart\" value=\"-1\" /> " +
-                         " <param name=\"currentMarker\" value=\"0\" /> " +
-                         " <param name=\"invokeURLs\" value=\"-1\" /> " +
-                         " <param name=\"baseURL\" value=\"\" /> " +
-                         " <param name=\"volume\" value=\"50\" /> " +
-                         " <param name=\"uiMode\" value=\"none\" /> " +
-                         " <param name=\"stretchToFit\" value=\"-1\" /> " +
-                         " <param name=\"windowlessVideo\" value=\"0\" /> " +
-                         " <param name=\"enabled\" value=\"-1\" /> " +
-                         " <param name=\"enableContextMenu\" value=\"0\"> " +
-                         " <param name=\"fullScreen\" value=\"0\" /> " +
-                         " <param name=\"SAMIStyle\" value=\"\" /> " +
-                         " <param name=\"SAMILang\" value=\"\" /> " +
-                         " <param name=\"SAMIFilename\" value=\"\" /> " +
-                         " <param name=\"captioningID\" value=\"\" /> " +
-                         " <param name=\"enableErrorDialogs\" value=\"0\" /> " +
-                         " <param name=\"_cx\" value=\"10054\" /> " +
-                         " <param name=\"_cy\" value=\"8996\" /> " +
-
-                         " <embed type=\"application/x-mplayer2\" pluginspage=\"http://www.microsoft.com/windows/windowsmedia/download/\" " +
-                             " src=\"" + src + "\" id=\"winMediaPlayerIDFF\" width=\"500\" " +
-                             " height=\"264\" autosize=\"1\" autostart=\"1\" clicktoplay=\"1\" displaysize=\"4\" enablecontextmenu=\"0\" " +
-                             " enablefullscreencontrols=\"1\" enabletracker=\"1\" volume=\"50\" playcount=\"1\" " +
-                             " showcontrols=\"0\" showaudiocontrols=\"0\" showdisplay=\"0\" showgotobar=\"0\" showpositioncontrols=\"0\" " +
-                             " showstatusbar=\"0\" showtracker=\"0\"> </embed> " +
-                     " </object> ";
-
-                // show elment
-                //
-                document.getElementById(playerid).innerHTML = s;
-            }
-            catch (err) { }
-
-        }
-        function StopTHTT(playerid) {
-            try {
-                var s = "<img alt='' src='http://tuoitre.vn/Images/Screen-TV-internet-6.jpg' style='width:500px;height:264px;overflow:hidden;' />";
-                document.getElementById(playerid).innerHTML = s;
-            }
-            catch (err) { }
-
-
-        }   
-</script>   
+ 
 <div style="width: 100%; clear: both; overflow: hidden; height: 484px;">
     <div style="width: 100%; height: 280px; overflow: hidden; border-bottom: solid 1px #d7d7d7;
         background-color: #fff; text-align: center; margin: 0 auto;">       
@@ -865,7 +696,9 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 
     </div>
     <div class="channelttopright">
-		<jdoc:include type="modules" name="vn-topright" style="none" />
+		<div class="box-module" id="tab_accordion">
+			<jdoc:include type="modules" name="vn-topright" style="none" />
+		</div>
     </div> 
           
       
@@ -1029,25 +862,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
             </div>
         </div>
     </div>
-</div>
-
-<script language="javascript" type="text/javascript">
-    function ChangeScrBandoc(link, title, imgicon) {
-        var s;
-        s = "<div style='clear:both; padding-top:2px;width:198px;padding-left:6px;'><span class='txt_white_m' style='color:#fff200;' id ='Titlbandoc'></span></div>";
-        s += "<object type='application/x-shockwave-flash' data='http://tuoitre.vn/Video/player_flv_multi.swf' ";
-        s += " width='198' height='150' wmode='transparent'>";
-        s += "<param name='movie' value='http://tuoitre.vn/Video/player_flv_multi.swf' />";
-        s += "<param name='wmode' value='transparent' />";
-        s += "<param name='allowFullScreen' value='true' />";
-        s += "<param name='FlashVars' value='flv=" + link + "&amp;configxml=http://tuoitre.vn/Video/flv_config_multi.xml&amp;startimage=" + imgicon + "' />";
-        s += "</object>";
-        document.getElementById("MediaPlayerBandoc").innerHTML = s;
-        document.getElementById("Titlbandoc").innerHTML = title;
-    }  
-</script>
-
-				
+</div>				
 
 
 <div class="THTT">
@@ -1382,8 +1197,6 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 <div class="tinanh_bottom" style="margin-bottom:6px;"></div>
 
 <link href="http://tuoitre.vn/JQuery/jquery-ui.css" rel="stylesheet" type="text/css"/>
-<script src="http://tuoitre.vn/JQuery/jquery.min.js"></script>
-<script src="http://tuoitre.vn/JQuery/jquery-ui.min.js"></script>  
 <div class="boxCtentApPli">
     <div class="boxCtentApPliBtom">
         <div class="titleInfoAppli">
@@ -2626,86 +2439,12 @@ $view	= JRequest::GetCmd('view', '', 'GET');
     </div>
 </div>
 
-<script language="javascript" type="text/javascript">
-    var TtcanbietTabs = new Array("idstock", "idtigia", "idgiavang", "idxoso", "idxebus", "idtruyenhinh", "idthoitiet", "idallTab");
-    function showTtcanbiet(tabId) 
-    {
-        for (var i = 0; i < TtcanbietTabs.length; i++) 
-        {
-            document.getElementById(TtcanbietTabs[i]).style.display = "block";
-            document.getElementById(TtcanbietTabs[i] + "Content").style.display = "none";                     
-        }
-        document.getElementById(TtcanbietTabs[tabId]).style.display = "none";
-        document.getElementById(TtcanbietTabs[tabId] + "Content").style.display = "block";       
-    }
-</script>
-<script type="text/javascript" language="javascript">
-    var $j = jQuery.noConflict();
-    function LoadDatathoitiet() {
-        var cbovalue = jQuery("#cboLocattion").val();
-        jQuery.ajax({
-            type: "POST",
-            url: 'http://tuoitre.vn/Ajax/Weather.aspx?param=' + cbovalue,
-            data: "",
-            beforeSend: function() {
-                jQuery('#divThoiTiet').html('<div style="width:100%;vertical-align:top; padding-top:40px;  text-align:center;" id="loading"><img src="http://tuoitre.vn/images/loading.gif"/></div>');
-            },
-            success: function(req) { jQuery('#divThoiTiet').html(req); }
-        });
-    }
-    LoadDatathoitiet();
-</script>
-<script language="javascript" type="text/javascript">
-    
-    function loadbusdata(divbusdata, busid) {
-        jQuery.ajax({
-            type: "POST",
-            url: 'http://tuoitre.vn/Ajax/BusDetails.aspx?BusID=' + busid,
-            data: "",
-            beforeSend: function() {
-                jQuery(divbusdata).html('<div style="width:100%;height:100px;vertical-align:top;text-align:center;" id="loading"><img src="http://tuoitre.vn/images/loading.gif" style="margin-top:30px;" /></div>');
-            },
-            success: function(req) { jQuery(divbusdata).html(req); }
-        });
-    }
-    
-    function showdialog(busid) {
-        loadbusdata('#dialog', busid);
-        jQuery(document).ready(function() {
-            jQuery("#dialog").dialog();
-        });
-    }
-
-    function showdialogsoxokt() {
-        jQuery(document).ready(function() 
-        {
-            jQuery("#idsoxokt").dialog();
-
-            jQuery("#idsoxokt").html("<iframe src='http://phienbancu.tuoitre.vn/tianyon/transweb/xoso.htm' width='100%' height='550px' style='margin-top:-50px;' scrolling='no' frameborder='0'></iframe>");
-        });
-    }
-                    
-</script>
-
 
 
                 
     </div>
     <div class="clearFix"></div>  
-       
-    <!-- STATISTIC -->
-    <script language="javascript" type="text/javascript" src="http://statistics.tuoitre.com.vn/TotalStatistics.js"></script>
-    <script language="javascript" type="text/javascript">
-        var paramSta = "App=TUOITREVN";   
-        IframeRender(paramSta);
-    </script>
-    
-    <!-- Load ChannelSample -->
-    
-    <script language="javascript" type="text/javascript">
-        //OnPageLoad();
-        //OnPageLoadChannelSample();
-    </script>
+           
 
         </div>
         <div class="clearFix">
@@ -2845,31 +2584,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
              <input type="checkbox" id="chkYahoo2" onclick="setvalueYahoo();" /></div>
     </div>
 </div>
-<script type="text/javascript">
 
-    function setvalueYahoo() {
-        if (document.getElementById("chkYahoo2").checked) {
-            document.getElementById('txtKeyword2').value = "T�m tr�n Yahoo";
-        }
-        else {
-            document.getElementById('txtKeyword2').value = "T�m tr�n Tu?i tr?";
-        }
-    }
-
-    function searchEngine2() {
-        var url = "http://tuoitre.vn/Tim-kiem/Index.html?keyword=";
-        if (document.getElementById("chkYahoo2").checked) {
-            url = "http://search.yahoo.com/search?p=";
-            window.open(url, "_blank", "", "");
-        }
-        else {
-            url += Url.encode(document.getElementById("txtKeyword2").value) + "&scope=*&channel=-1&from=&to=&page=1";
-            window.open(url, "_blank", "", "");
-        }
-    }
-//    setTypingMode(document.getElementById("cboInputMethod2").selectedIndex);    
-  //  initTyper(document.getElementById("txtKeyword2"));    
-</script>
         </div>
         <div class="mnufooterBtom">
             <div style="line-height: 32px" class="floatLeft">
@@ -2993,87 +2708,9 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 </div>
 
 <script language="javascript" type="text/javascript">
-    String.prototype.trim = function () 
-    {
-        return this.replace(/^\s*/, "").replace(/\s*$/, "");
-    }
-    
-    function GetDocHeight()
-    {
-        var db = document.body;
-        var dde = document.documentElement;
- 
-        var docHeight = Math.max(db.scrollHeight, dde.scrollHeight, db.offsetHeight, dde.offsetHeight, db.clientHeight, dde.clientHeight)
-        
-        return docHeight;
-    }
-    
-    function GetDocWidth()
-    {
-        var db = document.body;
-        var dde = document.documentElement;
- 
-        var docWidth = Math.max(db.scrollWidth, dde.scrollWidth, db.offsetWidth, dde.offsetWidth, db.clientWidth, dde.clientWidth)
-        
-        return docWidth;
-    }    
-    
-    function revealModal(divID)
-    {
-        window.onscroll = function () 
-        { 
-            document.getElementById(divID).style.top = document.body.scrollTop; 
-        };
-        
-        document.getElementById(divID).style.display = "block";
-        document.getElementById(divID).style.top = document.body.scrollTop;
-        
-        // Set Modal Width and Modal Height
-        var modalContainer = document.getElementById("modalContainer");        
-        modalContainer.style.width = GetDocWidth();
-        modalContainer.style.height = GetDocHeight();
-        
-        var modalBackground = document.getElementById("modalBackground"); 
-        modalBackground.style.width = GetDocWidth();
-        modalBackground.style.height = GetDocHeight();
-    }
-
-    function hideModal(divID)
-    {
-        document.getElementById(divID).style.display = "none";
-    }
-
-    if (document.getElementById("modalContent").innerHTML.toLowerCase().replace("<strong>", "").replace("</strong>", "").trim() == "")
-    {
-        hideModal('modalPage');
-    }
-    else
-    {
-       revealModal('modalPage');
-       //hideModal('modalPage');
-    }    
+     $(function(){
+		$('#tab_accordion').accordion(); 
+	 });
 </script>
-    
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-12518695-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-    <script language="javascript" type="text/javascript">        setTimeout("ReloadPage()", 300000);</script>
-    
-
-<script type="text/javascript">
-//<![CDATA[
-var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';Sys.Application.initialize();
-//]]>
-</script>
-</form>
 </body>
 </html>

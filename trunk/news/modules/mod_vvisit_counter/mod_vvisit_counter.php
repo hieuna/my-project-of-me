@@ -224,7 +224,7 @@ if( $s_yesterday ){
 	else {
 		$yesterday_visitors	= modVisitCounterHelper::getVisitors( $local_yesterdaystart, $local_daystart );
 	}
-	$yesterday_visitors = $yesterday_visitors*26+236;
+	$yesterday_visitors = $yesterday_visitors*86+236;
 }
 
 // Count This Week's Visitors
