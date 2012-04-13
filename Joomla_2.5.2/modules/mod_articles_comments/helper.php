@@ -9,16 +9,18 @@
 // no direct access
 defined('_JEXEC') or die;
 
-class modArticlesHotHelper
+class modArticlesCommentsHelper
 {
 	static function getList(&$params)
 	{
 		//get database
 		$db		= JFactory::getDbo();
 		$query	= $db->getQuery(true);
-		$query->select('id, title, alias');
-		$query->from('#__content');
-		$query->where('state = 1 AND hots = 1');
+		$query->select('cd.id, cd.title, cd.alias, cd.created, COUNT(cm.object_id) AS count');
+		$query->from('#__content AS cd, #__jcomments AS cm');
+		$query->where('cd.id = cm.object_id AND cd.state = 1 AND cm.published=1');
+		$query->group("cm.object_id");
+		$query->order("COUNT(cm.object_id) DESC, cd.created DESC");
 		//echo $query;
 
 		// Filter by language
@@ -45,6 +47,7 @@ class modArticlesHotHelper
 
 			$lists[$i]->link	= JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catslug));
 			$lists[$i]->title	= $row->title;
+			$lists[$i]->count	= $row->count;
 
 			$i++;
 		}

@@ -25,24 +25,27 @@ ul.categories-module li{
 	width: 100px; float: left; margin: 0 8px 2px 0; border: 1px solid #ccc; padding: 2px;
 }
 /*-- UL COLLECTION NEWS --*/
+#tab_accordion{
+	width: 100%; height: 475px; overflow: hidden; 
+}
+#tab_accordion a.title_accordion{
+	width: 100%; height: 24px; line-height: 24px; float: left; background: url("../images/bg_title_module_normal.jpg") repeat-x; font-size: 12px; text-transform: uppercase; padding-left: 5px; font-weight: bold; color: #000; cursor: pointer;
+}
+#tab_accordion a.selected{
+	background: url("../images/bg_title_module.jpg") repeat-x; color: #fff;
+}
 .box-module{
 	margin: 2px; padding: 0;
 }
-.box-module .title-module{
-	width: 100%; height: 24px; line-height: 24px; background: url("../images/bg_title_module_normal.jpg") repeat-x; font-size: 13px; text-transform: uppercase; padding-left: 5px; font-weight: bold; color: #000; cursor: pointer;
-}
-.box-module .active_title_module{
-	background: url("../images/bg_title_module.jpg") repeat-x; color: #fff;
-}
-ul.ul-module{
+ul.ul-module, ul.mostread{
 	margin: 5px 0; padding: 0;
 }
-ul.ul-module li{
+ul.ul-module li, ul.mostread li{
 	list-style: none; background: url("../images/iconBlue.jpg") no-repeat 5px 8px; padding: 2px 0 2px 13px;
 }
-ul.ul-module li a{
+ul.ul-module li a, ul.mostread li a{
 	color: #000; text-decoration: none;
 }
-ul.ul-module li a:hover{
+ul.ul-module li a:hover, ul.mostread li a:hover{
 	color: #0072bc;
 }
