@@ -195,6 +195,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
             </div>
             <div style="width: 385px; float: left; overflow: hidden; line-height: 27px;">
                 
+
 <div id="canadaprovinces" class="glidecontentwrapper" style="border:none;overflow:hidden;">    
        
             <div class="glidecontent">
@@ -295,7 +296,6 @@ $view	= JRequest::GetCmd('view', '', 'GET');
             <div style="width: 385px; float: left; overflow: hidden; line-height: 27px;">
                 
 
-
  <style type="text/css">
  .glidecontentwrapper{
     position: relative; /* Do not change this value */
@@ -357,6 +357,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
     color: white;
 }
  </style>
+
 <div id="canadaprovinces" class="glidecontentwrapper" style="border:none;overflow:hidden;">    
        
             <div class="glidecontent">
@@ -578,6 +579,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 <div class="clearFix">
 </div>
 
+
         </div>
 		</div>
 		<div class="boxMnuMainTop">
@@ -589,6 +591,10 @@ $view	= JRequest::GetCmd('view', '', 'GET');
         
         <div id="contentBdy">
               
+    
+
+    <!-- Drag And Drop-->
+    
     <link   rel="stylesheet" type="text/css" href="http://tuoitre.vn/App_Themes/TTOBlue/DragAndDrop.css"/>  
     <div class="clearFix"></div> 
     <div id="colunmLeft">
@@ -699,11 +705,6 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 		<div class="box-module" id="tab_accordion">
 			<jdoc:include type="modules" name="vn-topright" style="none" />
 		</div>
-    </div> 
-          
-      
-</div>
-       
     </div>
 </div>
 <div style="margin-bottom: 7px; display:block">
@@ -743,127 +744,8 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 
 
 <div class="boxShareClunmleft2">
-    <div class="boxShareClunmleft2TOp">
-        <div class="boxShareClunmleft2Btom">
-            <div class="color2 bold fontsize16 padding6 textCter">
-                <a class="color2" href="../Chinh-tri-Xa-hoi/Phong-su-Ky-su/Index.html">Ph�ng s? - H? so</a>
-            </div>
-            <div style="border-top:1px solid #D7D7D7;clear:both;width:100%;">
-                <a href="http://tuoitre.vn/Chinh-tri-Xa-hoi/Phong-su-Ky-su/485587/Bo-quen-�tieng-hat-con-tau�.html"
-                    style="display:block;">
-                    <img alt="" style="width:181px;height:102px;border:solid 1px #efedee;padding-left:6px;padding-top:8px;" src="http://www.tuoitre.vn/Images/Thumbnail/923/556923_336_600.jpg" /></a>                                
-            </div>
-            <div class="paddingLeft6px bold" style="padding-top:8px;"><a class="color5" href="http://tuoitre.vn/Chinh-tri-Xa-hoi/Phong-su-Ky-su/485587/Bo-quen-�tieng-hat-con-tau�.html">B? qu�n �ti?ng h�t con t�u�</a></div>
-            <div class="boxLinkShare" style="padding-bottom:8px;">
-                
-                        <ul>
-                            <li class="li1"><a href="http://tuoitre.vn/Chinh-tri-Xa-hoi/Phong-su-Ky-su/485543/Phia-sau-song-sat.html">Ph�a sau song s?t</a></li>
-                        </ul>
-                    
-                        <ul>
-                            <li class="li1"><a href="http://tuoitre.vn/Chinh-tri-Xa-hoi/Phong-su-Ky-su/485382/Nhung-dua-con-bi-choi-bo.html">Nh?ng d?a con b? ch?i b?</a></li>
-                        </ul>
-                    
-            </div>
-        </div>
-    </div>
+	<jdoc:include type="modules" name="vn-bottommiddle" style="none" />    
 </div>
-
-<div class="boxShareClunmleft2">
-    <div class="boxShareClunmleft2TOp">
-        <div class="boxShareClunmleft2Btom">
-            <div style="border-bottom: solid 1px #dadada;" class="color3 bold fontsize15 padding6 textCter">
-                <a class="color2">Tuy?n b�i n�ng</a>
-            </div>
-            <div class="boxCmtt">
-						   <div style="background-image: url(../Images/1.jpg); background-position: 3px 0px;
-                    height: 33px; background-repeat: no-repeat; padding-top: 2px; padding-left: 26px;
-                    width: 160px;">
-                    <a href="http://tuoitre.vn/tag/index.html?t='Aung%2bSan%2bSuu%2bKyi'"
-                         class="color2 fontsize12">
-                       B� Aung San Suu Kyi th?ng gh? Qu?c h?i Myanmar
-                    </a>
-                </div>
-				<div style="background-image: url(../Images/2.jpg); background-position: 3px 0px;
-                    height: 33px; background-repeat: no-repeat; padding-top: 2px; padding-left: 26px;
-                    width: 163px;">
-                    <a href="http://tuoitre.vn/Chu-de/69/Putin.html"
-                       class="color2 fontsize12">
-                     Putin v� b?u c? T?ng th?ng Nga
-                    </a>
-                </div>
-				<div style="background-image: url(../Images/3.jpg); background-position: 3px 0px;
-                    height: 33px; background-repeat: no-repeat; padding-top: 2px; padding-left: 26px;
-                    width: 160px;">
-                    <a href="http://tuoitre.vn/tag/index.html?t='Whitney%2bHouston'"
-                        class="color2 fontsize12">
-                      Danh ca Whitney Houston qua d?i
-                    </a>
-                </div>
-				
-							    <div style="background-image: url(../Images/4.jpg); background-position: 3px 0px;
-                    height: 33px; background-repeat: no-repeat; padding-top: 2px; padding-left: 26px;
-                    width: 160px;">
-                    <a href="http://tuoitre.vn/tag/index.html?t='V%e1%bb%afng%2bB%e1%ba%afc'"
-                        class="color2 fontsize12">
-                        V? gi?t ch? ti?m v�ng ? H� N?i
-                    </a>
-                </div>
-
-				
-			     <div style="background-image: url(../Images/5.jpg); background-position: 3px 0px;
-                    height: 33px; background-repeat: no-repeat; padding-top: 2px; padding-left: 26px;
-                    width: 160px;">
-                    <a href="http://tuoitre.vn/Chu-de/1283/Bat-on-o-Bac-Phi-va-Trung-Dong.html" 
-                        class="color2 fontsize12">B?t ?n ? Syria</a>
-                </div>
-                <div style="background-image: url(../Images/6.jpg); background-position: 3px 0px;
-                    height: 28px; background-repeat: no-repeat; padding-top: 2px; padding-left: 26px;
-                    width: 165px;">
-                    <a href="http://tuoitre.vn/Chu-de/549/Khung-hoang-hat-nhan-Iran.html" class="color2 fontsize12">
-                       V�ng V?nh: s�ng d� l�n n�ng?
-                    </a>
-                </div>
-				
-				
-			                <div style="background-image: url(../Images/7.jpg); background-position: 3px 0px;
-                    height: 33px; background-repeat: no-repeat; padding-top: 2px; padding-left: 26px;
-                    width: 160px;">
-                    <a href="http://tuoitre.vn/tag/index.html?t='c%c6%b0%e1%bb%a1ng%2bch%e1%ba%bf%2b%c4%91%e1%ba%a5t%2b%c4%91ai%2b%e1%bb%9f%2bH%e1%ba%a3i%2bPh%c3%b2ng'" class="color2 fontsize12">
-                        V? cu?ng ch? d?t dai ? H?i Ph�ng
-                    </a>
-                </div>
-			
-			 <div style="background-image: url(../Images/8.jpg); background-position: 3px 0px;
-                    height: 33px; background-repeat: no-repeat; padding-top: 2px; padding-left: 26px;
-                    width: 160px;">
-                    <a href="http://tuoitre.vn/tag/index.html?t='Vinalines%2bQueen'" class="color2 fontsize12">
-                 T�u Vinalines Queen m?t t�ch
-                    </a>
-                </div>
-				
-			 <div style="background-image: url(../Images/9.jpg); background-position: 3px 0px;
-                    height: 33px; background-repeat: no-repeat; padding-top: 2px; padding-left: 26px;
-                    width: 160px;">
-                    <a href="http://tuoitre.vn/tag/index.html?t=%27Kim%2bJong%2bIl%27" class="color2 fontsize12">
-                        Nh� l�nh d?o Kim Jong Il qua d?i
-                    </a>
-                </div>
-			     <div style="background-image: url(../Images/10.jpg); background-position: 3px 0px;
-                    height: 33px; background-repeat: no-repeat; padding-top: 2px; padding-left: 26px;
-                    width: 160px;">
-                    <a href="http://tuoitre.vn/tag/index.html?t=%27xe%2bm%C3%A1y%2bch%C3%A1y%2bn%E1%BB%95%27"
-                         class="color2 fontsize12">
-                        Xe m�y ch�y n?, v� sao?
-                    </a>
-                </div>
-				
-
-            </div>
-        </div>
-    </div>
-</div>				
-
 
 <div class="THTT">
     <div class="THTTHead"></div>
@@ -875,9 +757,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
     <div class="THTTContent">
               
             <div style="clear:both;" id="MediaPlayerBandoc"></div>            
-                <script language="javascript" type="text/javascript">
-                    ChangeScrBandoc('http://media.tuoitre.com.vn/Stream/Clips-flv/tromxemay.flv', 'Tr?m xe m�y - B?n d?c: Mai Xu�n Ti?n', 'http://media.tuoitre.com.vn/Stream/Clips-flv/anhtromxe.jpg');   
-                </script>         
+                        
           
     </div>
     <div style="width:200px;clear:both;background-color:#000;overflow:hidden;padding-top:2px;padding-bottom:3px;margin-bottom:8px;">
@@ -933,13 +813,6 @@ $view	= JRequest::GetCmd('view', '', 'GET');
                             ��ng g�p h?o t�m
                         </a>
                     </li>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                 </ul>
             </div>
         </div>
@@ -1196,7 +1069,6 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 </div>
 <div class="tinanh_bottom" style="margin-bottom:6px;"></div>
 
-<link href="http://tuoitre.vn/JQuery/jquery-ui.css" rel="stylesheet" type="text/css"/>
 <div class="boxCtentApPli">
     <div class="boxCtentApPliBtom">
         <div class="titleInfoAppli">
@@ -2439,12 +2311,9 @@ $view	= JRequest::GetCmd('view', '', 'GET');
     </div>
 </div>
 
-
-
-                
     </div>
     <div class="clearFix"></div>  
-           
+          
 
         </div>
         <div class="clearFix">
@@ -2707,10 +2576,11 @@ $view	= JRequest::GetCmd('view', '', 'GET');
     </div>
 </div>
 
+</form>
+</body>
 <script language="javascript" type="text/javascript">
      $(function(){
 		$('#tab_accordion').accordion(); 
 	 });
 </script>
-</body>
 </html>
