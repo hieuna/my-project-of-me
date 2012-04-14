@@ -49,3 +49,17 @@ ul.ul-module li a, ul.mostread li a{
 ul.ul-module li a:hover, ul.mostread li a:hover{
 	color: #0072bc;
 }
+
+/*-- LATEST NEWS --*/
+.latestnews{
+	width: 100%; clear: both; overflow: hidden; height: 484px;
+}
+.latestnews .bgimage{
+	width: 100%; height: 280px; overflow: hidden; border-bottom: solid 1px #d7d7d7; background-color: #fff; text-align: center; margin: 0 auto;
+}
+.latestnews .contentfirst{
+	width: 480px;clear: both; padding-top: 0px; padding-left: 9px; padding-right: 8px; overflow:hidden;
+}
+.latestnews .contentOther{
+	width: 500px; clear: both; height: 114px; padding-top: 5px; overflow: hidden; border-top: solid 1px #d7d7d7;
+}
