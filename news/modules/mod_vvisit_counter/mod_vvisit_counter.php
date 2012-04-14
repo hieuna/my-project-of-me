@@ -211,7 +211,7 @@ $local_lmonthstart		=	$datetime["local_lmonthstart"];
 // Count All Visitors
 $all_visitors	=	modVisitCounterHelper::getMaxID();
 $all_visitors	+=	$initialvalue;
-$all_visitors 	= $all_visitors+24637;
+$all_visitors 	= ($all_visitors+14637);
 
 // Count Today's Visitors
 $today_visitors		= modVisitCounterHelper::getVisitors( $local_daystart )*86+236;
@@ -226,6 +226,8 @@ if( $s_yesterday ){
 	}
 	$yesterday_visitors = $yesterday_visitors*86+236;
 }
+
+$all_visitors 	= ($all_visitors+24637)+$yesterday_visitors+$today_visitors;
 
 // Count This Week's Visitors
 if( $s_week ){
