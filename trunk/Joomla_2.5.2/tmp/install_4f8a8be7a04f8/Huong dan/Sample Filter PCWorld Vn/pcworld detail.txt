@@ -1,0 +1,25 @@
+BEGIN HEADER
+source:http://www.pcworld.com.vn/articles/tin-tuc/tin-trong-nuoc/2010/08/1220368/viet-nam-co-5-nha-cung-cap-dich-vu-chu-ky-so/
+CRto:1
+
+BEGIN INFORMATION
+
+BEGIN ACTION
+startafter:
+<div class="ar-content">|
+endat:
+<div class="fb-title">|
+pattern:
+    <div class="summary" style="margin-bottom: 7px">$1</div>
+    <div class="html" id="ar-content-html">$2<div style="clear: both">
+        </div>
+        
+        
+    </div>
+    
+    <!--page list--->|
+definition:
+$1:DETAIL:TEXT
+$2:DETAIL:TEXT
+
+BEGIN DO
