@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5">
+  <name>NGrabNews</name>
+  <creationDate>October 2010</creationDate>
+  <author>Thien Nhut</author>
+  <authorEmail>nhutcorp@yahoo.com</authorEmail>
+  <authorUrl>www.nhutcorp.com</authorUrl>
+  <copyright>NhutCorp</copyright>
+  <license>Comercial License</license>
+  <version>1.0</version>
+  <description>
+ 		<![CDATA[
+		News Grabber (Beta version)<br />
+		Compatible with Joomla 1.5.x <br />
+		<br />
+		Copyright &copy; 2010 NhutCorp, <a href="http://www.nhutcorp.com" target="_blank">http://www.nhutcorp.com</a><br />
+		All Rights Reserved.
+		]]> 
+  </description>
+  <administration>
+  <menu img="../administrator/components/com_ngrabnews/images/com_icon.png">NNews Grabber</menu>
+        <submenu>
+            <menu img="../administrator/components/com_ngrabnews/images/icon-16-lic.png" act="license" >License</menu>
+             <menu img="../administrator/components/com_ngrabnews/images/icon-16-filter.png" act="filter" >Filter</menu>
+            <menu img="../administrator/components/com_ngrabnews/images/icon-16-cron.png" act="cron" >Auto Run</menu>
+            <menu img="../administrator/components/com_ngrabnews/images/icon-16-logs.png" act="logs" >Logs</menu>
+       </submenu>
+     <files folder="admin">
+      <filename>index.html</filename>
+      <filename>admin.ngrabnews.html.php</filename>
+	  <filename>admin.ngrabnews.php</filename>
+	  <filename>ngrabnews.class.php</filename>
+      <filename>ngrabnews.config.php</filename>
+      <filename>toolbar.ngrabnews.html.php</filename>
+      <filename>toolbar.ngrabnews.php</filename>
+      <folder>css</folder>
+      <folder>images</folder>
+      <folder>inc</folder>
+   </files>
+     <files>
+      <filename>install.sql</filename>
+      <filename>install.noutf8.sql</filename>
+      <filename>uninstall.sql</filename>
+      <filename>install.ngrabnews.php</filename>
+      <filename>uninstall.ngrabnews.php</filename>
+   </files>
+    <languages folder="admin">
+      <language tag="en-GB">en-GB.com_ngrabnews.ini</language>
+    </languages>
+  </administration>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">install.sql</file>
+      <file driver="mysql" charset="">install.noutf8.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql">uninstall.sql</file>
+    </sql>
+  </uninstall>
+  <installfile>install.ngrabnews.php</installfile>
+  <uninstallfile>uninstall.ngrabnews.php</uninstallfile>
+  <files folder="site">
+    <filename>index.html</filename>
+	<filename>ngrabnews.php</filename>
+	<filename>CronParser.class.php</filename>
+	<filename>controller.php</filename>
+	<folder>controllers</folder>
+ </files>
+</install>

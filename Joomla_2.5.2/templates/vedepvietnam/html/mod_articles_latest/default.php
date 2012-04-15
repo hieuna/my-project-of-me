@@ -12,18 +12,19 @@ defined('_JEXEC') or die;
 <?php if (!empty($list)) :?>
 <div class="latestnews">
     <div class="bgimage">       
-         <a href="http://tuoitre.vn/Chinh-tri-Xa-hoi/485694/12-tau-ca-Viet-ung-cuu-mot-tau-ca-Viet.html" target="_self" >  <img src="http://tuoitre.vn/imageviewNB.aspx?ArticleID=485694" alt="" style="border: 0px; height: 280px;" />  </a> 
+         <a href="<?php echo $list[0]->link;?>">
+         <img src="<?php echo htmlspecialchars(json_decode($list[0]->images)->image_intro); ?>" alt="" style="border: 0px; width: 532px;" />
+         </a> 
     </div>     
     <div class="contentfirst">
         <div style="clear: both;padding-top:5px;height:22px;overflow:hidden;">
-            <a class="txt_18_bold" style="line-height:22px;" href="<?php echo $list[0]->link;?>">
+            <a class="txt_18_bold" href="<?php echo $list[0]->link;?>">
                <?php echo $list[0]->title;?>
             </a>     
         </div>
         <div style="clear: both; width: 100%; overflow: hidden;height:55px;">
-            <span class="txt_black_m" style="line-height: 16px;">Thêm vào mô tả bài viết</span>                
-                <a style="padding-left:10px;" class="color1" target="_self"
-                    href="http://tuoitre.vn/Chinh-tri-Xa-hoi/485694/12-tau-ca-Viet-ung-cuu-mot-tau-ca-Viet.html">Xem tiếp &raquo;</a>
+            <span class="txt_black_m"><?php echo $list[0]->introtext;?></span>                
+            <a style="padding-left:10px;" class="color1" href="<?php echo $list[0]->link;?>">Xem tiếp &raquo;</a>
         </div>
         <div class="clearFix"></div>
     </div>    
@@ -31,14 +32,19 @@ defined('_JEXEC') or die;
     		<?php
     		$i = 0; 
     		foreach ($list as $item) :
+    		$images = json_decode($item->images);
     		if ($i > 0){ 
     		?>      
-                <div style="width:10px;float:left;height:94px;"></div>
-                <div style="width:110px;float:left;height:114px;">
-                     <a href="<?php echo $item->link;?>" class="color3 fontsize12"><img alt="img" src="http://www.tuoitre.vn/Images/Thumbnail/32/557032_336_600.jpg" style="width:110px;height:62px;border:0px;" /></a>                               
+                <div class="spance1"></div>    
+                <div class="latest-orther">
+                	<div class="img-thumnal-latest">
+                     <a href="<?php echo $item->link;?>" class="color3 fontsize12">
+                     	<img alt="img" src="<?php echo htmlspecialchars($images->image_intro); ?>" />
+                     </a>
+                     </div>                               
                     <a href="<?php echo $item->link;?>" class="color3 fontsize12"><?php echo $item->title;?></a>                        
                 </div>
-                <div style="width:2px;float:left;height:94px;overflow:hidden;"></div>            
+                <div class="spance2"></div>            
 			<?php
     		}
 			$i++; 

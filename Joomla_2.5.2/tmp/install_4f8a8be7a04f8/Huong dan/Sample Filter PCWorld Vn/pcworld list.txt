@@ -1,0 +1,28 @@
+BEGIN HEADER
+source:http://www.pcworld.com.vn/articles/tin-tuc/tin-trong-nuoc/
+CRto:1
+
+BEGIN INFORMATION
+
+BEGIN ACTION
+startafter:
+<div class="ar-list-summary">|
+endat:
+<div class="related-ar-list">|
+pattern:
+<div class="list-area">$1</div>
+                <div class="item">
+                    <a class="title" href="$2">$3</a>
+                    
+                    <div class="summary">$4</div>
+                </div>
+                <div style="clear: both">
+                </div>
+            </div>|
+definition:
+$1:SHORT:TEXT:StripHTMLTags(<img>)
+$2:DETAIL:TEXT
+$3:TITLE:TEXT:StripHTMLTags()
+$4:SHORT:TEXT
+
+BEGIN DO
