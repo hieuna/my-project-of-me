@@ -179,7 +179,7 @@ body{
 }
 #colunmLeft1{
 	float:left;
-	width:480px;	
+	width:575px;	
 	overflow:hidden;
 	padding-right:4px;
 }
@@ -866,7 +866,7 @@ a.viewAllgold:hover{background:url(../images/w-icon.jpg) no-repeat right; color:
 .ChannelSample_rpt
 {
 	background:url(../../images/ChannelSample_rpt.jpg) top left repeat-x;
-	width:460px;	
+	width:560px;	
 	float:left;	
 	margin-bottom:2px;
 	overflow:hidden;
