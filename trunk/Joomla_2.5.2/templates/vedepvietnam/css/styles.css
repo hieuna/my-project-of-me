@@ -857,7 +857,7 @@ a.viewAllgold:hover{background:url(../images/w-icon.jpg) no-repeat right; color:
 
 .ChannelSample_left
 {
-	background:url(../../images/ChannelSample_left.jpg) top left no-repeat;
+	background:url(../images/ChannelSample_left.jpg) top left no-repeat;
 	width:8px;	
 	float:left;
 	height:208px;
@@ -865,7 +865,7 @@ a.viewAllgold:hover{background:url(../images/w-icon.jpg) no-repeat right; color:
 }
 .ChannelSample_rpt
 {
-	background:url(../../images/ChannelSample_rpt.jpg) top left repeat-x;
+	background:url(../images/ChannelSample_rpt.jpg) top left repeat-x;
 	width:560px;	
 	float:left;	
 	margin-bottom:2px;
@@ -873,7 +873,7 @@ a.viewAllgold:hover{background:url(../images/w-icon.jpg) no-repeat right; color:
 }
 .ChannelSample_right
 {
-	background:url(../../images/ChannelSample_right.jpg) top left no-repeat;
+	background:url(../images/ChannelSample_right.jpg) top left no-repeat;
 	width:7px;	
 	float:left;
 	height:208px;
@@ -908,12 +908,12 @@ a.viewAllgold:hover{background:url(../images/w-icon.jpg) no-repeat right; color:
 }
 .ItemSubCS
 {
-	width:450px;margin-top:2px;clear:both;background-image:url(../../images/iconRed.jpg);background-repeat:no-repeat;background-position:0px 7px;
+	width:450px;margin-top:2px;clear:both;background-image:url(../images/iconRed.jpg);background-repeat:no-repeat;background-position:0px 7px;
 	padding-left:8px;
 }
 .ttchaodontinbaicuaban
 {
-	width: 300px; clear: both; background-image: url(../../images/barGuitin.jpg);
+	width: 300px; clear: both; background-image: url(../images/barGuitin.jpg);
     background-repeat: no-repeat; height: 34px; overflow: hidden; margin-bottom: 3px;
 }
 .chuyentrangqcContent
@@ -922,11 +922,11 @@ a.viewAllgold:hover{background:url(../images/w-icon.jpg) no-repeat right; color:
 }
 .tinanh_top
 {
-	width:300px;height:34px;clear:both;background-image:url(../../images/tinanh_Top.jpg);background-repeat:no-repeat;overflow:hidden;
+	width:300px;height:34px;clear:both;background-image:url(../images/tinanh_Top.jpg);background-repeat:no-repeat;overflow:hidden;
 }
 .tinanh_topCTXH
 {
-	width:300px;height:7px;clear:both;background-image:url(../../images/TinanhtopCTXH.jpg);background-repeat:no-repeat;overflow:hidden;
+	width:300px;height:7px;clear:both;background-image:url(../images/TinanhtopCTXH.jpg);background-repeat:no-repeat;overflow:hidden;
 }
 .tinanh_content
 {
@@ -934,23 +934,23 @@ a.viewAllgold:hover{background:url(../images/w-icon.jpg) no-repeat right; color:
 }
 .tinanh_bottom
 {
-	width:300px;height:6px;clear:both;background-image:url(../../images/tinhanh_Btom.jpg);background-repeat:no-repeat;overflow:hidden;font-size:1px;
+	width:300px;height:6px;clear:both;background-image:url(../images/tinhanh_Btom.jpg);background-repeat:no-repeat;overflow:hidden;font-size:1px;
 }
 .bartoolChannellist
 {
-	width:678px;height:25px;background-image:url(../../images/barBttomChannelist.jpg);background-repeat:no-repeat;clear:both;margin-top:10px;margin-bottom:10px;
+	width:678px;height:25px;background-image:url(../images/barBttomChannelist.jpg);background-repeat:no-repeat;clear:both;margin-top:10px;margin-bottom:10px;
 }
 .bgItemChuyendetuoitre
 {
-	width:300px;height:28px;clear:both;background-image:url(../../images/rpt_chuyendetuoitre.jpg);background-repeat:repeat-x;overflow:hidden;
+	width:300px;height:28px;clear:both;background-image:url(../images/rpt_chuyendetuoitre.jpg);background-repeat:repeat-x;overflow:hidden;
 }
 .xemthem_top
 {
-	width:300px;height:7px;clear:both;background-image:url(../../images/xemthem_top.jpg);background-repeat:no-repeat;overflow:hidden;font-size:1px;
+	width:300px;height:7px;clear:both;background-image:url(../images/xemthem_top.jpg);background-repeat:no-repeat;overflow:hidden;font-size:1px;
 }
 .xemthem_bttom
 {
-	width:300px;height:7px;clear:both;background-image:url(../../images/xemthem_bttom.jpg);background-repeat:no-repeat;overflow:hidden;font-size:1px;
+	width:300px;height:7px;clear:both;background-image:url(../images/xemthem_bttom.jpg);background-repeat:no-repeat;overflow:hidden;font-size:1px;
 }
 .xemthem_content
 {
@@ -966,27 +966,27 @@ a.viewAllgold:hover{background:url(../images/w-icon.jpg) no-repeat right; color:
 }
 .rptbottomtool
 {
-	width:100%;height:25px;clear:both;background-image:url(../../images/bgBttomtool.jpg);background-repeat:no-repeat;
+	width:100%;height:25px;clear:both;background-image:url(../images/bgBttomtool.jpg);background-repeat:no-repeat;
 }
 .itemtinbailienquan
 {
-	width:98%;margin-top:3px;padding-left:10px;clear:both;background-image:url(../../images/iconRed.jpg);background-repeat:no-repeat;background-position:0 6px;
+	width:98%;margin-top:3px;padding-left:10px;clear:both;background-image:url(../images/iconRed.jpg);background-repeat:no-repeat;background-position:0 6px;
 }
 .leftTinbailienquan
 {
-	width:6px;height:155px;float:left;background-image:url(../../images/leftTinbailienquan.jpg);background-repeat:no-repeat;
+	width:6px;height:155px;float:left;background-image:url(../images/leftTinbailienquan.jpg);background-repeat:no-repeat;
 }
 .centerTinbailienquan
 {
-	width:328px;height:155px;float:left;background-image:url(../../images/rpttinbailienquan.jpg);background-repeat:repeat-x;
+	width:328px;height:155px;float:left;background-image:url(../images/rpttinbailienquan.jpg);background-repeat:repeat-x;
 }
 .Separatetinbailienquan
 {
-	width:100%;clear:both;height:1px;overflow:hidden;font-size:1px;background-image:url(../../images/SeparateTinbailienquan.jpg);background-repeat:no-repeat;background-position:left bottom;
+	width:100%;clear:both;height:1px;overflow:hidden;font-size:1px;background-image:url(../images/SeparateTinbailienquan.jpg);background-repeat:no-repeat;background-position:left bottom;
 }
 .rightTinbailienquan
 {
-	width:6px;height:155px;float:left;background-image:url(../../images/rightTinbailienquan.jpg);background-repeat:no-repeat;		
+	width:6px;height:155px;float:left;background-image:url(../images/rightTinbailienquan.jpg);background-repeat:no-repeat;		
 }
 
 /*--------new footer--*/
@@ -994,12 +994,12 @@ a.viewAllgold:hover{background:url(../images/w-icon.jpg) no-repeat right; color:
 a.colorBack{color:#000;}
 a.colorBack:hover{color:#F00;}
 .mnufooter{padding: 10px 0 10px 0; text-align:center; margin:0; clear:both;}
-.mnufooter a{color:#000; background:url(../../images/lineMnufooter.jpg) right no-repeat; padding: 0 10px 0 8px; line-height: 20px;font-size:11px;}
+.mnufooter a{color:#000; background:url(../images/lineMnufooter.jpg) right no-repeat; padding: 0 10px 0 8px; line-height: 20px;font-size:11px;}
 .mnufooter a:hover{color:#F00}
-.mnufooterBtom{background:url(../../images/mnufooter.jpg) top left repeat-x; height:32px; line-height:32px; clear:both; padding: 0 10px 0 10px; line-height:32px; color:#FFF;}
+.mnufooterBtom{background:url(../images/mnufooter.jpg) top left repeat-x; height:32px; line-height:32px; clear:both; padding: 0 10px 0 10px; line-height:32px; color:#FFF;}
 .mnufooterBtom a{/*Hieuvm: background:url(../../images/linemnufooterbtom.jpg) right no-repeat;*/ padding: 0 10px 0 10px; color:#FFF; line-height:32px;}
 .mnufooterBtom a:hover{color:#FC0}
-.boxSeachfooter{background:url(../../images/bgSearchFooter.jpg) no-repeat; width:296px; height:20px; margin:0 auto 10px;}
+.boxSeachfooter{background:url(../images/bgSearchFooter.jpg) no-repeat; width:296px; height:20px; margin:0 auto 10px;}
 .boxSeachfooter .inputtxtFooter{background:none; border:none; padding:2px; font-size:12px; float:left;}
 .pSuperTitle{ font-family: Arial; font-size: 14px; font-weight: bold;padding:0px;margin:0px; }
 .psupertitle{ font-family: Arial; font-size: 14px; font-weight: bold;padding:0px;margin:0px;}
@@ -1064,12 +1064,12 @@ a.colorBack:hover{color:#F00;}
 	TEXT-ALIGN: left;
 }
 /*---------------------------Vote------------------------------*/
-.boxVote{background:url(../../images/bgCterVote_200.jpg) top left repeat-y; width:200px; clear:both; margin-bottom: 8px; overflow:hidden;}
-.boxVoteTop{background:url(../../images/bgtopVote_200.jpg) top left no-repeat; width:200px;}
-.boxVoteBtom{background:url(../../images/bgBtomVote_200.jpg) bottom left no-repeat; width:200px;}
+.boxVote{background:url(../images/bgCterVote_200.jpg) top left repeat-y; width:200px; clear:both; margin-bottom: 8px; overflow:hidden;}
+.boxVoteTop{background:url(../images/bgtopVote_200.jpg) top left no-repeat; width:200px;}
+.boxVoteBtom{background:url(../images/bgBtomVote_200.jpg) bottom left no-repeat; width:200px;}
 .boxTitleVote{border-bottom:1px solid #0072bc; padding: 10px; font-size:15px; font-weight:bold; color:#0072bc;}
 .boxViewKq{border-top:1px solid #0072bc; font-size:12px; font-weight:normal; padding:8px;}
-.inputVote{background:url(../../images/btnVote.jpg) no-repeat; width:98px; height:28px; border:none; cursor:pointer; margin:0 auto;}
+.inputVote{background:url(../images/btnVote.jpg) no-repeat; width:98px; height:28px; border:none; cursor:pointer; margin:0 auto;}
 
 /*-----Fix align img-----------*/
 #contentfiximg table img {text-align:center;}
