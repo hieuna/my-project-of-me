@@ -2595,5 +2595,5 @@ table.homerightmail td.mailcontent {
 
 /*-- FIX ERROR PAGE --*/
 .wid470 .view_content table.contentpaneopen img{
-	max-width: 450px; width: auto !important; width: 450px; height: auto !important;
+	max-width: 450px !important; height: auto !important;
 }
