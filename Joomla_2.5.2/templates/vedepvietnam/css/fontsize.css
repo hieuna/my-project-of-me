@@ -24,13 +24,13 @@ a.color4{color:#00a651;}
 a.color4:hover{color:#F00;}
 .color5{color:#000;}
 a.color5{color:#000;}
-a.color5:hover{color:#F00;}
+a.color5:hover{color:#114a5e; text-decoration: underline;}
 .color6{color:#666;}
 a.color6{color:#666;}
 a.color6:hover{color:#FC0;}
 .colorBlack{color:#000;}
 a.colorBlack{color:#000;}
-a.colorBlack:hover{color:#F30;}
+a.colorBlack:hover{color:#114a5e; text-decoration: underline;}
 .color999{color:#959595;}
 .colorF{color:#FFF;}
 a.colorF{color:#FFF;}

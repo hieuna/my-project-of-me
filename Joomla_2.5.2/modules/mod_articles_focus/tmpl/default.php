@@ -15,9 +15,9 @@ defined('_JEXEC') or die;
 		<div class="color2 bold fontsize16 padding6 textCter">
 			<a href="#" class="color2">Tiêu điểm</a>
 		</div>
-		<div style="border-top:1px solid #D7D7D7;clear:both;width:100%;">
-			<a style="display:block;" href="<?php echo $list[0]->link; ?>">
-				<img src="http://www.tuoitre.vn/Images/Thumbnail/923/556923_336_600.jpg" style="width:181px;height:102px;border:solid 1px #efedee;padding-left:6px;padding-top:8px;" alt="">
+		<div class="box_image_focus">
+			<a href="<?php echo $list[0]->link; ?>">
+				<img src="<?php echo htmlspecialchars(json_decode($list[0]->images)->image_intro); ?>" alt="<?php echo $list[0]->title; ?>" />
 			</a> 
 		</div>
 		<div style="padding-top:8px;" class="paddingLeft6px bold"><a href="<?php echo $list[0]->link; ?>" class="color5"><?php echo $list[0]->title; ?></a></div>			
