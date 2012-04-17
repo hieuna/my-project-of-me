@@ -94,6 +94,9 @@ endif;
 				
 				<li><?php echo $this->form->getLabel('focus'); ?>
 				<?php echo $this->form->getInput('focus'); ?></li>
+				
+				<li><?php echo $this->form->getLabel('photo'); ?>
+				<?php echo $this->form->getInput('photo'); ?></li>
 
 				<li><?php echo $this->form->getLabel('language'); ?>
 				<?php echo $this->form->getInput('language'); ?></li>

@@ -71,7 +71,7 @@ class modArticlesFocusHelper
 		//get database
 		$db		= JFactory::getDbo();
 		$query	= $db->getQuery(true);
-		$query->select('id, title, alias, catid');
+		$query->select('id, title, alias, catid, images');
 		$query->from('#__content');
 		$query->where('state = 1 AND focus = 1'.$condition);
 		//echo $query;
@@ -100,6 +100,7 @@ class modArticlesFocusHelper
 
 			$lists[$i]->link	= JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catslug));
 			$lists[$i]->title	= $row->title;
+			$lists[$i]->images	= $row->images;
 
 			$i++;
 		}

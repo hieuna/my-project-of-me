@@ -587,33 +587,8 @@ $view	= JRequest::GetCmd('view', '', 'GET');
         <iframe src="http://s.tuoitre.vn/tto/home/TriAn.html" scrolling="no" align="left" width='300' height='560' frameborder="0" marginheight="0" marginwidth="0"></iframe>
     </div>
 </div>
-<style type="text/css" >   
-    ul.listOtherNewsChaoco{margin:0; padding: 6px 0 0 5px;border-top:solid 1px #d7d7d7;}
-    ul.listOtherNewsChaoco li{list-style:none; background:url(http://tuoitre.vn/App_Themes/TTOBlue/Images/iconRed.jpg) 0 5px no-repeat; padding: 0 0 6px 10px; clear:both;}
-    ul.listOtherNewsChaoco li a{color:#000;}
-    ul.listOtherNewsChaoco li a:hover{text-decoration:underline;}        
-</style>
-<div class="tinanh_top"></div>
-<div class="tinanh_content">  
-    <div style="width:285px;margin:10px auto;clear:both;overflow:hidden">          
-        <a href="http://tuoitre.vn/The-gioi/485500/Xem-clip-loc-xoay-cuon-bay-xe-tai-o-My.html"><img src="http://www.tuoitre.vn/Images/Thumbnail/810/556810_336_600.jpg" alt="" style="border:0px;width: 283px; height: 160px;border:solid 1px #c9c9c9;margin-bottom:5px;" /></a>
-        <br />
-        <a href="http://tuoitre.vn/The-gioi/485500/Xem-clip-loc-xoay-cuon-bay-xe-tai-o-My.html" class="fontsize12 bold color5">Xem clip l?c xo�y cu?n bay xe t?i ? M?</a>
-        <br />
-        <span class="txt_black_m" style="line-height:17px;">TTO - Nhi?u tr?n l?c xo�y l?n d� d? b? bang Texas (M?) h�m 3-4, m?nh d?n n?i d� l�m t?c m�i h�ng lo?t&nbsp;can nh�, b?t g?c nhi?u c�y xanh, th?m ch� cu?n bay xe t?i. Hi?n chua c� s? li?u thuong vong c? th?.</span>        
-        <a href="http://tuoitre.vn/The-gioi/485500/Xem-clip-loc-xoay-cuon-bay-xe-tai-o-My.html" style="float:right;font-style:italic;" class="txt_004a80_m">Xem ti?p &raquo;</a>           
-    </div>
-    <ul class="listOtherNewsChaoco">        
-            
-                <li><a href="http://tuoitre.vn/The-gioi/485143/Hinh-anh-may-bay-roi-tham-khoc-o-Nga.html">H�nh ?nh m�y bay roi th?m kh?c ? Nga</a></li>            
-               
-                <li><a href="http://tuoitre.vn/Van-hoa-Giai-tri/485007/20000-khan-gia-tuong-nho-Trinh-Cong-Son.html">20.000 kh�n gi? tu?ng nh? Tr?nh C�ng Son</a></li>            
-               
-                <li><a href="http://dulich.tuoitre.vn/Index.aspx?ArticleID=484404&ChannelID=100">T?o d�ng v?i&nbsp;hoa ban tr�n ph?</a></li>            
-             
-    </ul>
-</div>
-<div class="tinanh_bottom" style="margin-bottom:6px;"></div>
+<jdoc:include type="modules" name="vn-user1" style="none" />
+
 
 <div class="boxCtentApPli">
     <div class="boxCtentApPliBtom">
