@@ -16,9 +16,10 @@ class modArticlesHotHelper
 		//get database
 		$db		= JFactory::getDbo();
 		$query	= $db->getQuery(true);
-		$query->select('id, title, alias');
-		$query->from('#__content');
-		$query->where('state = 1 AND hots = 1');
+		$query->select('c.id, c.title, c.alias, c.images, c.catid, cd.alias AS catalias');
+		$query->from('#__content AS c, #__categories AS cd');
+		$query->where('c.catid = cd.id');
+		$query->where('c.state = 1 AND c.hots = 1');
 		//echo $query;
 
 		// Filter by language
@@ -38,12 +39,12 @@ class modArticlesHotHelper
 		$lists	= array();
 		foreach ($rows as $row) {
 			$date = JFactory::getDate($row->created);
-			$item->slug = $row->id.':'.$row->alias;
-			$item->catslug = $row->catid;
+			$slug = $row->id.':'.$row->alias;
+			$catslug = $row->catid.':'.$row->catalias;
 
 			$lists[$i] = new stdClass;
 
-			$lists[$i]->link	= JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catslug));
+			$lists[$i]->link	= JRoute::_(ContentHelperRoute::getArticleRoute($slug, $catslug));
 			$lists[$i]->title	= $row->title;
 
 			$i++;

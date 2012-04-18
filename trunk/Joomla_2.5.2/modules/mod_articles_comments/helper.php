@@ -16,9 +16,9 @@ class modArticlesCommentsHelper
 		//get database
 		$db		= JFactory::getDbo();
 		$query	= $db->getQuery(true);
-		$query->select('cd.id, cd.title, cd.alias, cd.created, COUNT(cm.object_id) AS count');
-		$query->from('#__content AS cd, #__jcomments AS cm');
-		$query->where('cd.id = cm.object_id AND cd.state = 1 AND cm.published=1');
+		$query->select('cd.id, cd.title, cd.alias, cd.created, cd.catid, COUNT(cm.object_id) AS count, cat.alias AS catalias');
+		$query->from('#__content AS cd, #__jcomments AS cm, #__categories AS cat');
+		$query->where('cd.id = cm.object_id AND cd.catid=cat.id AND cd.state = 1 AND cm.published=1');
 		$query->group("cm.object_id");
 		$query->order("COUNT(cm.object_id) DESC, cd.created DESC");
 		//echo $query;
@@ -40,12 +40,12 @@ class modArticlesCommentsHelper
 		$lists	= array();
 		foreach ($rows as $row) {
 			$date = JFactory::getDate($row->created);
-			$item->slug = $row->id.':'.$row->alias;
-			$item->catslug = $row->catid;
+			$slug = $row->id.':'.$row->alias;
+			$catslug = $row->catid.':'.$row->catalias;
 
 			$lists[$i] = new stdClass;
 
-			$lists[$i]->link	= JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catslug));
+			$lists[$i]->link	= JRoute::_(ContentHelperRoute::getArticleRoute($slug, $catslug));
 			$lists[$i]->title	= $row->title;
 			$lists[$i]->count	= $row->count;
 

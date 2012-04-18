@@ -93,12 +93,12 @@ class modArticlesFocusHelper
 		$lists	= array();
 		foreach ($rows as $row) {
 			$date = JFactory::getDate($row->created);
-			$item->slug = $row->id.':'.$row->alias;
-			$item->catslug = $row->catid;
+			$slug = $row->id.':'.$row->alias;
+			$catslug = $row->catid;
 
 			$lists[$i] = new stdClass;
 
-			$lists[$i]->link	= JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catslug));
+			$lists[$i]->link	= JRoute::_(ContentHelperRoute::getArticleRoute($slug, $catslug));
 			$lists[$i]->title	= $row->title;
 			$lists[$i]->images	= $row->images;
 
