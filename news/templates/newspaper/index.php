@@ -13,6 +13,7 @@ JHtml::_('behavior.framework', true);
 $app 		= JFactory::getApplication();
 $option 	= JRequest::getString('option', '', 'GET');
 $view 		= JRequest::getString('view', '', 'GET');
+$group		= JRequest::getString('group', '', 'GET');
 ?>
 <?php echo '<?'; ?>xml version="1.0" encoding="<?php echo $this->_charset ?>"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -85,7 +86,7 @@ $view 		= JRequest::getString('view', '', 'GET');
 			<td valign="top">
 			<table cellpadding="0" cellspacing="0" width="100%" class="masterContent">
 				<?php
-				if ($view == 'frontpage'){
+				if ($view == 'frontpage' && !$group){
 				?>
  				<tr>
     				<td colspan="3">
@@ -109,6 +110,9 @@ $view 		= JRequest::getString('view', '', 'GET');
 							<tr>
 								<td width="100%" valign="top">
 									<div class="mainContainer">
+									<?php if ($group):?>
+										<?php include("html/warehouse.php");?>
+									<?php else:?>
 										<div class="fl wid470">
 										<?php
 										if ($view == 'frontpage'){
@@ -149,6 +153,7 @@ $view 		= JRequest::getString('view', '', 'GET');
 												<jdoc:include type="modules" name="news-right" />
 											</div>
 										</div>
+									<?php endif;?>	
 									</div>
 								</td>
 							</tr>

@@ -137,6 +137,8 @@ class modFocusHelper
 			}
 			$lists[$i]->text = htmlspecialchars( $row->title );
 			$lists[$i]->images = $row->images;
+			$lists[$i]->sectionid = $row->sectionid;
+			$lists[$i]->catid = $row->catid;	
 			$i++;
 		}
 

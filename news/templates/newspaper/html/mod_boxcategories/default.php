@@ -1,10 +1,14 @@
 <?php // no direct access
 defined('_JEXEC') or die('Restricted access');
 $baseurl = JURI::base();
+
 if(count($list)>0){
 ?>
 <div class="box_modules clearfix">
-	<div class="title_box_modules"><?php echo $params->get('name_title'); ?></div>
+	<div class="title_box_modules">
+		<a href="<?php echo JRoute::_( 'index.php?option=com_content&view=category&id=1&group=warehouse&feauture=special&secid='.$list[0]->sectionid.'&cid='.$list[0]->catid);?>"><?php echo $params->get('name_title'); ?></a>
+		<a href="<?php echo JRoute::_( 'index.php?option=com_content&view=category&id=1&group=warehouse&feauture=hot&secid='.$list[0]->sectionid.'&cid='.$list[0]->catid);?>" class="addview">Xem tất cả</a>
+	</div>
 	<table cellpadding="0" cellspacing="0" class="focus">
 		<tr>
 			<?php
@@ -20,7 +24,7 @@ if(count($list)>0){
 				$style = ' style="background: #F2F8FF;"'; 
 			}
 			?>
-				<td<?php echo $class;?> valign="top">
+				<td<?php echo $class;?> valign="top" style="width: 50%;">
 					<a href="<?php echo $item->link; ?>">
 						<img class="img45" src="<?php echo $baseurl;?>/images/stories/<?php echo $item->images;?>" />
 					</a>
