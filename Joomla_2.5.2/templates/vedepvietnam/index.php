@@ -558,18 +558,6 @@ $view	= JRequest::GetCmd('view', '', 'GET');
     </div>
 </div>
 
-
-<div class="QCIframe">
-    <div style="clear:both;width:100%;">
-        <iframe src="http://s.tuoitre.vn/tto/home/rightbottom.html" scrolling="no" align="left" width='300' height='83' frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-</div>
-
-<div class="QCIframe">
-    <div style="clear:both;width:100%;">
-        <iframe src="http://s.tuoitre.vn/tto/home/TriAn.html" scrolling="no" align="left" width='300' height='560' frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-</div>
 <jdoc:include type="modules" name="vn-user1" style="none" />
 
 
@@ -582,22 +570,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
                 <div style="float:right;width:1px;overflow:hidden;" id="idallTabContent"></div>
             </div>            
         </div>
-        <div class="clearFix" style="padding-left: 5px;">
-            <div class="linkApli6" style="margin:0px 0 4px 4px;">
-                <div style="width:108px;clear:both;" id="idstock">
-                    <a href="javascript:showTtcanbiet(0);"><img alt="" src="http://tuoitre.vn/Images/Trans.gif" style="border:0;width:108px;height:25px;margin-left:5px;"/></a>
-                </div>                   
-                <div class="Contentttcanbiet" id="idstockContent">
-                    <div class="topttcanbiet"></div>
-                    <div class="centerttcanbiet" style="padding-top:18px;">
-                        
-                        <iframe src="http://chart.vietstock.vn/publicchart/RealTimeChart_TTO.aspx" width="280px" height="280" scrolling='no' frameborder='0'></iframe>
-                        
-                    </div>
-                    <div class="bottomttcanbiet"></div>
-                </div> 
-                <div class="clearFix"></div>
-            </div>            
+        <div class="clearFix" style="padding-left: 5px;">                      
             <div class="linkApli5" style="margin:4px 0px 0px 4px;">
                 <div style="width:80px;clear:both;overflow:hidden;" id="idtigia">
                     <a href="javascript:showTtcanbiet(1);">
