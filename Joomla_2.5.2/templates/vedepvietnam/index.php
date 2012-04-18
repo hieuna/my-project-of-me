@@ -238,34 +238,27 @@ $view	= JRequest::GetCmd('view', '', 'GET');
     <link   rel="stylesheet" type="text/css" href="http://tuoitre.vn/App_Themes/TTOBlue/DragAndDrop.css"/>  
     <div class="clearFix"></div> 
     <div id="colunmLeft">
+		<?php if ($view == 'featured'):?>
         <div style="clear:both;">
-            
-<div class="channeltop">
-    <div class="channelttopLeft">
-    <jdoc:include type="modules" name="vn-sidebar" style="none" />   
- 
-
-
-    </div>
-    <div class="channelttopright">
-		<div class="box-module" id="tab_accordion">
-			<jdoc:include type="modules" name="vn-topright" style="none" />
-		</div>
-    </div>
-</div>
-<div style="margin-bottom: 7px; display:block">
-    
-	 
-</div>
-
-
-<div class="QCIframe">
-    <div style="clear:both;width:100%;">
-        <iframe src="http://s.tuoitre.vn/TTO/Home/Center.html" scrolling="no" align="left" width='686' height='168' frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-</div>
+			<div class="channeltop">
+				<div class="channelttopLeft">
+					<jdoc:include type="modules" name="vn-sidebar" style="none" />   
+				</div>
+				<div class="channelttopright">
+					<div class="box-module" id="tab_accordion">
+						<jdoc:include type="modules" name="vn-topright" style="none" />
+					</div>
+				</div>
+			</div>
+			<div style="margin-bottom: 7px; display:block"></div>
+			<div class="QCIframe">
+				<div style="clear:both;width:100%;">
+					<iframe src="http://s.tuoitre.vn/TTO/Home/Center.html" scrolling="no" align="left" width='686' height='168' frameborder="0" marginheight="0" marginwidth="0"></iframe>
+				</div>
+			</div>
             <div class="clearFix"></div>
         </div>
+		<?php endif;?>
         <div id="colunmLeft1" class="sortHomeCenter">
 			<?php
 			if ($view == 'featured'){ 
@@ -279,19 +272,9 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 			<?php }?>            
         </div>
         <div id="colunmLeft2">
-           
-
-
-
-
-<iframe width="200" height="396" src="http://tv.tuoitre.vn/site/thtt" frameborder="0" allowfullscreen="false" id="iframeTuoiTreTV"></iframe>
-
-
-
-
-<div class="boxShareClunmleft2">
-	<jdoc:include type="modules" name="vn-bottommiddle" style="none" />    
-</div>
+			<div class="boxShareClunmleft2">
+				<jdoc:include type="modules" name="vn-bottommiddle" style="none" />    
+			</div>
 
 <div class="THTT">
     <div class="THTTHead"></div>
