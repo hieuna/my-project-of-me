@@ -206,6 +206,9 @@ img{
 .img45 {
 	float: left; margin-right: 5px; padding: 1px; width: 45px; border: 1px solid #D8D8D8;
 }
+.img55 {
+	float: left; margin-right: 5px; padding: 1px; width: 55px; border: 1px solid #D8D8D8;
+}
 .mt0 p{
 	margin: 0;
 }
@@ -325,6 +328,9 @@ span.article_separator{
 .box_modules .title_box_modules{
 	height: 25px; background: url("../images/bgr_menu.jpg") repeat-x; padding-left: 10px; color: #fff; font-weight: bold; text-transform: uppercase; text-shadow: 1px -1px 1px #333; padding-top: 10px;
 }
+.box_modules .title_box_modules a{
+	color: #fff; text-decoration: none; cursor: pointer;
+}
 ul.mostread{
 	margin: 0; padding: 0;
 }
@@ -336,6 +342,12 @@ ul.mostread li a{
 }
 ul.mostread li a:hover{
 	color: #4F82AC;
+}
+.box_modules a.addview{
+	font-weight: bold; float: right; padding-right: 10px; text-transform: none;
+}
+.box_modules a.addview:hover{
+	text-decoration: underline;
 }
 /*-- table focus --*/
 table.focus{
