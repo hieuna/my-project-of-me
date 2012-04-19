@@ -418,6 +418,9 @@ class ContentController extends JController
 		
 		//build the html radio buttons for hot
 		$lists['special'] = JHTML::_('select.booleanlist', 'special', '', $row->special);
+		
+		//build the html radio buttons for systems
+		$lists['systems'] = JHTML::_('select.booleanlist', 'systems', '', $row->systems);
 
 		/*
 		 * We need to unify the introtext and fulltext fields and have the
@@ -455,7 +458,7 @@ class ContentController extends JController
 		$form->loadINI($row->metadata);
 		
 		// Imagelist
-		$lists['images'] 			= JHTML::_('list.images',  'images', $row->images );
+		$lists['images'] 			= JHTML::_('list.images',  'images', $row->images, ' style="width: 200px;"' );
 
 		ContentView::editContent($row, $contentSection, $lists, $sectioncategories, $option, $form);
 	}
@@ -542,6 +545,7 @@ class ContentController extends JController
 		$row->state		= JRequest::getVar( 'state', 0, '', 'int' );
 		$row->hot		= JRequest::getVar( 'hot', 0, '', 'int' );
 		$row->special	= JRequest::getVar( 'special', 0, '', 'int' );
+		$row->systems	= JRequest::getVar( 'systems', 0, '', 'int' );
 		$params			= JRequest::getVar( 'params', null, 'post', 'array' );
 
 		// Build parameter INI string

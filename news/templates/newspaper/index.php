@@ -98,6 +98,7 @@ $group		= JRequest::getString('group', '', 'GET');
  				<tr>
  					<td colspan="3">
 	 					<div class="banner_special">
+	 						<?php include("html/systems.php");?>
 	    					<jdoc:include type="modules" name="news-sidebar" />
 	    				</div>
  					</td>
@@ -184,6 +185,10 @@ $group		= JRequest::getString('group', '', 'GET');
 	</body>
 	<script type="text/javascript">
 	$(function() {
+	    $('#tab_systems').cycle({
+	    	fx: 'fade',
+	    	timeout: 15000
+	    });
 	    $('#tab_content').cycle({
 	    	fx: 'scrollLeft',
 	    	timeout: 10000
