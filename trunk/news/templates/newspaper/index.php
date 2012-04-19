@@ -95,6 +95,7 @@ $group		= JRequest::getString('group', '', 'GET');
 	    				</div>
     				</td>
  				</tr>
+ 				<?php }?>
  				<tr>
  					<td colspan="3">
 	 					<div class="banner_special">
@@ -103,7 +104,6 @@ $group		= JRequest::getString('group', '', 'GET');
 	    				</div>
  					</td>
  				</tr>
- 				<?php }?>
 				<tr>
 					<td colspan="3">
 					<div style="padding-top: 4px">
