@@ -2605,6 +2605,33 @@ table.homerightmail td.mailcontent {
 	font-weight: bold; font-size: 11px; color: #232323; text-decoration: none;
 }
 
+/*-- SYSTEMS --*/
+.systems{
+	margin: 10px 0 0px 0; width: 1000px; height: 110px; overflow: hidden;
+}
+.systems ul{
+	margin: 0; padding: 0;
+}
+.systems ul li{
+	list-style: none; width: 180px; height: 80px; display: block; float: left; text-align: left; padding: 3px; overflow: hidden; margin: 10px 10px 5px 0px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.systems ul li:first-child{
+	margin-left: 10px;
+}
+.systems ul li:last-child{
+	margin-right: 0;
+}
+.systems ul li img{
+	float: left; margin: 0px 5px 3px 0; width: 80px; height: auto; border: 1px solid #D8D8D8; padding: 1px;
+}
+.systems ul li a, .systems ul li a:visited{
+	color: #004175; font-weight: bold; font-size: 12px; text-decoration: none;
+}
+.systems ul li a:hover{
+	color: #4F82AC;
+}
+
 /*-- FIX ERROR PAGE --*/
 .wid470 .view_content table.contentpaneopen img{
 	max-width: 450px !important; height: auto !important;

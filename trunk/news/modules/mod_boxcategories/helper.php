@@ -98,6 +98,7 @@ class modBoxCategoriesHelper
 			($show_front == '0' ? ' AND f.content_id IS NULL' : '').
 			' AND s.published = 1' .
 			' AND cc.published = 1' .
+			' AND a.special = 1' .
 			' ORDER BY '. $ordering;
 		$db->setQuery($query, 0, $count);
 		$rows = $db->loadObjectList();

@@ -856,23 +856,31 @@ class ContentView
 		</tr>
 		</table>
 		<table  class="adminform">
-		<tr><td colspan="4"><b>Phân loại bài viết</b></td></tr>
+		<tr><td colspan="6"><b>Phân loại bài viết</b></td></tr>
 		<tr>
 			<td width="10%">
-				<label for="sectionid">
-					Bài viết tiêu điểm
+				<label for="hot">
+					Nhóm tiêu điểm
 				</label>
 			</td>
 			<td align="left">
 				<?php echo $lists['hot']; ?>
 			</td>
 			<td width="10%">
-				<label for="catid">
-					Bài viết nổi bật
+				<label for="special">
+					Nhóm nổi bật
 				</label>
 			</td>
 			<td align="left">
 				<?php echo $lists['special']; ?>
+			</td>
+			<td width="15%">
+				<label for="special">
+					Nhóm khách hàng
+				</label>
+			</td>
+			<td align="left">
+				<?php echo $lists['systems']; ?>
 			</td>
 		</tr>
 		</table>
