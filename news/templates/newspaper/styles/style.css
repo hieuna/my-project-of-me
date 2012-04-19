@@ -2613,8 +2613,9 @@ table.homerightmail td.mailcontent {
 	margin: 0; padding: 0;
 }
 .systems ul li{
-	list-style: none; width: 180px; height: 80px; display: block; float: left; text-align: left; padding: 3px; overflow: hidden; margin: 10px 10px 5px 0px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	list-style: none; width: 178px; height: 80px; display: block; float: left; text-align: left; padding: 3px; overflow: hidden; margin: 10px 10px 5px 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	behavior: url(ie-css3.htc);
 }
 .systems ul li:first-child{
 	margin-left: 10px;
