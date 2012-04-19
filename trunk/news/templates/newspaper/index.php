@@ -24,8 +24,8 @@ $group		= JRequest::getString('group', '', 'GET');
 		<meta content="text/html; charset=utf-8" http-equiv="content-type">
 		<meta content="index, follow" name="robots">
 		<meta content="Super User" name="author">
-		<meta name="keywords" content="tap chi, doanh nhan, doanh nhan viet, bao doanh nhan" />
-		<meta name="description" content="tap chi, doanh nhan ,doanh nhan viet, goc doanh nhan, doanh nhan thanh dat, Tạp chí, Tạp chí doanh nhân việt, Doanh nhân thành công, Tạp chí doanh nhân, Góc doanh nhân, Doanh nhân Việt" />
+		<meta name="keywords" content="tap chi, doanh nhan, doanh nhan viet, bao doanh nhan, tap chi doanh nhan viet" />
+		<meta name="description" content="tap chi, doanh nhan ,doanh nhan viet, goc doanh nhan, doanh nhan thanh dat, Tạp chí, Tạp chí doanh nhân việt, Doanh nhân thành công, Tạp chí doanh nhân, Góc doanh nhân, Doanh nhân Việt, Tap chi doanh nhan viet, tap chi doanh nhan" />
 		<meta name="generator" content="Joomla! - Open Source Content Management" />		
 		<!-- The following five lines load the Blueprint CSS Framework (http://blueprintcss.org). If you don't want to use this framework, delete these lines. -->
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/styles/style.css" type="text/css" />
