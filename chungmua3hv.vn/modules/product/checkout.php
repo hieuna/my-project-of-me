@@ -36,8 +36,8 @@
 	$url_cancel = ''; //Url khi click link "Tôi không muốn thanh toán đơn hàng này" trên cổng thanh toán Bảo Kim
 	$url_detail = ''; //Url chứa thông tin chi tiết đơn hàng
 	
-	$baokim = new BaoKimPayment();
-	$request_url = $baokim->createRequestUrl($order_id, $business, $total_amount, $shipping_fee, $tax_fee, $order_description, $url_success, $url_cancel, $url_detail);
+	//$baokim = new BaoKimPayment();
+	//$request_url = $baokim->createRequestUrl($order_id, $business, $total_amount, $shipping_fee, $tax_fee, $order_description, $url_success, $url_cancel, $url_detail);
 	//redirect sang cổng thanh toán Bảo Kim
 	header('Location:' . $request_url);
 ?>

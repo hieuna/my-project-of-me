@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-14 23:37:35
+<?php /* Smarty version 2.6.19, created on 2012-04-20 22:15:31
          compiled from footer.tpl */ ?>
 <script src="function.js"></script>
 <div class="pageBottom">
@@ -45,4 +45,4 @@
 <div id="closePopup"><a href="javascript:void(0)" onclick="return closeForm();" title="Click  hoặc nhấn ESC để đóng cửa sổ">X</a></div>
    	<div id="loadingcontrol"><img src="themes/default/images/loading.gif" border="0" align="loading" title="loading"/></div>
    <div id="popupCoupon"></div>
-</div>
+</div>

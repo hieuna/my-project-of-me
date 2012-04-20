@@ -68,6 +68,10 @@ class product extends VS_Module_Base
 			case "home":
 
 				$this->homeItem(); break;
+			
+			case "sohapay":
+				$this->sohapay_payment(); break;	
+			
 			case "baokim":
 
 				$this->baokim_payment(); break;
@@ -134,6 +138,28 @@ class product extends VS_Module_Base
 
 	}
 
+	//SOHAPAY
+	function sohapay_payment(){
+		if($_SERVER['REQUEST_METHOD']=='POST')
+		{
+			include_once 'class_payment.php';	
+			$id = $_POST['productID'];
+			$product= $this->getRow("select *,(select Group_Name from tblgroup where Group_ID= {$this->_prefix}DestinationID) as DestinationID from {$this->table} where {$this->_prefix}Status='1' and {$this->_prefix}ID='{$id}'");
+			
+			$return_url = $pg_root_url.'/payment_info.php';
+			$transaction_info = $product['Product_Name'].' + 10% VAT + Phí Ship sản phẩm';
+			$order_code = time().'';
+			$price_product = $product['Product_DealPrice'];
+			$vat	= ($price_product*10)/100;
+			$price = $price_product+$vat;
+			$order_email = 'chungmua3hv@gmail.com';
+			$order_mobile='';
+			$sohapay = new PG_checkout();
+			$url = $sohapay->buildCheckoutUrl($return_url, $transaction_info, $order_code, $price, $order_email, $order_mobile='');
+			header('Location:' . $url);
+		}
+	}
+	//END SOHAPAY
 	
 function baokim_payment()
 {

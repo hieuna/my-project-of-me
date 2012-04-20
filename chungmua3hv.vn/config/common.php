@@ -2,7 +2,7 @@
 
 /*	start define const */
 
-define("SITE_URL", "http://{$_SERVER['SERVER_NAME']}/");
+define("SITE_URL", "http://{$_SERVER['SERVER_NAME']}/projects/chungmua3hv.vn/");
 
 define("SITE_DIR", "D:/AppServ/www/projects/chungmua3hv.vn/");
 

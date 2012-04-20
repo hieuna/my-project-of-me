@@ -1,6 +1,6 @@
 
 {if $product_item_list}{foreach from=$product_item_list item=oProduct}
-<form action="?mod=product&task=baokim" method="post">
+<form action="?mod=product&task=baokim" method="post" id="frmPOST" name="frmPOST">
 <input type="hidden" value="{$oProduct.Product_ID}" name="productID"/>
 <div class="dealBox">
             	<a title="{$oProduct.Product_Deal}" href="san-pham-{$oProduct.Product_ID}/{$oProduct.Product_LinkName}.html" class="dealTitle"><span>{if $oProduct.DestinationID}{$oProduct.DestinationID}{else} Toàn quốc {/if}:</span>{$oProduct.Product_Name}</a>
@@ -12,7 +12,7 @@
 						 {$checkbtlist}	
                  			{if $checkbtlist}
                     		<a href="mua-hang.php?ID={$oProduct.Product_ID}"></a>
-                            {/if}
+                            {/if}                            <div style="padding-top: 5px; margin:0; width: auto;">								<img id="cl_shp" src="https://sohapay.com/images/btn/muangay_sohapay_green.png" style="border:none; cursor: pointer;" />							</div>
                             <div style="background-image:url(https://www.baokim.vn/promote/paymentbk.png);width:180px;height:50px;margin-left:-4px;margin-top:8px">
     					<div style="padding-top:5px;margin-left:40px">
         
@@ -24,9 +24,8 @@
    					 </div>	
                        
                     </div>
-                    
-                    
-                    
+					{literal}
+                    <script type="text/javascript">                    $(function(){                        $('#cl_shp').click(function(){                            $('#frmPOST').attr("action", "?mod=product&task=sohapay");                            document.forms["frmPOST"].submit();                                                 });                    });                    </script>                    {/literal}
                     <div class="dealPriceRight"></div>
                     <div class="featurePrice02"> 
                         <div class="featureValue">Giá trị<p>{$oProduct.Product_Price|number_format} đ</p></div>

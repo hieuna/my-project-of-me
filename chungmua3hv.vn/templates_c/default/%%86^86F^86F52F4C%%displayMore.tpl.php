@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-17 00:33:43
+<?php /* Smarty version 2.6.19, created on 2012-04-20 22:15:31
          compiled from displayMore.tpl */ ?>
 <div class="boxRight">
     <div class="boxTitle">
@@ -23,4 +23,4 @@
 
         </ul>
     </div>
-</div>
+</div>

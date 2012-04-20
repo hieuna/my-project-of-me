@@ -1,6 +1,6 @@
 <?php
 
-require_once '/home/guidevn/public_html/chungmua3hv/lib/htmlpurifier/library/HTMLPurifier.auto.php';
+require_once 'D:/AppServ/www/projects/chungmua3hv.vn/lib/htmlpurifier/library/HTMLPurifier.auto.php';
 class security
 
 {
