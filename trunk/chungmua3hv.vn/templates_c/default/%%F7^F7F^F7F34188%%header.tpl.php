@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2012-02-05 21:52:04
+<?php /* Smarty version 2.6.19, created on 2012-04-20 22:15:30
          compiled from header.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'header.tpl', 6, false),array('modifier', 'selfUrl', 'header.tpl', 35, false),array('modifier', 'encode', 'header.tpl', 35, false),)), $this); ?>
@@ -72,7 +72,7 @@ $this->_sections['foo']['last']       = ($this->_sections['foo']['iteration'] ==
  <?php else: ?>themes/default/images/ava.png<?php endif; ?>" alt="photo" width="35" height="35" />
                 <div style="float:left; margin:8px 0 0 10px">
                 <div class="username">Chào mừng<b> <?php echo $_SESSION['_user']['Name']; ?>
- !</b>&nbsp;&nbsp;|</div><a class="bntLogout" href="javascript:void(0)" onclick="return memberLogOut('<?php echo ((is_array($_tmp=((is_array($_tmp="")) ? $this->_run_mod_handler('selfUrl', true, $_tmp) : selfUrl($_tmp)))) ? $this->_run_mod_handler('encode', true, $_tmp) : smarty_modifier_encode($_tmp)); ?>
+ !</b>&nbsp;&nbsp;|</div><a class="bntLogout" href="javascript:void(0)" onclick="return memberLogOut('<?php echo ((is_array($_tmp=((is_array($_tmp="")) ? $this->_run_mod_handler('selfUrl', true, $_tmp) : smarty_modifier_selfUrl($_tmp)))) ? $this->_run_mod_handler('encode', true, $_tmp) : smarty_modifier_encode($_tmp)); ?>
 ')">Thoát [ x ]</a> 
                 <div style="clear:both;"></div>
                 <div class="listAccount">
@@ -89,7 +89,7 @@ $this->_sections['foo']['last']       = ($this->_sections['foo']['iteration'] ==
                 </div>
         <?php else: ?>
             <form action="dang-nhap.html" method="post">
-            <input type="hidden" name="url" value="<?php echo ((is_array($_tmp=((is_array($_tmp='')) ? $this->_run_mod_handler('selfUrl', true, $_tmp) : selfUrl($_tmp)))) ? $this->_run_mod_handler('encode', true, $_tmp) : smarty_modifier_encode($_tmp)); ?>
+            <input type="hidden" name="url" value="<?php echo ((is_array($_tmp=((is_array($_tmp='')) ? $this->_run_mod_handler('selfUrl', true, $_tmp) : smarty_modifier_selfUrl($_tmp)))) ? $this->_run_mod_handler('encode', true, $_tmp) : smarty_modifier_encode($_tmp)); ?>
 " />
             <input type="hidden" name="logintype" value="1" />
                 <input type="text" class="homeSignInText labelInput" id="EMail" name="email" title="<?php if ($_COOKIE['logemail']): ?><?php echo $_COOKIE['logemail']; ?>

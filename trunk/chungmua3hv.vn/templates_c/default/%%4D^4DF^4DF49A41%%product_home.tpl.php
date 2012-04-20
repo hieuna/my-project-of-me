@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2012-01-13 21:38:36
+<?php /* Smarty version 2.6.19, created on 2012-04-20 22:53:55
          compiled from product_home.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'product_home.tpl', 12, false),array('modifier', 'echo_date', 'product_home.tpl', 41, false),array('modifier', 'fulldate', 'product_home.tpl', 57, false),array('modifier', 'default', 'product_home.tpl', 61, false),array('modifier', 'percent', 'product_home.tpl', 62, false),)), $this); ?>
@@ -27,7 +27,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
                  	<?php if ($this->_tpl_vars['checkbthome']): ?>
                     <a href="mua-hang.php?ID=<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
 "></a>
-                 	<?php endif; ?>
+                 	<?php endif; ?>					<div>										</div>
                     <div style="background-image:url(https://www.baokim.vn/promote/paymentbk.png);width:180px;height:50px;margin-left:-4px;margin-bottom:10px">
     					<div style="padding-top:5px;margin-left:40px">
         
@@ -98,7 +98,8 @@ countdown(secondsRemaining,\'down'; ?>
                     <div class="pageView">Lượt xem: <span><?php echo ((is_array($_tmp=$this->_tpl_vars['oProduct']['Product_NumberView'])) ? $this->_run_mod_handler('number_format', true, $_tmp) : smarty_modifier_number_format($_tmp)); ?>
 </span></div>
 
-                                     <div class="dealBottom">
+                 
+                    <div class="dealBottom">
                     	<!--BUTTON XEM CHI TIET-->
                     	<a href="san-pham-<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
 /<?php echo $this->_tpl_vars['oProduct']['Product_LinkName']; ?>

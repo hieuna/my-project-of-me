@@ -1,12 +1,12 @@
-<?php /* Smarty version 2.6.19, created on 2012-01-13 21:03:36
+<?php /* Smarty version 2.6.19, created on 2012-04-20 23:39:34
          compiled from product_list.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'product_list.tpl', 10, false),array('modifier', 'echo_date', 'product_list.tpl', 40, false),array('modifier', 'fulldate', 'product_list.tpl', 56, false),array('modifier', 'default', 'product_list.tpl', 60, false),array('modifier', 'percent', 'product_list.tpl', 61, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'product_list.tpl', 10, false),array('modifier', 'echo_date', 'product_list.tpl', 39, false),array('modifier', 'fulldate', 'product_list.tpl', 55, false),array('modifier', 'default', 'product_list.tpl', 59, false),array('modifier', 'percent', 'product_list.tpl', 60, false),)), $this); ?>
 
 <?php if ($this->_tpl_vars['product_item_list']): ?><?php $_from = $this->_tpl_vars['product_item_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['oProduct']):
 ?>
-<form action="?mod=product&task=baokim" method="post">
+<form action="?mod=product&task=baokim" method="post" id="frmPOST" name="frmPOST">
 <input type="hidden" value="<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
 " name="productID"/>
 <div class="dealBox">
@@ -27,7 +27,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
                  			<?php if ($this->_tpl_vars['checkbtlist']): ?>
                     		<a href="mua-hang.php?ID=<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
 "></a>
-                            <?php endif; ?>
+                            <?php endif; ?>                            <div style="padding-top: 5px; margin:0; width: auto;">								<img id="cl_shp" src="https://sohapay.com/images/btn/muangay_sohapay_green.png" style="border:none; cursor: pointer;" />							</div>
                             <div style="background-image:url(https://www.baokim.vn/promote/paymentbk.png);width:180px;height:50px;margin-left:-4px;margin-top:8px">
     					<div style="padding-top:5px;margin-left:40px">
         
@@ -40,9 +40,9 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
    					 </div>	
                        
                     </div>
-                    
-                    
-                    
+					<?php echo '
+                    <script type="text/javascript">                    $(function(){                        $(\'#cl_shp\').click(function(){                            $(\'#frmPOST\').attr("action", "?mod=product&task=sohapay");                            document.forms["frmPOST"].submit();                                                 });                    });                    </script>                    '; ?>
+
                     <div class="dealPriceRight"></div>
                     <div class="featurePrice02"> 
                         <div class="featureValue">Giá trị<p><?php echo ((is_array($_tmp=$this->_tpl_vars['oProduct']['Product_Price'])) ? $this->_run_mod_handler('number_format', true, $_tmp) : smarty_modifier_number_format($_tmp)); ?>
@@ -98,7 +98,8 @@ countdown(secondsRemaining,\'down'; ?>
                     <div class="pageView">Lượt xem: <span><?php echo ((is_array($_tmp=$this->_tpl_vars['oProduct']['Product_NumberView'])) ? $this->_run_mod_handler('number_format', true, $_tmp) : smarty_modifier_number_format($_tmp)); ?>
 </span></div>
 
-                                      <div class="dealBottom">
+                  
+                    <div class="dealBottom">
                     	<!--BUTTON XEM CHI TIET-->
                     	<a href="san-pham-<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
 /<?php echo $this->_tpl_vars['oProduct']['Product_LinkName']; ?>

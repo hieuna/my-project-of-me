@@ -13,7 +13,7 @@
                     	
                  	{if $checkbthome}
                     <a href="mua-hang.php?ID={$oProduct.Product_ID}"></a>
-                 	{/if}
+                 	{/if}					<div>										</div>
                     <div style="background-image:url(https://www.baokim.vn/promote/paymentbk.png);width:180px;height:50px;margin-left:-4px;margin-bottom:10px">
     					<div style="padding-top:5px;margin-left:40px">
         
