@@ -1,0 +1,438 @@
+-- Adminer 3.3.3 MySQL dump
+
+SET NAMES utf8;
+SET foreign_key_checks = 0;
+SET time_zone = 'SYSTEM';
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS `admin_menu`;
+CREATE TABLE `admin_menu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(225) NOT NULL,
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `z_index` int(11) NOT NULL DEFAULT '0',
+  `parent_id` int(11) NOT NULL DEFAULT '0',
+  `link` varchar(250) DEFAULT NULL,
+  `showed` tinyint(1) NOT NULL DEFAULT '0',
+  `editable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `lang`;
+CREATE TABLE `lang` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(225) NOT NULL,
+  `flag` varchar(225) DEFAULT NULL,
+  `filename` varchar(225) NOT NULL,
+  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tbl_account`;
+CREATE TABLE `tbl_account` (
+  `Ac_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Ac_name` varchar(100) DEFAULT NULL,
+  `Ac_email` varchar(100) DEFAULT NULL,
+  `Ac_password` varchar(100) DEFAULT NULL,
+  `Ac_phone` varchar(100) DEFAULT NULL,
+  `Ac_status` int(11) DEFAULT '0',
+  `Ac_time_limit` int(20) DEFAULT NULL,
+  `Member_Active_Code` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`Ac_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `tbl_attribute`;
+CREATE TABLE `tbl_attribute` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_type` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `type` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` text COLLATE utf8_unicode_ci,
+  `z_index` int(11) NOT NULL DEFAULT '0',
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `is_home` tinyint(4) NOT NULL DEFAULT '0',
+  `lang_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `tbl_contact`;
+CREATE TABLE `tbl_contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `lang_id` int(11) NOT NULL DEFAULT '0',
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` longtext COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `tbl_group_attribute`;
+CREATE TABLE `tbl_group_attribute` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_id` int(11) NOT NULL,
+  `attribute_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `tbl_image`;
+CREATE TABLE `tbl_image` (
+  `Image_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Image_Name` varchar(100) DEFAULT NULL,
+  `Image_GroupID` int(11) DEFAULT NULL,
+  `Image_Link` varchar(255) DEFAULT NULL,
+  `Image_Content` text,
+  `Image_Photo` varchar(255) DEFAULT NULL,
+  `Image_Status` int(11) DEFAULT NULL,
+  `Image_LangID` int(11) DEFAULT NULL,
+  `Image_Type` varchar(10) DEFAULT NULL,
+  `Image_Order` int(11) NOT NULL DEFAULT '10',
+  PRIMARY KEY (`Image_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `tbl_module_roll`;
+CREATE TABLE `tbl_module_roll` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `module_id` int(11) NOT NULL,
+  `roll_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tbl_notice_deals`;
+CREATE TABLE `tbl_notice_deals` (
+  `User_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `User_email` varchar(200) DEFAULT NULL,
+  `User_Active` int(11) DEFAULT NULL,
+  PRIMARY KEY (`User_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `tbl_product_attribute`;
+CREATE TABLE `tbl_product_attribute` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_id` int(11) NOT NULL,
+  `attribute_id` int(11) NOT NULL,
+  `attribute_value` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `z_index` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `tbl_roll`;
+CREATE TABLE `tbl_roll` (
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `icon` varchar(50) DEFAULT NULL,
+  `ordered` tinyint(4) DEFAULT NULL,
+  `editable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tbl_shopping`;
+CREATE TABLE `tbl_shopping` (
+  `Shopping_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Shopping_Email` varchar(255) DEFAULT NULL,
+  `Shopping_Code` varchar(100) DEFAULT NULL,
+  `Shopping_Name` varchar(255) DEFAULT NULL,
+  `Shopping_Address` varchar(255) DEFAULT NULL,
+  `Shopping_City` int(11) DEFAULT NULL,
+  `Shopping_Phone` varchar(50) DEFAULT NULL,
+  `Shopping_Quantity` varchar(255) DEFAULT NULL,
+  `Shopping_Create` varchar(255) DEFAULT NULL,
+  `Shopping_Complete` int(11) DEFAULT NULL,
+  `Shopping_Type` varchar(100) DEFAULT NULL,
+  `Shopping_Giaohang` varchar(200) DEFAULT NULL,
+  `Shopping_Total` varchar(255) DEFAULT NULL,
+  `Shopping_ProductID` int(11) DEFAULT NULL,
+  `Shopping_PayType` varchar(50) DEFAULT NULL,
+  `Shopping_Messege` text,
+  `Shopping_SessionID` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`Shopping_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `tbl_shopping_cart`;
+CREATE TABLE `tbl_shopping_cart` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `sessionid` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `product_id` int(11) NOT NULL DEFAULT '0',
+  `quantity` smallint(5) NOT NULL DEFAULT '0',
+  `completed` tinyint(1) NOT NULL DEFAULT '0',
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `tbl_shopping_cart_info`;
+CREATE TABLE `tbl_shopping_cart_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `address` longtext,
+  `tell` int(11) DEFAULT NULL,
+  `tex_info` longtext,
+  `info_cart` longtext,
+  `total` int(11) DEFAULT NULL,
+  `type` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `tbl_user_online`;
+CREATE TABLE `tbl_user_online` (
+  `session` varchar(225) NOT NULL,
+  `ip_address` varchar(225) DEFAULT NULL,
+  `time` bigint(11) NOT NULL DEFAULT '0',
+  `number_view` int(11) NOT NULL DEFAULT '1'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tbl_usertype_moduleroll`;
+CREATE TABLE `tbl_usertype_moduleroll` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_type_id` int(11) NOT NULL,
+  `module_roll_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tbl_video`;
+CREATE TABLE `tbl_video` (
+  `Video_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Video_Name` varchar(255) DEFAULT NULL,
+  `Video_File` varchar(255) DEFAULT NULL,
+  `Video_Status` int(11) DEFAULT NULL,
+  `Video_LangID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Video_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `tblabout`;
+CREATE TABLE `tblabout` (
+  `About_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `About_LangID` tinyint(4) DEFAULT NULL,
+  `About_Title` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `About_Summarize` text,
+  `About_Content` longtext CHARACTER SET utf8 COLLATE utf8_bin,
+  `About_Photo` varchar(255) DEFAULT NULL,
+  `About_Order` int(11) NOT NULL DEFAULT '0',
+  `About_CreateDate` varchar(20) DEFAULT NULL,
+  `About_Status` tinyint(2) NOT NULL DEFAULT '0',
+  `About_Populer` int(11) DEFAULT NULL,
+  PRIMARY KEY (`About_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tblcomment`;
+CREATE TABLE `tblcomment` (
+  `Comment_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Comment_ProductID` int(11) DEFAULT NULL,
+  `Comment_MemberID` int(11) DEFAULT NULL,
+  `Comment_Content` text,
+  `Comment_Mktime` varchar(50) DEFAULT NULL,
+  `Comment_Status` int(11) DEFAULT NULL,
+  `Comment_Report` int(11) DEFAULT NULL,
+  `Comment_MemberReplyID` int(11) DEFAULT NULL,
+  `Comment_Like` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Comment_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `tblcontact`;
+CREATE TABLE `tblcontact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `content` longtext,
+  `keycapcha` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `tblcontent`;
+CREATE TABLE `tblcontent` (
+  `Content_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Content_LangID` tinyint(4) DEFAULT NULL,
+  `Content_Title` varchar(200) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `Content_GroupID` int(11) DEFAULT NULL,
+  `Content_Description` text,
+  `Content_Content` longtext CHARACTER SET utf8 COLLATE utf8_bin,
+  `Content_Photo` varchar(255) DEFAULT NULL,
+  `Content_Order` int(11) DEFAULT '0',
+  `Content_Category` varchar(50) DEFAULT NULL,
+  `Content_Status` tinyint(2) DEFAULT '0',
+  `Content_Type` varchar(10) DEFAULT NULL,
+  `Content_Marks` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`Content_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tblgroup`;
+CREATE TABLE `tblgroup` (
+  `Group_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Group_ParentID` int(11) DEFAULT NULL,
+  `Group_LangID` tinyint(4) DEFAULT NULL,
+  `Group_Name` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `Group_Description` text,
+  `Group_Content` text,
+  `Group_Order` tinyint(4) DEFAULT NULL,
+  `Group_Type` varchar(50) NOT NULL DEFAULT 'groupnews',
+  `Group_Status` tinyint(1) NOT NULL DEFAULT '0',
+  `Group_Photo` varchar(225) DEFAULT NULL,
+  `Group_Hot` int(11) DEFAULT NULL,
+  `Group_Mark` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`Group_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tblmember`;
+CREATE TABLE `tblmember` (
+  `Member_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Member_Name` varchar(200) DEFAULT NULL,
+  `Member_Phone` varchar(50) DEFAULT NULL,
+  `Member_Address` varchar(255) DEFAULT NULL,
+  `Member_Password` varchar(200) DEFAULT NULL,
+  `Member_Email` varchar(200) DEFAULT NULL,
+  `Member_Status` int(11) DEFAULT NULL,
+  `Member_Gender` varchar(10) DEFAULT NULL,
+  `Member_time_limit` int(30) DEFAULT NULL,
+  `Member_Photo` varchar(200) DEFAULT NULL,
+  `Member_Active_Code` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`Member_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `tblpoll`;
+CREATE TABLE `tblpoll` (
+  `Poll_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Poll_Question` varchar(255) NOT NULL,
+  `Poll_LangID` int(3) unsigned NOT NULL,
+  `Poll_Status` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Poll_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tblproduct`;
+CREATE TABLE `tblproduct` (
+  `Product_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Product_Type` varchar(20) DEFAULT NULL,
+  `Product_Name` varchar(255) DEFAULT NULL,
+  `Product_Deal` varchar(200) DEFAULT NULL,
+  `Product_LinkName` varchar(200) DEFAULT NULL,
+  `Product_GroupID` int(11) DEFAULT NULL,
+  `Product_DestinationID` int(11) DEFAULT NULL,
+  `Product_Photo` varchar(200) DEFAULT NULL,
+  `Product_Map` varchar(255) DEFAULT NULL,
+  `Product_Sold` int(11) DEFAULT NULL,
+  `Product_Content` text,
+  `Product_Description` text,
+  `Product_Terms_of_Use` text,
+  `Product_Note` text,
+  `Product_Price` int(200) DEFAULT NULL,
+  `Product_Hot` int(11) DEFAULT NULL,
+  `Product_Minimun` int(11) DEFAULT NULL,
+  `Product_DealPrice` int(200) DEFAULT NULL,
+  `Product_StartDate` varchar(50) DEFAULT NULL,
+  `Product_EndDate` varchar(50) DEFAULT NULL,
+  `Product_Quantity` int(50) DEFAULT NULL,
+  `Product_Buy` int(50) DEFAULT '0',
+  `Product_Status` int(11) DEFAULT NULL,
+  `Product_LangID` int(11) DEFAULT NULL,
+  `Product_NumberView` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Product_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `tblsupport`;
+CREATE TABLE `tblsupport` (
+  `Support_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Support_Name` varchar(225) DEFAULT NULL,
+  `Support_Value` varchar(255) DEFAULT NULL COMMENT 'nick',
+  `Support_Status` tinyint(1) DEFAULT '0' COMMENT 'trang thai',
+  `Support_Order` int(3) NOT NULL DEFAULT '1' COMMENT 'Xap xep',
+  `Support_Type` varchar(255) DEFAULT NULL COMMENT 'loai support nao,skype hay yahoo',
+  `Support_LangID` int(11) DEFAULT '1',
+  `Support_Phone` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`Support_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tblsystem`;
+CREATE TABLE `tblsystem` (
+  `System_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `System_Name` varchar(100) DEFAULT NULL,
+  `System_Value` varchar(100) DEFAULT NULL,
+  `System_Code` varchar(100) DEFAULT NULL,
+  `System_Type` varchar(225) NOT NULL DEFAULT 'text' COMMENT 'text|number|checkbox|radio|date',
+  `System_GroupValue` text,
+  `System_Description` text,
+  PRIMARY KEY (`System_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tblusergroup`;
+CREATE TABLE `tblusergroup` (
+  `UserGroup_ID` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `UserGroup_Name` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`UserGroup_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tblusergroup_moduleroll`;
+CREATE TABLE `tblusergroup_moduleroll` (
+  `UGMR_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `UGMR_UserGroupID` int(11) NOT NULL,
+  `UGMR_MRID` int(11) NOT NULL,
+  PRIMARY KEY (`UGMR_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `tblvote`;
+CREATE TABLE `tblvote` (
+  `Vote_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Vote_PollID` int(11) NOT NULL,
+  `Vote_Answer` varchar(255) NOT NULL,
+  `Vote_Status` tinyint(1) DEFAULT '0',
+  `Vote_Number` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Vote_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(250) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `phone` varchar(225) DEFAULT NULL,
+  `fax` varchar(1000) DEFAULT NULL,
+  `gender` tinyint(1) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `active` tinyint(1) NOT NULL,
+  `user_type_id` int(11) NOT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  `create_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `firstname` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `website` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `user_type`;
+CREATE TABLE `user_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  `permission` text,
+  `editable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+-- 2012-04-20 09:13:29
