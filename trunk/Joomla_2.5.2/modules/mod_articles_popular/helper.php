@@ -58,7 +58,7 @@ abstract class modArticlesPopularHelper
 				$item->link = JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catslug));
 			} else {
 				$item->link = JRoute::_('index.php?option=com_users&view=login');
-			}
+			}			
 		}
 
 		return $items;
