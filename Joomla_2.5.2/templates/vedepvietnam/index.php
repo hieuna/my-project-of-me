@@ -33,7 +33,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 
 		<!-- The following line loads the template JavaScript file located in the template folder. It's blank by default. -->
 		<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery.accordion.js"></script>
+		<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery.cycle.all.min.js"></script>
 	</head>
 	<body style="padding: 0px; margin: 0px;">
    
@@ -245,7 +245,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 					<jdoc:include type="modules" name="vn-sidebar" style="none" />   
 				</div>
 				<div class="channelttopright">
-					<div class="box-module" id="tab_accordion">
+					<div class="box-module">
 						<jdoc:include type="modules" name="vn-topright" style="none" />
 					</div>
 				</div>
@@ -406,157 +406,7 @@ $view	= JRequest::GetCmd('view', '', 'GET');
     <div id="colunmRight">
     	<jdoc:include type="modules" name="vn-adver1" />
 
-<div class="HeadTTCT fontsize16 color3 bold">
-    <div class="paddingLright10px">
-        <a class="color3" style="line-height:35px;" href="http://tuoitre.vn/Tuoi-tre-cuoi-tuan/Index.html" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>                       
-    </div>
-</div>
 
-<div class="boxShareRight">
-    <div class="boxShareRightCtent">
-        <a href="http://tuoitre.vn/Tuoi-tre-cuoi-tuan/Redirect.aspx?ArticleID=484857&ChannelID=119" target="_blank"
-           style="display:block;width:80px;float:left;height:80px;">
-            <img src="http://www.tuoitre.vn/Images/HeadImage/857/484857_100_100.jpg" style="width:80px;height:80px;" alt="" />
-        </a>
-        <div class="bold" style="line-height: 14px;float:left;overflow:hidden;padding-left:8px;width:192px">
-            <a class="color3" href="http://tuoitre.vn/Tuoi-tre-cuoi-tuan/Redirect.aspx?ArticleID=484857&ChannelID=119" target="_blank">
-                �Hi?u l?ch s? d? d? do�n tuong lai�
-            </a>
-        </div>
-        
-                <ul style="width:190px;">
-             
-                    <li>
-                        <a href="http://tuoitre.vn/Tuoi-tre-cuoi-tuan/Redirect.aspx?ArticleID=484854&ChannelID=119" target="_blank">
-                            L?n l�n trong th�nh ph? c?a t�nh b?n
-                        </a> 
-                    </li>
-             
-                    <li>
-                        <a href="http://tuoitre.vn/Tuoi-tre-cuoi-tuan/Redirect.aspx?ArticleID=484855&ChannelID=119" target="_blank">
-                            �?o ho�n luong
-                        </a> 
-                    </li>
-            
-                </ul>
-            
-        <div class="clearFix"></div>
-    </div>
-</div>
-
-<div class="HeadTTC fontsize16 color3 bold">
-    <div class="paddingLright10px">
-        <a class="color3" href="http://chuyentrang.tuoitre.vn/TTC" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>                       
-    </div>
-</div>
-
-<div class="boxShareRight">
-    <div class="boxShareRightCtent">
-        <a href="http://chuyentrang.tuoitre.vn/TTC/Index.aspx?ArticleID=482254&ChannelID=103" target="_blank"
-           style="display:block;width:80px;float:left;height:80px;">
-            <img src="http://www.tuoitre.vn/Images/HeadImage/254/482254_100_100.jpg" style="width:80px;height:80px;" alt="" />
-        </a>
-        <div class="bold" style="line-height: 14px;float:left;overflow:hidden;padding-left:8px;width:192px">
-            <a class="color3" href="http://chuyentrang.tuoitre.vn/TTC/Index.aspx?ArticleID=482254&ChannelID=103" target="_blank">
-                Ch?ng ngoan
-            </a>
-        </div>
-        
-                <ul style="width:190px;">
-             
-                    <li>
-                        <a href="http://chuyentrang.tuoitre.vn/TTC/Index.aspx?ArticleID=482255&ChannelID=103" target="_blank">
-                            V? ch?ng t�i trong �b�o gi�
-                        </a> 
-                    </li>
-             
-                    <li>
-                        <a href="http://chuyentrang.tuoitre.vn/TTC/Index.aspx?ArticleID=482251&ChannelID=103" target="_blank">
-                            Thu t? l?p h?c
-                        </a> 
-                    </li>
-            
-                </ul>
-            
-        <div class="clearFix"></div>
-    </div>
-</div>
-
-<div class="Headaotrang fontsize16 color3 bold">
-    <div class="paddingLright10px">
-        <a class="color3" href="http://tuoitre.vn/Ao-trang/Index.html" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>                       
-    </div>
-</div>
-
-<div class="boxShareRight">
-    <div class="boxShareRightCtent">
-        <a href="http://tuoitre.vn/Ao-trang/484604/Co-mot-Festival-Hue-tho.html" target="_self"
-           style="display:block;width:80px;float:left;height:80px;">
-            <img src="http://www.tuoitre.vn/Images/HeadImage/604/484604_100_100.jpg" style="width:80px;height:80px;" alt="" />
-        </a>
-        <div class="bold" style="line-height: 14px;float:left;overflow:hidden;padding-left:8px;width:192px">
-            <a class="color3" href="http://tuoitre.vn/Ao-trang/484604/Co-mot-Festival-Hue-tho.html" target="_self">
-                C� m?t Festival Hu? tho
-            </a>
-        </div>
-        
-                <ul style="width:190px;">
-             
-                    <li>
-                        <a href="http://tuoitre.vn/Ao-trang/479915/E-ap.html" target="_self">
-                            E ?p
-                        </a> 
-                    </li>
-             
-                    <li>
-                        <a href="http://tuoitre.vn/Ao-trang/479921/Mon-qua-bi-mat.html" target="_self">
-                            M�n qu� b� m?t
-                        </a> 
-                    </li>
-            
-                </ul>
-            
-        <div class="clearFix"></div>
-    </div>
-</div>
-
-<div class="HeadTusach fontsize16 color3 bold">
-    <div class="paddingLright10px">
-        <a class="color3" href="http://tusach.tuoitre.vn" target="_blank" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>                       
-    </div>
-</div>
-
-<div class="boxShareRight">
-    <div class="boxShareRightCtent">
-        <a href="http://tusach.tuoitre.vn/?ArticleID=473114&ChannelID=371" target="_blank"
-           style="display:block;width:80px;float:left;height:80px;">
-            <img src="http://www.tuoitre.vn/Images/HeadImage/114/473114_100_100.jpg" style="width:80px;height:80px;" alt="" />
-        </a>
-        <div class="bold" style="line-height: 14px;float:left;overflow:hidden;padding-left:8px;width:192px">
-            <a class="color3" href="http://tusach.tuoitre.vn/?ArticleID=473114&ChannelID=371" target="_blank">
-                �?c m?t t�nh y�u
-            </a>
-        </div>
-        
-                <ul style="width:190px;">
-             
-                    <li>
-                        <a href="http://tusach.tuoitre.vn/?ArticleID=473115&ChannelID=371" target="_blank">
-                            Giang h? S�i G�n
-                        </a> 
-                    </li>
-             
-                    <li>
-                        <a href="http://tusach.tuoitre.vn/?ArticleID=471579&ChannelID=371" target="_blank">
-                            Steve Jobs - s?c m?nh c?a s? kh�c bi?t - K? cu?i
-                        </a> 
-                    </li>
-            
-                </ul>
-            
-        <div class="clearFix"></div>
-    </div>
-</div>
 
 <jdoc:include type="modules" name="vn-user1" style="none" />
 
@@ -2054,10 +1904,13 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 </div>
 
 </form>
-</body>
-<script language="javascript" type="text/javascript">
-     $(function(){
-		$('#tab_accordion').accordion(); 
-	 });
+<script type="text/javascript">
+$(document).ready(function() {	
+	$('#most_read').cycle({
+		fx: 'turnUp',
+		timeout: 5000
+	});
+});
 </script>
+</body>
 </html>

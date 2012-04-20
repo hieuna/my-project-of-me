@@ -10,15 +10,24 @@
 defined('_JEXEC') or die;
 ?>
 <?php if (!empty($list)) :?>
-	<a class="title_accordion" href="javascript: void(0);">Phản hồi nhiều nhất</a>
-	<div>
+	<div class="title_bg">Tin phản hồi nhiều nhất</div>
+	<div class="box-module-content">
 		<ul class="ul-module<?php echo $moduleclass_sfx; ?>">
-			<?php foreach ($list as $item) : ?>
-			<li>
+			<?php
+			$i = 0; 
+			foreach ($list as $item) :
+			$i++;
+			if ($i%2 == 0) $bg = ' style="background: #ebf8fe;"'; else $bg = ''  
+			?>
+			<li<?php echo $bg;?>>
+				<a href="<?php echo $item->link; ?>">
+					<img class="img65" src="<?php echo htmlspecialchars(json_decode($item->images)->image_intro); ?>" alt="<?php echo $item->title; ?>" />
+				</a>
 				<a href="<?php echo $item->link; ?>">
 					<?php echo $item->title; ?> (<?php echo $item->count;?>)
 				</a>
 			</li>
+			<div class="clearfix"></div>
 			<?php endforeach; ?>
 		</ul>
 	</div>

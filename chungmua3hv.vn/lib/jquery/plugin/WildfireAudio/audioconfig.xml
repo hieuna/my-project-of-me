@@ -1,0 +1,17 @@
+<audio>
+  <config>
+    <autoplay>true</autoplay>
+  </config>
+  <entry>
+    <title>track1</title>
+    <url>http://path.to/musicfile.mp3</url>
+  </entry>
+  <entry>
+    <title>track2</title>
+    <url>http://path.to/musicfile.mp3</url>
+  </entry>
+  <entry>
+    <title>track3</title>
+    <url>http://path.to/musicfile.mp3</url>
+  </entry>
+</audio>

@@ -16,7 +16,7 @@ class modArticlesCommentsHelper
 		//get database
 		$db		= JFactory::getDbo();
 		$query	= $db->getQuery(true);
-		$query->select('cd.id, cd.title, cd.alias, cd.created, cd.catid, COUNT(cm.object_id) AS count, cat.alias AS catalias');
+		$query->select('cd.id, cd.title, cd.alias, cd.created, cd.catid, cd.images, COUNT(cm.object_id) AS count, cat.alias AS catalias');
 		$query->from('#__content AS cd, #__jcomments AS cm, #__categories AS cat');
 		$query->where('cd.id = cm.object_id AND cd.catid=cat.id AND cd.state = 1 AND cm.published=1');
 		$query->group("cm.object_id");
@@ -48,6 +48,7 @@ class modArticlesCommentsHelper
 			$lists[$i]->link	= JRoute::_(ContentHelperRoute::getArticleRoute($slug, $catslug));
 			$lists[$i]->title	= $row->title;
 			$lists[$i]->count	= $row->count;
+			$lists[$i]->images	= $row->images;
 
 			$i++;
 		}

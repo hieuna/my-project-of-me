@@ -16,38 +16,50 @@ ul.categories-module li{
 	margin: 0; padding: 0;
 }
 #colunmLeft1 ul li{
-	margin-bottom: 15px;
+	margin-bottom: 15px; float: left; margin-right: 5px; display: block; width: 285px;
+}
+#colunmLeft1 ul li.mr0{
+	margin-right: 0;
 }
 .textLeft p, .textLeft h2{
 	padding: 0; margin: 0;
 }
 .thumnail_view{
-	width: 120px; float: left; margin: 0 8px 2px 0; border: 1px solid #ccc; padding: 2px;
+	width: 120px; float: left; margin: 0 5px 0px 0; border: 1px solid #ccc; padding: 2px;
 }
-/*-- UL COLLECTION NEWS --*/
-#tab_accordion{
-	width: 100%; height: 475px; overflow: hidden; 
-}
-#tab_accordion a.title_accordion{
-	width: 100%; height: 24px; line-height: 24px; float: left; background: url("../images/bg_title_module_normal.jpg") repeat-x; font-size: 12px; text-transform: uppercase; padding-left: 5px; font-weight: bold; color: #000; cursor: pointer;
-}
-#tab_accordion a.selected{
-	background: url("../images/bg_title_module.jpg") repeat-x; color: #fff;
-}
+/*-- BOX-MODULES --*/
 .box-module{
-	margin: 2px; padding: 0;
+	margin: 2px 0; padding: 0;
+}
+.title_bg{
+	height: 18px; background: url("../images/menu_bg.gif") repeat-x; color: #fff; padding: 5px 0px 0px 10px; text-transform: uppercase; font-weight: bold;
+}
+.box-module-content{
+	padding: 5px; border: 1px solid #dbdbdb; margin-bottom: 5px;
+}
+#most_read{
+	height: 300px; overflow: hidden;
+}
+#most_read li{
+	margin-left: 5px;
 }
 ul.ul-module, ul.mostread{
-	margin: 5px 0; padding: 0;
+	margin: 0; padding: 0;
 }
 ul.ul-module li, ul.mostread li{
-	list-style: none; background: url("../images/iconBlue.jpg") no-repeat 5px 8px; padding: 2px 0 2px 13px;
+	width: 100%; float: left; list-style: none; padding: 2px 0; text-align: left; cursor: pointer;
+}
+ul.ul-module li img, ul.mostread li img{
+	float: left; margin: 0px 5px 2px 0; border: 1px solid #e4effe; padding: 1px;
 }
 ul.ul-module li a, ul.mostread li a{
 	color: #000; text-decoration: none;
 }
 ul.ul-module li a:hover, ul.mostread li a:hover{
 	color: #0072bc;
+}
+ul.ul-module li.hot a, ul.mostread li.hot a{
+	padding: 2px 0 0 2px;
 }
 
 /*-- LATEST NEWS --*/
@@ -116,4 +128,24 @@ ul.listOtherNewsChaoco li a:hover{
 /*-- DETAIL CONTENT --*/
 .sortHomeCenter .item-page img{
 	max-width: 450px; width: auto !important; width: 460px; height: auto !important;
+}
+
+/*-- IMAGE --*/
+.img45{
+	width: 45px;
+}
+.img55{
+	width: 55px;
+}
+.img65{
+	width: 65px;
+}
+.img75{
+	width: 75px;
+}
+.img100{
+	width: 100px;
+}
+.img125{
+	width: 125px;
 }

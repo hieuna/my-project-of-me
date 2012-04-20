@@ -1,0 +1,9 @@
+﻿#jqnews
+{
+	overflow: hidden; padding-top:0px; height:87px; margin:0px;
+}
+
+#jqnews label
+{
+	float:left;	height: 87px; margin:5px;
+}

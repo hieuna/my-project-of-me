@@ -10,15 +10,16 @@
 defined('_JEXEC') or die;
 ?>
 <?php if (!empty($list)) :?>
-	<a class="title_accordion" href="javascript: void(0);">Tin nóng</a>
-	<div>
+	<div class="title_bg">Tin nóng</div> 
+	<div class="box-module-content" style="border: none;">
 		<ul class="ul-module<?php echo $moduleclass_sfx; ?>">
 			<?php foreach ($list as $item) : ?>
-			<li>
+			<li class="hot"><font color="red">»</font>
 				<a href="<?php echo $item->link; ?>">
 					<?php echo $item->title; ?>
 				</a>
 			</li>
+			<div class="clearfix"></div>
 			<?php endforeach; ?>
 		</ul>
 	</div>

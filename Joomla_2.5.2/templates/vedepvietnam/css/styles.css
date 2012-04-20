@@ -3,7 +3,7 @@
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input, caption, tfoot, thead {		
 	text-decoration:none;	
 }
-.clearFix{
+.clearFix, .clearfix{
 	clear:both;
 }
 .floatLeft{
@@ -195,7 +195,7 @@ body a:hover{
 	overflow:hidden;
 }
 .boxTabMnuShare{
-	background:url(../images/lineBttom.jpg) bottom right no-repeat;
+	/*background:url(../images/lineBttom.jpg) bottom right no-repeat;*/
 	height:26px;	
 	clear:both;
 	margin: 3px 3px 0px 3px;		
@@ -861,34 +861,15 @@ a.viewAllgold:hover{background:url(../images/w-icon.jpg) no-repeat right; color:
 	overflow:hidden;
 }
 
-.ChannelSample_left
-{
-	background:url(../images/ChannelSample_left.jpg) top left no-repeat;
-	width:8px;	
-	float:left;
-	height:208px;
-	overflow:hidden;
-}
-.ChannelSample_rpt
-{
-	background:url(../images/ChannelSample_rpt.jpg) top left repeat-x;
-	width:560px;	
-	float:left;	
-	margin-bottom:2px;
-	overflow:hidden;
-}
-.ChannelSample_right
-{
-	background:url(../images/ChannelSample_right.jpg) top left no-repeat;
-	width:7px;	
-	float:left;
-	height:208px;
-	overflow:hidden;
+.Channel-box-home{
+	width:280px; height: 350px; border: 1px solid #dbdbdb; float:left; margin-bottom:10px; overflow:hidden;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	behavior: url(ie-css3.htc);
 }
 .txt_16_bold
 {
 	font-family:Arial;
-	font-size:16px;
+	font-size:13px;
 	color:#0072bc;
 	font-weight:bold;	
 	display:block;
@@ -914,7 +895,7 @@ a.viewAllgold:hover{background:url(../images/w-icon.jpg) no-repeat right; color:
 }
 .ItemSubCS
 {
-	width:450px;margin-top:2px;clear:both;background-image:url(../images/iconRed.jpg);background-repeat:no-repeat;background-position:0px 7px;
+	width:250px;margin-top:2px;clear:both;background-image:url(../images/iconRed.jpg);background-repeat:no-repeat;background-position:0px 7px;
 	padding-left:8px;
 }
 .ttchaodontinbaicuaban
