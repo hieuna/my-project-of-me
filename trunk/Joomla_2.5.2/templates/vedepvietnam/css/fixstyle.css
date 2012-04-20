@@ -16,7 +16,7 @@ ul.categories-module li{
 	margin: 0; padding: 0;
 }
 #colunmLeft1 ul li{
-	margin-bottom: 15px; float: left; margin-right: 5px; display: block; width: 285px;
+	margin-bottom: 5px; float: left; margin-right: 5px; display: block; width: 285px;
 }
 #colunmLeft1 ul li.mr0{
 	margin-right: 0;
