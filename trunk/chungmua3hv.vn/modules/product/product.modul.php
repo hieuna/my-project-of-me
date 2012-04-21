@@ -139,9 +139,10 @@ class product extends VS_Module_Base
 	}
 
 	//SOHAPAY
-	function sohapay_payment(){
+	function sohapay_payment(){		
 		if($_SERVER['REQUEST_METHOD']=='POST')
 		{
+			//var_dump($_POST); die;
 			include_once 'class_payment.php';	
 			$id = $_POST['productID'];
 			$product= $this->getRow("select *,(select Group_Name from tblgroup where Group_ID= {$this->_prefix}DestinationID) as DestinationID from {$this->table} where {$this->_prefix}Status='1' and {$this->_prefix}ID='{$id}'");
@@ -152,10 +153,13 @@ class product extends VS_Module_Base
 			$price_product = $product['Product_DealPrice'];
 			$vat	= ($price_product*10)/100;
 			$price = $price_product+$vat;
-			$order_email = 'chungmua3hv@gmail.com';
-			$order_mobile='';
+			if ($_POST['order_email'] == '') $order_email = 'chungmua3hv@gmail.com';
+			else $order_email = $_POST['order_email'];
+			if ($_POST['order_phone'] == '') $order_mobile = '';
+			else $order_mobile = $_POST['order_phone'];
+
 			$sohapay = new PG_checkout();
-			$url = $sohapay->buildCheckoutUrl($return_url, $transaction_info, $order_code, $price, $order_email, $order_mobile='');
+			$url = $sohapay->buildCheckoutUrl($return_url, $transaction_info, $order_code, $price, $order_email, $order_mobile);
 			header('Location:' . $url);
 		}
 	}
@@ -442,12 +446,9 @@ header('Location:' . $request_url);
 		$this->assign("sPaging", $sPaging);
 
 		$this->assign("product_item_list",$product);
-
+		$this->assign("order_email",$_SESSION["member"]["email"]);
+		$this->assign("order_phone",$_SESSION["member"]["phone"]);
 		$this->display("product_list.tpl");
-
-		 
-	
-
 	}
 
 	function showGetCategory($gid='0'){

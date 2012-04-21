@@ -1,6 +1,6 @@
 
 {foreach from=$product_item_home item=oProduct}
-<form action="?mod=product&task=baokim" method="post">
+<form action="?mod=product&task=baokim" method="post" id="frmPOST_{$oProduct.Product_ID}" name="frmPOST_{$oProduct.Product_ID}">
 <input type="hidden" value="{$oProduct.Product_ID}" name="productID"/>
 <div class="dealBox">
             	
@@ -13,19 +13,15 @@
                     	
                  	{if $checkbthome}
                     <a href="mua-hang.php?ID={$oProduct.Product_ID}"></a>
-                 	{/if}					<div>										</div>
+                 	{/if}					<div style="padding: 10px 50px 0 0; margin:0; width: auto; text-align: right;">						<img id="cl_shp_{$oProduct.Product_ID}" src="https://sohapay.com/images/btn/muangay_sohapay_green.png" style="border:none; cursor: pointer;" />						<input type="hidden" name="order_email" value="{$order_email}" />						<input type="hidden" name="order_phone" value="{$order_phone}" />					</div>
                     <div style="background-image:url(https://www.baokim.vn/promote/paymentbk.png);width:180px;height:50px;margin-left:-4px;margin-bottom:10px">
-    					<div style="padding-top:5px;margin-left:40px">
-        
-      		 				 <input type="submit" style="background-color:#78AB2A;border:none;color:#FFF;font-size:14px;height:41px;padding-bottom:10px;font-weight:bold;width:130px" id="target" name="submit" value="Mua Trực Tuyến"/>
-          
-        				</div>
+    					<div style="padding-top:5px;margin-left:40px">      		 				 <div style="cursor: pointer; background-color:#78AB2A;border:none;color:#FFF;font-size:14px;height:22px;padding:8px 0 12px 0;font-weight:bold;width:130px" id="target_{$oProduct.Product_ID}">Mua trực tuyến</div>        				</div>
      					<div style="font-size:11px;margin-left:75px;color:#FFF;margin-top:-14px">Tích lũy : <b>{$oProduct.Product_DealPrice/100|number_format}</b> đ
                         </div>
    					 </div>	
                         
                        
-                    </div>
+                    </div>					{literal}                    <script type="text/javascript">                    $(function(){                        $('#cl_shp_{/literal}{$oProduct.Product_ID}{literal}').click(function(){                            $('#frmPOST_{/literal}{$oProduct.Product_ID}{literal}').attr("action", "?mod=product&task=sohapay");                            $('#frmPOST_{/literal}{$oProduct.Product_ID}{literal}').submit();                                                 });                        $('#target_{/literal}{$oProduct.Product_ID}{literal}').click(function(){                        	$('#frmPOST_{/literal}{$oProduct.Product_ID}{literal}').attr("action", "?mod=product&task=baokim");                            $('#frmPOST_{/literal}{$oProduct.Product_ID}{literal}').submit();                         });                    });                    </script>                    {/literal}
                    
                     
                     <div class="dealPriceRight"></div>
