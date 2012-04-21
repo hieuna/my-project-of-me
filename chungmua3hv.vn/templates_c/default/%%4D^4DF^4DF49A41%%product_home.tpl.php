@@ -1,12 +1,14 @@
-<?php /* Smarty version 2.6.19, created on 2012-04-20 22:53:55
+<?php /* Smarty version 2.6.19, created on 2012-04-21 11:52:34
          compiled from product_home.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'product_home.tpl', 12, false),array('modifier', 'echo_date', 'product_home.tpl', 41, false),array('modifier', 'fulldate', 'product_home.tpl', 57, false),array('modifier', 'default', 'product_home.tpl', 61, false),array('modifier', 'percent', 'product_home.tpl', 62, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'product_home.tpl', 12, false),array('modifier', 'echo_date', 'product_home.tpl', 37, false),array('modifier', 'fulldate', 'product_home.tpl', 53, false),array('modifier', 'default', 'product_home.tpl', 57, false),array('modifier', 'percent', 'product_home.tpl', 58, false),)), $this); ?>
 
 <?php $_from = $this->_tpl_vars['product_item_home']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['oProduct']):
 ?>
-<form action="?mod=product&task=baokim" method="post">
+<form action="?mod=product&task=baokim" method="post" id="frmPOST_<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
+" name="frmPOST_<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
+">
 <input type="hidden" value="<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
 " name="productID"/>
 <div class="dealBox">
@@ -27,20 +29,33 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
                  	<?php if ($this->_tpl_vars['checkbthome']): ?>
                     <a href="mua-hang.php?ID=<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
 "></a>
-                 	<?php endif; ?>					<div>										</div>
+                 	<?php endif; ?>					<div style="padding: 10px 50px 0 0; margin:0; width: auto; text-align: right;">						<img id="cl_shp_<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
+" src="https://sohapay.com/images/btn/muangay_sohapay_green.png" style="border:none; cursor: pointer;" />						<input type="hidden" name="order_email" value="<?php echo $this->_tpl_vars['order_email']; ?>
+" />						<input type="hidden" name="order_phone" value="<?php echo $this->_tpl_vars['order_phone']; ?>
+" />					</div>
                     <div style="background-image:url(https://www.baokim.vn/promote/paymentbk.png);width:180px;height:50px;margin-left:-4px;margin-bottom:10px">
-    					<div style="padding-top:5px;margin-left:40px">
-        
-      		 				 <input type="submit" style="background-color:#78AB2A;border:none;color:#FFF;font-size:14px;height:41px;padding-bottom:10px;font-weight:bold;width:130px" id="target" name="submit" value="Mua Trực Tuyến"/>
-          
-        				</div>
+    					<div style="padding-top:5px;margin-left:40px">      		 				 <div style="cursor: pointer; background-color:#78AB2A;border:none;color:#FFF;font-size:14px;height:22px;padding:8px 0 12px 0;font-weight:bold;width:130px" id="target_<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
+">Mua trực tuyến</div>        				</div>
      					<div style="font-size:11px;margin-left:75px;color:#FFF;margin-top:-14px">Tích lũy : <b><?php echo ((is_array($_tmp=$this->_tpl_vars['oProduct']['Product_DealPrice']/100)) ? $this->_run_mod_handler('number_format', true, $_tmp) : smarty_modifier_number_format($_tmp)); ?>
 </b> đ
                         </div>
    					 </div>	
                         
                        
-                    </div>
+                    </div>					<?php echo '                    <script type="text/javascript">                    $(function(){                        $(\'#cl_shp_'; ?>
+<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
+<?php echo '\').click(function(){                            $(\'#frmPOST_'; ?>
+<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
+<?php echo '\').attr("action", "?mod=product&task=sohapay");                            $(\'#frmPOST_'; ?>
+<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
+<?php echo '\').submit();                                                 });                        $(\'#target_'; ?>
+<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
+<?php echo '\').click(function(){                        	$(\'#frmPOST_'; ?>
+<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
+<?php echo '\').attr("action", "?mod=product&task=baokim");                            $(\'#frmPOST_'; ?>
+<?php echo $this->_tpl_vars['oProduct']['Product_ID']; ?>
+<?php echo '\').submit();                         });                    });                    </script>                    '; ?>
+
                    
                     
                     <div class="dealPriceRight"></div>
