@@ -24,8 +24,11 @@ ul.categories-module li{
 .textLeft p, .textLeft h2{
 	padding: 0; margin: 0;
 }
+.fix_image{
+	width: 124px; height: 100px; overflow: hidden; float: left; margin: 0 5px 0px 0;
+}
 .thumnail_view{
-	width: 120px; float: left; margin: 0 5px 0px 0; border: 1px solid #ccc; padding: 2px;
+	width: 120px; border: 1px solid #ccc; padding: 2px;
 }
 /*-- BOX-MODULES --*/
 .box-module{
