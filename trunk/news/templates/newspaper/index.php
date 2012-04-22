@@ -70,11 +70,13 @@ $group		= JRequest::getString('group', '', 'GET');
 					 </div>
 				 </div>
 			</div>
+			<!--  
 			<div class="top-ads">
 				<div style="margin: 0pt auto; width: 1004px;">
 					<jdoc:include type="modules" name="news-top" />
 				</div>
 			</div>
+			-->
 			<div class="nav-wrap">
 				 <div class="clearfix">
 				 	<jdoc:include type="modules" name="news-topmenu" />
@@ -114,7 +116,7 @@ $group		= JRequest::getString('group', '', 'GET');
 									<?php if ($group):?>
 										<?php include("html/warehouse.php");?>
 									<?php else:?>
-										<div class="fl wid470">
+										<div class="fl wid586">
 										<?php
 										if ($view == 'frontpage'){
 											?>

@@ -41,7 +41,7 @@ img{
 	width: 100%; background: #fff; text-align: center;
 }
 .header{
-	width: 1004px; padding: 10px 0; margin: 0 auto;
+	width: 1120px; padding: 5px 0; margin: 0 auto;
 }
 .logo {
     width: 250px; height: 103px; float: left; background: url("../images/logo.png") no-repeat top left;
@@ -93,16 +93,17 @@ img{
 }
 .menu-nav {
     margin: 0 auto;
-    width: 1004px;
+    width: 1145px;
     position: relative;
     text-align: left;
     padding: 0;
 }
 .menu-nav li {
     float: left; height: 26px; line-height: 26px; margin-right: 3px;
+    background: url("../images/bg-li-nav.jpg") no-repeat bottom right; padding-right: 3px;
 }
 .menu-nav li:last-child {
-	margin-right: 0;
+	margin-right: 0; background: none;
 }
 .menu-nav li a {
     color: #fff; font-size: 11px; font-weight: bold; cursor: pointer; display: inline-block; height: 24px; line-height: 24px; padding-left: 6px;
@@ -117,7 +118,7 @@ img{
 	position: absolute; top: 25px; height: 25px; overflow: hidden; left: 0; margin: 0; padding: 0; width: 980px; margin: 0 auto; text-align: center;
 }
 .menu-nav li.active ul li, .menu-nav li#current ul li{
-	list-style: none; display: inline-block;
+	list-style: none; display: inline-block; background: none;
 }
 .menu-nav li.active ul li a, .menu-nav li ul li#current a, .menu-nav li.active ul li.active a{
 	background: none; color:#990406; font-weight: normal;
@@ -137,7 +138,7 @@ img{
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    width: 1004px;
+    width: 1120px;
 }
 .masterContent {
     background-color: #FFFFFF;
@@ -164,8 +165,17 @@ img{
 .fr{
 	float: right;
 }
+.wid586{
+	width: 586px;
+}
+.wid416{
+	width: 416px;
+}
 .wid470{
 	width: 470px;
+}
+.wid420{
+	width: 420px;
 }
 .wid325{
 	width: 325px;
@@ -271,7 +281,7 @@ table.contentpaneopen{
 	width: 100%; text-align: center;
 }
 .banner_special .banneritem{
-	width: 980px; height: 50px; overflow: hidden; padding: 5px 0; margin: 0 auto;
+	width: 1110px; height: 50px; overflow: hidden; padding: 5px 0; margin: 0 auto;
 }
 a.comments-link{
 	color: #004175; font-weight: bold;
@@ -763,7 +773,7 @@ div.ms-quicklaunchouter {
     width: 368px;
 }
 .footer {
-	margin: 0 auto;	margin-top: 30px; background: #f4f5f6; width: 1004px;
+	margin: 0 auto;	margin-top: 30px; background: #f4f5f6; width: 1120px;
 }
 .copyright{
 	color: #7B7B7B;
@@ -2368,7 +2378,7 @@ table.homerightmail td.mailcontent {
 .contenttop_left {
     float: left;
     text-align: left;
-    width: 480px;
+    width: 596px;
     padding-top: 25px;
 }
 .contenttop_righ {
@@ -2378,13 +2388,13 @@ table.homerightmail td.mailcontent {
 }
 .contenttop_left .featured img {
     border: 0 none;
-    height: 300px !important;
+    height: auto !important;
     margin: 0;
     padding: 0;
-    width: 460px !important;
+    width: 580px !important;
 }
 .contenttop_left .featured .info {
-    width: 460px;
+    width: 580px;
 }
 .contenttop_left .featured .info a:link {
     font-family: Arial;
@@ -2579,18 +2589,18 @@ table.homerightmail td.mailcontent {
 	behavior: url(ie-css3.htc);	
 }
 .boxPartner{
-	width: 980px; height: 120px; margin: 0 auto; padding: 5px 0; overflow: hidden; margin-top: 10px;
+	width: 1096px; height: 120px; margin: 0 auto; padding: 5px 0; overflow: hidden; margin-top: 10px;
 	border: 1px solid #c8c8c8; background: #e5e4e5; position: relative;
 	border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 	behavior: url(ie-css3.htc);
 }
 .boxPartner ul{
-	margin: 0; padding: 0; width: 980px; height: 120px; overflow: hidden;
+	margin: 0; padding: 0; width: 1096px; height: 120px; overflow: hidden;
 }
 .boxPartner ul li{
 	list-style: none; float: left; margin: 12px 1px 12px 5px; text-align: left;
-	width: 190px; height: 96px; overflow: hidden;
+	width: 175px; height: 96px; overflow: hidden;
 }
 .boxPartner ul li:last-child{
 	margin-right: 0;
@@ -2607,13 +2617,13 @@ table.homerightmail td.mailcontent {
 
 /*-- SYSTEMS --*/
 .systems{
-	margin: 10px 0 0px 0; width: 1000px; height: 110px; overflow: hidden;
+	margin: 10px 0 0px 0; width: 1110px; height: 110px; overflow: hidden;
 }
 .systems ul{
 	margin: 0; padding: 0;
 }
 .systems ul li{
-	list-style: none; width: 178px; height: 80px; display: block; float: left; text-align: left; padding: 3px; overflow: hidden; margin: 10px 10px 5px 5px;
+	list-style: none; width: 163px; height: 80px; display: block; float: left; text-align: left; padding: 3px; overflow: hidden; margin: 10px 10px 5px 5px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	behavior: url(ie-css3.htc);
 }
@@ -2624,7 +2634,7 @@ table.homerightmail td.mailcontent {
 	margin-right: 0;
 }
 .systems ul li img{
-	float: left; margin: 0px 5px 3px 0; width: 80px; height: auto; border: 1px solid #D8D8D8; padding: 1px;
+	float: left; margin: 0px 5px 3px 0; width: 70px; height: auto; border: 1px solid #D8D8D8; padding: 1px;
 }
 .systems ul li a, .systems ul li a:visited{
 	color: #004175; font-weight: bold; font-size: 12px; text-decoration: none;
