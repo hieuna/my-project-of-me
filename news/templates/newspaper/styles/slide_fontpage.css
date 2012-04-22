@@ -1,6 +1,6 @@
 /*-- SLIDESHOW --*/
 div.wrap {
-	width : 460px;
+	width : 576x;
 	height : 296px;
 	margin : 0 auto;
 	text-align : left;
@@ -30,7 +30,7 @@ div#top div#nav {
 }
 div#top div#nav ul {
 	float : left;
-	width : 460px;
+	width : 576px;
 	height : 52px;
 	list-style-type : none;
 }
@@ -51,20 +51,20 @@ div#video-header {
 }
 div#slide-holder {
 	z-index : 40;
-	width : 460px;
+	width : 580px;
 	height : 296px;
 	position : absolute;
 }
 div#slide-holder div#slide-runner {
 	top : 0px;
 	left : 0px;
-	width : 460px;
+	width : 580px;
 	height : 296px;
 	overflow : hidden;
 	position : absolute;
 }
 div#slide-holder img {
-	width: 460px !important;
+	width: 580px !important;
 	margin : 0;
 	display : none;
 	position : absolute;
@@ -72,7 +72,7 @@ div#slide-holder img {
 div#slide-holder div#slide-controls {
 	left : 0;
 	top : 0px;
-	width : 460px;
+	width : 580px;
 	height : 46px;
 	display : none;
 	position : absolute;

@@ -33,7 +33,7 @@ endif; ?>
 			<img class="img130" src="<?php echo $baseurl;?>images/no_image.jpg" />
 			<?php endif;?>
 		</a>
-		<div class="fl wid300 mt0">
+		<div class="fl wid416 mt0">
 			<?php if (isset ($this->item->toc)) : ?>
 				<?php echo $this->item->toc; ?>
 			<?php endif; ?>

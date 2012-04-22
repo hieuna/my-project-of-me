@@ -28,7 +28,7 @@ if (count($rows) > 0){
 			<a href="<?php echo $link;?>"><?php echo $row->title;?></a>
 		</li>
 		<?php
-		if($i%5 == 0) echo '</ul><ul>'; 
+		if($i%6 == 0) echo '</ul><ul>'; 
 		endforeach;
 		?>
 	</ul>

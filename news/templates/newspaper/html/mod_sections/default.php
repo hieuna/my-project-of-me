@@ -39,7 +39,7 @@ $rows = $db->loadObjectList();
 				<img class="img130" title="<?php echo $row->title;?>" alt="Chưa có ảnh" src="<?php echo $baseurl;?>images/no_image.jpg" />
 				<?php endif;?>
 			</a>
-			<div class="fl wid306">
+			<div class="fl wid420">
 				<a href="<?php echo $link;?>" class="fon6"><?php echo $row->title;?></a> 
 				<div class="fon5 mt0">
 				<?php echo html_entity_decode($row->introtext);?>

@@ -1,77 +1,52 @@
 <?php die("Access Denied"); ?>
-a:2:{s:6:"output";s:0:"";s:6:"result";s:4820:"<div class="box_modules clearfix">
-	<div class="title_box_modules">Tiêu điểm</div>
+a:2:{s:6:"output";s:0:"";s:6:"result";s:3623:"<div class="box_modules clearfix">
+	<div class="title_box_modules">
+		<a href="/projects/news/trang-chu/1.html?group=warehouse&amp;feauture=hot&amp;secid=6&amp;cid=85">Tiêu điểm</a>
+		<a href="/projects/news/trang-chu/1.html?group=warehouse&amp;feauture=hot&amp;secid=6&amp;cid=85" class="addview">Xem tất cả</a>
+	</div>
 	<table cellpadding="0" cellspacing="0" class="focus">
 		<tr>
-							<td class="bdr" valign="top">
-					<a href="/projects/news/moi-truong-kinh-doanh/kinh-te-dau-tu/42-cong-ty-tang-vang-bac-mien-phi-cho-3000-nguoi-dan.html">
-						<img class="img45" src="http://localhost/projects/news//images/stories/13451055812256870323.jpg" />
+							<td class="bdr" valign="top" style="width: 50%;">
+					<a href="/projects/news/do-choi-so/359-dream-hotel-noi-dung-chan-mo-uoc.html">
+						<img class="img45" src="http://localhost/projects/news//images/stories/dream chuan.jpg" />
 					</a>
-					<a href="/projects/news/moi-truong-kinh-doanh/kinh-te-dau-tu/42-cong-ty-tang-vang-bac-mien-phi-cho-3000-nguoi-dan.html" class="mostread">
-						Công ty tặng vàng, bạc miễn phí cho 3.000 người dân</a>
+					<a href="/projects/news/do-choi-so/359-dream-hotel-noi-dung-chan-mo-uoc.html" class="mostread">
+						 Dream Hotel - Nơi dừng chân mơ ước!</a>
 				</td>
-							<td valign="top">
-					<a href="/projects/news/moi-truong-kinh-doanh/kinh-te-dau-tu/39-chung-khoan-viet-nam-tang-manh-nhat-chau-a-nho-ha-lai-suat.html">
-						<img class="img45" src="http://localhost/projects/news//images/stories/chung-khoan-tang_8d623.jpg" />
+							<td valign="top" style="width: 50%;">
+					<a href="/projects/news/category-table/272-bo-y-te-yeu-cau-lay-mau-thuoc-cam-kiem-tra-chi.html">
+						<img class="img45" src="http://localhost/projects/news//images/stories/son.jpg" />
 					</a>
-					<a href="/projects/news/moi-truong-kinh-doanh/kinh-te-dau-tu/39-chung-khoan-viet-nam-tang-manh-nhat-chau-a-nho-ha-lai-suat.html" class="mostread">
-						Chứng khoán Việt Nam tăng mạnh nhất châu Á nhờ hạ lãi suất</a>
+					<a href="/projects/news/category-table/272-bo-y-te-yeu-cau-lay-mau-thuoc-cam-kiem-tra-chi.html" class="mostread">
+						Bộ Y tế yêu cầu lấy mẫu thuốc cam kiểm tra chì</a>
 				</td>
-			</tr><tr style="background: #F2F8FF;">				<td class="bdr" valign="top">
-					<a href="/projects/news/du-hoc/37-co-phai-nop-ho-so-vao-truong-khong-to-chuc-thi.html">
-						<img class="img45" src="http://localhost/projects/news//images/stories/lam-ho-so_2afe8.jpg" />
+			</tr><tr style="background: #F2F8FF;">				<td class="bdr" valign="top" style="width: 50%;">
+					<a href="/projects/news/the-gioi/nhan-vat-va-doi-thoai/259-putin-gap-obama-sau-khi-nham-chuc.html">
+						<img class="img45" src="http://localhost/projects/news//images/stories/75275804-050111-putin_1.jpg" />
 					</a>
-					<a href="/projects/news/du-hoc/37-co-phai-nop-ho-so-vao-truong-khong-to-chuc-thi.html" class="mostread">
-						Có phải nộp hồ sơ vào trường không tổ chức thi?</a>
+					<a href="/projects/news/the-gioi/nhan-vat-va-doi-thoai/259-putin-gap-obama-sau-khi-nham-chuc.html" class="mostread">
+						Putin gặp Obama sau khi nhậm chức</a>
 				</td>
-							<td valign="top">
-					<a href="/projects/news/the-news/27-chim-en-xuat-hien-day-dac-o-thanh-pho-lao-cai.html">
-						<img class="img45" src="http://localhost/projects/news//images/stories/dsc5453_f86d8.jpg" />
+							<td valign="top" style="width: 50%;">
+					<a href="/projects/news/xay-dung-nong-thon-moi/tin-hoat-dong/257-tong-bi-thu-nguyen-phu-trong-chuong-trinh-xay-dung-thi-diem-mo-hinh-nong-thon-moi-co-suc-lan-toa-rong-khap.html">
+						<img class="img45" src="http://localhost/projects/news//images/stories/tbt-1.jpg" />
 					</a>
-					<a href="/projects/news/the-news/27-chim-en-xuat-hien-day-dac-o-thanh-pho-lao-cai.html" class="mostread">
-						Chim én xuất hiện dày đặc ở thành phố Lào Cai </a>
+					<a href="/projects/news/xay-dung-nong-thon-moi/tin-hoat-dong/257-tong-bi-thu-nguyen-phu-trong-chuong-trinh-xay-dung-thi-diem-mo-hinh-nong-thon-moi-co-suc-lan-toa-rong-khap.html" class="mostread">
+						Tổng Bí thư Nguyễn Phú Trọng: Chương trình xây dựng thí điểm mô hình nông thôn mới có sức lan tỏa rộng khắp</a>
 				</td>
-			</tr><tr>				<td class="bdr" valign="top">
-					<a href="/projects/news/the-news/25-thac-loan-trong-quan-nhau-phat-tu-van-khong-ngan.html">
-						<img class="img45" src="http://localhost/projects/news//images/stories/2_d9ee8.png" />
+			</tr><tr>				<td class="bdr" valign="top" style="width: 50%;">
+					<a href="/projects/news/moi-truong-kinh-doanh/kinh-te-dau-tu/256-can-nhac-mien-giam-thue-cuu-doanh-nghiep.html">
+						<img class="img45" src="http://localhost/projects/news//images/stories/vuong-dinh-hue-0.jpg" />
 					</a>
-					<a href="/projects/news/the-news/25-thac-loan-trong-quan-nhau-phat-tu-van-khong-ngan.html" class="mostread">
-						Thác loạn trong quán nhậu: Phạt tù vẫn không ngán </a>
+					<a href="/projects/news/moi-truong-kinh-doanh/kinh-te-dau-tu/256-can-nhac-mien-giam-thue-cuu-doanh-nghiep.html" class="mostread">
+						Cân nhắc miễn giảm thuế cứu doanh nghiệp</a>
 				</td>
-							<td valign="top">
-					<a href="/projects/news/joomla-overview/what-is-new-in-1-5.html">
-						<img class="img45" src="http://localhost/projects/news//images/stories/xavi24031203_30356.jpg" />
+							<td valign="top" style="width: 50%;">
+					<a href="/projects/news/xay-dung-nong-thon-moi/tin-hoat-dong/255-thu-nhap-cua-nguoi-nong-dan-o-xa-nong-thon-moi-tang-tu-20-30.html">
+						<img class="img45" src="http://localhost/projects/news//images/stories/81926_anh-phu-nham.jpg" />
 					</a>
-					<a href="/projects/news/joomla-overview/what-is-new-in-1-5.html" class="mostread">
-						Mallorca - Barcelona: Và con tim đã vui trở lại</a>
-				</td>
-			</tr><tr style="background: #F2F8FF;">				<td class="bdr" valign="top">
-					<a href="/projects/news/the-thao/bong-da-anh/15-stoke-man-city-phao-dai-britannia-dang-doi.html">
-						<img class="img45" src="http://localhost/projects/news//images/stories/stokemancity1_7a210.jpg" />
-					</a>
-					<a href="/projects/news/the-thao/bong-da-anh/15-stoke-man-city-phao-dai-britannia-dang-doi.html" class="mostread">
-						Stoke - Man City: “Pháo đài” Britannia đang đợi...</a>
-				</td>
-							<td valign="top">
-					<a href="/projects/news/the-thao/bong-da-anh/14-arsene-wenger-su-tu-tin-dang-tro-lai-voi-arsenal.html">
-						<img class="img45" src="http://localhost/projects/news//images/stories/wenger_882bf.jpg" />
-					</a>
-					<a href="/projects/news/the-thao/bong-da-anh/14-arsene-wenger-su-tu-tin-dang-tro-lai-voi-arsenal.html" class="mostread">
-						Arsene Wenger: “Sự tự tin đang trở lại với Arsenal”</a>
-				</td>
-			</tr><tr>				<td class="bdr" valign="top">
-					<a href="/projects/news/the-thao/cup-chau-au/12-chung-ket-noi-bo-hai-cup-chau-au-cho-nguoi-tay-ban-nha.html">
-						<img class="img45" src="http://localhost/projects/news//images/stories/bilbao1_f56d0.jpg" />
-					</a>
-					<a href="/projects/news/the-thao/cup-chau-au/12-chung-ket-noi-bo-hai-cup-chau-au-cho-nguoi-tay-ban-nha.html" class="mostread">
-						Chung kết nội bộ hai cúp châu Âu cho người Tây Ban Nha?</a>
-				</td>
-							<td valign="top">
-					<a href="/projects/news/the-thao/bong-da-quoc-te/9-goi-ten-messi.html">
-						<img class="img45" src="http://localhost/projects/news//images/stories/messi_7a936.jpg" />
-					</a>
-					<a href="/projects/news/the-thao/bong-da-quoc-te/9-goi-ten-messi.html" class="mostread">
-						Gọi tên Messi</a>
+					<a href="/projects/news/xay-dung-nong-thon-moi/tin-hoat-dong/255-thu-nhap-cua-nguoi-nong-dan-o-xa-nong-thon-moi-tang-tu-20-30.html" class="mostread">
+						Thu nhập của người nông dân ở xã nông thôn mới tăng từ 20-30%</a>
 				</td>
 			</tr><tr style="background: #F2F8FF;">		</tr>
 	</table>
