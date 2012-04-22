@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2012-04-20 22:15:31
+<?php /* Smarty version 2.6.19, created on 2012-04-22 17:32:52
          compiled from adver.tpl */ ?>
 <div class="boxAdvert">
 <div class="boxTitle">Quảng Cáo</div>

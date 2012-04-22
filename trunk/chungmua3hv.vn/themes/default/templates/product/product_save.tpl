@@ -10,7 +10,7 @@
    </div>
    <div class="mb-mid-home">
       <div class="coupon-title-home">
-      <p style="float: left; font-size:18px; text-transform:uppercase;">{$category.Group_Name}</p>
+      <p style="float: left; font-size:18px; text-transform:uppercase;">Các sản phẩm đang giảm giá</p>
 </div>
      
 </div>
@@ -129,7 +129,18 @@ countdown(secondsRemaining,'down{/literal}{$product_item_list[foo].Product_ID}{l
    </div>
    <div class="mb-mid-home">
    <a id="filter_deal"></a>
+<div class="wrap-bottom-nav">
+<a id="tab_menu_deal"></a>
+<ul class="wrap-bottom-ul">
+<li class="wrap-bottom-ul-buy"><a href="{$smarty.const.SITE_URL}"><span>Tất cả Deal</span></a></li>
+<li class="wrap-bottom-ul-all wrap-bottom-ul-all-active"><a><span>Đang giảm giá</span></a></li>
+<div class="clear"></div>
+</ul>
 
+
+
+<div class="clear"></div>
+</div>
 <div class="wrap-bottom-list">
       {section loop=$product_item_list start=2  name=foo}
 <form action="?mod=product&task=baokim" method="post">

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2012-04-20 22:15:30
+<?php /* Smarty version 2.6.19, created on 2012-04-22 17:11:13
          compiled from cssDisplay.tpl */ ?>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -29,6 +29,7 @@
 <link rel="stylesheet" type="text/css" href="themes/default/popup.css" media="screen" />
 <script src="themes/default/js/jquery-1.4.2.min.js"></script>
 <script src="countdown.js"></script>
+<script type="text/javascript" src="3hv.js"></script>
 <?php echo '
 <script type="text/javascript">
 $(document).ready(function(){

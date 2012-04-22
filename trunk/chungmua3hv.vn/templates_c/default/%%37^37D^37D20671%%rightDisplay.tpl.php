@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2012-04-20 22:15:31
+<?php /* Smarty version 2.6.19, created on 2012-04-22 17:32:51
          compiled from rightDisplay.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'loadModule', 'rightDisplay.tpl', 6, false),)), $this); ?>

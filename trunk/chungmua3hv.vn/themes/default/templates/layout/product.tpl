@@ -8,12 +8,8 @@
     {loadModule name=header}
     <!-- CONTENT-->
     <div id="pageContent">
-    	<div id="pageLeft">
             <!--Phan noi dung-->
             {loadModule name=product task=$smarty.get.task}
-        </div>
-<!--RIGHT-->        
-       {loadModule name=control task=right}
     <!--ket thuc #pageContent-->
     </div>
     <!-- FOOTER-->

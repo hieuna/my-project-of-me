@@ -37,7 +37,7 @@
                     </div>
                     <div class="clr"></div>
                 </div>*}
-                
+                <!-- SOHAPAY -->                <div class="method"  id="{'Thanh toán trực tuến qua SohaPay'|encode}">                    <div class="pageTitle">Thanh toán trực tuyến qua SohaPay</div>                    <div class="payType" style="margin-left:10px;">                        <img  style="margin:5px;" src="https://sohapay.com/images/merchant/list-bank.jpg" alt="SohaPay" />                    </div>                    <div class="clr"></div>                </div>                <!-- END SOHAPAY -->
                 <div class="method"  id="{'Thanh toán bằng Thẻ nội địa'|encode}">
                     <div class="pageTitle">Thanh toán bằng Thẻ ATM trực tuyến
     </div>

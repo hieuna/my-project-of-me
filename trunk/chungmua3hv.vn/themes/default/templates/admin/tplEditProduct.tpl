@@ -71,6 +71,7 @@
 <table class="frmForm">
 <tr><td class="tdleft">Giá trị thực</td><td  class="tdright"><input type="text" value="{$rowItem.Product_Price}" name="txtValue" style="width:170px"></td></tr>
 <tr><td class="tdleft">Giá bán ra</td><td class="tdright"><input value="{$rowItem.Product_DealPrice}"  type="text" name="txtOutValue" style="width:170px"></td></tr>
+<tr><td class="tdleft">Giá ship</td><td class="tdright"><input value="{$rowItem.Product_Ship}"  type="text" name="Product_Ship" style="width:170px"></td></tr>
 <tr><td class="tdleft">Số lượng phiếu bán</td><td class="tdright"><input value="{$rowItem.Product_Quantity}"  type="text" name="txtNumber" style="width:70px"></td></tr>
 <tr><td class="tdleft" style="width:220px;">Số lượng tối thiểu để đạt giá tốt</td><td class="tdright"><input value="{$rowItem.Product_Minimun}"  type="text" name="txtNumberMinimun" style="width:70px"></td></tr>
 <tr><td class="tdleft">Số lượng đã bán</td><td class="tdright"><input value="{$rowItem.Product_Buy}"  type="text" name="txtNumberBuy" style="width:70px"></td></tr>

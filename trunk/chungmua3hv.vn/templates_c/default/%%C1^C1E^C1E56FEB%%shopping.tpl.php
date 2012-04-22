@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-17 00:43:38
+<?php /* Smarty version 2.6.19, created on 2012-04-22 17:32:51
          compiled from shopping.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'loadModule', 'shopping.tpl', 3, false),)), $this); ?>
@@ -31,4 +31,4 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'loadModule'
 </div>
 </div>
 </body>
-</html>
+</html>

@@ -79,12 +79,7 @@
 
     </div>
     
-    <div class="clr" style="margin-top:35px">
-    	 
-    	<a href="https://www.baokim.vn/payment_guide/chungmua3hvvndeal.html" target="_blank"><img src="themes/default/images/mua-deal-chungmua3hv.gif" border="0" /></a>
-    
-    </div>
-    
+    <div class="clr" style="margin-top:35px; margin-bottom:10px;">
     <div class="topMenu" style="margin-top:2px">
    		<div class="right">
    		<ul>
@@ -93,4 +88,8 @@
             {/section}
         </ul>
         </div>
-   </div>
+   </div>	 
+    
+    </div>
+    
+    

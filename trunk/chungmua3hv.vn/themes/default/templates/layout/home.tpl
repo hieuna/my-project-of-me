@@ -8,12 +8,11 @@
     {loadModule name=header}
     <!-- CONTENT-->
     <div id="pageContent">
-    	<div id="pageLeft">
+    	<div id="pageLeftHome">
             <!--Phan noi dung-->
             {loadModule name=product task=home}
         </div>
 <!--RIGHT-->        
-        	{loadModule name=control task=right}
     <!--ket thuc #pageContent-->
     </div>
     <!-- FOOTER-->

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-17 00:37:16
+<?php /* Smarty version 2.6.19, created on 2012-04-22 18:19:01
          compiled from signin.tpl */ ?>
 <div class="pageTitle">ĐĂNG NHẬP</div>
 <div class="signinBox" style="text-align:center">

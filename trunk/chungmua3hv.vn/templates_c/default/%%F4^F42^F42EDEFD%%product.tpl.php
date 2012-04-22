@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2012-04-20 22:15:30
+<?php /* Smarty version 2.6.19, created on 2012-04-22 20:13:53
          compiled from product.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'loadModule', 'product.tpl', 3, false),)), $this); ?>
@@ -14,13 +14,8 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'loadModule'
 
     <!-- CONTENT-->
     <div id="pageContent">
-    	<div id="pageLeft">
             <!--Phan noi dung-->
             <?php echo smarty_function_loadModule(array('name' => 'product','task' => $_GET['task']), $this);?>
-
-        </div>
-<!--RIGHT-->        
-       <?php echo smarty_function_loadModule(array('name' => 'control','task' => 'right'), $this);?>
 
     <!--ket thuc #pageContent-->
     </div>

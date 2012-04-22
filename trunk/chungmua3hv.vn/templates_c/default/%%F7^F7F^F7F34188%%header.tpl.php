@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2012-04-21 11:10:40
+<?php /* Smarty version 2.6.19, created on 2012-04-22 17:11:13
          compiled from header.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'header.tpl', 6, false),array('modifier', 'selfUrl', 'header.tpl', 35, false),array('modifier', 'encode', 'header.tpl', 35, false),)), $this); ?>
@@ -126,12 +126,7 @@ $this->_sections['foo']['last']       = ($this->_sections['foo']['iteration'] ==
 
     </div>
     
-    <div class="clr" style="margin-top:35px">
-    	 
-    	<a href="https://www.baokim.vn/payment_guide/chungmua3hvvndeal.html" target="_blank"><img src="themes/default/images/mua-deal-chungmua3hv.gif" border="0" /></a>
-    
-    </div>
-    
+    <div class="clr" style="margin-top:35px; margin-bottom:10px;">
     <div class="topMenu" style="margin-top:2px">
    		<div class="right">
    		<ul>
@@ -167,4 +162,8 @@ $this->_sections['foo']['last']       = ($this->_sections['foo']['iteration'] ==
             <?php endfor; endif; ?>
         </ul>
         </div>
-   </div>
+   </div>	 
+    
+    </div>
+    
+    
