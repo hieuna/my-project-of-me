@@ -95,4 +95,4 @@ a:2:{s:6:"output";s:0:"";s:6:"result";s:3360:"<form action="index.php" method="p
 	<input type="hidden" name="option" value="com_poll" />
 	<input type="hidden" name="task" value="vote" />
 	<input type="hidden" name="id" value="14" />
-	<input type="hidden" name="b625ee07709bc9308a2e011486202be0" value="1" /></form>";}
+	<input type="hidden" name="5fd6b3e74cbbf0ffff72599683459692" value="1" /></form>";}
