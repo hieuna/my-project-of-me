@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-17 00:36:28
+<?php /* Smarty version 2.6.19, created on 2012-04-22 18:17:07
          compiled from register.tpl */ ?>
 <div class="pageTitle">ĐĂNG KÝ TÀI KHOẢN </div>
 <div class="signinBox">

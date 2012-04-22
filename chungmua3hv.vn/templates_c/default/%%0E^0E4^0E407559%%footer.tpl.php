@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2012-04-20 22:15:31
+<?php /* Smarty version 2.6.19, created on 2012-04-22 17:11:14
          compiled from footer.tpl */ ?>
 <script src="function.js"></script>
 <div class="pageBottom">

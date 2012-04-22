@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-18 20:52:53
+<?php /* Smarty version 2.6.19, created on 2012-04-22 18:17:37
          compiled from act_register.tpl */ ?>
 <div class="pageTitle">ĐĂNG KÝ TÀI KHOẢN </div>
 <div class="activeBox">
@@ -8,4 +8,4 @@
     <p>Trong vòng 24h email không được kích hoạt, tài khoản này sẽ bị hủy.</p>
     <p> <a href="" style="color:#06F;"> << Quay lại trang chủ</a></p>
 </div>
-       	
+       	

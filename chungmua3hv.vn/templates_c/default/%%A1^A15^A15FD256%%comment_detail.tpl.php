@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2012-03-26 01:05:16
+<?php /* Smarty version 2.6.19, created on 2012-04-22 20:13:56
          compiled from comment_detail.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'selfUrl', 'comment_detail.tpl', 10, false),array('modifier', 'encode', 'comment_detail.tpl', 10, false),array('modifier', 'agoTime', 'comment_detail.tpl', 19, false),array('modifier', 'echo_date', 'comment_detail.tpl', 20, false),array('modifier', 'default', 'comment_detail.tpl', 23, false),)), $this); ?>
@@ -12,7 +12,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'selfUrl', '
                 <div style="clear:both; margin-bottom:5px; color:red;">Bình luận không lịch sự sẽ bị xoá để giữ gìn văn hoá chung </div>
                     <input type="submit" value="Gửi bình luận" class="formBtn">
                     <?php else: ?>
-                    <div rel="<?php echo ((is_array($_tmp=((is_array($_tmp='')) ? $this->_run_mod_handler('selfUrl', true, $_tmp) : selfUrl($_tmp)))) ? $this->_run_mod_handler('encode', true, $_tmp) : smarty_modifier_encode($_tmp)); ?>
+                    <div rel="<?php echo ((is_array($_tmp=((is_array($_tmp='')) ? $this->_run_mod_handler('selfUrl', true, $_tmp) : smarty_modifier_selfUrl($_tmp)))) ? $this->_run_mod_handler('encode', true, $_tmp) : smarty_modifier_encode($_tmp)); ?>
 " id="noLoginClick" class="textArea" style="height:50px;">Bạn cần đăng nhập để thực hiện chức năng này</div>
                <?php endif; ?>
                     </form>
@@ -26,7 +26,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'selfUrl', '
                     <img src="upload/no-avatar.jpg" />
                     <div class="commentUserInfo">
                     	<div class="userName"><span><?php echo $this->_tpl_vars['commentItem']['Member_Name']; ?>
-</span> - Gửi  cách đây <?php echo ((is_array($_tmp=$this->_tpl_vars['commentItem']['Comment_Mktime'])) ? $this->_run_mod_handler('agoTime', true, $_tmp) : agoTime($_tmp)); ?>
+</span> - Gửi  cách đây <?php echo ((is_array($_tmp=$this->_tpl_vars['commentItem']['Comment_Mktime'])) ? $this->_run_mod_handler('agoTime', true, $_tmp) : smarty_modifier_agoTime($_tmp)); ?>
  trước</div>
                         <p>Đăng ký ngày: <?php echo ((is_array($_tmp=$this->_tpl_vars['commentItem']['Member_time_limit'])) ? $this->_run_mod_handler('echo_date', true, $_tmp, 'd/m/Y') : smarty_modifier_echo_date($_tmp, 'd/m/Y')); ?>
 </p>
@@ -52,7 +52,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'selfUrl', '
                  <div class="commentUserReply">
                     <img src="upload/no-avatar.jpg" />
                     <div class="commentUserInfo">
-                    	<div class="userName"><span>ChungMua3HV</span> - Gửi  cách đây <?php echo ((is_array($_tmp=$this->_tpl_vars['oReply']['Comment_Mktime'])) ? $this->_run_mod_handler('agoTime', true, $_tmp) : agoTime($_tmp)); ?>
+                    	<div class="userName"><span>ChungMua3HV</span> - Gửi  cách đây <?php echo ((is_array($_tmp=$this->_tpl_vars['oReply']['Comment_Mktime'])) ? $this->_run_mod_handler('agoTime', true, $_tmp) : smarty_modifier_agoTime($_tmp)); ?>
  trước</div>
                     </div>
                     
@@ -91,3 +91,4 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'selfUrl', '
 })
  </script>      
        '; ?>
+

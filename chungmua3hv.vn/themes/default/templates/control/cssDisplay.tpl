@@ -23,6 +23,7 @@
 <link rel="stylesheet" type="text/css" href="themes/default/popup.css" media="screen" />
 <script src="themes/default/js/jquery-1.4.2.min.js"></script>
 <script src="countdown.js"></script>
+<script type="text/javascript" src="3hv.js"></script>
 {literal}
 <script type="text/javascript">
 $(document).ready(function(){

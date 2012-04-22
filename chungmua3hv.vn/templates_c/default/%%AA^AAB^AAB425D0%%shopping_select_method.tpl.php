@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.19, created on 2012-04-17 01:32:02
+<?php /* Smarty version 2.6.19, created on 2012-04-22 18:20:32
          compiled from shopping_select_method.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'encode', 'shopping_select_method.tpl', 41, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'encode', 'shopping_select_method.tpl', 40, false),)), $this); ?>
 <div class="pageDefault" id="chonphuongthuc">
                 <div class="pageTitle">CHỌN PHƯƠNG THỨC THANH TOÁN</div>
                 <div class="payProcess">
@@ -31,7 +31,9 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'encode', 's
                     <p>Xin quý khách chọn phương thức thanh toán bằng cách click chuột vào phương thức nào mà bạn muốn.</p>
 
                 <p></p>
-                             
+             
+                <!-- SOHAPAY -->                <div class="method"  id="<?php echo ((is_array($_tmp='Thanh toán trực tuến qua SohaPay')) ? $this->_run_mod_handler('encode', true, $_tmp) : smarty_modifier_encode($_tmp)); ?>
+">                    <div class="pageTitle">Thanh toán trực tuyến qua SohaPay</div>                    <div class="payType" style="margin-left:10px;">                        <img  style="margin:5px;" src="https://sohapay.com/images/merchant/list-bank.jpg" alt="SohaPay" />                    </div>                    <div class="clr"></div>                </div>                <!-- END SOHAPAY -->
                 <div class="method"  id="<?php echo ((is_array($_tmp='Thanh toán bằng Thẻ nội địa')) ? $this->_run_mod_handler('encode', true, $_tmp) : smarty_modifier_encode($_tmp)); ?>
 ">
                     <div class="pageTitle">Thanh toán bằng Thẻ ATM trực tuyến
@@ -58,7 +60,8 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'encode', 's
                     <div class="clr"></div>
                 </div>
                 
-                                <div class="method"  id="<?php echo ((is_array($_tmp='Thanh toán bằng thẻ ATM')) ? $this->_run_mod_handler('encode', true, $_tmp) : smarty_modifier_encode($_tmp)); ?>
+                
+                <div class="method"  id="<?php echo ((is_array($_tmp='Thanh toán bằng thẻ ATM')) ? $this->_run_mod_handler('encode', true, $_tmp) : smarty_modifier_encode($_tmp)); ?>
 ">
                     <div class="pageTitle">Thanh toán bằng thẻ ATM
     </div>
@@ -99,7 +102,8 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'encode', 's
                     <div class="clr" id="tieptuc"></div>
                 </div>
                     <div class="clr"></div>
-                 
+                 
+
                       <div class="clr"></div>
               
             </div>

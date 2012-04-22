@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-11-09 03:37:28
+<?php /* Smarty version 2.6.19, created on 2012-04-22 17:51:24
          compiled from shopping_detail.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'shopping_detail.tpl', 48, false),array('modifier', 'decode', 'shopping_detail.tpl', 59, false),array('modifier', 'default', 'shopping_detail.tpl', 60, false),array('modifier', 'selfUrl', 'shopping_detail.tpl', 77, false),array('modifier', 'encode', 'shopping_detail.tpl', 77, false),array('function', 'html_options', 'shopping_detail.tpl', 65, false),)), $this); ?>
@@ -91,7 +91,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
 				</div>
                 <div class="payBoxRight">
                 	Nếu bạn đã tạo tài khoản trên <b>chungmua3hv.vn</b> Hãy đăng nhập để mua hàng!
-                    <a href="dang-nhap.html?url=<?php echo ((is_array($_tmp=((is_array($_tmp='')) ? $this->_run_mod_handler('selfUrl', true, $_tmp) : selfUrl($_tmp)))) ? $this->_run_mod_handler('encode', true, $_tmp) : smarty_modifier_encode($_tmp)); ?>
+                    <a href="dang-nhap.html?url=<?php echo ((is_array($_tmp=((is_array($_tmp='')) ? $this->_run_mod_handler('selfUrl', true, $_tmp) : smarty_modifier_selfUrl($_tmp)))) ? $this->_run_mod_handler('encode', true, $_tmp) : smarty_modifier_encode($_tmp)); ?>
 "></a>
                 </div>
                 <div class="clr"></div>

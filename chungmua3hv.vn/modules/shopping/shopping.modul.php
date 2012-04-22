@@ -31,6 +31,8 @@ class shopping extends VS_Module_Base
 				$this->sendInformation(intval($_GET["id"])); break;
 			case "add":
 				$this->addItem(intval($_GET["pmt_ID"])); break;
+			case "sohapay":
+				$this->payment_sohapay(); break;	
 			default: 
 				header("Location:".SITE_URL);
 			 break;
@@ -201,6 +203,31 @@ alert(\"Bạn nhập sai mã bảo mật.\");
 		
 		$this->display("shopping_detail.tpl");
 	}
+	
+	//PAYMENT WITH SOHAPAY
+	function payment_sohapay(){
+		if($_SERVER['REQUEST_METHOD']=='POST')
+		{
+			include_once 'class_payment.php';	
+			
+			$return_url = $pg_root_url.'/payment_info.php';
+			$transaction_info = $_POST['vs_Name_Booking'].' + 10% VAT + Phí Ship sản phẩm';
+			$order_code = $_POST['vs_ShoppingCode'].time().'';
+			$price_product = $_POST['vs_Price'];
+			$vat	= ($price_product*10)/100;
+			$price = $price_product+$vat;
+			if ($_POST['vs_email'] == '') $order_email = 'chungmua3hv@gmail.com';
+			else $order_email = $_POST['vs_email'];
+			if ($_POST['vs_mobile'] == '') $order_mobile = '';
+			else $order_mobile = $_POST['vs_mobile'];
+
+			$sohapay = new PG_checkout();
+			$url = $sohapay->buildCheckoutUrl($return_url, $transaction_info, $order_code, $price, $order_email, $order_mobile);
+			header('Location:' . $url);
+		}
+	}
+	//END PAYMENT WITH SOHAPAY
+	
 	function reportForm($code){
 		if($_GET["type"]){
 			if($_GET["type"]=='1'){

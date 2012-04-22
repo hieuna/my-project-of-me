@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-29 02:50:14
+<?php /* Smarty version 2.6.19, created on 2012-04-22 20:13:35
          compiled from shopping_show_information.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'shopping_show_information.tpl', 58, false),)), $this); ?>
@@ -111,7 +111,17 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
                     <p>Sau khi quý khách xác nhận thông tin xin vui lòng click vào nút bấm dưới đây.</p>
                     <?php if ($this->_tpl_vars['shopping']['Shopping_Type'] == 'Thanh toán tại nhà' || $this->_tpl_vars['shopping']['Shopping_Type'] == 'Thanh toán bằng chuyển phát nhanh'): ?>
                     <input type="button" onclick="return showAlert()" class="formBtn" style="float:right; margin-right:20px; margin-top:20px;" value="Đồng ý">
-  <?php elseif ($this->_tpl_vars['shopping']['Shopping_Type'] == 'Thanh toán bằng thẻ Visa hoặc MasterCard'): ?>
+    <?php elseif ($this->_tpl_vars['shopping']['Shopping_Type'] == 'Thanh toán trực tuến qua SohaPay'): ?>	 <form method="post" name="frm" action="index.php?mod=shopping&task=sohapay">		 <input name="business" value="5" type="hidden">		 <input name="vs_Name_Booking" value="<?php echo $this->_tpl_vars['shopping']['Shopping_Name']; ?>
+ đặt mua dịch vụ <?php echo $this->_tpl_vars['product']['Product_Name']; ?>
+ với tổng số tiền <?php echo ((is_array($_tmp=$this->_tpl_vars['shopping']['Shopping_Total'])) ? $this->_run_mod_handler('number_format', true, $_tmp) : smarty_modifier_number_format($_tmp)); ?>
+" type="hidden">		 <input name="vs_Total" value="<?php echo $this->_tpl_vars['shopping']['Shopping_Total']; ?>
+" type="hidden">		 <input name="vs_Price" value="<?php echo $this->_tpl_vars['shopping']['Shopping_Total']; ?>
+" type="hidden">		 <input name="vs_Method" value="MT010" type="hidden">		 <input name="vs_email" value="<?php echo $this->_tpl_vars['shopping']['Shopping_Email']; ?>
+" type="hidden">		 <input name="vs_mobile" value="<?php echo $this->_tpl_vars['shopping']['Shopping_Phone']; ?>
+" type="hidden">		 <input name="vs_ShoppingCode" value="<?php echo $this->_tpl_vars['shopping']['Shopping_Code']; ?>
+" type="hidden">		 <input name="vs_Currency" value="VND" type="hidden">		 <input name="vs_Returl_Url" value="<?php echo @SITE_URL; ?>
+xac-nhan-don-hang.php?codeID=<?php echo $this->_tpl_vars['shopping']['Shopping_Code']; ?>
+" type="hidden">		 <input type="submit" class="formBtn" style="float:right; margin-right:20px; margin-top:20px;" value="Tiếp tục">	</form>      <?php elseif ($this->_tpl_vars['shopping']['Shopping_Type'] == 'Thanh toán bằng thẻ Visa hoặc MasterCard'): ?>
  <form method="post" name="frm" action="http://smartbill.vn/payment.do">
  <input name="business" value="5" type="hidden">
  <input name="vs_Name_Booking" value="<?php echo $this->_tpl_vars['shopping']['Shopping_Name']; ?>
