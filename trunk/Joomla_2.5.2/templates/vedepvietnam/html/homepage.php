@@ -24,7 +24,7 @@ foreach ($results as $result)
 	$subquery->from("#__categories");
 	$subquery->where("published=1 AND level=3 AND parent_id=".$result->id);
 	$subquery->order("parent_id ASC, id ASC");
-	$db->setQuery($subquery, 0, 3);
+	$db->setQuery($subquery);
 	$sbResults = $db->loadObjectList();
 	//echo count($sbResults);
 	if (count($sbResults) == 0) $array = $result->id;
@@ -54,7 +54,7 @@ foreach ($results as $result)
 				$sql->from("#__content");
 				$sql->where("state=1 AND catid IN(".$array.")");
 				$sql->order("ordering ASC, created DESC");
-				$db->setQuery($sql , 0, 4);
+				$db->setQuery($sql , 0, 5);
 				$rows = $db->loadObjectList();
 				//echo $sql; 
 				?>
@@ -73,13 +73,15 @@ foreach ($results as $result)
 							$images = json_decode($row->images);
 							if (isset($images->image_intro) and !empty($images->image_intro)) :
 							?>
-							<a href="<?php echo $link;?>">  
-							<img
-							<?php if ($images->image_intro_caption):
-								echo 'class="caption"'.' title="' .htmlspecialchars($images->image_intro_caption) .'"';
-							endif; ?>
-							src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>" class="thumnail_view" />
-							</a>
+							<div class="fix_image">
+								<a href="<?php echo $link;?>">  
+								<img
+								<?php if ($images->image_intro_caption):
+									echo 'class="caption"'.' title="' .htmlspecialchars($images->image_intro_caption) .'"';
+								endif; ?>
+								src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>" class="thumnail_view" />
+								</a>
+							</div>
 							<?php endif; ?>
 						    <div class="textLeft"><?php echo $row->introtext;?></div>
 						    <?php }else{?>
