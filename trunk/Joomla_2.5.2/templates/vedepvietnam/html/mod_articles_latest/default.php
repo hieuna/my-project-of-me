@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 <div class="latestnews">
     <div class="bgimage">       
          <a href="<?php echo $list[0]->link;?>">
-         <img src="<?php echo htmlspecialchars(json_decode($list[0]->images)->image_intro); ?>" alt="" style="border: 0px; width: 532px;" />
+         <img src="<?php echo htmlspecialchars(json_decode($list[0]->images)->image_intro); ?>" alt="" style="border: 0px; width: 632px;" />
          </a> 
     </div>     
     <div class="contentfirst">
