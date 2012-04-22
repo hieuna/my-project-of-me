@@ -1,11 +1,46 @@
 <?php die("Access Denied"); ?>
-a:4:{s:4:"body";s:25695:"<div class="componentheading">
+a:4:{s:4:"body";s:26092:"<div class="componentheading">
 	Thế giới</div>
 <table class="blog" cellpadding="0" cellspacing="0">
 <tr>
 	<td valign="top">
 					<div>
 		
+<table class="contentpaneopen">
+<tr>
+		<td class="contentheading" width="100%">
+		<a href="/projects/news/the-gioi/the-goi-24h/371.html" class="contentpagetitle">
+			Chân dung 10 ứng viên chạy đua ghế tổng thống Pháp</a>
+	</td>
+	</tr>
+</table>
+<table class="contentpaneopen">
+<tr>
+<td valign="top" colspan="2">
+	<div class="mt1 clearfix">
+		<a href="/projects/news/the-gioi/the-goi-24h/371.html">
+						<img class="img130" src="http://localhost/projects/news/images/stories/phap.jpg" />
+					</a>
+		<div class="fl wid416 mt0">
+						<p style="text-align: justify;"><span style="font-family: times new roman,times; font-size: 12pt;"><strong><span style="font-size: 10pt;">(Tapchidoanhnhanviet.vn)</span></strong> - Nước Pháp sẽ bước vào cuộc bầu cử tổng thống gay cấn vào ngày 22/4 và trong số 10 ứng viên chạy đua vào điện Elysee, nổi lên 2 ứng viên nặng ký nhất.</span></p>
+<p><span style="font-family: times new roman,times; font-size: 12pt;"><div class="jcomments-links"><a class="readmore-link" href="/projects/news/the-gioi/the-goi-24h/371-chan-dung-10-ung-vien-chay-dua-ghe-tong-thong-phap.html" title="Chân dung 10 ứng viên chạy đua ghế tổng thống Pháp">Đọc thêm...</a> <a class="comments-link" href="/projects/news/the-gioi/the-goi-24h/371-chan-dung-10-ung-vien-chay-dua-ghe-tong-thong-phap.html#addcomment" title="Thêm mới bình luận">Thêm mới bình luận</a> </div>
+		</div>
+	</div>
+</td>
+</tr>
+
+</table>
+<span class="article_separator">&nbsp;</span>
+		</div>
+		</td>
+</tr>
+
+<tr>
+	<td valign="top">
+		<table width="100%"  cellpadding="0" cellspacing="0">
+		<tr>
+						<td valign="top" width="100%" class="article_column">
+				
 <table class="contentpaneopen">
 <tr>
 		<td class="contentheading" width="100%">
@@ -31,16 +66,7 @@ a:4:{s:4:"body";s:25695:"<div class="componentheading">
 
 </table>
 <span class="article_separator">&nbsp;</span>
-		</div>
-		</td>
-</tr>
 
-<tr>
-	<td valign="top">
-		<table width="100%"  cellpadding="0" cellspacing="0">
-		<tr>
-						<td valign="top" width="100%" class="article_column">
-				
 <table class="contentpaneopen">
 <tr>
 		<td class="contentheading" width="100%">
@@ -398,32 +424,6 @@ a:4:{s:4:"body";s:25695:"<div class="componentheading">
 
 </table>
 <span class="article_separator">&nbsp;</span>
-
-<table class="contentpaneopen">
-<tr>
-		<td class="contentheading" width="100%">
-		<a href="/projects/news/the-gioi/the-goi-24h/196.html" class="contentpagetitle">
-			Xây dựng Cộng đồng ASEAN vững mạnh, gắn kết và liên kết chặt chẽ</a>
-	</td>
-	</tr>
-</table>
-<table class="contentpaneopen">
-<tr>
-<td valign="top" colspan="2">
-	<div class="mt1 clearfix">
-		<a href="/projects/news/the-gioi/the-goi-24h/196.html">
-						<img class="img130" src="http://localhost/projects/news/images/stories/thutuong.jpg" />
-					</a>
-		<div class="fl wid416 mt0">
-						<p>Các Tuyên bố của Hội nghị Cấp cao ASEAN lần thứ 20 khẳng định quyết tâm mạnh mẽ của Hiệp hội chung tay xây dựng một Cộng đồng ASEAN vững mạnh, gắn kết và liên kết chặt chẽ.</p>
-<div class="jcomments-links"><a class="readmore-link" href="/projects/news/the-gioi/the-goi-24h/196-xay-dung-cong-dong-asean-vung-manh-gan-ket-va-lien-ket-chat-che.html" title="Xây dựng Cộng đồng ASEAN vững mạnh, gắn kết và liên kết chặt chẽ">Đọc thêm...</a> <a class="comments-link" href="/projects/news/the-gioi/the-goi-24h/196-xay-dung-cong-dong-asean-vung-manh-gan-ket-va-lien-ket-chat-che.html#addcomment" title="Thêm mới bình luận">Thêm mới bình luận</a> </div>
-		</div>
-	</div>
-</td>
-</tr>
-
-</table>
-<span class="article_separator">&nbsp;</span>
 				</td>
 		 
 		</tr>
@@ -437,6 +437,10 @@ a:4:{s:4:"body";s:25695:"<div class="componentheading">
 	<strong>Các bài viết khác...</strong>
 </div>
 <ul>
+	<li>
+		<a class="blogsection" href="/projects/news/the-gioi/the-goi-24h/196-xay-dung-cong-dong-asean-vung-manh-gan-ket-va-lien-ket-chat-che.html">
+			Xây dựng Cộng đồng ASEAN vững mạnh, gắn kết và liên kết chặt chẽ</a>
+	</li>
 	<li>
 		<a class="blogsection" href="/projects/news/the-gioi/the-goi-24h/172-khai-mac-hoi-nghi-cap-cao-asean-lan-thu-20.html">
 			Khai mạc Hội nghị Cấp cao ASEAN lần thứ 20</a>
