@@ -139,7 +139,7 @@ Tổng số tiền Quý khách cần thanh toán là: <b>$total</b> đ. ";
 	$this->sendInformation($id);
 			$shopping = $this->getRow(" select *  from {$this->table} where {$this->_prefix}ID='{$id}'");
 			$product = $this->getRow("select * from tblproduct where Product_ID='".$shopping[$this->_prefix."ProductID"]."'");
-		//	print_r($shopping);
+			//print_r($product);
 			$this->assign("shopping",$shopping);
 			$this->assign("product",$product);
 			
@@ -211,11 +211,12 @@ alert(\"Bạn nhập sai mã bảo mật.\");
 			include_once 'class_payment.php';	
 			
 			$return_url = $pg_root_url.'/payment_info.php';
-			$transaction_info = $_POST['vs_Name_Booking'].' + 10% VAT + Phí Ship sản phẩm';
-			$order_code = $_POST['vs_ShoppingCode'].time().'';
+			$ship = $_POST['vs_Ship'];
+			$transaction_info = $_POST['vs_Name_Booking'].' + 10% VAT + Phí Ship sản phẩm này là: '.number_format($ship, 0, '.', ',');
+			$order_code = $_POST['vs_ShoppingCode'];
 			$price_product = $_POST['vs_Price'];
 			$vat	= ($price_product*10)/100;
-			$price = $price_product+$vat;
+			$price = $price_product+$vat+$ship;
 			if ($_POST['vs_email'] == '') $order_email = 'chungmua3hv@gmail.com';
 			else $order_email = $_POST['vs_email'];
 			if ($_POST['vs_mobile'] == '') $order_mobile = '';

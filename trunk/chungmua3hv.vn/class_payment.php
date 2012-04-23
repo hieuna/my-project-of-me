@@ -14,20 +14,20 @@
 class PG_checkout 
 {
   	// URL của Soha
-  	private $pg_root_url = 'http://paydev.todo.vn/';
+  	private $pg_root_url = 'https://sohapay.com/';
     
 	// URL checkout của Soha Payment
-	private $pg_url = 'http://paydev.todo.vn/payment.php';
+	private $pg_url = 'https://sohapay.com/payment.php';
 
 	// URL query của Soha Payment
-	private $pg_url_query = 'http://paydev.todo.vn/payment_query.php';
+	private $pg_url_query = 'https://sohapay.com/payment_query.php';
   
 	
 	// Mã merchante site 
-	private $merchant_site_code = 'test';	// Biến này được SohaPay cung cấp cho merchant site
+	private $merchant_site_code = 'u303769';	// Biến này được SohaPay cung cấp cho merchant site
 	
 	// Mật khẩu bảo mật
-	private $secure_secret= '123456789'; // Biến này được SohaPay cung cấp cho merchant site
+	private $secure_secret= '3e422fa51d8e93da5f00'; // Biến này được SohaPay cung cấp cho merchant site
 	
 	//Hàm xây dựng url, trong đó có tham số mã hóa (còn gọi là public key)
 	public function buildCheckoutUrl($return_url, $transaction_info, $order_code, $price, $order_email, $order_mobile)
