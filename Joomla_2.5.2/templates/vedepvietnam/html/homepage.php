@@ -7,9 +7,9 @@ $db = JFactory::getDbo();
 //Get Categories
 $query 		= $db->getQuery(true);
 
-$query->select("id, title, alias");
+$query->select("id, title, alias, numbers");
 $query->from("#__categories");
-$query->where("published=1 AND level=2");
+$query->where("published=1 AND level=2 AND showhome=1");
 $query->order("parent_id ASC, id ASC");
 $db->setQuery($query);
 $results = $db->loadObjectList();
@@ -54,7 +54,7 @@ foreach ($results as $result)
 				$sql->from("#__content");
 				$sql->where("state=1 AND catid IN(".$array.")");
 				$sql->order("ordering ASC, created DESC");
-				$db->setQuery($sql , 0, 5);
+				$db->setQuery($sql , 0, $result->numbers);
 				$rows = $db->loadObjectList();
 				//echo $sql; 
 				?>
@@ -73,7 +73,7 @@ foreach ($results as $result)
 							$images = json_decode($row->images);
 							if (isset($images->image_intro) and !empty($images->image_intro)) :
 							?>
-							<div class="fix_image">
+							<div class="pic_thumnail">
 								<a href="<?php echo $link;?>">  
 								<img
 								<?php if ($images->image_intro_caption):
@@ -81,7 +81,7 @@ foreach ($results as $result)
 								endif; ?>
 								src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>" class="thumnail_view" />
 								</a>
-							</div>
+							</div>	
 							<?php endif; ?>
 						    <div class="textLeft"><?php echo $row->introtext;?></div>
 						    <?php }else{?>

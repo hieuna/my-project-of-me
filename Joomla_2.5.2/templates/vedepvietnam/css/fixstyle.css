@@ -16,7 +16,7 @@ ul.categories-module li{
 	margin: 0; padding: 0;
 }
 #colunmLeft1 ul li{
-	margin-bottom: 5px; float: left; margin-right: 5px; display: block; width: 335px;
+	margin-bottom: 5px; float: left; margin-right: 5px; display: block; width: 335px; position: relative;
 }
 #colunmLeft1 ul li.mr0{
 	margin-right: 0;
@@ -24,11 +24,14 @@ ul.categories-module li{
 .textLeft p, .textLeft h2{
 	padding: 0; margin: 0;
 }
-.fix_image{
-	width: 124px; height: 100px; overflow: hidden; float: left; margin: 0 5px 0px 0;
+.pic_thumnail{
+	width: 150px; height: 100px; float: left; border: 3px solid #D8D8D8; float: left; margin: 0px 5px 2px 0; overflow: hidden; background: #D8D8D8;
 }
 .thumnail_view{
-	width: 120px; border: 1px solid #ccc; padding: 2px;
+	width: 150px;
+}
+.xemtiep{
+	position: absolute; bottom: 3px; right: 8px; z-index: 100;
 }
 /*-- BOX-MODULES --*/
 .box-module{
@@ -151,4 +154,12 @@ ul.listOtherNewsChaoco li a:hover{
 }
 .img125{
 	width: 125px;
+}
+
+/*-- MODULES BANNERS --*/
+#colunmLeft2 .bannergroup{
+	width: 200px; text-align: center; margin-top: 5px;
+}
+#colunmLeft2 .bannergroup .banneritem{
+	width: 200px; margin: 0 auto;
 }
