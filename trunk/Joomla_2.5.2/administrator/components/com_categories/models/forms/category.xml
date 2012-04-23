@@ -105,6 +105,31 @@
 			value="-2">
 			JTRASHED</option>
 	</field>
+	
+	<field
+		name="showhome"
+		type="list"
+		class="inputbox"
+		default="1"
+		size="1"
+		label="JSHOWHOME"
+		description="JFIELD_PUBLISHED_DESC">
+		<option
+			value="1">
+			JSHOW</option>
+		<option
+			value="0">
+			JHIDE</option>		
+	</field>
+	
+	<field
+		name="numbers"
+		type="text"
+		label="JFIELD_NUMBERS_LABEL"
+		description="JFIELD_NUMBERS_DESC"
+		class="inputbox"
+		size="20"/>
+	
 	<field
 		name="buttonspacer"
 		label="JGLOBAL_ACTION_PERMISSIONS_LABEL"

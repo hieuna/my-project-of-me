@@ -49,6 +49,12 @@ JHtml::_('behavior.keepalive');
 
 				<li><?php echo $this->form->getLabel('published'); ?>
 				<?php echo $this->form->getInput('published'); ?></li>
+				
+				<li><?php echo $this->form->getLabel('showhome'); ?>
+				<?php echo $this->form->getInput('showhome'); ?></li>
+				
+				<li><?php echo $this->form->getLabel('numbers'); ?>
+				<?php echo $this->form->getInput('numbers'); ?></li>
 
 				<li><?php echo $this->form->getLabel('access'); ?>
 				<?php echo $this->form->getInput('access'); ?></li>

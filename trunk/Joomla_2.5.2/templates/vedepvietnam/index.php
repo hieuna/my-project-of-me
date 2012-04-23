@@ -275,140 +275,16 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 			<div class="boxShareClunmleft2">
 				<jdoc:include type="modules" name="vn-bottommiddle" style="none" />    
 			</div>
-
-<div class="THTT">
-    <div class="THTTHead"></div>
-    <div class="THTTTitle">
-         <a style="padding-left: 10px; line-height: 25px"
-                    class="fontsize11 bold colorF" target="_blank">Video b?n d?c</a>
-                    <a href="http://tuoitre.vn/Ban-doc/Cau-noi/405308/Huong-dan-cach-goi-video-ve-cho-TTO.html" class="fontsize10" style="line-height:27px;color:#fff;">(Hu?ng d?n c�ch g?i)</a>
-    </div>
-    <div class="THTTContent">
-              
-            <div style="clear:both;" id="MediaPlayerBandoc"></div>            
-                        
-          
-    </div>
-    <div style="width:200px;clear:both;background-color:#000;overflow:hidden;padding-top:2px;padding-bottom:3px;margin-bottom:8px;">
-         
-                <div style="width:179px;margin-left:3px;margin-top:3px;padding-left:10px;clear:both;background-image:url(../Images/whiteldot.jpg);background-repeat:no-repeat;background-position:3px 10px;height:31px;">
-                    <span style="cursor:pointer;" onclick="ChangeScrBandoc('http://media.tuoitre.com.vn/Stream/Clips-flv/tromxemay.flv','Tr?m xe m�y - B?n d?c: Mai Xu�n Ti?n','http://media.tuoitre.com.vn/Stream/Clips-flv/anhtromxe.jpg');return false;" class="txt_white_m"> Tr?m xe m�y - B?n d?c: Mai Xu�n Ti?n</span>
-               </div>            
-            
-                <div style="border-bottom:solid 1px #c1c1c1;height:1px;width:100%;clear:both;overflow:hidden;"></div>
-            
-                <div style="width:179px;margin-left:3px;margin-top:3px;padding-left:10px;clear:both;background-image:url(../Images/whiteldot.jpg);background-repeat:no-repeat;background-position:3px 10px;height:31px;">
-                    <span style="cursor:pointer;" onclick="ChangeScrBandoc('http://media.tuoitre.com.vn/Stream/tivio/TVO2012/thang03/clipbandoc-dotrombunxuongduong-HaNoi.flv','�? tr?m b�n xu?ng du?ng - B?n d?c: Ti?n Th?ng','http://media.tuoitre.com.vn/Stream/tivio/TVO2012/thang03/clipbandoc-dotrombunxuongduong-HaNoi.jpg');return false;" class="txt_white_m"> �? tr?m b�n xu?ng du?ng - B?n d?c: Ti?n Th?ng</span>
-               </div>            
-            
-                <div style="border-bottom:solid 1px #c1c1c1;height:1px;width:100%;clear:both;overflow:hidden;"></div>
-            
-                <div style="width:179px;margin-left:3px;margin-top:3px;padding-left:10px;clear:both;background-image:url(../Images/whiteldot.jpg);background-repeat:no-repeat;background-position:3px 10px;height:31px;">
-                    <span style="cursor:pointer;" onclick="ChangeScrBandoc('http://media.tuoitre.com.vn/Stream/tivio/TVO2012/thang02/Xecongkenh1A.flv','Xe c?ng k?nh tr�n qu?c l? 1A - B?n d?c: Ph?m Nh�m','http://media.tuoitre.com.vn/Stream/tivio/TVO2012/thang02/1.jpg');return false;" class="txt_white_m"> Xe c?ng k?nh tr�n qu?c l? 1A - B?n d?c: Ph?m Nh�m</span>
-               </div>            
-            
-    </div>
-</div>
-<div class="boxShareClunmleft2">
-    <div class="boxShareClunmleft2TOp">
-        <div class="boxShareClunmleft2Btom">
-            <div class="color3 bold fontsize16 padding6 textCter">
-                <a class="color2">Chuy�n m?c Tu?i Tr?</a>
-            </div>
-            <div class="boxCmtt">
-                <ul>
-                    <li class="liXam">
-                        <a href="http://chuyentrang.tuoitre.vn/TheoguongBac" target="_blank">
-                            Theo guong B�C
-                        </a>
-                    </li>
-                    <li class="liXam">
-                        <a href="http://chuyentrang.tuoitre.vn/TuHaoVietNam" target="_blank">
-                            T? h�o Vi?t Nam
-                        </a>
-                    </li>
-                    <li class="liXam">
-                        <a href="http://tuoitre.vn//Chu-de/94/Hoang-Sa---Truong-Sa.html" target="_blank">
-                            Ho�ng Sa - Tru?ng Sa
-                        </a>
-                    </li>
-                    <li class="liXam">
-                        <a href="http://tuoitre.vn/Giao-luu-truc-tuyen/Index.html" target="_blank">
-                            Giao luu tr?c tuy?n
-                        </a>
-                    </li>
-                    <li class="liXam">
-                        <a href="http://tuoitre.vn/Dong-gop-hao-tam/Index.html">
-                            ��ng g�p h?o t�m
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="THTT">
-    <a class="link1" href="http://tuoitre.vn/Toasoan/index.htm" target="_blank"></a>
-    <div style="margin-top: 2px; overflow: hidden; margin-bottom: 4px">
-        <div style="margin-top: 2px">
-            <a href="http://www.thanhdoan.hochiminhcity.gov.vn/webtd/vn/Home.aspx" target="_blank">
-                <img alt="HVN" title="Website Th�nh do�n Tp. HCM" src="http://tuoitre.vn/Images/ThanhDoanTPHCM.jpg" border="0" />
-            </a>
-        </div> 
-       
-        
-				 <div style="margin-top: 2px">
-            <a href="http://tuoitre.vn/tag/index.html?t=%27V%C3%AC%2bng%C3%A0y%2bmai%2bph%C3%A1t%2btri%E1%BB%83n%27" target="_blank">
-                <img alt="HVN" title="V� ng�y mai ph�t tri?n" src="http://tuoitre.vn/Images/ViNgayMaiPhatTrien-1.jpg" border="0" />
-            </a>
-        </div>
-				<div style="margin-top: 2px">
-				    <a href="http://tuoitre.vn/tag/index.html?t=G%C3%B3p%2b%C4%91%C3%A1%2bx%C3%A2y%2bTr%C6%B0%E1%BB%9Dng%2bSa">
-        <img alt="" title="G�p d� x�y Tru?ng Sa" src="http://tuoitre.vn/Images/Banner-Home/Banner-GopDa-XayTruongSa-200x60.jpg" border="0" />
-    </a>
-          
-        </div>
-		    
-        
-
-		      <div style="margin-top: 2px">
-            <a href="http://tuoitre.vn/tag/index.html?t=%27n%C3%A9t%2bb%C3%BAt%2btri%2b%C3%A2n%27" target="_blank">
-                <img width="200" alt="HVN" title="N�t b�t tri �n" src="http://tuoitre.vn/Images/but-tri-an.jpg" border="0" />
-            </a>
-        </div>
-
-
-    </div>
-    <div class="boxShareClunmleft2" style="display: none;">
-        <div class="boxShareClunmleft2TOp">
-            <div class="boxShareClunmleft2Btom">
-                
-                
-                
-                
-                
-                
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="boxVote" style="width:200px;">
-	<jdoc:include type="modules" name="vn-user2" />    
-</div>
-
+			<jdoc:include type="modules" name="vn-adver2" style="none" />
+			<div class="boxVote" style="width:200px;">
+				<jdoc:include type="modules" name="vn-user2" />    
+			</div>
         </div>
         <div class="clearFix"></div>
     </div>
     <div id="colunmRight">
     	<jdoc:include type="modules" name="vn-adver1" />
-
-
-
-<jdoc:include type="modules" name="vn-user1" style="none" />
+		<jdoc:include type="modules" name="vn-user1" style="none" />
 
 
 <div class="boxCtentApPli">
