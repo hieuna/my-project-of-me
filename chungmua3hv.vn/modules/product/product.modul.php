@@ -148,11 +148,11 @@ class product extends VS_Module_Base
 			$product= $this->getRow("select *,(select Group_Name from tblgroup where Group_ID= {$this->_prefix}DestinationID) as DestinationID from {$this->table} where {$this->_prefix}Status='1' and {$this->_prefix}ID='{$id}'");
 			
 			$return_url = $pg_root_url.'/payment_info.php';
-			$transaction_info = $product['Product_Name'].' + 10% VAT + Phí Ship sản phẩm';
+			$transaction_info = $product['Product_Name'].' + 10% VAT + Phí Ship sản phẩm là: '.number_format($product['Product_Ship'], 0, '.', ',');
 			$order_code = time().'';
 			$price_product = $product['Product_DealPrice'];
 			$vat	= ($price_product*10)/100;
-			$price = $price_product+$vat;
+			$price = $price_product+$vat+$product['Product_Ship'];
 			if ($_POST['order_email'] == '') $order_email = 'chungmua3hv@gmail.com';
 			else $order_email = $_POST['order_email'];
 			if ($_POST['order_phone'] == '') $order_mobile = '';
