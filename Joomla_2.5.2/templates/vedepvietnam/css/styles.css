@@ -53,16 +53,19 @@ body a:hover{
 	text-align:right;
 }
 .boxMnuMainTop{
-	background:#0072bc;
+	background: url("../images/bg-nav.jpg") repeat-x top;
 	width: 100%;
-	height:25px;
+	height:50px;
 	border-top: 1px solid #b7b7b7;
 	border-bottom: 1px solid #b7b7b7;
 	clear:both;
 	line-height:25px;
 	font-size:13px!important;
 	font-weight:bold;
-	margin: 0; padding: 0; text-align: center;
+	margin: 0;
+	margin-bottom: 10px; 
+	padding: 0; 
+	text-align: center;
 }
 .boxMnuSub{
 	/*Hieuvm: background:url(../images/bgMnuSubtop1.jpg) bottom left repeat-x; height:31px;*/

@@ -1,10 +1,10 @@
 @CHARSET "UTF-8";
 
 ul#MainMnu{
-	margin:0 auto; padding:0; display: block; margin-bottom: 5px;	
+	margin:0 auto; padding:0; display: block; margin-bottom: 5px; width: 1245px; position:relative;	
 }
 ul#MainMnu li,
-ul#MainMnu li.hover{list-style:none; float:left; position:relative;}
+ul#MainMnu li.hover{list-style:none; float:left;}
 ul#MainMnu li div#mnu,
 ul#MainMnu li.hover div#mnu{position:absolute; right:0; z-index:200000; visibility:hidden; -moz-box-shadow: 5px 5px 5px #888;-webkit-box-shadow: 5px 5px 5px #888;box-shadow: 5px 5px 5px #888;}
 ul#MainMnu li.hover div#mnu{visibility:visible;}
@@ -14,7 +14,9 @@ ul#MainMnu li ul#subMenu li,
 ul#MainMnu li ul#subMenu li.hover{text-align:center;   border-bottom:1px solid #ccc; width:99.8%;}
 ul#MainMnu li ul#subMenu li.hover a:hover{display:block;}
 ul#subMenu li a{color:Black; font-weight:normal!important; font-size:12px!important}
-ul#subMenu li a:hover{color:Red!important;background:none!important;}
+ul#subMenu li a:hover{
+	color:Red!important; background: #DFF4F9!important;
+}
 ul#MainMnu li:first-child{
 	background: url("../images/iconHome.jpg") no-repeat top left;
 	padding-left: 20px;
@@ -25,8 +27,17 @@ ul#MainMnu li:first-child a{
 ul#MainMnu li:last-child{
 	background: none;
 }
-ul#MainMnu li li:first-child{
-	background: none;
+ul#MainMnu li li, ul#MainMnu li li:first-child, ul#MainMnu li li:last-child{
+	padding: 0 5px; background: url("../images/bluedot.jpg") no-repeat left center; padding-left: 5px;
+}
+ul#MainMnu li li a{
+	color: #004175; font-weight: normal; text-decoration: none; font-size: 12px;
+}
+ul#MainMnu li li a:hover{
+	text-decoration: underline; background: none;
+}
+ul#MainMnu li li.active a{
+	font-weight: bold;
 }
 
 .glidecontentwrapper{

@@ -47,13 +47,32 @@ a.color11:hover{color:#0072bc;}
 .paddingBt6{padding-bottom:6px;}
 .paddingLright10px{padding: 0 10px 0 10px;}
 .paddingTb4px{padding: 4px 0 4px 0;}
-.boxMnuMainTop ul{margin:0; padding:0; position: relative;}
-.boxMnuMainTop ul li{list-style:none; background:url(http://123.30.128.11/App_Themes/TTOBlue/images/lineMnubar.jpg) right no-repeat; padding: 0 2px 0 0; float:left;}
+.boxMnuMainTop ul{margin:0; padding:0;}
+.boxMnuMainTop ul li{
+	list-style:none;  background: url("../images/bg-li-nav.jpg") no-repeat bottom right; padding: 0 2px 0 0; float:left;
+}
+.boxMnuMainTop ul li:last-child, .boxMnuMainTop ul li.active{
+	background: none;
+}
 .boxMnuMainTop ul li a{color:#FFF; padding: 0 6px 0 6px; display:block; font-size:11px; font-weight:bold;}
 /*.boxMnuMainTop ul li a{color:#FFF; padding: 0 16px 0 17px; display:block;}*/
-.boxMnuMainTop ul li a:hover,.boxMnuMainTop ul li a.actived{color:#ffff00; background:#d5030a; display:block;}
+.boxMnuMainTop ul li a:hover,.boxMnuMainTop ul li.active a{
+	color:#004175; background:#DFF4F9; display:block; height: 28px;
+	border-top-left-radius: 3px; border-top-right-radius: 3px;
+	-webkit-topleft-radius: 3px; -webkit-topright-radius: 3px;
+	-moz-topleft-radius: 3px; -moz-topright-radius: 3px;
+	behavior: url(ie-css3.htc);
+}
 .boxMnuMainTop ul li ul{
-	margin: 0; padding: 0; position: absolute; top: 30px; left: 0;
+	margin: 0; padding: 0; position: absolute; top: 26px; left: 0; width: 1200px;
+}
+.boxMnuMainTop ul li ul li{
+	background: none;
+}
+.boxMnuMainTop ul li.active li a, .boxMnuMainTop ul li.active li.hover a{
+	height: auto; background: none;
+	border-radius: none; -webkit-border-radius: none; -moz-border-radius: none;
+	behavior: url(ie-css3.htc);
 }
 .mnunomal{color:#000; display:block;}
 a.iconHome{background:url(images/iconHome.jpg) no-repeat; width:41px; height:27px; display:block; float:left;}
