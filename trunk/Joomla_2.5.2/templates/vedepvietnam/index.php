@@ -71,20 +71,16 @@ $view	= JRequest::GetCmd('view', '', 'GET');
             </div>
             
 			<script type="text/javascript">
-				jQuery(function () {
-					jQuery("ul#MainMnu li").hover(function () {
-						jQuery(this).addClass("hover");
-						jQuery('div#mnu', this).css('visibility', 'visible');
+				$(function () {
+					$("ul#MainMnu li").hover(function () {
+						$(this).addClass("hover");
+						$('div#mnu', this).css('visibility', 'visible');
 					}, function () {
-
-						jQuery(this).removeClass("hover");
-						jQuery('div#mnu', this).css('visibility', 'hidden');
-					});
+						$(this).removeClass("hover");
+						$('div#mnu', this).css('visibility', 'hidden');
+					});					
 				});      
 			</script>
-			
-
-
 
 <div id="mnu_1_child" class="boxMnuSub" style="display: none;">
     <div style="margin-left: 43px;" onmouseover="Lever2_Mouseover(this);" onmouseout="TimerSelectedTab();">
