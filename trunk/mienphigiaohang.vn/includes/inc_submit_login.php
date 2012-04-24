@@ -27,6 +27,7 @@ if(isset($_POST['form_login']))
 		$_SESSION['ses_userid'] = $row_user['id'];
 		$_SESSION['ses_username'] = $row_user['username'];
 		$_SESSION['ses_email'] = $row_user['email'];
+		$_SESSION['ses_phone'] = $row_user['tel'];
 		//session_write_close();		
 		//$request_url = '../deals/register_success.php';
 		chuyen_trang("../deals/dang-nhap-thanh-cong.html");

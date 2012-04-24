@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2012-04-23 12:51:41
+<?php /* Smarty version 2.6.19, created on 2012-04-24 11:42:08
          compiled from shopping_show_information.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'shopping_show_information.tpl', 58, false),)), $this); ?>
@@ -115,6 +115,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
  đặt mua dịch vụ <?php echo $this->_tpl_vars['product']['Product_Name']; ?>
  với tổng số tiền <?php echo ((is_array($_tmp=$this->_tpl_vars['shopping']['Shopping_Total'])) ? $this->_run_mod_handler('number_format', true, $_tmp) : smarty_modifier_number_format($_tmp)); ?>
 " type="hidden">		 <input name="vs_Ship" value="<?php echo $this->_tpl_vars['product']['Product_Ship']; ?>
+" type="hidden">		 <input name="vs_city" value="<?php echo $this->_tpl_vars['shopping']['Shopping_City']; ?>
 " type="hidden">		 <input name="vs_Total" value="<?php echo $this->_tpl_vars['shopping']['Shopping_Total']; ?>
 " type="hidden">		 <input name="vs_Price" value="<?php echo $this->_tpl_vars['shopping']['Shopping_Total']; ?>
 " type="hidden">		 <input name="vs_Method" value="MT010" type="hidden">		 <input name="vs_email" value="<?php echo $this->_tpl_vars['shopping']['Shopping_Email']; ?>
