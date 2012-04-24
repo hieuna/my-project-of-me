@@ -7,7 +7,7 @@ defined('_JEXEC') or die;
 	<div class="tinanh_content">  
 	    <div style="width:285px;margin:10px auto;clear:both;overflow:hidden">          
 	        <a href="<?php echo $list[0]->link; ?>">
-				<img src="<?php echo htmlspecialchars(json_decode($list[0]->images)->image_intro); ?>" width="283" height="160" alt="<?php echo $list[0]->title; ?>" />
+				<img src="<?php echo htmlspecialchars(json_decode($list[0]->images)->image_intro); ?>" width="283" alt="<?php echo $list[0]->title; ?>" />
 			</a> 
 	        <br />
 	        <span class="txt_black_m" style="line-height:17px;"><?php echo $list[0]->introtext; ?></span>        

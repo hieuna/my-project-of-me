@@ -252,8 +252,8 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 			</div>
 			<div style="margin-bottom: 7px; display:block"></div>
 			<div class="QCIframe">
-				<div style="clear:both;width:100%;">
-					<iframe src="http://s.tuoitre.vn/TTO/Home/Center.html" scrolling="no" align="left" width='686' height='168' frameborder="0" marginheight="0" marginwidth="0"></iframe>
+				<div style="clear:both; width:100%;">
+					<jdoc:include type="modules" name="vn-adver3" />
 				</div>
 			</div>
             <div class="clearFix"></div>
