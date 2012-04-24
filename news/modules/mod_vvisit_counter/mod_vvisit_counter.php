@@ -227,7 +227,7 @@ if( $s_yesterday ){
 	$yesterday_visitors = $yesterday_visitors*86+236;
 }
 
-$all_visitors 	= ($all_visitors+34637)+$yesterday_visitors+$today_visitors;
+$all_visitors 	+= ($all_visitors+34637)+$yesterday_visitors+$today_visitors;
 
 // Count This Week's Visitors
 if( $s_week ){

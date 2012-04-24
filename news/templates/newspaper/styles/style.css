@@ -2637,7 +2637,7 @@ table.homerightmail td.mailcontent {
 	margin-right: 0;
 }
 .systems ul li img{
-	float: left; margin: 0px 5px 3px 0; width: 70px; height: auto; border: 1px solid #D8D8D8; padding: 1px;
+	float: left; margin: 0px 5px 3px 0; width: 70px; height: 55px; border: 1px solid #D8D8D8; padding: 1px;
 }
 .systems ul li a, .systems ul li a:visited{
 	color: #004175; font-weight: bold; font-size: 12px; text-decoration: none;

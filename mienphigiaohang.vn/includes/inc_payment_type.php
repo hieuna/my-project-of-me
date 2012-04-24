@@ -1,29 +1,3 @@
-<?/*
-//doan code mau ket noi nhanh Payoo, nhan ket qua tra ve
-//phien ban 0.1
-//update 20.07.2011
-//hotro YIM: jetleehung
-
-
-//--------config key
-$key='67d16d00201083a2b118dd5128dd6f59';
-
-//--lay thong tin tra ve tu Payoo redirect
-
-$order_no=$_GET['order_no'];
-$session=$_GET['session'];
-$status=$_GET['status'];
-//tao checksum de kiem tra 
-$cs=sha1($key.$session.'.'.$order_no.'.'.$status);
-
-if($cs==$_GET['checksum']){
-//dung thong tin, update don hang
-echo 'OK';
-}
-else {
-die('Co loi trong qua trinh xu ly, vui long lien he bo phan khach hang');
-}*/
-?>
 
 <?php
 include("inc_checkout.php");
@@ -148,9 +122,10 @@ https://www.baokim.vn/application/uploads/buttons/btn_safety_payment_1.png' alt=
 					<div class="detail-table1 clearfix">
 						<div class="free">
 							<div class="fl">
-								<input type="checkbox" name="" id="checkhome" />
-								Nhận hàng và thanh toán tại nhà<span class="clred">(Áp dụng cho  Hà Nội và HCM)</span></div>
-							<img src="../images/icon-home.png" width="31" height="31" alt="pi" /></div>
+									<input type="checkbox" name="" id="checkhome" />
+									Nhận hàng và thanh toán tại nhà <strong><span class="clred"></span></strong></div>
+									<img src="../images/icon-home.png" width="31" height="31" alt="pi" />
+						</div>
 					<form name="deal_checkcart_1" id="deal_checkcart_1" method="post" onsubmit="return kiemtra1();">                            
 						<div class="box-form" id="giaonhan" style="display:none" >
 							<ul class="form-style" >
@@ -191,8 +166,9 @@ https://www.baokim.vn/application/uploads/buttons/btn_safety_payment_1.png' alt=
 					<div class="free">
 						<div class="fl">
 							<input type="checkbox" name="" id="checkdeal"  />
-							Thanh toán qua ngân hàng, các ví điện tử, thẻ cào điện thoại và nhận hàng qua Chuyển phát nhanh </div>
-							<!--<img src="../images/123Deals.png" width="96" height="30" alt="pic" />-->
+							Chuyển khoản tại ATM, hoặc gửi tiền vào Tài khoản Ngân hàng và nhận hàng qua chuyển phát nhanh <a href="http://mienphigiaohang.vn/includes/hd_thanh_toan.php" target="blanl"><strong style="font-color:red;">Xem Thông tin tài khoản</strong></a>
+						</div>
+							
 					</div>
 					<form name="deal_checkcart_2" id="deal_checkcart_2" method="post" onsubmit="return kiemtra2();">                            
                         <div class="box-form" id="viadeal" style="display:none">
@@ -227,53 +203,54 @@ https://www.baokim.vn/application/uploads/buttons/btn_safety_payment_1.png' alt=
 							</ul>
 						</div>	
                  </form>
+				 
+					
+					
+
+			<div style="height:50px;">
                  <div class="free">
 						<div class="fl">
-							<input type="checkbox" name="" id="checkbaokim" />
+						<input type="checkbox" name="" id="" />Thanh toán trực tuyến
+						</div>	
+				</div>	
+							
 							<div style="float: left; margin-right: 15px;">
-							<div id="shp"></div>
-							<div id="shp_first">
-							<?php
-							include("../classes/class_payment.php");
-							$price_shp = $rows_pro_cart["pro_price_deal"];
-							$name_shp = $rows_pro_cart["pro_name"];
-							$params = array(
-						        'transaction_info'  	=> 'Mua sản phẩm '.$name_shp.' từ mienphigiaohang.vn',
-						        'price'                 => $price_shp,
-						        'order_product_title' 	=> $name_shp,
-								'order_number_min'		=> 1,	
-						        'order_ship'          	=> 0,	
-						        'return_url'	      	=> 'http://mienphigiaohang.vn/deals'				
-					        );
-					        $classPayment = new PG_checkout();
-							print $classPayment->buildEmbedHTML($params);						
-							?>
+							<div id="form_shp">
+								<form name="deal_checkcart_3" id="deal_checkcart_3" method="post">
+									<img id="sbmshp" style="border: none; widht: 128px; cursor: pointer;" src="https://sohapay.com/images/btn/thanhtoan_sohapay_blue.png"><br />
+									<a style="text-decoration:none; font-size: 12px;" target="_blank" href="https://sohapay.com/info/help/huong-dan-thanh-toan.html"><font color="#FF0000"><blink>[ Hướng dẫn thanh toán]</blink></font></a>
+									<input type="hidden"  id="soluong3" value="1" name="soluong3" />
+			                        <input type="hidden"  id="pro_id3" value="<?=$rows_pro_cart["pro_id"]?>" name="pro_id3" />
+			                        <input type="hidden"  id="total3" value="<?=$rows_pro_cart["pro_price_deal"]?>" name="total3"  onKeyDown="calculate()" />
+			                        <input type="hidden" name="form_checkout3" value="form_checkout3" />
+			                        <input type="hidden" name="user_name3" value="<?php echo $_SESSION['ses_username'];?>" />
+			                        <input type="hidden" name="user_email3" value="<?php echo $_SESSION['ses_email'];?>" />
+			                        <input type="hidden" name="user_phone3" value="<?php echo $_SESSION['ses_phone'];?>" />
+			                        <input type="hidden" name="user_mess3" value="Thanh toán đơn hàng qua SohaPay" />
+								</form>
 							</div>
 							<script type="text/javascript">
 							$(function(){
 								$('#quali').change(function(){
 									var soluong = $('#quali').val();
-									$('#shp_first').hide();
-									$.post("../includes/ajax.php", { name: "<?php echo $name_shp;?>", soluong: soluong, price: <?php echo $price_shp;?> },
-											 function(data) {
-											     $('#shp').html(data);
-											   }
-									);
+									$('#soluong3').val(soluong);
+								});
+								$('#sbmshp').click(function(){
+									$('#deal_checkcart_3').submit();
 								});
 							});
 
 							$.post("test.php", { name: "John", time: "2pm" } );
 							</script>
-							<a style="text-decoration:none; font-size: 12px;" target="_blank" href="https://sohapay.com/info/help/huong-dan-thanh-toan.html"><font color="#FF0000"><blink>[ Hướng dẫn thanh toán]</blink></font></a>
 							</div>
 							<div style="float: left;">
                                 <a href="https://www.baokim.vn/payment/customize_payment/product?business=tienthanh.vnu@gmail.com&product_name=<?=$rows_pro_cart["pro_name"]?>&product_price=<?=$rows_pro_cart["pro_price_deal"]?>&product_quantity=1&total_amount=<?=$rows_pro_cart["pro_price_deal"]?>" onKeyDown="calculate()" id="yugj" target="_blank">
 								<img src="https://www.baokim.vn/application/uploads/buttons/btn_safety_payment_1.png" alt="Thanh toán an toàn với Bảo Kim !" border="0" title="Thanh toán trực tuyến an toàn dùng tài khoản Ngân hàng (VietcomBank, TechcomBank, Đông Á, VietinBank, Quân Đội, VIB, SHB,... và thẻ Quốc tế (Visa, Master Card...) qua Cổng thanh toán trực tuyến BảoKim.vn" >
 								</a><br/><a href="https://www.baokim.vn/payment_guide/mienphigiaohangcom.html" target="_blank" style="text-decoration:none; font-size: 12px;"><font color="#FF0000"><blink>[ Hướng dẫn thanh toán]</blink></font></a>
 							</div>
-                            </div>
-				 </div>
- 	                        
+                        
+				
+ 	              <a target="_blank" href="https://www.nganluong.vn/button_payment.php?receiver=tienthanh@fsmedia.vn&product_name="$rows_pro_cart["pro_id"]"&price="$rows_pro_cart["pro_price_deal"]"&return_url="http://mienphigiaohang.vn"&comments="Miễn phí giao hàng toàn quốc"><img src="https://www.nganluong.vn/data/images/buttons/11.gif"  border="0" /></a>           
 							
 		              
 							<?
@@ -352,14 +329,14 @@ https://www.baokim.vn/application/uploads/buttons/btn_safety_payment_1.png' alt=
 							//qui luat sha1(key+xml);
 							$checksum=sha1($key.$str);
 							?>
-				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 				<form name="frmPayByPayoo" action="https://www.payoo.com.vn/m/payorder" method="POST" target="_blank">
 						<input name = "imageField" type = "image" id = "imageField" alt = "Thanh toán b&#7857;ng Ví &#273;i&#7879;n t&#7917; Payoo" src ="https://www.payoo.com.vn/img/button/PayNow.jpg"/> 
 						<input type="hidden" name="cmd" value="_cart" />
 						<input type="hidden" name="OrdersForPayoo" value='<?=$str?>'/>
 						<input type="hidden" value="<?=$checksum?>" name="CheckSum" />
-						</form>               
-                 		
+				</form>    -->           
+            </div> <!--END #thanh-toan-dien-tu--> 	
 				</div>
                 </div>
                 

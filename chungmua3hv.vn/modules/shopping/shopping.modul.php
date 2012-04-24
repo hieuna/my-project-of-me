@@ -139,7 +139,7 @@ Tổng số tiền Quý khách cần thanh toán là: <b>$total</b> đ. ";
 	$this->sendInformation($id);
 			$shopping = $this->getRow(" select *  from {$this->table} where {$this->_prefix}ID='{$id}'");
 			$product = $this->getRow("select * from tblproduct where Product_ID='".$shopping[$this->_prefix."ProductID"]."'");
-			//print_r($product);
+			//print_r($shopping);
 			$this->assign("shopping",$shopping);
 			$this->assign("product",$product);
 			
@@ -211,8 +211,12 @@ alert(\"Bạn nhập sai mã bảo mật.\");
 			include_once 'class_payment.php';	
 			
 			$return_url = $pg_root_url.'/payment_info.php';
-			$ship = $_POST['vs_Ship'];
-			$transaction_info = $_POST['vs_Name_Booking'].' + 10% VAT + Phí Ship sản phẩm này là: '.number_format($ship, 0, '.', ',');
+			$array = array(39, 40, 41, 42, 43, 44, 45, 46, 47, 48);
+			$city = $_POST['vs_city'];
+			if (in_array($city, $array)) $ship = 10000;
+			else $ship = $_POST['vs_Ship'];
+			
+			$transaction_info = $_POST['vs_Name_Booking'].' + 10% VAT + Phí Ship sản phẩm này là: '.number_format($ship, 0, '.', ',').'. (Lưu ý: Mua nhiều sản phẩm cũng cùng chung 1 mức giá Ship)';
 			$order_code = $_POST['vs_ShoppingCode'];
 			$price_product = $_POST['vs_Price'];
 			$vat	= ($price_product*10)/100;
