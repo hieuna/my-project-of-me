@@ -20,6 +20,7 @@ class modArticlesPhotoHelper
 		$query->from('#__content AS c, #__categories AS cd');
 		$query->where('c.catid = cd.id');
 		$query->where('c.state = 1 AND c.photo = 1');
+		$query->order('rand()');
 		//echo $query;
 
 		// Filter by language
