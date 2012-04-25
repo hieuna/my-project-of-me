@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 
 ul#MainMnu{
-	margin:0 auto; padding:0; display: block; margin-bottom: 5px; width: 1245px; position:relative;	
+	margin:0 auto; padding:0; display: block; margin-bottom: 5px; width: 1200px; position:relative;	
 }
 ul#MainMnu li,
 ul#MainMnu li.hover{list-style:none; float:left;}
@@ -16,10 +16,6 @@ ul#MainMnu li ul#subMenu li.hover a:hover{display:block;}
 ul#subMenu li a{color:Black; font-weight:normal!important; font-size:12px!important}
 ul#subMenu li a:hover{
 	color:Red!important; background: #DFF4F9!important;
-}
-ul#MainMnu li:first-child{
-	background: url("../images/iconHome.jpg") no-repeat top left;
-	padding-left: 20px;
 }
 ul#MainMnu li:first-child a{
 	cursor: pointer;
