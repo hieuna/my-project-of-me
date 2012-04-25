@@ -54,6 +54,9 @@ a.color11:hover{color:#0072bc;}
 .boxMnuMainTop ul li:last-child, .boxMnuMainTop ul li.active{
 	background: none;
 }
+.boxMnuMainTop ul li:hover{
+	background: none;
+}
 .boxMnuMainTop ul li a{color:#FFF; padding: 0 6px 0 6px; display:block; font-size:11px; font-weight:bold;}
 /*.boxMnuMainTop ul li a{color:#FFF; padding: 0 16px 0 17px; display:block;}*/
 .boxMnuMainTop ul li a:hover,.boxMnuMainTop ul li.active a{
