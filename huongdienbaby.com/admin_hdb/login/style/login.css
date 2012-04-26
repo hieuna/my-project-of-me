@@ -1,0 +1,31 @@
+/* CSS Document */
+body{
+	background:#F6F6F6;
+	font-family:Tahoma, Verdana, Arial;
+}
+.form_name, .form_text, .form_control{
+	font-size:11px;
+	color:#004000;
+}
+.form_name{
+	font-weight:bold;
+}
+.finalstyle{
+	font-size:11px;
+	color:#FF0000;
+	text-decoration:none;
+}
+.finalstyle:hover{
+	text-decoration:underline;
+}
+.form_control{
+	background-color:#F2F2F2;
+	border:1px #CCCCCC solid;
+	font-family:Tahoma, Arial, "Times New Roman";
+	width:150px;
+}
+.form_title{
+	font-size:13px;
+	font-weight:bold;
+	color:#30a602;
+}
