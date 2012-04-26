@@ -1,0 +1,3 @@
+RewriteEngine On
+Options -Indexes
+RewriteRule ^([^/]*)$ /vn/index.php$1 [L]

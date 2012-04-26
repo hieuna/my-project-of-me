@@ -1,0 +1,139 @@
+#dek {POSITION:absolute;VISIBILITY:hidden;Z-INDEX:200; border:0px;}
+/*bat dau cua phan tab*/
+.div_tab_top{
+    font-family: Tahoma, Arial;
+    font-size: 12px;
+}
+.div_tab_top ul{
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 0px;
+}
+.div_tab_top ul li{
+    float: left;
+    margin: 0 0 0 2px; /* khoang cach giua cac tab */
+    font-weight: bold;
+}
+.div_tab_top ul li a, .div_tab_top ul li a span{
+    float: left; /* fixes dir=ltr problem and other quirks IE */
+    padding: 0 12px; 
+}
+.div_tab_top ul li a{
+    margin: 0px 0 0; /* position: relative makes opacity fail for disabled tab in IE */
+    padding-left: 0;
+    background-position: 100% 0;
+    text-decoration: none;
+    white-space: nowrap; /* @ IE 6 */
+    outline: 0; /* @ Firefox, prevent dotted border after click */    
+}
+.div_tab_top ul li a span{
+    padding-top: 0px;
+    padding-right: 0;
+    height: 25px; /* @ chieu cao tab khong chon */  
+    background-position: 0 0;
+    line-height: 25px;
+	 cursor:pointer;
+}
+.tab_select a, .tab_select a span{
+    padding-top: 0;
+    height: 25px; /* chieu cao backgroun tap chon */  
+    background-position: 0 -25px;
+    line-height: 27px;
+	 color:#FFFFFF;
+	 background:#008000;
+
+}
+.tab_nomal a, .tab_nomal a span{
+    padding-top: 0;
+    height: 25px; /* chieu cao backgroun tap chon */  
+    background-position: 0 -25px;
+    line-height: 27px;
+	 color:#0066CC;
+	 background:#FFCC33;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 0px;
+	 padding:0px;
+}
+
+/*  body style used for LeftFrameSwitcher */
+.MainFrameBody {
+  padding-left: 7px;
+  background-image: url(../../images/body_bg.gif);
+  background-position: top left;
+  background-repeat: repeat-y;
+}
+
+.LeftFrameSwitcher {
+  position: fixed;
+  left: 3;
+  top: 50%;
+  cursor: pointer;
+}
+
+* html .LeftFrameSwitcher {
+  position: absolute;
+}
+
+body	{
+	margin:1px;
+	font-family:tahoma;
+	font-size:11px;
+	color:#333333;
+	text-decoration:none;
+	scrollbar-arrow-color:#0E01D4;
+	scrollbar-base-color:#E6ECFA;
+	scrollbar-track-color:#ffffff;
+	scrollbar-darkshadow-color:white;
+	scrollbar-shadow-color:#80c65a;
+	scrollbar-hightlight-color:#80c65a;
+	scrollbar-3Dlight-color:#80c65a;
+}
+a{
+	text-decoration:none;
+}
+body,td,div,p,input,select,ul,li{
+	font-family:tahoma, Verdana, Arial;
+	font-size:11px;
+}
+input{
+	padding-left:3px;
+}
+.titleMenu{
+	border-top:solid 1px #80c65a;
+	border-left:solid 1px #c1e9aa;
+	border-right:solid 1px #c1e9aa;
+}
+.titleMenu td{
+		color:#008000;
+		font-weight:bold;
+}
+.module_name a{
+	text-decoration:none;
+	font-weight:normal;
+	color:#0000CC;
+}
+.textBold{
+	font-weight:bold;
+}
+.form{
+	border:solid 1px #90D98A;
+	font-family:tahoma, Verdana, Arial;
+	font-size:12px;
+	color:#740104;
+}
+input,select{
+	font-family:tahoma, Verdana, Arial;
+	font-size:11px;
+	color:#740104;
+}
+.form_title{
+	font-weight:bold;
+	color:#7C0507;
+}
+.text{
+	font-family:tahoma, Verdana, Arial;
+	font-size:11px;
+}
