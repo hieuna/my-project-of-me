@@ -1782,6 +1782,10 @@ $(document).ready(function() {
 		fx: 'turnUp',
 		timeout: 5000
 	});
+	<?php if ($view != 'featured'):?>
+	$('#colunmLeft1').css('width', '520px');
+	$('#colunmLeft2').css('width', '355px');
+	<?php endif;?>
 });
 </script>
 </body>
