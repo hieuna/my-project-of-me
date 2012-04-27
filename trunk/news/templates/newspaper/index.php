@@ -116,7 +116,7 @@ $group		= JRequest::getString('group', '', 'GET');
 									<?php if ($group):?>
 										<?php include("html/warehouse.php");?>
 									<?php else:?>
-										<div class="fl wid586">
+										<div class="fl wid490">
 										<?php
 										if ($view == 'frontpage'){
 											?>
