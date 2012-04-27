@@ -51,20 +51,20 @@ div#video-header {
 }
 div#slide-holder {
 	z-index : 40;
-	width : 580px;
+	width : 495px;
 	height : 296px;
 	position : absolute;
 }
 div#slide-holder div#slide-runner {
 	top : 0px;
 	left : 0px;
-	width : 580px;
+	width : 495px;
 	height : 296px;
 	overflow : hidden;
 	position : absolute;
 }
 div#slide-holder img {
-	width: 580px !important;
+	width: 495px !important;
 	margin : 0;
 	display : none;
 	position : absolute;
@@ -72,7 +72,7 @@ div#slide-holder img {
 div#slide-holder div#slide-controls {
 	left : 0;
 	top : 0px;
-	width : 580px;
+	width : 495px;
 	height : 46px;
 	display : none;
 	position : absolute;

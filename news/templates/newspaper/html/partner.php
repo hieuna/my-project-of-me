@@ -24,7 +24,7 @@ $rowsBanners = $db->loadObjectList();
 					<p><?php echo $banner->description;?></p>
 				</li>
 				<?php
-				if($i%6 == 0) echo '</ul><ul>';
+				if($i%5 == 0) echo '</ul><ul>';
 			} 
 			?>
 		</ul>
