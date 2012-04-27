@@ -24,7 +24,7 @@ body a:hover{
 	color: #4F82AC;
 }
 #mainBdy, .pageBdy{
-	width:1200px;
+	width:1024px;
 	margin:0px auto;
 	padding:0px;
 	background-color:#fff;
@@ -84,14 +84,14 @@ body a:hover{
 	clear:both;	
 }
 #colunmLeft{
-	width:885px;	
+	width:710px;	
 	float:left;
 	overflow:hidden;	
 	margin-right:4px;
 }
 #colunmRight{
 	width:301px;
-	float:left;
+	float:right;
 	overflow:hidden;	
 }
 .boxHotNews{
@@ -188,9 +188,8 @@ body a:hover{
 }
 #colunmLeft1{
 	float:left;
-	width:675px;	
 	overflow:hidden;
-	padding-right:4px;
+	padding: 0 5px;
 }
 #colunmLeft2{
 	width:200px;
@@ -427,59 +426,6 @@ body a:hover{
 	width:270px;
 	border:1px solid #CCC;
 }
-.boxTabAppli{
-	background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/bgtabApplicateCter.jpg) top left repeat-x;
-	height:33px;
-	clear:both;
-}
-.boxTabAppliRight{
-	background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/bgtabApplicateRight.jpg) top right no-repeat;
-	height:33px;
-}
-.boxTabAppliLeft{
-	background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/bgtabApplicateLeft.jpg) top left no-repeat;
-	height:33px;
-}
-.boxCtentApPli{
-	background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/bgCterbancanbiet.jpg) top left repeat-y;
-	width:300px;
-	margin-bottom:6px;
-	clear:both;
-}
-.boxCtentApPliBtom{
-	background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/bgBtombancanbiet.jpg) bottom left no-repeat;
-    width:300px;
-}
-.boxItemAp{
-	float:left;
-	width:112px;
-	margin: 0 6px 6px 0;
-	border:1px solid #dddddd;
-}
-.TitleboxItemAp{
-	background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/bgTabItemAppli.jpg) top left repeat-x;
-	height:22px;
-	margin-bottom:4px;
-}
-.boxRightAppli{
-	float:right;
-	padding: 0 0 6px 6px;
-	width:154px;
-}
-.titleInfoAppli{
-	background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/tabbancanbiet.jpg) top left no-repeat;
-	width:300px;
-	height:38px;
-}
-
-.linkApli5{background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/bgtigia.jpg)  2px 0 no-repeat;border-bottom:1px solid #e1e1e1;display:block;padding-bottom:5px;overflow:hidden;}
-.linkApli1{background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/bgvang.jpg)   2px 0 no-repeat;border-bottom:1px solid #e1e1e1;display:block;padding-bottom:5px;}
-.linkApli2{background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/bgsoxo.jpg)  2px 0 no-repeat;border-bottom:1px solid #e1e1e1;display:block;padding-bottom:5px;}
-.linkApli3{background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/bgbus.jpg)  2px 0 no-repeat;border-bottom:1px solid #e1e1e1;display:block;padding-bottom:8px;}
-.linkApli4{background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/bgtruyenhinh.jpg)  2px 0 no-repeat;border-bottom:1px solid #e1e1e1;display:block;padding-bottom:8px;}
-.linkAplithoitiet{background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/thoitiet.jpg)  5px 6px no-repeat; border:none;display:block;padding-bottom:10px;}
-.linkApli6{background:url(http://123.30.128.11/App_Themes/TTOBlue/../images/bgChungkhoan.jpg) 2px 0 no-repeat;border-bottom:1px solid #e1e1e1;display:block;padding-bottom:5px;}
-
 .boxinfoAppliRight{background:url(../images/selectbox.jpg)  2px 0 no-repeat; width:182px; height:22px; margin:4px 0 4px 0; padding: 4px 0 0 8px; float:right; overflow:hidden;}
 .linkApli6 .option1{background:url(../images/iconArrowUp.gif) 0 0 no-repeat; font-weight:bold; color:#000; font-size:11px; padding: 2px 0 2px 14px;}
 
@@ -865,7 +811,7 @@ a.viewAllgold:hover{background:url(../images/w-icon.jpg) no-repeat right; color:
 }
 
 .Channel-box-home{
-	width:330px; height: 350px; border: 1px solid #dbdbdb; float:left; margin-bottom:10px; overflow:hidden;
+	width:330px; height: 350px; border: 1px solid #dbdbdb; float:left; margin-bottom:10px; overflow:hidden; padding: 5px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 	behavior: url(ie-css3.htc);
 }
