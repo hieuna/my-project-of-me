@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>This Category</name>
+	<author>Bob Broughton</author>
+	<creationDate>December 2008</creationDate>
+	<copyright>This template is released under the GNU/GPL License</copyright>
+	<authorEmail>bob@broughton.ca</authorEmail>
+	<authorUrl>broughton.ca</authorUrl>
+	<version>1.0</version>
+	<description>This module lists other articles in the category of the currently displayed article</description>
+	<files>
+		<filename module="mod_thiscategory">mod_thiscategory.php</filename>
+		<filename module="mod_thiscategory">mod_thiscategory.xml</filename>
+	</files>
+   <params>
+      <param name="num_articles" type="text" default="5" label="Number of articles to list" description="Number of articles to list" />
+   </params>
+
+</install>

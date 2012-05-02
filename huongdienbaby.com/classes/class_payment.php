@@ -583,5 +583,22 @@ class PG_checkout
     
     return $query_url;
   }
+  
+	function randomcode($len=8)
+	{
+		$code = $lchar = NULL;
+		for( $i=0; $i<$len; $i++ )
+	  	{
+		  	$char = chr(rand(48,122));
+		  	while( !ereg("[0-9]", $char) )
+	    	{
+			    if( $char == $lchar ) continue;
+			    $char = chr(rand(48,90));
+		  	}
+		  	$pass .= $char;
+		  	$lchar = $char;
+		}
+		return $pass;
+	}
 }
 ?>

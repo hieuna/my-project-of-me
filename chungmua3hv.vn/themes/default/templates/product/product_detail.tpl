@@ -9,12 +9,12 @@
 						
                     	{if $checkbtdetail}
                    		 <a  {if $product_item.Product_Sold !=1} href="mua-hang.php?ID={$product_item.Product_ID}"{/if}></a>
-                         {/if}                                                  <div style="padding: 10px 50px 0 0; margin:0; width: auto; text-align: right;">							<img id="cl_shp_{$product_item.Product_ID}" src="https://sohapay.com/images/btn/muangay_sohapay_green.png" style="border:none; cursor: pointer;" />							<input type="hidden" name="order_email" value="{$order_email}" />							<input type="hidden" name="order_phone" value="{$order_phone}" />						 </div>
+                         {/if}                                                  
                          <div style="background-image:url(https://www.baokim.vn/promote/paymentbk.png);width:180px;height:50px;margin-left:-4px;margin-top:8px">
     					<div style="padding-top:5px;margin-left:40px">      		 				  <div style="cursor: pointer; background-color:#78AB2A;border:none;color:#FFF;font-size:14px;height:22px;padding:8px 0 12px 0;font-weight:bold;width:130px" id="target_{$product_item.Product_ID}">Mua trực tuyến</div>        				</div>
      					<div style="font-size:11px;margin-left:75px;color:#FFF;margin-top:-14px">Tích lũy : <b>{$product_item.Product_DealPrice/100|number_format}</b> đ
                         </div>
-   					 </div>	                    </div>					{literal}                    <script type="text/javascript">                    $(function(){                        $('#cl_shp_{/literal}{$product_item.Product_ID}{literal}').click(function(){                            $('#frmPOST_{/literal}{$product_item.Product_ID}{literal}').attr("action", "?mod=product&task=sohapay");                            $('#frmPOST_{/literal}{$product_item.Product_ID}{literal}').submit();                                                 });                        $('#target_{/literal}{$product_item.Product_ID}{literal}').click(function(){                        	$('#frmPOST_{/literal}{$product_item.Product_ID}{literal}').attr("action", "?mod=product&task=baokim");                            $('#frmPOST_{/literal}{$product_item.Product_ID}{literal}').submit();                         });                    });                    </script>                    {/literal}
+   					 </div>	                    </div>					
                     <div class="dealPriceRight"></div>
                     <div class="featurePrice02"> 
                         <div class="featureValue">Giá trị<p>{$product_item.Product_Price|number_format} đ</p></div>

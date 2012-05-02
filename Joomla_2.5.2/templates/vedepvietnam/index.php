@@ -264,44 +264,35 @@ $view	= JRequest::GetCmd('view', '', 'GET');
 			}else{	
 			?>
 			<jdoc:include type="component" />
-			<?php }?>            
+			<div class="article_others">
+				<jdoc:include type="modules" name="vn-user9" />
+			</div>
+			<?php }?>
         </div>
         <?php if ($view != 'featured'):?>
-        <div id="colunmLeft2">
-			<div class="boxShareClunmleft2">
-				<jdoc:include type="modules" name="vn-bottommiddle" style="none" />    
-			</div>
-			<jdoc:include type="modules" name="vn-adver2" style="none" />
-			<div class="boxVote" style="width:200px;">
-				<jdoc:include type="modules" name="vn-user2" />    
-			</div>
-        </div>
+        <div id="colunmRight">
+	    	<jdoc:include type="modules" name="vn-adver1" />
+			<jdoc:include type="modules" name="vn-user1" style="none" />
+	    </div>
         <?php endif;?>
         <div class="clearFix"></div>
     </div>
+    <?php if ($view == 'featured'):?>
     <div id="colunmRight">
     	<jdoc:include type="modules" name="vn-adver1" />
 		<jdoc:include type="modules" name="vn-user1" style="none" />
-
-
-
-<div id="boxFacebookIndex" style="background:url(http://tuoitre.vn/App_Themes/TTOBlue/images/Box-MangXaHoi.jpg) top left repeat-x; height:180px; clear:both; width:300px;">
-    <div style="padding: 10px 10px 1px 10px ;width:100%;color:#0072BC;font-size:16px;"><b>Tu?i Tr? Online tr�n m?ng x� h?i</b></div>
-    <div style="margin-bottom:5px;list-style:none;padding: 23px 10px 1px 10px ;width:100%;clear:both;">
-        <div style="float:left;padding: 2px 20px 0 20px;width:30%;"><a href="https://www.facebook.com/baotuoitre" target="_blank" style="padding-right:5px;"><img src="http://tuoitre.vn/App_Themes/TTOBlue/images/Img_Icon_Facebook_fb.jpg" alt="" style="border:0px;"/></a></div>
-        <div style="padding: 5px 0 0 0"><a href="https://www.facebook.com/baotuoitre" target="_blank" style="padding-right:5px;"><img src="http://tuoitre.vn/App_Themes/TTOBlue/images/Img_Icon_Facebooke_Like.jpg" alt="" style="border:0px;"/></a></div>
     </div>
-    <div style="margin-bottom:5px;list-style:none;padding: 0 10px 1px 10px ;width:100%;clear:both;">
-        <div style="float:left;padding: 5px 20px 0 20px;width:30%;"><a href="https://plus.google.com/u/0/b/117768766517085478347/117768766517085478347" target="_blank" style="padding-right:5px;"><img src="http://tuoitre.vn/App_Themes/TTOBlue/images/Img_Icon_Google_fb.jpg" alt="" style="border:0px;"/></a></div>
-        <div style="padding: 5px 0 0 0"><a href="https://plus.google.com/u/0/b/117768766517085478347/117768766517085478347" target="_blank" style="padding-right:5px;"><img src="http://tuoitre.vn/App_Themes/TTOBlue/images/Img_Icon_Google_Like.jpg" alt="" style="border:0px;"/></a></div>
+    <?php else:?>
+    <div id="colunmLeft2">
+		<div class="boxShareClunmleft2">
+			<jdoc:include type="modules" name="vn-bottommiddle" style="none" />    
+		</div>
+		<jdoc:include type="modules" name="vn-adver2" style="none" />
+		<div class="boxVote" style="width:200px;">
+			<jdoc:include type="modules" name="vn-user2" />    
+		</div>
     </div>
-    <div style="margin-bottom:5px;list-style:none;padding: 0 10px 10px 10px ;width:100%;clear:both;">
-        <div style="float:left;padding: 7px 20px 0 20px;width:30%;"><a href="http://twitter.com/tuoitre_tphcm" target="_blank" style="padding-right:5px;"><img src="http://tuoitre.vn/App_Themes/TTOBlue/images/Img_Icon_Twitter_fb.jpg" alt="" style="border:0px;"/></a></div>
-        <div style="padding: 5px 0 0 0"><a href="http://twitter.com/tuoitre_tphcm" target="_blank" style="padding-right:5px;"><img src="http://tuoitre.vn/App_Themes/TTOBlue/images/Img_Icon_Twitter_Like.jpg" alt="" style="border:0px;"/></a></div>
-    </div>
-</div>
-
-    </div>
+    <?php endif;?>
     <div class="clearFix"></div>  
           
 
@@ -574,6 +565,7 @@ $(document).ready(function() {
 		timeout: 5000
 	});
 	<?php if ($view != 'featured'):?>
+	$('#colunmLeft').css('width', '811px');
 	$('#colunmLeft1').css('width', '500px');
 	<?php endif;?>
 });

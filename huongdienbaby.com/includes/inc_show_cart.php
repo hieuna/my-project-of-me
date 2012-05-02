@@ -64,6 +64,20 @@
 										<input type="button" value="<?=translate_display_text("xoa_gio_hang")?>" class="buttom" onClick="if (confirm('<?=translate_display_text("ban_muon_xoa_gio_hang")?> ?')){window.location.href='<?=$lang_path?>recount.php?clear=1'}">&nbsp;
 										<input type="button" value="<?=translate_display_text("thanh_toan")?>" class="buttom" onclick="window.location.href='<?=$lang_path?>payment.php';" />
                                         <div style="float:right; padding-left:10px;">
+                                        <!--SOHAPAY-->
+									   <?php 
+									   $money = $total_money*$con_exchange;
+									   $transaction_info = 'Thanh toán đơn hàng gồm các sản phẩm: '.$total_name;
+	                                   if($money >= 10000){?>
+	                                    <a target="_blank" href="https://sohapay.com/payment_product.php?u=huongdienbaby@gmail.com&price=<?php echo $money;?>&transaction_info=<?php echo $transaction_info;?>">
+				                       <img align="absmiddle" border="0" src="https://sohapay.com/images/btn/thanhtoan_sohapay_orange.png">
+				                       </a>
+				                       <br/><blink><a href="https://sohapay.com/info/help/huong-dan-thanh-toan.html" target="_blank" style="font:Arial, Helvetica, sans-serif; text-decoration:none; color:#666; font-size:12px">[Hướng dẫn thanh toán]</a></blink>
+	                                    <?php }?>
+	                                    <!--END SOHAPAY-->
+                                        </div>
+                                        
+                                        <div style="float:right; padding-left:10px;">
                               <!--code baokim TMH-->
 								   <?php 
 								   $total_money = $total_money*$con_exchange;
