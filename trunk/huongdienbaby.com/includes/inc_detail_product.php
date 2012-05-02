@@ -39,7 +39,7 @@ function check_quantity(id){
 	<div class="t_center">
 		<table cellpadding="5" cellspacing="0" border="0" width="100%"><br />
 			<tr>
-				<td valign="top" width="300">
+				<td valign="top" width="400">
 					<div align="center">
 						<a style="cursor:url(/images/zoomin.cur), pointer !important;" href="/pictures_products/<?=$row["pro_picture"]?>" class="vlightbox1"><img src="/pictures_products/medium_<?=$row["pro_picture"]?>"   onError="this.src='/images/noimage.jpg'"  border="0" /></a>
 					</div>
@@ -59,40 +59,33 @@ function check_quantity(id){
 						?>
 					</div>
 					<div align="center" style="padding-top:10px;">
-						<div style="line-height:25px; width:250px; padding-left:40px; padding-top:5px; float:left; background:url(/images/gio_hang.gif) no-repeat" align="left"><a href="#" style="color:#FFFFFF" onclick="check_quantity(<?=$row["pro_id"]?>)"><?=translate_display_text("cho_vao_gio_hang")?></a>
-                       <div style="float:right; padding-left:10px;">
-                       <!-- SOHAPAY -->
-                       <?php
-                       /*
-                       include '../classes/class_payment.php'; 
-                       if($row["pro_price"] > 0){
-							$params = array(
-						        'transaction_info'  	=> 'Mua sản phẩm '.$row["pro_name"].' tại website huongdienbaby.com',
-						        'price'                 => $row["pro_price"],
-						        'order_product_title' 	=> $row["pro_name"],	
-						        'order_ship'          	=> 0,	
-						        'return_url'	      	=> 'http://huongdienbaby.com/vn'				
-					            );
-					        $classPayment= new PG_checkout();
-							print $classPayment->buildEmbedHTML($params);
-                       }
-                       */
-                       ?>
-                       <!-- END -->
-                       <!--code baokim TMH-->
-                       <?php 
-					   if($row["pro_price"] >= 10000){?>
-                        <a href= "https://www.baokim.vn/payment/customize_payment/product?business=huongdienbaby@gmail.com&product_name=<?php echo urlencode($row["pro_name"]);?>&product_price=<?php echo $row["pro_price"];?>&product_quantity=1&total_amount=<?php echo $row["pro_price"];?>" target="_blank"><img src="https://www.baokim.vn/application/uploads/buttons/btn_safety_payment_1.png" alt="Thanh toán an toàn với Bảo Kim !" border="0" title="Thanh toán trực tuyến an toàn dùng tài khoản Ngân hàng (VietcomBank, TechcomBank, Đông Á, VietinBank, Quân Đội, VIB, SHB,... và thẻ Quốc tế (Visa, Master Card...) qua Cổng thanh toán trực tuyến BảoKim.vn" ></a>
-                        <?php }else{?>
-						
-						<a href="https://www.baokim.vn/payment/deal_payment/product?receiver=huongdienbaby@gmail.com" target="_blank">
-<img src="https://www.baokim.vn/application/uploads/buttons/btn_safety_payment_1.png" alt="Thanh toán an toàn với Bảo Kim !" border="0" title="Thanh toán trực tuyến an toàn dùng tài khoản Ngân hàng (VietcomBank, TechcomBank, Đông Á, VietinBank, Quân Đội, VIB, SHB,... và thẻ Quốc tế (Visa, Master Card...) qua Cổng thanh toán trực tuyến BảoKim.vn"  >
-</a>
-						<?php }?>
-                        <br/><blink><a href="https://www.baokim.vn/payment_guide/huongdienbabycom.html" target="_blank" style="font:Arial, Helvetica, sans-serif; text-decoration:none; color:#666; font-size:12px">[Hướng dẫn thanh toán]</a></blink>
-                     
-                        <!--endboakim-->
-                        </div>
+						<div style="line-height:25px; padding-left:40px; padding-top:5px; float:left; background:url(/images/gio_hang.gif) no-repeat" align="left"><a href="#" style="color:#FFFFFF" onclick="check_quantity(<?=$row["pro_id"]?>)"><?=translate_display_text("cho_vao_gio_hang")?></a>
+                        <div style="float:right; padding-left:10px;">
+	                       <!--code baokim TMH-->
+	                       <?php 
+						   if($row["pro_price"] >= 10000){?>
+	                        <a href= "https://www.baokim.vn/payment/customize_payment/product?business=huongdienbaby@gmail.com&product_name=<?php echo urlencode($row["pro_name"]);?>&product_price=<?php echo $row["pro_price"];?>&product_quantity=1&total_amount=<?php echo $row["pro_price"];?>" target="_blank"><img style="width: 110px;" src="https://www.baokim.vn/application/uploads/buttons/btn_safety_payment_1.png" alt="Thanh toán an toàn với Bảo Kim !" border="0" title="Thanh toán trực tuyến an toàn dùng tài khoản Ngân hàng (VietcomBank, TechcomBank, Đông Á, VietinBank, Quân Đội, VIB, SHB,... và thẻ Quốc tế (Visa, Master Card...) qua Cổng thanh toán trực tuyến BảoKim.vn" ></a>
+	                        <?php }else{?>
+							
+							<a href="https://www.baokim.vn/payment/deal_payment/product?receiver=huongdienbaby@gmail.com" target="_blank">
+	<img style="width: 110px;" src="https://www.baokim.vn/application/uploads/buttons/btn_safety_payment_1.png" alt="Thanh toán an toàn với Bảo Kim !" border="0" title="Thanh toán trực tuyến an toàn dùng tài khoản Ngân hàng (VietcomBank, TechcomBank, Đông Á, VietinBank, Quân Đội, VIB, SHB,... và thẻ Quốc tế (Visa, Master Card...) qua Cổng thanh toán trực tuyến BảoKim.vn"  >
+	</a>
+							<?php }?>
+	                        <br/><blink><a href="https://www.baokim.vn/payment_guide/huongdienbabycom.html" target="_blank" style="font:Arial, Helvetica, sans-serif; text-decoration:none; color:#666; font-size:10px">[Hướng dẫn thanh toán]</a></blink>
+	                     
+	                        <!--endboakim-->
+                        	</div>
+                        	<div style="float:right; padding-left:50px;">
+                        		<!-- SOHAPAY -->
+		                       <?php
+		                       $transaction_info = 'Mua sản phẩm '.$row["pro_name"].' tại website huongdienbaby.com'; 
+		                       ?>
+		                       <a target="_blank" href="https://sohapay.com/payment_product.php?u=huongdienbaby@gmail.com&price=<?php echo $row["pro_price"];?>&transaction_info=<?php echo $transaction_info;?>">
+		                       <img style="width: 110px;" align="absmiddle" border="0" src="https://sohapay.com/images/btn/thanhtoan_sohapay_orange.png">
+		                       </a>
+		                       <br/><blink><a href="https://sohapay.com/info/help/huong-dan-thanh-toan.html" target="_blank" style="font:Arial, Helvetica, sans-serif; text-decoration:none; color:#666; font-size:10px">[Hướng dẫn thanh toán]</a></blink>
+		                       <!-- END -->
+                        	</div>
                         </div>
                         
                   
