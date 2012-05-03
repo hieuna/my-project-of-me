@@ -12,7 +12,7 @@ form
 
 body
 {
-	
+	background: url("../images/bg.png") repeat;
 	margin: 0px; 
 	padding:0px; 
 	font-family:arial;
