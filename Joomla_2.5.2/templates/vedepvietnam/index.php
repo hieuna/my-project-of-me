@@ -308,187 +308,20 @@ $view	= JRequest::GetCmd('view', '', 'GET');
     </div>
 </div>
         </div>
-        <div class="mnufooter">
-            <p style="margin: 0px; padding: 0px;">
-                <a href="http://chuyentrang.tuoitre.vn/TuHaoVietNam/">T? H�o Vi?t Nam</a> <a href="http://tuoitre.vn/">
-                    Tu?i Tr? Cu?i Tu?n </a><a href="http://chuyentrang.tuoitre.vn/TTC/" target="_blank">
-                        Tu?i Tr? Cu?i</a> <a href="http://media.tuoitre.vn" target="_blank">Media Online</a>
-                <a href="http://vieclam.tuoitre.vn/" target="_blank">Vi?c L�m</a> <a href="http://tusach.tuoitre.vn/"
-                    target="_blank">T? S�ch</a> <a href="http://ecard.tuoitre.vn/" target="_blank">Thi?p</a>
-                <a href="http://games.tuoitre.vn/" target="_blank">Games</a> <a style="background: none"
-                    href="http://phapluat.tuoitre.com.vn/" target="_blank">Thu Vi?n Lu?t</a>
-            </p>
-            <p style="margin: 0px; padding: 0px;">
-                <a href="http://tuoitre.vn/Chinh-tri-Xa-hoi/Index.html">Ch�nh tr? - X� H?i</a> <a
-                    href="http://tuoitre.vn/Van-hoa-Giai-tri/Index.html">Van h�a - Gi?i Tr�</a>
-                <a href="http://tuoitre.vn/The-gioi/Index.html">Th? Gi?i</a> <a href="http://tuoitre.vn/Kinh-te/Index.html">
-                    Kinh T?</a> <a href="http://tuoitre.vn/Giao-duc/Index.html">Gi�o D?c - Du H?c</a>
-                <a href="http://tuoitre.vn/Chinh-tri-Xa-hoi/Phap-luat/Index.html" target="_blank">Ph�p
-                    Lu?t</a> <a href="http://chuyentrang.tuoitre.vn/TheThao/" target="_blank">Th? Thao</a>
-                <a href="http://nhipsongso.tuoitre.vn/" target="_blank">Nh?p S?ng S?</a> <a href="http://tuoitre.vn/Nhip-song-tre/Index.html">
-                    Nh?p S?ng Tr?</a> <a style="background: none" href="http://tuoitre.vn/Ao-trang/Index.html"
-                        target="_blank">�o Tr?ng</a>
-            </p>
-            <p style="margin: 0px; padding: 0px;">
-                <a href="http://tuoitre.vn/Nhip-song-tre/Tinh-yeu-loi-song/Index.html">T�nh Y�u - L?i
-                    S?ng</a> <a href="http://tuoitre.vn/The-gioi/Nguoi-Viet-xa-que/Index.html">Ngu?i Vi?t
-                        Xa Qu�</a> <a href="http://tuoitre.vn/Chinh-tri-Xa-hoi/Song-khoe/Index.html">S?c Kh?e</a>
-                <a href="http://tuoitre.vn/giao-duc/khoa-hoc/Index.html">Khoa H?c</a> <a href="http://dulich.tuoitre.vn"
-                    target="_blank">Du L?ch</a> <a href="http://tuoitre.vn/Tuyensinh" target="_blank">Tuy?n
-                        Sinh</a> <a href="http://tuoitre.vn/Kinh-te/Tai-chinh-Chung-khoan/Index.html">Ch?ng
-                            Kho�n</a> <a href="http://diaoc.tuoitre.vn" target="_blank">�?a ?c</a>
-                <a href="http://tuoitre.vn/Ban-doc/Nghe-thay-va-viet/Index.html">B?n �?c Vi?t</a>
-                <a style="background: none" href="http://tuoitre.vn/ho-so-tu-lieu/index.html">H? So
-                    - Tu Li?u </a>
-            </p>
-        </div>
-        <div style="clear: both; width: 310px; margin: 0 auto 10px;">
-            
-<div class="boxSearch">
-    <div class="padding2">
-        <div class="floatLeft">
-            <select class="option" id="cboInputMethod2" style="width: 46px; height: 15px; border: none!important;
-                background-color: Transparent;" onchange="setTypingMode(this.value * 1);" name="Select1">
-                <option style="border: none!important; background-color: Transparent;" value="0">T?t</option>
-                <option style="border: none!important; background-color: Transparent;" value="1">Telex</option>
-                <option style="border: none!important; background-color: Transparent;" value="2">VNI</option>
-            </select>
-        </div>
         
-        <div class="floatLeft" style="padding-left: 6px;">                      
-            <input type="text" id="txtKeyword2" class="inputSearch floatLeft" style="width: 132px; height: 17px;" onfocus="textboxChange(this,true,'T�m ki?m')" onblur="textboxChange(this,false,'T�m ki?m')"
-                    value="T�m ki?m" name="SearchQuery" onkeypress="return trapEnterKey('chkYahoo2',this.value,event);" />
-                <input type="button" class="inputSearch floatLeft" style="width: 60px; height: 20px;
-                    cursor: pointer" alt="T�m Ki?m" id="go_search_yahoo2" name="image" onclick="searchEngine2();" />
-        </div>
-        <div class="floatLeft" style="padding-top: 2px; padding-left: 0px;">
-             <input type="checkbox" id="chkYahoo2" onclick="setvalueYahoo();" /></div>
-    </div>
-</div>
+            
+
 
         </div>
-        <div class="mnufooterBtom">
-            <div style="line-height: 32px" class="floatLeft">
-                <a href="http://tuoitre.vn">B?n Quy?n � 2003 - 2010 Tu?i Tr?</a>
-            </div>
-            <div class="floatLeft" style="text-align: center; width: 570px;">
-                <a href="http://tuoitre.vn/Support/unicode.zip">Font Unicode</a> <a href="http://quangcao.tuoitre.vn/Bang-gia-quang-cao/Tuoi-Tre-Online/index.html">
-                    B?ng Gi� Qu?ng C�o</a> <a href="http://quangcao.tuoitre.vn/Dat-bao-truc-tuyen/index.html">
-                        �?t B�o</a> <a href="http://tuoitre.vn/So-do-Web/Index.html">So �? Web</a>
-                <a href="http://tuoitre.vn/Support/support.htm">Hu?ng D?n</a> <a style="background: none;"
-                    href="javascript:showWindow('http://chuyentrang.tuoitre.vn/Service/Contact.aspx', false, false, false, false, false, false, true, true, 800, 650, 0, 0);">
-                    Li�n H?</a>
-            </div>
-            <div class="floatRight" style="line-height: 32px">
-                <a href="http://moore.vn" target="_blank">Ph�t Tri?n B?i Moore Corp.</a>
-            </div>
+        <div id="footer">
+        	<div class="copyright">
+           		<jdoc:include type="modules" name="vn-bottomright" style="none" />
+           	</div>
         </div>
         <div class="clearFix">
         </div>
     </div>
     <!-- EDIT PAGECONTROL-->
-    
-        
-    
-    <!-- CATEGORY ZONE -->
-    
-        
-
-<style type="text/css">
-    #modalPage
-    {
-        display: none;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        left: 0px;
-    }
-    
-    .modalBackground
-    {
-         filter: Alpha(Opacity=40);
-        -moz-opacity: 0.4;
-        opacity: 0.4;
-        width: 100%;
-        height: 100%;
-        background-color: #999999;
-        position: absolute;
-        z-index: 500;
-        top: 0px;
-        left: 0px;
-    }
-    
-    .modalContainer
-    {
-        position: absolute;        
-        width: 100%;
-        height: 100%;        
-        top: 30px;
-        left: 30%;
-        /*
-        left: 40%;
-        top: 40%;
-        */
-        z-index: 750;
-    }
-    
-    .modal
-    {
-        background-color: white;
-        border: solid 1px black;
-        padding: 0px;
-        position: relative;
-        /*
-        top: -150px;
-        left: -150px;
-        */
-        z-index: 1000;
-        width: 400px;
-        height: 500px;
-    }
-    
-    .modalTop
-    {
-        width: 100%;
-        height: 25px;
-        background-color: #7FBAE4;
-        padding: 0px;
-        color: #ffffff;
-        font-family: Arial;
-        font-weight: bold;
-        text-align: right;
-    }
-    
-    .modalTop a, .modalTop a:visited
-    {
-        color: #ffffff;
-    }
-    
-    .modalBody
-    {
-        width:100%;
-        height:100%;
-        padding: 0px;
-    }
-</style>
-
-<div id="modalPage">
-    <div class="modalBackground" id="modalBackground"></div>
-    <div class="modalContainer" id="modalContainer">
-        <div class="modal">
-            <div class="modalTop" style="display:none;">
-                <a href="javascript:hideModal('modalPage')">[��ng l?i]</a>
-            </div>
-            <div class="modalBody" id="modalContent">
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-</form>
 <script type="text/javascript">
 $(document).ready(function() {	
 	$('#most_read').cycle({

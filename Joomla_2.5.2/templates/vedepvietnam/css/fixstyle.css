@@ -158,7 +158,7 @@ ul.listOtherNewsChaoco li a:hover{
 
 /*-- MODULES BANNERS --*/
 #colunmLeft2 .bannergroup{
-	width: 200px; text-align: center; margin-top: 5px;
+	width: 200px; text-align: center;
 }
 #colunmLeft2 .bannergroup .banneritem{
 	width: 200px; margin: 0 auto;
