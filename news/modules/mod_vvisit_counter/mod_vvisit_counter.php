@@ -227,8 +227,6 @@ if( $s_yesterday ){
 	$yesterday_visitors = $yesterday_visitors*86+236;
 }
 
-$all_visitors 	+= ($all_visitors+34637)+$yesterday_visitors+$today_visitors;
-
 // Count This Week's Visitors
 if( $s_week ){
 	if ( $iscache ){
@@ -276,6 +274,8 @@ if( $s_lmonth ){
 	}
 	$lmonth_visitors = $lmonth_visitors*86+236;
 }
+
+$all_visitors 	+= ($all_visitors+34637)+$yesterday_visitors+$today_visitors;
 
 // Count Online in 20 minutes
 $online_time	=	ONLINE_TIME_DEFAULT;
