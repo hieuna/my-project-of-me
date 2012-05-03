@@ -2646,4 +2646,22 @@ table.homerightmail td.mailcontent {
 	color: #4F82AC;
 }
 
-/*-- FIX ERROR PAGE --*/
+/*-- ARTICLE OTHERS --*/
+.article_others{
+	margin-top: 30px; padding: 10px; background: #fafafa;
+}
+.article_others h3{
+	margin: 0; margin-bottom: 5px; padding: 3px 0; color: #004175; font-size: 15px; border-bottom: 2px solid #99cc00;
+}
+.article_others p{
+	margin: 0; padding: 5px 0px 3px 13px; background: url("../images/bluedot.jpg") no-repeat 5px 9px;
+}
+.article_others p span.date{
+	color: #666; font-style: italic; margin-left: 5px;
+}
+.article_others p a{
+	color: #004175; text-decoration: none;
+}
+.article_others p a:hover{
+	color: #4F82AC;
+}
