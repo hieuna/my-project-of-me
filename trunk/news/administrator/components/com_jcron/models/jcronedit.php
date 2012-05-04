@@ -64,7 +64,7 @@ class JCronModelJCronEdit extends JModel
 		else
 			$data['published'] = 0;
 
-                if($data['ok'] == "on")
+                if($data['ok'] == "1")
 			$data['ok'] = 1;
 		else
 			$data['ok'] = 0;

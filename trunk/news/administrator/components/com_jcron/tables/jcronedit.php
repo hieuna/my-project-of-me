@@ -15,7 +15,7 @@ class TableJCronEdit extends JTable
 	
 	var $task = null;
 	var $type = null;
-        var $published = null;
+    var $published = null;
 	var $mhdmd = null;
 	var $file = null;
 	var $ran_at = null;
