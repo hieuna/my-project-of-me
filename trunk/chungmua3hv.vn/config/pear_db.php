@@ -22,7 +22,7 @@
 
 
 
-		$db_name= 'db_chungmua3hv';
+		$db_name= 'db_chungmua2hv';
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-		$pass= "ngockieuvan@vccorp.vn";
+		$pass= "ngockv842006";
 
 
 
