@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-17 00:33:34
+<?php /* Smarty version 2.6.19, created on 2012-04-23 01:21:09
          compiled from login.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -109,4 +109,4 @@ password" type="password" style="width:200px"  /></td>
 Chương trình quản lý dữ liệu - Thiết kế bởi <a href="http://www.vietsmarty.com" style="color:#999;">VietSmarty</a>
 </div>
 </body>
-</html>
+</html>
