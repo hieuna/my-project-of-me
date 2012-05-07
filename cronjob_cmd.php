@@ -7,14 +7,14 @@ define('DB_PASSWORD', 'ngockieuvan@vccorp.vn');
 define('DB', 'database_projects');
 
 ini_set("memory_limit","128M");
-include_once 'lib/simple_html_dom.php';
-include_once 'lib/function.php';
+include_once 'class/simple_html_dom.php';
+include_once 'class/filterinput.php';
+include_once 'class/function.php';
+
+$JFilter = new JFilterInput();
 
 $dantri_thethao = 'http://dantri.com.vn/c26/thethao.htm';
 $dantri = 'http://dantri.com.vn';
-
-//$a = strip_tags("<input type='hidden' value='/c26s26/The-Thao/trang-1.htm' id='hidNextUsing'/>casa", "<input>");
-//echo $a; die;
 
 $html = new simple_html_dom();
 $html = file_get_html($dantri_thethao); 	
@@ -67,7 +67,9 @@ foreach ($articles as $index => $article) {
 	$title = isset($article['title']) ? clean_value(replaceString($article['title'])) : null;
 	$description = isset($article['description']) ? clean_value(replaceString($article['description'])) : '';
 	$content = isset($article['content']) ? str_replace("'", "", $article['content']) : '';
-	$fulltext = strip_tags($content, "<input>");
+	
+	$introtext	= str_replace("'","\'", _cleanContent($description));
+	$fulltext 	= str_replace("'","\'", _cleanContent($content));
 	
 	if ($title != null) { 
 		// Tao slug từ tiêu đề
@@ -81,9 +83,9 @@ foreach ($articles as $index => $article) {
 		// Nếu không tồn tại thêm mới vào
 		if ($number[0] == 0) {
 			// Cập nhật bảng articles
-			echo $sql = "INSERT INTO jos_content(title, introtext, [fulltext], images, created, state, alias, sectionid, catid) 
-				VALUES('" . $title . "', '" . $description . "', '" . $fulltext . "', '" . $article['image'] . "', '" . date('Y-m-d H:i:s') . "', 1, '$slug', 7, 38)";
-			die;
+			$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, state, alias, sectionid, catid) 
+				VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $article['image'] . "', '" . date('Y-m-d H:i:s') . "', 1, '$slug', 7, 38)";
+			//die;
 			$result_article = mysql_query($sql);
 
 			$array_in[$index]['title'] = $title;
