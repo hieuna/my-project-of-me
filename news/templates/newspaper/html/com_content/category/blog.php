@@ -104,7 +104,7 @@ if (($numIntroArticles != $startIntroArticles) && ($i < $this->total)) : ?>
 <?php endif; ?>
 <?php if ($this->params->get('show_pagination')) : ?>
 <tr>
-	<td valign="top" align="center">
+	<td valign="top" align="right">
 		<?php echo $this->pagination->getPagesLinks(); ?>
 		<br /><br />
 	</td>
@@ -112,7 +112,7 @@ if (($numIntroArticles != $startIntroArticles) && ($i < $this->total)) : ?>
 <?php endif; ?>
 <?php if ($this->params->get('show_pagination_results')) : ?>
 <tr>
-	<td valign="top" align="center">
+	<td valign="top" align="right">
 		<?php echo $this->pagination->getPagesCounter(); ?>
 	</td>
 </tr>

@@ -27,6 +27,15 @@ defined('JPATH_BASE') or die();
 * @subpackage	Application
 * @since		1.5
 */
+function unFormatDate($d=null , $f="d-m-Y h:i:s"){
+	$d=($d?$d:date("Y-m-d h:i:s"));
+  return date($f,strtotime($d));
+}
+
+function formatDate($d=null){
+	$arr = explode('-',$d);
+	return $arr[2]."-".$arr[1]."-".$arr[0];
+}
 
 class JApplication extends JObject
 {
