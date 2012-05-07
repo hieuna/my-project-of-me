@@ -2665,3 +2665,20 @@ table.homerightmail td.mailcontent {
 .article_others p a:hover{
 	color: #4F82AC;
 }
+.article_others ul{
+	margin: 0; padding: 0;
+}
+.article_others ul li{
+	padding: 2px 0px 2px 13px; margin: 0;
+}
+
+/*-- ADD NEW STYLE --*/
+.newnew{
+	background: url("../images/newnew.gif") no-repeat top right; padding-right: 30px;
+}
+a.readmore-link, a.pagenav{
+	color: #004175; font-weight: bold;
+}
+span.pagenav{
+	font-weight: normal;
+}

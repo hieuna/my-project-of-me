@@ -211,7 +211,7 @@ $local_lmonthstart		=	$datetime["local_lmonthstart"];
 // Count All Visitors
 $all_visitors	=	modVisitCounterHelper::getMaxID();
 $all_visitors	+=	$initialvalue;
-$all_visitors 	= ($all_visitors+14637);
+$all_visitors 	= (($all_visitors*16)+48275);
 
 // Count Today's Visitors
 $today_visitors		= modVisitCounterHelper::getVisitors( $local_daystart )*86+236;
@@ -275,7 +275,6 @@ if( $s_lmonth ){
 	$lmonth_visitors = $lmonth_visitors*86+236;
 }
 
-$all_visitors 	+= ($all_visitors+34637)+$yesterday_visitors+$today_visitors;
 
 // Count Online in 20 minutes
 $online_time	=	ONLINE_TIME_DEFAULT;

@@ -131,7 +131,7 @@ if ($view == 'article')
       
       $row_count = 0;
       $num_articles = $params->get('num_articles', 5) - 1;
-
+	  $nows = mktime(0,0,0,date("m"),date("d"),date("Y"));
       foreach ($list as $row)
       {
          if ($row_count > $num_articles)
@@ -141,8 +141,12 @@ if ($view == 'article')
             continue;   
          $link = JRoute::_(ContentHelperRoute::getArticleRoute($row->slug, $row->catslug,$row->sectionid));
          $date =& JFactory::getDate($row->created);
+         $ngay_nhap = mktime(0,0,0,unFormatdate($row->created,"m"),unFormatdate($row->created,"d"),unFormatdate($row->created,"Y"));
+         $days = ($nows - $ngay_nhap)/86400;
+		 if ($days<2) $addClass = ' newnew';
+		 else $addClass = '';
          $datex = $date->toFormat("%d %B %Y");
-         $html .= "<p><a href=$link>{$row->title}</a> <span class='date'>$datex</span></p>";       
+         $html .= "<p><a href=$link>{$row->title}</a> <span class='date$addClass'>$datex</span></p>";       
          $row_count++;
       }
 

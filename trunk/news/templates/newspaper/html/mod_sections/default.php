@@ -11,7 +11,7 @@ foreach ($list as $item) :
 $sql = "SELECT id, title, name, alias FROM #__categories WHERE section=".$item->id." AND published=1 ORDER BY ordering ASC, id DESC LIMIT 4";
 $db->setQuery($sql);
 $lsCategories = $db->loadObjectList();
-$query = "SELECT id, catid, sectionid, title, alias, title_alias, introtext, images FROM #__content WHERE sectionid=".$item->id." AND state=1 ORDER BY created DESC LIMIT 6";
+$query = "SELECT id, catid, sectionid, title, alias, title_alias, introtext, images, created FROM #__content WHERE sectionid=".$item->id." AND state=1 ORDER BY created DESC LIMIT 6";
 $db->setQuery($query);
 $rows = $db->loadObjectList();
 ?>
@@ -25,10 +25,22 @@ $rows = $db->loadObjectList();
 			<?php endforeach;?>
 		</ul>
 	</div>
-	<?php 
+	<?php
+	$nows = mktime(0,0,0,date("m"),date("d"),date("Y")); 
 	$i=0;
 	foreach ($rows as $row):
 		$link = JRoute::_(ContentHelperRoute::getArticleRoute($row->id, $row->catid, $row->sectionid));
+		//Set new link
+		$ngay_nhap = mktime(0,0,0,unFormatdate($row->created,"m"),unFormatdate($row->created,"d"),unFormatdate($row->created,"Y"));				
+		$days = ($nows - $ngay_nhap)/86400;
+		if ($days<2) {
+			$addClass = ' newnew';
+			$addClass2 = ' class="newnew"';
+		}else{
+			$addClass = '';
+			$addClass2 = '';
+		}
+		
 		if ($i== 0){
 		?>
 		<div class="mt1 clearfix">
@@ -40,7 +52,7 @@ $rows = $db->loadObjectList();
 				<?php endif;?>
 			</a>
 			<div class="fl wid325">
-				<a href="<?php echo $link;?>" class="fon6"><?php echo $row->title;?></a> 
+				<a href="<?php echo $link;?>" class="fon6<?php echo $addClass;?>"><?php echo $row->title;?></a> 
 				<div class="fon5 mt0">
 				<?php echo html_entity_decode($row->introtext);?>
 				</div>
@@ -50,7 +62,7 @@ $rows = $db->loadObjectList();
 		<?php 
 		}else{
 		?>
-		<li><a href="<?php echo $link;?>"><?php echo $row->title;?></a></li>
+		<li><a<?php echo $addClass2;?> href="<?php echo $link;?>"><?php echo $row->title;?></a></li>
 		<?php
 		}
 		$i++; 

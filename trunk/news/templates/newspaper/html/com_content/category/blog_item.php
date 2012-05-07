@@ -1,6 +1,11 @@
 <?php // no direct access
 defined('_JEXEC') or die('Restricted access');
 $baseurl = JURI::base();
+$nows = mktime(0,0,0,date("m"),date("d"),date("Y"));
+$ngay_nhap = mktime(0,0,0,unFormatdate($this->item->created,"m"),unFormatdate($this->item->created,"d"),unFormatdate($this->item->created,"Y"));				
+$days = ($nows - $ngay_nhap)/86400;
+if ($days<2) $addClass = ' newnew';
+else $addClass = '';
 ?>
 <?php $canEdit   = ($this->user->authorize('com_content', 'edit', 'content', 'all') || $this->user->authorize('com_content', 'edit', 'content', 'own')); ?>
 <?php if ($this->item->state == 0) : ?>
@@ -11,7 +16,7 @@ $baseurl = JURI::base();
 <table class="contentpaneopen<?php echo $this->escape($this->item->params->get( 'pageclass_sfx' )); ?>">
 <tr>
 	<td class="contentheading<?php echo $this->escape($this->item->params->get( 'pageclass_sfx' )); ?>" width="100%">
-		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->id, $this->item->catid, $this->item->sectionid)); ?>" class="contentpagetitle<?php echo $this->escape($this->item->params->get( 'pageclass_sfx' )); ?>">
+		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->id, $this->item->catid, $this->item->sectionid)); ?>" class="contentpagetitle<?php echo $this->escape($this->item->params->get( 'pageclass_sfx' )); echo $addClass; ?>">
 			<?php echo $this->escape($this->item->title); ?>
 		</a>
 	</td>
