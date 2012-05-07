@@ -66,7 +66,7 @@ $array_un = array();
 foreach ($articles as $index => $article) {
 	$title = isset($article['title']) ? clean_value(replaceString($article['title'])) : null;
 	$description = isset($article['description']) ? clean_value(replaceString($article['description'])) : '';
-	$content = isset($article['content']) ? str_replace("'", "", clean_value($article['content'])) : '';
+	$content = isset($article['content']) ? str_replace("'", "", $article['content']) : '';
 	$fulltext = strip_tags($content, "<input>");
 	
 	if ($title != null) { 

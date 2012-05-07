@@ -1,7 +1,7 @@
 ﻿<?php
 error_reporting(E_ALL ^E_NOTICE);
 define('CPATH_BASE', dirname(__FILE__));
-$site 	= ( isset($_POST['site']) ? $_POST['site'] : ( isset($_GET['site']) ? $_GET['site'] : '' ) );
+echo $site 	= ( isset($_POST['site']) ? $_POST['site'] : ( isset($_GET['site']) ? $_GET['site'] : '' ) );
 $step 	= intval( isset($_POST['step']) ? $_POST['step'] : ( isset($_GET['step']) ? $_GET['step'] : 1 ) );
 $catid 	= intval( isset($_POST['catid']) ? $_POST['catid'] : ( isset($_GET['catid']) ? $_GET['catid'] : 0 ) );
 
