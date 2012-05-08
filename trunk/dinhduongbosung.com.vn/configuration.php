@@ -13,15 +13,15 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
 	public $host = 'localhost';
-	public $user = 'ukgroup_2012';
-	public $password = 'admin';
-	public $db = 'ukgroup_dd01';
-	public $dbprefix = 'nfje6_';
+	public $user = 'root';
+	public $password = 'ngockieuvan@vccorp.vn';
+	public $db = 'db_dinhduongbosung';
+	public $dbprefix = 'e3nup_';
 	public $live_site = '';
-	public $secret = 'lF7r0rCtLRXGJPT8';
+	public $secret = 'k3RdYAh3UQWoSH7M';
 	public $gzip = '0';
 	public $error_reporting = 'default';
-	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&amp;keyref=Help{major}{minor}:{keyref}';
+	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help16:{keyref}';
 	public $ftp_host = '127.0.0.1';
 	public $ftp_port = '21';
 	public $ftp_user = '';
@@ -31,7 +31,7 @@ class JConfig {
 	public $offset = 'UTC';
 	public $offset_user = 'UTC';
 	public $mailer = 'mail';
-	public $mailfrom = 'bachnx@intcom.com.vn';
+	public $mailfrom = 'ngockv@gmail.com';
 	public $fromname = 'Dinh duong bo sung';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
@@ -54,8 +54,14 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $log_path = '/home/ukgroup/domains/dinhduongbosung.com.vn/public_html/logs';
-	public $tmp_path = '/home/ukgroup/domains/dinhduongbosung.com.vn/public_html/tmp';
+	public $log_path = 'D:\\AppServ\\www\\projects\\dinhduongbosung.com.vn\\logs';
+	public $tmp_path = 'D:\\AppServ\\www\\projects\\dinhduongbosung.com.vn\\tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
+	public $MetaRights = '';
+	public $sitename_pagetitles = '0';
+	public $force_ssl = '0';
+	public $feed_email = 'author';
+	public $cookie_domain = '';
+	public $cookie_path = '';
 }
