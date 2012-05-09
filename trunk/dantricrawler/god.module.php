@@ -91,7 +91,7 @@ function god_cron(){
       _god_get_news_dantri(true, $link['l'], $link['i']); 
       break;
     case 'ngoisao.net':
-      _god_get_news_ngoisao(true, $link['l'], $link['i']); 
+      _god_get_news_ngoisao(true, $link['l'], $lindk['i']); 
       break;
   }
   variable_set('crawler_current_id', $crId+1);  
