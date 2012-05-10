@@ -1,3 +1,10 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lấy tin tự động</title>
+</head>
+<body>
 <?php
 
 // Connection DB
@@ -13,11 +20,10 @@ include_once 'class/function.php';
 
 $JFilter = new JFilterInput();
 
-$dantri_thethao = 'http://dantri.com.vn/c26/thethao.htm';
-$dantri = 'http://dantri.com.vn';
+$dantri = 'http://dantri.com.vn/c26/thethao.htm';
 
 $html = new simple_html_dom();
-$html = file_get_html($dantri_thethao); 	
+$html = file_get_html($dantri); 	
 $articles = array();
 
 foreach ($html->find('.mt3') as $index => $items) {
@@ -126,3 +132,5 @@ if (!empty($array_in)) {
 
 mysql_close();
 ?>
+</body>
+</html>
