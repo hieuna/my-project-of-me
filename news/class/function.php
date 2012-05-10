@@ -1,4 +1,5 @@
 <?php
+include("class/filterinput.php");
 function _cleanContent($str)
 {
 	$filter = & JFilterInput::getInstance(array('a','input','select','font','span'), null, 1, 1);
