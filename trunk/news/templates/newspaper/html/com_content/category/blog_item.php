@@ -32,11 +32,15 @@ endif; ?>
 <td valign="top" colspan="2">
 	<div class="mt1 clearfix">
 		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->id, $this->item->catid, $this->item->sectionid)); ?>">
+		<?php if ($this->attribs!=""):?>
 			<?php if ($this->item->images != ""):?>
 			<img class="img130" src="<?php echo $baseurl;?>images/stories/<?php echo $this->item->images;?>" />
 			<?php else :?>
 			<img class="img130" src="<?php echo $baseurl;?>images/no_image.jpg" />
 			<?php endif;?>
+		<?php else:?>
+			<img class="img130" src="<?php echo $this->item->images;?>" />
+		<?php endif;?>	
 		</a>
 		<div class="fl wid300 mt0">
 			<?php if (isset ($this->item->toc)) : ?>

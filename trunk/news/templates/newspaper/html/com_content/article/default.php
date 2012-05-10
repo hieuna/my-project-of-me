@@ -116,26 +116,6 @@ $canEdit	= ($this->user->authorize('com_content', 'edit', 'content', 'all') || $
 	<div class="fon34"><?php echo $this->article->text; ?></div>
 	</td>
 	</tr>
-	<!--  
-	<?php if (($this->params->get('show_author')) && ($this->article->author != "")) : ?>
-	<tr>
-		<td valign="top">
-			<span class="small">
-				<?php JText::printf( 'Written by', ($this->escape($this->article->created_by_alias) ? $this->escape($this->article->created_by_alias) : $this->escape($this->article->author)) ); ?>
-			</span>
-			&nbsp;&nbsp;
-		</td>
-	</tr>
-	<?php endif; ?>
-	<?php if ( intval($this->article->modified) !=0 && $this->params->get('show_modify_date')) : ?>
-	<tr>
-		<td class="modifydate">
-			<?php echo JText::sprintf('LAST_UPDATED2', JHTML::_('date', $this->article->modified, JText::_('DATE_FORMAT_LC2'))); ?>
-		</td>
-	</tr>
-	-->
-	<?php endif; ?>
 	</table>
-	<!--  <span class="article_separator">&nbsp;</span>-->
 	<?php echo $this->article->event->afterDisplayContent; ?>
 </div>	

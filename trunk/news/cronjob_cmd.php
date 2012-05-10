@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lấy tin tự động</title>
+</head>
+<body>
+<?php
+// Defined DB
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'ngockieuvan@vccorp.vn');
+define('DB', 'database_projects');
+
+// Kết nối db
+$link = @mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die('Unable to establish a DB connection');
+mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $link);
+mysql_select_db(DB,$link);
+
+ini_set("memory_limit","128M");
+include_once 'class/simple_html_dom.php';
+include_once 'class/function.php';
+
+$aLink = array(
+	//Xã hội
+	array('sectionid' => 1, 'catid' =>1 , 'link'=> 'http://dantri.com.vn/c20s134/phongsu/trang-1.htm'), //Phóng sự - Ký sự
+	array('sectionid' => 1, 'catid' =>2 , 'link'=> 'http://dantri.com.vn/c20s255/moitruong/trang-1.htm'), //Môi trường
+	array('sectionid' => 1, 'catid' =>84 , 'link'=> 'http://dantri.com.vn/c20s696/chinhtri/trang-1.htm'), //Chính trị
+	//Văn hóa
+	array('sectionid' => 4, 'catid' =>28 , 'link'=> 'http://dantri.com.vn/c23s730/vanhoa/trang-1.htm'), //Góc nhìn văn hóa
+	//Thể thao
+	array('sectionid' => 7, 'catid' =>37 , 'link'=> 'http://dantri.com.vn/c26s400/bongtrongnuoc/trang-1.htm'), //Bóng đá trong nước
+	array('sectionid' => 7, 'catid' =>38 , 'link'=> 'http://dantri.com.vn/c26s404/bongquocte/trang-1.htm'), //Bóng đá quốc tế
+	array('sectionid' => 7, 'catid' =>39 , 'link'=> 'http://dantri.com.vn/c26s405/cupchauau/trang-1.htm'), //Cup Châu Âu
+	array('sectionid' => 7, 'catid' =>40 , 'link'=> 'http://dantri.com.vn/c26s406/bongdaanh/trang-1.htm'), //Bóng đá Anh
+	array('sectionid' => 7, 'catid' =>42 , 'link'=> 'http://dantri.com.vn/c26s407/bongdaitalia/trang-1.htm'), //Bóng đá Ý
+	array('sectionid' => 7, 'catid' =>41 , 'link'=> 'http://dantri.com.vn/c26s408/bongdataybannha/trang-1.htm'), //Bóng đá TBN
+	array('sectionid' => 7, 'catid' =>43 , 'link'=> 'http://dantri.com.vn/c26s410/tennisduaxe/trang-1.htm'), //Tennis-Đua xe
+	array('sectionid' => 7, 'catid' =>44 , 'link'=> 'http://dantri.com.vn/c26s411/cacmonkhac/trang-1.htm'), //Cac môn khác
+	//Thế giới
+	array('sectionid' => 9, 'catid' =>19 , 'link'=> 'http://dantri.com.vn/c36s172/tgdiemnong/trang-1.htm'), //Thế giới 24h
+	//Giáo dục
+	array('sectionid' => 2, 'catid' =>5 , 'link'=> 'http://dantri.com.vn/c25s201/tuyensinh/trang-1.htm'), //Tuyển sinh
+	array('sectionid' => 2, 'catid' =>6 , 'link'=> 'http://dantri.com.vn/c25s181/guongsang/trang-1.htm'), //Điểm sáng giao dục Việt
+	array('sectionid' => 2, 'catid' =>8 , 'link'=> 'http://dantri.com.vn/c25s146/duhoc/trang-1.htm'), //Du hoc
+	//Sức khỏe
+	array('sectionid' => 5, 'catid' =>32 , 'link'=> 'http://dantri.com.vn/c7/suckhoe.htm') //Tin tức sức khỏe
+);
+
+foreach ($aLink as $array) {
+	$get_link = $array['link'];
+	$html = new simple_html_dom();
+	$html = file_get_html($get_link); 
+	var_dump($html); die;	
+	$articles = array();
+	foreach ($html->find('.mt3') as $index => $items) {
+		//Lấy ảnh đại diện
+		$articles[$index]['image'] = $items->children(0)->children(0)->src;
+		
+		// Nội dung
+		foreach ($items->find('div.mr1') as $item) {
+			// Tiêu đề bài viết
+			$articles[$index]['title'] = $item->children(0)->innertext;
+			
+			// Xem chi tiết bài viết
+			$detail = $item->children(0)->href;
+			
+			//$html_detail = new simple_html_dom();
+			//$html_detail->load_file($dantri . $detail);
+			$html_detail = file_get_html($dantri . $detail);		
+			
+			// Mô tả bài viết
+			$descriptions = $html_detail->find('div.fon33');
+			foreach ($descriptions as $description) {
+				$articles[$index]['description'] = $description->innertext;
+			}
+			
+			// Nội dung bài viết
+			$contents = $html_detail->find('div.fon34');
+			foreach ($contents as $content) {
+				$articles[$index]['content'] = $content->innertext;
+			}
+		}
+	}
+	
+	$check = false;
+	$array_in = array();
+	$array_un = array();
+	
+	foreach ($articles as $index => $article) {
+		$title = isset($article['title']) ? clean_value(replaceString($article['title'])) : null;
+		$description = isset($article['description']) ? clean_value(replaceString($article['description'])) : '';
+		$content = isset($article['content']) ? str_replace("'", "", $article['content']) : '';
+		
+		$introtext	= str_replace("'","\'", _cleanContent($description));
+		$fulltext 	= str_replace("'","\'", _cleanContent($content));
+		
+		if ($title != null) { 
+			// Tao slug từ tiêu đề
+			$slug = RemoveSign($title);
+			$slug = generateSlug($slug, strlen($slug));
+			
+			// Kiểm tra xem slug này có tồn tại trong articles không
+			$sql = "SELECT COUNT(*) AS number FROM jos_content WHERE alias = '$slug'";
+			$result = mysql_query($sql);
+			$number = mysql_fetch_row($result);
+			// Nếu không tồn tại thêm mới vào
+			if ($number[0] == 0) {
+				// Cập nhật bảng articles
+				echo $sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, state, alias, sectionid, catid) 
+					VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $article['image'] . "', '" . date('Y-m-d H:i:s') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
+				die;
+				$result_article = mysql_query($sql);
+	
+				$array_in[$index]['title'] = $title;
+				
+				if (!$result_article) {
+					$check = true;
+					echo 'Cập nhật không thành công';
+					return;
+				} 
+			} else {
+				$array_un[$index]['title'] = clean_value(replaceString($article['title']));
+			}
+		} 
+	}
+	/*
+	if (!empty($array_un)) {
+		$count = 1;
+		echo '<b>Các tin đã tồn tại không được thêm vào</b><br>';
+		foreach ($array_un as $ar) {
+			echo $count . ': ' . $ar['title'] . '<br>';
+			$count++;
+		}
+		echo '------------------------------------------------<br>';
+	}
+	*/
+	
+	if (!empty($array_in)) {
+		$count = 1;
+		//echo '<b>Các tin đã đã được thêm</b><br>';
+		foreach ($array_in as $ar) {
+			//echo $count . ': ' . $ar['title'] . '<br>';
+			$count++;
+		}
+		//echo '------------------------------------------------<br>';
+		if (!$check) {
+			echo 'Cập nhật thành công';
+		} 
+	}
+}
+
+mysql_close();
+?>
+</body>
+</html>
