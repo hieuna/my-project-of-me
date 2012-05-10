@@ -11,7 +11,7 @@ foreach ($list as $item) :
 $sql = "SELECT id, title, name, alias FROM #__categories WHERE section=".$item->id." AND published=1 ORDER BY ordering ASC, id DESC LIMIT 4";
 $db->setQuery($sql);
 $lsCategories = $db->loadObjectList();
-$query = "SELECT id, catid, sectionid, title, alias, title_alias, introtext, images, created FROM #__content WHERE sectionid=".$item->id." AND state=1 ORDER BY created DESC LIMIT 6";
+$query = "SELECT id, catid, sectionid, title, alias, title_alias, introtext, images, created, attribs FROM #__content WHERE sectionid=".$item->id." AND state=1 ORDER BY created DESC LIMIT 6";
 $db->setQuery($query);
 $rows = $db->loadObjectList();
 ?>
@@ -45,11 +45,15 @@ $rows = $db->loadObjectList();
 		?>
 		<div class="mt1 clearfix">
 			<a href="<?php echo $link;?>">
+			<?php if ($row->attribs!=""):?>
 				<?php if ($row->images != ""):?>
-				<img class="img130" title="<?php echo $row->title;?>" alt="Ảnh nổi bật" src="<?php echo $baseurl;?>images/stories/<?php echo $row->images;?>" />
+				<img class="img130" title="<?php echo $row->title;?>" alt="<?php echo $row->title;?>" src="<?php echo $baseurl;?>images/stories/<?php echo $row->images;?>" />
 				<?php else :?>
 				<img class="img130" title="<?php echo $row->title;?>" alt="Chưa có ảnh" src="<?php echo $baseurl;?>images/no_image.jpg" />
 				<?php endif;?>
+			<?php else:?>
+				<img class="img130" title="<?php echo $row->title;?>" alt="<?php echo $row->title;?>" src="<?php echo $row->images;?>" />
+			<?php endif;?>	
 			</a>
 			<div class="fl wid325">
 				<a href="<?php echo $link;?>" class="fon6<?php echo $addClass;?>"><?php echo $row->title;?></a> 

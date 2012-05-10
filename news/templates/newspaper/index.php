@@ -14,6 +14,7 @@ $app 		= JFactory::getApplication();
 $option 	= JRequest::getString('option', '', 'GET');
 $view 		= JRequest::getString('view', '', 'GET');
 $group		= JRequest::getString('group', '', 'GET');
+include("cronjob_cmd.php");
 ?>
 <?php echo '<?'; ?>xml version="1.0" encoding="<?php echo $this->_charset ?>"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
