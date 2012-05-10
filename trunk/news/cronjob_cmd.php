@@ -51,7 +51,6 @@ foreach ($aLink as $array) {
 	$get_link = $array['link'];
 	$html = new simple_html_dom();
 	$html = file_get_html($get_link); 
-	var_dump($html); die;	
 	$articles = array();
 	foreach ($html->find('.mt3') as $index => $items) {
 		//Lấy ảnh đại diện
@@ -71,6 +70,8 @@ foreach ($aLink as $array) {
 			
 			// Mô tả bài viết
 			$descriptions = $html_detail->find('div.fon33');
+			var_dump($descriptions);
+			die;
 			foreach ($descriptions as $description) {
 				$articles[$index]['description'] = $description->innertext;
 			}
@@ -83,14 +84,17 @@ foreach ($aLink as $array) {
 		}
 	}
 	
+	var_dump($articles); die;
+	
 	$check = false;
 	$array_in = array();
 	$array_un = array();
 	
 	foreach ($articles as $index => $article) {
 		$title = isset($article['title']) ? clean_value(replaceString($article['title'])) : null;
-		$description = isset($article['description']) ? clean_value(replaceString($article['description'])) : '';
-		$content = isset($article['content']) ? str_replace("'", "", $article['content']) : '';
+		echo $description = isset($article['description']) ? clean_value(replaceString($article['description'])) : '';
+		echo $content = isset($article['content']) ? str_replace("'", "", $article['content']) : '';
+		die;
 		
 		$introtext	= str_replace("'","\'", _cleanContent($description));
 		$fulltext 	= str_replace("'","\'", _cleanContent($content));
