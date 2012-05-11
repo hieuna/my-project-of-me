@@ -27,7 +27,6 @@ $vnexpress	= 'http://vnexpress.net/';
 $ngoisao	= 'http://ngoisao.net/';
 
 $aLink = array(
-/*
 	//DANTRI.COM
 	//Xã hội
 	array('sectionid' => 1, 'catid' =>1 , 'link'=> 'http://dantri.com.vn/c20s134/phongsu/trang-1.htm', 'url' => $dantri), //Phóng sự - Ký sự
@@ -52,7 +51,7 @@ $aLink = array(
 	array('sectionid' => 2, 'catid' =>8 , 'link'=> 'http://dantri.com.vn/c25s146/duhoc/trang-1.htm', 'url' => $dantri), //Du hoc
 	//Sức khỏe
 	array('sectionid' => 5, 'catid' =>32 , 'link'=> 'http://dantri.com.vn/c7/suckhoe.htm', 'url' => $dantri), //Tin tức sức khỏe
-*/
+
 	//NGOISAO.NET
 	//Văn hóa
 	array('sectionid' => 4, 'catid' =>29 , 'link'=> 'http://ngoisao.net/tin-tuc/showbiz-viet/', 'url' => $ngoisao) //Show biz
@@ -93,6 +92,7 @@ foreach ($aLink as $array) {
 				foreach ($contents as $content) {
 					$articles[$index]['content'] = $content->innertext.'<p align="right"><b>(Theo Dantri.com)</b></p>';
 				}
+				$articles[$index][url] = '';
 			}
 		}
 	}
@@ -129,6 +129,7 @@ foreach ($aLink as $array) {
 				$i = strpos($articles[$index]['content'], "</p>");
 				$j = strpos($articles[$index]['content'], "div class='detailNS'>");
 				$articles[$index]['content'] = substr($articles[$index]['content'], $i, $j-$i);
+				$articles[$index]['url'] = $array['url'];
 			}
 		}
 	}
@@ -142,7 +143,7 @@ foreach ($aLink as $array) {
 		$title = isset($article['title']) ? clean_value(replaceString($article['title'])) : null;
 		$description = isset($article['description']) ? clean_value(replaceString($article['description'])) : '';
 		$content = isset($article['content']) ? str_replace("'", "", $article['content']) : '';
-		//die;
+		$url = isset($article['url']) ? $article['url'] : '';
 		
 		$introtext	= str_replace("'","\'", _cleanContent($description));
 		$fulltext 	= str_replace("'","\'", _cleanContent($content));
@@ -163,7 +164,7 @@ foreach ($aLink as $array) {
 				$info_image = pathinfo($article['image']);
 				$extension = $info_image['extension'];
 				$image_convert = $slug."-".time().".".$extension;
-				copy($article['image'],"images/stories/".$image_convert);
+				copy($url.$article['image'],"images/stories/".$image_convert);
 				// Cập nhật bảng articles
 				$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, state, alias, sectionid, catid) 
 					VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
