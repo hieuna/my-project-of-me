@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install version="1.5.0" type="component" method="upgrade">
+    <name>YouTubeGallery</name>
+    <author>Design Compass corp</author>
+    <authorEmail>admin@designcompasscorp.com</authorEmail>
+    <authorUrl>http://designcompasscorp.com</authorUrl>
+    <copyright>Copyright (C) Design Compass corp. All rights reserved.</copyright>
+    <creationDate>April 2011</creationDate>
+    <version>2.1.9</version>
+    <description>YouTube Gallery - Component</description>
+
+    <!-- installation part -->
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">uninstall.sql</file>
+		</sql>
+	</uninstall>
+	
+	<installfile>install.youtubegallery.php</installfile>
+	<uninstallfile>uninstall.youtubegallery.php</uninstallfile>
+	   
+	<files folder="site">
+		<!-- root -->
+		<filename>youtubegallery.php</filename>
+		<filename>index.html</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		
+		<!-- elements -->
+		<filename>elements/index.html</filename>
+		<filename>elements/gallery.php</filename>
+		
+		<!-- includes -->
+		<filename>includes/index.html</filename>
+		<filename>includes/render.php</filename>
+		<filename>includes/layouts.php</filename>
+		<filename>includes/layoutrenderer.php</filename>
+		<filename>includes/misc.php</filename>
+		<filename>includes/pagination.php</filename>
+		
+		<filename>includes/break.php</filename>
+        <filename>includes/collegehumor.php</filename>
+        <filename>includes/google.php</filename>
+        <filename>includes/vimeo.php</filename>
+        <filename>includes/yahoo.php</filename>
+        <filename>includes/youtube.php</filename>
+		<filename>includes/youtubeplaylist.php</filename>
+		<filename>includes/youtubestandard.php</filename>
+		<filename>includes/youtubeuseruploads.php</filename>
+		
+		<filename>images/youtube.jpg</filename>
+		<filename>images/vimeo.jpg</filename>
+		<filename>images/google.jpg</filename>
+		<filename>images/yahoo.jpg</filename>
+		
+		
+		<!-- models -->
+		<filename>models/index.html</filename>
+		<filename>models/gallery.php</filename>
+		
+		<!-- views -->
+		<filename>views/index.html</filename>
+		
+		<!-- views/catalog -->
+		<filename>views/gallery/index.html</filename>
+		<filename>views/gallery/view.html.php</filename>
+		
+		<filename>views/gallery/tmpl/index.html</filename>
+		
+		
+		<filename>views/gallery/tmpl/default.php</filename>
+		<filename>views/gallery/tmpl/default.xml</filename>
+		
+		<filename>views/gallery/tmpl/custom.php</filename>
+		<filename>views/gallery/tmpl/custom.xml</filename>
+		
+		
+	</files>
+       
+	<!-- plugin part -->
+	<files folder="plugins">
+		<filename>plugin/youtubegallery.php</filename>
+		<filename>plugin/youtubegallery.xml</filename>
+	</files>
+   
+   	<!-- module part -->
+	<files folder="modules">
+		<filename>module/index.html</filename>
+		<filename>module/mod_youtubegallery.php</filename>
+		<filename>module/mod_youtubegallery.xml</filename>
+	</files>
+
+
+	<languages>
+	<!-- main -->
+			<language tag="en-GB">languages/main/site/en-GB.com_youtubegallery.ini</language>
+	</languages>
+   
+    <!-- administration part -->
+    <administration>
+
+    <menu task="default">YouTube Gallery</menu>
+   
+
+    <files folder="admin">
+		
+		<!-- root -->
+		<filename>youtubegallery.php</filename>
+		<filename>index.html</filename>
+		<filename>install.sql</filename>
+		<filename>uninstall.sql</filename>
+
+		
+		<filename>controllers/galleries.php</filename>
+		<filename>controllers/index.html</filename>
+		
+		<filename>models/galleryedit.php</filename>
+		<filename>models/index.html</filename>
+		
+		<filename>tables/galleryedit.php</filename>
+		<filename>tables/index.html</filename>
+		
+		<filename>views/index.html</filename>
+		
+		<filename>views/galleries/index.html</filename>
+		<filename>views/galleries/view.html.php</filename>
+		
+		<filename>views/galleries/tmpl/index.html</filename>
+		<filename>views/galleries/tmpl/default.php</filename>
+		
+		
+		<filename>views/galleryedit/index.html</filename>
+		<filename>views/galleryedit/view.html.php</filename>
+		
+		<filename>views/galleryedit/tmpl/index.html</filename>
+		<filename>views/galleryedit/tmpl/form.php</filename>
+		
+		
+
+		
+		
+    </files>
+
+   	
+    </administration>
+
+    <params>
+
+    </params>
+
+</install>

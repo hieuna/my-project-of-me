@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content" methos="upgrade" >
+    <name>Content - YouTube Gallery</name>
+    <author>DesignCompass corp</author>
+    <creationDate>March 2011</creationDate>
+    <copyright>Copyright (C) 2010-2011 DesignCompassCorp. All rights reserved.</copyright>
+    <license>GNU General Public License</license>
+    <authorEmail>admin@designcompasscorp.com</authorEmail>
+    <authorUrl>http://www.designcompasscorp.com/</authorUrl>
+    <version>2.1.9</version>
+    <description>YouTubeGallery Plugin v 2.1.9 (March 2011) - A plugin to show YouTube gallery.
+	
+		parameter: galleryid,width,height,playvideo,repeat,fullscreen,autoplay,relatedvideos,showinfo,thumbbgcolor,columns,showtitlr
+		
+		If you provide "galleryid" or a name of the gallery only so the galley settings will be used.
+			
+		example 1 (recomended):
+		{youtubegallery=1}
+		
+		example 2 (recomended):
+		{youtubegallery=My Gallery}
+		
+		so the gallery with ID 1 will be shown and the way it set in the gallery settings.
+
+		example 2 (depricated):
+		
+		1,400,300,,,,,,,,3
+		
+		it will show:
+		gallery id = 1, width is 400px, height is 300px and in three columns
+	
+	</description>
+    <files>
+        <filename plugin="youtubegallery">youtubegallery.php</filename>
+		<filename>youtubegallery.xml</filename>
+    </files>
+    <params>
+	</params>
+</install>

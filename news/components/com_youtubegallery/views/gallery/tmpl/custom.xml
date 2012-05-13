@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="YouTubeGallery - Custom Gallery">
+		<message>
+		</message>
+	</layout>
+	<state>
+		<name>YouTubeGallery - Custom Gallery</name>
+		<description>YouTubeGallery - Custom Gallery</description>
+
+
+		<params addpath="/components/com_youtubegallery/elements" >
+
+			<param type="gallery" name="galleryid" default="" label="Select Gallery" description="Select YouTube Gallery" />
+			
+			<param type="text" name="width" default="300" label="Player Width" description="" />
+			<param type="text" name="height" default="300" label="Player Height" description="" />
+			
+			<param type="radio" name="playvideo" default="0" label="Show First Video" description="Show Video Screen, to play video when page loaded, check Autoplay option" >
+                <option value="1">Play First Video</option>
+				<option value="0">Gallery Only</option>
+			</param>
+			
+			<param type="radio" name="repeat" default="0" label="Repeat" description="" >
+                <option value="1">Yes</option>
+				<option value="0">No</option>
+			</param>
+			
+			<param type="radio" name="fullscreen" default="1" label="Fullscreen" description="" >
+                <option value="1">Yes</option>
+				<option value="0">No</option>
+			</param>
+			<param type="radio" name="autoplay" default="1" label="Autoplay" description="" >
+                <option value="1">Yes</option>
+				<option value="0">No</option>
+			</param>
+			<param type="radio" name="related" default="0" label="Related Videos" description="" >
+                <option value="1">Yes</option>
+				<option value="0">No</option>
+			</param>
+			<param type="radio" name="showinfo" default="0" label="Show Info" description="" >
+                <option value="1">Yes</option>
+				<option value="0">No</option>
+			</param>
+			<param type="text" name="bgcolor" default="" label="Thumbnail bgcolor" description="" />
+                
+			<param type="list" name="cols" default="3" label="number of columns" description="" >
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+			</param>
+
+			<param type="radio" name="showtitle" default="0" label="Show Video Title" description="php 5.x and [allow_url_fopen=on] record in php.ini file are required" >
+                <option value="1">Yes</option>
+				<option value="0">No</option>
+			</param>
+			
+			<param
+                                name="align"
+                                type="list"
+                                label="Align"
+                                description=""
+                        >
+                                <option value="">- default</option>
+                                <option value="left">left</option>
+                                <option value="center">center</option>
+                                <option value="right">right</option>
+			</param>
+			
+			<param type="list" name="allowcontentplugins" default="0" label="Allow Content Plugins" description="" >
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+			</param>
+
+		</params>
+
+
+
+		<advanced>
+		</advanced>
+	</state>
+</metadata>
