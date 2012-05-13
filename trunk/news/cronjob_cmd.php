@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -7,17 +7,22 @@
 <body>
 <?php
 // Defined DB
+/*
+define('DB_HOST', 'localhost');
+define('DB_USER', 'tapchidn');
+define('DB_PASSWORD', '2b677TWlB87e');
+define('DB', 'tapchidn_01');
+*/
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'ngockieuvan@vccorp.vn');
+define('DB_PASSWORD', 'ngockv842006');
 define('DB', 'database_projects');
-
 // Kết nối db
 $link = @mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die('Unable to establish a DB connection');
 mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $link);
 mysql_select_db(DB,$link);
 
-ini_set("memory_limit","128M");
+//ini_set("memory_limit","256M");
 include_once 'class/simple_html_dom.php';
 include_once 'class/function.php';
 
@@ -50,14 +55,13 @@ $aLink = array(
 	array('sectionid' => 2, 'catid' =>6 , 'link'=> 'http://dantri.com.vn/c25s181/guongsang/trang-1.htm', 'url' => $dantri), //Điểm sáng giao dục Việt
 	array('sectionid' => 2, 'catid' =>8 , 'link'=> 'http://dantri.com.vn/c25s146/duhoc/trang-1.htm', 'url' => $dantri), //Du hoc
 	//Sức khỏe
-	array('sectionid' => 5, 'catid' =>32 , 'link'=> 'http://dantri.com.vn/c7/suckhoe.htm', 'url' => $dantri), //Tin tức sức khỏe
-
+	array('sectionid' => 5, 'catid' =>32 , 'link'=> 'http://dantri.com.vn/c7/suckhoe.htm', 'url' => $dantri) //Tin tức sức khỏe
 	//NGOISAO.NET
 	//Văn hóa
-	array('sectionid' => 4, 'catid' =>29 , 'link'=> 'http://ngoisao.net/tin-tuc/showbiz-viet/', 'url' => $ngoisao) //Show biz
+	//array('sectionid' => 4, 'catid' =>29 , 'link'=> 'http://ngoisao.net/tin-tuc/showbiz-viet/', 'url' => $ngoisao) //Show biz
 );
-
 $html = new simple_html_dom();
+var_dump($html); die;
 
 foreach ($aLink as $array) {
 	$get_link = $array['link'];
@@ -65,7 +69,7 @@ foreach ($aLink as $array) {
 	//DAN TRI
 	if ($array['url'] == $dantri){
 		$articles = array();
-		foreach ($html->find('.mt3') as $index => $items) {		
+		foreach ($html->find('.mt3') as $index => $items) {	
 			//Lấy ảnh đại diện
 			$articles[$index]['image'] = $items->children(0)->children(0)->src;
 			
@@ -96,6 +100,7 @@ foreach ($aLink as $array) {
 			}
 		}
 	}
+	/*
 	//NGOI SAO
 	if ($array['url'] == $ngoisao){
 		$articles = array();
@@ -124,16 +129,18 @@ foreach ($aLink as $array) {
 				// Nội dung bài viết
 				$contents = $html_detail->find('div.detailCT');
 				foreach ($contents as $content) {
-					$articles[$index]['content'] = replaceString($content->innertext).'<p align="right"><b>(Theo Ngoisao.net)</b></p>';
+					$articles[$index]['content'] = $content->innertext;
 				}
 				$i = strpos($articles[$index]['content'], "</p>");
 				$j = strpos($articles[$index]['content'], "div class='detailNS'>");
 				$articles[$index]['content'] = substr($articles[$index]['content'], $i, $j-$i);
+				$articles[$index]['content'] = str_replace('src="', 'src="'.$array['url'], $articles[$index]['content']).'<p align="right"><b>(Theo Ngoisao.net)</b></p>';
 				$articles[$index]['url'] = $array['url'];
 			}
 		}
 	}
-	//var_dump($articles); die;
+	*/
+	var_dump($articles); die;
 	
 	$check = false;
 	$array_in = array();

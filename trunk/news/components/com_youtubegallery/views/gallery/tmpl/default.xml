@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="YouTubeGallery - Gallery">
+		<message>
+		</message>
+	</layout>
+	<state>
+		<name>Youtube Gallery - Gallery</name>
+		<description>Youtube Gallery - Gallery</description>
+
+		
+		<params addpath="/components/com_youtubegallery/elements" >
+		<param type="gallery" name="galleryid" default="0" label="Select Gallery" description="Select YouTube Gallery" />
+		
+		<param
+                                name="align"
+                                type="list"
+                                label="Align"
+                                description=""
+                        >
+                                <option value="">- default</option>
+                                <option value="left">left</option>
+                                <option value="center">center</option>
+                                <option value="right">right</option>
+        </param>
+		
+		<param type="list" name="allowcontentplugins" default="0" label="Allow Content Plugins" description="" >
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+        </param>
+		
+		</params>
+
+		
+	</state>
+</metadata>

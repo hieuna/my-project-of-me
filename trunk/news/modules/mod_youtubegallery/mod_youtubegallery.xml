@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content" methos="upgrade" >
+    <name>Content - YouTube Gallery</name>
+    <author>DesignCompass corp</author>
+    <creationDate>March 2011</creationDate>
+    <copyright>Copyright (C) 2010-2011 DesignCompassCorp. All rights reserved.</copyright>
+    <license>GNU General Public License</license>
+    <authorEmail>admin@designcompasscorp.com</authorEmail>
+    <authorUrl>http://www.designcompasscorp.com/</authorUrl>
+    <version>2.1.9</version>
+    <description>YouTubeGallery Module v 2.1.9 (March 2011) - A module to show YouTube gallery.</description>
+    <files>
+        <filename module="mod_youtubegallery">mod_youtubegallery.php</filename>
+        <filename>mod_youtubegallery.xml</filename>
+    </files>
+	
+    <params addpath="/components/com_youtubegallery/elements">
+		<param type="gallery" name="galleryid" default="0" label="Select Gallery" description="Select YouTube Gallery" />
+	</params>
+</install>
