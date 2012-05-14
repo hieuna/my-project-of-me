@@ -82,7 +82,7 @@ function clean_value($val){
 	$val = preg_replace( "/\\\$/"      , "&#036;"        , $val );
 	$val = preg_replace( "/\r/"        , ""              , $val ); // Remove literal carriage returns
 	$val = str_replace( "!"            , "&#33;"         , $val );
-	$val = str_replace( "'"            , "&#39;"         , $val ); // IMPORTANT: It helps to increase sql query safety.
+	$val = str_replace( "'"            , ""         , $val ); // IMPORTANT: It helps to increase sql query safety.
 
 	if ( $get_magic_quotes ){
 		$val = stripslashes($val);
@@ -162,5 +162,4 @@ function generateSlug($phrase, $maxLength)
 	
 	return $result;
 }
-
 ?>
