@@ -6,25 +6,11 @@
 </head>
 <body>
 <?php
-// Defined DB
-/*
-define('DB_HOST', 'localhost');
-define('DB_USER', 'tapchidn');
-define('DB_PASSWORD', '2b677TWlB87e');
-define('DB', 'tapchidn_01');
-*/
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASSWORD', 'ngockv842006');
-define('DB', 'database_projects');
-// Kết nối db
-$link = @mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die('Unable to establish a DB connection');
-mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $link);
-mysql_select_db(DB,$link);
+include '../class/config.php';
 
 //ini_set("memory_limit","256M");
-include_once 'class/simple_html_dom.php';
-include_once 'class/function.php';
+include_once '../class/simple_html_dom.php';
+include_once '../class/function.php';
 
 //Define page
 $dantri 	= 'http://dantri.com.vn/';
@@ -32,6 +18,9 @@ $vnexpress	= 'http://vnexpress.net/';
 $ngoisao	= 'http://ngoisao.net/';
 
 $aLink = array(
+	//NGOISAO.NET
+	//Văn hóa
+	array('sectionid' => 4, 'catid' =>29 , 'link'=> 'http://ngoisao.net/tin-tuc/showbiz-viet/', 'url' => $ngoisao), //Show biz
 	//DANTRI.COM
 	//Xã hội
 	array('sectionid' => 1, 'catid' =>1 , 'link'=> 'http://dantri.com.vn/c20s134/phongsu/trang-1.htm', 'url' => $dantri), //Phóng sự - Ký sự
@@ -56,12 +45,8 @@ $aLink = array(
 	array('sectionid' => 2, 'catid' =>8 , 'link'=> 'http://dantri.com.vn/c25s146/duhoc/trang-1.htm', 'url' => $dantri), //Du hoc
 	//Sức khỏe
 	array('sectionid' => 5, 'catid' =>32 , 'link'=> 'http://dantri.com.vn/c7/suckhoe.htm', 'url' => $dantri) //Tin tức sức khỏe
-	//NGOISAO.NET
-	//Văn hóa
-	//array('sectionid' => 4, 'catid' =>29 , 'link'=> 'http://ngoisao.net/tin-tuc/showbiz-viet/', 'url' => $ngoisao) //Show biz
+	
 );
-$html = new simple_html_dom();
-var_dump($html); die;
 
 foreach ($aLink as $array) {
 	$get_link = $array['link'];
@@ -100,7 +85,6 @@ foreach ($aLink as $array) {
 			}
 		}
 	}
-	/*
 	//NGOI SAO
 	if ($array['url'] == $ngoisao){
 		$articles = array();
@@ -134,13 +118,12 @@ foreach ($aLink as $array) {
 				$i = strpos($articles[$index]['content'], "</p>");
 				$j = strpos($articles[$index]['content'], "div class='detailNS'>");
 				$articles[$index]['content'] = substr($articles[$index]['content'], $i, $j-$i);
-				$articles[$index]['content'] = str_replace('src="', 'src="'.$array['url'], $articles[$index]['content']).'<p align="right"><b>(Theo Ngoisao.net)</b></p>';
+				$articles[$index]['content'] = str_replace('src="', 'src="'.$array['url'], $articles[$index]['content']).'<p style="text-align: right;"><b>(Theo Ngoisao.net)</b></p>';
 				$articles[$index]['url'] = $array['url'];
 			}
 		}
 	}
-	*/
-	var_dump($articles); die;
+	//var_dump($articles); die;
 	
 	$check = false;
 	$array_in = array();
@@ -171,7 +154,7 @@ foreach ($aLink as $array) {
 				$info_image = pathinfo($article['image']);
 				$extension = $info_image['extension'];
 				$image_convert = $slug."-".time().".".$extension;
-				copy($url.$article['image'],"images/stories/".$image_convert);
+				copy($url.$article['image'],"../images/stories/".$image_convert);
 				// Cập nhật bảng articles
 				$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, state, alias, sectionid, catid) 
 					VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
