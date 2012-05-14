@@ -643,15 +643,15 @@ class YoutubeGalleryLayoutRenderer
 						
 				if($theImage=='')
 				{
-					$catalogresult.='<div style="width:120px;height:90px;border:1px solid red;background-color:white;"></div>';
+					$catalogresult.='<div style="width:90px;height:60px;border:1px solid red;background-color:white; margin-right: 10px;"></div>';
 				}
 				else
 				{
 					$catalogresult.='<img src="'.$theImage.'"'
 						
-						.($row->thumbnailstyle!='' ? ' style="'.$row->thumbnailstyle.'"' : ' style="border:none;"');
+						.($row->thumbnailstyle!='' ? ' style="'.$row->thumbnailstyle.'"' : ' style="border:none; margin-right: 10px;"');
 						if(strpos($row->thumbnailstyle,'width')===false)
-							$catalogresult.=' width="120" height="90"';
+							$catalogresult.=' width="90" height="60"';
 						
 						if($listitem['title']!='')
 						{

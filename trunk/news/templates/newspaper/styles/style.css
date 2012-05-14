@@ -2682,3 +2682,8 @@ a.readmore-link, a.pagenav{
 span.pagenav{
 	font-weight: normal;
 }
+
+/*-- FIX ERROR PAGE --*/
+div.view_content img{
+	max-width: 450px;
+}
