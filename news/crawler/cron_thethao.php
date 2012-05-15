@@ -48,6 +48,7 @@ foreach ($aLink as $array) {
 			foreach ($descriptions as $description) {
 				$articles[$index]['description'] = $description->innertext;
 			}
+			$articles[$index]['description'] = str_replace("(Dân trí)", "<b>(Tapchidoanhnhanviet.vn)</b>", $articles[$index]['description']);
 			
 			// Nội dung bài viết
 			$contents = $html_detail->find('div.fon34');
