@@ -126,6 +126,7 @@ $group		= JRequest::getString('group', '', 'GET');
 											<?php
 										}else{
 											?>
+											<jdoc:include type="modules" name="right" />
 											<jdoc:include type="component" />
 											<div class="article_others">
 												<jdoc:include type="modules" name="news-bottomleft" />

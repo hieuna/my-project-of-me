@@ -1,6 +1,8 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
+require_once (JPATH_SITE.DS.'components'.DS.'com_content'.DS.'helpers'.DS.'route.php');
+
 $baseurl	= JURI::base();
 $db			= JFactory::getDbo();
 $sql		= "SELECT cd.id, cd.title, cd.alias, cd.title_alias, cd.catid, cd.sectionid, cd.images, ct.alias AS calias, "
