@@ -41,7 +41,7 @@ foreach ($aLink as $array) {
 			// Mô tả bài viết
 			$descriptions = $html_detail->find('h2.Lead');
 			foreach ($descriptions as $description) {
-				$articles[$index]['description'] = $description->innertext;
+				$articles[$index]['description'] = '<b>(Tapchidoanhnhanviet.vn)</b>'.$description->innertext;
 			}
 			
 			// Nội dung bài viết
