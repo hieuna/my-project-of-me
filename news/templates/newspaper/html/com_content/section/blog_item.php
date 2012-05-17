@@ -4,7 +4,7 @@ $baseurl = JURI::base();
 $nows = mktime(0,0,0,date("m"),date("d"),date("Y"));
 $ngay_nhap = mktime(0,0,0,unFormatdate($this->item->created,"m"),unFormatdate($this->item->created,"d"),unFormatdate($this->item->created,"Y"));				
 $days = ($nows - $ngay_nhap)/86400;
-if ($days<2) $addClass = ' newnew';
+if ($days<1) $addClass = ' newnew';
 else $addClass = '';
 ?>
 <?php $canEdit   = ($this->user->authorize('com_content', 'edit', 'content', 'all') || $this->user->authorize('com_content', 'edit', 'content', 'own')); ?>

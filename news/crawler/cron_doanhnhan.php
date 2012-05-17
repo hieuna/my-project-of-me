@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Lấy tin Ngoisao.net tự động</title>
+<title>Lấy tin DoanhNhanSaiGon.vn tự động</title>
 </head>
 <body>
 <?php
@@ -10,12 +10,12 @@ include_once '../class/config.php';
 include_once '../class/simple_html_dom.php';
 include_once '../class/function.php';
 //Define page
-$domain	= 'http://ngoisao.net/';
+$domain	= 'http://doanhnhansaigon.vn/';
 
 $aLink = array(
-	//NGOISAO.NET
-	//Văn hóa
-	array('sectionid' => 4, 'catid' =>29 , 'link'=> 'http://ngoisao.net/tin-tuc/showbiz-viet/', 'url' => $domain) //Show biz
+	//DOANHNHAN.NET
+	//Doanh Nhân Việt
+	array('sectionid' => 11, 'catid' =>47 , 'link'=> 'http://doanhnhansaigon.vn/online/doanh-nhan/chan-dung-doanh-nhan/', 'url' => $domain) //Chân dung doanh nhân
 	
 );
 
@@ -24,22 +24,23 @@ foreach ($aLink as $array) {
 	$html = file_get_html($get_link);
 
 	$articles = array();
-	foreach ($html->find('ul.news li') as $index => $items) {
+	foreach ($html->find('.sum-item') as $index => $items) {
 		//Lấy ảnh đại diện
 		$articles[$index]['image'] = $items->children(0)->children(0)->src;
 		
 		// Nội dung
-		foreach ($items->find('h3') as $item) {
+		foreach ($items->find('.sum-item') as $item) {
 			// Tiêu đề bài viết
-			$articles[$index]['title'] = $item->children(0)->innertext;
+			echo $articles[$index]['title'] = $item->children(0)->innertext; die;
 			
 			// Xem chi tiết bài viết
 			$detail = $item->children(0)->href;
 			
 			$html_detail = file_get_html($array['url'] . $detail);
+			var_dump($html_detail); die;
 			
 			// Mô tả bài viết
-			$descriptions = $html_detail->find('h2.Lead');
+			$descriptions = $html_detail->find('<strong>');
 			foreach ($descriptions as $description) {
 				$articles[$index]['description'] = '<b>(Tapchidoanhnhanviet.vn)</b> - '.$description->innertext;
 			}
@@ -47,7 +48,7 @@ foreach ($aLink as $array) {
 			// Nội dung bài viết
 			$contents = $html_detail->find('div.detailCT');
 			foreach ($contents as $content) {
-				$articles[$index]['content'] = $content->innertext;
+				echo $articles[$index]['content'] = $content->innertext; die;
 			}
 			$i = strpos($articles[$index]['content'], "</p>");
 			$j = strpos($articles[$index]['content'], "div class='detailNS'>");

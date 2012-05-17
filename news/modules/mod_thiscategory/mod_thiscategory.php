@@ -143,7 +143,7 @@ if ($view == 'article')
          $date =& JFactory::getDate($row->created);
          $ngay_nhap = mktime(0,0,0,unFormatdate($row->created,"m"),unFormatdate($row->created,"d"),unFormatdate($row->created,"Y"));
          $days = ($nows - $ngay_nhap)/86400;
-		 if ($days<2) $addClass = ' newnew';
+		 if ($days<1) $addClass = ' newnew';
 		 else $addClass = '';
          $datex = $date->toFormat("%d %B %Y");
          $html .= "<p><a href=$link>{$row->title}</a> <span class='date$addClass'>$datex</span></p>";       

@@ -28,8 +28,13 @@ $aLink = array(
 	array('sectionid' => 2, 'catid' =>6 , 'link'=> 'http://dantri.com.vn/c25s181/guongsang/trang-1.htm', 'url' => $domain), //Điểm sáng giao dục Việt
 	array('sectionid' => 2, 'catid' =>8 , 'link'=> 'http://dantri.com.vn/c25s146/duhoc/trang-1.htm', 'url' => $domain), //Du hoc
 	//Sức khỏe
-	array('sectionid' => 5, 'catid' =>32 , 'link'=> 'http://dantri.com.vn/c7/suckhoe.htm', 'url' => $domain) //Tin tức sức khỏe
-	
+	array('sectionid' => 5, 'catid' =>32 , 'link'=> 'http://dantri.com.vn/c7/suckhoe.htm', 'url' => $domain), //Tin tức sức khỏe
+	//Doanh nhan Viet
+	array('sectionid' => 11, 'catid' =>66 , 'link'=> 'http://dantri.com.vn/c76s82/doanhnghiep/trang-1.htm', 'url' => $domain), //Doanh nghiệp
+	//Thông tin kinh tế
+	array('sectionid' => 10, 'catid' =>15 , 'link'=> 'http://dantri.com.vn/c76s235/taichinh/trang-1.htm', 'url' => $domain), //Tài chính - Đầu tư
+	array('sectionid' => 10, 'catid' =>77 , 'link'=> 'http://dantri.com.vn/c76s83/thitruong/trang-1.htm', 'url' => $domain), //Thị trường
+	array('sectionid' => 10, 'catid' =>70 , 'link'=> 'http://dantri.com.vn/c76s767/nhadat/trang-1.htm', 'url' => $domain) //Nhà đất
 );
 
 foreach ($aLink as $array) {
@@ -60,7 +65,7 @@ foreach ($aLink as $array) {
 			// Nội dung bài viết
 			$contents = $html_detail->find('div.fon34');
 			foreach ($contents as $content) {
-				$articles[$index]['content'] = $content->innertext.'<p style="text-align: right;"><b>(Theo Dantri.com)</b></p>';
+				$articles[$index]['content'] = $content->innertext.'<p style="text-align: right;" align="right"><b>(Theo Dantri.com)</b></p>';
 			}
 			$articles[$index][url] = '';
 		}
@@ -97,8 +102,8 @@ foreach ($aLink as $array) {
 				$image_convert = $slug."-".time().".".$extension;
 				copy($url.$article['image'],"../images/stories/".$image_convert);
 				// Cập nhật bảng articles
-				$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, state, alias, sectionid, catid) 
-					VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
+				$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, publish_up, state, alias, sectionid, catid) 
+					VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d H:i:s') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
 				//die;
 				$result_article = mysql_query($sql);
 	
@@ -119,6 +124,7 @@ foreach ($aLink as $array) {
 		$count = 1;
 		foreach ($array_in as $ar) {
 			$count++;
+			echo $count . ': ' . $ar['title'] . '<br>';
 		}
 		if (!$check) {
 			echo 'Cập nhật thành công';
