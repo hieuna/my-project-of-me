@@ -33,7 +33,7 @@ $rows = $db->loadObjectList();
 		//Set new link
 		$ngay_nhap = mktime(0,0,0,unFormatdate($row->created,"m"),unFormatdate($row->created,"d"),unFormatdate($row->created,"Y"));				
 		$days = ($nows - $ngay_nhap)/86400;
-		if ($days<2) {
+		if ($days<1) {
 			$addClass = ' newnew';
 			$addClass2 = ' class="newnew"';
 		}else{

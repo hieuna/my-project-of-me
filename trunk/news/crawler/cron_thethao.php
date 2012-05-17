@@ -53,7 +53,7 @@ foreach ($aLink as $array) {
 			// Nội dung bài viết
 			$contents = $html_detail->find('div.fon34');
 			foreach ($contents as $content) {
-				$articles[$index]['content'] = $content->innertext.'<p style="text-align: right;"><b>(Theo Dantri.com)</b></p>';
+				$articles[$index]['content'] = $content->innertext.'<p style="text-align: right;" align="right"><b>(Theo Dantri.com)</b></p>';
 			}
 			$articles[$index][url] = '';
 		}
@@ -90,8 +90,8 @@ foreach ($aLink as $array) {
 				$image_convert = $slug."-".time().".".$extension;
 				copy($url.$article['image'],"../images/stories/".$image_convert);
 				// Cập nhật bảng articles
-				$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, state, alias, sectionid, catid) 
-					VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
+				$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, publish_up, state, alias, sectionid, catid) 
+					VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d H:i:s') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
 				//die;
 				$result_article = mysql_query($sql);
 	
@@ -112,6 +112,7 @@ foreach ($aLink as $array) {
 		$count = 1;
 		foreach ($array_in as $ar) {
 			$count++;
+			echo $count . ': ' . $ar['title'] . '<br>';
 		}
 		if (!$check) {
 			echo 'Cập nhật thành công';
