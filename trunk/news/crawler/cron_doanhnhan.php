@@ -26,7 +26,17 @@ foreach ($aLink as $array) {
 	$articles = array();
 	foreach ($html->find('.sum-item') as $index => $items) {
 		//Lấy ảnh đại diện
-		$articles[$index]['image'] = $items->children(0)->children(0)->src;
+		$articles[$index]['image'] 			= $items->children(0)->first_child()->src;
+		// Tiêu đề bài viết
+		$articles[$index]['title'] 			= $items->children(1)->innertext;
+		// Mô tả bài viết
+		$articles[$index]['description'] 	= $items->children(2)->innertext;
+		// Xem chi tiết bài viết
+		$detail = $items->children(0)->href;
+		$html_detail = file_get_html($array['url'] . $detail);
+		var_dump($html_detail); die;
+		$descriptions = $html_detail->find(".html");
+		var_dump($descriptions); die;
 		
 		// Nội dung
 		foreach ($items->find('.sum-item') as $item) {
@@ -42,7 +52,7 @@ foreach ($aLink as $array) {
 			// Mô tả bài viết
 			$descriptions = $html_detail->find('<strong>');
 			foreach ($descriptions as $description) {
-				$articles[$index]['description'] = '<b>(Tapchidoanhnhanviet.vn)</b> - '.$description->innertext;
+				$articles[$index]['description'] = '(Tapchidoanhnhanviet.vn) - '.$description->innertext;
 			}
 			
 			// Nội dung bài viết
