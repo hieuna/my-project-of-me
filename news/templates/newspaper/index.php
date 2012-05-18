@@ -188,7 +188,6 @@ $group		= JRequest::getString('group', '', 'GET');
 			</td>
 		</tr>
 	</table>
-	</body>
 	<script type="text/javascript">
 	$(function() {
 	    $('#tab_systems').cycle({
@@ -200,5 +199,6 @@ $group		= JRequest::getString('group', '', 'GET');
 	    	timeout: 10000
 	    });
 	});
-	</script>		
+	</script>
+	</body>
 </html>
