@@ -89,7 +89,7 @@ foreach ($aLink as $array) {
 				copy($url.$article['image'],"../images/stories/".$image_convert);
 				// Cập nhật bảng articles
 				$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, publish_up, state, alias, sectionid, catid) 
-					VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d H:i:s') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
+					VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
 				//die;
 				$result_article = mysql_query($sql);
 	
