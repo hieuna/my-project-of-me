@@ -14,21 +14,12 @@ include_once '../class/function.php';
 $domain 	= 'http://dantri.com.vn/';
 
 $aLink = array(
-	//DANTRI.COM
-	//Xã hội
-	array('sectionid' => 1, 'catid' =>1 , 'link'=> 'http://dantri.com.vn/c20s134/phongsu/trang-1.htm', 'url' => $domain), //Phóng sự - Ký sự
-	array('sectionid' => 1, 'catid' =>2 , 'link'=> 'http://dantri.com.vn/c20s255/moitruong/trang-1.htm', 'url' => $domain), //Môi trường
-	array('sectionid' => 1, 'catid' =>84 , 'link'=> 'http://dantri.com.vn/c20s696/chinhtri/trang-1.htm', 'url' => $domain), //Chính trị
-	//Văn hóa
-	array('sectionid' => 4, 'catid' =>28 , 'link'=> 'http://dantri.com.vn/c23s730/vanhoa/trang-1.htm', 'url' => $domain), //Góc nhìn văn hóa
-	//Thế giới
-	array('sectionid' => 9, 'catid' =>19 , 'link'=> 'http://dantri.com.vn/c36s172/tgdiemnong/trang-1.htm', 'url' => $domain), //Thế giới 24h
-	//Giáo dục
-	array('sectionid' => 2, 'catid' =>5 , 'link'=> 'http://dantri.com.vn/c25s201/tuyensinh/trang-1.htm', 'url' => $domain), //Tuyển sinh
-	array('sectionid' => 2, 'catid' =>6 , 'link'=> 'http://dantri.com.vn/c25s181/guongsang/trang-1.htm', 'url' => $domain), //Điểm sáng giao dục Việt
-	array('sectionid' => 2, 'catid' =>8 , 'link'=> 'http://dantri.com.vn/c25s146/duhoc/trang-1.htm', 'url' => $domain), //Du hoc
-	//Sức khỏe
-	array('sectionid' => 5, 'catid' =>32 , 'link'=> 'http://dantri.com.vn/c7/suckhoe.htm', 'url' => $domain) //Tin tức sức khỏe
+	//Doanh nhan Viet
+	array('sectionid' => 11, 'catid' =>66 , 'link'=> 'http://dantri.com.vn/c76s82/doanhnghiep/trang-1.htm', 'url' => $domain), //Doanh nghiệp
+	//Thông tin kinh tế
+	array('sectionid' => 10, 'catid' =>15 , 'link'=> 'http://dantri.com.vn/c76s235/taichinh/trang-1.htm', 'url' => $domain), //Tài chính - Đầu tư
+	array('sectionid' => 10, 'catid' =>77 , 'link'=> 'http://dantri.com.vn/c76s83/thitruong/trang-1.htm', 'url' => $domain), //Thị trường
+	array('sectionid' => 10, 'catid' =>70 , 'link'=> 'http://dantri.com.vn/c76s767/nhadat/trang-1.htm', 'url' => $domain) //Nhà đất
 );
 
 foreach ($aLink as $array) {
