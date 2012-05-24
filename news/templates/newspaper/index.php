@@ -116,6 +116,7 @@ $group		= JRequest::getString('group', '', 'GET');
 									<?php if ($group):?>
 										<?php include("html/warehouse.php");?>
 									<?php else:?>
+										<?php if ($view != 'section'):?>
 										<div class="fl wid490">
 										<?php
 										if ($view == 'frontpage'){
@@ -135,6 +136,11 @@ $group		= JRequest::getString('group', '', 'GET');
 										} 
 										?>
 										</div>
+										<?php else:?>
+										<div class="fl wid700">
+											<?php include("html/category.php");?>
+										</div>
+										<?php endif;?>
 										<div class="fl wid310">
 											<div class="box_adver_vuong">
 												<jdoc:include type="modules" name="news-special" />
@@ -155,11 +161,13 @@ $group		= JRequest::getString('group', '', 'GET');
 												</div>
 											</div>
 										</div>
+										<?php if ($view != 'section'):?>
 										<div class="fr wid210 text_center">
 											<div class="wid200">
 												<jdoc:include type="modules" name="news-right" />
 											</div>
 										</div>
+										<?php endif;?>
 									<?php endif;?>	
 									</div>
 								</td>
