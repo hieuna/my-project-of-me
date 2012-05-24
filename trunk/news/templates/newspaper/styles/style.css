@@ -168,6 +168,9 @@ img{
 .fr{
 	float: right;
 }
+.wid700{
+	width: 700px;
+}
 .wid490{
 	width: 490px;
 }
@@ -197,6 +200,39 @@ img{
 }
 .wid200{
 	width: 200px; padding: 5px 0;
+}
+.box-category{
+	height: 200px; overflow: hidden; margin-bottom: 15px; padding: 0 5px;
+}
+.box-category .title-category{
+	background: url("../images/bgr_menu.jpg") repeat-x; padding: 5px 0;
+}
+.box-category .title-category a{
+	padding-left: 10px; text-transform: uppercase; color: #fff; font-weight: bold;
+}
+.box-category .content-category{
+	padding: 5px;
+}
+.box-category .content-category .content-left-category{
+	width: 415px; text-align: left; overflow: hidden;
+}
+.box-category .content-category .content-left-category img{
+	float: left; margin: 0px 5px 3px 0px;
+}
+.box-category .content-category .content-right-category{
+	width: 250px; height: 190px;  background: #eeeeee; padding: 5px; overflow: hidden;
+}
+.content-right-category ul{
+	margin: 0; padding: 0;
+}
+.content-right-category ul li{
+	list-style: none; background: url("../images/bluedot.jpg") no-repeat 1px 6px; text-align: left; padding-left: 8px; padding-bottom: 3px;
+}
+.content-right-category ul li a{
+	color: #004175; text-decoration: none;
+}
+.content-right-category ul li a:hover{
+	color: #4F82AC;
 }
 .text_center{
 	text-align: center;
