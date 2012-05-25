@@ -29,7 +29,7 @@ $rows = $db->loadObjectList();
 	$nows = mktime(0,0,0,date("m"),date("d"),date("Y")); 
 	$i=0;
 	foreach ($rows as $row):
-		$link = JRoute::_(ContentHelperRoute::getArticleRoute($row->id, $row->catid, $row->sectionid));
+		$link = JRoute::_(ContentHelperRoute::getArticleRoute($row->id."-".$row->alias, $row->catid, $row->sectionid));
 		//Set new link
 		$ngay_nhap = mktime(0,0,0,unFormatdate($row->created,"m"),unFormatdate($row->created,"d"),unFormatdate($row->created,"Y"));				
 		$days = ($nows - $ngay_nhap)/86400;
