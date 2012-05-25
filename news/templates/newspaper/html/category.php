@@ -22,7 +22,7 @@ foreach ($listCate as $cate) {
 	if ($days_first<1) $addClassFirst = ' newnew';
 	else $addClassFirst = '';
 	
-	$link_first = JRoute::_(ContentHelperRoute::getArticleRoute($rows[0]->id, $rows[0]->catid, $rows[0]->sectionid));
+	$link_first = JRoute::_(ContentHelperRoute::getArticleRoute($rows[0]->id."-".$rows[0]->alias, $rows[0]->catid, $rows[0]->sectionid));
 	?>
 	<div class="box-category">
 		<div class="title-category">
@@ -47,7 +47,7 @@ foreach ($listCate as $cate) {
 				<?php
 				$i=0; 
 				foreach ($rows as $row) {
-					$link = JRoute::_(ContentHelperRoute::getArticleRoute($row->id, $row->catid, $row->sectionid));
+					$link = JRoute::_(ContentHelperRoute::getArticleRoute($row->id."-".$row->alias, $row->catid, $row->sectionid));
 					$ngay_nhap = mktime(0,0,0,unFormatdate($row->created,"m"),unFormatdate($row->created,"d"),unFormatdate($row->created,"Y"));				
 					$days = ($nows - $ngay_nhap)/86400;
 					if ($days<1) $addClass = ' class="newnew"';
