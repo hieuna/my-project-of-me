@@ -205,7 +205,7 @@ img{
 	height: 200px; overflow: hidden; margin-bottom: 15px; padding: 0 5px;
 }
 .box-category .title-category{
-	background: url("../images/bgr_menu.jpg") repeat-x; padding: 5px 0;
+	background: url("../images/bgr_menu3.jpg") no-repeat top left; border-bottom: 1px solid #98c7d9; padding: 5px 0;
 }
 .box-category .title-category a{
 	padding-left: 10px; text-transform: uppercase; color: #fff; font-weight: bold;
@@ -269,6 +269,9 @@ img{
 }
 .box_adver_vuong{
 	background: #F3F3F3; padding: 5px 5px 0px 5px; float: left;
+}
+.bgr_menu3{
+	background: url("../images/bgr_menu3.jpg") no-repeat top left; border-bottom: 1px solid #98c7d9;
 }
 /*-- FOR JOOMLA --*/
 .bannergroup_text{
@@ -420,7 +423,6 @@ table.focus td a:hover{
     float: left;
     height: 22px;
     overflow: hidden;
-    background: url("../images/bgr_menu1.jpg") repeat-x top left;
 }
 .ul2 a {
     color: #333333;
@@ -428,9 +430,6 @@ table.focus td a:hover{
     font: 500 11px/16px Arial;
     height: 22px;
     padding: 3px 5px 0px 5px;
-}
-.ul2 li.active {
-    position: relative; background: url("../images/bgr_menu.jpg") repeat-x top left;
 }
 .ul2 li.active a {
     color: #FFFFFF;

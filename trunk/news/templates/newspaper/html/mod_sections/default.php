@@ -8,21 +8,14 @@ $sql = $db->getQuery(true);
 $query = $db->getQuery(true);
 
 foreach ($list as $item) :
-$sql = "SELECT id, title, name, alias FROM #__categories WHERE section=".$item->id." AND published=1 ORDER BY ordering ASC, id DESC LIMIT 4";
-$db->setQuery($sql);
-$lsCategories = $db->loadObjectList();
 $query = "SELECT id, catid, sectionid, title, alias, title_alias, introtext, images, created FROM #__content WHERE sectionid=".$item->id." AND state=1 ORDER BY created DESC LIMIT 6";
 $db->setQuery($query);
 $rows = $db->loadObjectList();
 ?>
 <div class="mt2">
-	<div class="box4 clearfix">
+	<div class="box4 bgr_menu3 clearfix">
 		<ul id="nbm-sub-cat" class="ul2">
 			<li class="active"><a href="<?php echo JRoute::_(ContentHelperRoute::getSectionRoute($item->id)); ?>"><?php echo $item->title;?></a></li>
-			<?php foreach ($lsCategories as $cate):?>
-			<?php $linkcat = JRoute::_(ContentHelperRoute::getCategoryRoute($cate->id, $cate->section));?>
-			<li><a href="<?php echo $linkcat;?>"><?php echo $cate->title;?></a></li>
-			<?php endforeach;?>
 		</ul>
 	</div>
 	<?php
@@ -69,7 +62,6 @@ $rows = $db->loadObjectList();
 	endforeach;
 	?>
 	</ul>
-	<div class="line1 mt1"></div> 
 </div>
 <?php endforeach; ?>
 
