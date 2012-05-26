@@ -21,7 +21,8 @@ $aLink = array(
 	array('sectionid' => 2, 'catid' =>6 , 'link'=> 'http://dantri.com.vn/c25s181/guongsang/trang-1.htm', 'url' => $domain), //Điểm sáng giao dục Việt
 	array('sectionid' => 2, 'catid' =>8 , 'link'=> 'http://dantri.com.vn/c25s146/duhoc/trang-1.htm', 'url' => $domain), //Du hoc
 	//Sức khỏe
-	array('sectionid' => 5, 'catid' =>32 , 'link'=> 'http://dantri.com.vn/c7/suckhoe.htm', 'url' => $domain) //Tin tức sức khỏe
+	array('sectionid' => 5, 'catid' =>32 , 'link'=> 'http://dantri.com.vn/c7/suckhoe.htm', 'url' => $domain), //Tin tức sức khỏe
+	array('sectionid' => 5, 'catid' =>34 , 'link'=> 'http://dantri.com.vn/c7s160/gioitinh/trang-1.htm', 'url' => $domain) //Sức khỏe giới tính
 );
 
 foreach ($aLink as $array) {
