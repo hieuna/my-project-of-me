@@ -1,0 +1,2 @@
+<?php die("Access Denied"); ?>
+a:2:{s:6:"output";s:0:"";s:6:"result";O:19:"JCommentsObjectInfo":10:{s:2:"id";N;s:9:"object_id";i:1290;s:12:"object_group";s:11:"com_content";s:4:"lang";s:5:"vi-VN";s:5:"title";s:42:"Lý Nhã Kỳ dự tiệc cùng Công Vinh";s:4:"link";s:73:"/projects/news/van-hoa/showbiz/1290-ly-nha-ky-du-tiec-cung-cong-vinh.html";s:6:"access";s:1:"0";s:6:"userid";s:1:"0";s:7:"expired";N;s:8:"modified";N;}}
