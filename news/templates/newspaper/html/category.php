@@ -1,5 +1,6 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
+require_once (JPATH_SITE.DS.'components'.DS.'com_content'.DS.'helpers'.DS.'route.php');
 
 $id			=  JRequest::getInt('id', 0, 'GET');
 
@@ -26,7 +27,7 @@ foreach ($listCate as $cate) {
 	?>
 	<div class="box-category">
 		<div class="title-category">
-			<a href="<?php echo JRoute::_(ContentHelperRoute::getSectionRoute($cate->id)); ?>"><?php echo $cate->title;?></a>
+			<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($cate->id, $cate->section)); ?>"><?php echo $cate->title;?></a>
 		</div>
 		<div class="content-category">
 			<div class="content-left-category fl">
