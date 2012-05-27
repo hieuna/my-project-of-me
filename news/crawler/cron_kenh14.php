@@ -31,7 +31,7 @@ foreach ($aLink as $array) {
 		// Mô tả bài viết
 		$articles[$index]['description'] = $items->children(2)->children(1)->innertext;
 		// Xem chi tiết bài viết
-		$detail = $items->children(0)->href;
+		$detail = $items->children(2)->children(0)->children(0)->href;
 		$html_detail = file_get_html($array['url'] . $detail);
 		$contents = $html_detail->find(".content");
 		foreach ($contents as $content) {
@@ -45,14 +45,13 @@ foreach ($aLink as $array) {
 	$array_un = array();
 	
 	foreach ($articles as $index => $article) {
-		$title = isset($article['title']) ? clean_value(replaceString($article['title'])) : null;
+		$title = isset($article['title']) ? replaceString($article['title']) : null;
 		$description = isset($article['description']) ? clean_value(replaceString($article['description'])) : '';
-		$content = isset($article['content']) ? str_replace("'", "", $article['content']) : '';
+		$fulltext = isset($article['content']) ? str_replace("'", "", $article['content']) : '';
 		$url = isset($article['url']) ? $article['url'] : '';
 		
-		$introtext	= str_replace("'","\'", _cleanContent($description));
-		$fulltext 	= str_replace("'","\'", _cleanContent($content));
-		$fulltext 	= str_replace(' src=','" src="', $fulltext);
+		$introtext	= '(Tapchidoanhnhanviet.vn) - '.str_replace("'","\'", _cleanContent($description));
+		$fulltext .= $fulltext.'<p style="text-align: right;" align="right"><b>(Theo Kenh14.vn)</b></p>';
 		
 		if ($title != null) { 
 			// Tao slug từ tiêu đề
