@@ -1,5 +1,5 @@
 <?php die("Access Denied"); ?>
-a:2:{s:6:"output";s:0:"";s:6:"result";s:6967:"<div class="contenttop_left">
+a:2:{s:6:"output";s:0:"";s:6:"result";s:6789:"<div class="contenttop_left">
 	<table width="100%" cellpadding="0" cellspacing="0" border="0">
 	<tr>
 		<td valign="top">
@@ -13,24 +13,24 @@ a:2:{s:6:"output";s:0:"";s:6:"result";s:6967:"<div class="contenttop_left">
 							</div>
 						   <div id="slide-holder">
 								<div id="slide-runner">
-																			<a href="/projects/news/do-choi-so/359-dream-hotel-noi-dung-chan-mo-uoc.html">
-																	    				<img id="slide-img-0" src="http://localhost/projects/news/images/stories/dream chuan.jpg" />
+																			<a href="/projects/news/van-hoa/nhan-sac-viet/1264-sao-viet-khoe-sac-tren-dat-phap.html">
+																	    				<img id="slide-img-0" src="http://localhost/projects/news/images/stories/sao-viet-khoe-sac-tren-dat-phap-1337827713.jpg" />
 						    										    			</a>
 										
-																			<a href="/projects/news/moi-truong-kinh-doanh/48-hop-tac/327-viet-nam-thang-10-bac-ve-moi-truong-kinh-doanh.html">
-																	    				<img id="slide-img-1" src="http://localhost/projects/news/images/stories/duyhungvnn27021732.jpg" />
+																			<a href="/projects/news/the-thao/bong-da-anh/1252-uefa-xem-xet-lai-luat-nhung-tottenham-dung-hy-vong.html">
+																	    				<img id="slide-img-1" src="http://localhost/projects/news/images/stories/uefa-xem-xet-lai-luat-nhung-tottenham-dung-hy-vong-1337827608.jpg" />
 						    										    			</a>
 										
-																			<a href="/projects/news/the-news/325-chu-tich-nuoc-truong-tan-sang-gap-mat-doan-dai-bieu-dai-dien-cho-100-htx-dien-hinh-tien-tien.html">
-																	    				<img id="slide-img-2" src="http://localhost/projects/news/images/stories/chu-tich-2.jpg" />
+																			<a href="/projects/news/the-thao/bong-da-anh/1253-man-city-dan-dau-cac-doi-bong-thua-lo-tai-premier-leauge-201112.html">
+																	    				<img id="slide-img-2" src="http://localhost/projects/news/images/stories/man-city-dan-dau-cac-doi-bong-thua-lo-tai-premier-leauge-201112-1337827611.jpg" />
 						    										    			</a>
 										
-																			<a href="/projects/news/the-news/300-thuong-vu-quoc-hoi-tranh-luan-viec-tich-thu-xe-dua.html">
-																	    				<img id="slide-img-3" src="http://localhost/projects/news/images/stories/vp1.jpg" />
+																			<a href="/projects/news/thi-truong/kinh-te-thi-truong/1251-gia-vang-phuc-hoi-sau-phien-lao-doc.html">
+																	    				<img id="slide-img-3" src="http://localhost/projects/news/images/stories/gia-vang-phuc-hoi-sau-phien-lao-doc-1337827577.jpg" />
 						    										    			</a>
 										
-																			<a href="/projects/news/the-news/285-festival-hue-mot-le-hoi-van-hoa-lon-dac-sac-chinh-thuc-khai-mac.html">
-																	    				<img id="slide-img-4" src="http://localhost/projects/news/images/stories/thu-tuong-3.gif" />
+																			<a href="/projects/news/thi-truong/tai-chinh/1227-xang-giam-them-600-dong-moi-lit.html">
+																	    				<img id="slide-img-4" src="http://localhost/projects/news/images/stories/xang-giam-them-600-dong-moi-lit-1337763207.jpg" />
 						    										    			</a>
 										
 										
@@ -49,15 +49,15 @@ a:2:{s:6:"output";s:0:"";s:6:"result";s:6967:"<div class="contenttop_left">
 						   <script type="text/javascript">
 						    if(!window.slider) var slider={};
 						    slider.data=[
-																{"id":"slide-img-0","client":"","desc":" Dream Hotel - Nơi dừng chân mơ ước!"},
+																{"id":"slide-img-0","client":"","desc":"Sao Việt khoe sắc trên đất Pháp"},
 									
-																{"id":"slide-img-1","client":"","desc":"Việt Nam tăng 10 bậc về môi trường kinh doanh"},
+																{"id":"slide-img-1","client":"","desc":"UEFA xem xét lại luật, nhưng Tottenham đừng hy vọng"},
 									
-																{"id":"slide-img-2","client":"","desc":"Chủ tịch nước Trương Tấn Sang gặp mặt đoàn đại biểu đại diện cho 100 HTX điển hình tiên tiến "},
+																{"id":"slide-img-2","client":"","desc":"Man City dẫn đầu các đội bóng thua lỗ tại Premier Leauge 2011/12"},
 									
-																{"id":"slide-img-3","client":"","desc":"Thường vụ Quốc hội tranh luận việc tịch thu xe đua"},
+																{"id":"slide-img-3","client":"","desc":"Giá vàng phục hồi sau phiên lao dốc"},
 									
-																{"id":"slide-img-4","client":"","desc":"Festival Huế một lễ hội văn hóa lớn, đặc sắc chính thức khai mạc"},
+																{"id":"slide-img-4","client":"","desc":"Xăng giảm thêm 600 đồng mỗi lít"},
 									
 									
 									
@@ -93,24 +93,24 @@ a:2:{s:6:"output";s:0:"";s:6:"result";s:6967:"<div class="contenttop_left">
 						
 						
 										<div id='item-0' class='newsTopmain-panel'>
-						<a href="/projects/news/the-news/261-khai-mac-festival-dua-2012-tu-hao-xu-dua-viet-nam.html">
-														<img src="http://localhost/projects/news/images/stories/hinh-km-5_7c2a1.jpg" alt="" hspace="10" vspace="10" width="447px" />
+						<a href="/projects/news/doanh-nhan-viet/chuyen-kinh-doanh/1205-doanh-nghiep-vang-xoay-xo-huong-di.html">
+														<img src="http://localhost/projects/news/images/stories/doanh-nghiep-vang-xoay-xo-huong-di-1337745199.jpg" alt="" hspace="10" vspace="10" width="447px" />
 													</a>
-						<h2><a href="/projects/news/the-news/261-khai-mac-festival-dua-2012-tu-hao-xu-dua-viet-nam.html">Khai mạc Festival Dừa 2012: Tự hào xứ dừa Việt Nam!</a></h2>
+						<h2><a href="/projects/news/doanh-nhan-viet/chuyen-kinh-doanh/1205-doanh-nghiep-vang-xoay-xo-huong-di.html">Doanh nghiệp vàng xoay xở hướng đi</a></h2>
 					</div>
 						
 										<div id='item-0' class='newsTopmain-panel'>
-						<a href="/projects/news/xay-dung-nong-thon-moi/tin-hoat-dong/257-tong-bi-thu-nguyen-phu-trong-chuong-trinh-xay-dung-thi-diem-mo-hinh-nong-thon-moi-co-suc-lan-toa-rong-khap.html">
-														<img src="http://localhost/projects/news/images/stories/tbt-1.jpg" alt="" hspace="10" vspace="10" width="447px" />
+						<a href="/projects/news/the-thao/bong-da-anh/1196-drogba-ung-ho-torres-tro-thanh-tien-dao-so-1-cua-chelsea.html">
+														<img src="http://localhost/projects/news/images/stories/drogba-ung-ho-torres-tro-thanh-tien-dao-so-1-cua-chelsea-1337744943.jpg" alt="" hspace="10" vspace="10" width="447px" />
 													</a>
-						<h2><a href="/projects/news/xay-dung-nong-thon-moi/tin-hoat-dong/257-tong-bi-thu-nguyen-phu-trong-chuong-trinh-xay-dung-thi-diem-mo-hinh-nong-thon-moi-co-suc-lan-toa-rong-khap.html">Tổng Bí thư Nguyễn Phú Trọng: Chương trình xây dựng thí điểm mô hình nông thôn mới có sức lan tỏa rộng khắp</a></h2>
+						<h2><a href="/projects/news/the-thao/bong-da-anh/1196-drogba-ung-ho-torres-tro-thanh-tien-dao-so-1-cua-chelsea.html">Drogba ủng hộ Torres trở thành tiền đạo số 1 của Chelsea</a></h2>
 					</div>
 						
 										<div id='item-0' class='newsTopmain-panel'>
-						<a href="/projects/news/moi-truong-kinh-doanh/kinh-te-dau-tu/256-can-nhac-mien-giam-thue-cuu-doanh-nghiep.html">
-														<img src="http://localhost/projects/news/images/stories/vuong-dinh-hue-0.jpg" alt="" hspace="10" vspace="10" width="447px" />
+						<a href="/projects/news/van-hoa/showbiz/1189-chong-huong-giang-lan-dau-lo-dien.html">
+														<img src="http://localhost/projects/news/images/stories/chong-huong-giang-lan-dau-lo-dien-1337737367.jpg" alt="" hspace="10" vspace="10" width="447px" />
 													</a>
-						<h2><a href="/projects/news/moi-truong-kinh-doanh/kinh-te-dau-tu/256-can-nhac-mien-giam-thue-cuu-doanh-nghiep.html">Cân nhắc miễn giảm thuế cứu doanh nghiệp</a></h2>
+						<h2><a href="/projects/news/van-hoa/showbiz/1189-chong-huong-giang-lan-dau-lo-dien.html">Chồng Hương Giang lần đầu lộ diện</a></h2>
 					</div>
 						
 						
@@ -138,23 +138,23 @@ a:2:{s:6:"output";s:0:"";s:6:"result";s:6967:"<div class="contenttop_left">
 					
 					
 								<div class="MainBottomNormal2">
-					<h2><a href="/projects/news/the-news/183-viet-nam-ung-ho-mot-asean-doan-ket-vung-manh.html">Việt Nam ủng hộ một ASEAN đoàn kết, vững mạnh</a></h2>
+					<h2><a href="/projects/news/van-hoa/showbiz/1190-la-thanh-huyen-du-ngoan-chau-au.html">Lã Thanh Huyền du ngoạn châu Âu</a></h2>
 				</div>
 					
 								<div class="MainBottomNormal2">
-					<h2><a href="/projects/news/the-gioi/the-goi-24h/172-khai-mac-hoi-nghi-cap-cao-asean-lan-thu-20.html">Khai mạc Hội nghị Cấp cao ASEAN lần thứ 20</a></h2>
+					<h2><a href="/projects/news/van-hoa/showbiz/1191-dinh-scandal-cao-thai-son-van-diem-nhien-di-xem-phim.html">Dính scandal, Cao Thái Sơn vẫn điềm nhiên đi xem phim</a></h2>
 				</div>
 					
 								<div class="MainBottomNormal2">
-					<h2><a href="/projects/news/doanh-nhan-viet/chan-dung-doanh-nhan/170-ceo-stoxplus-khung-hoang-la-co-hoi-choi-lai-van-co.html">CEO StoxPlus: ‘Khủng hoảng là cơ hội chơi lại ván cờ</a></h2>
+					<h2><a href="/projects/news/van-hoa/goc-nhin-van-hoa/1174-phat-hien-36-sac-phong-tai-nha-tho-ho-phan.html">Phát hiện 36 sắc phong tại nhà thờ họ Phan</a></h2>
 				</div>
 					
 								<div class="MainBottomNormal2">
-					<h2><a href="/projects/news/lam-dep/64-tin-lam-dep/152-5-diem-nhan-cho-khuon-mat-dep-toan-dien.html">5 điểm nhấn cho khuôn mặt đẹp toàn diện.</a></h2>
+					<h2><a href="/projects/news/van-hoa/nhan-sac-viet/1044-duyen-dang-nguoi-lang-sen-2012.html">Duyên dáng người Làng Sen 2012</a></h2>
 				</div>
 					
 								<div class="MainBottomNormal2">
-					<h2><a href="/projects/news/the-gioi/the-goi-24h/148-thu-tuong-nguyen-tan-dung-gap-thu-tuong-campuchia-hun-sen.html">Thủ tướng Nguyễn Tấn Dũng gặp Thủ tướng Campuchia Hun Sen </a></h2>
+					<h2><a href="/projects/news/xa-hoi/chinh-tri/1036-thu-tuong-tham-va-lam-viec-tai-tien-giang.html">Thủ tướng thăm và làm việc tại Tiền Giang</a></h2>
 				</div>
 					
 								</td>
