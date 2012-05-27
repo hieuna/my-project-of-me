@@ -1,41 +1,41 @@
 <?php die("Access Denied"); ?>
-a:2:{s:6:"output";s:0:"";s:6:"result";s:2672:"<div class="box_modules clearfix">
+a:2:{s:6:"output";s:0:"";s:6:"result";s:2448:"<div class="box_modules clearfix">
 	<div class="title_box_modules">Bài đọc nhiều nhất</div>
 	<ul class="mostread">
 			<li class="mostread clearfix" style="background: #FFF;">
-			<a href="/projects/news/the-gioi/the-gioi-do-day/55-trung-quoc-xon-xao-nguoi-dan-ong-khoa-than-chong-day-khap-nuoc.html">
-				<img class="img45" src="http://localhost/projects/news//images/stories/1_62780.jpg" />
+			<a href="/projects/news/van-hoa/showbiz/1-doi-hop-ca-cua-siu-black-chia-tay-trong-nuoc-mat.html">
+				<img class="img45" src="http://localhost/projects/news//images/stories/hopca10_65ecf.jpg" />
 			</a>
-			<a href="/projects/news/the-gioi/the-gioi-do-day/55-trung-quoc-xon-xao-nguoi-dan-ong-khoa-than-chong-day-khap-nuoc.html" class="mostread">
-				Trung Quốc: Xôn xao người đàn ông khỏa thân chống đẩy khắp nước</a>
+			<a href="/projects/news/van-hoa/showbiz/1-doi-hop-ca-cua-siu-black-chia-tay-trong-nuoc-mat.html" class="mostread">
+				Đội hợp ca của Siu Black chia tay trong nước mắt</a>
 		</li>
 			<li class="mostread clearfix" style="background: #F2F8FF;">
-			<a href="/projects/news/the-gioi/nhan-vat-va-doi-thoai/259-putin-gap-obama-sau-khi-nham-chuc.html">
-				<img class="img45" src="http://localhost/projects/news//images/stories/75275804-050111-putin_1.jpg" />
+			<a href="/projects/news/van-hoa/showbiz/468-chan-dai-viet-va-su-ho-henh-tren-san-khau.html">
+				<img class="img45" src="http://localhost/projects/news//images/stories/dnv-hoang yenjpg.jpg" />
 			</a>
-			<a href="/projects/news/the-gioi/nhan-vat-va-doi-thoai/259-putin-gap-obama-sau-khi-nham-chuc.html" class="mostread">
-				Putin gặp Obama sau khi nhậm chức</a>
+			<a href="/projects/news/van-hoa/showbiz/468-chan-dai-viet-va-su-ho-henh-tren-san-khau.html" class="mostread">
+				Chân dài Việt và sự hớ hênh trên sân khấu</a>
 		</li>
 			<li class="mostread clearfix" style="background: #FFF;">
-			<a href="/projects/news/the-gioi/the-goi-24h/148-thu-tuong-nguyen-tan-dung-gap-thu-tuong-campuchia-hun-sen.html">
-				<img class="img45" src="http://localhost/projects/news//images/stories/anh 2.4.jpg" />
+			<a href="/projects/news/van-hoa/nhan-sac-viet/453-diem-huong-mo-mong-ben-hoa.html">
+				<img class="img45" src="http://localhost/projects/news//images/stories/diem-huong-mo-mong-ben-hoa.jpg" />
 			</a>
-			<a href="/projects/news/the-gioi/the-goi-24h/148-thu-tuong-nguyen-tan-dung-gap-thu-tuong-campuchia-hun-sen.html" class="mostread">
-				Thủ tướng Nguyễn Tấn Dũng gặp Thủ tướng Campuchia Hun Sen </a>
+			<a href="/projects/news/van-hoa/nhan-sac-viet/453-diem-huong-mo-mong-ben-hoa.html" class="mostread">
+				Diễm Hương mơ mộng bên hoa</a>
 		</li>
 			<li class="mostread clearfix" style="background: #F2F8FF;">
-			<a href="/projects/news/the-gioi/nhan-vat-va-doi-thoai/355-ngoai-truong-my-clinton-gay-sot-vi-di-nhay-uong-bia-o-hop-dem.html">
-				<img class="img45" src="http://localhost/projects/news//images/stories/b clinton.jpg" />
+			<a href="/projects/news/van-hoa/goc-nhin-van-hoa/158-xon-xao-voi-loat-anh-nong-cua-nguoi-mau-trung-quoc.html">
+				<img class="img45" src="http://localhost/projects/news//images/stories/nguoi.jpg" />
 			</a>
-			<a href="/projects/news/the-gioi/nhan-vat-va-doi-thoai/355-ngoai-truong-my-clinton-gay-sot-vi-di-nhay-uong-bia-o-hop-dem.html" class="mostread">
-				Ngoại trưởng Mỹ Clinton gây “sốt” vì đi nhảy, uống bia ở hộp đêm</a>
+			<a href="/projects/news/van-hoa/goc-nhin-van-hoa/158-xon-xao-voi-loat-anh-nong-cua-nguoi-mau-trung-quoc.html" class="mostread">
+				Xôn xao với loạt ảnh “nóng” của người mẫu Trung Quốc</a>
 		</li>
 			<li class="mostread clearfix" style="background: #FFF;">
-			<a href="/projects/news/the-gioi/the-goi-24h/172-khai-mac-hoi-nghi-cap-cao-asean-lan-thu-20.html">
-				<img class="img45" src="http://localhost/projects/news//images/stories/asean-1_9da8d.jpg" />
+			<a href="/projects/news/van-hoa/nhan-sac-viet/301-ton-nu-na-uy-tinh-khoi-voi-ao-dai-trang.html">
+				<img class="img45" src="http://localhost/projects/news//images/stories/nauy_15.jpg" />
 			</a>
-			<a href="/projects/news/the-gioi/the-goi-24h/172-khai-mac-hoi-nghi-cap-cao-asean-lan-thu-20.html" class="mostread">
-				Khai mạc Hội nghị Cấp cao ASEAN lần thứ 20</a>
+			<a href="/projects/news/van-hoa/nhan-sac-viet/301-ton-nu-na-uy-tinh-khoi-voi-ao-dai-trang.html" class="mostread">
+				Tôn Nữ Na Uy tinh khôi với áo dài trắng</a>
 		</li>
 		</ul>
 </div>

@@ -1,8 +1,8 @@
 <?php die("Access Denied"); ?>
-a:2:{s:6:"output";s:0:"";s:6:"result";s:4177:"<div class="box_modules clearfix">
+a:2:{s:6:"output";s:0:"";s:6:"result";s:4179:"<div class="box_modules clearfix">
 	<div class="title_box_modules">
-		<a href="/projects/news/the-gioi/1.html?group=warehouse&amp;feauture=special&amp;secid=15&amp;cid=81">Nhà Nông Làm Giàu</a>
-		<a href="/projects/news/the-gioi/1.html?group=warehouse&amp;feauture=hot&amp;secid=15&amp;cid=81" class="addview">Xem tất cả</a>
+		<a href="/projects/news/trang-chu/1.html?group=warehouse&amp;feauture=special&amp;secid=15&amp;cid=81">Nhà Nông Làm Giàu</a>
+		<a href="/projects/news/trang-chu/1.html?group=warehouse&amp;feauture=hot&amp;secid=15&amp;cid=81" class="addview">Xem tất cả</a>
 	</div>
 	<table cellpadding="0" cellspacing="0" class="focus">
 		<tr>
