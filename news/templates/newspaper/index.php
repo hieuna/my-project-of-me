@@ -52,6 +52,9 @@ $group		= JRequest::getString('group', '', 'GET');
 		  })();
 
 		</script>
+		<?php if ($view == 'frontpage'):?>
+		<meta http-equiv='refresh' content='160; url=http://tapchidoanhnhanviet.vn' />
+		<?php endif;?>
 	</head>
 	<body class="body">
 		<div class="header_full">

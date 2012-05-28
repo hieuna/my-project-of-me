@@ -1,22 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Lấy tin Ngoisao.net tự động</title>
-</head>
-<body>
 <?php
 include_once '../class/config.php';
 include_once '../class/simple_html_dom.php';
 include_once '../class/function.php';
+
 //Define page
-$domain	= 'http://ngoisao.net/';
+$domain 	= 'http://kenh14.vn';
 
 $aLink = array(
-	//NGOISAO.NET
-	//Văn hóa
-	array('sectionid' => 4, 'catid' =>29 , 'link'=> 'http://ngoisao.net/tin-tuc/showbiz-viet/', 'url' => $domain) //Show biz
-	
+	//Phong cách tuổi teen
+	array('sectionid' => 4, 'catid' =>86 , 'link'=> 'http://kenh14.vn/tags/f5-phong-cach-cua-teen.chn', 'url' => $domain) //Teen style
 );
 
 foreach ($aLink as $array) {
@@ -24,51 +16,35 @@ foreach ($aLink as $array) {
 	$html = file_get_html($get_link);
 
 	$articles = array();
-	foreach ($html->find('ul.news li') as $index => $items) {
+	foreach ($html->find('.item') as $index => $items) {
 		//Lấy ảnh đại diện
-		$articles[$index]['image'] = $items->children(0)->children(0)->src;
-		
-		// Nội dung
-		foreach ($items->find('h3') as $item) {
-			// Tiêu đề bài viết
-			$articles[$index]['title'] = $item->children(0)->innertext;
-			
-			// Xem chi tiết bài viết
-			$detail = $item->children(0)->href;
-			
-			$html_detail = file_get_html($array['url'] . $detail);
-			
-			// Mô tả bài viết
-			$descriptions = $html_detail->find('h2.Lead');
-			foreach ($descriptions as $description) {
-				$articles[$index]['description'] = '<b>(Tapchidoanhnhanviet.vn)</b> - '.$description->innertext;
-			}
-			
-			// Nội dung bài viết
-			$contents = $html_detail->find('div.detailCT');
-			foreach ($contents as $content) {
-				$articles[$index]['content'] = $content->innertext;
-			}
-			$i = strpos($articles[$index]['content'], "</p>");
-			$j = strpos($articles[$index]['content'], "div class='detailNS'>");
-			$articles[$index]['content'] = substr($articles[$index]['content'], $i, $j-$i);
-			$articles[$index]['content'] = str_replace('src="', 'src="'.$array['url'], $articles[$index]['content']).'<p style="text-align: right;" align="right"><b>(Theo Ngoisao.net)</b></p>';
-			$articles[$index]['url'] = $array['url'];
+		$articles[$index]['image'] = $items->children(1)->children(0)->children(0)->src;
+		// Tiêu đề bài viết
+		$articles[$index]['title'] = $items->children(2)->children(0)->children(0)->innertext;
+		// Mô tả bài viết
+		$articles[$index]['description'] = $items->children(2)->children(1)->innertext;
+		// Xem chi tiết bài viết
+		$detail = $items->children(2)->children(0)->children(0)->href;
+		$html_detail = file_get_html($array['url'] . $detail);
+		$contents = $html_detail->find(".content");
+		foreach ($contents as $content) {
+			$articles[$index]['content'] = $content->innertext;
 		}
+		$articles[$index]['url'] = $array['url'];
 	}
 	
 	$check = false;
 	$array_in = array();
 	$array_un = array();
-
+	
 	foreach ($articles as $index => $article) {
 		$title = isset($article['title']) ? replaceString($article['title']) : null;
 		$description = isset($article['description']) ? replaceString($article['description']) : '';
-		$content = isset($article['content']) ? str_replace("'", "", $article['content']) : '';
+		$fulltext = isset($article['content']) ? str_replace("'", "", $article['content']) : '';
 		$url = isset($article['url']) ? $article['url'] : '';
 		
-		$introtext	= str_replace("'","\'", _cleanContent($description));
-		$fulltext 	= str_replace("'","\'", _cleanContent($content));
+		$introtext	= '(Tapchidoanhnhanviet.vn) - '.str_replace("'","\'", _cleanContent($description));
+		$fulltext .= $fulltext.'<p style="text-align: right;" align="right"><b>(Theo Kenh14.vn)</b></p>';
 		
 		if ($title != null) { 
 			// Tao slug từ tiêu đề
@@ -86,7 +62,7 @@ foreach ($aLink as $array) {
 				$info_image = pathinfo($article['image']);
 				$extension = $info_image['extension'];
 				$image_convert = $slug."-".time().".".$extension;
-				copy($url.$article['image'],"../images/stories/".$image_convert);
+				copy($article['image'],"../images/stories/".$image_convert);
 				// Cập nhật bảng articles
 				$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, publish_up, state, alias, sectionid, catid) 
 					VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
@@ -120,5 +96,3 @@ foreach ($aLink as $array) {
 
 mysql_close();
 ?>
-</body>
-</html>
