@@ -29,30 +29,17 @@ foreach ($aLink as $array) {
 		// Tiêu đề bài viết
 		$articles[$index]['title'] 	= $items->children(1)->children(0)->children(0)->innertext;
 		// Mô tả bài viết
-		echo $articles[$index]['description'] 	= '(Tapchidoanhnhanviet.vn) - '.$items->children(1)->children(1)->innertext; die;
-		// Nội dung
-		foreach ($items->find('div.mr1') as $item) {
-			// Tiêu đề bài viết
-			$articles[$index]['title'] = $item->children(0)->innertext;
-			
-			// Xem chi tiết bài viết
-			$detail = $item->children(0)->href;
-			$html_detail = file_get_html($array['url'] . $detail);
-			
-			// Mô tả bài viết
-			$descriptions = $html_detail->find('div.fon33');
-			foreach ($descriptions as $description) {
-				$articles[$index]['description'] = $description->innertext;
-			}
-			$articles[$index]['description'] = str_replace("(Dân trí)", "<b>(Tapchidoanhnhanviet.vn)</b>", $articles[$index]['description']);
-			
-			// Nội dung bài viết
-			$contents = $html_detail->find('div.fon34');
-			foreach ($contents as $content) {
-				$articles[$index]['content'] = $content->innertext.'<p style="text-align: right;" align="right"><b>(Theo Dantri.com)</b></p>';
-			}
-			$articles[$index][url] = '';
+		$articles[$index]['description'] 	= '(Tapchidoanhnhanviet.vn) - '.$items->children(1)->children(1)->innertext;
+		// Xem chi tiết bài viết
+		$detail = $items->children(0)->href;
+		$html_detail = file_get_html($array['url'] . $detail);
+		$contents = $html_detail->find(".html");
+		foreach ($contents as $content) {
+			$articles[$index]['content'] = $content->innertext;
 		}
+		$articles[$index]['content'] = str_replace('src="', 'src="'.$array['url'], $articles[$index]['content']).'<p style="text-align: right;" align="right"><b>(Theo Doanhnhansaigon.vn)</b></p>';
+		$articles[$index]['url'] = $array['url'];
+		//echo $articles[$index]['content']; die;
 	}
 	
 	var_dump($articles); die;
