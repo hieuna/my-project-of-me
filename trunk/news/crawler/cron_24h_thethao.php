@@ -28,20 +28,25 @@ foreach ($aLink as $array) {
 		$articles[$index]['image'] = $items->children(0)->children(1)->children(0)->src;
 		// Tiêu đề bài viết
 		$articles[$index]['title'] 	= $items->children(1)->children(0)->children(0)->innertext;
-		// Mô tả bài viết
-		$articles[$index]['description'] 	= '(Tapchidoanhnhanviet.vn) - '.$items->children(1)->children(1)->innertext;
 		// Xem chi tiết bài viết
-		$detail = $items->children(0)->href;
+		$detail = $items->children(1)->children(0)->children(0)->href;
 		$html_detail = file_get_html($array['url'] . $detail);
-		$contents = $html_detail->find(".html");
+		// Mô tả bài viết
+		$descriptions = $html_detail->find(".baiviet-head-noidung");
+		foreach ($descriptions as $des) {
+			$articles[$index]['description'] = $des->innertext;
+		}
+		$articles[$index]['description'] 	= '(Tapchidoanhnhanviet.vn) - '.$articles[$index]['description'];
+		// Chi tiết bài viết
+		$contents = $html_detail->find(".text-conent");
 		foreach ($contents as $content) {
 			$articles[$index]['content'] = $content->innertext;
 		}
-		$articles[$index]['content'] = str_replace('src="', 'src="'.$array['url'], $articles[$index]['content']).'<p style="text-align: right;" align="right"><b>(Theo Doanhnhansaigon.vn)</b></p>';
+		$i = strpos($articles[$index]['content'], "</p>");
+		$articles[$index]['content'] = substr($articles[$index]['content'], $i).'<p style="text-align: right;" align="right"><b>(Nguồn từ 24H.COM.VN)</b></p>';;
 		$articles[$index]['url'] = $array['url'];
-		//echo $articles[$index]['content']; die;
+		//var_dump($articles); die;
 	}
-	
 	var_dump($articles); die;
 	
 	$check = false;
