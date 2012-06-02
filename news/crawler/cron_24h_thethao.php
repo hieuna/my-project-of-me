@@ -64,8 +64,6 @@ foreach ($aLink as $array) {
 			
 			$introtext	= str_replace("'","\'", _cleanContent($description));
 			$fulltext 	= str_replace("'","\'", _cleanContent($content));
-			$fulltext	= str_replace('<div align="center"><br />//</div>', '', $fulltext);
-			$fulltext	= str_replace('<p></p>', '', $fulltext);
 			
 			if (strlen($fulltext)>=1000){
 				if ($title != null) { 
