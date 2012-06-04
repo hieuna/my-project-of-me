@@ -8,9 +8,8 @@ $domain 	= 'http://hn.24h.com.vn/';
 
 $aLink = array(
 	//24H.COM.VN
-	//Xã hội
-	//array('sectionid' => 1, 'catid' =>1 , 'link'=> 'http://hn.24h.com.vn/phong-su-c137.html', 'url' => $domain), //Phóng sự ký sự
 	//Ẩm thực
+	array('sectionid' => 13, 'catid' =>58 , 'link'=> 'http://hn.24h.com.vn/am-thuc-c460.html', 'url' => $domain), //Tin tức ẩm thực
 	array('sectionid' => 13, 'catid' =>61 , 'link'=> 'http://hn.24h.com.vn/dac-san-3-mien-c465.html', 'url' => $domain) //Món ngon Việt
 );
 
