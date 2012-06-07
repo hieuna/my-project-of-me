@@ -55,7 +55,11 @@ foreach ($listCate as $cate) {
 					else $addClass = '';
 					if ($i > 0){
 					?>
-					<li><a<?php echo $addClass;?> href="<?php echo $link;?>"><?php echo $row->title;?></a></li>
+					<li>
+						<a href="<?php echo $link;?>"><img class="img35" title="<?php echo $row->title;?>" alt="<?php echo $row->title;?>" src="<?php echo $baseurl;?>images/stories/<?php echo $row->images;?>" /></a>
+						<a<?php echo $addClass;?> href="<?php echo $link;?>"><?php echo $row->title;?></a>
+					</li>
+					<div class="clr"></div>
 					<?php	
 					}
 					$i++;

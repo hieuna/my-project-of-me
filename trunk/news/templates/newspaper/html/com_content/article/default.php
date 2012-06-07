@@ -119,3 +119,6 @@ $canEdit	= ($this->user->authorize('com_content', 'edit', 'content', 'all') || $
 	</table>
 	<?php echo $this->article->event->afterDisplayContent; ?>
 </div>	
+<script type="text/javascript">
+$('.view_content table.contentpaneopen table').css('width', '480px');
+</script>
