@@ -65,7 +65,7 @@ if (count($rows) > 0){
 				$link = JRoute::_(ContentHelperRoute::getArticleRoute($row->slug, $row->catslug, $row->sectionid));
 				if ($i > 0){
 				?>
-				<li class="get_id" id="<?php echo $row->id; ?>">
+				<li id="<?php echo $row->id; ?>">
 					<div class="item fl">
 						<div class="sys_ul_image">
 							<a href="<?php echo $link;?>"><img src="<?php echo $baseurl;?>/images/stories/<?php echo $row->images;?>" alt="<?php echo $row->title;?>" /></a>
@@ -90,7 +90,8 @@ if (count($rows) > 0){
 	<script>
 	$(document).ready(function(){
 		$('.tab_system_left li').hover(function(){
-			$('#load_system').load("ajax.php?id=1");
+			var id = $(this).attr('id');
+			$('#load_system').load("ajax.php?task=load_system&id="+id);
 		});
 	});
 	</script>
