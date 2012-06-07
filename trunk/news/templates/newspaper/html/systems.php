@@ -6,7 +6,13 @@ require_once (JPATH_SITE.DS.'components'.DS.'com_content'.DS.'helpers'.DS.'route
 $id			= JRequest::getInt('id', 0, 'GET');
 if ($view == 'section') $where = ' AND cd.sectionid='.$id;
 else if ($view == 'category') $where = ' AND cd.catid='.$id;
-else if ($view == 'article') $where = ' AND cd.id!='.$id;
+else if ($view == 'article') {
+	$db			= JFactory::getDbo();
+	$sql = "SELECT catid FROM #__content WHERE id=".$id;
+	$db->setQuery($sql);
+	$rowid	=	$db->loadObject();
+	$where = ' AND cd.id!='.$id.' AND cd.catid='.$rowid->catid;
+}
 else $where = '';
 
 $baseurl	= JURI::base();
@@ -85,15 +91,21 @@ if (count($rows) > 0){
 			</div>
 		</div>
 		<div class="tab_system_right">
+			<div>
+			<embed width="300" height="250" align="middle" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1022230%26adm_aditem%3D132333%26adm_zoneid%3D224%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fphimmadagascar3.com.vn%2F%26adm_random%3D0.14842282715897448&amp;atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/mad3_stnd_mpu_300x250chuan.swf">
+			</div>
+			<div>
+			<embed width="300" height="125" align="middle" quality="high" wmode="transparent" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/03_hocviennganhang_300x125_3.swf">
+			</div>
 		</div>
 	</div>
 	<script>
-	$(document).ready(function(){
-		$('.tab_system_left li').hover(function(){
-			var id = $(this).attr('id');
-			$('#load_system').load("ajax.php?task=load_system&id="+id);
-		});
-	});
+//	$(document).ready(function(){
+//		$('.tab_system_left li').hover(function(){
+//			var id = $(this).attr('id');
+//			$('#load_system').load("ajax.php?task=load_system&id="+id);
+//		});
+//	});
 	</script>
 	<?php	
 	} 
