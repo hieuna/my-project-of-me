@@ -52,9 +52,6 @@ $group		= JRequest::getString('group', '', 'GET');
 		  })();
 
 		</script>
-		<?php if ($view == 'frontpage'):?>
-		<meta http-equiv='refresh' content='160; url=http://tapchidoanhnhanviet.vn' />
-		<?php endif;?>
 	</head>
 	<body class="body">
 		<div class="header_full">
@@ -73,13 +70,6 @@ $group		= JRequest::getString('group', '', 'GET');
 					 </div>
 				 </div>
 			</div>
-			<!--  
-			<div class="top-ads">
-				<div style="margin: 0pt auto; width: 1004px;">
-					<jdoc:include type="modules" name="news-top" />
-				</div>
-			</div>
-			-->
 			<div class="nav-wrap">
 				 <div class="clearfix">
 				 	<jdoc:include type="modules" name="news-topmenu" />
@@ -105,7 +95,7 @@ $group		= JRequest::getString('group', '', 'GET');
  					<td colspan="3">
 	 					<div class="banner_special">
 	 						<?php include("html/systems.php");?>
-	    					<jdoc:include type="modules" name="news-sidebar" />
+	    					<jdoc:include type="modules" name="news-top" />
 	    				</div>
  					</td>
  				</tr>
@@ -209,6 +199,13 @@ $group		= JRequest::getString('group', '', 'GET');
 	    	fx: 'scrollLeft',
 	    	timeout: 10000
 	    });
+	    //location.reload();
+	    //window.open("http://tapchidoanhnhanviet.vn");
+	    //setInterval( window.open('http://tapchidoanhnhanviet.vn'), 10000 );
+	    setInterval(function() {  
+	    	//window.open('http://tapchidoanhnhanviet.vn');
+	    	location.reload();  
+	   	}, 180000);   
 	});
 	</script>
 	</body>

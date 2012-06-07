@@ -42,7 +42,6 @@ if($s_digit){
 /* ------------------------------------------------------------------------------------------------ */
 // BEGIN: TABLE STATISTICS
 if ( $s_stats ){
-
 	$html		.=	'<div><table cellpadding="0" cellspacing="0" ';
 	$html		.=	'style="margin: 3px; text-align: center; align: center; ';
 	$html		.=	'width: '.$widthtable.'%;" class="vinaora_counter">';
