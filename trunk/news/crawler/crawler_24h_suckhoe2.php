@@ -9,10 +9,11 @@ $domain 	= 'http://hn.24h.com.vn/';
 $aLink = array(
 	//24H.COM.VN
 	//Sức khỏe
-	array('sectionid' => 5, 'catid' =>149 , 'link'=> 'http://hn.24h.com.vn/an-toan-thuc-pham-c304.html', 'url' => $domain), //An toàn thực phẩm
-	array('sectionid' => 5, 'catid' =>150 , 'link'=> 'http://hn.24h.com.vn/da-lieu-c318.html', 'url' => $domain), //Da liễu
-	array('sectionid' => 5, 'catid' =>151 , 'link'=> 'http://hn.24h.com.vn/stress-c256.html', 'url' => $domain), //Stress
-	array('sectionid' => 5, 'catid' =>34 , 'link'=> 'http://hn.24h.com.vn/suc-khoe-sinh-san-c247.html', 'url' => $domain) //Sức khỏe và giới tính
+	array('sectionid' => 5, 'catid' =>152 , 'link'=> 'http://hn.24h.com.vn/nhan-khoa-c255.html', 'url' => $domain), //Nhãn khoa
+	array('sectionid' => 5, 'catid' =>153 , 'link'=> 'http://hn.24h.com.vn/khoa-nhi-c254.html', 'url' => $domain), //Khoa nhi
+	array('sectionid' => 5, 'catid' =>154 , 'link'=> 'http://hn.24h.com.vn/rang-ham-mat-c249.html', 'url' => $domain), //Răng - Hàm - Mặt
+	array('sectionid' => 5, 'catid' =>155 , 'link'=> 'http://hn.24h.com.vn/tai-mui-hong-c248.html', 'url' => $domain), //Tai - Mũi - Họng
+	array('sectionid' => 5, 'catid' =>156 , 'link'=> 'http://hn.24h.com.vn/lao-khoa-c246.html', 'url' => $domain) //Lão, Phụ, Nội khoa
 );
 
 foreach ($aLink as $array) {
