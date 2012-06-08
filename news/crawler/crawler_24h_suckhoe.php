@@ -11,8 +11,7 @@ $aLink = array(
 	//Sức khỏe
 	array('sectionid' => 5, 'catid' =>149 , 'link'=> 'http://hn.24h.com.vn/an-toan-thuc-pham-c304.html', 'url' => $domain), //An toàn thực phẩm
 	array('sectionid' => 5, 'catid' =>150 , 'link'=> 'http://hn.24h.com.vn/da-lieu-c318.html', 'url' => $domain), //Da liễu
-	array('sectionid' => 5, 'catid' =>151 , 'link'=> 'http://hn.24h.com.vn/stress-c256.html', 'url' => $domain), //Stress
-	array('sectionid' => 5, 'catid' =>34 , 'link'=> 'http://hn.24h.com.vn/suc-khoe-sinh-san-c247.html', 'url' => $domain) //Sức khỏe và giới tính
+	array('sectionid' => 5, 'catid' =>151 , 'link'=> 'http://hn.24h.com.vn/stress-c256.html', 'url' => $domain) //Stress
 );
 
 foreach ($aLink as $array) {
