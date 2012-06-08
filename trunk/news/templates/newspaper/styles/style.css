@@ -118,7 +118,7 @@ img{
     background: #fff; color: #2D5362; text-shadow: none; 
 }
 .menu-nav li ul{
-	position: absolute; top: 25px; height: 25px; overflow: hidden; left: 0; margin: 0; padding: 0; width: 980px; margin: 0 auto; text-align: center;
+	position: absolute; top: 25px; height: 25px; overflow: hidden; left: 0; margin: 0; padding: 0; width: 1280px; margin: 0 auto; text-align: center;
 }
 .menu-nav li.active ul li, .menu-nav li#current ul li{
 	list-style: none; display: inline-block; background: none;
@@ -202,7 +202,7 @@ img{
 	width: 200px; padding: 5px 0;
 }
 .box-category{
-	height: 240px; overflow: hidden; margin-bottom: 15px; padding: 0 5px;
+	/*height: 250px;*/ overflow: hidden; margin-bottom: 15px; padding: 0 5px;
 }
 .box-category .title-category{
 	background: url("../images/bgr_menu3.jpg") no-repeat top left; border-bottom: 1px solid #98c7d9; padding: 5px 0;
@@ -214,13 +214,13 @@ img{
 	padding: 5px;
 }
 .box-category .content-category .content-left-category{
-	width: 415px; text-align: left; overflow: hidden;
+	width: 380px; text-align: left; overflow: hidden;
 }
 .box-category .content-category .content-left-category img{
 	float: left; margin: 0px 5px 3px 0px;
 }
 .box-category .content-category .content-right-category{
-	width: 250px; background: #f8f8f8; padding: 5px; overflow: hidden;
+	width: 285px; padding: 5px; overflow: hidden;
 }
 .content-right-category ul{
 	margin: 0; padding: 0;
@@ -254,6 +254,9 @@ img{
 }
 .img130 {
     float: left; margin-right: 5px; padding: 2px; width: 130px; border: 1px solid #D8D8D8;
+}
+.img75 {
+    float: left; margin-right: 5px; padding: 2px; width: 75px; border: 1px solid #D8D8D8;
 }
 .img55 {
 	float: left; margin-right: 5px; padding: 1px; width: 55px; border: 1px solid #D8D8D8;

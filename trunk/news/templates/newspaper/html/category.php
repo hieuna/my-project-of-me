@@ -14,7 +14,7 @@ $db->setQuery($query);
 $listCate	= $db->loadObjectList();
 foreach ($listCate as $cate) {
 	$sql	= $db->getQuery(true);
-	$sql	= "SELECT id, title, alias, introtext, images, catid, sectionid, created FROM #__content WHERE state=1 AND sectionid=".$id." AND catid=".$cate->id." ORDER BY ordering ASC, created DESC, id DESC LIMIT 0,6";
+	$sql	= "SELECT id, title, alias, introtext, images, catid, sectionid, created FROM #__content WHERE state=1 AND sectionid=".$id." AND catid=".$cate->id." ORDER BY ordering ASC, created DESC, id DESC LIMIT 0,7";
 	$db->setQuery($sql);
 	$rows	= $db->loadObjectList();
 	
@@ -24,6 +24,14 @@ foreach ($listCate as $cate) {
 	else $addClassFirst = '';
 	
 	$link_first = JRoute::_(ContentHelperRoute::getArticleRoute($rows[0]->id."-".$rows[0]->alias, $rows[0]->catid, $rows[0]->sectionid));
+	
+	$ngay_nhap_two = mktime(0,0,0,unFormatdate($rows[1]->created,"m"),unFormatdate($rows[1]->created,"d"),unFormatdate($rows[1]->created,"Y"));
+	$days_two = ($nows - $ngay_nhap_two)/86400;
+	if ($days_two<1) $addClassTwo = ' newnew';
+	else $addClassTwo = '';
+	
+	$link_two = JRoute::_(ContentHelperRoute::getArticleRoute($rows[1]->id."-".$rows[1]->alias, $rows[1]->catid, $rows[1]->sectionid));
+	if (count($rows)> 0){
 	?>
 	<div class="box-category">
 		<div class="title-category">
@@ -33,14 +41,26 @@ foreach ($listCate as $cate) {
 			<div class="content-left-category fl">
 				<a href="<?php echo $link_first;?>">
 					<?php if ($rows[0]->images != ""):?>
-					<img class="img130" title="<?php echo $rows[0]->title;?>" alt="<?php echo $rows[0]->title;?>" src="<?php echo $baseurl;?>images/stories/<?php echo $rows[0]->images;?>" />
+					<img class="img75" title="<?php echo $rows[0]->title;?>" alt="<?php echo $rows[0]->title;?>" src="<?php echo $baseurl;?>images/stories/<?php echo $rows[0]->images;?>" />
 					<?php else :?>
-					<img class="img130" title="<?php echo $rows[0]->title;?>" alt="Chưa có ảnh" src="<?php echo $baseurl;?>images/no_image.jpg" />
+					<img class="img75" title="<?php echo $rows[0]->title;?>" alt="Chưa có ảnh" src="<?php echo $baseurl;?>images/no_image.jpg" />
 					<?php endif;?>
 				</a>
 				<a href="<?php echo $link_first;?>" class="fon6<?php echo $addClassFirst;?>"><?php echo $rows[0]->title;?></a> 
 				<div class="fon5 mt0">
 				<?php echo html_entity_decode($rows[0]->introtext);?>
+				</div>
+				<div class="clr" style="margin: 5px 0;"></div>
+				<a href="<?php echo $link_two;?>">
+					<?php if ($rows[1]->images != ""):?>
+					<img class="img75" title="<?php echo $rows[1]->title;?>" alt="<?php echo $rows[1]->title;?>" src="<?php echo $baseurl;?>images/stories/<?php echo $rows[1]->images;?>" />
+					<?php else :?>
+					<img class="img75" title="<?php echo $rows[1]->title;?>" alt="Chưa có ảnh" src="<?php echo $baseurl;?>images/no_image.jpg" />
+					<?php endif;?>
+				</a>
+				<a href="<?php echo $link_two;?>" class="fon6<?php echo $addClassTwo;?>"><?php echo $rows[1]->title;?></a> 
+				<div class="fon5 mt0">
+				<?php echo html_entity_decode($rows[1]->introtext);?>
 				</div>
 			</div>
 			<div class="content-right-category fr">
@@ -53,7 +73,7 @@ foreach ($listCate as $cate) {
 					$days = ($nows - $ngay_nhap)/86400;
 					if ($days<1) $addClass = ' class="newnew"';
 					else $addClass = '';
-					if ($i > 0){
+					if ($i > 1){
 					?>
 					<li>
 						<a href="<?php echo $link;?>"><img class="img35" title="<?php echo $row->title;?>" alt="<?php echo $row->title;?>" src="<?php echo $baseurl;?>images/stories/<?php echo $row->images;?>" /></a>
@@ -70,5 +90,12 @@ foreach ($listCate as $cate) {
 		</div>
 	</div>
 	<?php
+	}
 }
 ?>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.fon5 span').css('font-family', 'inherit');
+	$('.fon5 span').css('font-size', 'inherit');
+});
+</script>
