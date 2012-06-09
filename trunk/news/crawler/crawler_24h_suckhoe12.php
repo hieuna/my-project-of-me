@@ -8,18 +8,8 @@ $domain 	= 'http://hn.24h.com.vn/';
 
 $aLink = array(
 	//24H.COM.VN
-	//Thể thao
-	array('sectionid' => 7, 'catid' =>158 , 'link'=> 'http://hn.24h.com.vn/euro-2012-c377.html', 'url' => $domain), //Euro-2012
-	array('sectionid' => 7, 'catid' =>40 , 'link'=> 'http://hn.24h.com.vn/bong-da-ngoai-hang-anh-c149.html', 'url' => $domain), //Bóng đá Anh
-	array('sectionid' => 7, 'catid' =>41 , 'link'=> 'http://hn.24h.com.vn/bong-da-tay-ban-nha-c151.html', 'url' => $domain), //Bóng đá TBN
-	array('sectionid' => 7, 'catid' =>42 , 'link'=> 'http://hn.24h.com.vn/bong-da-y-c150.html', 'url' => $domain), //Bóng đá Ý
-	array('sectionid' => 7, 'catid' =>60 , 'link'=> 'http://hn.24h.com.vn/bong-da-duc-c152.html', 'url' => $domain), //Bóng đá Đức
-	array('sectionid' => 7, 'catid' =>39 , 'link'=> 'http://hn.24h.com.vn/cup-c1-champions-league-c153.html', 'url' => $domain), //Cup Châu Âu
-	array('sectionid' => 7, 'catid' =>38 , 'link'=> 'http://hn.24h.com.vn/cac-giai-bong-da-khac-c315.html', 'url' => $domain), //Bóng đá quốc tế
-	array('sectionid' => 7, 'catid' =>37 , 'link'=> 'http://hn.24h.com.vn/bong-da-viet-nam-c182.html', 'url' => $domain), //Bóng đá trong nước
-	array('sectionid' => 7, 'catid' =>43 , 'link'=> 'http://hn.24h.com.vn/tennis-c119.html', 'url' => $domain), //Tennis-Đua xe
-	array('sectionid' => 7, 'catid' =>43 , 'link'=> 'http://hn.24h.com.vn/dua-xe-f1-c118.html', 'url' => $domain), //Tennis-Đua xe
-	array('sectionid' => 7, 'catid' =>44 , 'link'=> 'http://hn.24h.com.vn/cac-mon-the-thao-khac-c124.html', 'url' => $domain) //Cac môn khác
+	//Sức khỏe
+	array('sectionid' => 5, 'catid' =>155 , 'link'=> 'http://hn.24h.com.vn/tai-mui-hong-c248.html', 'url' => $domain) //Tai - Mũi - Họng
 );
 
 foreach ($aLink as $array) {
@@ -45,7 +35,7 @@ foreach ($aLink as $array) {
 		foreach ($descriptions as $des) {
 			$articles[$index]['description'] = $des->innertext;
 		}
-		$articles[$index]['description'] 	= '(Tapchidoanhnhanviet.vn) - '.$articles[$index]['description'];
+		$articles[$index]['description'] 	= '<b>(Tapchidoanhnhanviet.vn)</b> - '.$articles[$index]['description'];
 		// Chi tiết bài viết
 		$contents = $html_detail->find(".text-conent");
 		foreach ($contents as $content) {
@@ -76,7 +66,7 @@ foreach ($aLink as $array) {
 					$slug = generateSlug($slug, strlen($slug));
 					
 					// Kiểm tra xem slug này có tồn tại trong articles không
-					$sql = "SELECT COUNT(*) AS number FROM jos_content WHERE alias = '$slug'";
+					$sql = "SELECT COUNT(*) AS number FROM jos_content WHERE alias = '$slug' AND catid=".$array['catid'];
 					$result = mysql_query($sql);
 					$number = mysql_fetch_row($result);
 					
