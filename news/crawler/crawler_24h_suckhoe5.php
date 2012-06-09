@@ -9,8 +9,7 @@ $domain 	= 'http://hn.24h.com.vn/';
 $aLink = array(
 	//24H.COM.VN
 	//Sức khỏe
-	array('sectionid' => 5, 'catid' =>32 , 'link'=> 'http://hn.24h.com.vn/bac-si-cua-ban-c66.html', 'url' => $domain), //Bác sỹ của bạn
-	array('sectionid' => 5, 'catid' =>33 , 'link'=> 'http://hn.24h.com.vn/bai-thuoc-dan-gian-c67.html', 'url' => $domain) //Bài thuốc hay
+	array('sectionid' => 5, 'catid' =>32 , 'link'=> 'http://hn.24h.com.vn/bac-si-cua-ban-c66.html', 'url' => $domain) //Bác sỹ của bạn
 );
 
 foreach ($aLink as $array) {
