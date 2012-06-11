@@ -93,9 +93,3 @@ foreach ($listCate as $cate) {
 	}
 }
 ?>
-<script type="text/javascript">
-$(document).ready(function(){
-	$('.fon5 span').css('font-family', 'inherit');
-	$('.fon5 span').css('font-size', 'inherit');
-});
-</script>

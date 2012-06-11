@@ -110,47 +110,25 @@ $group		= JRequest::getString('group', '', 'GET');
 										<?php include("html/warehouse.php");?>
 									<?php else:?>
 										<?php if ($view != 'section'):?>
-										<?php if ($view == 'category' || $view == 'article'):?>
-											<div class="fl wid490">
-												<?php
-												if ($view == 'frontpage'){
-													?>
-													<div class="view_content">
-														<jdoc:include type="modules" name="news-frame1" />
-													</div>
-													<?php
-												}else{
-													?>
-													<jdoc:include type="modules" name="right" />
-													<jdoc:include type="component" />
-													<div class="article_others">
-														<jdoc:include type="modules" name="news-bottomleft" />
-													</div>
-													<?php
-												} 
-												?>
+										<div class="fl wid490">
+										<?php
+										if ($view == 'frontpage'){
+											?>
+											<div class="view_content">
+												<jdoc:include type="modules" name="news-frame1" />
 											</div>
-											<?php else:?>
-											<div class="fl wid700">
-												<?php
-												if ($view == 'frontpage'){
-													?>
-													<div class="view_content">
-														<jdoc:include type="modules" name="news-frame1" />
-													</div>
-													<?php
-												}else{
-													?>
-													<jdoc:include type="modules" name="right" />
-													<jdoc:include type="component" />
-													<div class="article_others">
-														<jdoc:include type="modules" name="news-bottomleft" />
-													</div>
-													<?php
-												} 
-												?>
+											<?php
+										}else{
+											?>
+											<jdoc:include type="modules" name="right" />
+											<jdoc:include type="component" />
+											<div class="article_others">
+												<jdoc:include type="modules" name="news-bottomleft" />
 											</div>
-											<?php endif;?>
+											<?php
+										} 
+										?>
+										</div>
 										<?php else:?>
 										<div class="fl wid700">
 											<?php include("html/category.php");?>
@@ -176,7 +154,7 @@ $group		= JRequest::getString('group', '', 'GET');
 												</div>
 											</div>
 										</div>
-										<?php if ($view == 'category' || $view == 'article'):?>
+										<?php if ($view != 'section'):?>
 										<div class="fr wid210 text_center">
 											<div class="wid200">
 												<jdoc:include type="modules" name="news-right" />
@@ -213,10 +191,6 @@ $group		= JRequest::getString('group', '', 'GET');
 	</table>
 	<script type="text/javascript">
 	$(function() {
-		//Set font
-		$('.fon5 span').css('font-family', 'inherit');
-		$('.fon5 span').css('font-size', 'inherit');
-		//Slide
 	    $('#tab_systems').cycle({
 	    	fx: 'fade',
 	    	timeout: 15000
@@ -231,7 +205,7 @@ $group		= JRequest::getString('group', '', 'GET');
 	    setInterval(function() {  
 	    	//window.open('http://tapchidoanhnhanviet.vn');
 	    	location.reload();  
-	   	}, 180000);
+	   	}, 180000);   
 	});
 	</script>
 	</body>
