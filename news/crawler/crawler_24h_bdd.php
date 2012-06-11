@@ -51,7 +51,7 @@ foreach ($aLink as $array) {
 		$array_in = array();
 		$array_un = array();
 		foreach ($articles as $index => $article) {
-			$title = isset($article['title']) ? replaceString($article['title']) : null;
+			$title = isset($article['title']) ? replaceString(_cleanContent($article['title'])) : null;
 			$description = isset($article['description']) ? replaceString($article['description']) : '';
 			$content = isset($article['content']) ? str_replace("'", "", $article['content']) : '';
 			$url = isset($article['url']) ? $article['url'] : '';
