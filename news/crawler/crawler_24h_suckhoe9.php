@@ -66,7 +66,7 @@ foreach ($aLink as $array) {
 					$slug = generateSlug($slug, strlen($slug));
 					
 					// Kiểm tra xem slug này có tồn tại trong articles không
-					$sql = "SELECT COUNT(*) AS number FROM jos_content WHERE alias = '$slug' AND catid=".$array['catid'];
+					$sql = "SELECT COUNT(*) AS number FROM jos_content WHERE alias = '$slug' AND sectionid=".$array['sectionid'];
 					$result = mysql_query($sql);
 					$number = mysql_fetch_row($result);
 					
