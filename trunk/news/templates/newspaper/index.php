@@ -214,8 +214,8 @@ $group		= JRequest::getString('group', '', 'GET');
 	<script type="text/javascript">
 	$(function() {
 		//Set font
-		$('.fon5 span').css('font-family', 'inherit');
-		$('.fon5 span').css('font-size', 'inherit');
+		$('.fon5 span, .wid300 span').css('font-family', 'inherit');
+		$('.fon5 span, .wid300 span').css('font-size', 'inherit');
 		//Slide
 	    $('#tab_systems').cycle({
 	    	fx: 'fade',
