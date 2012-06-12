@@ -10,16 +10,18 @@ include_once '../class/config.php';
 include_once '../class/simple_html_dom.php';
 include_once '../class/function.php';
 
-$string = 'ABC (flashWrite("/js/player24H2.swf?cID=377&file=http://video-hn.24hstatic.com/upload/2-2012/videoclip/2012-06-12/dau_mp4.mp4,/upload/2-2012/videoclip/2012-06-12/p54_mp4_01.mp4,/upload/2-2012/videoclip/2012-06-12/p65_mp4_01.mp4,/upload/2-2012/videoclip/2012-06-12/p75_mp4_01.mp4,/upload/2-2012/videoclip/2012-06-12/p80_mp4_01.mp4,/upload/2-2012/videoclip/2012-06-12/p89_mp4_01.mp4,/upload/2-2012/videoclip/2012-06-12/cuoi_mp4.mp4&",500,447, "/", "/", "/"); //]]>)';
-echo $string = preg_replace('/\(<div align="center"></div>)]+\)/',"",$string); // 'ABC
-echo $string = str_replace('; //]]>)', "", $string);
-die;
 //Define page
 $domain 	= 'http://www.tinmoi.vn/';
 
 $aLink = array(
 	//TINMOI.VN
-	array('sectionid' => 9, 'catid' =>20 , 'link'=> 'http://www.tinmoi.vn/C/The-gioi', 'url' => $domain) //Sức khỏe giới tính
+	//Thế giới
+	//array('sectionid' => 9, 'catid' =>20 , 'link'=> 'http://www.tinmoi.vn/C/The-gioi', 'url' => $domain), //Thế giới đó đây
+	//Giáo dục
+	//array('sectionid' => 2, 'catid' =>170 , 'link'=> 'http://www.tinmoi.vn/C/chuyen-hoc-duong', 'url' => $domain), //Chuyện học đường
+	//Thông tin kinh tế
+	array('sectionid' => 10, 'catid' =>15 , 'link'=> 'http://www.tinmoi.vn/C/Tai-chinh-Ngan-hang', 'url' => $domain), //Tài chính
+	array('sectionid' => 10, 'catid' =>171 , 'link'=> 'http://www.tinmoi.vn/C/Goc-chuyen-gia', 'url' => $domain) //Chuyên gia
 );
 
 foreach ($aLink as $array) {
@@ -81,16 +83,24 @@ foreach ($aLink as $array) {
 						
 						// Nếu không tồn tại thêm mới vào
 						if ($number[0] == 0) {
-							//Lấy đuôi ảnh và copy ảnh ra thư mục
-							$info_image = pathinfo($article['image']);
-							$extension = $info_image['extension'];
-							$image_convert = $slug."-".time().".".$extension;
-							copy($article['image'],"../images/stories/".$image_convert);
-							// Cập nhật bảng articles
-							$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, publish_up, state, alias, sectionid, catid) 
-								VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
-							//die;
-							$result_article = mysql_query($sql);
+							if ($article['image'] != ""){
+								//Lấy đuôi ảnh và copy ảnh ra thư mục
+								$info_image = pathinfo($article['image']);
+								$extension = $info_image['extension'];
+								$image_convert = $slug."-".time().".".$extension;
+								copy($article['image'],"../images/stories/".$image_convert);
+								// Cập nhật bảng articles
+								$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, publish_up, state, alias, sectionid, catid) 
+									VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
+								//die;
+								$result_article = mysql_query($sql);
+							}else{
+								// Cập nhật bảng articles
+								$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, created, publish_up, state, alias, sectionid, catid) 
+									VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
+								//die;
+								$result_article = mysql_query($sql);
+							}
 				
 							$array_in[$index]['title'] = $title;
 							
