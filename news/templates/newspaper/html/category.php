@@ -48,7 +48,7 @@ foreach ($listCate as $cate) {
 				</a>
 				<a href="<?php echo $link_first;?>" class="fon6<?php echo $addClassFirst;?>"><?php echo $rows[0]->title;?></a> 
 				<div class="fon5 mt0">
-				<?php echo html_entity_decode($rows[0]->introtext);?>
+				<?php echo catchuoi($rows[0]->introtext, 250);?>
 				</div>
 				<div class="clr" style="margin: 5px 0;"></div>
 				<a href="<?php echo $link_two;?>">
@@ -60,7 +60,7 @@ foreach ($listCate as $cate) {
 				</a>
 				<a href="<?php echo $link_two;?>" class="fon6<?php echo $addClassTwo;?>"><?php echo $rows[1]->title;?></a> 
 				<div class="fon5 mt0">
-				<?php echo html_entity_decode($rows[1]->introtext);?>
+				<?php echo catchuoi($rows[1]->introtext, 250);?>
 				</div>
 			</div>
 			<div class="content-right-category fr">

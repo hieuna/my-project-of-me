@@ -60,7 +60,7 @@ foreach ($aLink as $array) {
 			$url = isset($article['url']) ? $article['url'] : '';
 			
 			$introtext	= str_replace("'","\'", _cleanContent($description));
-			$fulltext 	= str_replace("'","\'", _cleanContent($content));
+			$fulltext 	= str_replace("'","\'", _cleanContent(preg_replace('#<script(.*?)>(.*?)</script>#is', '', $content)));
 			
 			if (strlen($fulltext)>=1000){
 				if ($title != null) { 

@@ -10,6 +10,10 @@ include_once '../class/config.php';
 include_once '../class/simple_html_dom.php';
 include_once '../class/function.php';
 
+$string = 'ABC (flashWrite("/js/player24H2.swf?cID=377&file=http://video-hn.24hstatic.com/upload/2-2012/videoclip/2012-06-12/dau_mp4.mp4,/upload/2-2012/videoclip/2012-06-12/p54_mp4_01.mp4,/upload/2-2012/videoclip/2012-06-12/p65_mp4_01.mp4,/upload/2-2012/videoclip/2012-06-12/p75_mp4_01.mp4,/upload/2-2012/videoclip/2012-06-12/p80_mp4_01.mp4,/upload/2-2012/videoclip/2012-06-12/p89_mp4_01.mp4,/upload/2-2012/videoclip/2012-06-12/cuoi_mp4.mp4&",500,447, "/", "/", "/"); //]]>)';
+echo $string = preg_replace('/\(<div align="center"></div>)]+\)/',"",$string); // 'ABC
+echo $string = str_replace('; //]]>)', "", $string);
+die;
 //Define page
 $domain 	= 'http://www.tinmoi.vn/';
 
