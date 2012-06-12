@@ -1,6 +1,6 @@
 ﻿<?php
 //START CLASS_SOHAPAY
-define('PG_URL_ROOT', 'http://sohapay.com/');
+define('PG_URL_ROOT', 'https://sohapay.com/');
 
 class PG_checkout 
 {
