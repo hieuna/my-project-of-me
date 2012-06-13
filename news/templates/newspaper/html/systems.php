@@ -63,7 +63,7 @@ if (count($rows) > 0){
 				</a>
 				<div class="show_title_system_main"><?php echo $rows[0]->title;?></div>
 			</div>
-			<div class="cls wid335 fr">
+			<div class="cls wid335 fr" id="tab_slide">
 				<ul>
 				<?php
 				$i = 0;
@@ -79,11 +79,9 @@ if (count($rows) > 0){
 						<a href="<?php echo $link;?>"><?php echo $row->title;?></a>
 					</div>
 				</li>
-				<div class="clr">
-					<jdoc:include type="modules" name="top" />
-				</div>
 				<?php
 				}
+				if ($i%6 == 0 && $i>0) echo '</ul><ul>';
 				$i++; 
 				endforeach;
 				?>

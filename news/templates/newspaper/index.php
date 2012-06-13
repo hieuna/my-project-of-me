@@ -225,6 +225,10 @@ $group		= JRequest::getString('group', '', 'GET');
 	    	fx: 'scrollLeft',
 	    	timeout: 10000
 	    });
+	    $('#tab_slide').cycle({
+	    	fx: 'fade',
+	    	timeout: 10000
+	    });
 	    //location.reload();
 	    //window.open("http://tapchidoanhnhanviet.vn");
 	    //setInterval( window.open('http://tapchidoanhnhanviet.vn'), 10000 );

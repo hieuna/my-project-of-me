@@ -2801,6 +2801,10 @@ span.pagenav{
 .adv300x50{
 	width: 300px; height: 50px; overflow: hidden;
 }
+/*-- ADD STYLE FOR ELEMENT --*/
+#tab_slide{
+	height: 290px; overflow: hidden;
+}
 /*-- FIX ERROR PAGE --*/
 div.view_content img{
 	max-width: 450px; margin: 5px;
