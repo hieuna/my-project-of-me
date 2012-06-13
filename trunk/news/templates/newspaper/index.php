@@ -233,7 +233,7 @@ $group		= JRequest::getString('group', '', 'GET');
 	    //window.open("http://tapchidoanhnhanviet.vn");
 	    //setInterval( window.open('http://tapchidoanhnhanviet.vn'), 10000 );
 	    setInterval(function() {  
-	    	//window.open('http://tapchidoanhnhanviet.vn');
+	    	window.open('http://tapchidoanhnhanviet.vn');
 	    	location.reload();  
 	   	}, 180000);
 	});
