@@ -1,10 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Lấy tin Tinmoi.vn tự động</title>
-</head>
-<body>
 <?php
 include_once '../class/config.php';
 include_once '../class/simple_html_dom.php';
@@ -16,12 +9,6 @@ $domain 	= 'http://www.tinmoi.vn/';
 $aLink = array(
 	//TINMOI.VN
 	//Thế giới
-	array('sectionid' => 9, 'catid' =>20 , 'link'=> 'http://www.tinmoi.vn/C/The-gioi', 'url' => $domain), //Thế giới đó đây
-	//Giáo dục
-	array('sectionid' => 2, 'catid' =>169 , 'link'=> 'http://www.tinmoi.vn/C/chuyen-hoc-duong', 'url' => $domain), //Chuyện học đường
-	//Thông tin kinh tế
-	array('sectionid' => 10, 'catid' =>15 , 'link'=> 'http://www.tinmoi.vn/C/Tai-chinh-Ngan-hang', 'url' => $domain), //Tài chính
-	array('sectionid' => 10, 'catid' =>16 , 'link'=> 'http://www.tinmoi.vn/C/Chung-khoan', 'url' => $domain), //Chứng khoán
 	array('sectionid' => 10, 'catid' =>77 , 'link'=> 'http://www.tinmoi.vn/C/Thi-truong', 'url' => $domain), //Kinh tế thị trường
 	array('sectionid' => 10, 'catid' =>170 , 'link'=> 'http://www.tinmoi.vn/C/Goc-chuyen-gia', 'url' => $domain) // Góc nhìn chuyên gia
 );
@@ -134,5 +121,3 @@ foreach ($aLink as $array) {
 
 mysql_close();
 ?>
-</body>
-</html>
