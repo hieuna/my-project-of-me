@@ -56,8 +56,8 @@ foreach ($aLink as $array) {
 				$content = isset($article['content']) ? str_replace("'", "", $article['content']) : '';
 				$url = isset($article['url']) ? $article['url'] : '';
 				
-				$introtext	= str_replace("'","\'", _cleanContent($description));
-				$fulltext 	= str_replace("'","\'", _cleanContent(preg_replace('#<noscript(.*?)>(.*?)</noscript>#is', '', $content)));
+				$introtext 	= str_replace("'","\'", _cleanContent(preg_replace('#<noscript(.*?)>(.*?)</noscript>#is', '', $description)));
+				$fulltext	= str_replace("'","\'", _cleanContent($content));
 				
 				if (strlen($fulltext)>=1000){
 					if ($title != null) { 
