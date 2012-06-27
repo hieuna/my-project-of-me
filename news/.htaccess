@@ -71,3 +71,7 @@ RewriteRule (.*) index.php
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
 #
 ########## End - Joomla! core SEF Section
+
+########## Fix error bankwidth limit
+
+ErrorDocument 509 /error/509.html
