@@ -49,7 +49,7 @@ class modWhosonlineHelper {
 		}
 
 		$result['user']  = $user_array;
-		$result['guest'] = $guest_array*186+236+rand(3,30);
+		$result['guest'] = $guest_array;
 
 		return $result;
 	}
