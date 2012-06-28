@@ -20,7 +20,6 @@ define( 'DS', DIRECTORY_SEPARATOR );
 
 require_once ( JPATH_BASE .DS.'includes'.DS.'defines.php' );
 require_once ( JPATH_BASE .DS.'includes'.DS.'framework.php' );
-require_once ('error.php');
 
 JDEBUG ? $_PROFILER->mark( 'afterLoad' ) : null;
 
