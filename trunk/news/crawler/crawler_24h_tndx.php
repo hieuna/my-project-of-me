@@ -9,7 +9,7 @@ $domain 	= 'http://hn.24h.com.vn/';
 $aLink = array(
 	//24H.COM.VN
 	//Thể thao
-	//array('sectionid' => 7, 'catid' =>43 , 'link'=> 'http://hn.24h.com.vn/tennis-c119.html', 'url' => $domain), //Tennis-Đua xe
+	array('sectionid' => 7, 'catid' =>43 , 'link'=> 'http://hn.24h.com.vn/tennis-c119.html', 'url' => $domain), //Tennis-Đua xe
 	array('sectionid' => 7, 'catid' =>43 , 'link'=> 'http://hn.24h.com.vn/dua-xe-f1-c118.html', 'url' => $domain) //Tennis-Đua xe
 );
 
@@ -49,6 +49,7 @@ foreach ($aLink as $array) {
 		$articles[$index]['url'] = $array['url'];
 		//var_dump($articles); die;
 	}
+	//var_dump($articles); die;
 	$check = false;
 	$array_in = array();
 	$array_un = array();
@@ -70,7 +71,7 @@ foreach ($aLink as $array) {
 		$result = mysql_query($sql);
 		$number = mysql_fetch_row($result);
 		
-		if ($number[0] > 0 && $title == NULL) break;
+		if ($number[0] > 0 || $title == NULL) break;
 		else{
 			if (strlen($fulltext)>=1000){
 				//Lấy đuôi ảnh và copy ảnh ra thư mục
