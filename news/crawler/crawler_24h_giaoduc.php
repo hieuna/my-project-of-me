@@ -71,7 +71,7 @@ foreach ($aLink as $array) {
 		$result = mysql_query($sql);
 		$number = mysql_fetch_row($result);
 		
-		if ($number[0] > 0 && $title == NULL) break;
+		if ($number[0] > 0 || $title == NULL) break;
 		else{
 			if (strlen($fulltext)>=1000){
 				//Lấy đuôi ảnh và copy ảnh ra thư mục

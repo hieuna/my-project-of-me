@@ -26,6 +26,7 @@ foreach ($aLink as $array) {
 		$articles[$index]['description'] 	= '(Tapchidoanhnhanviet.vn) - '.$items->children(2)->innertext;
 		// Xem chi tiết bài viết
 		$detail = $items->children(0)->href;
+		if ($detail == NULL || $articles[$index]['title'] == NULL) break;
 		$html_detail = file_get_html($array['url'] . $detail);
 		$contents = $html_detail->find(".html");
 		foreach ($contents as $content) {
@@ -50,23 +51,23 @@ foreach ($aLink as $array) {
 		$introtext	= str_replace("'","\'", _cleanContent($description));
 		$fulltext 	= str_replace("'","\'", _cleanContent($content));
 		
-		if ($title != null) { 
-			// Tao slug từ tiêu đề
-			$slug = RemoveSign($title);
-			$slug = generateSlug($slug, strlen($slug));
-			
-			// Kiểm tra xem slug này có tồn tại trong articles không
-			$sql = "SELECT COUNT(*) AS number FROM jos_content WHERE alias = '$slug'";
-			$result = mysql_query($sql);
-			$number = mysql_fetch_row($result);
-			
-			// Nếu không tồn tại thêm mới vào
-			if ($number[0] == 0) {
+		// Tao slug từ tiêu đề
+		$slug = RemoveSign($title);
+		$slug = generateSlug($slug, strlen($slug));
+		
+		// Kiểm tra xem slug này có tồn tại trong articles không
+		$sql = "SELECT COUNT(*) AS number FROM jos_content WHERE alias = '$slug'";
+		$result = mysql_query($sql);
+		$number = mysql_fetch_row($result);
+		
+		if ($number[0] > 0 && $title == NULL) break;
+		else{
+			if (strlen($fulltext)>=1000){
 				//Lấy đuôi ảnh và copy ảnh ra thư mục
 				$info_image = pathinfo($article['image']);
 				$extension = $info_image['extension'];
 				$image_convert = $slug."-".time().".".$extension;
-				copy($url.$article['image'],"../images/stories/".$image_convert);
+				copy($article['image'],"../images/stories/".$image_convert);
 				// Cập nhật bảng articles
 				$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, publish_up, state, alias, sectionid, catid) 
 					VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d') . "', 1, '$slug', ".$array['sectionid'].", ".$array['catid'].")";
@@ -79,9 +80,7 @@ foreach ($aLink as $array) {
 					$check = true;
 					echo 'Cập nhật không thành công';
 					return;
-				} 
-			} else {
-				$array_un[$index]['title'] = clean_value(replaceString($article['title']));
+				} 	
 			}
 		} 
 	}
