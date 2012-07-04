@@ -848,6 +848,9 @@ div.ms-quicklaunchouter {
 .copyright p{
 	padding: 0; margin: 0; margin-bottom: 5px;
 }
+.footer p a{
+	color: #232323; text-decoration: none;
+}
 .bottom {
     color: #FFFFFF;
     font-family: Arial;
