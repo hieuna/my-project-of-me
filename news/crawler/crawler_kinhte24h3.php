@@ -1,10 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Lấy tin KinhTe24h.com tự động</title>
-</head>
-<body>
 <?php
 include_once '../class/config.php';
 include_once '../class/simple_html_dom.php';
@@ -15,14 +8,8 @@ $domain	= 'http://www.kinhte24h.com';
 $aLink = array(
 	//KinhTe24h.com
 	//Thông tin kinh tế
-	array('sectionid' => 10, 'catid' =>77 , 'link'=> 'http://www.kinhte24h.com/gh/52/', 'url' => $domain), //Thị trường - Hàng hóa | Kinh tế trị trường
-	array('sectionid' => 10, 'catid' =>15 , 'link'=> 'http://www.kinhte24h.com/gl/58/', 'url' => $domain), //Ngân hàng - Tài chính
-	array('sectionid' => 10, 'catid' =>16 , 'link'=> 'http://www.kinhte24h.com/gl/35/', 'url' => $domain), //Chứng khoán
-	array('sectionid' => 10, 'catid' =>70 , 'link'=> 'http://www.kinhte24h.com/gl/16/', 'url' => $domain), //Bất động sản
 	array('sectionid' => 10, 'catid' =>168 , 'link'=> 'http://www.kinhte24h.com/gl/34/', 'url' => $domain), //Tiền - Vàng
 	array('sectionid' => 10, 'catid' =>179 , 'link'=> 'http://www.kinhte24h.com/gl/12/', 'url' => $domain), //CNTT - Viễn thông
-	array('sectionid' => 10, 'catid' =>177 , 'link'=> 'http://www.kinhte24h.com/gl/61/', 'url' => $domain), //Vật tư - Vật liệu
-	array('sectionid' => 10, 'catid' =>178 , 'link'=> 'http://www.kinhte24h.com/gl/60/', 'url' => $domain), //Xây dựng - Đầu tư
 );
 
 foreach ($aLink as $array) {
@@ -108,5 +95,3 @@ foreach ($aLink as $array) {
 
 mysql_close();
 ?>
-</body>
-</html>
