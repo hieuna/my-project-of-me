@@ -72,50 +72,56 @@ $baseurl = JURI::base();
 				<td valign="top">
 				<div class="newsTopmain">
 					<h2 class="topnews">Tin nổi bật</h2>
-					<?php
-					$i = 0;
-					foreach ($list as $item) :
-					if ($i>4 && $i<8){
-					?>
-					<div id='item-0' class='newsTopmain-panel'>
-						<a href="<?php echo $item->link; ?>">
-							<?php if ($item->images != ""):?>
-							<img src="<?php echo $baseurl;?>images/stories/<?php echo $item->images;?>" alt="<?php echo $item->title;?>" hspace="10" vspace="10" width="447px" />
-							<?php else :?>
-							<img src="<?php echo $baseurl;?>images/no_image.jpg" alt="<?php echo $item->title;?>" />
-							<?php endif;?>
-						</a>
-						<h2><a href="<?php echo $item->link; ?>"><?php echo $item->text; ?></a></h2>
+					<div class="orther_specials">
+						<ul>
+						<?php
+						$i = 0;
+						foreach ($list as $item) :
+						if ($i>4 && $i<11){
+						?>
+						<li>
+							<a href="<?php echo $item->link; ?>">
+								<?php if ($item->images != ""):?>
+								<img src="<?php echo $baseurl;?>images/stories/<?php echo $item->images;?>" alt="<?php echo $item->title;?>" hspace="10" vspace="10" width="447px" />
+								<?php else :?>
+								<img src="<?php echo $baseurl;?>images/no_image.jpg" alt="<?php echo $item->title;?>" />
+								<?php endif;?>
+							</a>
+							<a href="<?php echo $item->link; ?>"><?php echo $item->text; ?></a>
+						</li>
+						<div class="clr"></div>
+						<?php
+						}
+						$i++;
+						?>	
+						<?php endforeach; ?>
+						</ul>
 					</div>
-					<?php
-					}
-					$i++;
-					?>	
-					<?php endforeach; ?>
+					<div class="orther_specials">
+						<ul>
+						<?php
+						$i = 0;
+						foreach ($list as $item) :
+						if ($i>10 && $i<17){
+						?>
+						<li>
+							<a href="<?php echo $item->link; ?>">
+								<?php if ($item->images != ""):?>
+								<img src="<?php echo $baseurl;?>images/stories/<?php echo $item->images;?>" alt="<?php echo $item->title;?>" hspace="10" vspace="10" width="447px" />
+								<?php else :?>
+								<img src="<?php echo $baseurl;?>images/no_image.jpg" alt="<?php echo $item->title;?>" />
+								<?php endif;?>
+							</a>
+							<a href="<?php echo $item->link; ?>"><?php echo $item->text; ?></a>
+						</li>
+						<?php
+						}
+						$i++;
+						?>	
+						<?php endforeach; ?>
+						</ul>
+					</div>
 				</div>
-				</td>
-			</tr>
-		</table>
-		</td>
-	</tr>
-	<tr>
-		<td valign="top">
-		<table border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tr>
-				<td valign="top">
-				<?php
-				$i = 0;
-				foreach ($list as $item) :
-				if ($i>=8){
-				?>
-				<div class="MainBottomNormal2">
-					<h2><a href="<?php echo $item->link; ?>"><?php echo $item->text; ?></a></h2>
-				</div>
-				<?php
-				}
-				$i++;
-				?>	
-				<?php endforeach; ?>
 				</td>
 			</tr>
 		</table>

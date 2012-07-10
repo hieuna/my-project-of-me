@@ -2470,13 +2470,6 @@ table.homerightmail td.mailcontent {
     font-weight: bold;
     text-decoration: none;
 }
-.contenttop_righ .newsTopmain img {
-    border: 1px solid #C0C0C0;
-    height: 106px;
-    margin: 0;
-    padding: 3px;
-    width: 140px;
-}
 #bngTC {
     border: 1px solid #848284;
     margin: 0;
@@ -2485,21 +2478,6 @@ table.homerightmail td.mailcontent {
     text-align: left;
     width: 460px;
 }
-.contenttop_righ .newsTopmain-panel {
-    float: left;
-    padding: 5px;
-    text-align: justify;
-    width: 158px;
-}
-.contenttop_righ .newsTopmain-panel h2{
-	padding: 0; margin: 0; text-align: left; line-height: 10px;
-}
-.contenttop_righ .newsTopmain-panel h2 a{
-	line-height: 10px;
-}
-.newsTopmain h2 {
-    margin: 5px 0;
-}
 .contenttop_righ h2.topnews {
     border-bottom: 3px solid #D9DADB;
     color: #FF0000;
@@ -2507,6 +2485,7 @@ table.homerightmail td.mailcontent {
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
+    margin: 0;
 }
 .contenttop_righ .newsTopmain-panel a:link {
     color: #055099;
@@ -2570,20 +2549,6 @@ table.homerightmail td.mailcontent {
 .contenttop_righ .linkAdvertisement_Left {
     float: left;
     padding: 5px 10px;
-}
-.newsTopmain img {
-    border: 0 none;
-    height: auto;
-    padding: 0;
-    width: auto;
-}
-.newsTopmain2 img.news {
-    height: 1px;
-    width: 100%;
-}
-.newsTopmain2 .MainBottomNormal2 img {
-    float: left;
-    padding: 6px 5px 0;
 }
 .MainBottomNormal2 h2 a{
     color: #004175; text-decoration: none; font-size: 12px; font-weight: normal; background: url("../images/icon_3_3.gif") no-repeat left center; padding-left: 10px;

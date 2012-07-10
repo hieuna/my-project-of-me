@@ -105,3 +105,23 @@ div#slide-holder div#slide-controls p#slide-nav a {
 	background-image : url(../images/silde-nav.png); color: #fff;
 }
 /*-- END SLIDESHOW --*/
+
+/*-- ORTHER SPECIALS --*/
+.orther_specials{
+	width: 49%; height: 305px; float: left; overflow: hidden; margin-right: 1%;
+}
+.orther_specials ul{
+	margin: 0; padding: 0;
+}
+.orther_specials ul li{
+	list-style: none; border-bottom: 1px solid #eee; text-align: left; overflow: hidden; padding: 3px 0;
+}
+.orther_specials ul li img{
+	width: 40px; height: 40px; float: left; margin: 0 3px 0 0; border: 1px solid #D8D8D8; padding: 1px;
+}
+.orther_specials ul li a{
+	font-size: 12px; text-decoration: none; color: #004175; line-height: 16px;
+}
+.orther_specials ul li a:hover{
+	color: #4F82AC;
+}
