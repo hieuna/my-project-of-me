@@ -19,9 +19,15 @@ foreach ($aLink as $array) {
 	$articles = array();
 	foreach ($html->find('.list_news_content') as $index => $items) {
 		//Lấy ảnh đại diện
-		$articles[$index]['image'] 			= $items->children(1)->first_child()->src;
+		if ($url_image = $items->children(1)) {
+	       $articles[$index]['image'] 			= $url_image->children(0)->src;  
+	    }
 		// Tiêu đề bài viết
-		$articles[$index]['title'] 			= $items->children(0)->first_child()->innertext;
+		$url_title = $items->children(0);
+		if ($url_title = $items->children(0)) {
+	        $articles[$index]['title'] 			= $url_title->children(0)->innertext;  
+	    }
+		//$articles[$index]['title'] 			= $items->children(0)->first_child()->innertext;
 		// Mô tả bài viết
 		$articles[$index]['description'] 	= '(Tapchidoanhnhanviet.vn) - '.$items->children(2)->innertext;
 		// Xem chi tiết bài viết
