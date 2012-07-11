@@ -16,13 +16,13 @@ $aLink = array(
 	//KinhTe24h.com
 	//Thông tin kinh tế
 	array('sectionid' => 10, 'catid' =>77 , 'link'=> 'http://www.kinhte24h.com/gh/52/', 'url' => $domain), //Thị trường - Hàng hóa | Kinh tế trị trường
-	//array('sectionid' => 10, 'catid' =>15 , 'link'=> 'http://www.kinhte24h.com/gl/58/', 'url' => $domain), //Ngân hàng - Tài chính
-	//array('sectionid' => 10, 'catid' =>16 , 'link'=> 'http://www.kinhte24h.com/gl/35/', 'url' => $domain), //Chứng khoán
-	//array('sectionid' => 10, 'catid' =>70 , 'link'=> 'http://www.kinhte24h.com/gl/16/', 'url' => $domain), //Bất động sản
-	//array('sectionid' => 10, 'catid' =>168 , 'link'=> 'http://www.kinhte24h.com/gl/34/', 'url' => $domain), //Tiền - Vàng
-	//array('sectionid' => 10, 'catid' =>179 , 'link'=> 'http://www.kinhte24h.com/gl/12/', 'url' => $domain), //CNTT - Viễn thông
-	//array('sectionid' => 10, 'catid' =>177 , 'link'=> 'http://www.kinhte24h.com/gl/61/', 'url' => $domain), //Vật tư - Vật liệu
-	//array('sectionid' => 10, 'catid' =>178 , 'link'=> 'http://www.kinhte24h.com/gl/60/', 'url' => $domain), //Xây dựng - Đầu tư
+	array('sectionid' => 10, 'catid' =>15 , 'link'=> 'http://www.kinhte24h.com/gl/58/', 'url' => $domain), //Ngân hàng - Tài chính
+	array('sectionid' => 10, 'catid' =>16 , 'link'=> 'http://www.kinhte24h.com/gl/35/', 'url' => $domain), //Chứng khoán
+	array('sectionid' => 10, 'catid' =>70 , 'link'=> 'http://www.kinhte24h.com/gl/16/', 'url' => $domain), //Bất động sản
+	array('sectionid' => 10, 'catid' =>168 , 'link'=> 'http://www.kinhte24h.com/gl/34/', 'url' => $domain), //Tiền - Vàng
+	array('sectionid' => 10, 'catid' =>179 , 'link'=> 'http://www.kinhte24h.com/gl/12/', 'url' => $domain), //CNTT - Viễn thông
+	array('sectionid' => 10, 'catid' =>177 , 'link'=> 'http://www.kinhte24h.com/gl/61/', 'url' => $domain), //Vật tư - Vật liệu
+	array('sectionid' => 10, 'catid' =>178 , 'link'=> 'http://www.kinhte24h.com/gl/60/', 'url' => $domain), //Xây dựng - Đầu tư
 );
 
 foreach ($aLink as $array) {
@@ -32,9 +32,15 @@ foreach ($aLink as $array) {
 	$articles = array();
 	foreach ($html->find('.list_news_content') as $index => $items) {
 		//Lấy ảnh đại diện
-		$articles[$index]['image'] 			= $items->children(1)->first_child()->src;
+		if ($url_image = $items->children(1)) {
+	       $articles[$index]['image'] 			= $url_image->children(0)->src;  
+	    }
 		// Tiêu đề bài viết
-		$articles[$index]['title'] 			= $items->children(0)->first_child()->innertext;
+		$url_title = $items->children(0);
+		if ($url_title = $items->children(0)) {
+	        $articles[$index]['title'] 			= $url_title->children(0)->innertext;  
+	    }
+		//$articles[$index]['title'] 			= $items->children(0)->first_child()->innertext;
 		// Mô tả bài viết
 		$articles[$index]['description'] 	= '(Tapchidoanhnhanviet.vn) - '.$items->children(2)->innertext;
 		// Xem chi tiết bài viết
@@ -70,6 +76,7 @@ foreach ($aLink as $array) {
 			$sql = "SELECT COUNT(*) AS number FROM jos_content WHERE alias = '$slug'";
 			$result = mysql_query($sql);
 			$number = mysql_fetch_row($result);
+			//echo $number[0]; die;
 			
 			if ($number[0] > 0 || $title == NULL || $introtext == NULL || $fulltext == NULL) break;
 			else{
