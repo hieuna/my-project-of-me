@@ -43,7 +43,7 @@ foreach ($aLink as $array) {
 			$articles[$index]['content'] = $content->innertext;
 		}
 		$i = strpos($articles[$index]['content'], "</p>");
-		$articles[$index]['content'] = substr($articles[$index]['content'], $i).'<p style="text-align: right;" align="right"><b>(Nguồn từ 24H.COM.VN)</b></p>';;
+		$articles[$index]['content'] = substr($articles[$index]['content'], $i).'<p style="text-align: right;" align="right"><b>(Nguồn từ 24H.COM.VN)</b></p>';
 		$articles[$index]['content'] = str_replace('<a href="http://www1.24h.com.vn/download/install_flash_player.exe">Nếu không xem được video vui lòng bấm vào đây để tải và cài flash player</a>', '', $articles[$index]['content']);
 		$articles[$index]['url'] = $array['url'];
 		//var_dump($articles); die;
