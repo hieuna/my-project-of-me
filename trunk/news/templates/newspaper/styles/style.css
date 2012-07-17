@@ -142,6 +142,7 @@ img{
     margin-right: auto;
     text-align: left;
     width: 1024px;
+    overflow: hidden;
 }
 .masterContent {
     background-color: #FFFFFF;
