@@ -206,12 +206,12 @@ $group		= JRequest::getString('group', '', 'GET');
 					<td align="center">
 						<jdoc:include type="modules" name="footer" />
 						<p style="text-align: left; padding-left: 25px; margin: 3px 0;">
-							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/106/may-chieu-sony" title="may chieu sony">may chieu sony</a>,
-							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/108/may-chieu-panasonic" title="may chieu panasonic">may chieu panasonic</a>,
-							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/107/may-chieu-sharp" title="may chieu sharp">may chieu sharp</a>,
-							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/109/may-chieu-viewsonic" title="may chieu viewsonic">may chieu viewsonic</a>,
-							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/110/may-chieu-optoma" title="may chieu optoma">may chieu optoma</a>,
-							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/98/may-photocopy-sharp" title="may photocopy sharp">may photocopy sharp</a> 
+							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/106/may-chieu-sony" title="may chieu sony">phan phoi may chieu sony</a>,
+							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/108/may-chieu-panasonic" title="may chieu panasonic">phan phoi may chieu panasonic</a>,
+							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/107/may-chieu-sharp" title="may chieu sharp">phan phoi may chieu sharp</a>,
+							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/109/may-chieu-viewsonic" title="may chieu viewsonic">phan phoi may chieu viewsonic</a>,
+							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/110/may-chieu-optoma" title="may chieu optoma">phan phoi may chieu optoma</a>,
+							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/98/may-photocopy-sharp" title="may photocopy sharp">phan phoi may photocopy</a> 
 						</p>
 					</td>
 				</tr>
