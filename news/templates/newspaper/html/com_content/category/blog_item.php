@@ -54,3 +54,9 @@ endif; ?>
 <?php endif; ?>
 <span class="article_separator">&nbsp;</span>
 <?php echo $this->item->event->afterDisplayContent; ?>
+<script type="text/javascript">
+$('.img130').error(function() {
+  $(this).hide();
+  $(this).parent().next('.wid300').css('width', 'auto');
+});
+</script>
