@@ -93,3 +93,8 @@ foreach ($listCate as $cate) {
 	}
 }
 ?>
+<script type="text/javascript">
+$('.img75, .img35').error(function() {
+  $(this).hide();
+});
+</script>
