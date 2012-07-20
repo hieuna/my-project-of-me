@@ -112,7 +112,11 @@ $canEdit	= ($this->user->authorize('com_content', 'edit', 'content', 'all') || $
 	<?php if (isset ($this->article->toc)) : ?>
 		<?php echo $this->article->toc; ?>
 	<?php endif; ?>
-	<div class="fon33 mt1"><?php echo $this->article->introtext; ?></div>
+	<div class="fon33 mt1">
+		<img class="img130" src="<?php echo $baseurl;?>images/stories/<?php echo $this->article->images;?>" />
+		<?php echo $this->article->introtext; ?>
+	</div>
+	<div class="clr"></div>
 	<div class="fon34"><?php echo $this->article->text; ?></div>
 	</td>
 	</tr>
@@ -121,4 +125,7 @@ $canEdit	= ($this->user->authorize('com_content', 'edit', 'content', 'all') || $
 </div>	
 <script type="text/javascript">
 $('.view_content table.contentpaneopen table').css('width', '480px');
+$('.img130').error(function() {
+  $(this).hide();
+});
 </script>
