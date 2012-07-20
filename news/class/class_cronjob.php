@@ -39,4 +39,32 @@ class Cronjob{
 		//var_dump($articles); die;
 		return $articles;
 	}
+	
+	//Page doanhnhansaigon.vn
+	function getPageDoanhnhan($html, $url){
+		$inputTags='.sum-item'; 
+		$source='doanhnhansaigon.vn';
+		$articles = array();
+		foreach ($html->find($inputTags) as $index => $items) {
+			// Xem chi tiết bài viết
+			$detail = $items->children(0)->href;
+			if ($detail == NULL || $articles[$index]['title'] == NULL) break;
+			$html_detail = file_get_html($array['url'] . $detail);
+			//Lấy ảnh đại diện
+			$articles[$index]['image'] 			= $items->children(0)->first_child()->src;
+			// Tiêu đề bài viết
+			$articles[$index]['title'] 			= $items->children(1)->innertext;
+			// Mô tả bài viết
+			$articles[$index]['description'] 	= '(Tapchidoanhnhanviet.vn) - '.$items->children(2)->innertext;
+			// Chi tiết bài viết
+			$contents = $html_detail->find(".html");
+			foreach ($contents as $content) {
+				$articles[$index]['content'] = $content->innertext;
+			}
+			$articles[$index]['content'] = str_replace('src="', 'src="'.$array['url'], $articles[$index]['content']).'<p style="text-align: right;" align="right"><b>(Nguồn từ '.$source.')</b></p>';
+			$articles[$index]['url'] = $array['url'];
+		}
+		//var_dump($articles); die;
+		return $articles;
+	}
 }
