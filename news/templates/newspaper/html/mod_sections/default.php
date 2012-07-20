@@ -168,3 +168,9 @@ $rows = $db->loadObjectList();
 	</ul>
 </div>
 <?php endforeach; ?>
+<script type="text/javascript">
+$('.img80, .img75').error(function() {
+  $(this).hide();
+  $(this).parent().next('.wid240, .wid245').css('width', 'auto');
+});
+</script>
