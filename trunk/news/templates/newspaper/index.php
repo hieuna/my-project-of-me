@@ -24,9 +24,10 @@ $group		= JRequest::getString('group', '', 'GET');
 		<meta content="text/html; charset=utf-8" http-equiv="content-type">
 		<meta content="index, follow" name="robots">
 		<meta content="Super User" name="author">
-		<meta name="keywords" content="tap chi, doanh nhan, doanh nhan viet, bao doanh nhan, tap chi doanh nhan viet" />
-		<meta name="description" content="tap chi, doanh nhan ,doanh nhan viet, goc doanh nhan, doanh nhan thanh dat, Tạp chí, Tạp chí doanh nhân việt, Doanh nhân thành công, Tạp chí doanh nhân, Góc doanh nhân, Doanh nhân Việt, Tap chi doanh nhan viet, tap chi doanh nhan" />
-		<meta name="generator" content="Joomla! - Open Source Content Management" />		
+		<meta name="alexaVerifyID" content="mTgOEnSXjLVO3GnyYR3ssLRhxRc" />
+		<meta name="keywords" content="tap chi, doanh nhan, doanh nhan viet, bao doanh nhan, tap chi doanh nhan viet, am thuc viet, lam dep, thoi trang viet, the thao" />
+		<meta name="description" content="tap chi, doanh nhan ,doanh nhan viet, goc doanh nhan, doanh nhan thanh dat, Tạp chí, Tạp chí doanh nhân việt, Doanh nhân thành công, Tạp chí doanh nhân, Góc doanh nhân, Doanh nhân Việt, Tap chi doanh nhan viet, tap chi doanh nhan, làm đẹp 3 miền, ẩm thực việt" />
+		<meta name="generator" content="Joomla! - Open Source Content Management" />
 		<!-- The following five lines load the Blueprint CSS Framework (http://blueprintcss.org). If you don't want to use this framework, delete these lines. -->
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/styles/style.css" type="text/css" />
         <![if !IE]>
@@ -205,13 +206,16 @@ $group		= JRequest::getString('group', '', 'GET');
 				<tr>
 					<td align="center">
 						<jdoc:include type="modules" name="footer" />
-						<p style="text-align: left; padding-left: 25px; margin: 3px 0;">
+						<p style="text-align: left; padding-left: 25px; margin: 3px 0; position: relative;">
 							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/106/may-chieu-sony" title="may chieu sony">phan phoi may chieu sony</a>,
 							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/108/may-chieu-panasonic" title="may chieu panasonic">phan phoi may chieu panasonic</a>,
 							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/107/may-chieu-sharp" title="may chieu sharp">phan phoi may chieu sharp</a>,
 							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/109/may-chieu-viewsonic" title="may chieu viewsonic">phan phoi may chieu viewsonic</a>,
 							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/110/may-chieu-optoma" title="may chieu optoma">phan phoi may chieu optoma</a>,
 							<a target="_blank" href="http://maxco.vn/danh-muc-san-pham/98/may-photocopy-sharp" title="may photocopy sharp">phan phoi may photocopy</a> 
+							<div style="position: fixed; bottom: 0; right:0;">
+								<a href="http://www.alexa.com/siteinfo/tapchidoanhnhanviet.vn"><script type='text/javascript' src='http://xslt.alexa.com/site_stats/js/s/a?url=tapchidoanhnhanviet.vn'></script></a>
+							</div>
 						</p>
 					</td>
 				</tr>
