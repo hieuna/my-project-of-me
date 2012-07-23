@@ -54,7 +54,7 @@ $group		= JRequest::getString('group', '', 'GET');
 
 		</script>
 	</head>
-	<body class="body">
+	<body class="body" onload="setAsHomePage(this);">
 		<div class="header_full">
 			<div class="header">
 				<div style="position: relative;" class="clearfix">
@@ -224,6 +224,14 @@ $group		= JRequest::getString('group', '', 'GET');
 		</tr>
 	</table>
 	<script type="text/javascript">
+	//Set default home page
+    function setAsHomePage(i)
+	{	
+		if (document.all) {
+			i.style.behavior='url(#default#homepage)';
+			i.setHomePage('http://tapchidoanhnhanviet.vn');
+		}
+	}
 	$(function() {
 		//Set font
 		$('.fon5 span, .wid300 span').css('font-family', 'inherit');

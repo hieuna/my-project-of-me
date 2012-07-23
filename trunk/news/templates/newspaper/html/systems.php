@@ -63,7 +63,7 @@ if (count($rows) > 0){
 				</a>
 				<div class="show_title_system_main"><?php echo $rows[0]->title;?></div>
 			</div>
-			<div class="cls wid335 fr" id="tab_slide">
+			<div class="cls fr" id="tab_slide">
 				<ul>
 				<?php
 				$i = 0;
@@ -81,19 +81,11 @@ if (count($rows) > 0){
 				</li>
 				<?php
 				}
-				if ($i%6 == 0 && $i>0) echo '</ul><ul>';
+				if ($i%10 == 0 && $i>0) echo '</ul><ul>';
 				$i++; 
 				endforeach;
 				?>
 				</ul>
-			</div>
-		</div>
-		<div class="tab_system_right">
-			<div>
-			<embed width="300" height="250" align="middle" quality="high" wmode="transparent" allowscriptaccess="always" flashvars="alink1=http%3A%2F%2Flogging.admicro.vn%2F_adc.html%3Fadm_domain%3Dhttp%253A%2F%2Fdantri.com.vn%2F%26adm_campaign%3D1022230%26adm_aditem%3D132333%26adm_zoneid%3D224%26adm_channelid%3D-1%26adm_rehttp%3Dhttp%253A%2F%2Fphimmadagascar3.com.vn%2F%26adm_random%3D0.14842282715897448&amp;atar1=_blank" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/mad3_stnd_mpu_300x250chuan.swf">
-			</div>
-			<div>
-			<embed width="300" height="125" align="middle" quality="high" wmode="transparent" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" alt="" src="http://admicro2.vcmedia.vn/images/03_hocviennganhang_300x125_3.swf">
 			</div>
 		</div>
 	</div>
