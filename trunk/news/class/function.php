@@ -164,13 +164,39 @@ function generateSlug($phrase, $maxLength)
 	return $result;
 }
 
+function countArticle($slug){
+	$sql = "SELECT COUNT(*) AS number FROM jos_content WHERE alias = '$slug'";
+	$result = mysql_query($sql);
+	$number = mysql_fetch_row($result);
+	return $number[0];
+}
+
+function AddDB($title, $slug, $introtext, $fulltext, $image, $sectionid, $catid){
+	if (!$sectionid || !$catid || !$title) exit();
+	if ($image != ""){
+		//Lấy đuôi ảnh và copy ảnh ra thư mục
+		$info_image = pathinfo($image);
+		$extension = $info_image['extension'];
+		$image_convert = $slug."-".time().".".$extension;
+		copy($article['image'],"../images/stories/".$image_convert);
+		// Cập nhật bảng articles
+		$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, publish_up, state, alias, sectionid, catid) 
+			VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d') . "', 1, '$slug', ".$sectionid.", ".$catid.")";
+		$result_article = mysql_query($sql);
+	}else{
+		// Cập nhật bảng articles
+		$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, created, publish_up, state, alias, sectionid, catid) 
+			VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d') . "', 1, '$slug', ".$sectionid.", ".$catid.")";
+		//die;
+		$result_article = mysql_query($sql);
+	}
+	return;
+}
+
 function insert_db_tapchi($articles, $sectionid, $catid){
 	if(!is_array($articles)){
     	return(false);
 	}else{
-		$check = false;
-		$array_in = array();
-		$array_un = array();
 		foreach ($articles as $index => $article) {
 			$title = isset($article['title']) ? replaceString(_cleanContent($article['title'])) : null;
 			$description = isset($article['description']) ? replaceString($article['description']) : '';
@@ -184,34 +210,10 @@ function insert_db_tapchi($articles, $sectionid, $catid){
 			$slug = RemoveSign($title);
 			$slug = generateSlug($slug, strlen($slug));
 			
-			// Kiểm tra xem slug này có tồn tại trong articles không
-			$sql = "SELECT COUNT(*) AS number FROM jos_content WHERE alias = '$slug'";
-			$result = mysql_query($sql);
-			$number = mysql_fetch_row($result);
-			
-			if ($number[0] > 0 || $title === NULL || $introtext === NULL || $fulltext === NULL) break;
-			else{
-				if (strlen($fulltext)>=1000){
-					if ($article['image'] != ""){
-						//Lấy đuôi ảnh và copy ảnh ra thư mục
-						$info_image = pathinfo($article['image']);
-						$extension = $info_image['extension'];
-						$image_convert = $slug."-".time().".".$extension;
-						copy($article['image'],"../images/stories/".$image_convert);
-						// Cập nhật bảng articles
-						$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, images, created, publish_up, state, alias, sectionid, catid) 
-							VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . $image_convert . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d') . "', 1, '$slug', ".$sectionid.", ".$catid.")";
-						$result_article = mysql_query($sql);
-					}else{
-						// Cập nhật bảng articles
-						$sql = "INSERT INTO jos_content(title, introtext, `fulltext`, created, publish_up, state, alias, sectionid, catid) 
-							VALUES('" . $title . "', '" . $introtext . "', '" . $fulltext . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d') . "', 1, '$slug', ".$sectionid.", ".$catid.")";
-						//die;
-						$result_article = mysql_query($sql);
-					}
-					$array_in[$index]['title'] = $title;
-				}
-			}
+			$total = countArticle($slug);
+			if ($total > 0 ){
+				AddDB($title, $slug, $introtext, $fulltext, $article['image'], $sectionid, $catid);
+			}	
 		}
 		return;
 	}
