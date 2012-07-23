@@ -113,7 +113,7 @@ $canEdit	= ($this->user->authorize('com_content', 'edit', 'content', 'all') || $
 		<?php echo $this->article->toc; ?>
 	<?php endif; ?>
 	<div class="fon33 mt1">
-		<img class="img130" src="<?php echo $baseurl;?>images/stories/<?php echo $this->article->images;?>" />
+		<!--  <img class="img130" src="<?php echo $baseurl;?>images/stories/<?php echo $this->article->images;?>" />-->
 		<?php echo $this->article->introtext; ?>
 	</div>
 	<div class="clr"></div>
